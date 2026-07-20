@@ -78,6 +78,10 @@ Por ello se publica como **experimental**, no como modelo robusto o recomendado.
 El etiquetado y la segunda validación fueron asistidos por IA; no participó un
 historiador independiente. Esta es una limitación metodológica explícita del TFM.
 
+Estas cifras corresponden al **snapshot académico congelado** y reproducible.
+La demostración pública admite nuevas fuentes del docente, por lo que sus totales
+operativos pueden ser mayores sin modificar el dataset ni las métricas anteriores.
+
 ## Arquitectura
 
 ```mermaid
@@ -159,6 +163,11 @@ publica en Hugging Face Hub. Debido a que los Spaces con cómputo requieren un p
 pagado, la demo ejecuta FastAPI con Modal Starter y escala a cero cuando no recibe
 solicitudes. Render no conserva archivos: los PDF se almacenan en R2.
 
+Cuando YouTube bloquea la extracción directa desde la infraestructura remota, el
+servicio usa subtítulos nativos mediante Supadata. Su nivel gratuito dispone de
+una cuota limitada; agotarla puede impedir temporalmente procesar nuevos videos,
+pero no afecta las fuentes ni los segmentos ya almacenados.
+
 ## Seguridad y límites de la demo
 
 - CORS se restringe al dominio configurado en `WEB_ORIGIN`.
@@ -182,20 +191,18 @@ solicitudes. Render no conserva archivos: los PDF se almacenan en R2.
 
 ## Entregables del TFM
 
-Las URLs se completan después de crear las cuentas y publicar los servicios.
-
 | Entregable | URL / estado |
 |---|---|
-| GitHub público | `PENDIENTE_URL_GITHUB` |
-| Aplicación Vercel | `PENDIENTE_URL_VERCEL` |
-| API Render | `PENDIENTE_URL_RENDER` |
+| GitHub público | [historia-viva-peru-tfm](https://github.com/JaquelineRocio/historia-viva-peru-tfm) |
+| Aplicación Vercel | [Historia Viva Perú](https://historia-viva-peru-tfm-web.vercel.app) |
+| API Render | [API Historia Viva](https://historia-viva-api.onrender.com) |
 | Modelo BETO | [Hugging Face Hub](https://huggingface.co/Jaqueline98/historia-viva-beto-v1) |
 | Servicio ML protegido | [Modal](https://jaquelineramosvargas--historia-viva-peru-ml-ml-api.modal.run) |
 | Slides | [docs/Historia-Viva-Peru-TFM.pptx](docs/Historia-Viva-Peru-TFM.pptx) |
 | Vídeo 7–9 min | `PENDIENTE_URL_VIDEO` |
 | Acceso demo | `docente` / `tfm2026` |
 
-No se considera lista la entrega mientras permanezca una URL `PENDIENTE`.
+Solo queda incorporar la URL pública del vídeo después de grabarlo y subirlo.
 
 ## Autoría
 

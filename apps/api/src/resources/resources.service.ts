@@ -1038,7 +1038,8 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
       );
     } catch (error) {
       this.logger.warn(`Búsqueda semántica no disponible; se usará búsqueda textual: ${error instanceof Error ? error.message : error}`);
-      return this.dataSource.query(
+      try {
+        return await this.dataSource.query(
         `SELECT s.id, s.text, s.locator_type AS "locatorType", s.start_sec AS "startSec",
                 s.end_sec AS "endSec", s.page_start AS "pageStart", s.page_end AS "pageEnd",
                 r.id AS "resourceId", r.title, r.type, r.source_url AS "sourceUrl",
@@ -1069,8 +1070,51 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
            AND (to_tsvector('spanish', s.text) @@ websearch_to_tsquery('spanish', $2)
                 OR similarity(s.text, $2) > 0.08)
          ORDER BY score DESC LIMIT 8`,
-        [projectId, query, person, place, yearStart, yearEnd, label],
-      );
+          [projectId, query, person, place, yearStart, yearEnd, label],
+        );
+      } catch (textError) {
+        this.logger.warn(
+          `Búsqueda textual con pg_trgm no disponible; se usará texto completo nativo: ${textError instanceof Error ? textError.message : textError}`,
+        );
+        try {
+          return await this.dataSource.query(
+            `SELECT s.id, s.text, s.locator_type AS "locatorType", s.start_sec AS "startSec",
+                    s.end_sec AS "endSec", s.page_start AS "pageStart", s.page_end AS "pageEnd",
+                    r.id AS "resourceId", r.title, r.type, r.source_url AS "sourceUrl",
+                    ts_rank(to_tsvector('spanish', s.text), websearch_to_tsquery('spanish', $2)) AS score,
+                    ${entityProjection}
+             FROM tfm_schema.resource_segments s
+             JOIN tfm_schema.resources r ON r.id = s.resource_id
+             WHERE r.project_id = $1 ${publicationFilter}
+               AND r.is_deleted = false AND s.is_deleted = false
+               AND ($3::text IS NULL OR EXISTS (
+                 SELECT 1 FROM tfm_schema.entity_mentions ep
+                 WHERE ep.resource_segment_id = s.id AND ep.entity_type = 'person' AND ep.is_deleted = false
+                   AND ep.normalized_value ILIKE $3
+               ))
+               AND ($4::text IS NULL OR EXISTS (
+                 SELECT 1 FROM tfm_schema.entity_mentions el
+                 WHERE el.resource_segment_id = s.id AND el.entity_type = 'place' AND el.is_deleted = false
+                   AND el.normalized_value ILIKE $4
+               ))
+               AND (($5::int IS NULL AND $6::int IS NULL) OR EXISTS (
+                 SELECT 1 FROM tfm_schema.entity_mentions et
+                 WHERE et.resource_segment_id = s.id AND et.entity_type IN ('date', 'period') AND et.is_deleted = false
+                   AND et.year_start <= COALESCE($6::int, et.year_start)
+                   AND et.year_end >= COALESCE($5::int, et.year_end)
+               ))
+               AND ($7::text IS NULL OR COALESCE(s.reviewed_label_key, s.suggested_label_key) = $7)
+               AND to_tsvector('spanish', s.text) @@ websearch_to_tsquery('spanish', $2)
+             ORDER BY score DESC LIMIT 8`,
+            [projectId, query, person, place, yearStart, yearEnd, label],
+          );
+        } catch (nativeTextError) {
+          this.logger.error(
+            `No se pudo recuperar evidencia; el asistente se abstendrá: ${nativeTextError instanceof Error ? nativeTextError.message : nativeTextError}`,
+          );
+          return [];
+        }
+      }
     }
   }
 

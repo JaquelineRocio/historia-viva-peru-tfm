@@ -7,7 +7,7 @@
 - [x] ML supera 20/20 pruebas focalizadas.
 - [x] CI ejecuta API, web y suite ML completa con dependencias aisladas.
 - [x] Seed académico comprimido, sanitizado y sin usuarios (12.6 MB).
-- [ ] GitHub Actions en verde en el repositorio público.
+- [x] GitHub Actions en verde en el repositorio público.
 
 ## Producto
 
@@ -18,24 +18,24 @@
 - [x] Página/minuto exactos se conservan en los segmentos.
 - [x] “Apolo 11” produce abstención sin evidencias.
 - [x] Dos fuentes aprobadas aparecen en explorar.
-- [ ] PDF persiste en R2 después de reiniciar la API pública.
+- [x] PDF persiste en R2 después de reiniciar la API pública.
 - [ ] Repetir el smoke test completo en producción.
 
 ## Infraestructura externa
 
-- [ ] Modelo publicado en Hugging Face Hub.
-- [ ] Space ML saludable y BETO restaurado al despertar.
-- [ ] Neon creado e importado.
-- [ ] R2 privado y archivos de demo subidos.
-- [ ] API desplegada en Render.
-- [ ] Web desplegada en Vercel.
-- [ ] CORS limitado al dominio de Vercel.
+- [x] Modelo publicado en Hugging Face Hub.
+- [x] Servicio Modal saludable y BETO restaurado al despertar.
+- [x] Neon creado e importado.
+- [x] R2 privado y archivos de demo subidos.
+- [x] API desplegada en Render.
+- [x] Web desplegada en Vercel.
+- [x] CORS limitado al dominio de Vercel.
 - [ ] Contraseña administrativa aleatoria guardada como secreto.
 
 ## Entregables del máster
 
-- [ ] Repositorio GitHub público.
-- [ ] Sustituir todas las cadenas `PENDIENTE_URL` del README.
+- [x] Repositorio GitHub público.
+- [ ] Incorporar la URL pública del vídeo en el README.
 - [x] Presentación PPTX creada y revisada.
 - [x] Guion de vídeo de 7–9 minutos creado.
 - [ ] Vídeo grabado por la autora y publicado.

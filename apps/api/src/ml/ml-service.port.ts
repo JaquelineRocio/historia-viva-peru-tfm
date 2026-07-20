@@ -146,9 +146,16 @@ export interface MlPrediction {
   confidence: number;
 }
 
+export interface MlHealth {
+  status: string;
+  components?: {
+    beto?: { ready?: boolean; status?: string; repo?: string | null };
+  };
+}
+
 export interface MlServicePort {
   /** Salud del servicio ML. */
-  health(): Promise<{ status: string }>;
+  health(): Promise<MlHealth>;
 
   /** Lanza un entrenamiento (job async). Devuelve el id del job en el servicio ML. */
   train(req: MlTrainRequest): Promise<{ job_id: string }>;

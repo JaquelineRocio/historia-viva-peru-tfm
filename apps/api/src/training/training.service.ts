@@ -64,9 +64,16 @@ export class TrainingService implements OnModuleInit {
     } catch (err) {
       this.logger.warn(`Reconciliación de jobs al arrancar falló: ${(err as Error).message}`);
     }
-    // El servicio ML mantiene los pesos en memoria. Después de un reinicio,
-    // restaura la versión marcada como activa en la base de datos.
+    // En producción el servicio ML puede arrancar con el modelo de Hugging Face
+    // ya cargado. En ese caso no debe recibir una ruta local histórica de la API.
     try {
+      const health = await this.ml.health();
+      if (health.components?.beto?.ready || health.components?.beto?.repo) {
+        this.logger.log(
+          `Modelo remoto configurado${health.components.beto.repo ? `: ${health.components.beto.repo}` : ''}`,
+        );
+        return;
+      }
       const active = await this.getActive();
       if (active?.artifactPath) {
         await this.ml.loadModel(active.artifactPath);
