@@ -3,6 +3,11 @@ CREATE EXTENSION IF NOT EXISTS pgcrypto;
 CREATE EXTENSION IF NOT EXISTS pg_trgm;
 CREATE EXTENSION IF NOT EXISTS vector;
 
+-- Neon instala las extensiones compartidas habitualmente en `public`. TypeORM
+-- configura `tfm_schema` como esquema por defecto, por lo que debemos conservar
+-- ambos en el search_path para resolver operator classes como gin_trgm_ops.
+SET search_path TO tfm_schema, public;
+
 CREATE TABLE IF NOT EXISTS tfm_schema.projects (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   name VARCHAR(200) NOT NULL,
