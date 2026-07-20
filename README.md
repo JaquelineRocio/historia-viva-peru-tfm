@@ -198,11 +198,10 @@ pero no afecta las fuentes ni los segmentos ya almacenados.
 | API Render | [API Historia Viva](https://historia-viva-api.onrender.com) |
 | Modelo BETO | [Hugging Face Hub](https://huggingface.co/Jaqueline98/historia-viva-beto-v1) |
 | Servicio ML protegido | [Modal](https://jaquelineramosvargas--historia-viva-peru-ml-ml-api.modal.run) |
-| Slides | [docs/Historia-Viva-Peru-TFM.pptx](docs/Historia-Viva-Peru-TFM.pptx) |
-| Vídeo 7–9 min | `PENDIENTE_URL_VIDEO` |
+| Slides | [Historia-Viva-Peru-TFM.pptx](https://docs.google.com/presentation/d/12Vqa7D4X5r6ySQtJSgH86WI1NQLv2aRp/edit?usp=drive_link&ouid=113080488689238541707&rtpof=true&sd=true) |
+| Vídeo 7–9 min | [Video](https://drive.google.com/file/d/15PYwJiWxrvLcDAZn0IypJuzY8-Yck_cU/view?usp=drive_link) |
 | Acceso demo | `docente` / `tfm2026` |
 
-Solo queda incorporar la URL pública del vídeo después de grabarlo y subirlo.
 
 ## Autoría
 
