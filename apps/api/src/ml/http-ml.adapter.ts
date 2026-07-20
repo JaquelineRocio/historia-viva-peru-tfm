@@ -35,11 +35,14 @@ export class HttpMlAdapter implements MlServicePort {
     private readonly http: HttpService,
     private readonly config: ConfigService,
   ) {
-    this.baseUrl = this.config.get<string>('ML_SERVICE_URL', 'http://localhost:8000');
+    this.baseUrl = this.config
+      .get<string>('ML_SERVICE_URL', 'http://localhost:8000')
+      .trim()
+      .replace(/\/+$/, '');
     this.timeout = parseInt(this.config.get<string>('ML_TIMEOUT_MS', '600000'), 10);
-    const token = this.config.get<string>('ML_INTERNAL_TOKEN');
-    const modalKey = this.config.get<string>('MODAL_PROXY_TOKEN_ID');
-    const modalSecret = this.config.get<string>('MODAL_PROXY_TOKEN_SECRET');
+    const token = this.config.get<string>('ML_INTERNAL_TOKEN')?.trim();
+    const modalKey = this.config.get<string>('MODAL_PROXY_TOKEN_ID')?.trim();
+    const modalSecret = this.config.get<string>('MODAL_PROXY_TOKEN_SECRET')?.trim();
     this.headers = token ? { 'X-Internal-Token': token } : {};
     if (modalKey && modalSecret) {
       this.headers['Modal-Key'] = modalKey;
@@ -48,10 +51,14 @@ export class HttpMlAdapter implements MlServicePort {
   }
 
   async health(): Promise<{ status: string }> {
-    const { data } = await firstValueFrom(
-      this.http.get(`${this.baseUrl}/health`, { timeout: 5000, headers: this.headers }),
-    );
-    return data;
+    try {
+      const { data } = await firstValueFrom(
+        this.http.get(`${this.baseUrl}/health`, { timeout: 15000, headers: this.headers }),
+      );
+      return data;
+    } catch (err) {
+      throw this.wrap(err, 'health');
+    }
   }
 
   async transcribeSubtitles(youtubeUrl: string, languages?: string[]): Promise<MlTranscriptResult> {
