@@ -38,7 +38,13 @@ export class HttpMlAdapter implements MlServicePort {
     this.baseUrl = this.config.get<string>('ML_SERVICE_URL', 'http://localhost:8000');
     this.timeout = parseInt(this.config.get<string>('ML_TIMEOUT_MS', '600000'), 10);
     const token = this.config.get<string>('ML_INTERNAL_TOKEN');
+    const modalKey = this.config.get<string>('MODAL_PROXY_TOKEN_ID');
+    const modalSecret = this.config.get<string>('MODAL_PROXY_TOKEN_SECRET');
     this.headers = token ? { 'X-Internal-Token': token } : {};
+    if (modalKey && modalSecret) {
+      this.headers['Modal-Key'] = modalKey;
+      this.headers['Modal-Secret'] = modalSecret;
+    }
   }
 
   async health(): Promise<{ status: string }> {

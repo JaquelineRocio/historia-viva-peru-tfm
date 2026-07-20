@@ -86,7 +86,7 @@ flowchart LR
   W --> A[NestJS / Render]
   A --> D[(PostgreSQL + pgvector / Neon)]
   A --> O[(PDF / Cloudflare R2)]
-  A --> M[FastAPI ML / Hugging Face Space]
+  A --> M[FastAPI ML / Modal]
   M --> H[(BETO v1 / Hugging Face Hub)]
 ```
 
@@ -95,7 +95,7 @@ flowchart LR
 - Datos: PostgreSQL + `pgvector`.
 - ML: FastAPI, Transformers, BETO, embeddings y Whisper.
 - Local: Docker Compose, almacenamiento de archivos y Redis/BullMQ.
-- Demo gratuita: Vercel, Render, Neon, Cloudflare R2 y Hugging Face.
+- Demo gratuita: Vercel, Render, Neon, Cloudflare R2, Hugging Face Hub y Modal.
 
 ## Ejecución local
 
@@ -154,9 +154,10 @@ de la pregunta fuera de alcance “Apolo 11”:
 ## Despliegue gratuito
 
 Siga [docs/despliegue-gratuito.md](docs/despliegue-gratuito.md). `render.yaml`
-configura la API; `apps/web/vercel.json` configura el frontend; `apps/ml/README.md`
-y su Dockerfile se usan en Hugging Face Spaces. Render no conserva archivos:
-los PDF siempre se almacenan en R2 y el modelo se recupera desde Hugging Face Hub.
+configura la API y `apps/web/vercel.json` configura el frontend. El modelo se
+publica en Hugging Face Hub. Debido a que los Spaces con cómputo requieren un plan
+pagado, la demo ejecuta FastAPI con Modal Starter y escala a cero cuando no recibe
+solicitudes. Render no conserva archivos: los PDF se almacenan en R2.
 
 ## Seguridad y límites de la demo
 
@@ -188,6 +189,8 @@ Las URLs se completan después de crear las cuentas y publicar los servicios.
 | GitHub público | `PENDIENTE_URL_GITHUB` |
 | Aplicación Vercel | `PENDIENTE_URL_VERCEL` |
 | API Render | `PENDIENTE_URL_RENDER` |
+| Modelo BETO | [Hugging Face Hub](https://huggingface.co/Jaqueline98/historia-viva-beto-v1) |
+| Servicio ML protegido | [Modal](https://jaquelineramosvargas--historia-viva-peru-ml-ml-api.modal.run) |
 | Slides | [docs/Historia-Viva-Peru-TFM.pptx](docs/Historia-Viva-Peru-TFM.pptx) |
 | Vídeo 7–9 min | `PENDIENTE_URL_VIDEO` |
 | Acceso demo | `docente` / `tfm2026` |

@@ -9,17 +9,18 @@
 4. Compruebe que `config.json`, tokenizer y pesos puedan descargarse con
    `snapshot_download`.
 
-## 2. Hugging Face Spaces — ML
+## 2. Modal Starter — servicio ML
 
-1. Cree un Space público con SDK **Docker** y copie el contenido de `apps/ml`.
-2. Configure secretos:
-   - `ML_INTERNAL_TOKEN`: cadena aleatoria compartida con Render.
-   - `ML_DEFAULT_MODEL_REPO`: repositorio creado en el paso anterior.
-3. Compruebe `/health`. `components.beto.ready` debe pasar a `true` después del
-   arranque en frío.
+Hugging Face Spaces con Docker o Gradio requieren actualmente un plan pagado.
+La demo usa Modal Starter, que proporciona una URL HTTPS estable y escala a cero:
 
-El nivel CPU gratuito tiene disco temporal. El modelo se descarga otra vez cuando
-el Space pierde su caché.
+```powershell
+python -m modal deploy apps/ml/modal_app.py
+```
+
+Use la URL `modal.run` resultante como `ML_SERVICE_URL` en Render. Configure
+también `ML_INTERNAL_TOKEN`, `MODAL_PROXY_TOKEN_ID` y
+`MODAL_PROXY_TOKEN_SECRET`. Consulte `docs/modal-paso-a-paso.md`.
 
 ## 3. Neon — PostgreSQL + pgvector
 
@@ -61,8 +62,9 @@ solo sirve fuentes aprobadas en la ruta pública.
    - `WEB_ORIGIN` con la URL definitiva de Vercel.
    - `ADMIN_PASSWORD` aleatoria y privada.
    - credenciales R2.
-   - `ML_SERVICE_URL` del Space.
-   - `ML_INTERNAL_TOKEN` del Space.
+   - `ML_SERVICE_URL` de Modal.
+   - `ML_INTERNAL_TOKEN` compartido con Modal.
+   - `MODAL_PROXY_TOKEN_ID` y `MODAL_PROXY_TOKEN_SECRET`.
 3. Confirme que `/api/health` responde.
 4. Importe el seed sanitizado en la base recién creada. Si usa el contenedor local
    como cliente PostgreSQL, adapte `DATABASE_URL`; nunca importe sobre datos reales
@@ -90,5 +92,6 @@ la defensa.
 
 Referencias: [Render Free](https://render.com/docs/free),
 [Neon](https://neon.com/pricing), [R2](https://developers.cloudflare.com/r2/pricing/),
-[Hugging Face Spaces](https://huggingface.co/docs/hub/main/spaces-overview) y
+[condiciones actuales de Hugging Face Spaces](https://huggingface.co/spaces/launch),
+[precios de Modal](https://modal.com/pricing) y
 [límites de GitHub](https://docs.github.com/en/repositories/creating-and-managing-repositories/repository-limits).
