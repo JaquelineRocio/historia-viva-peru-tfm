@@ -1,9 +1,9 @@
-# Servicio ML (FastAPI). Torch CPU-only wheel para reducir tamaño (Día 4).
+# Servicio ML (FastAPI). Torch CPU-only wheel para reducir tamaño.
 FROM python:3.11-slim
 
 WORKDIR /app
 
-# Dependencias del sistema para audio (Whisper, Día 2)
+# Dependencias del sistema para audio y Whisper
 RUN apt-get update && apt-get install -y --no-install-recommends ffmpeg \
     && rm -rf /var/lib/apt/lists/*
 

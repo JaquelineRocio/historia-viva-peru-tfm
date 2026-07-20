@@ -15,7 +15,7 @@ export interface StoredFile {
 /**
  * Almacenamiento de documentos con dos drivers compatibles:
  * - local: Docker/desarrollo, bajo UPLOAD_ROOT;
- * - s3: proveedor compatible con S3 (Supabase Storage en producción).
+ * - s3: proveedor compatible con S3 (Cloudflare R2 en producción).
  * - r2: identificador heredado para recursos existentes.
  *
  * Los documentos del MVP están limitados a 50 MB, por lo que devolver Buffer

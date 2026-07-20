@@ -2,7 +2,7 @@
 
 Estrategia en cascada del TFM:
   1) youtube-transcript-api  (este módulo) — subtítulos ES manuales o autogenerados.
-  2) fallback Whisper        (Día 2, whisper.py) — descarga audio y transcribe.
+  2) fallback Whisper        (whisper.py) — descarga audio y transcribe.
 
 Usa la API v1.x (basada en instancia): YouTubeTranscriptApi().list()/.fetch().
 """

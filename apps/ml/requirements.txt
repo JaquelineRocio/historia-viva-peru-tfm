@@ -7,13 +7,13 @@ python-multipart==0.0.9
 
 # --- Transcripción ---
 youtube-transcript-api==1.2.4
-# Fallback de audio (Día 2). Pesadas + requieren ffmpeg en el PATH. El servicio
+# Fallback de audio. Dependencias pesadas que requieren ffmpeg en el PATH. El servicio
 # arranca sin ellas (import perezoso): solo se necesitan si un video no tiene
 # subtítulos. Instalar con: pip install yt-dlp faster-whisper
 yt-dlp==2026.7.4
 faster-whisper==1.0.3
 
-# --- ML (Día 4: se instalan con torch CPU wheel) ---
+# --- ML (se instala con torch CPU wheel) ---
 # torch --index-url https://download.pytorch.org/whl/cpu
 # transformers==4.42.3
 # scikit-learn==1.5.0

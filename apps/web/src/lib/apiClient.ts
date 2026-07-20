@@ -11,7 +11,7 @@ export const tokenStore = {
 /**
  * Cliente HTTP único.
  * - Dev: baseURL '/api' → proxy Vite a NestJS (:3000).
- * - Prod: VITE_API_URL apunta al backend en Render/Railway (p. ej. https://tfm-api.onrender.com/api).
+ * - Prod: VITE_API_URL apunta al backend en Render (p. ej. https://tfm-api.onrender.com/api).
  */
 const baseURL = import.meta.env.VITE_API_URL || '/api'
 export const api = axios.create({ baseURL })

@@ -35,7 +35,8 @@ comprender su subtema y abrir la fuente en el punto exacto sin recorrerla comple
 ## Funcionalidades implementadas
 
 - Proyectos y permisos por usuario.
-- YouTube de hasta dos horas, con subtítulos y fallback a Whisper.
+- YouTube de hasta dos horas: subtítulos directos, proveedor Supadata ante
+  bloqueos del centro de datos y Whisper como último fallback de audio.
 - PDF textual de hasta 50 MB/500 páginas en local; 10 MB en la demo gratuita.
 - Segmentos navegables por timestamp o página.
 - Limpieza de PDF y preservación del texto original para auditoría.
@@ -64,7 +65,8 @@ Años, personajes y lugares son entidades independientes, no clases temáticas.
 
 | Evidencia | Resultado |
 |---|---:|
-| Fuentes procesadas | 11 |
+| Fuentes procesadas en el corte inicial | 11 |
+| Fuentes representadas en el snapshot | 10 |
 | Segmentos totales | 1,577 |
 | Segmentos revisados/dataset | 814 |
 | Ejemplos mínimos por clase | 100 |
@@ -89,15 +91,16 @@ flowchart LR
   U[Docente] --> W[React / Vercel]
   W --> A[NestJS / Render]
   A --> D[(PostgreSQL + pgvector / Neon)]
-  A --> O[(PDF / Cloudflare R2)]
+  A --> O[(PDF / Cloudflare R2 vía S3)]
   A --> M[FastAPI ML / Modal]
-  M --> H[(BETO v1 / Hugging Face Hub)]
+  M --> S[Subtítulos / Supadata]
+  M --> H[(Pesos BETO v1 / Hugging Face Hub)]
 ```
 
 - Frontend: React 19, TypeScript, Vite, TanStack Query.
 - API: NestJS, TypeORM, JWT y trabajos recuperables en PostgreSQL.
 - Datos: PostgreSQL + `pgvector`.
-- ML: FastAPI, Transformers, BETO, embeddings y Whisper.
+- ML: FastAPI, Transformers, BETO, embeddings, NER, Supadata y Whisper.
 - Local: Docker Compose, almacenamiento de archivos y Redis/BullMQ.
 - Demo gratuita: Vercel, Render, Neon, Cloudflare R2, Hugging Face Hub y Modal.
 
@@ -145,7 +148,7 @@ Artefactos académicos relevantes:
 ```bash
 cd apps/api && npm test -- --runInBand && npm run build
 cd apps/web && npm run lint && npm run build
-cd apps/ml && .venv/Scripts/python -m pytest -q
+cd apps/ml && .venv/Scripts/python -m pytest -q  # 24 pruebas
 ```
 
 El smoke test público comprueba health, login, acceso al proyecto y la abstención
