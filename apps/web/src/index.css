@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: light;
+}
+
+@layer base {
+  input,
+  select,
+  textarea {
+    @apply bg-white text-slate-900 shadow-sm outline-none transition-colors;
+  }
+
+  input:hover,
+  select:hover,
+  textarea:hover {
+    @apply border-slate-400;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus {
+    @apply border-indigo-500 ring-4 ring-indigo-100;
+  }
+}

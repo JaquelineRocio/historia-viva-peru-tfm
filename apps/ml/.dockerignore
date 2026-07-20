@@ -1,0 +1,9 @@
+.venv
+storage
+tests
+__pycache__
+.pytest_cache
+*.pyc
+*.zip
+*.safetensors
+*.bin

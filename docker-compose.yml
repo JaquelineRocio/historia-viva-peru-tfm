@@ -1,0 +1,100 @@
+services:
+  postgres:
+    image: pgvector/pgvector:0.8.2-pg16-bookworm
+    container_name: tfm-postgres
+    environment:
+      POSTGRES_USER: app_user
+      POSTGRES_PASSWORD: app_pass
+      POSTGRES_DB: tfm_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - tfm_pgdata:/var/lib/postgresql/data
+      - ./apps/api/claude_workspace/architecture/ddl.sql:/docker-entrypoint-initdb.d/01-ddl.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U app_user -d tfm_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:7.4-alpine
+    container_name: tfm-redis
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - tfm_redisdata:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  ml:
+    build: ./apps/ml
+    container_name: tfm-ml
+    environment:
+      ML_HOST: 0.0.0.0
+      ML_PORT: 8000
+      ML_INTERNAL_TOKEN: dev-internal-token
+      ML_EMBEDDING_MODEL: sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2
+      ML_NER_MODEL: mrm8488/bert-spanish-cased-finetuned-ner
+    ports:
+      - "8000:8000"
+    volumes:
+      - tfm_models:/app/storage/models
+      - tfm_hf_cache:/root/.cache/huggingface
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+
+  api:
+    build: ./apps/api
+    container_name: tfm-api
+    depends_on:
+      postgres:
+        condition: service_healthy
+      ml:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    environment:
+      NODE_ENV: development
+      PGHOST: postgres
+      PGPORT: "5432"
+      PGUSER: app_user
+      PGPASSWORD: app_pass
+      PGDATABASE: tfm_db
+      DB_SCHEMA: tfm_schema
+      JWT_SECRET: dev-secret-docker
+      JWT_EXPIRES_IN: 12h
+      SEED_USERNAME: docente
+      SEED_PASSWORD: tfm2026
+      SEED_DISPLAY_NAME: Docente de prueba
+      SEED_ROLE: colaborador
+      ADMIN_USERNAME: administrador
+      # Sin valor por defecto: el administrador solo se crea con un secreto explícito.
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
+      ML_SERVICE_URL: http://ml:8000
+      ML_INTERNAL_TOKEN: dev-internal-token
+      REDIS_URL: redis://redis:6379
+    ports:
+      - "3000:3000"
+    volumes:
+      - tfm_uploads:/app/storage/uploads
+
+  web:
+    build: ./apps/web
+    container_name: tfm-web
+    depends_on:
+      - api
+    ports:
+      - "5173:80"
+
+volumes:
+  tfm_pgdata:
+  tfm_models:
+  tfm_uploads:
+  tfm_redisdata:
+  tfm_hf_cache:

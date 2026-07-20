@@ -1,0 +1,14 @@
+# Dependencias de ENTRENAMIENTO/INFERENCIA BETO (pesadas ~2GB).
+# El servicio arranca SIN ellas (imports perezosos); se necesitan solo para
+# /train, /models/load e /infer. El entrenamiento pesado se recomienda en Colab.
+#
+# Instalación local (CPU):
+#   pip install -r requirements-ml.txt
+#   (torch CPU-only: usa el índice de PyTorch si el wheel por defecto es pesado)
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
+
+torch>=2.2,<2.4
+transformers==4.42.3
+datasets==2.20.0
+scikit-learn==1.5.0
+accelerate==0.32.1

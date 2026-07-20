@@ -1,0 +1,49 @@
+# Node
+node_modules/
+dist/
+build/
+*.log
+.pnpm-store/
+
+# Env
+.env
+.env.local
+.env.*.local
+!.env.example
+
+# Python
+apps/ml/.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+
+# ML artifacts (pesos de modelo — no versionar)
+apps/ml/storage/models/
+apps/ml/storage/audio/
+apps/ml/storage/exports/
+/modelo_vN.zip
+/modelo_Vn.zip
+*.safetensors
+*.bin
+
+# Corpus y documentos de trabajo no redistribuibles
+/.corpus-downloads/
+/TOMO-I-HP-Basadre.pdf
+/CORRECCIÓN*.pdf
+/Documentacion-TFM-2.pdf
+/.git-invalid-backup*/
+/artifacts/demo/files/
+/artifacts/demo/*.sql
+
+# IDE / OS
+.DS_Store
+.idea/
+.claude/
+*.swp
+
+# Vite
+apps/web/dist/
+apps/web/.vite/
+
+# Docs de origen (mantener; NO ignorar los PDF del TFM)

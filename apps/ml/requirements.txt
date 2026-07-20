@@ -1,0 +1,28 @@
+# --- API ---
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+pydantic==2.7.4
+pydantic-settings==2.3.4
+python-multipart==0.0.9
+
+# --- Transcripción ---
+youtube-transcript-api==1.2.4
+# Fallback de audio (Día 2). Pesadas + requieren ffmpeg en el PATH. El servicio
+# arranca sin ellas (import perezoso): solo se necesitan si un video no tiene
+# subtítulos. Instalar con: pip install yt-dlp faster-whisper
+yt-dlp==2024.7.1
+faster-whisper==1.0.3
+
+# --- ML (Día 4: se instalan con torch CPU wheel) ---
+# torch --index-url https://download.pytorch.org/whl/cpu
+# transformers==4.42.3
+# scikit-learn==1.5.0
+# datasets==2.20.0
+
+# --- Utilidades ---
+pandas==2.2.2
+numpy==1.26.4
+httpx==0.27.0
+pypdf==5.7.0
+sentence-transformers==5.1.2
+huggingface-hub>=0.34.0,<1.0

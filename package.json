@@ -1,0 +1,18 @@
+{
+  "name": "tfm-historia-clasificador",
+  "version": "0.1.0",
+  "private": true,
+  "description": "App de segmentación temática de videos educativos sobre la Independencia del Perú con BETO (TFM)",
+  "author": "Jaqueline Ramos",
+  "license": "MIT",
+  "scripts": {
+    "dev:api": "pnpm --filter @tfm/api start:dev",
+    "dev:web": "pnpm --filter @tfm/web dev",
+    "dev:ml": "python apps/ml/run.py",
+    "up": "docker-compose up -d",
+    "down": "docker-compose down"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
