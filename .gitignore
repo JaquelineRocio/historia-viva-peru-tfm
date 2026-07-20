@@ -46,4 +46,6 @@ apps/ml/storage/exports/
 apps/web/dist/
 apps/web/.vite/
 
-# Docs de origen (mantener; NO ignorar los PDF del TFM)
+# Excluir carpeta de documentación
+docs/
+
