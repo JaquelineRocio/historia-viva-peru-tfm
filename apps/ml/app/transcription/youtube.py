@@ -17,6 +17,7 @@ from youtube_transcript_api import (
     TranscriptsDisabled,
     VideoUnavailable,
 )
+from youtube_transcript_api._errors import YouTubeTranscriptApiException
 
 from app.config import settings
 
@@ -101,6 +102,14 @@ def fetch_transcript(
         ) from exc
     except VideoUnavailable as exc:
         raise TranscriptError(f"Video no disponible: {video_id}") from exc
+    except YouTubeTranscriptApiException as exc:
+        # YouTube puede bloquear temporalmente IPs de centros de datos o cambiar
+        # su respuesta. Es un fallo recuperable: la API debe devolver 422 para
+        # que NestJS active el fallback de audio con Whisper, nunca un 500.
+        raise TranscriptError(
+            f"No fue posible obtener subtitulos de YouTube para {video_id}: "
+            f"{exc.__class__.__name__}. Usar fallback Whisper."
+        ) from exc
 
     cues = [
         TranscriptCue(start=round(float(item["start"]), 3),

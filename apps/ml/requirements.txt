@@ -10,7 +10,7 @@ youtube-transcript-api==1.2.4
 # Fallback de audio (Día 2). Pesadas + requieren ffmpeg en el PATH. El servicio
 # arranca sin ellas (import perezoso): solo se necesitan si un video no tiene
 # subtítulos. Instalar con: pip install yt-dlp faster-whisper
-yt-dlp==2024.7.1
+yt-dlp==2026.7.4
 faster-whisper==1.0.3
 
 # --- ML (Día 4: se instalan con torch CPU wheel) ---
