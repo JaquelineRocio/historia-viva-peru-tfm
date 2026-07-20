@@ -27,6 +27,10 @@ class Settings(BaseSettings):
     whisper_compute_type: str = "int8"     # int8 = ligero para CPU
     whisper_language: str = "es"
 
+    # Proveedor opcional para sortear bloqueos de IP de YouTube en centros de
+    # datos. La clave se guarda exclusivamente como secreto del despliegue.
+    supadata_api_key: Optional[str] = None
+
     # Token compartido para que solo NestJS pueda llamar al servicio ML
     internal_token: Optional[str] = None
 

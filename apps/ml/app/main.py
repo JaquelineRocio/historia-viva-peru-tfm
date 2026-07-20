@@ -13,6 +13,7 @@ from pydantic import BaseModel, Field
 
 from app.config import resolve_storage_path, settings
 from app.transcription.youtube import fetch_transcript, TranscriptError
+from app.transcription.supadata import fetch_supadata_transcript
 from app.transcription.whisper import transcribe_with_whisper
 from app.segmentation import segment_by_time
 from app.ml import jobs as jobs_registry
@@ -121,9 +122,20 @@ def transcribe(req: TranscribeRequest) -> dict:
     """Transcripción vía subtítulos de YouTube (422 → NestJS activa el fallback Whisper)."""
     try:
         result = fetch_transcript(req.youtube_url, req.languages)
-    except TranscriptError as exc:
-        # 422 → NestJS decide activar el fallback Whisper.
-        raise HTTPException(status_code=422, detail=str(exc)) from exc
+    except TranscriptError as youtube_exc:
+        if settings.supadata_api_key:
+            try:
+                result = fetch_supadata_transcript(
+                    req.youtube_url,
+                    settings.supadata_api_key,
+                    req.languages,
+                )
+            except TranscriptError as provider_exc:
+                detail = f"{youtube_exc} Proveedor alternativo: {provider_exc}"
+                raise HTTPException(status_code=422, detail=detail) from provider_exc
+        else:
+            # 422 → NestJS decide activar el fallback Whisper.
+            raise HTTPException(status_code=422, detail=str(youtube_exc)) from youtube_exc
     return result.to_dict()
 
 
