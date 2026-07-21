@@ -25,7 +25,6 @@ sql = sql.replace(/^\\(?:un)?restrict\b.*$/gm, '');
 // por dependencias para este corpus y no existen ciclos en sus filas demo.
 sql = sql.replace(/^ALTER TABLE .+ (?:DISABLE|ENABLE) TRIGGER ALL;\s*$/gm, '');
 // Compatibilidad con el export previo al proveedor S3 generico.
-sql = sql.replace(/'r2'/g, "'s3'");
 
 function splitStatements(source) {
   const statements = [];

@@ -46,6 +46,6 @@ apps/ml/storage/exports/
 apps/web/dist/
 apps/web/.vite/
 
-# Excluir carpeta de documentación
-docs/
-
+# La documentación del TFM se publica; solo se excluyen copias locales.
+docs/*.backup.pptx
+outputs/

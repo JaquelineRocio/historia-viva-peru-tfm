@@ -369,7 +369,7 @@ ALTER TABLE tfm_schema.resources
   ADD COLUMN IF NOT EXISTS corpus_notes TEXT;
 
 -- Almacenamiento portable: las instalaciones existentes conservan storage_path
--- y las nuevas pueden utilizar una clave de objeto S3/R2.
+-- y las nuevas pueden utilizar una clave de objeto S3.
 ALTER TABLE tfm_schema.resources
   ADD COLUMN IF NOT EXISTS storage_provider VARCHAR(20),
   ADD COLUMN IF NOT EXISTS storage_key VARCHAR(1000),

@@ -7,7 +7,7 @@ publicación, datasets, modelos y auditoría.
 ## Dependencias externas
 
 - PostgreSQL/pgvector; Neon en producción.
-- Almacenamiento compatible con S3; Cloudflare R2 en producción.
+- Almacenamiento compatible con S3; Supabase Storage en producción.
 - Servicio FastAPI protegido; Modal en producción.
 - Redis/BullMQ solo como opción local. Render usa la cola persistida en base de
   datos (`PROCESSING_QUEUE_DRIVER=database`).

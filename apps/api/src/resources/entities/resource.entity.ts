@@ -12,7 +12,7 @@ export class ResourceEntity {
   @Column({ type: 'varchar', length: 200, nullable: true }) author?: string | null;
   @Column({ name: 'source_url', type: 'varchar', length: 1000, nullable: true }) sourceUrl?: string | null;
   @Column({ name: 'storage_path', type: 'varchar', length: 1000, nullable: true }) storagePath?: string | null;
-  @Column({ name: 'storage_provider', type: 'varchar', length: 20, nullable: true }) storageProvider?: 'local' | 's3' | 'r2' | null;
+  @Column({ name: 'storage_provider', type: 'varchar', length: 20, nullable: true }) storageProvider?: 'local' | 's3' | null;
   @Column({ name: 'storage_key', type: 'varchar', length: 1000, nullable: true }) storageKey?: string | null;
   @Column({ name: 'original_filename', type: 'varchar', length: 300, nullable: true }) originalFilename?: string | null;
   @Column({ name: 'mime_type', type: 'varchar', length: 120, nullable: true }) mimeType?: string | null;

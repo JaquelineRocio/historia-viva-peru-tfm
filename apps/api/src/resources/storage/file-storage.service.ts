@@ -4,7 +4,7 @@ import { GetObjectCommand, PutObjectCommand, S3Client } from '@aws-sdk/client-s3
 import { access, mkdir, readFile, writeFile } from 'node:fs/promises';
 import { join, resolve, sep } from 'node:path';
 
-export type StorageProvider = 'local' | 's3' | 'r2';
+export type StorageProvider = 'local' | 's3';
 
 export interface StoredFile {
   provider: StorageProvider;
@@ -15,8 +15,7 @@ export interface StoredFile {
 /**
  * Almacenamiento de documentos con dos drivers compatibles:
  * - local: Docker/desarrollo, bajo UPLOAD_ROOT;
- * - s3: proveedor compatible con S3 (Cloudflare R2 en producción).
- * - r2: identificador heredado para recursos existentes.
+ * - s3: proveedor compatible con S3 (Supabase Storage en producción).
  *
  * Los documentos del MVP están limitados a 50 MB, por lo que devolver Buffer
  * mantiene sencilla y auditable la integración con extracción PDF y descarga.
@@ -30,19 +29,19 @@ export class FileStorageService {
 
   constructor(private readonly config: ConfigService) {
     const driver = this.config.get<string>('FILE_STORAGE_DRIVER', 'local');
-    this.provider = driver === 's3' || driver === 'r2' ? 's3' : 'local';
+    this.provider = driver === 's3' ? 's3' : 'local';
     this.uploadRoot = resolve(this.config.get<string>('UPLOAD_ROOT', join(process.cwd(), 'storage', 'uploads')));
 
     if (this.provider === 's3') {
-      const endpoint = this.requiredAny('S3_ENDPOINT', 'R2_ENDPOINT');
-      this.bucket = this.requiredAny('S3_BUCKET', 'R2_BUCKET');
+      const endpoint = this.required('S3_ENDPOINT');
+      this.bucket = this.required('S3_BUCKET');
       this.s3 = new S3Client({
-        region: this.config.get<string>('S3_REGION') || this.config.get<string>('R2_REGION', 'auto'),
+        region: this.config.get<string>('S3_REGION', 'us-west-2'),
         endpoint,
         forcePathStyle: true,
         credentials: {
-          accessKeyId: this.requiredAny('S3_ACCESS_KEY_ID', 'R2_ACCESS_KEY_ID'),
-          secretAccessKey: this.requiredAny('S3_SECRET_ACCESS_KEY', 'R2_SECRET_ACCESS_KEY'),
+          accessKeyId: this.required('S3_ACCESS_KEY_ID'),
+          secretAccessKey: this.required('S3_SECRET_ACCESS_KEY'),
         },
       });
     }
@@ -72,10 +71,10 @@ export class FileStorageService {
 
   async get(provider: StorageProvider | null | undefined, key?: string | null, legacyPath?: string | null): Promise<Buffer> {
     const resolvedProvider = provider || (legacyPath ? 'local' : this.provider);
-    if (resolvedProvider === 's3' || resolvedProvider === 'r2') {
+    if (resolvedProvider === 's3') {
       if (!key) throw new Error('La fuente no tiene clave de almacenamiento');
       const response = await this.s3!.send(new GetObjectCommand({ Bucket: this.bucket!, Key: this.safeKey(key) }));
-      if (!response.Body) throw new Error('El archivo no está disponible en R2');
+      if (!response.Body) throw new Error('El archivo no está disponible en el almacenamiento S3');
       return Buffer.from(await response.Body.transformToByteArray());
     }
 
@@ -106,13 +105,8 @@ export class FileStorageService {
 
   private required(key: string): string {
     const value = this.config.get<string>(key);
-    if (!value) throw new Error(`Falta la variable obligatoria ${key} para almacenamiento R2`);
+    if (!value) throw new Error(`Falta la variable obligatoria ${key} para almacenamiento S3`);
     return value;
   }
 
-  private requiredAny(primary: string, legacy: string): string {
-    const value = this.config.get<string>(primary) || this.config.get<string>(legacy);
-    if (!value) throw new Error(`Falta la variable obligatoria ${primary} para almacenamiento S3`);
-    return value;
-  }
 }

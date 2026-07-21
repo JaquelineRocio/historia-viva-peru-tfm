@@ -50,7 +50,7 @@ BEGIN
 END $$;
 DELETE FROM tfm_schema.users;
 UPDATE tfm_schema.resources
-SET storage_provider = CASE WHEN storage_path IS NULL THEN storage_provider ELSE 'r2' END,
+SET storage_provider = CASE WHEN storage_path IS NULL THEN storage_provider ELSE 's3' END,
     storage_key = CASE
       WHEN storage_path IS NULL THEN storage_key
       ELSE replace(regexp_replace(storage_path, '^.*storage[\\/]uploads[\\/]', ''), '\\', '/')
@@ -73,10 +73,10 @@ SET storage_provider = CASE WHEN storage_path IS NULL THEN storage_provider ELSE
     Remove-Item -LiteralPath $rawOutputPath -Force
   }
 
-  # Archivos de la demo. No se versionan; se suben a R2 con upload-demo-r2.mjs.
+  # Archivos de la demo. No se versionan; se suben a Supabase Storage con upload-demo-s3.mjs.
   Invoke-Docker cp "tfm-api:/app/storage/uploads/." $filesPath
   Write-Host "Seed sanitizado y comprimido: $outputPath" -ForegroundColor Green
-  Write-Host "Archivos para R2: $filesPath" -ForegroundColor Green
+  Write-Host "Archivos para Supabase Storage: $filesPath" -ForegroundColor Green
 } finally {
   & docker exec $Container dropdb -U $User --if-exists $temporaryDatabase 2>$null | Out-Null
   & docker exec $Container sh -c "rm -f $dump $sql" 2>$null | Out-Null

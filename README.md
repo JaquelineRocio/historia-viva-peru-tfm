@@ -91,7 +91,7 @@ flowchart LR
   U[Docente] --> W[React / Vercel]
   W --> A[NestJS / Render]
   A --> D[(PostgreSQL + pgvector / Neon)]
-  A --> O[(PDF / Cloudflare R2 vía S3)]
+  A --> O[(PDF / Supabase Storage vía S3)]
   A --> M[FastAPI ML / Modal]
   M --> S[Subtítulos / Supadata]
   M --> H[(Pesos BETO v1 / Hugging Face Hub)]
@@ -102,7 +102,7 @@ flowchart LR
 - Datos: PostgreSQL + `pgvector`.
 - ML: FastAPI, Transformers, BETO, embeddings, NER, Supadata y Whisper.
 - Local: Docker Compose, almacenamiento de archivos y Redis/BullMQ.
-- Demo gratuita: Vercel, Render, Neon, Cloudflare R2, Hugging Face Hub y Modal.
+- Demo gratuita: Vercel, Render, Neon, Supabase Storage, Hugging Face Hub y Modal.
 
 ## Ejecución local
 
@@ -164,7 +164,7 @@ Siga [docs/despliegue-gratuito.md](docs/despliegue-gratuito.md). `render.yaml`
 configura la API y `apps/web/vercel.json` configura el frontend. El modelo se
 publica en Hugging Face Hub. Debido a que los Spaces con cómputo requieren un plan
 pagado, la demo ejecuta FastAPI con Modal Starter y escala a cero cuando no recibe
-solicitudes. Render no conserva archivos: los PDF se almacenan en R2.
+solicitudes. Render no conserva archivos: los PDF se almacenan en Supabase Storage.
 
 Cuando YouTube bloquea la extracción directa desde la infraestructura remota, el
 servicio usa subtítulos nativos mediante Supadata. Su nivel gratuito dispone de

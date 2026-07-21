@@ -1,4 +1,4 @@
-# Render hospeda solo la API. PostgreSQL vive en Neon, los archivos en R2 y ML
+# Render hospeda solo la API. PostgreSQL vive en Neon, los archivos en Supabase Storage y ML
 # se despliega como función ASGI serverless en Modal para disponer de más memoria.
 services:
   - type: web
