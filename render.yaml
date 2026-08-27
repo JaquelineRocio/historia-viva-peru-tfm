@@ -41,6 +41,16 @@ services:
         value: "10"
       - key: DEMO_MAX_SOURCES_PER_USER
         value: "3"
+      - key: PUBLIC_PROCESSING_ENABLED
+        value: "true"
+      - key: PUBLIC_PROCESS_MAX_DURATION_SEC
+        value: "7200"
+      - key: PUBLIC_PROCESS_RATE_WINDOW_HOURS
+        value: "24"
+      - key: PUBLIC_PROCESS_MAX_PER_SESSION
+        value: "1"
+      - key: PUBLIC_PROCESS_MAX_PER_IP
+        value: "5"
       - key: PROCESSING_QUEUE_DRIVER
         value: database
       - key: FILE_STORAGE_DRIVER

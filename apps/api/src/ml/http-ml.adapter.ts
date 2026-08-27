@@ -14,6 +14,7 @@ import {
   MlTrainRequest,
   MlTranscriptResult,
   MlTranscriptUnavailable,
+  MlYoutubeMetadata,
   SegmentParams,
 } from './ml-service.port';
 
@@ -58,6 +59,21 @@ export class HttpMlAdapter implements MlServicePort {
       return data;
     } catch (err) {
       throw this.wrap(err, 'health');
+    }
+  }
+
+  async inspectYoutube(youtubeUrl: string): Promise<MlYoutubeMetadata> {
+    try {
+      const { data } = await firstValueFrom(
+        this.http.post<MlYoutubeMetadata>(
+          `${this.baseUrl}/youtube/inspect`,
+          { youtube_url: youtubeUrl },
+          { timeout: 60000, headers: this.headers },
+        ),
+      );
+      return data;
+    } catch (err) {
+      throw this.wrap(err, 'inspectYoutube');
     }
   }
 

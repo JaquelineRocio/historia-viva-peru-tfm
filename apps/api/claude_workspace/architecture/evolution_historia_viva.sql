@@ -375,6 +375,39 @@ ALTER TABLE tfm_schema.resources
   ADD COLUMN IF NOT EXISTS storage_key VARCHAR(1000),
   ADD COLUMN IF NOT EXISTS file_publication_status VARCHAR(20) NOT NULL DEFAULT 'private';
 
+-- Solicitudes anónimas acotadas para la experiencia pública. Solo se almacenan
+-- hashes de red/sesión; nunca direcciones IP, tokens o credenciales en claro.
+CREATE TABLE IF NOT EXISTS tfm_schema.public_processing_requests (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  resource_id UUID NOT NULL UNIQUE REFERENCES tfm_schema.resources(id),
+  session_hash VARCHAR(64) NOT NULL,
+  client_hash VARCHAR(64) NOT NULL,
+  youtube_id VARCHAR(11) NOT NULL,
+  stage VARCHAR(40) NOT NULL DEFAULT 'preparing_source',
+  public_error VARCHAR(300),
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+  finished_at TIMESTAMPTZ
+);
+CREATE INDEX IF NOT EXISTS ix_public_processing_session_created
+  ON tfm_schema.public_processing_requests(session_hash, created_at DESC);
+CREATE INDEX IF NOT EXISTS ix_public_processing_client_created
+  ON tfm_schema.public_processing_requests(client_hash, created_at DESC);
+CREATE INDEX IF NOT EXISTS ix_public_processing_youtube
+  ON tfm_schema.public_processing_requests(youtube_id);
+
+CREATE TABLE IF NOT EXISTS tfm_schema.public_processing_attempts (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  session_hash VARCHAR(64) NOT NULL,
+  client_hash VARCHAR(64) NOT NULL,
+  youtube_id VARCHAR(11) NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+CREATE INDEX IF NOT EXISTS ix_public_attempts_session_created
+  ON tfm_schema.public_processing_attempts(session_hash, created_at DESC);
+CREATE INDEX IF NOT EXISTS ix_public_attempts_client_created
+  ON tfm_schema.public_processing_attempts(client_hash, created_at DESC);
+
 UPDATE tfm_schema.resources
 SET storage_provider = 'local'
 WHERE storage_path IS NOT NULL AND storage_provider IS NULL;

@@ -1,10 +1,10 @@
-import { Body, Controller, Get, HttpCode, Param, ParseUUIDPipe, Patch, Post, Put, Query, Res, StreamableFile, UploadedFile, UseGuards, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, Get, Headers, HttpCode, Param, ParseUUIDPipe, Patch, Post, Put, Query, Req, Res, StreamableFile, UploadedFile, UseGuards, UseInterceptors } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
-import type { Response } from 'express';
+import type { Request, Response } from 'express';
 import { CurrentUser } from '../auth/current-user.decorator';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import { AuthUser } from '../auth/jwt.strategy';
-import { AddCollectionItemDto, AssistantQueryDto, BulkReviewSegmentsDto, CorpusResourceDto, CreateCollectionDto, CreateProjectDto, CreateYoutubeResourceDto, EvidenceFeedbackDto, PdfMetadataDto, PublicationDecisionDto, ReplaceEntitiesDto, ReviewSegmentDto, SearchQueryDto, SegmentsQueryDto, UpdateResourceMetadataDto } from './dto/resource.dto';
+import { AddCollectionItemDto, AssistantQueryDto, BulkReviewSegmentsDto, CorpusResourceDto, CreateCollectionDto, CreateProjectDto, CreateYoutubeResourceDto, EvidenceFeedbackDto, PdfMetadataDto, PublicationDecisionDto, PublicYoutubeResourceDto, ReplaceEntitiesDto, ReviewSegmentDto, SearchQueryDto, SegmentsQueryDto, UpdateResourceMetadataDto } from './dto/resource.dto';
 import { ResourcesService } from './resources.service';
 
 @UseGuards(JwtAuthGuard)
@@ -220,6 +220,34 @@ export class PublicResourcesController {
   @Get('projects')
   projects() {
     return this.service.publicProjects();
+  }
+
+  @Get('explore/resources')
+  exploreResources() {
+    return this.service.publicExplore();
+  }
+
+  @Get('explore/resources/:id')
+  exploreResource(@Param('id', ParseUUIDPipe) id: string) {
+    return this.service.publicExploreResource(id);
+  }
+
+  @Post('explore/process')
+  @HttpCode(202)
+  processYoutube(
+    @Body() dto: PublicYoutubeResourceDto,
+    @Headers('x-demo-session') sessionId: string,
+    @Req() request: Request,
+  ) {
+    return this.service.createPublicYoutube(dto, sessionId || '', request.ip || request.socket.remoteAddress || 'unknown');
+  }
+
+  @Get('explore/process/:id')
+  processStatus(
+    @Param('id', ParseUUIDPipe) id: string,
+    @Headers('x-demo-session') sessionId: string,
+  ) {
+    return this.service.publicProcessingStatus(id, sessionId || '');
   }
 
   @Get('projects/:id/resources')

@@ -1,6 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
-import { api } from '../lib/apiClient'
-import type { EvidenceCollection, HistoricalEntity, HistoricalSearchFilters, HistoryProject, HistoryResource, PagedResourceSegments, ProjectDashboard, ResourceSegment, SearchEvidence, SearchFacets } from '../types'
+import { api, publicApi } from '../lib/apiClient'
+import type { EvidenceCollection, HistoricalEntity, HistoricalSearchFilters, HistoryProject, HistoryResource, PagedResourceSegments, ProjectDashboard, PublicExploreResponse, PublicProcessingResponse, PublicVideoResource, ResourceSegment, SearchEvidence, SearchFacets } from '../types'
 
 export function useProjects() {
   return useQuery({ queryKey: ['projects'], queryFn: async () => (await api.get<HistoryProject[]>('/projects')).data })
@@ -258,14 +258,37 @@ export function useRequestPublication(projectId?: string) {
 }
 
 export async function publicProjects() {
-  return (await api.get<HistoryProject[]>('/public/projects')).data
+  return (await publicApi.get<HistoryProject[]>('/public/projects')).data
 }
 
 export async function publicSearch(projectId: string, query: string, filters: HistoricalSearchFilters = {}) {
-  return (await api.get<{ query: string; answer: string; evidence: SearchEvidence[] }>(
+  return (await publicApi.get<{ query: string; answer: string; evidence: SearchEvidence[] }>(
     `/public/projects/${projectId}/search`,
     { params: { q: query, ...filters } },
   )).data
+}
+
+export async function publicExploreResources() {
+  return (await publicApi.get<PublicExploreResponse>('/public/explore/resources')).data
+}
+
+export async function publicExploreResource(id: string) {
+  return (await publicApi.get<PublicVideoResource>(`/public/explore/resources/${id}`)).data
+}
+
+export async function publicProcessYoutube(
+  payload: { url: string; title?: string; author?: string; rightsConfirmed: true },
+  sessionId: string,
+) {
+  return (await publicApi.post<PublicProcessingResponse>('/public/explore/process', payload, {
+    headers: { 'X-Demo-Session': sessionId },
+  })).data
+}
+
+export async function publicProcessingStatus(requestId: string, sessionId: string) {
+  return (await publicApi.get<PublicProcessingResponse>(`/public/explore/process/${requestId}`, {
+    headers: { 'X-Demo-Session': sessionId },
+  })).data
 }
 
 export function usePublicationReviews() {

@@ -15,6 +15,8 @@ export const tokenStore = {
  */
 const baseURL = import.meta.env.VITE_API_URL || '/api'
 export const api = axios.create({ baseURL })
+/** Cliente deliberadamente anónimo para /explorar: nunca adjunta JWT ni lee localStorage. */
+export const publicApi = axios.create({ baseURL })
 
 api.interceptors.request.use((config) => {
   const token = tokenStore.get()

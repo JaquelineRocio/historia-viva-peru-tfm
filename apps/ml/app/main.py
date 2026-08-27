@@ -69,6 +69,10 @@ class TranscribeRequest(BaseModel):
     languages: Optional[List[str]] = Field(default=None, description="Idiomas preferidos")
 
 
+class YoutubeInspectRequest(BaseModel):
+    youtube_url: str = Field(..., description="URL canónica de un video de YouTube")
+
+
 class SegmentRequest(BaseModel):
     cues: List[dict] = Field(..., description="Cues [{start, duration|end, text}]")
     window_sec: float = 60.0
@@ -137,6 +141,36 @@ def transcribe(req: TranscribeRequest) -> dict:
             # 422 → NestJS decide activar el fallback Whisper.
             raise HTTPException(status_code=422, detail=str(youtube_exc)) from youtube_exc
     return result.to_dict()
+
+
+@app.post("/youtube/inspect", dependencies=PROTECTED)
+def inspect_youtube(req: YoutubeInspectRequest) -> dict:
+    """Lee título, canal y duración sin descargar audio ni video."""
+    try:
+        import yt_dlp
+
+        options = {
+            "quiet": True,
+            "no_warnings": True,
+            "skip_download": True,
+            "noplaylist": True,
+            "socket_timeout": 20,
+        }
+        with yt_dlp.YoutubeDL(options) as ydl:
+            info = ydl.extract_info(req.youtube_url, download=False)
+    except Exception as exc:
+        raise HTTPException(status_code=422, detail="No se pudo validar el video de YouTube") from exc
+
+    duration = float(info.get("duration") or 0)
+    if not info.get("id") or not info.get("title") or duration <= 0:
+        raise HTTPException(status_code=422, detail="YouTube no devolvió metadatos suficientes")
+    return {
+        "video_id": str(info["id"]),
+        "title": str(info["title"]),
+        "author": info.get("channel") or info.get("uploader"),
+        "duration_sec": round(duration, 3),
+        "is_live": bool(info.get("is_live") or info.get("live_status") == "is_live"),
+    }
 
 
 @app.post("/transcribe/audio", dependencies=PROTECTED)

@@ -177,6 +177,54 @@ export interface ResourceSegment {
   entities?: HistoricalEntity[]
 }
 
+export interface PublicVideoSegment {
+  id: string
+  idx: number
+  startSec: number
+  endSec: number
+  text: string
+  labelKey?: string | null
+  labelName: string
+}
+
+export interface PublicVideoResource {
+  id: string
+  title: string
+  author?: string | null
+  sourceUrl: string
+  provenance: string
+  durationSec?: number
+  segmentCount?: number
+  processingStatus?: ProcessingStatus
+  segments?: PublicVideoSegment[]
+}
+
+export type PublicProcessingStage =
+  | 'validating_video'
+  | 'preparing_source'
+  | 'generating_transcription'
+  | 'analyzing_subtopics'
+  | 'ready'
+  | 'failed'
+
+export interface PublicExploreResponse {
+  items: PublicVideoResource[]
+  processing: {
+    enabled: boolean
+    maxDurationSec: number
+    maxPerSession: number
+    maxPerIp: number
+    windowHours: number
+  }
+}
+
+export interface PublicProcessingResponse {
+  requestId: string
+  stage: PublicProcessingStage
+  error?: string | null
+  resource: PublicVideoResource
+}
+
 export interface PagedResourceSegments {
   items: ResourceSegment[]
   page: number

@@ -25,6 +25,14 @@ export interface MlTranscriptResult {
   cues: MlCue[];
 }
 
+export interface MlYoutubeMetadata {
+  video_id: string;
+  title: string;
+  author?: string | null;
+  duration_sec: number;
+  is_live: boolean;
+}
+
 /** Un segmento por ventana temporal. */
 export interface MlSegment {
   idx: number;
@@ -156,6 +164,9 @@ export interface MlHealth {
 export interface MlServicePort {
   /** Salud del servicio ML. */
   health(): Promise<MlHealth>;
+
+  /** Metadatos verificables de YouTube sin descargar el contenido. */
+  inspectYoutube(youtubeUrl: string): Promise<MlYoutubeMetadata>;
 
   /** Lanza un entrenamiento (job async). Devuelve el id del job en el servicio ML. */
   train(req: MlTrainRequest): Promise<{ job_id: string }>;

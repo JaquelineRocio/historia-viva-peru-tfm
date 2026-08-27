@@ -1,4 +1,4 @@
-import { ArrayMaxSize, ArrayMinSize, IsArray, IsBoolean, IsIn, IsInt, IsNotEmpty, IsOptional, IsString, IsUrl, IsUUID, Max, MaxLength, Min, ValidateNested } from 'class-validator';
+import { ArrayMaxSize, ArrayMinSize, Equals, IsArray, IsBoolean, IsIn, IsInt, IsNotEmpty, IsOptional, IsString, IsUrl, IsUUID, Max, MaxLength, Min, ValidateNested } from 'class-validator';
 import { Transform, Type } from 'class-transformer';
 
 export class CreateProjectDto {
@@ -13,6 +13,13 @@ export class CreateYoutubeResourceDto {
   @IsString() @IsNotEmpty() @MaxLength(300) title!: string;
   @IsOptional() @IsString() @MaxLength(200) author?: string;
   @IsBoolean() rightsConfirmed!: boolean;
+}
+
+export class PublicYoutubeResourceDto {
+  @IsUrl({ protocols: ['https'], require_protocol: true, require_tld: true }) url!: string;
+  @IsOptional() @IsString() @IsNotEmpty() @MaxLength(300) title?: string;
+  @IsOptional() @IsString() @MaxLength(200) author?: string;
+  @Equals(true, { message: 'Debes confirmar el uso educativo de la fuente' }) rightsConfirmed!: true;
 }
 
 export class PdfMetadataDto {

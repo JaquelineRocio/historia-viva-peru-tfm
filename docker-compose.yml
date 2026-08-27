@@ -79,6 +79,11 @@ services:
       ML_SERVICE_URL: http://ml:8000
       ML_INTERNAL_TOKEN: dev-internal-token
       REDIS_URL: redis://redis:6379
+      PUBLIC_PROCESSING_ENABLED: "true"
+      PUBLIC_PROCESS_MAX_DURATION_SEC: "7200"
+      PUBLIC_PROCESS_RATE_WINDOW_HOURS: "24"
+      PUBLIC_PROCESS_MAX_PER_SESSION: "1"
+      PUBLIC_PROCESS_MAX_PER_IP: "5"
     ports:
       - "3000:3000"
     volumes:

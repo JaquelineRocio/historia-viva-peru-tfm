@@ -6,7 +6,8 @@ import { extname } from 'node:path';
 import { Queue, Worker } from 'bullmq';
 import { DataSource, Repository } from 'typeorm';
 import { ML_SERVICE_PORT, MlServicePort, MlTranscriptUnavailable } from '../ml/ml-service.port';
-import { CreateProjectDto, CreateYoutubeResourceDto, PdfMetadataDto, ReviewSegmentDto, UpdateResourceMetadataDto } from './dto/resource.dto';
+import { canonicalYoutubeUrl, extractYoutubeId } from '../videos/youtube-id.util';
+import { CreateProjectDto, CreateYoutubeResourceDto, PdfMetadataDto, PublicYoutubeResourceDto, ReviewSegmentDto, UpdateResourceMetadataDto } from './dto/resource.dto';
 import { ProjectEntity } from './entities/project.entity';
 import { ResourceSegmentEntity } from './entities/resource-segment.entity';
 import { ResourceEntity } from './entities/resource.entity';
@@ -15,7 +16,7 @@ import { FileStorageService } from './storage/file-storage.service';
 
 interface ProcessResourceJob {
   resourceId: string;
-  userId: string;
+  userId: string | null;
   runId: string;
 }
 
@@ -96,6 +97,7 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
              SET status = 'failed', error = $2, finished_at = now() WHERE id = $1`,
             [job.data.runId, message],
           );
+          await this.setPublicStage(resource.id, 'failed', 'No se pudo completar el procesamiento del video.');
           throw error instanceof Error ? error : new Error(message);
         }
       },
@@ -282,6 +284,11 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
     const resource = await this.findOne(id);
     await this.project(resource.projectId, { id: userId, role: 'collaborator' });
     if (resource.processingStatus === 'processing') throw new ConflictException('La fuente ya se está procesando');
+    return this.enqueueProcessing(resource, userId);
+  }
+
+  private async enqueueProcessing(resource: ResourceEntity, userId: string | null) {
+    const id = resource.id;
     await this.resources.update(id, { processingStatus: 'processing', processingError: null, updatedUserId: userId });
     try {
       const runs = await this.dataSource.query(
@@ -327,6 +334,7 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
          SET status = 'failed', error = $2, finished_at = now() WHERE id = $1`,
         [payload.runId, message],
       );
+      await this.setPublicStage(resource.id, 'failed', 'No se pudo completar el procesamiento del video.');
       throw error;
     }
   }
@@ -342,14 +350,15 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
 
   private async recoverDatabaseJobs(): Promise<void> {
     const rows = await this.dataSource.query(
-      `SELECT pr.id AS "runId", pr.resource_id AS "resourceId", pr.created_user_id AS "userId"
+      `SELECT pr.id AS "runId", pr.resource_id AS "resourceId", pr.created_user_id AS "userId",
+              EXISTS (SELECT 1 FROM tfm_schema.public_processing_requests ppr WHERE ppr.resource_id = pr.resource_id) AS "isPublicRequest"
        FROM tfm_schema.resource_processing_runs pr
        JOIN tfm_schema.resources r ON r.id = pr.resource_id
        WHERE pr.status IN ('queued', 'processing') AND r.is_deleted = false
        ORDER BY pr.started_at`,
     );
     for (const row of rows) {
-      if (!row.userId) {
+      if (!row.userId && !row.isPublicRequest) {
         await this.dataSource.query(
           `UPDATE tfm_schema.resource_processing_runs
            SET status = 'failed', error = 'Ejecución sin usuario recuperable', finished_at = now()
@@ -362,7 +371,7 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
     }
   }
 
-  private async runProcessing(resource: ResourceEntity, userId: string, runId: string) {
+  private async runProcessing(resource: ResourceEntity, userId: string | null, runId: string) {
     if (resource.type === 'pdf') {
       const content = await this.storage.get(resource.storageProvider, resource.storageKey, resource.storagePath);
       const result = await this.ml.extractPdf(content, resource.originalFilename || 'documento.pdf');
@@ -377,6 +386,7 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
       const saved = await this.replaceActiveSegments(resource.id, created);
       await Promise.all([this.suggestLabels(saved), this.embedSegments(saved), this.enrichEntities(saved)]);
     } else {
+      await this.setPublicStage(resource.id, 'generating_transcription');
       let transcript;
       try {
         transcript = await this.ml.transcribeSubtitles(resource.sourceUrl!);
@@ -408,6 +418,7 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
       }));
       const saved = await this.replaceActiveSegments(resource.id, created);
       await this.resources.update(resource.id, { language: transcript.language });
+      await this.setPublicStage(resource.id, 'analyzing_subtopics');
       await Promise.all([this.suggestLabels(saved), this.embedSegments(saved), this.enrichEntities(saved)]);
     }
     await this.resources.update(resource.id, { processingStatus: 'ready', processingError: null, updatedUserId: userId });
@@ -417,6 +428,7 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
        SET status = 'ready', segment_count = $2, finished_at = now() WHERE id = $1`,
       [runId, segmentCount],
     );
+    await this.setPublicStage(resource.id, 'ready');
   }
 
   private replaceActiveSegments(resourceId: string, created: ResourceSegmentEntity[]) {
@@ -910,15 +922,259 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
     return { status, resourceId: rows[0].resourceId };
   }
 
+  async publicExplore() {
+    const items = await this.dataSource.query(
+      `SELECT r.id, r.title, r.author, r.source_url AS "sourceUrl", 'YouTube' AS provenance,
+              COALESCE(max(s.end_sec), 0)::float AS "durationSec", count(s.id)::int AS "segmentCount"
+       FROM tfm_schema.resources r
+       JOIN tfm_schema.projects p ON p.id = r.project_id
+       LEFT JOIN tfm_schema.resource_segments s ON s.resource_id = r.id AND s.is_deleted = false
+       WHERE p.is_public = true AND p.is_deleted = false AND r.is_deleted = false
+         AND r.type = 'youtube' AND r.processing_status = 'ready' AND r.publication_status = 'approved'
+       GROUP BY r.id
+       ORDER BY CASE WHEN r.source_url LIKE '%gZpo1PjY0ao%' THEN 0 ELSE 1 END, r.created_at ASC`,
+    );
+    return {
+      items,
+      processing: {
+        enabled: this.config.get<string>('PUBLIC_PROCESSING_ENABLED', 'false') === 'true',
+        maxDurationSec: Number(this.config.get<string>('PUBLIC_PROCESS_MAX_DURATION_SEC', '7200')),
+        maxPerSession: Number(this.config.get<string>('PUBLIC_PROCESS_MAX_PER_SESSION', '1')),
+        maxPerIp: Number(this.config.get<string>('PUBLIC_PROCESS_MAX_PER_IP', '5')),
+        windowHours: Number(this.config.get<string>('PUBLIC_PROCESS_RATE_WINDOW_HOURS', '24')),
+      },
+    };
+  }
+
+  async publicExploreResource(resourceId: string) {
+    const resources = await this.dataSource.query(
+      `SELECT r.id, r.title, r.author, r.source_url AS "sourceUrl", 'YouTube' AS provenance,
+              COALESCE(max(s.end_sec), 0)::float AS "durationSec", count(s.id)::int AS "segmentCount"
+       FROM tfm_schema.resources r
+       JOIN tfm_schema.projects p ON p.id = r.project_id
+       LEFT JOIN tfm_schema.resource_segments s ON s.resource_id = r.id AND s.is_deleted = false
+       WHERE r.id = $1 AND p.is_public = true AND p.is_deleted = false AND r.is_deleted = false
+         AND r.type = 'youtube' AND r.processing_status = 'ready' AND r.publication_status = 'approved'
+       GROUP BY r.id`,
+      [resourceId],
+    );
+    if (!resources.length) throw new NotFoundException('Video público no encontrado');
+    return { ...resources[0], segments: await this.publicVideoSegments(resourceId) };
+  }
+
+  async createPublicYoutube(
+    dto: PublicYoutubeResourceDto,
+    sessionId: string,
+    clientAddress: string,
+  ) {
+    if (this.config.get<string>('PUBLIC_PROCESSING_ENABLED', 'false') !== 'true') {
+      throw new ForbiddenException('El procesamiento público está en modo supervisado temporalmente');
+    }
+    if (!/^[0-9a-f]{8}-[0-9a-f-]{27}$/i.test(sessionId)) {
+      throw new BadRequestException('La sesión de demostración no es válida');
+    }
+    const canonicalUrl = canonicalYoutubeUrl(dto.url);
+    const youtubeId = extractYoutubeId(dto.url);
+    if (!canonicalUrl || !youtubeId) throw new BadRequestException('Utiliza una URL HTTPS válida de YouTube');
+
+    const existing = await this.findYoutubeDuplicate(youtubeId);
+    if (existing) this.throwYoutubeDuplicate(existing);
+
+    const sessionHash = this.hashPublicKey(`session:${sessionId}`);
+    const clientHash = this.hashPublicKey(`client:${clientAddress || 'unknown'}`);
+    await this.registerPublicAttempt(sessionHash, clientHash, youtubeId);
+
+    const metadata = await this.ml.inspectYoutube(canonicalUrl);
+    const maxDurationSec = Number(this.config.get<string>('PUBLIC_PROCESS_MAX_DURATION_SEC', '7200'));
+    if (metadata.video_id !== youtubeId) throw new BadRequestException('El video validado no coincide con la URL');
+    if (metadata.is_live) throw new BadRequestException('No se admiten transmisiones en vivo');
+    if (metadata.duration_sec > maxDurationSec) {
+      throw new BadRequestException(`El video supera el límite de ${Math.floor(maxDurationSec / 60)} minutos`);
+    }
+
+    const result = await this.dataSource.transaction(async (manager) => {
+      await manager.query(`SELECT pg_advisory_xact_lock(hashtext($1))`, [`youtube:${youtubeId}`]);
+      const duplicate = await manager.query(
+        `SELECT id, publication_status AS "publicationStatus", processing_status AS "processingStatus"
+         FROM tfm_schema.resources
+         WHERE is_deleted = false AND type = 'youtube' AND source_url LIKE $1 LIMIT 1`,
+        [`%${youtubeId}%`],
+      );
+      if (duplicate.length) this.throwYoutubeDuplicate(duplicate[0]);
+
+      const projectRows = await manager.query(
+        `SELECT p.id FROM tfm_schema.projects p
+         WHERE p.is_public = true AND p.is_deleted = false
+           AND EXISTS (SELECT 1 FROM tfm_schema.resources r WHERE r.project_id = p.id AND r.publication_status = 'approved')
+         ORDER BY p.created_at LIMIT 1`,
+      );
+      if (!projectRows.length) throw new NotFoundException('No hay un proyecto público disponible');
+      const resource = await manager.getRepository(ResourceEntity).save(manager.getRepository(ResourceEntity).create({
+        projectId: projectRows[0].id,
+        type: 'youtube',
+        title: metadata.title || dto.title || 'Video educativo de YouTube',
+        author: metadata.author || dto.author || null,
+        sourceUrl: canonicalUrl,
+        rightsConfirmed: true,
+        processingStatus: 'pending',
+        publicationStatus: 'private',
+        filePublicationStatus: 'private',
+        createdUserId: null,
+        updatedUserId: null,
+      }));
+      const requests = await manager.query(
+        `INSERT INTO tfm_schema.public_processing_requests
+           (resource_id, session_hash, client_hash, youtube_id, stage)
+         VALUES ($1, $2, $3, $4, 'preparing_source') RETURNING id`,
+        [resource.id, sessionHash, clientHash, youtubeId],
+      );
+      return { resource, requestId: requests[0].id };
+    });
+
+    try {
+      await this.enqueueProcessing(result.resource, null);
+    } catch (error) {
+      await this.setPublicStage(result.resource.id, 'failed', 'No se pudo iniciar el procesamiento del video.');
+      throw error;
+    }
+    return {
+      requestId: result.requestId,
+      stage: 'preparing_source',
+      resource: this.publicResourceShape(result.resource, metadata.duration_sec),
+    };
+  }
+
+  async publicProcessingStatus(requestId: string, sessionId: string) {
+    const sessionHash = this.hashPublicKey(`session:${sessionId}`);
+    const rows = await this.dataSource.query(
+      `SELECT ppr.id AS "requestId", ppr.stage, ppr.public_error AS error,
+              r.id, r.title, r.author, r.source_url AS "sourceUrl", r.processing_status AS "processingStatus"
+       FROM tfm_schema.public_processing_requests ppr
+       JOIN tfm_schema.resources r ON r.id = ppr.resource_id
+       WHERE ppr.id = $1 AND ppr.session_hash = $2 AND r.is_deleted = false`,
+      [requestId, sessionHash],
+    );
+    if (!rows.length) throw new NotFoundException('Solicitud de procesamiento no encontrada');
+    const row = rows[0];
+    return {
+      requestId: row.requestId,
+      stage: row.stage,
+      error: row.error,
+      resource: {
+        id: row.id,
+        title: row.title,
+        author: row.author,
+        sourceUrl: row.sourceUrl,
+        provenance: 'YouTube',
+        processingStatus: row.processingStatus,
+        segments: row.stage === 'ready' ? await this.publicVideoSegments(row.id) : [],
+      },
+    };
+  }
+
+  private publicVideoSegments(resourceId: string) {
+    return this.dataSource.query(
+      `SELECT s.id, s.idx, s.start_sec::float AS "startSec", s.end_sec::float AS "endSec", s.text,
+              COALESCE(s.reviewed_label_key, s.suggested_label_key) AS "labelKey",
+              COALESCE(lt.name, 'Subtema pendiente de revisión') AS "labelName"
+       FROM tfm_schema.resource_segments s
+       LEFT JOIN tfm_schema.labels_taxonomy lt
+         ON lt.key = COALESCE(s.reviewed_label_key, s.suggested_label_key) AND lt.is_deleted = false
+       WHERE s.resource_id = $1 AND s.is_deleted = false AND s.locator_type = 'timestamp'
+         AND s.review_status <> 'excluded'
+       ORDER BY s.idx`,
+      [resourceId],
+    );
+  }
+
+  private publicResourceShape(resource: ResourceEntity, durationSec?: number) {
+    return {
+      id: resource.id,
+      title: resource.title,
+      author: resource.author,
+      sourceUrl: resource.sourceUrl,
+      provenance: 'YouTube',
+      processingStatus: resource.processingStatus,
+      durationSec,
+    };
+  }
+
+  private async findYoutubeDuplicate(youtubeId: string) {
+    const rows = await this.dataSource.query(
+      `SELECT id, publication_status AS "publicationStatus", processing_status AS "processingStatus"
+       FROM tfm_schema.resources
+       WHERE is_deleted = false AND type = 'youtube' AND source_url LIKE $1 LIMIT 1`,
+      [`%${youtubeId}%`],
+    );
+    return rows[0];
+  }
+
+  private throwYoutubeDuplicate(resource: { id: string; publicationStatus: string; processingStatus: string }): never {
+    if (resource.publicationStatus === 'approved' && resource.processingStatus === 'ready') {
+      throw new ConflictException({ message: 'Este video ya está disponible en la exploración.', existingResourceId: resource.id });
+    }
+    throw new ConflictException('Este video ya fue agregado y no se volverá a procesar');
+  }
+
+  private async registerPublicAttempt(sessionHash: string, clientHash: string, youtubeId: string) {
+    const windowHours = Math.max(1, Number(this.config.get<string>('PUBLIC_PROCESS_RATE_WINDOW_HOURS', '24')));
+    const maxPerSession = Math.max(1, Number(this.config.get<string>('PUBLIC_PROCESS_MAX_PER_SESSION', '1')));
+    const maxPerIp = Math.max(maxPerSession, Number(this.config.get<string>('PUBLIC_PROCESS_MAX_PER_IP', '5')));
+    await this.dataSource.transaction(async (manager) => {
+      await manager.query(`SELECT pg_advisory_xact_lock(hashtext($1))`, [`attempt:${sessionHash}:${clientHash}`]);
+      const quota = await manager.query(
+        `SELECT count(*) FILTER (WHERE session_hash = $1)::int AS "sessionCount",
+                count(*) FILTER (WHERE client_hash = $2)::int AS "clientCount"
+         FROM tfm_schema.public_processing_attempts
+         WHERE created_at > now() - ($3::int * interval '1 hour')`,
+        [sessionHash, clientHash, windowHours],
+      );
+      if (quota[0].sessionCount >= maxPerSession || quota[0].clientCount >= maxPerIp) {
+        throw new ForbiddenException(`Se alcanzó el límite de procesamiento de la demostración para ${windowHours} horas`);
+      }
+      await manager.query(
+        `INSERT INTO tfm_schema.public_processing_attempts(session_hash, client_hash, youtube_id)
+         VALUES ($1, $2, $3)`,
+        [sessionHash, clientHash, youtubeId],
+      );
+    });
+  }
+
+  private hashPublicKey(value: string) {
+    const secret = this.config.get<string>('JWT_SECRET', 'local-public-demo');
+    return createHash('sha256').update(`${secret}:${value}`).digest('hex');
+  }
+
+  private async setPublicStage(resourceId: string, stage: string, publicError?: string) {
+    try {
+      await this.dataSource.query(
+        `UPDATE tfm_schema.public_processing_requests
+         SET stage = $2, public_error = $3, updated_at = now(),
+             finished_at = CASE WHEN $2 IN ('ready', 'failed') THEN now() ELSE finished_at END
+         WHERE resource_id = $1`,
+        [resourceId, stage, publicError || null],
+      );
+    } catch (error) {
+      this.logger.debug(`Sin seguimiento público para ${resourceId}: ${error instanceof Error ? error.message : error}`);
+    }
+  }
+
   publicProjects() {
-    return this.projects.find({ where: { isPublic: true, isDeleted: false }, order: { createdAt: 'ASC' } });
+    return this.dataSource.query(
+      `SELECT id, name, description, period_start AS "periodStart", period_end AS "periodEnd"
+       FROM tfm_schema.projects WHERE is_public = true AND is_deleted = false ORDER BY created_at`,
+    );
   }
 
   publicResources(projectId: string) {
-    return this.resources.find({
-      where: { projectId, publicationStatus: 'approved', isDeleted: false },
-      order: { createdAt: 'DESC' },
-    });
+    return this.dataSource.query(
+      `SELECT r.id, r.type, r.title, r.author, r.source_url AS "sourceUrl"
+       FROM tfm_schema.resources r JOIN tfm_schema.projects p ON p.id = r.project_id
+       WHERE r.project_id = $1 AND p.is_public = true AND p.is_deleted = false
+         AND r.publication_status = 'approved' AND r.processing_status = 'ready' AND r.is_deleted = false
+       ORDER BY r.created_at DESC`,
+      [projectId],
+    );
   }
 
   async searchFacets(projectId: string, user: { id: string; role: string }) {
