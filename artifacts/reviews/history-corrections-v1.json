@@ -1,0 +1,131 @@
+{
+  "parent_sha256": "d4e83d88a76e069e0cffafbeff995b912a4ed3b64865761ef43ec0b8ff47fb54",
+  "review_sha256": "239d4182e59be4aeb417e9564edd668f152d4d2d124d6aeee978a7ce59703a22",
+  "reference_sha256": "54bd64939cc3bdf4d105d14208a41fd2dbb9095f7ef9cb52a4c3baf083f29ece",
+  "reviewed_sha256": "cc67e8f6fafd3a8abd0243643f656477ad6415baa86d97a48d22c0909a68aa0c",
+  "evaluation_sha256": "593fe90d68bc282108eab983515598c7c3b5ebbf42e2f79dbdb275c12d8c02a2",
+  "relabeled": 2,
+  "added": 0,
+  "removed": 0,
+  "changes": [
+    {
+      "review_id": "R04",
+      "reference_index": 360,
+      "parent_index": 357,
+      "resource_id": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "text_sha256": "7c52fef6f0080f67200d9f6e9b5838982c4128c51ef1734a09df2b50f12b74de",
+      "old_label": "crisis_ideas_emancipadoras",
+      "new_label": "participacion_social_regional",
+      "reason": "La articulación económica, autonomía y capacidad de movilización del sur andino vertebran el argumento.",
+      "annotation_origin": "two_ai_reviews",
+      "human_expert_validation": false
+    },
+    {
+      "review_id": "R16",
+      "reference_index": 536,
+      "parent_index": 533,
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "text_sha256": "240e925116ec7e3e7206484f7ac45eed37babd3ef0460d446724ca1a511d55f7",
+      "old_label": "campanias_conflictos_militares",
+      "new_label": "liderazgos_diplomacia_proyectos",
+      "reason": "Condiciones de paz, indemnizaciones y comisión negociadora dominan; el relato militar comienza al final.",
+      "annotation_origin": "two_ai_reviews",
+      "human_expert_validation": false
+    }
+  ],
+  "inputs": {
+    "base": {
+      "path": "outputs\\fonseca-snapshot-v1\\reviewed-export.json",
+      "file_sha256": "039a8b74f1cea6c744aad184fae15db17cc0ff01a24a33b3fa6166c02e21ec91"
+    },
+    "review": {
+      "path": "artifacts\\reviews\\history-review-v1-peer-review.json",
+      "file_sha256": "e1aaf47ed45119a50c54127476fc33aefbca2a49097a4308cabc9d9f10a68f83"
+    }
+  },
+  "parent_context_directory": "outputs\\fonseca-snapshot-v1",
+  "training_performed": false,
+  "production_changed": false,
+  "audit": {
+    "split_counts": {
+      "train": 596,
+      "val": 81,
+      "test": 137
+    },
+    "class_distribution": {
+      "train": {
+        "campanias_conflictos_militares": 88,
+        "participacion_social_regional": 83,
+        "no_relevante": 101,
+        "organizacion_consecuencias_republicanas": 101,
+        "crisis_ideas_emancipadoras": 58,
+        "liderazgos_diplomacia_proyectos": 94,
+        "contexto_colonial_antecedentes": 71
+      },
+      "val": {
+        "contexto_colonial_antecedentes": 16,
+        "crisis_ideas_emancipadoras": 15,
+        "participacion_social_regional": 11,
+        "no_relevante": 16,
+        "liderazgos_diplomacia_proyectos": 4,
+        "organizacion_consecuencias_republicanas": 15,
+        "campanias_conflictos_militares": 4
+      },
+      "test": {
+        "contexto_colonial_antecedentes": 14,
+        "crisis_ideas_emancipadoras": 28,
+        "no_relevante": 39,
+        "participacion_social_regional": 12,
+        "campanias_conflictos_militares": 7,
+        "liderazgos_diplomacia_proyectos": 23,
+        "organizacion_consecuencias_republicanas": 14
+      }
+    },
+    "source_overlap": 0,
+    "exact_text_overlap": 0
+  },
+  "output": {
+    "path": "outputs/history-corrections-v1/reviewed-export.json",
+    "file_sha256": "9913ffc95ac82761d1295815afb836907bb239fa52e48cfa5126307d5a56a76f"
+  },
+  "builder": {
+    "path": "scripts/apply_reviewed_labels.py",
+    "file_sha256": "cf450a0bafe8c40915e0b480adbe3a7e6e85a09cc49b1c729fc4905fd07cf59c"
+  },
+  "schema_version": 1,
+  "date": "2026-09-07",
+  "status": "experimental_local_verified",
+  "verification": {
+    "deterministic_reproduction": true,
+    "only_two_labels_changed": true,
+    "all_texts_preserved": true,
+    "other_rows_preserved": 812,
+    "agn_and_fonseca_rows_and_provenance_preserved": true,
+    "frozen_evaluation_rows_and_order_preserved": true,
+    "reference_and_previous_versions_unchanged": true,
+    "rejected_controls": [
+      "ambiguo",
+      "excluido",
+      "ID desconocido",
+      "ID repetido",
+      "selección vacía",
+      "sin consenso",
+      "primer dictamen discrepante",
+      "etiqueta original alterada",
+      "texto ausente",
+      "texto duplicado",
+      "evaluación alterada",
+      "revisión ajena a train",
+      "corrección ya aplicada",
+      "sobrescritura",
+      "salida fuera de outputs"
+    ]
+  },
+  "limitations": [
+    "Revisión asistida por IA, no gold humano independiente.",
+    "Seis casos ambiguos permanecen sin aplicar.",
+    "Crisis e ideas tiene ahora 58 filas de train: no se preserva una etiqueta incorrecta para aumentar su recuento.",
+    "Sin entrenamiento ni métricas nuevas; no demuestra una mejora del clasificador.",
+    "Conservar el archivo de contexto de Fonseca en el directorio padre indicado."
+  ]
+}

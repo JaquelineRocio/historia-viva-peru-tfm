@@ -9,7 +9,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 |---|---|---|
 | Diagnóstico | Compilar web/API, ejecutar suites y revisar dataset | API 37 pruebas, ML 55 pruebas y web verificados localmente |
 | Experimentos | Comparar hiperparámetros usando validación; test solo del ganador | Tres configuraciones TF-IDF y tres BETO ejecutadas en este equipo |
-| Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Segunda revisión asistida por IA completa: 11 aprobar, 2 corregir, 6 ambiguos y 1 excluir hasta resegmentar. Decisiones sin aplicar al dataset ni a producción |
+| Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Segunda revisión: 11 aprobar, 2 corregir, 6 ambiguos y 1 excluir hasta resegmentar. R04/R16 corregidos solo en copia experimental; referencia y producción intactas |
 | Reparación de R05 | Recuperar prosa separada por notas y salto de página | Sustitución local verificada: train55/57/58 reemplazadas por un fragmento de 203 palabras en una nueva copia experimental. Originales y contexto archivados; referencia intacta |
 | Fuentes para enriquecimiento | Evaluar contenido, procedencia, reutilización y solapamientos | Tres candidatas examinadas; dos fragmentos AGN incorporados solo a copia experimental local. BNP pendiente de OCR/metadatos y Constitución pendiente de cotejo |
 | Piloto AGN | Preparar hasta tres fragmentos con procedencia y etiquetas propuestas | Tres etiquetas coincidentes tras segunda revisión asistida por IA. AGN01/02 candidatos a entrenamiento futuro; AGN03 solo contexto. Snapshot y producción intactos |
@@ -349,7 +349,7 @@ ni llamadas a servicios remotos.
 La recuperación quedó registrada en `0cb6cbd`. El candidato no aumenta el corpus;
 la decisión posterior de sustitución se documenta a continuación.
 
-## Bloque actual: sustitución experimental del grupo Fonseca
+## Sustitución experimental del grupo Fonseca — registrada en `f300747`
 
 El [dictamen de sustitución](../artifacts/reviews/fonseca-replacement-v1.json)
 registra una decisión discutida con el segundo agente: reemplazar conjuntamente
@@ -392,9 +392,54 @@ Reproducción con las entradas locales de los bloques previos y una carpeta nuev
 outputs/venv-ml/Scripts/python.exe scripts/build_fonseca_snapshot.py --output outputs/fonseca-snapshot-reproduccion
 ```
 
-Siguiente paso después del commit: aplicar las correcciones consensuadas R04/R16
-a otra versión experimental. Los seis casos ambiguos siguen pendientes; después
-se podrá comparar un candidato TF-IDF local con la misma evaluación congelada.
+La sustitución quedó registrada en `f300747`. Las correcciones consensuadas
+R04/R16 se aplican en otra versión experimental, descrita a continuación.
+
+## Bloque actual: aplicación de las correcciones R04 y R16
+
+[apply_reviewed_labels.py](../scripts/apply_reviewed_labels.py) aplica únicamente
+correcciones solicitadas por identificador y coincidentes entre ambos dictámenes.
+Localiza cada texto por fuente y SHA-256, no por su antigua posición: la sustitución
+de Fonseca desplazó R04 del índice 360 al 357 y R16 del 536 al 533 (base cero).
+También comprueba la etiqueta original, la unicidad del texto y la pertenencia
+a entrenamiento. Rechaza casos ambiguos y correcciones ya aplicadas.
+
+| Caso | Etiqueta anterior | Etiqueta corregida |
+|---|---|---|
+| R04 | Crisis e ideas emancipadoras | Participación social y regional |
+| R16 | Campañas y conflictos militares | Liderazgos, diplomacia y proyectos |
+
+La [evidencia de aplicación](../artifacts/reviews/history-corrections-v1.json)
+registra entradas, hashes, motivos y controles. La nueva copia está en
+`outputs/history-corrections-v1/reviewed-export.json`; su informe está en
+`build-report.json` del mismo directorio. Conserva **814 filas: 596 train,
+81 validación y 137 test**. Solo cambian las dos etiquetas: ningún texto cambia,
+las otras 812 filas permanecen iguales y se conserva la procedencia de AGN y
+Fonseca. Mantener también `outputs/fonseca-snapshot-v1/replacement-archive.json`:
+el informe identifica el directorio padre donde permanece ese contexto.
+
+Los primeros dictámenes se conservan como registros históricos sin sobrescribir
+sus campos `applied: false`. La aplicación posterior queda en esta evidencia y en
+el historial de correcciones de la nueva copia. La referencia congelada, las
+versiones anteriores y los seis casos ambiguos permanecen intactos.
+
+Verificación local: reproducción idéntica, exactamente dos etiquetas cambiadas,
+evaluación preservada y metadatos anteriores conservados. Pasaron 13 controles
+negativos sobre decisiones, consenso, identidad, unicidad, etiqueta previa y
+evaluación, además de sobrescritura y salida fuera de `outputs/`.
+No hubo entrenamiento, métricas nuevas ni despliegue. Esta aplicación sigue
+siendo asistida por IA; no crea validación humana independiente.
+
+Reproducción con las entradas locales previas y una carpeta nueva:
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/apply_reviewed_labels.py --base outputs/fonseca-snapshot-v1/reviewed-export.json --review artifacts/reviews/history-review-v1-peer-review.json --ids R04 R16 --output outputs/history-corrections-reproduccion
+```
+
+Siguiente paso después del commit: comprobar recursos locales y ejecutar una
+comparación TF-IDF con la referencia, conservando configuración y evaluación.
+La clase de crisis e ideas queda con 58 filas de train: sigue pendiente enriquecerla
+con contenido pertinente, sin mantener etiquetas incorrectas por su frecuencia.
 
 ### Reproducir la muestra de la revisión inicial
 
