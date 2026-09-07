@@ -9,11 +9,12 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 |---|---|---|
 | Diagnóstico | Compilar web/API, ejecutar suites y revisar dataset | API 37 pruebas, ML 55 pruebas y web verificados localmente |
 | Experimentos | Comparar hiperparámetros usando validación; test solo del ganador | Tres configuraciones TF-IDF y tres BETO ejecutadas en este equipo |
+| Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Propuesta local asistida por IA: 12 aprobar, 2 corregir, 5 ambiguos y 1 excluir hasta resegmentar. Pendiente adjudicación de la autora; sin cambios al dataset ni a producción |
 | Informe Unidad I | Dataset, características, parámetros, resultados, despliegue y límites | Borrador en informe-unidad-1.md |
 | Demo Unidad I | Dos pruebas funcionales completas y explicación en inglés | PDF cargado, predicho tras reintento y revisión persistida vía API. Primera clasificación fallida y recorrido visual pendientes |
 | Mantenimiento | Validar snapshot, entrenar, evaluar y archivar candidato | TF-IDF ejecutado en GitHub; métricas y candidato archivados. Correcciones automáticas pendientes |
-| Integración continua | Tests, builds y comprobación agregada Quality gate | Ejecución en GitHub correcta para `328ab3c`, con acciones v6 y API probada en Node 22 |
-| Despliegue | Esperar CI, verificar versión y recuperar ante fallos | Modal con SHA y predicción verificados para `328ab3c`; autora confirma despliegue terminado en Render. Controles API/web y recuperación pendientes |
+| Integración continua | Tests, builds y comprobación agregada Quality gate | Ejecución en GitHub correcta para `fca473d`, con acciones v6 y API en Node 22 |
+| Despliegue | Esperar CI, verificar versión y recuperar ante fallos | Modal con SHA y predicción verificados para `fca473d`; seis pruebas de Production smoke aprobadas. Render `328ab3c` confirmado por la autora. Controles API/web y recuperación pendientes |
 | Entrega Unidad II | Tres casos ejecutados, con logs y resultados | Controles locales; demostración remota pendiente |
 
 ## Organización de los cambios en Git
@@ -32,6 +33,85 @@ Las consultas de Git pueden realizarlas el asistente o la autora. Las ramas, el 
 | Errores de almacenamiento PDF | `0bc365a` | Registrado; pruebas y compilación correctas, despliegue API pendiente |
 
 Las modificaciones personales de `.gitignore` se revisan por separado.
+
+## Bloque actual: revisión histórica de 20 fragmentos
+
+La propuesta está en [history-review-v1.json](../artifacts/reviews/history-review-v1.json).
+Cada registro conserva índice (base cero), fuente, hash del texto y etiqueta original,
+además de decisión, justificación temática, límites del contraste histórico y contexto consultado.
+El snapshot no conserva identificador de segmento, página, minuto ni predicción individual:
+esta revisión evalúa **etiquetas del dataset**, no el acierto actual de BETO.
+Todas las decisiones están pendientes de adjudicación de la autora y tienen `applied: false`.
+
+Se seleccionaron tres ejemplos por categoría histórica y dos de `no_relevante`,
+solo de train, mediante orden SHA-256 con semilla 42. Se ocultaron las etiquetas
+en la primera lectura, pero la selección usó esas etiquetas y existía contexto previo;
+no es una revisión humana independiente ni un estudio ciego. La muestra contiene
+cuatro de las siete fuentes de train, con 12/20 ejemplos de Basadre: no permite
+estimar la tasa de errores del corpus. Las decisiones son reproducibles como registro;
+el criterio del revisor no se convierte por ello en una verdad automática.
+
+Resultado de la propuesta: **12 aprobar, 2 corregir, 5 ambiguos y 1 excluir**.
+Las correcciones propuestas son R04 (dinámica regional, en lugar de crisis e ideas)
+y R16 (condiciones diplomáticas, en lugar de campañas militares). R05 mezcla unas
+líneas sustantivas con bibliografía: excluir significa apartar esa extracción de un
+futuro entrenamiento hasta resegmentarla, conservando intacto el original.
+R09 requiere recuperar la página: otros fragmentos de la misma fuente apuntan a
+un reglamento de 1825, lo que podría invalidar su etiqueta de antecedentes coloniales;
+sin continuidad física confirmada se deja ambiguo. No se certifica la exactitud de
+todas las afirmaciones históricas por aprobar una etiqueta temática.
+
+Se consultaron la guía de etiquetado, los informes existentes, fragmentos de train,
+el inventario local y pasajes de dos PDF ya descargados. Las fichas editoriales de
+[O'Phelan (1985)](https://revistas.pucp.edu.pe/index.php/historica/article/view/8222)
+y [Fonseca (2010)](https://revistas.pucp.edu.pe/index.php/historica/article/view/95)
+confirman autoría y muestran CC BY 4.0. No se encontró el PDF de Basadre ni se
+escuchó el video; los casos que necesitan ese contexto lo indican. No se incorporan
+textos originales ni PDF al commit; las copias legibles quedan en `outputs/`.
+
+Hallazgos que orientan el siguiente experimento:
+
+- El candidato BETO seleccionado obtuvo F1 de validación **0 en crisis e ideas**
+  (15 casos; nueve confundidos con organización republicana). Train tiene 59 casos
+  de esa clase. Es una señal para revisar fronteras temáticas y diversidad, no prueba
+  de que todas esas etiquetas estén mal. No se adjudicaron etiquetas de validación en este bloque.
+- Validación contiene una sola fuente y apenas cuatro casos de campañas y cuatro
+  de liderazgos. Harán falta fuentes independientes para una evaluación futura;
+  no se cambia la partición congelada ni se utiliza el test para elegir correcciones.
+- El BETO de estos experimentos obtuvo F1 test 0.31066 frente a 0.36300 del TF-IDF
+  seleccionado. Esos resultados ya existentes no son métricas de esta revisión.
+- Antes de enriquecer: recuperar páginas/minutos y procedencia, reparar extracción
+  y resolver criterios entre programas políticos, participación regional y organización estatal.
+
+Fuentes que conviene examinar en el siguiente bloque, aún **sin incorporar**:
+
+| Candidata | Carencia que podría cubrir | Verificación pendiente |
+|---|---|---|
+| [La Abeja Republicana, BNP](https://repositoriodigital.bnp.gob.pe/bnp/recursos/2/html/la-abeja-republicana/) | Prensa e ideas políticas; distinguir argumentación republicana de descripción institucional | Precisar número, fecha, autoría y páginas; revisar OCR y condiciones de reutilización del ejemplar. No se seleccionaron ni transcribieron páginas |
+| [Constitución de 1823, Congreso Constituyente / Congreso de la República](https://www3.congreso.gob.pe/Docs/sites/webs/quipu/constitu/1823.htm) | Organización estatal y ciudadanía como contraste con ideas y proyectos | Identificar artículos, cotejar transcripción y derechos de la edición; evitar duplicar citas ya presentes en el corpus. Una norma no prueba su cumplimiento social |
+| [Juan José Brito Ramos, Josefa Montes, la última esclava del Congo (2017), Revista del AGN 32(1), 15–45](https://revista.agn.gob.pe/ojs/index.php/ragn/article/view/5) | Trayectorias afrodescendientes y contexto de esclavitud | Solo se consultó ficha y resumen; CC BY 4.0 visible. Localizar páginas de 1780–1842: el artículo también estudia un litigio de 1873, fuera del alcance |
+
+Reproducir la muestra en un archivo local nuevo desde la raíz (no sobrescribe):
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/sample_history_review.py --output outputs/history-review-v1/sample-reproduced.json --include-text
+```
+
+El script usa solo la biblioteca estándar de Python y no consulta servicios.
+El JSON versionado contiene las justificaciones; `outputs/history-review-v1/revision-legible.md`
+reúne localmente textos y decisiones para revisarlos con comodidad.
+
+Comprobación local realizada: 20 registros únicos, cuotas por clase correctas,
+selección determinista, pertenencia exclusiva a train, hashes y etiquetas originales
+coincidentes con el snapshot, conteos de decisiones consistentes y dataset intacto
+byte a byte. También se comprobó el rechazo de muestras insuficientes, taxonomías
+incompatibles, sobrescrituras y salidas con texto fuera de `outputs/`.
+`git diff --check` pasó y las dos vistas locales quedaron excluidas por `.gitignore`.
+
+Siguiente paso de este bloque: revisar la propuesta y registrar los tres archivos
+con Git. Esperar confirmación de la autora antes de ampliar la muestra, incorporar
+fuentes o aplicar correcciones. La prueba visual de producción sigue pendiente en
+paralelo; este bloque no entrena, no publica ni guarda revisiones en la aplicación.
 
 ## Qué debes poder explicar
 
@@ -210,4 +290,11 @@ Corrección local del monitor: hasta cuatro intentos de salud con esperas de 10 
 
 Verificación local: 55 pruebas aprobadas, incluidas recuperación, indisponibilidad persistente, protección de detalles sensibles y rechazo de autenticación sin reintentos. Las seis comprobaciones contra producción pasaron a las 13:45 UTC, todas en su primer intento; informe local en `outputs/production-smoke-health-retries.json`. La recuperación tras fallos se probó con respuestas simuladas, no se reprodujo un arranque frío real en esta comprobación.
 
-Siguiente paso: registrar y publicar esta corrección y ejecutar **Run workflow → main** para Production smoke. Reejecutar el run anterior usaría el commit anterior. Después, completar el recorrido visual PDF → predicción automática → corrección persistida para la Unidad I.
+Actualización comprobada el 7 de septiembre de 2026: la corrección se publicó como
+`fca473d`; [CI](https://github.com/JaquelineRocio/historia-viva-peru-tfm/actions/runs/34129496981),
+[Deploy Modal](https://github.com/JaquelineRocio/historia-viva-peru-tfm/actions/runs/34129561019)
+y [Production smoke](https://github.com/JaquelineRocio/historia-viva-peru-tfm/actions/runs/34131192098)
+terminaron correctamente. Modal verificó versión y BETO; las seis comprobaciones
+de producción pasaron al primer intento. Salud tardó 41.57 s; no demuestra ausencia
+de latencia ni valida el recorrido visual PDF. La prioridad solicitada ahora es
+el bloque de revisión histórica descrito arriba; la prueba visual sigue pendiente.
