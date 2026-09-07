@@ -1,0 +1,202 @@
+{
+  "schema_version": 1,
+  "review_id": "ideas-source-v1",
+  "date": "2026-09-07",
+  "status": "source_selected_for_future_local_pilot",
+  "inputs": {
+    "dataset": {
+      "path": "outputs/history-corrections-v1/reviewed-export.json",
+      "file_sha256": "9913ffc95ac82761d1295815afb836907bb239fa52e48cfa5126307d5a56a76f"
+    },
+    "pdf": {
+      "path": "outputs/ideas-source-v1/huerta-2020.pdf",
+      "file_sha256": "2d98c10b6915b00f9208582e6321d444f3fcdff512b5d72a12016793a7fe5020"
+    },
+    "probe": {
+      "path": "outputs/ideas-source-v1/overlap-probe.json",
+      "file_sha256": "e0ec63ded762c7abba3c7d79955e24b9788fea3f170b63c321e4cdfdd2f32cb6"
+    },
+    "taxonomy": {
+      "path": "docs/guia-etiquetado-1780-1842.md",
+      "file_sha256": "737d155a6f8260df4fa00b5f1adc6f469457f678fd144dd8c2d6b80a564d76e7"
+    },
+    "overlap_helpers": {
+      "path": "scripts/prepare_agn_pilot.py",
+      "file_sha256": "2c1cd9c93bb1f658c0f1d23046fba8589e130e2778038aadc6797df4d501f00a"
+    }
+  },
+  "motivation": {
+    "class": "crisis_ideas_emancipadoras",
+    "current_train_rows": 58,
+    "selected_tfidf_validation_f1": 0,
+    "validation_support": 15,
+    "basis": "Carencia previa de entrenamiento/validación; el test no se usa para producir ejemplos."
+  },
+  "selected_source": {
+    "id": "huerta-2020",
+    "author": "María Claudia Huerta Vera",
+    "title": "«Desde el sagrado púlpito y en exhortaciones privadas»: la circulación de información durante la guerra de Independencia peruana",
+    "year": 2020,
+    "publication_date": "2020-12-12",
+    "journal": "Histórica",
+    "volume_issue": "44(1)",
+    "pages": "125–158",
+    "doi": "10.18800/historica.202001.004",
+    "institution": "Pontificia Universidad Católica del Perú",
+    "article_url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/23275",
+    "pdf_url": "https://revistas.pucp.edu.pe/index.php/historica/article/download/23275/22257",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/23275",
+    "license_observation": "La sección Licencia de la ficha editorial identifica Creative Commons Atribución 4.0.",
+    "local_pdf": {
+      "path": "outputs/ideas-source-v1/huerta-2020.pdf",
+      "file_sha256": "2d98c10b6915b00f9208582e6321d444f3fcdff512b5d72a12016793a7fe5020"
+    },
+    "bytes": 465826,
+    "pdf_pages": 34,
+    "access": "Descarga pública sin cuenta; respuesta application/pdf y cabecera PDF verificadas.",
+    "source_group": "doi:10.18800/historica.202001.004",
+    "assigned_split": null,
+    "source_selection_reason": "PDF pequeño y capa textual legible; pasaje con argumento de legitimación de la ruptura, revisado por otro agente.",
+    "attribution_plan": "Conservar autora, título, revista, año, DOI, enlace de licencia y cambios de extracción en cualquier candidato."
+  },
+  "provisional_passages": [
+    {
+      "id": "HUE-P145",
+      "priority": "principal",
+      "printed_page": 145,
+      "pdf_page": 21,
+      "context_printed_pages": [
+        144,
+        145,
+        146
+      ],
+      "topic": "Metáforas bíblicas que justifican la independencia en una proclama peruana",
+      "proposed_label": "crisis_ideas_emancipadoras",
+      "annotation_status": "source_screening_only",
+      "archival_reference": {
+        "as_cited_in_article": "AAL, Serie Emancipación, Curas Patriotas, Proclamas, legajo 1, expediente 1, f. 2r-v",
+        "footnote": 58,
+        "attributed_author": "Manuel de Vega Bazán, cura y vicario de Guañec",
+        "document_date": "1822-02-21",
+        "original_manuscript_consulted": false
+      },
+      "screening_probe": {
+        "kind": "provisional_overlap_probe_not_training_example",
+        "pdf_page": 21,
+        "printed_page": 145,
+        "start_marker": "En el Perú, se puede documentar",
+        "end_marker": "restaurar su Antiguo Dominio.58",
+        "normalization": "Join end-of-line hyphens and whitespace; remove final footnote marker58 for probe only",
+        "words": 133,
+        "probe_sha256": "674972b0ac958812c62dc12735b3e663ca6019a21467cd0e682c0d3856e134f7",
+        "screen": {
+          "train": {
+            "compared": 596,
+            "exact_matches": [],
+            "flagged_indices": [],
+            "max_jaccard": 0,
+            "max_containment": 0
+          },
+          "val": {
+            "compared": 81,
+            "exact_matches": [],
+            "flagged_indices": [],
+            "max_jaccard": 0,
+            "max_containment": 0
+          },
+          "test": {
+            "compared": 137,
+            "exact_matches": [],
+            "flagged_indices": [],
+            "max_jaccard": 0,
+            "max_containment": 0
+          }
+        }
+      },
+      "limits": "La retórica religiosa es discurso de legitimación, no prueba histórica o teológica de sus afirmaciones. Conservar atribución, grafía y contexto; no modernizar silenciosamente la cita."
+    },
+    {
+      "id": "HUE-P132",
+      "priority": "secundaria_condicional",
+      "printed_page": 132,
+      "pdf_page": 8,
+      "context_printed_pages": [
+        131,
+        132
+      ],
+      "topic": "Crisis monárquica, Cádiz y libertad de imprenta",
+      "proposed_label": "crisis_ideas_emancipadoras",
+      "annotation_status": "boundaries_pending",
+      "limits": "La oración empieza en p.131; luego el texto deriva hacia disponibilidad de imprentas. La nota18 distingue fechas de normativa y difusión. No clasificar toda la página automáticamente ni unir temas para alcanzar longitud."
+    }
+  ],
+  "review": {
+    "agent": "/root/revision_historica_agn",
+    "type": "AI-assisted source assessment",
+    "human_expert_validation": false,
+    "independent_system": false,
+    "method": "El segundo agente examinó la fuente alternativa y propuso páginas pertinentes; el principal leyó PDF7/8/20/21/22 y realizó un sondeo léxico provisional.",
+    "reason": "La página145 trata la legitimación religiosa de la independencia; otros pasajes del artículo se centran en agentes sociales, transporte o infraestructura y requieren etiquetas distintas.",
+    "excluded_shortcuts": [
+      "No asignar crisis e ideas a todo lo que mencione prensa o sacerdotes.",
+      "No priorizar como evidencia factual el episodio inicial de Bruno Terreros, cuyo componente literario reconoce la autora."
+    ],
+    "historical_validation_limit": "No se cotejaron manuscritos originales ni se certificó todo el contenido del artículo."
+  },
+  "other_sources": [
+    {
+      "id": "martinez-riaza",
+      "author": "Ascensión Martínez Riaza",
+      "title": "Libertad de imprenta y periodismo político en el Perú, 1811-1824",
+      "url": "https://repositorio.pucp.edu.pe/items/4886bb23-1e37-4584-a5bb-9b964137e6ee/full",
+      "pdf_url": "https://repositorio.pucp.edu.pe/bitstreams/940a8cae-21fa-49af-9648-5b8660f97f56/download",
+      "original_record_url": "https://repositorio.pucp.edu.pe/items/89ad9193-bee7-45cf-8174-8f410cdf9c3f",
+      "repository_date": 2010,
+      "original_record_date": 1984,
+      "license": "CC BY 4.0 en dc.rights.uri de la ficha completa",
+      "decision": "defer_edition_and_ocr_collation",
+      "reason": "Muy pertinente por contenido; la ficha de Summa Humanitatis indica 2010 y el registro original identifica 1984. El PDF de 16 páginas muestra OCR deteriorado y páginas dobles, con mezcla en el orden extraído.",
+      "limitations": "No se afirma que ambas ediciones sean idénticas. Falló el intento de captura visual del PDF por timeout; no se descargó localmente."
+    },
+    {
+      "id": "hampe-2012",
+      "author": "Teodoro Hampe Martínez",
+      "title": "La “primavera” de Cádiz: libertad de expresión y opinión pública en el Perú (1810-1815)",
+      "year": 2012,
+      "doi": "10.17811/hc.v0i13.336",
+      "url": "https://www.historiaconstitucional.com/index.php/historiaconstitucional/article/view/336",
+      "decision": "defer_reuse_terms",
+      "reason": "Resumen pertinente. La sección Licencia consultada describe cesión a la revista, sin identificar una licencia abierta de reutilización para terceros. No se descargó ni se extrajeron candidatos."
+    }
+  ],
+  "access_notes": [
+    {
+      "url": "https://revistadeindias.revistas.csic.es/index.php/revistadeindias/article/view/635",
+      "result": "Dos intentos de lectura fallaron en la herramienta web; no se usó como fuente examinada ni se descargó."
+    }
+  ],
+  "verification": {
+    "pdf_header_size_and_hash_checked": true,
+    "inventory_titles_compared": 10,
+    "reviewed_source_count": 11,
+    "title_match_found": false,
+    "inventory_limit": "Se comprobaron los diez títulos del inventario congelado; la copia actual además incorpora AGN. Un título distinto no prueba independencia.",
+    "positive_overlap_control": true,
+    "overlap_comparisons": 814,
+    "evaluation_texts_used_for_annotation": false,
+    "overlap_limit": "Sondeo de un pasaje provisional, no prueba de novedad de todo el artículo ni ausencia de paráfrasis o citas compartidas.",
+    "dataset_and_frozen_reference_unchanged": true
+  },
+  "scope": {
+    "pdfs_downloaded": 1,
+    "downloaded_bytes": 465826,
+    "new_training_rows": 0,
+    "source_split_assigned": false,
+    "training_performed": false,
+    "modal_requests": 0,
+    "production_changed": false
+  },
+  "next_step": "Preparar un piloto local reproducible del pasaje de p.145, con segunda revisión de la selección exacta y revisión de relaciones documentales antes de incorporarlo."
+}

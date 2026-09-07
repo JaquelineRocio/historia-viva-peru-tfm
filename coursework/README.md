@@ -10,6 +10,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Diagnóstico | Compilar web/API, ejecutar suites y revisar dataset | API 37 pruebas, ML 55 pruebas y web verificados localmente |
 | Experimentos | Comparar hiperparámetros usando validación; test solo del ganador | Tres configuraciones TF-IDF y tres BETO ejecutadas en este equipo |
 | Comparación tras revisión | Medir el efecto conjunto del enriquecimiento y las correcciones | TF-IDF local: F1 macro validación 0.29004 en ambas versiones; test 0.36300 → 0.36007. Sin mejora global ni cambio en producción |
+| Fuente para crisis e ideas | Localizar contenido pertinente y reutilizable | Huerta Vera (2020) seleccionada para piloto; pasaje provisional en p.145, licencia CC BY 4.0 y PDF local verificados. Sin filas nuevas |
 | Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Segunda revisión: 11 aprobar, 2 corregir, 6 ambiguos y 1 excluir hasta resegmentar. R04/R16 corregidos solo en copia experimental; referencia y producción intactas |
 | Reparación de R05 | Recuperar prosa separada por notas y salto de página | Sustitución local verificada: train55/57/58 reemplazadas por un fragmento de 203 palabras en una nueva copia experimental. Originales y contexto archivados; referencia intacta |
 | Fuentes para enriquecimiento | Evaluar contenido, procedencia, reutilización y solapamientos | Tres candidatas examinadas; dos fragmentos AGN incorporados solo a copia experimental local. BNP pendiente de OCR/metadatos y Constitución pendiente de cotejo |
@@ -441,7 +442,7 @@ Las correcciones quedaron registradas en `a996f24`. La clase de crisis e ideas
 queda con 58 filas de train: sigue pendiente enriquecerla con contenido pertinente,
 sin mantener etiquetas incorrectas por su frecuencia.
 
-## Bloque actual: comparación TF-IDF después de la revisión
+## Comparación TF-IDF después de la revisión — registrada en `fd0d0ce`
 
 Se ejecutó el entrenador existente dos veces: sobre la referencia congelada y
 sobre `outputs/history-corrections-v1/reviewed-export.json`. Ambas versiones
@@ -497,10 +498,54 @@ evaluación externa nueva. No se demostró significación estadística ni mejora
 BETO, que permanece en producción sin cambios. Las correcciones históricamente
 justificadas se conservan; el candidato TF-IDF sigue experimental.
 
-Siguiente paso después del commit: buscar una fuente complementaria para crisis
-e ideas, con procedencia y reutilización verificadas, partiendo de las carencias
-de entrenamiento/validación. No generar ejemplos copiando el test ni ajustar
-etiquetas para mejorar artificialmente su resultado.
+La comparación quedó registrada en `fd0d0ce`. La búsqueda posterior de una fuente
+complementaria se basa en las carencias de entrenamiento/validación; no se generan
+ejemplos copiando el test ni se ajustan etiquetas para mejorar su resultado.
+
+## Bloque actual: fuente complementaria para crisis e ideas
+
+Se seleccionó para un próximo piloto [Huerta Vera (2020), «Desde el sagrado
+púlpito y en exhortaciones privadas»](https://revistas.pucp.edu.pe/index.php/historica/article/view/23275),
+publicado en *Histórica*, 44(1), 125–158. La ficha editorial identifica CC BY 4.0.
+El PDF público descargado tiene 465 826 bytes y 34 páginas; se conserva en
+`outputs/ideas-source-v1/huerta-2020.pdf`, excluido de Git, con hash registrado.
+
+La [ficha de selección](../artifacts/reviews/ideas-source-v1.json) documenta licencia,
+autoría, localizadores, alternativas, controles y límites. El segundo agente
+propuso la p.145 (PDF21), donde la justificación religiosa de la independencia
+domina un pasaje sobre una proclama peruana. La nota58 atribuye el documento a
+Manuel de Vega Bazán, Guañec, 21-02-1822; se verificó esa referencia en el artículo,
+sin consultar el manuscrito. La retórica citada no se presenta como hecho probado.
+
+Un sondeo provisional desde la referencia al caso peruano hasta el final de la
+cita contiene 133 palabras. No se encontraron coincidencias exactas ni superiores
+al umbral léxico entre ese pasaje y los 814 registros actuales. La comprobación
+solo usa indicadores de evaluación, sin leer esos textos para etiquetar. Un control
+positivo detectó un texto idéntico. Esto no acredita independencia documental ni
+novedad del artículo entero; la selección exacta todavía requiere revisión.
+
+La p.132 (PDF8) queda como opción secundaria sobre Cádiz y libertad de imprenta:
+su comienzo depende de la p.131 y después deriva hacia infraestructura. No se
+etiquetará todo el artículo como crisis e ideas por mencionar prensa o clero.
+
+Otras opciones examinadas:
+
+- [Martínez Riaza, *Libertad de imprenta y periodismo político en el Perú*](https://repositorio.pucp.edu.pe/items/4886bb23-1e37-4584-a5bb-9b964137e6ee/full):
+  pertinente y con URI CC BY 4.0 en la ficha completa. Se pospone para cotejar
+  edición (ficha 2010 frente a registro original 1984), OCR deteriorado y orden
+  de páginas dobles. El intento de captura visual falló; no se descargó localmente.
+- [Hampe Martínez (2012), *La “primavera” de Cádiz*](https://www.historiaconstitucional.com/index.php/historiaconstitucional/article/view/336):
+  resumen pertinente; la sección Licencia consultada no identifica una licencia
+  abierta de reutilización para terceros. Queda pendiente, sin extracción.
+
+Solo se descargó un PDF pequeño. La referencia congelada y la copia corregida
+permanecen intactas; no se asignó partición a la nueva fuente, no se incorporaron
+filas y no hubo entrenamiento ni solicitudes a Modal. Las valoraciones son
+asistidas por IA, no validación humana independiente.
+
+Siguiente paso después del commit: preparar y revisar el piloto de p.145 con
+extracción reproducible y procedencia completa, comprobando relaciones documentales
+antes de proponer su incorporación.
 
 ### Reproducir la muestra de la revisión inicial
 
