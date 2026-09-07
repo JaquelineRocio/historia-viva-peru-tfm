@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-09-07T04:11:16.413782+00:00",
+  "environment": "production-api",
+  "scope": "Synthetic PDF processing and persisted review; UI not tested",
+  "source_texts": [
+    "Ejercicio sintético de lectura: la organización de una república. El Congreso debate una Constitución, la separación de poderes, las atribuciones del gobierno y la representación política. La discusión se concentra en las instituciones republicanas, las normas constitucionales y la administración del Estado. Este párrafo fue redactado para una prueba funcional del software y no describe un acontecimiento histórico verificable.",
+    "Ejercicio sintético de lectura: una campaña militar. Las tropas preparan una marcha, organizan sus posiciones y trasladan suministros para la campaña. El ejército planifica maniobras, evalúa el terreno y coordina las operaciones de sus unidades antes del combate. Este párrafo fue redactado para una prueba funcional del software y no describe un acontecimiento histórico verificable.",
+    "Ejercicio sintético de lectura: instrucciones de una aplicación. Para recuperar una contraseña, la persona abre el formulario de acceso y solicita un enlace de recuperación. Después consulta su correo, elige una contraseña nueva y vuelve a iniciar sesión. Este texto describe una interfaz informática de prueba, no la Independencia ni la formación republicana del Perú."
+  ],
+  "checks": [],
+  "passed": false,
+  "project_id": "9676bb4a-1e6d-44a5-9154-17814af4427e",
+  "failure": {
+    "status": 500,
+    "path": "/api/projects/9676bb4a-1e6d-44a5-9154-17814af4427e/resources/pdf"
+  },
+  "error_type": "RuntimeError",
+  "local_pdf_validation": {
+    "size_bytes": 2511,
+    "pages": 3,
+    "segments": 3
+  },
+  "follow_up": {
+    "test_project_resource_count": 0,
+    "existing_pdf_resource_id": "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+    "existing_pdf_storage_provider": "s3",
+    "existing_pdf_download_http_status": 404,
+    "root_cause": "unconfirmed; Render logs requested"
+  }
+}

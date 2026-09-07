@@ -1,0 +1,160 @@
+{
+  "created_at": "2026-09-07T04:17:37.147309+00:00",
+  "environment": "production-api",
+  "scope": "Synthetic PDF processing and persisted review; UI not tested",
+  "source_texts": [
+    "Ejercicio sintético de lectura: la organización de una república. El Congreso debate una Constitución, la separación de poderes, las atribuciones del gobierno y la representación política. La discusión se concentra en las instituciones republicanas, las normas constitucionales y la administración del Estado. Este párrafo fue redactado para una prueba funcional del software y no describe un acontecimiento histórico verificable.",
+    "Ejercicio sintético de lectura: una campaña militar. Las tropas preparan una marcha, organizan sus posiciones y trasladan suministros para la campaña. El ejército planifica maniobras, evalúa el terreno y coordina las operaciones de sus unidades antes del combate. Este párrafo fue redactado para una prueba funcional del software y no describe un acontecimiento histórico verificable.",
+    "Ejercicio sintético de lectura: instrucciones de una aplicación. Para recuperar una contraseña, la persona abre el formulario de acceso y solicita un enlace de recuperación. Después consulta su correo, elige una contraseña nueva y vuelve a iniciar sesión. Este texto describe una interfaz informática de prueba, no la Independencia ni la formación republicana del Perú."
+  ],
+  "checks": [
+    {
+      "name": "Upload private synthetic PDF",
+      "passed": true
+    },
+    {
+      "name": "Retrieve uploaded PDF with identical contents",
+      "passed": true
+    },
+    {
+      "name": "Obtain three predictions after explicit classification retry",
+      "passed": true
+    },
+    {
+      "name": "Persist reviewed label and read it in a new authenticated session",
+      "passed": true
+    }
+  ],
+  "passed": false,
+  "project_id": "9676bb4a-1e6d-44a5-9154-17814af4427e",
+  "resource_id": "f81c491d-766a-4a2d-8cb5-ae86ea5b7b25",
+  "publication_status": "private",
+  "processing_job_id": "12da3ce3-3ea7-4ce3-b988-a0fc1f85d493",
+  "processing_status": "ready",
+  "processing_seconds": 52.61,
+  "segments_before_review": [
+    {
+      "id": "51e0ec86-4154-4f76-ae15-c737af4401b9",
+      "idx": 0,
+      "text": "Ejercicio sintético de lectura: la organización de una república. El Congreso debate una Constitución, la separación de poderes, las atribuciones del gobierno y la representación política. La discusión se concentra en las instituciones republicanas, las normas constitucionales y la administración del Estado. Este párrafo fue redactado para una prueba funcional del software y no describe un acontecimiento histórico verificable.",
+      "locatorType": "page",
+      "pageStart": 1,
+      "pageEnd": 1,
+      "suggestedLabelKey": null,
+      "suggestedConfidence": null,
+      "reviewStatus": "pending",
+      "reviewedLabelKey": null
+    },
+    {
+      "id": "2079f58b-753b-4d35-9720-b9d1f493c46d",
+      "idx": 1,
+      "text": "Ejercicio sintético de lectura: una campaña militar. Las tropas preparan una marcha, organizan sus posiciones y trasladan suministros para la campaña. El ejército planifica maniobras, evalúa el terreno y coordina las operaciones de sus unidades antes del combate. Este párrafo fue redactado para una prueba funcional del software y no describe un acontecimiento histórico verificable.",
+      "locatorType": "page",
+      "pageStart": 2,
+      "pageEnd": 2,
+      "suggestedLabelKey": null,
+      "suggestedConfidence": null,
+      "reviewStatus": "pending",
+      "reviewedLabelKey": null
+    },
+    {
+      "id": "13d28e37-22fe-4975-bc88-9b39f1715054",
+      "idx": 2,
+      "text": "Ejercicio sintético de lectura: instrucciones de una aplicación. Para recuperar una contraseña, la persona abre el formulario de acceso y solicita un enlace de recuperación. Después consulta su correo, elige una contraseña nueva y vuelve a iniciar sesión. Este texto describe una interfaz informática de prueba, no la Independencia ni la formación republicana del Perú.",
+      "locatorType": "page",
+      "pageStart": 3,
+      "pageEnd": 3,
+      "suggestedLabelKey": null,
+      "suggestedConfidence": null,
+      "reviewStatus": "pending",
+      "reviewedLabelKey": null
+    }
+  ],
+  "error_type": "AssertionError",
+  "classification_retry": {
+    "status": 400,
+    "body": {
+      "message": "No se pudieron analizar los subtemas. Comprueba que exista un modelo activo. Detalle: Servicio ML: infer falló: No hay modelo activo cargado",
+      "error": "Bad Request",
+      "statusCode": 400
+    }
+  },
+  "segments_after_classification": [
+    {
+      "id": "51e0ec86-4154-4f76-ae15-c737af4401b9",
+      "resourceId": "f81c491d-766a-4a2d-8cb5-ae86ea5b7b25",
+      "idx": 0,
+      "locatorType": "page",
+      "startSec": null,
+      "endSec": null,
+      "pageStart": 1,
+      "pageEnd": 1,
+      "text": "Ejercicio sintético de lectura: la organización de una república. El Congreso debate una Constitución, la separación de poderes, las atribuciones del gobierno y la representación política. La discusión se concentra en las instituciones republicanas, las normas constitucionales y la administración del Estado. Este párrafo fue redactado para una prueba funcional del software y no describe un acontecimiento histórico verificable.",
+      "suggestedLabelKey": "organizacion_consecuencias_republicanas",
+      "suggestedConfidence": 0.3437,
+      "reviewStatus": "pending",
+      "reviewedLabelKey": null,
+      "reviewedUserId": null,
+      "reviewedAt": null,
+      "isDeleted": false,
+      "createdAt": "2026-09-07T04:17:49.345Z",
+      "updatedAt": "2026-09-07T04:24:22.644Z"
+    },
+    {
+      "id": "2079f58b-753b-4d35-9720-b9d1f493c46d",
+      "resourceId": "f81c491d-766a-4a2d-8cb5-ae86ea5b7b25",
+      "idx": 1,
+      "locatorType": "page",
+      "startSec": null,
+      "endSec": null,
+      "pageStart": 2,
+      "pageEnd": 2,
+      "text": "Ejercicio sintético de lectura: una campaña militar. Las tropas preparan una marcha, organizan sus posiciones y trasladan suministros para la campaña. El ejército planifica maniobras, evalúa el terreno y coordina las operaciones de sus unidades antes del combate. Este párrafo fue redactado para una prueba funcional del software y no describe un acontecimiento histórico verificable.",
+      "suggestedLabelKey": "campanias_conflictos_militares",
+      "suggestedConfidence": 0.736,
+      "reviewStatus": "pending",
+      "reviewedLabelKey": null,
+      "reviewedUserId": null,
+      "reviewedAt": null,
+      "isDeleted": false,
+      "createdAt": "2026-09-07T04:17:49.345Z",
+      "updatedAt": "2026-09-07T04:24:22.644Z"
+    },
+    {
+      "id": "13d28e37-22fe-4975-bc88-9b39f1715054",
+      "resourceId": "f81c491d-766a-4a2d-8cb5-ae86ea5b7b25",
+      "idx": 2,
+      "locatorType": "page",
+      "startSec": null,
+      "endSec": null,
+      "pageStart": 3,
+      "pageEnd": 3,
+      "text": "Ejercicio sintético de lectura: instrucciones de una aplicación. Para recuperar una contraseña, la persona abre el formulario de acceso y solicita un enlace de recuperación. Después consulta su correo, elige una contraseña nueva y vuelve a iniciar sesión. Este texto describe una interfaz informática de prueba, no la Independencia ni la formación republicana del Perú.",
+      "suggestedLabelKey": "no_relevante",
+      "suggestedConfidence": 0.6433,
+      "reviewStatus": "pending",
+      "reviewedLabelKey": null,
+      "reviewedUserId": null,
+      "reviewedAt": null,
+      "isDeleted": false,
+      "createdAt": "2026-09-07T04:17:49.345Z",
+      "updatedAt": "2026-09-07T04:24:22.644Z"
+    }
+  ],
+  "review_result": {
+    "id": "13d28e37-22fe-4975-bc88-9b39f1715054",
+    "pageStart": 3,
+    "suggestedLabelKey": "no_relevante",
+    "reviewStatus": "reviewed",
+    "reviewedLabelKey": "no_relevante",
+    "reviewedAt": "2026-09-07T04:25:57.715Z"
+  },
+  "completed_at": "2026-09-07T04:25:55.504088+00:00",
+  "verification_passed_after_retry": true,
+  "limitations": [
+    "Initial automatic classification failed; explicit retry after new Modal startup succeeded.",
+    "The review confirmed the predicted label; it did not correct a wrong prediction.",
+    "API verification only; no visual UI test.",
+    "Synthetic private source must not enter historical training corpus."
+  ]
+}
