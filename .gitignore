@@ -46,6 +46,11 @@ apps/ml/storage/exports/
 apps/web/dist/
 apps/web/.vite/
 
-# La documentación del TFM se publica; solo se excluyen copias locales.
-docs/*.backup.pptx
+# Entornos, resultados grandes y herramientas de trabajo locales
 outputs/
+
+# Material de tesis local. Las guías de docs/ ya versionadas se conservan.
+# Ignorar no retira archivos que Git ya sigue.
+/docs/*
+/BORRADOR_TESIS*.docx
+/2. Hernandez, Fernandez y Baptista-metodología Investigacion Cientifica 6ta ed.pdf
