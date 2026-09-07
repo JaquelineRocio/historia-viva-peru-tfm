@@ -11,6 +11,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Experimentos | Comparar hiperparámetros usando validación; test solo del ganador | Tres configuraciones TF-IDF y tres BETO ejecutadas en este equipo |
 | Comparación tras revisión | Medir el efecto conjunto del enriquecimiento y las correcciones | TF-IDF local: F1 macro validación 0.29004 en ambas versiones; test 0.36300 → 0.36007. Sin mejora global ni cambio en producción |
 | Comparación con Huerta | Medir los cuatro pasajes añadidos con configuración fija | TF-IDF local C=4: F1 macro validación 0.29004 → 0.28968; crisis e ideas sigue en 0. Sin mejora; no se calcularon métricas nuevas de test ni se cambió producción |
+| Diagnóstico de cobertura | Orientar el siguiente cambio de datos | Concentración por fuente, rasgos de transcripción y fragmentos incompletos identificados. Muestra de 21 filas de train revisada; prioridad: cuatro filas de Villanueva. Sin modificar etiquetas |
 | Fuente para crisis e ideas | Localizar contenido pertinente y reutilizable | HUE01 de Huerta Vera (2020), revisado por ambos agentes, incorporado a copia experimental local: 597 train, 81 validación y 137 test. Evaluación intacta; sin entrenamiento nuevo |
 | Lote adicional de Huerta | Revisar propaganda, lecturas políticas y prensa | HUE02/03/04 incorporados a copia experimental: 600 train, 81 validación y 137 test. Una fuente común y dependencia HUE03/HUE04 conservadas; sin entrenamiento nuevo |
 | Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Segunda revisión: 11 aprobar, 2 corregir, 6 ambiguos y 1 excluir hasta resegmentar. R04/R16 corregidos solo en copia experimental; referencia y producción intactas |
@@ -721,7 +722,7 @@ siguen siendo revisiones asistidas por IA, no validación humana independiente.
 La incorporación quedó registrada en `b7e7094`. La comparación posterior se
 describe a continuación.
 
-## Bloque actual: comparación local del enriquecimiento con Huerta
+## Comparación local del enriquecimiento con Huerta — registrada en `6099156`
 
 [compare_tfidf_validation.py](../scripts/compare_tfidf_validation.py) reutiliza
 el entrenamiento TF-IDF y las métricas existentes para comparar una ampliación
@@ -773,10 +774,55 @@ Estado: ejecutado y verificado localmente, sin gastos remotos ni despliegues.
 Se conservan los datos revisados como experimentales; no se revierten etiquetas
 históricamente justificadas para buscar una puntuación mayor.
 
-Siguiente paso después del commit: diagnosticar cobertura de temas y fuentes de
-entrenamiento, especialmente la frontera entre crisis e ideas y organización
-republicana, antes de recopilar más fragmentos. Mantener la evaluación congelada
-y evitar decisiones de corrección basadas en resultados de test.
+La comparación quedó registrada en `6099156`. El diagnóstico siguiente se centra
+en entrenamiento, conservando la evaluación congelada.
+
+## Bloque actual: diagnóstico de cobertura y fronteras temáticas
+
+[diagnose_training_coverage.py](../scripts/diagnose_training_coverage.py) resume
+las 600 filas de train, su distribución por fuente, longitud y duplicados, y
+consulta los coeficientes del modelo local ya entrenado. No realiza predicciones
+ni entrenamiento. La [evidencia del diagnóstico](../artifacts/reviews/coverage-diagnosis-v1.json)
+conserva recuentos, hashes y cinco casos que requieren contexto.
+
+| Hallazgo | Evidencia | Alcance de la conclusión |
+|---|---|---|
+| Concentración de crisis e ideas | 47/62 ejemplos (75.8%) provienen de O'Phelan y un video; seis fuentes en total para esta clase | Hay poca diversidad entre muchos de sus ejemplos; no demuestra por sí sola la causa del fallo |
+| Concentración de organización republicana | 86/101 ejemplos (85.1%) provienen de dos fuentes | También esta clase depende mucho de determinadas fuentes |
+| Rasgos de transcripción | «eh» y «de de» figuran entre los 15 coeficientes positivos mayores de crisis e ideas; aparecen en 17 y 11 filas de esa clase | Posible asociación con estilo de fuente; los coeficientes no son probabilidades ni explican por sí solos una predicción |
+| Unidades PDF cortas | 87/528 filas PDF tienen menos de 120 palabras: 53 son `no_relevante` y 34 pertenecen a clases históricas | Señal para revisión; no eliminar automáticamente negativos ni fragmentos interpretables |
+
+Se conserva el duplicado conocido de train, ahora en índices 715/743 por los
+cambios anteriores de orden. No se eliminó en este diagnóstico.
+
+Para la revisión temática se eligieron hasta dos filas por fuente y etiqueta
+de las clases ideas/organización, por orden SHA-256 fijo: 21 filas de train.
+El segundo agente revisó esta muestra con etiquetas visibles; no constituye
+validación humana independiente ni permite estimar la tasa de error del corpus.
+La vista local de los cinco casos está en `outputs/coverage-diagnosis-v1/revision-legible.md`.
+
+Los índices 633 y 15 del artículo de Carmen Villanueva muestran una comparación
+constitucional partida entre las páginas PDF1–2, impresas427–428. Ambos agentes
+comprobaron esa continuidad en `.corpus-downloads/constitucion_1823.pdf`.
+Antes de juzgar sus etiquetas, conviene reconstruir los argumentos y contrastarlos
+con las filas 7 y 14. El índice80 plantea una frontera entre ideas y conflicto de
+tierras; el 28 mezcla descripción económica con notas; el 693 requiere audio y
+contexto para distinguir trayectoria personal de organización estatal. Son casos
+para seguimiento, no correcciones aprobadas.
+
+Verificación: recuentos conciliados, muestra reproducida y hashes comprobados;
+alterar en memoria los textos y etiquetas de evaluación no cambia el diagnóstico
+de train. Pasaron los rechazos de sobrescritura, salida fuera de `outputs/` y
+dataset distinto del utilizado por el modelo. Las entradas permanecieron intactas.
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/diagnose_training_coverage.py --dataset outputs/huerta-batch-snapshot-v1/reviewed-export.json --model-report outputs/huerta-comparison-v1/report.json --output outputs/coverage-diagnosis-v1/reproduccion.json
+```
+
+Estado: diagnóstico local completado, sin métricas nuevas, cambios de etiquetas,
+descargas ni cambios en producción. Siguiente paso después del commit: revisar
+únicamente las filas **7, 633, 15 y 14 de Villanueva**, recuperar su continuidad
+y proponer límites argumentales con evidencia antes de modificar el dataset.
 
 ### Reproducir la muestra de la revisión inicial
 

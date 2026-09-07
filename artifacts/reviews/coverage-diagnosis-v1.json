@@ -1,0 +1,1000 @@
+{
+  "train_rows": 600,
+  "class_counts": {
+    "campanias_conflictos_militares": 88,
+    "participacion_social_regional": 83,
+    "no_relevante": 101,
+    "organizacion_consecuencias_republicanas": 101,
+    "crisis_ideas_emancipadoras": 62,
+    "liderazgos_diplomacia_proyectos": 94,
+    "contexto_colonial_antecedentes": 71
+  },
+  "source_class_counts": {
+    "0ea45102-057d-4bff-b527-f36326f66d33": {
+      "contexto_colonial_antecedentes": 6,
+      "crisis_ideas_emancipadoras": 28,
+      "participacion_social_regional": 18,
+      "no_relevante": 28,
+      "liderazgos_diplomacia_proyectos": 21,
+      "organizacion_consecuencias_republicanas": 1,
+      "campanias_conflictos_militares": 1
+    },
+    "17552e18-8e04-53f8-a48f-b60ed56fbbd0": {
+      "contexto_colonial_antecedentes": 1,
+      "participacion_social_regional": 1
+    },
+    "48262fb6-dee2-531e-b001-536c5928a9ca": {
+      "crisis_ideas_emancipadoras": 4
+    },
+    "514f190e-5d01-497a-a6ef-648601cd8bdb": {
+      "crisis_ideas_emancipadoras": 19,
+      "no_relevante": 28,
+      "participacion_social_regional": 3,
+      "liderazgos_diplomacia_proyectos": 15,
+      "organizacion_consecuencias_republicanas": 6,
+      "campanias_conflictos_militares": 1
+    },
+    "747ca90f-92fc-4d19-aec4-6dfc34c2917e": {
+      "campanias_conflictos_militares": 70,
+      "organizacion_consecuencias_republicanas": 59,
+      "contexto_colonial_antecedentes": 52,
+      "liderazgos_diplomacia_proyectos": 43,
+      "no_relevante": 13,
+      "crisis_ideas_emancipadoras": 6,
+      "participacion_social_regional": 1
+    },
+    "9154f7f7-86c9-4bad-bcba-47eaf54b93e1": {
+      "organizacion_consecuencias_republicanas": 8,
+      "crisis_ideas_emancipadoras": 2,
+      "liderazgos_diplomacia_proyectos": 5,
+      "participacion_social_regional": 2,
+      "no_relevante": 1
+    },
+    "9f60a031-0183-478c-a1f8-a3bdd37d7b0b": {
+      "participacion_social_regional": 11,
+      "no_relevante": 11,
+      "organizacion_consecuencias_republicanas": 27,
+      "liderazgos_diplomacia_proyectos": 4
+    },
+    "9fecbe5a-9fb2-4002-a088-8a2810db938e": {
+      "contexto_colonial_antecedentes": 12,
+      "participacion_social_regional": 21,
+      "crisis_ideas_emancipadoras": 3,
+      "campanias_conflictos_militares": 6,
+      "no_relevante": 16
+    },
+    "e32181bc-41d0-4400-a76d-eb11fc88bf71": {
+      "participacion_social_regional": 26,
+      "campanias_conflictos_militares": 10,
+      "liderazgos_diplomacia_proyectos": 6,
+      "no_relevante": 4
+    }
+  },
+  "source_types": {
+    "pdf": 528,
+    "youtube": 72
+  },
+  "target_summary": {
+    "crisis_ideas_emancipadoras": {
+      "rows": 62,
+      "sources": {
+        "0ea45102-057d-4bff-b527-f36326f66d33": 28,
+        "48262fb6-dee2-531e-b001-536c5928a9ca": 4,
+        "514f190e-5d01-497a-a6ef-648601cd8bdb": 19,
+        "747ca90f-92fc-4d19-aec4-6dfc34c2917e": 6,
+        "9154f7f7-86c9-4bad-bcba-47eaf54b93e1": 2,
+        "9fecbe5a-9fb2-4002-a088-8a2810db938e": 3
+      },
+      "top_two_source_share": 0.758065,
+      "source_types": {
+        "pdf": 43,
+        "youtube": 19
+      },
+      "literal_eh_rows": 17,
+      "literal_de_de_rows": 11
+    },
+    "organizacion_consecuencias_republicanas": {
+      "rows": 101,
+      "sources": {
+        "0ea45102-057d-4bff-b527-f36326f66d33": 1,
+        "514f190e-5d01-497a-a6ef-648601cd8bdb": 6,
+        "747ca90f-92fc-4d19-aec4-6dfc34c2917e": 59,
+        "9154f7f7-86c9-4bad-bcba-47eaf54b93e1": 8,
+        "9f60a031-0183-478c-a1f8-a3bdd37d7b0b": 27
+      },
+      "top_two_source_share": 0.851485,
+      "source_types": {
+        "pdf": 95,
+        "youtube": 6
+      },
+      "literal_eh_rows": 6,
+      "literal_de_de_rows": 2
+    }
+  },
+  "duplicate_same_source_text_indices": [
+    [
+      715,
+      743
+    ]
+  ],
+  "pdf_outside_length_guideline": [
+    {
+      "index": 4,
+      "label": "participacion_social_regional",
+      "words": 80
+    },
+    {
+      "index": 5,
+      "label": "no_relevante",
+      "words": 69
+    },
+    {
+      "index": 18,
+      "label": "participacion_social_regional",
+      "words": 39
+    },
+    {
+      "index": 28,
+      "label": "organizacion_consecuencias_republicanas",
+      "words": 113
+    },
+    {
+      "index": 33,
+      "label": "participacion_social_regional",
+      "words": 96
+    },
+    {
+      "index": 43,
+      "label": "liderazgos_diplomacia_proyectos",
+      "words": 118
+    },
+    {
+      "index": 45,
+      "label": "no_relevante",
+      "words": 67
+    },
+    {
+      "index": 46,
+      "label": "no_relevante",
+      "words": 60
+    },
+    {
+      "index": 47,
+      "label": "participacion_social_regional",
+      "words": 76
+    },
+    {
+      "index": 68,
+      "label": "no_relevante",
+      "words": 16
+    },
+    {
+      "index": 78,
+      "label": "contexto_colonial_antecedentes",
+      "words": 49
+    },
+    {
+      "index": 82,
+      "label": "campanias_conflictos_militares",
+      "words": 107
+    },
+    {
+      "index": 94,
+      "label": "no_relevante",
+      "words": 21
+    },
+    {
+      "index": 95,
+      "label": "no_relevante",
+      "words": 23
+    },
+    {
+      "index": 96,
+      "label": "no_relevante",
+      "words": 18
+    },
+    {
+      "index": 121,
+      "label": "no_relevante",
+      "words": 50
+    },
+    {
+      "index": 122,
+      "label": "no_relevante",
+      "words": 80
+    },
+    {
+      "index": 123,
+      "label": "participacion_social_regional",
+      "words": 102
+    },
+    {
+      "index": 124,
+      "label": "liderazgos_diplomacia_proyectos",
+      "words": 70
+    },
+    {
+      "index": 126,
+      "label": "no_relevante",
+      "words": 18
+    },
+    {
+      "index": 127,
+      "label": "no_relevante",
+      "words": 38
+    },
+    {
+      "index": 128,
+      "label": "no_relevante",
+      "words": 42
+    },
+    {
+      "index": 133,
+      "label": "no_relevante",
+      "words": 66
+    },
+    {
+      "index": 135,
+      "label": "participacion_social_regional",
+      "words": 92
+    },
+    {
+      "index": 138,
+      "label": "participacion_social_regional",
+      "words": 114
+    },
+    {
+      "index": 140,
+      "label": "no_relevante",
+      "words": 87
+    },
+    {
+      "index": 141,
+      "label": "no_relevante",
+      "words": 41
+    },
+    {
+      "index": 145,
+      "label": "no_relevante",
+      "words": 13
+    },
+    {
+      "index": 154,
+      "label": "no_relevante",
+      "words": 56
+    },
+    {
+      "index": 174,
+      "label": "no_relevante",
+      "words": 51
+    },
+    {
+      "index": 175,
+      "label": "crisis_ideas_emancipadoras",
+      "words": 66
+    },
+    {
+      "index": 198,
+      "label": "no_relevante",
+      "words": 38
+    },
+    {
+      "index": 204,
+      "label": "no_relevante",
+      "words": 34
+    },
+    {
+      "index": 250,
+      "label": "no_relevante",
+      "words": 92
+    },
+    {
+      "index": 261,
+      "label": "no_relevante",
+      "words": 47
+    },
+    {
+      "index": 275,
+      "label": "no_relevante",
+      "words": 50
+    },
+    {
+      "index": 277,
+      "label": "participacion_social_regional",
+      "words": 65
+    },
+    {
+      "index": 282,
+      "label": "crisis_ideas_emancipadoras",
+      "words": 52
+    },
+    {
+      "index": 284,
+      "label": "no_relevante",
+      "words": 16
+    },
+    {
+      "index": 286,
+      "label": "no_relevante",
+      "words": 81
+    },
+    {
+      "index": 293,
+      "label": "no_relevante",
+      "words": 68
+    },
+    {
+      "index": 296,
+      "label": "no_relevante",
+      "words": 61
+    },
+    {
+      "index": 322,
+      "label": "no_relevante",
+      "words": 107
+    },
+    {
+      "index": 329,
+      "label": "no_relevante",
+      "words": 45
+    },
+    {
+      "index": 331,
+      "label": "no_relevante",
+      "words": 64
+    },
+    {
+      "index": 334,
+      "label": "no_relevante",
+      "words": 12
+    },
+    {
+      "index": 336,
+      "label": "no_relevante",
+      "words": 17
+    },
+    {
+      "index": 344,
+      "label": "no_relevante",
+      "words": 15
+    },
+    {
+      "index": 346,
+      "label": "no_relevante",
+      "words": 24
+    },
+    {
+      "index": 349,
+      "label": "no_relevante",
+      "words": 35
+    },
+    {
+      "index": 362,
+      "label": "no_relevante",
+      "words": 35
+    },
+    {
+      "index": 383,
+      "label": "organizacion_consecuencias_republicanas",
+      "words": 98
+    },
+    {
+      "index": 437,
+      "label": "liderazgos_diplomacia_proyectos",
+      "words": 105
+    },
+    {
+      "index": 449,
+      "label": "no_relevante",
+      "words": 66
+    },
+    {
+      "index": 464,
+      "label": "no_relevante",
+      "words": 17
+    },
+    {
+      "index": 486,
+      "label": "no_relevante",
+      "words": 18
+    },
+    {
+      "index": 494,
+      "label": "liderazgos_diplomacia_proyectos",
+      "words": 29
+    },
+    {
+      "index": 513,
+      "label": "no_relevante",
+      "words": 31
+    },
+    {
+      "index": 532,
+      "label": "campanias_conflictos_militares",
+      "words": 92
+    },
+    {
+      "index": 536,
+      "label": "no_relevante",
+      "words": 68
+    },
+    {
+      "index": 583,
+      "label": "organizacion_consecuencias_republicanas",
+      "words": 102
+    },
+    {
+      "index": 596,
+      "label": "contexto_colonial_antecedentes",
+      "words": 90
+    },
+    {
+      "index": 599,
+      "label": "no_relevante",
+      "words": 54
+    },
+    {
+      "index": 600,
+      "label": "no_relevante",
+      "words": 72
+    },
+    {
+      "index": 601,
+      "label": "no_relevante",
+      "words": 53
+    },
+    {
+      "index": 605,
+      "label": "crisis_ideas_emancipadoras",
+      "words": 84
+    },
+    {
+      "index": 606,
+      "label": "no_relevante",
+      "words": 95
+    },
+    {
+      "index": 609,
+      "label": "no_relevante",
+      "words": 30
+    },
+    {
+      "index": 610,
+      "label": "no_relevante",
+      "words": 23
+    },
+    {
+      "index": 614,
+      "label": "no_relevante",
+      "words": 61
+    },
+    {
+      "index": 626,
+      "label": "no_relevante",
+      "words": 68
+    },
+    {
+      "index": 629,
+      "label": "no_relevante",
+      "words": 19
+    },
+    {
+      "index": 633,
+      "label": "crisis_ideas_emancipadoras",
+      "words": 90
+    },
+    {
+      "index": 634,
+      "label": "no_relevante",
+      "words": 43
+    },
+    {
+      "index": 649,
+      "label": "no_relevante",
+      "words": 32
+    },
+    {
+      "index": 715,
+      "label": "campanias_conflictos_militares",
+      "words": 107
+    },
+    {
+      "index": 718,
+      "label": "crisis_ideas_emancipadoras",
+      "words": 94
+    },
+    {
+      "index": 719,
+      "label": "campanias_conflictos_militares",
+      "words": 93
+    },
+    {
+      "index": 729,
+      "label": "organizacion_consecuencias_republicanas",
+      "words": 77
+    },
+    {
+      "index": 730,
+      "label": "organizacion_consecuencias_republicanas",
+      "words": 107
+    },
+    {
+      "index": 739,
+      "label": "campanias_conflictos_militares",
+      "words": 103
+    },
+    {
+      "index": 743,
+      "label": "campanias_conflictos_militares",
+      "words": 107
+    },
+    {
+      "index": 754,
+      "label": "liderazgos_diplomacia_proyectos",
+      "words": 109
+    },
+    {
+      "index": 758,
+      "label": "organizacion_consecuencias_republicanas",
+      "words": 111
+    },
+    {
+      "index": 775,
+      "label": "organizacion_consecuencias_republicanas",
+      "words": 78
+    },
+    {
+      "index": 776,
+      "label": "no_relevante",
+      "words": 44
+    },
+    {
+      "index": 797,
+      "label": "campanias_conflictos_militares",
+      "words": 53
+    }
+  ],
+  "sample_method": "First two per available source and target label by SHA256(coverage-v1:index:text); train only, labels visible.",
+  "sample": [
+    {
+      "index": 283,
+      "resource_id": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "label": "crisis_ideas_emancipadoras",
+      "text_sha256": "69eaea88ec451485d431bfcaff38035426128058b389104b03e69e53893176f4",
+      "words": 186
+    },
+    {
+      "index": 131,
+      "resource_id": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "label": "crisis_ideas_emancipadoras",
+      "text_sha256": "14990fffbe055419f8e2b49cd86abc6074c0ea4e22bdbcfc9751dd00b3ef050a",
+      "words": 185
+    },
+    {
+      "index": 815,
+      "resource_id": "48262fb6-dee2-531e-b001-536c5928a9ca",
+      "label": "crisis_ideas_emancipadoras",
+      "text_sha256": "8b9d6b3f148cdd7916984ea7f4202d12db8d81c4baf18b750d7b2ffd8b3389fe",
+      "words": 149
+    },
+    {
+      "index": 814,
+      "resource_id": "48262fb6-dee2-531e-b001-536c5928a9ca",
+      "label": "crisis_ideas_emancipadoras",
+      "text_sha256": "674972b0ac958812c62dc12735b3e663ca6019a21467cd0e682c0d3856e134f7",
+      "words": 133
+    },
+    {
+      "index": 405,
+      "resource_id": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "label": "crisis_ideas_emancipadoras",
+      "text_sha256": "350014b4a522703a6c360c06893278828f56036e5643e9f8c2091b2e9a0ced0b",
+      "words": 160
+    },
+    {
+      "index": 402,
+      "resource_id": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "label": "crisis_ideas_emancipadoras",
+      "text_sha256": "e73c13b93ad6c530b2bc7a091d80c25baa7b1d8eb9da84e9029abab99c39f482",
+      "words": 149
+    },
+    {
+      "index": 477,
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "label": "crisis_ideas_emancipadoras",
+      "text_sha256": "23a98773e035fbcbe88bfe77b9745c54738d563cf3fdaa3ebe7ea11b7e58b54e",
+      "words": 186
+    },
+    {
+      "index": 757,
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "label": "crisis_ideas_emancipadoras",
+      "text_sha256": "126f6220bdb906a40e2d009cd83dbad2ede0c758ebd02a4ba97163f58eeac7bb",
+      "words": 184
+    },
+    {
+      "index": 633,
+      "resource_id": "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+      "label": "crisis_ideas_emancipadoras",
+      "text_sha256": "f649d51708d4691e79afdcd250c057c2f3aeac762a11b04e1b0d4216e7d5ac5f",
+      "words": 90
+    },
+    {
+      "index": 15,
+      "resource_id": "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+      "label": "crisis_ideas_emancipadoras",
+      "text_sha256": "050a9c6527a081a5d8c6965d66ee074fd450bce282a52ae2a753589e2e728643",
+      "words": 211
+    },
+    {
+      "index": 79,
+      "resource_id": "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+      "label": "crisis_ideas_emancipadoras",
+      "text_sha256": "de68133fa9729fad17f9ec670f33bbb74da00bd659b75c8187970a8e8e6fc19e",
+      "words": 185
+    },
+    {
+      "index": 80,
+      "resource_id": "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+      "label": "crisis_ideas_emancipadoras",
+      "text_sha256": "afd796a27cf2ee212f50e3d0f2e3d7fc7ce5367fce966f9a07bd82fd585fb937",
+      "words": 213
+    },
+    {
+      "index": 203,
+      "resource_id": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "label": "organizacion_consecuencias_republicanas",
+      "text_sha256": "cb33f5d4cffbfd5f531938ea0ecdbbc74ac888df60591dd6a7ff3965ff417287",
+      "words": 185
+    },
+    {
+      "index": 693,
+      "resource_id": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "label": "organizacion_consecuencias_republicanas",
+      "text_sha256": "3441ea4a8e08fcc0a958cafd606b905f675105c6f42856e5073f0ae401c5c94f",
+      "words": 164
+    },
+    {
+      "index": 428,
+      "resource_id": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "label": "organizacion_consecuencias_republicanas",
+      "text_sha256": "7b00769a48c0e488f0f5b59cab6b969735845333d15b0889def8fd3cef791e23",
+      "words": 175
+    },
+    {
+      "index": 770,
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "label": "organizacion_consecuencias_republicanas",
+      "text_sha256": "b44bf20f61a844d3ee6dc2b3b7c404b67af8c52304676ada7a62601422ca466f",
+      "words": 124
+    },
+    {
+      "index": 740,
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "label": "organizacion_consecuencias_republicanas",
+      "text_sha256": "cbdbcae4d0be2d59bf54c24e60e4512ee3f5e0b0a23f04131372058c328fbef2",
+      "words": 184
+    },
+    {
+      "index": 7,
+      "resource_id": "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+      "label": "organizacion_consecuencias_republicanas",
+      "text_sha256": "2abd19afe54182a5ccb60b5746b124e78ff1150b35a7213c4a5f768b9baf4d6c",
+      "words": 206
+    },
+    {
+      "index": 14,
+      "resource_id": "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+      "label": "organizacion_consecuencias_republicanas",
+      "text_sha256": "c98de9d2eec4ffd5ba747531414a380c24bc0bf33d58a81adccfd6ba2c20a604",
+      "words": 176
+    },
+    {
+      "index": 28,
+      "resource_id": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+      "label": "organizacion_consecuencias_republicanas",
+      "text_sha256": "37417362cbdee022bf81e1560813a180788ecd244adbc01818aaaeef4e517fc1",
+      "words": 113
+    },
+    {
+      "index": 23,
+      "resource_id": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+      "label": "organizacion_consecuencias_republicanas",
+      "text_sha256": "b7f4e2dcb7c8c402711d500853ed9c449527804659bca734b5070248c99cf0c7",
+      "words": 187
+    }
+  ],
+  "top_positive_coefficients": {
+    "crisis_ideas_emancipadoras": [
+      {
+        "term": "criollos",
+        "coefficient": 1.330215
+      },
+      {
+        "term": "eh",
+        "coefficient": 1.194174
+      },
+      {
+        "term": "programas",
+        "coefficient": 1.125943
+      },
+      {
+        "term": "america",
+        "coefficient": 1.090156
+      },
+      {
+        "term": "1809",
+        "coefficient": 1.055708
+      },
+      {
+        "term": "es",
+        "coefficient": 1.043333
+      },
+      {
+        "term": "rey",
+        "coefficient": 1.042618
+      },
+      {
+        "term": "la paz",
+        "coefficient": 1.013897
+      },
+      {
+        "term": "de de",
+        "coefficient": 1.00701
+      },
+      {
+        "term": "independencia",
+        "coefficient": 0.997128
+      },
+      {
+        "term": "revolucion de",
+        "coefficient": 0.956632
+      },
+      {
+        "term": "caracter",
+        "coefficient": 0.951673
+      },
+      {
+        "term": "revolucion",
+        "coefficient": 0.933153
+      },
+      {
+        "term": "1814",
+        "coefficient": 0.926212
+      },
+      {
+        "term": "los criollos",
+        "coefficient": 0.901373
+      }
+    ],
+    "organizacion_consecuencias_republicanas": [
+      {
+        "term": "estado",
+        "coefficient": 1.548274
+      },
+      {
+        "term": "congreso",
+        "coefficient": 1.237056
+      },
+      {
+        "term": "diputados",
+        "coefficient": 1.183928
+      },
+      {
+        "term": "decreto",
+        "coefficient": 1.128555
+      },
+      {
+        "term": "constitucion",
+        "coefficient": 1.099193
+      },
+      {
+        "term": "republica",
+        "coefficient": 1.018619
+      },
+      {
+        "term": "publica",
+        "coefficient": 0.970707
+      },
+      {
+        "term": "1823",
+        "coefficient": 0.966306
+      },
+      {
+        "term": "habian",
+        "coefficient": 0.960764
+      },
+      {
+        "term": "mercado",
+        "coefficient": 0.901593
+      },
+      {
+        "term": "el decreto",
+        "coefficient": 0.88149
+      },
+      {
+        "term": "el congreso",
+        "coefficient": 0.873014
+      },
+      {
+        "term": "pais",
+        "coefficient": 0.870989
+      },
+      {
+        "term": "poder",
+        "coefficient": 0.868489
+      },
+      {
+        "term": "de 1823",
+        "coefficient": 0.849443
+      }
+    ]
+  },
+  "inputs": {
+    "dataset": {
+      "path": "outputs/huerta-batch-snapshot-v1/reviewed-export.json",
+      "file_sha256": "38c71b1548b89848142edc1aadab24d6651393f7361140a516e36d758e7ba244"
+    },
+    "model_report": {
+      "path": "outputs/huerta-comparison-v1/report.json",
+      "file_sha256": "de5b9223484e13691b52a5b55d3f22769580a965cbbb8283d30ae8c9fdec64a4"
+    },
+    "model": {
+      "path": "outputs/huerta-comparison-v1/after.joblib",
+      "file_sha256": "cf3f5e319624457f8d13c78e736a3b9505be8d5092be5291e418621feb313d51"
+    },
+    "script": {
+      "path": "scripts/diagnose_training_coverage.py",
+      "file_sha256": "0eb9c8b2b51915a975f0ce3c59e41cf7604004ba689c853053befe2de61f4463"
+    }
+  },
+  "limits": [
+    "Descriptive source concentration is not proof of error causation.",
+    "Coefficients are not calibrated probabilities or explanations of a particular prediction.",
+    "Length flags identify candidates for review, not automatically invalid examples.",
+    "The sample is source-stratified, not a representative error-rate estimate."
+  ],
+  "dataset_changed": false,
+  "training_performed": false,
+  "predictions_performed": false,
+  "schema_version": 1,
+  "status": "diagnosis_completed_no_dataset_changes",
+  "base_commit": "6099156",
+  "verification": {
+    "counts_reconciled": true,
+    "sample_matches_deterministic_selection": true,
+    "sample_hashes_and_training_split_verified": true,
+    "holdout_text_and_label_changes_do_not_affect_description": true,
+    "input_and_frozen_reference_hashes_unchanged": true,
+    "duplicate_group_verified": true,
+    "rejected_controls": [
+      "overwrite",
+      "outside_outputs",
+      "dataset_mismatch"
+    ]
+  },
+  "local_outputs": {
+    "report.json": {
+      "path": "outputs/coverage-diagnosis-v1/report.json",
+      "file_sha256": "2f2d5c8951db63387114a639c16a890438ad8e11fe58690ab6ddf9fbe913d0e3"
+    },
+    "sample.json": {
+      "path": "outputs/coverage-diagnosis-v1/sample.json",
+      "file_sha256": "07250b44a3b70ab16d4bf10f1332fb442c7af2ca47824f8df33bbc7398c2ad88"
+    },
+    "verification.json": {
+      "path": "outputs/coverage-diagnosis-v1/verification.json",
+      "file_sha256": "0236a3f0a74e6cc9d08e9e83a6ef0e2a017b3a167ce0e95b4907ad3b1fa89627"
+    }
+  },
+  "historical_review": {
+    "agent": "/root/revision_historica_agn",
+    "human_expert_validation": false,
+    "blind": false,
+    "independent_system": false,
+    "scope": "21 stratified training excerpts; labels visible, no population error estimate.",
+    "findings": [
+      {
+        "index": 633,
+        "text_sha256": "f649d51708d4691e79afdcd250c057c2f3aeac762a11b04e1b0d4216e7d5ac5f",
+        "source_id": "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+        "current_label": "crisis_ideas_emancipadoras",
+        "issue": "Incomplete antecedent and comparison cut at the PDF page break; constitutional organization versus ideas.",
+        "context": "Villanueva PDF1/p427 continues on PDF2/p428 at row15. Compare also row7.",
+        "decision": "diagnostic_followup_only",
+        "label_changed": false
+      },
+      {
+        "index": 15,
+        "text_sha256": "050a9c6527a081a5d8c6965d66ee074fd450bce282a52ae2a753589e2e728643",
+        "source_id": "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+        "current_label": "crisis_ideas_emancipadoras",
+        "issue": "Constitutional comparison then Bolivarian projects; header and incomplete beginning.",
+        "context": "Villanueva PDF2/p428; delimit arguments before judging label.",
+        "decision": "diagnostic_followup_only",
+        "label_changed": false
+      },
+      {
+        "index": 80,
+        "text_sha256": "afd796a27cf2ee212f50e3d0f2e3d7fc7ce5367fce966f9a07bd82fd585fb937",
+        "source_id": "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+        "current_label": "crisis_ideas_emancipadoras",
+        "issue": "Cadiz is invoked in a land dispute; a mention alone cannot resolve ideas versus social participation.",
+        "context": "Need full page, preceding litigants and continuation of dispossession.",
+        "decision": "diagnostic_followup_only",
+        "label_changed": false
+      },
+      {
+        "index": 28,
+        "text_sha256": "37417362cbdee022bf81e1560813a180788ecd244adbc01818aaaeef4e517fc1",
+        "source_id": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+        "current_label": "organizacion_consecuencias_republicanas",
+        "issue": "Missing subject, incomplete enumeration and substantial bibliography.",
+        "context": "Orrego PDF13/p191 establishes coastal agriculture to1840; next page needed for repair.",
+        "decision": "diagnostic_followup_only",
+        "label_changed": false
+      },
+      {
+        "index": 693,
+        "text_sha256": "3441ea4a8e08fcc0a958cafd606b905f675105c6f42856e5073f0ae401c5c94f",
+        "source_id": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+        "current_label": "organizacion_consecuencias_republicanas",
+        "issue": "Political offices inside an apparent biography; transcript errors and absent subject.",
+        "context": "Need audio, timestamps and preceding introduction;1858 publication date alone does not invalidate earlier events.",
+        "decision": "diagnostic_followup_only",
+        "label_changed": false
+      }
+    ],
+    "context_checks": [
+      {
+        "path": ".corpus-downloads/constitucion_1823.pdf",
+        "file_sha256": "56e6ec5d01aee7af31fe857ff63190ea1a088ccddcfe479b906dcbe7405d8c50",
+        "pdf_pages": [
+          1,
+          2
+        ],
+        "reviewers": [
+          "primary_agent",
+          "historical_agent"
+        ]
+      },
+      {
+        "path": ".corpus-downloads/orrego_primeros_anos_republicanos.pdf",
+        "file_sha256": "8d0c8819c800ed2289722a26af618c3d5917bdbec586dbb7c5c1309a2b274729",
+        "pdf_pages": [
+          13
+        ],
+        "reviewers": [
+          "historical_agent"
+        ]
+      }
+    ]
+  },
+  "findings_summary": {
+    "ideas_from_top_two_sources": {
+      "count": 47,
+      "total": 62
+    },
+    "organization_from_top_two_sources": {
+      "count": 86,
+      "total": 101
+    },
+    "pdf_below120_words": 87,
+    "below120_non_relevant": 53,
+    "below120_historical_classes": 34,
+    "interpretation": "Concentration, transcript-specific positive coefficients and incomplete excerpts justify a targeted data-quality audit; they do not establish the cause of validation failure."
+  },
+  "next_block": {
+    "source_id": "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+    "sample_indices": [
+      7,
+      633,
+      15,
+      14
+    ],
+    "objective": "Recover document continuity and delimit arguments in Villanueva before proposing any label or extraction changes.",
+    "initial_labels_unchanged": true
+  },
+  "production_changed": false,
+  "new_metrics": false
+}
