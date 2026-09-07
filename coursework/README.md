@@ -11,6 +11,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Experimentos | Comparar hiperparámetros usando validación; test solo del ganador | Tres configuraciones TF-IDF y tres BETO ejecutadas en este equipo |
 | Comparación tras revisión | Medir el efecto conjunto del enriquecimiento y las correcciones | TF-IDF local: F1 macro validación 0.29004 en ambas versiones; test 0.36300 → 0.36007. Sin mejora global ni cambio en producción |
 | Comparación con Huerta | Medir los cuatro pasajes añadidos con configuración fija | TF-IDF local C=4: F1 macro validación 0.29004 → 0.28968; crisis e ideas sigue en 0. Sin mejora; no se calcularon métricas nuevas de test ni se cambió producción |
+| Comparación de Villanueva | Medir la sustitución con la misma configuración | TF-IDF local C=4: F1 macro validación 0.28968 → 0.28987; mismos 25/81 aciertos, ideas sigue en 0. Sin mejora útil demostrada ni cambios en producción |
 | Diagnóstico de cobertura | Orientar el siguiente cambio de datos | Concentración por fuente, rasgos de transcripción y fragmentos incompletos identificados. Muestra de 21 filas de train revisada; prioridad: cuatro filas de Villanueva. Sin modificar etiquetas |
 | Límites de Villanueva | Recuperar argumentos cortados entre páginas | Seis unidades delimitadas y cotejadas; dos quedan como contexto. Continuaciones ya presentes en filas 10/637 identificadas. Propuesta local, sin aplicar |
 | Reparación de Villanueva | Preparar un reemplazo sin duplicar continuaciones | Cuatro candidatos revisados, cuatro unidades de contexto y seis originales archivados; V02 ambiguo. Extracción local verificada, dataset sin modificar |
@@ -916,7 +917,7 @@ experimental local**, con su archivo de originales y contexto. La proyección es
 validación (81) y test (137) deben permanecer idénticos. Esa incorporación todavía
 no ocurrió. No hay entrenamiento, métricas nuevas ni cambios en producción.
 
-## Bloque actual: copia experimental con la reparación de Villanueva
+## Copia experimental con la reparación de Villanueva — registrada en `1f5f6fd`
 
 [build_villanueva_snapshot.py](../scripts/build_villanueva_snapshot.py) aplica
 la propuesta revisada en una carpeta local nueva. La [evidencia de incorporación](../artifacts/reviews/villanueva-snapshot-v1.json)
@@ -958,6 +959,50 @@ No se entrenó ni desplegó un modelo. Siguiente bloque después del commit: com
 el efecto de esta sustitución con TF-IDF local y configuración fija, usando solo
 validación. El comparador anterior supone adiciones; habrá que admitir esta
 sustitución auditada conservando sus controles de evaluación y procedencia.
+
+## Bloque actual: comparación de la reparación de Villanueva
+
+Se amplió [compare_tfidf_validation.py](../scripts/compare_tfidf_validation.py)
+para aceptar una sustitución respaldada por su evidencia y un informe previo.
+Verifica las huellas de ambas versiones, la evaluación intacta, los archivos de
+procedencia y la misma configuración. Conserva el modo anterior para adiciones.
+La versión anterior debe reproducir sus métricas registradas antes de comparar.
+
+La [evidencia de comparación](../artifacts/experiments/villanueva-comparison-v1/comparison.json)
+registra dos entrenamientos locales TF-IDF con **C=4 y semilla 42**, sin búsqueda
+nueva de hiperparámetros. Se utilizó un hilo de CPU; cada ajuste con predicción
+tardó aproximadamente 0.7 segundos, sin incluir importaciones y comprobaciones.
+
+| Métrica en los mismos 81 ejemplos de validación | Antes, 600 train | Después, 598 train |
+|---|---|---|
+| F1 macro | 0.28968 | 0.28987 |
+| Exactitud | 0.30864 | 0.30864 |
+| Aciertos | 25 | 25 |
+| F1 de crisis e ideas, 15 casos | 0 | 0 |
+
+Solo cambió una predicción: un ejemplo etiquetado como crisis e ideas pasó de
+participación social a organización republicana; siguió siendo incorrecto.
+Ninguna versión predijo la clase crisis e ideas en validación. El incremento de
+F1 macro de 0.00019 no demuestra mejora práctica ni significación estadística.
+No permite atribuir el efecto por separado a extracción, etiquetas o contexto retirado.
+
+Verificación: métricas anteriores reproducidas, ambos modelos guardados recargados
+con las mismas 81 predicciones y métricas por clase/matrices recalculadas. Pasaron
+15 rechazos, incluidos cambios en train/evaluación, sustitución sin evidencia,
+configuración o informe anterior incompatibles y salidas inválidas. Se comprobó
+también compatibilidad con las entradas del experimento anterior de adiciones.
+Los modelos y predicciones completos quedan en `outputs/villanueva-comparison-v1/`.
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/compare_tfidf_validation.py --before outputs/huerta-batch-snapshot-v1/reviewed-export.json --after outputs/villanueva-snapshot-v1/reviewed-export.json --config configs/experiments/tfidf.json --selection outputs/history-comparison-v1/reviewed/selection.json --replacement-evidence artifacts/reviews/villanueva-snapshot-v1.json --previous-report artifacts/experiments/huerta-comparison-v1/comparison.json --output outputs/villanueva-comparison-reproduccion
+```
+
+Estado: comparación local completada, sin predicciones de test, entrenamiento de
+BETO ni cambios en producción. Validación contiene una sola fuente y ya se usó
+para selección y comparaciones; no constituye evaluación externa nueva.
+Siguiente bloque después del commit: evaluar la generalización entre fuentes con
+particiones internas de train, dejando una fuente fuera cada vez. Esto permitirá
+orientar el próximo experimento conservando intacta la evaluación congelada.
 
 ### Reproducir la muestra de la revisión inicial
 

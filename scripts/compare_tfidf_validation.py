@@ -1,4 +1,4 @@
-"""Compara una ampliación de train con TF-IDF ya seleccionado; predice solo validación."""
+"""Compara adiciones o una sustitución auditada de train; predice solo validación."""
 from __future__ import annotations
 
 import argparse
@@ -29,14 +29,26 @@ def file_info(path: Path) -> dict:
             "file_sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
 
 
-def validate_inputs(before: dict, after: dict, config: dict, selection: dict) -> dict:
+def validate_inputs(before: dict, after: dict, config: dict, selection: dict,
+                    replacement: dict | None = None) -> dict:
     validate_snapshot(before)
     validate_snapshot(after)
-    if (before["labels"] != after["labels"]
-            or after["items"][:len(before["items"])] != before["items"]
+    holdout = lambda data: [r for r in data["items"] if r["split"] != "train"]
+    if before["labels"] != after["labels"] or holdout(before) != holdout(after):
+        raise ValueError("La taxonomía y la evaluación deben permanecer idénticas")
+    if replacement is None:
+        if (after["items"][:len(before["items"])] != before["items"]
             or len(after["items"]) <= len(before["items"])
             or any(r["split"] != "train" for r in after["items"][len(before["items"]):])):
-        raise ValueError("Solo se admite añadir train, conservando filas anteriores y evaluación")
+            raise ValueError("Solo se admite añadir train sin una evidencia de sustitución")
+    elif (fingerprint(before) != replacement["parent_sha256"]
+          or fingerprint(after) != replacement["reviewed_sha256"]
+          or fingerprint(holdout(after)) != replacement["evaluation_sha256"]
+          or replacement["status"] != "experimental_local"
+          or not replacement["verification"]["passed"]
+          or replacement["removed"] <= 0 or replacement["added"] <= 0
+          or len(after["items"]) != len(before["items"]) - replacement["removed"] + replacement["added"]):
+        raise ValueError("Los datasets no coinciden con la sustitución verificada")
     trials = [t for t in selection["trials"] if t["id"] == selection["selected"]]
     configs = [p for p in config["trials"] if p["id"] == selection["selected"]]
     if (config["backend"] != "tfidf" or len(trials) != 1 or len(configs) != 1
@@ -46,21 +58,52 @@ def validate_inputs(before: dict, after: dict, config: dict, selection: dict) ->
     return trials[0]
 
 
+def previous_validation(previous: dict, before: dict, config: dict, chosen: dict) -> dict:
+    if (previous["runs"]["after"]["dataset_sha256"] != fingerprint(before)
+            or previous["hyperparams"] != chosen["hyperparams"] or previous["seed"] != config["seed"]
+            or previous["runs"]["after"]["validation"]["split"] != "val"):
+        raise ValueError("El informe anterior no corresponde al dataset o configuración")
+    return previous["runs"]["after"]["validation"]
+
+
+def verify_files(entries: list[dict]) -> None:
+    for entry in entries:
+        if file_info(ROOT / entry["path"])["file_sha256"] != entry["file_sha256"]:
+            raise ValueError(f"Evidencia o archivo alterado: {entry['path']}")
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("before", "after", "config", "selection", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
+    parser.add_argument("--replacement-evidence", type=Path)
+    parser.add_argument("--previous-report", type=Path)
     args = parser.parse_args()
+    if bool(args.replacement_evidence) != bool(args.previous_report):
+        parser.error("La sustitución requiere --replacement-evidence y --previous-report juntos")
     target = args.output.resolve()
     if not target.is_relative_to((ROOT / "outputs").resolve()) or target.exists():
         parser.error("Usa una carpeta nueva dentro de outputs/; no se sobrescriben resultados")
     before, after, config, selection = (read(getattr(args, n)) for n in ("before", "after", "config", "selection"))
-    chosen = validate_inputs(before, after, config, selection)
+    replacement = read(args.replacement_evidence) if args.replacement_evidence else None
+    chosen = validate_inputs(before, after, config, selection, replacement)
+    expected_validation = chosen["validation"]
     inputs = {name: file_info(getattr(args, name)) for name in ("before", "after", "config", "selection")}
     inputs.update({name: file_info(path) for name, path in (
         ("runner", Path(__file__)), ("trainer", ROOT / "apps/ml/app/ml/experiments.py"),
         ("metrics", ROOT / "apps/ml/app/ml/baselines.py"),
         ("validation", ROOT / "apps/ml/app/ml/experiment_data.py"))})
+    if replacement is not None:
+        verify_files(replacement["inputs"] + replacement["outputs"]
+                     + replacement["prior_context_archives"] + [replacement["builder"], replacement["parent_evidence"]])
+        previous = read(args.previous_report)
+        expected_validation = previous_validation(previous, before, config, chosen)
+        if (previous["inputs"]["after"]["file_sha256"] != inputs["before"]["file_sha256"]
+                or any(previous["inputs"][n]["file_sha256"] != inputs[n]["file_sha256"]
+                       for n in ("config", "selection", "trainer", "metrics", "validation"))):
+            raise ValueError("Cambió el dataset anterior o la implementación del experimento")
+        inputs["replacement_evidence"] = file_info(args.replacement_evidence)
+        inputs["previous_report"] = file_info(args.previous_report)
     import joblib
     from sklearn.exceptions import ConvergenceWarning
     from threadpoolctl import threadpool_limits
@@ -70,6 +113,7 @@ def main() -> None:
               "working_tree_dirty": bool(subprocess.check_output(["git", "status", "--porcelain"], text=True).strip()),
               "hyperparams": chosen["hyperparams"], "seed": config["seed"],
               "selection_policy": "Use the previous selection unchanged; no new hyperparameter search.",
+              "change_type": "audited_replacement" if replacement else "train_additions",
               "python": platform.python_version(), "thread_limit": 1,
               "dependencies": {p: importlib.metadata.version(p) for p in (
                   "numpy", "scipy", "scikit-learn", "joblib", "threadpoolctl")},
@@ -88,7 +132,7 @@ def main() -> None:
         elapsed = time.perf_counter() - started
         metrics = _metric_report([r["label"] for r in val], predicted, sorted(data["labels"]))
         metrics["split"] = "val"
-        if name == "before" and metrics != chosen["validation"]:
+        if name == "before" and metrics != expected_validation:
             raise ValueError("La versión anterior no reproduce las métricas registradas")
         joblib.dump(model, target / f"{name}.joblib")
         predictions[name] = predicted
