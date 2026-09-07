@@ -13,7 +13,8 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Comparación con Huerta | Medir los cuatro pasajes añadidos con configuración fija | TF-IDF local C=4: F1 macro validación 0.29004 → 0.28968; crisis e ideas sigue en 0. Sin mejora; no se calcularon métricas nuevas de test ni se cambió producción |
 | Comparación de Villanueva | Medir la sustitución con la misma configuración | TF-IDF local C=4: F1 macro validación 0.28968 → 0.28987; mismos 25/81 aciertos, ideas sigue en 0. Sin mejora útil demostrada ni cambios en producción |
 | Generalización entre fuentes | Evaluar cada fuente de train sin usarla para entrenar | Nueve rondas locales: F1 macro agregado 0.32372, 208/598 aciertos; ideas 5/60. Diagnóstico interno, no mejora frente a validación ni prueba final |
-| Palabras frente a caracteres | Comparar dos representaciones en las mismas rondas internas | Caracteres: F1 macro 0.33909 frente a 0.32372; 218 frente a 208 aciertos. Mejora interna modesta; validación original de esta variante pendiente |
+| Palabras frente a caracteres | Comparar dos representaciones en las mismas rondas internas | Caracteres: F1 macro 0.33909 frente a 0.32372; 218 frente a 208 aciertos. Mejora interna modesta que no se mantuvo en validación original |
+| Validación de caracteres | Comprobar la variante elegida en los 81 ejemplos originales | F1 macro 0.23521 frente a 0.28987 de palabras; 24 frente a 25 aciertos. Variante descartada para sustituir al TF-IDF de referencia; BETO y producción intactos |
 | Diagnóstico de cobertura | Orientar el siguiente cambio de datos | Concentración por fuente, rasgos de transcripción y fragmentos incompletos identificados. Muestra de 21 filas de train revisada; prioridad: cuatro filas de Villanueva. Sin modificar etiquetas |
 | Límites de Villanueva | Recuperar argumentos cortados entre páginas | Seis unidades delimitadas y cotejadas; dos quedan como contexto. Continuaciones ya presentes en filas 10/637 identificadas. Propuesta local, sin aplicar |
 | Reparación de Villanueva | Preparar un reemplazo sin duplicar continuaciones | Cuatro candidatos revisados, cuatro unidades de contexto y seis originales archivados; V02 ambiguo. Extracción local verificada, dataset sin modificar |
@@ -1063,7 +1064,7 @@ secuencias de caracteres con las mismas rondas internas y configuración fija de
 clasificador. Será una prueba de representación del texto, conservando etiquetas
 y evaluación congelada, sin prometer una mejora.
 
-## Bloque actual: palabras frente a secuencias de caracteres
+## Palabras frente a secuencias de caracteres — registrado en `7ef2dcd`
 
 Se amplió [evaluate_tfidf_by_source.py](../scripts/evaluate_tfidf_by_source.py)
 con la alternativa `char_wb`: secuencias de 3–5 caracteres dentro de palabras,
@@ -1112,6 +1113,56 @@ Siguiente bloque después del commit: ajustar esta variante de caracteres sobre
 las 598 filas de train y comprobarla una vez en las 81 de validación original,
 comparándola con el resultado registrado de palabras. Mantener test intacto y
 decidir según ese resultado, sin desplegar automáticamente el candidato.
+
+## Bloque actual: validación original de la variante de caracteres
+
+[validate_character_candidate.py](../scripts/validate_character_candidate.py)
+verifica la configuración elegida en las rondas internas, el dataset y sus
+evidencias. Recarga el TF-IDF de palabras y exige que reproduzca sus predicciones
+y métricas anteriores. Después ajusta **un único modelo `char_wb` de 3–5 caracteres,
+C=4 y semilla 42** con las 598 filas de train, y predice las 81 de validación.
+
+La [evidencia de validación](../artifacts/experiments/character-validation-v1/report.json)
+documenta un resultado negativo para la sustitución:
+
+| Métrica en validación original | Palabras | Caracteres |
+|---|---:|---:|
+| F1 macro | 0.28987 | 0.23521 |
+| Exactitud | 30.86% | 29.63% |
+| Aciertos | 25/81 | 24/81 |
+| F1 de crisis e ideas | 0 | 0 |
+| F1 de campañas | 0.28571 | 0 |
+
+La diferencia de F1 macro es **−0.05466**. Cambian 29 predicciones: ocho pasan a
+ser correctas y nueve dejan de serlo; las restantes cambian entre etiquetas
+incorrectas. Aunque mejoró el resultado agregado de las rondas internas, esa
+ventaja no se mantuvo en esta fuente de validación. No se retocaron parámetros
+después de conocer este resultado.
+
+**Decisión: no seleccionar caracteres para sustituir al TF-IDF de palabras.**
+Se conserva el candidato y su resultado para trazabilidad. Esta decisión experimental
+no equivale a una ejecución del pipeline automático de promoción y no cambia el
+BETO que utiliza la aplicación. Validación sigue siendo pequeña, de una fuente
+y reutilizada; no representa una evaluación final independiente.
+
+Verificación: ambos modelos recargados reprodujeron las 81 predicciones; métricas
+y matrices recalculadas; vocabulario/IDF comprobados contra train y clasificador
+con los mismos parámetros. Pasaron 12 rechazos ante datos/candidato/configuración
+alterados, referencia incompatible, archivos modificados y salidas inválidas.
+El ajuste de caracteres y su predicción tardaron aproximadamente 2 segundos,
+sin contar importaciones ni verificaciones. Archivos completos en
+`outputs/character-validation-v1/`, excluidos de Git.
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/validate_character_candidate.py --dataset outputs/villanueva-snapshot-v1/reviewed-export.json --candidate-evidence artifacts/experiments/character-comparison-v1/report.json --word-report artifacts/experiments/villanueva-comparison-v1/comparison.json --output outputs/character-validation-reproduccion
+```
+
+Estado: comparación local completada; no se predijo test, modificó el dataset,
+entrenó BETO ni desplegó un modelo. Siguiente bloque después del commit: revisar
+la selección previa de BETO, la GPU y dependencias locales, y el flujo de experimentos
+para preparar una comparación con configuración fija sobre los datos revisados.
+El propósito es volver al clasificador de la aplicación sin seguir ajustando TF-IDF
+contra esta misma validación.
 
 ### Reproducir la muestra de la revisión inicial
 
