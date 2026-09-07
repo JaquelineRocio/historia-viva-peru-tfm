@@ -11,27 +11,53 @@ from pathlib import Path
 import httpx
 
 
-def run_checks(client, *, username: str, password: str, web_url: str | None = None) -> list[dict]:
+class HealthNotReady(Exception):
+    """La API respondió, pero API/ML aún no están disponibles."""
+
+
+def run_checks(client, *, username: str, password: str, web_url: str | None = None,
+               health_attempts: int = 4, retry_delay: float = 10) -> list[dict]:
+    if health_attempts < 1 or retry_delay < 0:
+        raise ValueError("Invalid health retry configuration")
     checks = []
 
-    def check(name, operation):
+    def check(name, operation, *, max_attempts=1):
         start = time.monotonic()
-        try:
-            operation()
-            checks.append({"name": name, "status": "passed", "seconds": round(time.monotonic() - start, 2)})
-        except Exception as exc:
-            # No escribir cuerpos HTTP, tokens ni URLs con credenciales en el informe.
-            checks.append({"name": name, "status": "failed", "error_type": type(exc).__name__,
-                           "seconds": round(time.monotonic() - start, 2)})
-        return checks[-1]["status"] == "passed"
+        attempts = []
+        for number in range(1, max_attempts + 1):
+            attempt_start = time.monotonic()
+            retryable = False
+            attempt = {"number": number, "status": "passed"}
+            try:
+                operation()
+            except Exception as exc:
+                # No escribir cuerpos HTTP, tokens ni URLs con credenciales.
+                attempt.update(status="failed", error_type=type(exc).__name__)
+                retryable = isinstance(exc, (HealthNotReady, httpx.TimeoutException, httpx.NetworkError))
+                if isinstance(exc, httpx.HTTPStatusError):
+                    attempt["http_status"] = exc.response.status_code
+                    retryable = exc.response.status_code in (408, 429, 500, 502, 503, 504)
+            attempt["seconds"] = round(time.monotonic() - attempt_start, 2)
+            attempts.append(attempt)
+            if attempt["status"] == "passed" or not retryable or number == max_attempts:
+                break
+            time.sleep(retry_delay)
+        result = {"name": name, "status": attempt["status"],
+                  "seconds": round(time.monotonic() - start, 2), "attempts": attempts,
+                  "recovered_after_retry": len(attempts) > 1 and attempt["status"] == "passed"}
+        if "error_type" in attempt:
+            result["error_type"] = attempt["error_type"]
+        checks.append(result)
+        return result["status"] == "passed"
 
     def health():
         response = client.get("/api/health")
         response.raise_for_status()
         body = response.json()
-        assert body.get("status") == "ok" and body.get("ml") == "ok", "API o ML no saludable"
+        if body.get("status") != "ok" or body.get("ml") != "ok":
+            raise HealthNotReady()
 
-    check("API and ML health", health)
+    check("API and ML health", health, max_attempts=health_attempts)
 
     def invalid_login():
         response = client.post("/api/auth/login", json={"username": username, "password": "invalid-smoke-password"})
