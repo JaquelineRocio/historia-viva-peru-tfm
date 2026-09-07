@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "review_id": "fonseca-replacement-v1",
+  "date": "2026-09-07",
+  "status": "approved_for_local_experimental_replacement",
+  "inputs": {
+    "base": {
+      "path": "outputs/agn-snapshot-v1/reviewed-export.json",
+      "file_sha256": "2e128cd2208bd3584568edb42d4c20abbd632962762480d49ec6a4e3ad76a155"
+    },
+    "candidate": {
+      "path": "outputs/fonseca-repair-v1/candidate.json",
+      "file_sha256": "62de915fc94c7554c1a4fd440f42bc7c7bec28b15d8232bf1689101fd854f16d"
+    },
+    "repair_review": {
+      "path": "artifacts/reviews/fonseca-repair-v1.json",
+      "file_sha256": "482449629a7807cab3d9edc8cfc1b349855a14a0a69f5b9ffacdfd455f3a335b"
+    }
+  },
+  "operation": {
+    "source_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+    "split": "train",
+    "remove": [
+      {
+        "item_index": 55,
+        "text_sha256": "88571ef1f26a112fd43523b5b76d9283a6146735f5aa737be6fde8e065a2633c",
+        "label": "participacion_social_regional"
+      },
+      {
+        "item_index": 57,
+        "text_sha256": "96accf276a3574d3016e60b4666fc0a9552b21f37ee485fe3441f9591c1071fb",
+        "label": "participacion_social_regional"
+      },
+      {
+        "item_index": 58,
+        "text_sha256": "9d20b43e8ce0bd92848a342be04c24dce6439e307fb7078bd5f6bcc1aa1e5fa4",
+        "label": "participacion_social_regional"
+      }
+    ],
+    "replacement_candidate": "FON-R05-v1",
+    "replacement_label": "participacion_social_regional",
+    "removed_rows": 3,
+    "added_rows": 1,
+    "independent_new_sources": 0
+  },
+  "review": {
+    "reviewer_agent": "/root/revision_historica_agn",
+    "human_expert_validation": false,
+    "independent_system": false,
+    "protocol": "Revisión discutida entre agente principal y segundo revisor; lectura del candidato, train55/57/58 y PDF3–5.",
+    "decision": "Sustitución conservadora defendible en copia experimental; conservar etiqueta y fuente, archivar material restante fuera del entrenamiento.",
+    "rationale": "Repara continuidad, explicita atribución y evita añadir una selección solapada como ejemplo nuevo.",
+    "coverage_reduced_in_training": true,
+    "coverage_limit": "Una selección más estrecha sustituye tres extracciones; no se conserva toda su cobertura temática dentro de entrenamiento. Las partes restantes se archivan, no se clasifican como no relevantes.",
+    "historical_limit": "Son representaciones que Fonseca analiza. No se cotejaron testimonios originales ni se realizó validación humana independiente.",
+    "table_limit": "El agente comprobó correspondencia espacial mediante capa textual con disposición conservada; no hubo cotejo visual renderizado. Mantener tabla fuera de entrenamiento."
+  },
+  "context_archive": {
+    "file_name": "replacement-archive.json",
+    "include_original_rows": [
+      55,
+      57,
+      58
+    ],
+    "pdf_pages": [
+      3,
+      4,
+      5
+    ],
+    "printed_pages": [
+      107,
+      108,
+      109
+    ],
+    "formats": [
+      "original_dataset_rows",
+      "pdf_text",
+      "pdf_layout_text"
+    ],
+    "retained_contexts": [
+      {
+        "name": "Viajeros",
+        "pdf_pages": [
+          3,
+          4
+        ],
+        "start": "Dentro de la mencionada colección",
+        "end": "las alusiones al bandolerismo son numerosas.",
+        "use": "Solo contexto; la ampliación a p.107 podría coincidir con otras filas."
+      },
+      {
+        "name": "Cierre y tabla",
+        "pdf_pages": [
+          5
+        ],
+        "start": "Esta imagen alimentó el discurso",
+        "end": "nivel 2: el discurso nacionalista",
+        "end_excluded": true,
+        "use": "Conservar tabla como contexto del análisis de representaciones, sin aplanarla como nuevo ejemplo."
+      },
+      {
+        "name": "Historiografía nacionalista",
+        "pdf_pages": [
+          5
+        ],
+        "start": "nivel 2: el discurso nacionalista",
+        "end": "primera obra específica sobre el tema.",
+        "use": "Conservar la explicación completa de los estudios de 1958 fuera del entrenamiento."
+      },
+      {
+        "name": "Referencias y definición de CDIP",
+        "pdf_pages": [
+          3,
+          4,
+          5
+        ],
+        "use": "Conservar notas 3–10 y definición de la sigla dentro de las páginas archivadas. No introducirlas silenciosamente en el candidato."
+      }
+    ]
+  },
+  "expected_result": {
+    "base_rows": 816,
+    "total_rows": 814,
+    "split_counts": {
+      "train": 596,
+      "val": 81,
+      "test": 137
+    },
+    "agn_candidates_preserved": 2,
+    "unrelated_rows_unchanged": true,
+    "evaluation_rows_and_order_unchanged": true
+  },
+  "scope": {
+    "frozen_reference_changed": false,
+    "previous_agn_export_changed": false,
+    "training_performed": false,
+    "production_changed": false,
+    "other_history_review_corrections_applied": false
+  }
+}

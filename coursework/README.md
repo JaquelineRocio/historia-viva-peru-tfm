@@ -10,7 +10,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Diagnóstico | Compilar web/API, ejecutar suites y revisar dataset | API 37 pruebas, ML 55 pruebas y web verificados localmente |
 | Experimentos | Comparar hiperparámetros usando validación; test solo del ganador | Tres configuraciones TF-IDF y tres BETO ejecutadas en este equipo |
 | Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Segunda revisión asistida por IA completa: 11 aprobar, 2 corregir, 6 ambiguos y 1 excluir hasta resegmentar. Decisiones sin aplicar al dataset ni a producción |
-| Reparación de R05 | Recuperar prosa separada por notas y salto de página | Candidato local de 203 palabras verificado. Se solapa con train55/57/58; pendiente sustitución conjunta, sin incorporarlo como contenido nuevo |
+| Reparación de R05 | Recuperar prosa separada por notas y salto de página | Sustitución local verificada: train55/57/58 reemplazadas por un fragmento de 203 palabras en una nueva copia experimental. Originales y contexto archivados; referencia intacta |
 | Fuentes para enriquecimiento | Evaluar contenido, procedencia, reutilización y solapamientos | Tres candidatas examinadas; dos fragmentos AGN incorporados solo a copia experimental local. BNP pendiente de OCR/metadatos y Constitución pendiente de cotejo |
 | Piloto AGN | Preparar hasta tres fragmentos con procedencia y etiquetas propuestas | Tres etiquetas coincidentes tras segunda revisión asistida por IA. AGN01/02 candidatos a entrenamiento futuro; AGN03 solo contexto. Snapshot y producción intactos |
 | Copia experimental AGN | Incorporar los dos candidatos y comprobar el mantenimiento | Export local verificado; referencia y evaluación intactas. Mantenimiento omitió entrenar: dos cambios frente al mínimo de 20. Sin métricas nuevas ni despliegue |
@@ -308,7 +308,7 @@ El dictamen quedó registrado en `e2c3e74`. Las correcciones resueltas solo se
 aplicarán en otro bloque experimental; los seis casos ambiguos requieren contexto
 adicional. La recuperación de R05 se describe a continuación.
 
-## Bloque actual: recuperación del texto de R05
+## Recuperación del texto de R05 — registrada en `0cb6cbd`
 
 [prepare_fonseca_repair.py](../scripts/prepare_fonseca_repair.py) recupera prosa de
 las páginas impresas 108–109 (PDF4–5) de Fonseca. Une la frase interrumpida entre
@@ -346,9 +346,55 @@ Pasaron los controles de límites, hash, ajustes, longitud, sobrescritura y ruta
 El dataset congelado y el export AGN permanecen intactos; no hubo entrenamiento
 ni llamadas a servicios remotos.
 
-Siguiente paso después del commit: resolver la sustitución de train55/57/58,
-preservando su prosa útil y tratando la tabla por separado. Solo entonces preparar
-la siguiente versión experimental; el candidato actual no aumenta el corpus.
+La recuperación quedó registrada en `0cb6cbd`. El candidato no aumenta el corpus;
+la decisión posterior de sustitución se documenta a continuación.
+
+## Bloque actual: sustitución experimental del grupo Fonseca
+
+El [dictamen de sustitución](../artifacts/reviews/fonseca-replacement-v1.json)
+registra una decisión discutida con el segundo agente: reemplazar conjuntamente
+train55/57/58 por `FON-R05-v1` en una **copia experimental nueva**, con la misma
+fuente, partición de entrenamiento y etiqueta social. Una selección más estrecha
+sustituye tres extracciones; se reduce cobertura dentro del entrenamiento y no
+se afirma que esta reducción mejore las métricas.
+
+[build_fonseca_snapshot.py](../scripts/build_fonseca_snapshot.py) comprueba hashes,
+reproduce el candidato, aplica únicamente esa sustitución y conserva la procedencia
+AGN. Produce tres archivos locales en `outputs/fonseca-snapshot-v1/`:
+
+- `reviewed-export.json`: copia experimental, 814 filas (596 train, 81 val, 137 test).
+- `replacement-archive.json`: las tres filas originales y las páginas PDF3–5,
+  tanto en texto como con disposición espacial; quedan fuera de entrenamiento.
+- `build-report.json`: hashes, recuentos y auditoría de particiones.
+
+El archivo de contexto conserva el pasaje de viajeros, la interpretación que
+introduce la tabla Pueblo/Elite, la prosa sobre historiografía nacionalista,
+notas 3–10 y definición de CDIP. No se convierten en ejemplos negativos ni se
+añaden automáticamente como otras filas. La tabla conserva su disposición
+extraída del PDF; no hubo cotejo visual renderizado ni verificación de testimonios
+originales. Esta revisión sigue siendo asistida por IA.
+
+Verificación local: tres salidas reproducidas de forma idéntica; las **813 filas
+ajenas a la sustitución**, incluidos los dos ejemplos AGN, permanecen iguales.
+Los 218 registros de evaluación conservan texto, etiquetas y orden. El dataset
+congelado y el export AGN anterior siguen intactos. No quedan coincidencias
+léxicas superiores al umbral fuera del grupo sustituido; eso no prueba ausencia
+de paráfrasis. Se comprobaron también originales y páginas archivadas.
+
+Pasaron siete controles de rechazo: decisión pendiente, hash alterado, índice
+repetido, índice negativo, intento de sustituir evaluación, etiqueta incorrecta
+y duplicado fuera del grupo. También pasaron las protecciones de sobrescritura
+y ruta. No hubo entrenamiento, métricas nuevas ni cambios en producción.
+
+Reproducción con las entradas locales de los bloques previos y una carpeta nueva:
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/build_fonseca_snapshot.py --output outputs/fonseca-snapshot-reproduccion
+```
+
+Siguiente paso después del commit: aplicar las correcciones consensuadas R04/R16
+a otra versión experimental. Los seis casos ambiguos siguen pendientes; después
+se podrá comparar un candidato TF-IDF local con la misma evaluación congelada.
 
 ### Reproducir la muestra de la revisión inicial
 
