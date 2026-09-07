@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "status": "boundary_proposal_only",
+  "source_id": "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+  "source": {
+    "author": "Carmen Villanueva",
+    "title": "La Constitución de 1823 y los inicios de la República",
+    "journal": "BIRA",
+    "volume": 23,
+    "year": 1996,
+    "printed_pages": "427–435",
+    "basis": "Local PDF title and footer; no new license verification"
+  },
+  "inputs": [
+    {
+      "path": "outputs/huerta-batch-snapshot-v1/reviewed-export.json",
+      "file_sha256": "38c71b1548b89848142edc1aadab24d6651393f7361140a516e36d758e7ba244"
+    },
+    {
+      "path": ".corpus-downloads/constitucion_1823.pdf",
+      "file_sha256": "56e6ec5d01aee7af31fe857ff63190ea1a088ccddcfe479b906dcbe7405d8c50"
+    },
+    {
+      "path": "artifacts/datasets/gold-v1-source-aware.json",
+      "file_sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a"
+    }
+  ],
+  "original_rows": [
+    {
+      "index": 7,
+      "label": "organizacion_consecuencias_republicanas",
+      "split": "train",
+      "text_sha256": "2abd19afe54182a5ccb60b5746b124e78ff1150b35a7213c4a5f768b9baf4d6c"
+    },
+    {
+      "index": 633,
+      "label": "crisis_ideas_emancipadoras",
+      "split": "train",
+      "text_sha256": "f649d51708d4691e79afdcd250c057c2f3aeac762a11b04e1b0d4216e7d5ac5f"
+    },
+    {
+      "index": 15,
+      "label": "crisis_ideas_emancipadoras",
+      "split": "train",
+      "text_sha256": "050a9c6527a081a5d8c6965d66ee074fd450bce282a52ae2a753589e2e728643"
+    },
+    {
+      "index": 14,
+      "label": "organizacion_consecuencias_republicanas",
+      "split": "train",
+      "text_sha256": "c98de9d2eec4ffd5ba747531414a380c24bc0bf33d58a81adccfd6ba2c20a604"
+    }
+  ],
+  "extraction": "Whitespace joined only; selected page spans concatenated. OCR spelling, punctuation and footnote calls retained. No invented transitions.",
+  "units": [
+    {
+      "id": "V01",
+      "original_indices": [
+        7
+      ],
+      "parts": [
+        {
+          "pdf_page": 1,
+          "printed_page": 427,
+          "start_marker": "Al estudiar",
+          "end_marker": "sumamente rigurosa.",
+          "page_text_sha256": "4baafb60e3856dc1a16bf354d6a011fac1118f0ae8254cf77109b72d66a49b30",
+          "selected_text_sha256": "26da16fb033da67067313f6d43da3f50a216918e08b548c2dab67b2a400e53a4"
+        }
+      ],
+      "word_count": 82,
+      "text_sha256": "26da16fb033da67067313f6d43da3f50a216918e08b548c2dab67b2a400e53a4",
+      "subject": "Constitución peruana de 1823: estructura y coherencia.",
+      "proposed_label": null,
+      "dataset_applied": false,
+      "ready_for_training": false
+    },
+    {
+      "id": "V02",
+      "original_indices": [
+        7,
+        633
+      ],
+      "parts": [
+        {
+          "pdf_page": 1,
+          "printed_page": 427,
+          "start_marker": "Es interesante",
+          "end_marker": "acción inmediata del Libertador.",
+          "page_text_sha256": "4baafb60e3856dc1a16bf354d6a011fac1118f0ae8254cf77109b72d66a49b30",
+          "selected_text_sha256": "ba9bb5244388301c3f1e2d39caa76ae403972ed711a1d13d807772cb3250955d"
+        }
+      ],
+      "word_count": 178,
+      "text_sha256": "ba9bb5244388301c3f1e2d39caa76ae403972ed711a1d13d807772cb3250955d",
+      "subject": "Trayectorias liberales e institucionales y antecedentes peruanos; conserva el referente de «Esos antecedentes».",
+      "proposed_label": null,
+      "dataset_applied": false,
+      "ready_for_training": false
+    },
+    {
+      "id": "V03",
+      "original_indices": [
+        633,
+        15
+      ],
+      "parts": [
+        {
+          "pdf_page": 1,
+          "printed_page": 427,
+          "start_marker": "Así, el Congreso",
+          "end_marker": "colombiana de 1821 o",
+          "page_text_sha256": "4baafb60e3856dc1a16bf354d6a011fac1118f0ae8254cf77109b72d66a49b30",
+          "selected_text_sha256": "30a5a5fa1c5a262d908c363413823cff781d866aea759baccfde5215ef075dd8"
+        },
+        {
+          "pdf_page": 2,
+          "printed_page": 428,
+          "start_marker": "la argentina",
+          "end_marker": "repúblicas vecinas.",
+          "page_text_sha256": "6183be9943b167352599bd5346eeb1cecba3a55df55bb9d82678365682ffa80a",
+          "selected_text_sha256": "8a4cd4e60d4257e626cc32dfaf1a6824b0b22f316ef13736ec516534e83bef0f"
+        }
+      ],
+      "word_count": 145,
+      "text_sha256": "fd3554708a4f458fa38f745c856086d3b0bb2cd4afed3264441356a82a58bc73",
+      "subject": "Comparación constitucional peruana, argentina y colombiana; enlace argumental con V02.",
+      "proposed_label": null,
+      "dataset_applied": false,
+      "ready_for_training": false
+    },
+    {
+      "id": "V04",
+      "original_indices": [
+        15,
+        637
+      ],
+      "parts": [
+        {
+          "pdf_page": 2,
+          "printed_page": 428,
+          "start_marker": "El Manifiesto",
+          "end_marker": "más asequible2•",
+          "page_text_sha256": "6183be9943b167352599bd5346eeb1cecba3a55df55bb9d82678365682ffa80a",
+          "selected_text_sha256": "3e3fed6397ffde0f0103678e7bf3390ff6588aa7e44459e11286dab8549bcbec"
+        }
+      ],
+      "word_count": 175,
+      "text_sha256": "3e3fed6397ffde0f0103678e7bf3390ff6588aa7e44459e11286dab8549bcbec",
+      "subject": "Pensamiento político bolivariano; incluye prosa ya presente en fila 637. Llamadas de nota conservadas.",
+      "proposed_label": null,
+      "dataset_applied": false,
+      "ready_for_training": false
+    },
+    {
+      "id": "V05",
+      "original_indices": [
+        14
+      ],
+      "parts": [
+        {
+          "pdf_page": 4,
+          "printed_page": 430,
+          "start_marker": "Las manifestaciones",
+          "end_marker": "mucho menos de ganar.",
+          "page_text_sha256": "d6fbf40bfba2c21f8ce2b6b2d791e074ec15bc878a2c11db99812fa94ee90e1e",
+          "selected_text_sha256": "4a2e921ad713b13872c499d087cd9371308070e11ff252e6bcbc6a67ff29db9f"
+        }
+      ],
+      "word_count": 61,
+      "text_sha256": "4a2e921ad713b13872c499d087cd9371308070e11ff252e6bcbc6a67ff29db9f",
+      "subject": "Recepción del republicanismo y oposición al monarquismo; contexto previo en fila 660.",
+      "proposed_label": null,
+      "dataset_applied": false,
+      "ready_for_training": false
+    },
+    {
+      "id": "V06",
+      "original_indices": [
+        14,
+        10
+      ],
+      "parts": [
+        {
+          "pdf_page": 4,
+          "printed_page": 430,
+          "start_marker": "El Congreso General",
+          "end_marker": "5 militares",
+          "page_text_sha256": "d6fbf40bfba2c21f8ce2b6b2d791e074ec15bc878a2c11db99812fa94ee90e1e",
+          "selected_text_sha256": "7458c06f7e12b6e5e41236b8f905f0c45898a8b9ac2b7701316f08a63d4a6ed3"
+        },
+        {
+          "pdf_page": 5,
+          "printed_page": 431,
+          "start_marker": "y 5 propietarios.",
+          "end_marker": "su calidad personal.",
+          "page_text_sha256": "78c2caaa3586e1acb5b75b71f2974209c9286b675e77c348e8fca0d3850cfe72",
+          "selected_text_sha256": "d1369c7c858a33101eeed252aba4ee4c0a9333c56cb729693ce06a2a103579b4"
+        }
+      ],
+      "word_count": 163,
+      "text_sha256": "a5bc9415c2cf7b432f24a61d8bffebc62c0039b5fd8554c914836e062c45a459",
+      "subject": "Convocatoria, representación y composición del Congreso; toma prosa ya presente en fila 10.",
+      "proposed_label": null,
+      "dataset_applied": false,
+      "ready_for_training": false
+    }
+  ],
+  "dependencies": {
+    "row14_continues_in_row10": true,
+    "row10_overlap_words": 45,
+    "row10_overlap_sha256": "d1369c7c858a33101eeed252aba4ee4c0a9333c56cb729693ce06a2a103579b4",
+    "row15_bolivarian_argument_continues_in_row637": true,
+    "row637_overlap_words": 97,
+    "row637_overlap_sha256": "7116aa0fda798cf09ac84bc6ae0596f0228f9682409dcf61e0205501d9605b39",
+    "row14_republicanism_context_in_row660": true
+  },
+  "checks": {
+    "input_hashes_verified": true,
+    "all_target_and_context_rows_same_source_train": true,
+    "unique_markers": true,
+    "headers_and_footer_outside_selected_spans": true,
+    "row10_overlap_verified": true,
+    "row637_overlap_verified": true,
+    "inputs_unchanged": true
+  },
+  "limits": [
+    "Argument boundaries are not six approved training examples.",
+    "Units shorter than 120 words must not be padded or automatically labelled no_relevante.",
+    "No image or original primary-document verification; PDF text layer only.",
+    "No labels, dataset, model, holdout or production changed."
+  ],
+  "local_extraction_script_sha256": "ba4f810993d87efbfcca4a75b25096f1781eb53e08f820390f1852015753d08f",
+  "review": {
+    "primary_agent": "/root",
+    "second_agent": "/root/revision_historica_agn",
+    "human_expert_validation": false,
+    "blind": false,
+    "independent_system": false,
+    "basis": "Both agents read the local PDF text layer and the labeling guide. The second agent proposed the six final boundaries; the primary agent reproduced their word counts and checked overlap against rows 10 and 637. No independent primary-source historical verification.",
+    "decision": "Accept boundaries for a future repair proposal; no label approval or application.",
+    "revision_from_initial_map": "Moved the Esos antecedentes paragraph into V02 to preserve its antecedent; V03 now begins Asi, el Congreso. Extended V04 through the Jamaica quotation, with the row637 overlap explicitly recorded.",
+    "thematic_questions": {
+      "V02": [
+        "crisis_ideas_emancipadoras",
+        "organizacion_consecuencias_republicanas"
+      ],
+      "V03": [
+        "organizacion_consecuencias_republicanas",
+        "crisis_ideas_emancipadoras"
+      ],
+      "V04": [
+        "liderazgos_diplomacia_proyectos",
+        "crisis_ideas_emancipadoras"
+      ],
+      "V06": [
+        "organizacion_consecuencias_republicanas",
+        "participacion_social_regional"
+      ]
+    },
+    "context_only_units": [
+      "V01",
+      "V05"
+    ],
+    "not_consecutive": "Row15 and row14 are not consecutive document passages. Intervening prose discusses Burke, Santander, San Martin and monarchy (PDF2-4). It is not deleted or joined into these selections."
+  },
+  "context_rows": [
+    {
+      "index": 10,
+      "split": "train",
+      "label": "organizacion_consecuencias_republicanas",
+      "text_sha256": "03dfa8e9fc4c407e0889a5475ae4ab7fc7fe1a020b40989793808356565a80e6"
+    },
+    {
+      "index": 637,
+      "split": "train",
+      "label": "liderazgos_diplomacia_proyectos",
+      "text_sha256": "69f7ade875bdc894ba9a436b7a9dfe0b4dbe673ad948278df4a1e1d573980462"
+    },
+    {
+      "index": 660,
+      "split": "train",
+      "label": "liderazgos_diplomacia_proyectos",
+      "text_sha256": "a4f2067b37d5803b62b032e022bc8218e9558e8eb7c49ddf2b0a8ce350ff4cb0"
+    }
+  ],
+  "next_block": {
+    "objective": "Prepare a reversible replacement plan for the six involved training rows (7,633,15,14,10,637), including the untouched remainders of rows10/637. Review thematic labels and extraction marks before incorporating anything.",
+    "requirements": [
+      "Archive original rows and unused substantive text; do not silently discard short context.",
+      "Do not add V04/V06 while their overlapping original text remains duplicated in training.",
+      "Preserve one source group and the frozen evaluation partition.",
+      "Do not train or deploy in the repair-preparation block."
+    ]
+  }
+}

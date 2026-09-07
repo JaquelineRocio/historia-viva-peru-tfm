@@ -12,6 +12,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Comparación tras revisión | Medir el efecto conjunto del enriquecimiento y las correcciones | TF-IDF local: F1 macro validación 0.29004 en ambas versiones; test 0.36300 → 0.36007. Sin mejora global ni cambio en producción |
 | Comparación con Huerta | Medir los cuatro pasajes añadidos con configuración fija | TF-IDF local C=4: F1 macro validación 0.29004 → 0.28968; crisis e ideas sigue en 0. Sin mejora; no se calcularon métricas nuevas de test ni se cambió producción |
 | Diagnóstico de cobertura | Orientar el siguiente cambio de datos | Concentración por fuente, rasgos de transcripción y fragmentos incompletos identificados. Muestra de 21 filas de train revisada; prioridad: cuatro filas de Villanueva. Sin modificar etiquetas |
+| Límites de Villanueva | Recuperar argumentos cortados entre páginas | Seis unidades delimitadas y cotejadas; dos quedan como contexto. Continuaciones ya presentes en filas 10/637 identificadas. Propuesta local, sin aplicar |
 | Fuente para crisis e ideas | Localizar contenido pertinente y reutilizable | HUE01 de Huerta Vera (2020), revisado por ambos agentes, incorporado a copia experimental local: 597 train, 81 validación y 137 test. Evaluación intacta; sin entrenamiento nuevo |
 | Lote adicional de Huerta | Revisar propaganda, lecturas políticas y prensa | HUE02/03/04 incorporados a copia experimental: 600 train, 81 validación y 137 test. Una fuente común y dependencia HUE03/HUE04 conservadas; sin entrenamiento nuevo |
 | Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Segunda revisión: 11 aprobar, 2 corregir, 6 ambiguos y 1 excluir hasta resegmentar. R04/R16 corregidos solo en copia experimental; referencia y producción intactas |
@@ -777,7 +778,7 @@ históricamente justificadas para buscar una puntuación mayor.
 La comparación quedó registrada en `6099156`. El diagnóstico siguiente se centra
 en entrenamiento, conservando la evaluación congelada.
 
-## Bloque actual: diagnóstico de cobertura y fronteras temáticas
+## Diagnóstico de cobertura y fronteras temáticas — registrado en `afd742e`
 
 [diagnose_training_coverage.py](../scripts/diagnose_training_coverage.py) resume
 las 600 filas de train, su distribución por fuente, longitud y duplicados, y
@@ -823,6 +824,47 @@ Estado: diagnóstico local completado, sin métricas nuevas, cambios de etiqueta
 descargas ni cambios en producción. Siguiente paso después del commit: revisar
 únicamente las filas **7, 633, 15 y 14 de Villanueva**, recuperar su continuidad
 y proponer límites argumentales con evidencia antes de modificar el dataset.
+
+## Bloque actual: límites argumentales de Villanueva
+
+El [mapa de límites](../artifacts/reviews/villanueva-boundaries-v1.json) coteja
+las filas 7, 633, 15 y 14 con las páginas PDF 1–5 (impresas 427–431) del artículo
+de Carmen Villanueva, *La Constitución de 1823 y los inicios de la República*,
+BIRA 23 (1996). Las etiquetas y el dataset permanecen intactos.
+
+| Unidad | Contenido delimitado | Palabras | Tratamiento en esta propuesta |
+|---|---|---|---|
+| V01 | Introducción sobre la Constitución de 1823 | 82 | Conservar como contexto |
+| V02 | Experiencias liberales y antecedentes peruanos | 178 | Revisar frontera entre ideas y organización constitucional |
+| V03 | Comparación constitucional de Perú, Argentina y Colombia | 145 | Reúne la oración cortada entre PDF 1–2; etiqueta pendiente |
+| V04 | Propuestas políticas de Bolívar y Carta de Jamaica | 175 | Incluye continuación que ya pertenece a la fila 637 |
+| V05 | Cierre de la discusión sobre monarquismo | 61 | Conservar como contexto |
+| V06 | Formación y composición del Congreso | 163 | Completa PDF 4–5 con prosa que ya pertenece a la fila 10 |
+
+Estas unidades son un mapa argumental, **no seis ejemplos aprobados**. No se
+rellenan los pasajes breves ni se los convierte automáticamente en `no_relevante`.
+Se unieron espacios y límites de página; se conservaron grafías de extracción y
+llamadas de notas para revisarlas antes de preparar candidatos definitivos.
+La fila 15 y la 14 no son consecutivas en el documento: entre ambas hay discusión
+de Burke, Santander, San Martín y monarquismo que no se debe omitir como si fuera
+una transición inmediata.
+
+El segundo agente propuso los límites; el agente principal reprodujo las seis
+extracciones y comprobó que las continuaciones están en las filas 10 y 637.
+Ambos leyeron la guía y la capa de texto del PDF. Es revisión asistida por IA,
+con etiquetas visibles; no constituye validación humana independiente ni cotejo
+de los documentos históricos originales que cita Villanueva.
+
+Verificación local: marcadores únicos, recuentos reproducidos, hashes del PDF y
+dataset comprobados, solapamientos con 10/637 confirmados y entradas intactas.
+Los textos completos y el script auxiliar local están en
+`outputs/villanueva-boundaries-v1/`, excluidos de Git. No hubo entrenamiento,
+métricas nuevas ni cambios en producción.
+
+Siguiente bloque después del commit: preparar un reemplazo reversible que
+considere las seis filas implicadas (7, 633, 15, 14, 10 y 637), conservando los
+originales y el texto restante de 10/637. Revisar etiquetas y ajustes de extracción
+antes de incorporar candidatos; no añadir continuaciones duplicando las existentes.
 
 ### Reproducir la muestra de la revisión inicial
 
