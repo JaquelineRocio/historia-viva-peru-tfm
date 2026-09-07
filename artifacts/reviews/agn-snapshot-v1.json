@@ -1,0 +1,71 @@
+{
+  "schema_version": 1,
+  "date": "2026-09-07",
+  "status": "experimental_local_verified",
+  "builder": "scripts/build_agn_snapshot.py",
+  "reference": {
+    "path": "artifacts/datasets/gold-v1-source-aware.json",
+    "file_sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a",
+    "canonical_sha256": "54bd64939cc3bdf4d105d14208a41fd2dbb9095f7ef9cb52a4c3baf083f29ece",
+    "unchanged": true,
+    "split_counts": {"train": 596, "val": 81, "test": 137}
+  },
+  "peer_review": {
+    "path": "artifacts/reviews/agn-pilot-v1-peer-review.json",
+    "file_sha256": "2b726936ad06a102285ce50f8987a74247ec7441dd80d6beec1af44a45327d3b",
+    "annotation_origin": "two_ai_reviews",
+    "human_expert_validation": false
+  },
+  "experimental_export": {
+    "path": "outputs/agn-snapshot-v1/reviewed-export.json",
+    "file_sha256": "2e128cd2208bd3584568edb42d4c20abbd632962762480d49ec6a4e3ad76a155",
+    "canonical_sha256": "4027185c11bced9f9003de94c0b8e8e4b3cfa1387c940677964dab913d70dcae",
+    "split_counts": {"train": 598, "val": 81, "test": 137},
+    "original_rows_preserved": 814,
+    "added_candidates": ["AGN01", "AGN02"],
+    "context_only": ["AGN03"],
+    "new_source_id": "17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+    "new_source_split": "train",
+    "provenance": "dataset.source_registry y dataset.added_rows_provenance; copia en build-report.json"
+  },
+  "maintenance": {
+    "report_path": "outputs/agn-snapshot-v1/maintenance/report.json",
+    "report_file_sha256": "331c2f73926408c144b7f9617ed90aa459f09d2f5454959f39019da21c99fcd3",
+    "snapshot_path": "outputs/agn-snapshot-v1/maintenance/snapshot.json",
+    "snapshot_file_sha256": "7661abef5b7225b9a7674358666694f8520754292fe579d852d3d8ff2eadfb21",
+    "status": "skipped",
+    "reason": "insufficient_changes",
+    "min_changes": 20,
+    "added": 2,
+    "removed": 0,
+    "relabeled": 0,
+    "split_counts": {"train": 597, "val": 81, "test": 137},
+    "existing_duplicate_collapsed": {
+      "reference_indices_zero_based": [718, 746],
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "text_sha256": "e31114f5a9f3957a63cd16ba9b4a21828404914652964d9096979082318f3a66",
+      "label": "campanias_conflictos_militares",
+      "split": "train",
+      "explanation": "El preparador existente unifica la misma fuente y texto normalizado. Estas dos filas originales son idénticas; no se pierde contenido distinto. removed cuenta claves únicas, no filas repetidas."
+    },
+    "provenance_limitation": "El snapshot derivado conserva el hash del export, pero no copia sus metadatos de procedencia. Conservar reviewed-export.json y build-report.json junto al resultado."
+  },
+  "evaluation": {
+    "rows": 218,
+    "canonical_sha256": "593fe90d68bc282108eab983515598c7c3b5ebbf42e2f79dbdb275c12d8c02a2",
+    "exact_rows_and_order_preserved": true,
+    "source_overlap_between_splits": 0,
+    "exact_text_overlap_between_splits": 0
+  },
+  "verification": {
+    "deterministic_export": true,
+    "all_distinct_original_train_rows_preserved": true,
+    "rejected_controls": ["AGN03 incluido", "sin consenso", "hash de entrada incorrecto", "sobrescritura", "salida fuera de outputs"],
+    "existing_maintenance_tests": {"passed": 3, "deselected": 7},
+    "count_check_note": "La primera comprobación esperaba 598 filas de train en mantenimiento y falló. Se identificó la única pareja duplicada preexistente; la comprobación final verificó 597 filas y conservación exacta de todos los ejemplos distintos."
+  },
+  "experimental_model_trained": false,
+  "new_model_metrics": null,
+  "remote_services_called": false,
+  "production_changed": false
+}

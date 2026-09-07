@@ -10,8 +10,9 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Diagnóstico | Compilar web/API, ejecutar suites y revisar dataset | API 37 pruebas, ML 55 pruebas y web verificados localmente |
 | Experimentos | Comparar hiperparámetros usando validación; test solo del ganador | Tres configuraciones TF-IDF y tres BETO ejecutadas en este equipo |
 | Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Propuesta local asistida por IA: 12 aprobar, 2 corregir, 5 ambiguos y 1 excluir hasta resegmentar. Pendiente segunda revisión; sin cambios al dataset ni a producción |
-| Fuentes para enriquecimiento | Evaluar contenido, procedencia, reutilización y solapamientos | Tres candidatas examinadas; AGN propuesto para piloto local, BNP pendiente de OCR/metadatos y Constitución pendiente de cotejo. Cero ejemplos incorporados |
+| Fuentes para enriquecimiento | Evaluar contenido, procedencia, reutilización y solapamientos | Tres candidatas examinadas; dos fragmentos AGN incorporados solo a copia experimental local. BNP pendiente de OCR/metadatos y Constitución pendiente de cotejo |
 | Piloto AGN | Preparar hasta tres fragmentos con procedencia y etiquetas propuestas | Tres etiquetas coincidentes tras segunda revisión asistida por IA. AGN01/02 candidatos a entrenamiento futuro; AGN03 solo contexto. Snapshot y producción intactos |
+| Copia experimental AGN | Incorporar los dos candidatos y comprobar el mantenimiento | Export local verificado; referencia y evaluación intactas. Mantenimiento omitió entrenar: dos cambios frente al mínimo de 20. Sin métricas nuevas ni despliegue |
 | Informe Unidad I | Dataset, características, parámetros, resultados, despliegue y límites | Borrador en informe-unidad-1.md |
 | Demo Unidad I | Dos pruebas funcionales completas y explicación en inglés | PDF cargado, predicho tras reintento y revisión persistida vía API. Primera clasificación fallida y recorrido visual pendientes |
 | Mantenimiento | Validar snapshot, entrenar, evaluar y archivar candidato | TF-IDF ejecutado en GitHub; métricas y candidato archivados. Correcciones automáticas pendientes |
@@ -91,7 +92,8 @@ Hallazgos que orientan el siguiente experimento:
 El registro auditable está en [source-candidates-v1.json](../artifacts/reviews/source-candidates-v1.json).
 Contiene procedencia, fecha cuando se conoce, localizadores, decisiones, límites de
 reutilización y comprobaciones de solapamiento. Las tres candidatas se mantienen
-**sin incorporar**; no se les ha asignado un split ni se han creado ejemplos de entrenamiento.
+**sin incorporar en ese bloque**; la incorporación experimental posterior de AGN
+se describe más abajo. BNP y Constitución siguen pendientes.
 
 | Candidata | Carencia que podría cubrir | Resultado de la revisión |
 |---|---|---|
@@ -170,7 +172,7 @@ duplicado conocido usado como control. Pasaron los rechazos de PDF incorrecto,
 límites inexistentes, texto demasiado corto, sobrescritura y salida fuera de
 `outputs/`. El snapshot quedó intacto byte a byte; `git diff --check` pasó.
 
-## Bloque actual: segunda revisión mediante otro agente
+## Segunda revisión mediante otro agente — registrada en `a0cd0c3`
 
 La autora indicó que no es especialista en historia y solicitó explícitamente otro
 agente para verificar las propuestas. El juicio temático se delegó a ese revisor;
@@ -203,10 +205,62 @@ es de dos candidatos y un apoyo contextual. Se verificó que el dataset y el pri
 manifiesto permanecen intactos. No se calcula Kappa, accuracy o F1 con tres casos.
 Esta decisión es un consenso asistido por IA, no gold validado por historiadores.
 
-Siguiente paso: registrar el segundo dictamen; después preparar cualquier cambio
-de datos como versión experimental con procedencia explícita. Las 20 decisiones
-iniciales siguen sin segunda revisión y falta material de crisis e ideas. No se
-entrenó ni se escribieron revisiones en producción.
+El segundo dictamen quedó registrado en `a0cd0c3`. Las 20 decisiones iniciales
+siguen sin segunda revisión y falta material de crisis e ideas. No se entrenó ni
+se escribieron revisiones en producción durante ese bloque.
+
+## Bloque actual: copia experimental AGN y mantenimiento local
+
+[build_agn_snapshot.py](../scripts/build_agn_snapshot.py) conserva las 814 filas de
+la referencia y añade exclusivamente AGN01/02 a entrenamiento, con una identidad
+de fuente común derivada del DOI. Comprueba los hashes de las entradas revisadas,
+el consenso y los textos. Guarda autoría, licencia, páginas y origen de las
+anotaciones dentro del export. AGN03 sigue como contexto; el dataset congelado
+no se modifica. Las anotaciones nuevas son asistidas por IA, no gold humano.
+
+La [evidencia compacta](../artifacts/reviews/agn-snapshot-v1.json) registra hashes,
+controles y resultados. Los archivos con textos completos quedan en
+`outputs/agn-snapshot-v1/`, excluidos de Git.
+
+| Archivo | Entrenamiento | Validación | Test | Total |
+|---|---|---|---|---|
+| Referencia intacta | 596 | 81 | 137 | 814 |
+| Export experimental | 598 | 81 | 137 | 816 |
+| Snapshot preparado por mantenimiento | 597 | 81 | 137 | 815 |
+
+La diferencia de una fila procede de un duplicado exacto ya existente en train
+(índices 718 y 746, base cero, fuente Basadre). El preparador de mantenimiento
+existente lo unifica. Se verificó que conserva todos los ejemplos originales
+distintos y los 218 registros de evaluación en el mismo orden. No hay fuentes
+compartidas entre particiones.
+
+El mantenimiento local detectó **dos incorporaciones, cero eliminaciones de
+ejemplos únicos y cero cambios de etiqueta**. Con su mínimo habitual de 20 cambios,
+respondió `skipped / insufficient_changes`: no entrenó un modelo experimental.
+No hay nueva F1 ni llamadas a Modal o a producción en este bloque.
+
+Reproducción con las entradas locales del piloto ya disponibles y una carpeta nueva:
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/build_agn_snapshot.py --output outputs/agn-snapshot-reproduccion
+$env:PYTHONPATH = 'apps/ml'
+outputs/venv-ml/Scripts/python.exe -m app.ml.maintenance --reference artifacts/datasets/gold-v1-source-aware.json --reviewed outputs/agn-snapshot-reproduccion/reviewed-export.json --config configs/experiments/tfidf.json --output outputs/agn-snapshot-reproduccion/maintenance
+```
+
+El export requiere el PDF y `candidates-verified.json` locales cuyos hashes figuran
+en el segundo dictamen. Conserva `reviewed-export.json` y `build-report.json` junto
+al resultado: el preparador existente enlaza el export por hash, pero no copia
+su registro de procedencia al snapshot derivado.
+
+Verificación: export repetido idéntico, referencia intacta, evaluación preservada,
+duplicado identificado y rechazos ante selección incorrecta, falta de consenso,
+hash alterado, sobrescritura y salida fuera de `outputs/`. Pasaron las tres pruebas
+existentes de mantenimiento. La comprobación inicial del número de filas se ajustó
+tras identificar el duplicado; no se cambió la lógica de mantenimiento.
+
+Siguiente paso, después de registrar este bloque: segunda revisión asistida de
+las 20 propuestas iniciales. Continúa pendiente conseguir material adecuado de
+crisis e ideas antes de un experimento que pueda evaluar mejoras.
 
 ### Reproducir la muestra de la revisión inicial
 
