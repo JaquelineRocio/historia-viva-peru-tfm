@@ -4,7 +4,7 @@ Responsabilidades: transcripción, segmentación, entrenamiento BETO, inferencia
 métricas. NestJS es el orquestador y dueño de la BD; este servicio es cómputo puro
 invocado por HTTP (MlServicePort → HttpMlAdapter).
 """
-import threading
+import logging
 import uuid
 from typing import Dict, List, Optional
 
@@ -30,7 +30,7 @@ _model_bootstrap = {"status": "disabled", "error": None, "repo": settings.defaul
 def _load_default_model() -> None:
     if not settings.default_model_repo:
         return
-    _model_bootstrap["status"] = "loading"
+    _model_bootstrap.update(status="loading", error=None)
     try:
         from huggingface_hub import snapshot_download
         from app.ml import beto
@@ -40,15 +40,19 @@ def _load_default_model() -> None:
         snapshot_download(repo_id=settings.default_model_repo, local_dir=str(target))
         beto.load_model(str(target))
         _model_bootstrap["status"] = "ready"
-    except Exception as exc:  # health expone el detalle sin impedir que el Space arranque
+    except Exception as exc:
         _model_bootstrap["status"] = "error"
         _model_bootstrap["error"] = str(exc)
+        logging.getLogger(__name__).exception("No se pudo cargar el modelo BETO configurado")
+        raise RuntimeError("No se pudo inicializar el modelo BETO configurado") from exc
 
 
 @app.on_event("startup")
 def bootstrap_default_model() -> None:
     if settings.default_model_repo:
-        threading.Thread(target=_load_default_model, name="default-model-loader", daemon=True).start()
+        # ASGI espera este paso antes de aceptar peticiones. Evita que la carga
+        # inicial de BETO compita con los imports de embeddings/NER.
+        _load_default_model()
 
 
 def require_internal_token(x_internal_token: Optional[str] = Header(default=None)) -> None:

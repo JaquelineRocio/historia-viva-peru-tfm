@@ -15,7 +15,7 @@ faster-whisper==1.0.3
 
 # --- ML (se instala con torch CPU wheel) ---
 # torch --index-url https://download.pytorch.org/whl/cpu
-# transformers==4.42.3
+transformers==4.57.6
 # scikit-learn==1.5.0
 # datasets==2.20.0
 
