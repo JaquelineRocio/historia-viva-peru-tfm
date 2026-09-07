@@ -10,7 +10,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Diagnóstico | Compilar web/API, ejecutar suites y revisar dataset | API 37 pruebas, ML 55 pruebas y web verificados localmente |
 | Experimentos | Comparar hiperparámetros usando validación; test solo del ganador | Tres configuraciones TF-IDF y tres BETO ejecutadas en este equipo |
 | Comparación tras revisión | Medir el efecto conjunto del enriquecimiento y las correcciones | TF-IDF local: F1 macro validación 0.29004 en ambas versiones; test 0.36300 → 0.36007. Sin mejora global ni cambio en producción |
-| Fuente para crisis e ideas | Localizar contenido pertinente y reutilizable | Huerta Vera (2020) seleccionada para piloto; pasaje provisional en p.145, licencia CC BY 4.0 y PDF local verificados. Sin filas nuevas |
+| Fuente para crisis e ideas | Localizar contenido pertinente y reutilizable | Piloto HUE01 de Huerta Vera (2020): 133 palabras revisadas por ambos agentes, con cita y contexto. Preparado localmente; sin incorporar filas |
 | Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Segunda revisión: 11 aprobar, 2 corregir, 6 ambiguos y 1 excluir hasta resegmentar. R04/R16 corregidos solo en copia experimental; referencia y producción intactas |
 | Reparación de R05 | Recuperar prosa separada por notas y salto de página | Sustitución local verificada: train55/57/58 reemplazadas por un fragmento de 203 palabras en una nueva copia experimental. Originales y contexto archivados; referencia intacta |
 | Fuentes para enriquecimiento | Evaluar contenido, procedencia, reutilización y solapamientos | Tres candidatas examinadas; dos fragmentos AGN incorporados solo a copia experimental local. BNP pendiente de OCR/metadatos y Constitución pendiente de cotejo |
@@ -502,7 +502,7 @@ La comparación quedó registrada en `fd0d0ce`. La búsqueda posterior de una fu
 complementaria se basa en las carencias de entrenamiento/validación; no se generan
 ejemplos copiando el test ni se ajustan etiquetas para mejorar su resultado.
 
-## Bloque actual: fuente complementaria para crisis e ideas
+## Fuente complementaria para crisis e ideas — registrada en `e235873`
 
 Se seleccionó para un próximo piloto [Huerta Vera (2020), «Desde el sagrado
 púlpito y en exhortaciones privadas»](https://revistas.pucp.edu.pe/index.php/historica/article/view/23275),
@@ -543,9 +543,55 @@ permanecen intactas; no se asignó partición a la nueva fuente, no se incorpora
 filas y no hubo entrenamiento ni solicitudes a Modal. Las valoraciones son
 asistidas por IA, no validación humana independiente.
 
-Siguiente paso después del commit: preparar y revisar el piloto de p.145 con
-extracción reproducible y procedencia completa, comprobando relaciones documentales
-antes de proponer su incorporación.
+La selección quedó registrada en `e235873`. La preparación y revisión del pasaje
+exacto se documenta a continuación.
+
+## Bloque actual: piloto HUE01 de Huerta
+
+[prepare_huerta_pilot.py](../scripts/prepare_huerta_pilot.py) recupera el pasaje de
+p.145/PDF21 fijado en la ficha de fuente. Une saltos y guiones de fin de línea y
+retira únicamente la llamada 58; conserva la grafía histórica y las mayúsculas.
+El resultado tiene **133 palabras** y coincide con la huella del sondeo previo.
+
+El [dictamen del piloto](../artifacts/reviews/huerta-pilot-v1.json) registra la
+aprobación temática de ambos agentes como `crisis_ideas_emancipadoras`. El segundo
+revisor conocía la propuesta; no es lectura ciega ni validación humana independiente.
+Su motivo es el predominio de la justificación religiosa de la emancipación,
+frente a la biografía de San Martín o la participación del sacerdote como actor.
+
+La vista legible en `outputs/huerta-pilot-v1/revision-legible.md` distingue el
+comentario de Huerta de la cita documental. `candidate.json` conserva el texto,
+las páginas de contexto 144–146 y la nota58. Esta atribuye la proclama a Manuel
+de Vega Bazán, Guañec, 21-02-1822, AAL, Curas Patriotas, Proclamas, legajo 1,
+expediente 1, f.2r–v. Se registra también un grupo documental para reunir futuras
+copias o fragmentos de esa misma proclama.
+
+La expresión «grangeárnosla» tiene un antecedente nominal incompleto dentro de
+la cita: se conserva con esa observación, sin introducir una palabra supuesta.
+El revisor considera interpretable el fragmento con su introducción. No se cotejó
+el manuscrito ni una imagen renderizada; el control fue sobre la capa textual.
+
+Verificación: extracción repetida idéntica, separación de comentario/cita,
+grafía y atribución preservadas; 814 comparaciones sin coincidencias marcadas y
+control positivo de duplicados correcto. Los sondeos de «Manuel de Vega Bazán»,
+«Guañec» y «Curas Patriotas» no encontraron coincidencias. Son controles acotados,
+no demostración de independencia o ausencia de paráfrasis. También pasaron los
+rechazos de hash, extracción, límites, longitud, sobrescritura y ruta.
+
+Reproducción con las entradas locales existentes y un archivo nuevo:
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/prepare_huerta_pilot.py --output outputs/huerta-pilot-v1/reproduccion.json
+```
+
+El candidato aún no tiene partición asignada ni se incorporó a ningún dataset.
+La referencia y la copia corregida permanecen intactas; no hubo descargas nuevas,
+entrenamiento ni cambios en producción durante este bloque.
+
+Siguiente paso después del commit: incorporar HUE01 a otra copia experimental,
+manteniendo procedencia, agrupación documental y evaluación intacta. Un solo
+ejemplo adicional no demuestra mejora; conviene ampliar el corpus con criterio
+antes de repetir experimentos.
 
 ### Reproducir la muestra de la revisión inicial
 
