@@ -1,0 +1,269 @@
+{
+  "schema_version": 1,
+  "pilot_id": "agn-pilot-v1",
+  "created_on": "2026-09-07",
+  "status": "local_proposal_not_training_dataset",
+  "source": {
+    "candidate_manifest": "artifacts/reviews/source-candidates-v1.json",
+    "candidate_id": "agn-josefa-montes-2017",
+    "author": "Juan José Brito Ramos",
+    "title": "Josefa Montes, la última esclava del Congo",
+    "year": 2017,
+    "journal": "Revista del Archivo General de la Nación",
+    "volume_issue": "32(1)",
+    "pages": "15–45",
+    "doi": "10.37840/ragn.v32i1.5",
+    "url": "https://revista.agn.gob.pe/ojs/index.php/ragn/article/view/5",
+    "pdf_url": "https://revista.agn.gob.pe/ojs/index.php/ragn/article/download/5/1/",
+    "local_pdf": "outputs/source-candidates-v1/josefa-montes.pdf",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence": "https://revista.agn.gob.pe/ojs/index.php/ragn/article/view/5",
+    "license_checked_on": "2026-09-07",
+    "changes_notice": "Extractos seleccionados; se unieron saltos y palabras partidas por guion de fin de línea y se retiraron solo las marcas enumeradas por registro. Ortografía, citas y cantidades conservadas.",
+    "versioned_content": "Metadata, selection markers, hashes and AI review only; complete extracts in ignored local outputs."
+  },
+  "dataset_path": "artifacts/datasets/gold-v1-source-aware.json",
+  "script": "scripts/prepare_agn_pilot.py",
+  "pdf_sha256": "65a271f2016780bf621b9040d7409bff3fd745a28524b76662d5266243986602",
+  "dataset_file_sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a",
+  "pypdf_version": "5.9.0",
+  "normalization": "NFKD/casefold, accents removed, word tokens; sets of 5-word sequences",
+  "flag_rule": "Jaccard >= 0.25 OR overlap / smaller set >= 0.8",
+  "screening_limit": "Lexical screening only; not proof of independence or absence of paraphrase",
+  "items": [
+    {
+      "id": "AGN01",
+      "pdf_page": 7,
+      "printed_page": 21,
+      "page_text_sha256": "815a40f67e8d3c991dc1a80ccc71be535db40d4c95c1b9a19876120654fde01d",
+      "selection_sha256": "fea098a180148f21011ef27f74a5725779c008ceeb4a9d3dd6f42b2d1378e782",
+      "text_sha256": "42c53cbd2007a225bbd752aa3ee406171153719d1afe679c345289eb76cef810",
+      "start_marker": "Además, como parte",
+      "end_marker": "Se le dio el nombre de su propietaria: Josefa.",
+      "extraction_changes": [
+        {
+          "old": "[pesos]5.",
+          "new": "[pesos]."
+        },
+        {
+          "old": "Bretaña 6.",
+          "new": "Bretaña."
+        }
+      ],
+      "word_count": 138,
+      "historical_year": 1805,
+      "related_document_group": "venta-josefa-1805",
+      "source_group": "doi:10.37840/ragn.v32i1.5",
+      "proposed_label": "contexto_colonial_antecedentes",
+      "split": null,
+      "review_status": "pending_author_review",
+      "applied": false,
+      "overlap_screen": {
+        "train": {
+          "compared": 596,
+          "exact_matches": [],
+          "flagged_indices": [],
+          "max_jaccard": 0,
+          "max_containment": 0
+        },
+        "val": {
+          "compared": 81,
+          "exact_matches": [],
+          "flagged_indices": [],
+          "max_jaccard": 0,
+          "max_containment": 0
+        },
+        "test": {
+          "compared": 137,
+          "exact_matches": [],
+          "flagged_indices": [],
+          "max_jaccard": 0,
+          "max_containment": 0
+        }
+      },
+      "topic": "Abastecimiento de la nave y venta de una persona esclavizada",
+      "rationale": "Predominan las condiciones materiales del tráfico y la compraventa de 1805, dentro del orden colonial. No se narra participación en una movilización ni una campaña militar.",
+      "alternative_considered": "participacion_social_regional",
+      "why_not_alternative": "La pertenencia afrodescendiente por sí sola no cambia el foco económico y coercitivo del pasaje.",
+      "historical_limit": "Narración de Brito Ramos apoyada en referencias del artículo; no se verificaron los registros originales. El destino doméstico aparece como probable y se conserva así.",
+      "date_evidence": "1805 explícito en el pasaje",
+      "editorial_note": "Conserva vocabulario histórico y cantidades. Se quitaron únicamente las llamadas de notas 5 y 6; la referencia se mantiene a nivel del candidato.",
+      "ai_review_decision": "proponer_etiqueta",
+      "human_adjudication": "pending",
+      "original_model_prediction": null
+    },
+    {
+      "id": "AGN02",
+      "pdf_page": 21,
+      "printed_page": 35,
+      "page_text_sha256": "b8d2ac687dfadc0fec94b34cedeacaf0c645e7980879101b13c5da561f7ec3ea",
+      "selection_sha256": "02a4f11e95a1a23f7d9d806b1f97cd5615556434827327fb5598bd696356ee49",
+      "text_sha256": "0ba4a8ea7ccb70fd363921c41c96a0184abcc15f2df76e89bba48d4c807cf0a9",
+      "start_marker": "Y estando presente",
+      "end_marker": "prevenidas por derecho.",
+      "extraction_changes": [
+        {
+          "old": "// [fol. 457]",
+          "new": ""
+        }
+      ],
+      "word_count": 210,
+      "historical_year": 1834,
+      "related_document_group": "solar-cofradia-1834-1836",
+      "source_group": "doi:10.37840/ragn.v32i1.5",
+      "proposed_label": "participacion_social_regional",
+      "split": null,
+      "review_status": "pending_author_review",
+      "applied": false,
+      "overlap_screen": {
+        "train": {
+          "compared": 596,
+          "exact_matches": [],
+          "flagged_indices": [],
+          "max_jaccard": 0,
+          "max_containment": 0
+        },
+        "val": {
+          "compared": 81,
+          "exact_matches": [],
+          "flagged_indices": [],
+          "max_jaccard": 0,
+          "max_containment": 0
+        },
+        "test": {
+          "compared": 137,
+          "exact_matches": [],
+          "flagged_indices": [],
+          "max_jaccard": 0,
+          "max_containment": 0
+        }
+      },
+      "topic": "Representación colectiva en una compra de 1834",
+      "rationale": "Los representantes actúan en nombre de una cofradía y adquieren un inmueble. El foco es la actuación colectiva afrodescendiente, aunque esté expresada mediante fórmulas notariales.",
+      "alternative_considered": "organizacion_consecuencias_republicanas",
+      "why_not_alternative": "Es una actuación de una asociación, no una exposición de instituciones estatales o constituciones.",
+      "historical_limit": "Transcripción documental publicada, no lectura del manuscrito. No demuestra por sí sola una posición política frente a la independencia.",
+      "date_evidence": "1834 en la cláusula final de la misma página, fuera del fragmento seleccionado; no se agregó esa fecha al texto.",
+      "editorial_note": "Se retiró la marca editorial de folio 457. Se conserva la grafía histórica, incluida la forma cituado. Depende del contexto de la cofradía desarrollado en el artículo.",
+      "ai_review_decision": "proponer_etiqueta",
+      "human_adjudication": "pending",
+      "original_model_prediction": null
+    },
+    {
+      "id": "AGN03",
+      "pdf_page": 22,
+      "printed_page": 36,
+      "page_text_sha256": "7e67b8dffffaaa8c3ca0a9daea1cc9a111654065ab03ac8fcafdce3b00b39c1b",
+      "selection_sha256": "ec9bf46299f42bfde3a2a0f4d88a0e50880c8f2a1dc0839e1e2d5d1702d90506",
+      "text_sha256": "ec9bf46299f42bfde3a2a0f4d88a0e50880c8f2a1dc0839e1e2d5d1702d90506",
+      "start_marker": "En Lima Abril",
+      "end_marker": "Don Francisco Garay.",
+      "extraction_changes": [],
+      "word_count": 126,
+      "historical_year": 1836,
+      "related_document_group": "solar-cofradia-1834-1836",
+      "source_group": "doi:10.37840/ragn.v32i1.5",
+      "proposed_label": "participacion_social_regional",
+      "split": null,
+      "review_status": "pending_author_review",
+      "applied": false,
+      "overlap_screen": {
+        "train": {
+          "compared": 596,
+          "exact_matches": [],
+          "flagged_indices": [],
+          "max_jaccard": 0.006173,
+          "max_containment": 0.016393
+        },
+        "val": {
+          "compared": 81,
+          "exact_matches": [],
+          "flagged_indices": [],
+          "max_jaccard": 0,
+          "max_containment": 0
+        },
+        "test": {
+          "compared": 137,
+          "exact_matches": [],
+          "flagged_indices": [],
+          "max_jaccard": 0,
+          "max_containment": 0
+        }
+      },
+      "topic": "Pago del saldo por representantes de la cofradía en 1836",
+      "rationale": "El recibo documenta una actuación económica colectiva de la cofradía. Los cargos enumerados pertenecen a la agrupación y no bastan para clasificarlo como operación militar.",
+      "alternative_considered": "campanias_conflictos_militares",
+      "why_not_alternative": "No describe combate, ejército o estrategia; el asunto es el pago de un inmueble.",
+      "historical_limit": "Es continuación documental de la compra de AGN02; no contar ambos como fuentes independientes ni separar la operación entre conjuntos.",
+      "date_evidence": "1836 escrito en palabras al inicio",
+      "editorial_note": "Se detuvo el fragmento antes de las firmas y del anexo de 1875. No se modernizó la ortografía.",
+      "ai_review_decision": "proponer_etiqueta",
+      "human_adjudication": "pending",
+      "original_model_prediction": null
+    }
+  ],
+  "within_pilot": [
+    {
+      "ids": [
+        "AGN01",
+        "AGN02"
+      ],
+      "jaccard": 0,
+      "containment": 0,
+      "same_document_group": false
+    },
+    {
+      "ids": [
+        "AGN01",
+        "AGN03"
+      ],
+      "jaccard": 0,
+      "containment": 0,
+      "same_document_group": false
+    },
+    {
+      "ids": [
+        "AGN02",
+        "AGN03"
+      ],
+      "jaccard": 0.025,
+      "containment": 0.065574,
+      "same_document_group": true
+    }
+  ],
+  "summary": {
+    "candidate_count": 3,
+    "word_counts": [
+      138,
+      210,
+      126
+    ],
+    "proposed_labels": {
+      "contexto_colonial_antecedentes": 1,
+      "participacion_social_regional": 2
+    },
+    "distinct_sources": 1,
+    "related_document_groups": 2,
+    "dataset_modified": false,
+    "production_modified": false,
+    "trained": false,
+    "metrics_measured": false,
+    "duplicate_rule_flags": 0
+  },
+  "limits": [
+    "No inference was run: these are proposed labels, not approvals of model predictions",
+    "The mechanical overlap check includes all splits but only emits counts, scores and match indices; no held-out text is copied or used to generate candidates",
+    "Five-word matching does not detect all paraphrases, historical dependence, or common primary documents",
+    "All three excerpts belong to one article; the same source and related documents must remain together in any future split",
+    "AI review is not independent human validation; labels remain pending author adjudication",
+    "Exact extraction checked against PDF text layer; no visual/manuscript collation completed",
+    "These three candidates do not resolve the shortage of crisis_ideas_emancipadoras examples",
+    "Frozen dataset and prior review proposals remain unchanged"
+  ],
+  "local_outputs": {
+    "candidates": "outputs/agn-pilot-v1/candidates-verified.json",
+    "readable": "outputs/agn-pilot-v1/revision-legible.md"
+  },
+  "next_step": "Revisar propuestas; no mezclar este manifiesto con el snapshot ni importar como gold. Resolver adjudicación y dependencia documental antes de decidir incorporación."
+}

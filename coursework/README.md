@@ -11,6 +11,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Experimentos | Comparar hiperparámetros usando validación; test solo del ganador | Tres configuraciones TF-IDF y tres BETO ejecutadas en este equipo |
 | Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Propuesta local asistida por IA: 12 aprobar, 2 corregir, 5 ambiguos y 1 excluir hasta resegmentar. Pendiente adjudicación de la autora; sin cambios al dataset ni a producción |
 | Fuentes para enriquecimiento | Evaluar contenido, procedencia, reutilización y solapamientos | Tres candidatas examinadas; AGN propuesto para piloto local, BNP pendiente de OCR/metadatos y Constitución pendiente de cotejo. Cero ejemplos incorporados |
+| Piloto AGN | Preparar hasta tres fragmentos con procedencia y etiquetas propuestas | Tres candidatos locales de 138/210/126 palabras; controles de extracción y similitud ejecutados. Etiquetas pendientes de adjudicación; snapshot y producción intactos |
 | Informe Unidad I | Dataset, características, parámetros, resultados, despliegue y límites | Borrador en informe-unidad-1.md |
 | Demo Unidad I | Dos pruebas funcionales completas y explicación en inglés | PDF cargado, predicho tras reintento y revisión persistida vía API. Primera clasificación fallida y recorrido visual pendientes |
 | Mantenimiento | Validar snapshot, entrenar, evaluar y archivar candidato | TF-IDF ejecutado en GitHub; métricas y candidato archivados. Correcciones automáticas pendientes |
@@ -84,7 +85,7 @@ Hallazgos que orientan el siguiente experimento:
 - Antes de enriquecer: recuperar páginas/minutos y procedencia, reparar extracción
   y resolver criterios entre programas políticos, participación regional y organización estatal.
 
-## Bloque actual: selección de fuentes gratuitas
+## Selección de fuentes gratuitas — registrada en `42ee37d`
 
 El registro auditable está en [source-candidates-v1.json](../artifacts/reviews/source-candidates-v1.json).
 Contiene procedencia, fecha cuando se conoce, localizadores, decisiones, límites de
@@ -119,10 +120,58 @@ forzar esa etiqueta a los pasajes sociales del AGN.
 
 Comprobación local: esquema y localizadores del registro, hash/tamaño del PDF,
 reproducción de las cinco búsquedas, dataset intacto y exclusión del PDF por Git.
-Los archivos de este bloque son el registro de candidatas y este plan.
-Siguiente paso, tras confirmar el bloque: preparar hasta tres fragmentos locales
-del AGN con atribución, límites claros y revisión de solapamientos. La adjudicación
-de las 20 etiquetas anteriores sigue pendiente; registrar el commit no las aplica.
+La selección de fuentes quedó registrada en `42ee37d`. El piloto posterior se
+describe a continuación. La adjudicación de las 20 etiquetas anteriores sigue
+pendiente; registrar el commit no las aplica.
+
+## Bloque actual: tres candidatos locales del AGN
+
+El [manifiesto del piloto](../artifacts/reviews/agn-pilot-v1.json) registra autoría,
+licencia, páginas, límites exactos, hashes, ajustes de extracción, justificaciones
+y resultados de similitud. Los textos completos y su revisión legible están en
+`outputs/agn-pilot-v1/`, excluido de Git. No son todavía ejemplos gold ni resultados
+de predicción: se propusieron etiquetas mediante revisión asistida por IA.
+
+| Candidato | Página impresa / PDF | Palabras | Etiqueta propuesta |
+|---|---|---|---|
+| AGN01: abastecimiento y compraventa de 1805 | 21 / 7 | 138 | Contexto colonial y antecedentes |
+| AGN02: representación de una cofradía en compra de 1834 | 35 / 21 | 210 | Participación social y regional |
+| AGN03: pago del saldo de 1836 | 36 / 22 | 126 | Participación social y regional |
+
+Se unieron saltos y palabras partidas al final de línea; se retiraron dos llamadas
+de nota y una marca de folio, conservando grafía histórica y cantidades. La fecha
+de AGN02 está en el contexto de la página y no se añadió al texto. El cotejo fue
+contra la capa de texto del PDF; no se verificaron manuscritos ni imágenes de las páginas.
+AGN02 y AGN03 son partes relacionadas de una operación. Los tres candidatos
+pertenecen a **una sola fuente**, que deberá conservarse unida en una futura partición.
+
+Se compararon mecánicamente los candidatos con los 814 registros del snapshot:
+sin duplicados exactos ni coincidencias que superen los umbrales de secuencias de
+cinco palabras (Jaccard ≥ 0.25 o coincidencia respecto al conjunto menor ≥ 0.8).
+Solo se guardan indicadores de validación/test, sin exportar ni adjudicar sus textos.
+Este control no descarta paráfrasis o dependencia documental; la relación entre
+AGN02 y AGN03 se conserva aunque su similitud léxica sea baja.
+
+Reproducción local, usando el PDF ya descargado y una salida nueva:
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/prepare_agn_pilot.py --output outputs/agn-pilot-v1/reproduccion.json
+```
+
+El script requiere `pypdf` (5.9.0 en el entorno usado), valida hashes de entrada,
+límites únicos y longitud, y rechaza sobrescrituras o salidas fuera de `outputs/`.
+No descarga archivos, entrena ni conecta con producción. La revisión legible está
+en `outputs/agn-pilot-v1/revision-legible.md`.
+
+Verificación local: extracción repetida idéntica, manifiesto coincidente con los
+textos, longitudes válidas, 814 comparaciones por candidato y detección de un
+duplicado conocido usado como control. Pasaron los rechazos de PDF incorrecto,
+límites inexistentes, texto demasiado corto, sobrescritura y salida fuera de
+`outputs/`. El snapshot quedó intacto byte a byte; `git diff --check` pasó.
+
+Siguiente paso: revisar estas propuestas y registrar el bloque; decidir su
+incorporación solo tras adjudicación. Las 20 decisiones iniciales siguen pendientes.
+No hay mejora de métricas medida y falta material específico de crisis e ideas.
 
 ### Reproducir la muestra de la revisión inicial
 
