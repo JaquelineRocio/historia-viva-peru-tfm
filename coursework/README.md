@@ -11,6 +11,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Experimentos | Comparar hiperparámetros usando validación; test solo del ganador | Tres configuraciones TF-IDF y tres BETO ejecutadas en este equipo |
 | Comparación tras revisión | Medir el efecto conjunto del enriquecimiento y las correcciones | TF-IDF local: F1 macro validación 0.29004 en ambas versiones; test 0.36300 → 0.36007. Sin mejora global ni cambio en producción |
 | Fuente para crisis e ideas | Localizar contenido pertinente y reutilizable | HUE01 de Huerta Vera (2020), revisado por ambos agentes, incorporado a copia experimental local: 597 train, 81 validación y 137 test. Evaluación intacta; sin entrenamiento nuevo |
+| Lote adicional de Huerta | Revisar propaganda, lecturas políticas y prensa | HUE02/03/04 revisados por ambos agentes; 149/185/181 palabras. Preparados localmente; sin incorporar. Una fuente común, con dependencia entre HUE03 y HUE04 |
 | Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Segunda revisión: 11 aprobar, 2 corregir, 6 ambiguos y 1 excluir hasta resegmentar. R04/R16 corregidos solo en copia experimental; referencia y producción intactas |
 | Reparación de R05 | Recuperar prosa separada por notas y salto de página | Sustitución local verificada: train55/57/58 reemplazadas por un fragmento de 203 palabras en una nueva copia experimental. Originales y contexto archivados; referencia intacta |
 | Fuentes para enriquecimiento | Evaluar contenido, procedencia, reutilización y solapamientos | Tres candidatas examinadas; dos fragmentos AGN incorporados solo a copia experimental local. BNP pendiente de OCR/metadatos y Constitución pendiente de cotejo |
@@ -588,7 +589,7 @@ Al cerrar ese bloque, el candidato no tenía partición asignada ni se había
 incorporado a ningún dataset. El dictamen conserva ese estado histórico.
 La incorporación posterior se registra por separado a continuación.
 
-## Bloque actual: copia experimental con HUE01
+## Copia experimental con HUE01 — registrada en `98874e5`
 
 [build_huerta_snapshot.py](../scripts/build_huerta_snapshot.py) parte de la copia
 corregida `outputs/history-corrections-v1/reviewed-export.json` y añade únicamente
@@ -630,9 +631,56 @@ ni cambios en producción. Se mantiene explícita la revisión asistida por IA,
 sin validación humana independiente. El mínimo de cambios del mantenimiento
 permanece igual y no se ejecutó el pipeline en este bloque.
 
-Siguiente paso después del commit: preparar un lote pequeño adicional de pasajes
-de crisis e ideas con diversidad documental y revisión histórica, antes de repetir
-el experimento local. Un ejemplo adicional no permite afirmar una mejora del modelo.
+La copia quedó registrada en `98874e5`. El lote adicional se describe a continuación;
+un ejemplo adicional no permite afirmar una mejora del modelo.
+
+## Bloque actual: tres candidatos adicionales de Huerta
+
+[prepare_huerta_batch.py](../scripts/prepare_huerta_batch.py) extrae tres unidades
+continuas de la fuente ya descargada. La [revisión del lote](../artifacts/reviews/huerta-batch-v1.json)
+registra límites, ajustes, páginas, referencias, hashes y dictámenes. Los textos y
+el contexto permanecen en `outputs/huerta-batch-v1/candidates.json`; la vista para
+lectura es `outputs/huerta-batch-v1/revision-legible.md`.
+
+| Candidato | Página impresa / PDF | Palabras | Acuerdo temático y cautela |
+|---|---|---|---|
+| HUE02 | 138 / 14 | 149 | Crisis e ideas, confianza alta: propaganda dirigida a lectores y oyentes. La fecha del periódico es 25-07-1821; la proclama anuncia el día 28 |
+| HUE03 | 140 / 16 | 185 | Crisis e ideas, confianza alta: carta de Machado a Diéguez, 14-10-1821, sobre lecturas políticas y derechos. «Esclavitud» forma parte de su retórica política |
+| HUE04 | 141 / 17 | 181 | Crisis e ideas, confianza media: prensa fidelista/patriota y restricciones. Cronología resumida y antecedente dependiente de HUE03 |
+
+Ambos agentes aprueban las etiquetas para una incorporación experimental futura.
+El segundo propuso límites desde el PDF y después cotejó las selecciones exactas;
+conocía el objetivo y la fuente. No es una revisión ciega, humana ni de sistemas
+independientes. No se consultaron los originales de la Gaceta o del archivo.
+
+Las tres unidades comparten fuente secundaria con HUE01 y deben permanecer en
+train. HUE02 y HUE03 citan documentos distintos de la proclama de Vega Bazán;
+HUE04 es una síntesis, no un tercer documento primario independiente. Se conserva
+su relación con HUE03. Su enumeración no demuestra que todos esos periódicos
+circulasen simultáneamente, antes de la libertad de imprenta o bajo prohibición.
+Solo la nota 42 respalda directamente HUE04; las notas 43–44 del contexto pertenecen
+al párrafo siguiente.
+
+Se unieron guiones de fin de línea y espacios, se retiraron las llamadas 35, 40,
+41 y 42 y se corrigió explícitamente el espaciado «T omás» a «Tomás» en HUE03.
+No se modernizaron las citas. El pasaje de Cádiz de pp.131–132 queda como contexto:
+tiene 118 palabras; no se añadió material de imprentas para alcanzar el mínimo.
+
+Verificación local: reproducción idéntica, palabras y hashes correctos, contexto
+y notas conservados, 815 comparaciones por candidato y tres comparaciones entre
+candidatos sin coincidencias marcadas. Pasaron tres controles positivos de
+duplicados y nueve rechazos (hash, límites, ajuste, longitud, sobrescritura y ruta).
+La ausencia de coincidencias léxicas no demuestra independencia documental.
+La referencia congelada y todas las versiones anteriores permanecen intactas.
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/prepare_huerta_batch.py --output outputs/huerta-batch-v1/reproduccion.json
+```
+
+Estado: lote preparado y revisado localmente, sin filas nuevas, entrenamiento,
+descargas ni llamadas a Modal en este bloque. Siguiente paso después del commit:
+incorporar los tres candidatos a otra copia experimental conservando las relaciones
+documentales. La mejora de métricas queda pendiente de un experimento posterior.
 
 ### Reproducir la muestra de la revisión inicial
 

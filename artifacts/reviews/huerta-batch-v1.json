@@ -1,0 +1,420 @@
+{
+  "schema_version": 1,
+  "status": "three_candidates_reviewed_not_applied",
+  "base_commit": "98874e5",
+  "inputs": {
+    "source_review": {
+      "path": "artifacts/reviews/huerta-pilot-v1.json",
+      "file_sha256": "add75d193013f9ff94581b2f2a026857b135c3e9caf6246d5d2034308202e1c0"
+    },
+    "dataset": {
+      "path": "outputs/huerta-snapshot-v1/reviewed-export.json",
+      "file_sha256": "eb1442c51b09dd66f691d77c6d9e412f5bebdef153e9b4efb6a30c905c03293b"
+    },
+    "pdf": {
+      "path": "outputs/ideas-source-v1/huerta-2020.pdf",
+      "file_sha256": "2d98c10b6915b00f9208582e6321d444f3fcdff512b5d72a12016793a7fe5020"
+    },
+    "taxonomy": {
+      "path": "docs/guia-etiquetado-1780-1842.md",
+      "file_sha256": "737d155a6f8260df4fa00b5f1adc6f469457f678fd144dd8c2d6b80a564d76e7"
+    },
+    "overlap_helpers": {
+      "path": "scripts/prepare_agn_pilot.py",
+      "file_sha256": "2c1cd9c93bb1f658c0f1d23046fba8589e130e2778038aadc6797df4d501f00a"
+    }
+  },
+  "local_candidates": {
+    "path": "outputs/huerta-batch-v1/candidates.json",
+    "file_sha256": "53d0f2eec4e1d488dab42147a485ea6416f230098a4754ab685cf3b7f59275d7"
+  },
+  "builder": {
+    "path": "scripts/prepare_huerta_batch.py",
+    "file_sha256": "41cd20706c2dd6ea23051b2e7decbebee63a059821d94a8fddc898ec06fbbaf9"
+  },
+  "source": {
+    "id": "huerta-2020",
+    "author": "María Claudia Huerta Vera",
+    "title": "«Desde el sagrado púlpito y en exhortaciones privadas»: la circulación de información durante la guerra de Independencia peruana",
+    "year": 2020,
+    "publication_date": "2020-12-12",
+    "journal": "Histórica",
+    "volume_issue": "44(1)",
+    "pages": "125–158",
+    "doi": "10.18800/historica.202001.004",
+    "institution": "Pontificia Universidad Católica del Perú",
+    "article_url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/23275",
+    "pdf_url": "https://revistas.pucp.edu.pe/index.php/historica/article/download/23275/22257",
+    "license": "CC BY 4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/",
+    "license_evidence_url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/23275",
+    "license_observation": "La sección Licencia de la ficha editorial identifica Creative Commons Atribución 4.0.",
+    "local_pdf": {
+      "path": "outputs/ideas-source-v1/huerta-2020.pdf",
+      "file_sha256": "2d98c10b6915b00f9208582e6321d444f3fcdff512b5d72a12016793a7fe5020"
+    },
+    "bytes": 465826,
+    "pdf_pages": 34,
+    "access": "Descarga pública sin cuenta; respuesta application/pdf y cabecera PDF verificadas.",
+    "source_group": "doi:10.18800/historica.202001.004",
+    "assigned_split": null,
+    "source_selection_reason": "PDF pequeño y capa textual legible; pasaje con argumento de legitimación de la ruptura, revisado por otro agente.",
+    "attribution_plan": "Conservar autora, título, revista, año, DOI, enlace de licencia y cambios de extracción en cualquier candidato."
+  },
+  "source_split": "train",
+  "items": [
+    {
+      "id": "HUE02",
+      "pdf_page": 14,
+      "printed_page": 138,
+      "start_marker": "El carácter propagandístico",
+      "end_marker": "Libertad de los Pueblos Soberanos.35",
+      "extraction_changes": [
+        {
+          "old": "Soberanos.35",
+          "new": "Soberanos."
+        }
+      ],
+      "word_count": 149,
+      "text_sha256": "8b9d6b3f148cdd7916984ea7f4202d12db8d81c4baf18b750d7b2ffd8b3389fe",
+      "page_text_sha256": "70bc187da04e3f29272b30dfd70f7bb8b87adff31f013c1d8b29b43f58fe4744",
+      "proposed_label": "crisis_ideas_emancipadoras",
+      "source_group": "doi:10.18800/historica.202001.004",
+      "document_group": "GGLI/t1/n5/1821-07-25/p18",
+      "source_split": "train",
+      "dataset_applied": false,
+      "overlap_screen": {
+        "train": {
+          "compared": 597,
+          "exact_matches": [],
+          "flagged_indices": [],
+          "max_jaccard": 0.0,
+          "max_containment": 0.0
+        },
+        "val": {
+          "compared": 81,
+          "exact_matches": [],
+          "flagged_indices": [],
+          "max_jaccard": 0.0,
+          "max_containment": 0.0
+        },
+        "test": {
+          "compared": 137,
+          "exact_matches": [],
+          "flagged_indices": [],
+          "max_jaccard": 0.0,
+          "max_containment": 0.0
+        }
+      },
+      "context_pdf_pages": [
+        13,
+        14,
+        15
+      ],
+      "confidence": "alta",
+      "rationale": "Predominan propaganda y persuasion politica mediante proclamas para lectores y oyentes; no biografia ni operaciones militares.",
+      "direct_reference": "Gaceta del Gobierno de Lima Independiente, tomo 1, numero 5, 25-07-1821, p.18, nota35.",
+      "quality_flags": [
+        "author_analysis_and_documentary_quote",
+        "publication_date_not_proclamation_date"
+      ],
+      "conditions": [
+        "Separar analisis de Huerta y cita de la proclama.",
+        "25-07-1821 es fecha del numero citado; el texto anuncia la proclamacion para el dia28, no para el25."
+      ],
+      "related_candidate_ids": [],
+      "primary_document_independent_from_hue01": "Different cited document; absolute independence unverified.",
+      "annotation_status": "thematically_approved_not_applied",
+      "review": {
+        "decision": "aprobar_etiqueta",
+        "first_reviewer_label": "crisis_ideas_emancipadoras",
+        "second_reviewer_label": "crisis_ideas_emancipadoras",
+        "exact_text_sha256": "8b9d6b3f148cdd7916984ea7f4202d12db8d81c4baf18b750d7b2ffd8b3389fe",
+        "training_selection": "candidate_for_future_training",
+        "human_expert_validation": false
+      }
+    },
+    {
+      "id": "HUE03",
+      "pdf_page": 16,
+      "printed_page": 140,
+      "start_marker": "Además del interés oficial",
+      "end_marker": "uno de los mejores escritos».41",
+      "extraction_changes": [
+        {
+          "old": "1818».40",
+          "new": "1818»."
+        },
+        {
+          "old": "escritos».41",
+          "new": "escritos»."
+        },
+        {
+          "old": "T omás",
+          "new": "Tomás"
+        }
+      ],
+      "word_count": 185,
+      "text_sha256": "016fe2fcf8f5b1085df06331cfef5242a0ab3c5a8c2465d71777831d8bc3d7af",
+      "page_text_sha256": "d98a712e9270e0477c76d1e9fd1b41f27c015b20b63629fe70c27c485cc25ee4",
+      "proposed_label": "crisis_ideas_emancipadoras",
+      "source_group": "doi:10.18800/historica.202001.004",
+      "document_group": "AGN/ColeccionTomasDieguez/2.7.22/f1r/1821-10-14",
+      "source_split": "train",
+      "dataset_applied": false,
+      "overlap_screen": {
+        "train": {
+          "compared": 597,
+          "exact_matches": [],
+          "flagged_indices": [],
+          "max_jaccard": 0.002762,
+          "max_containment": 0.005525
+        },
+        "val": {
+          "compared": 81,
+          "exact_matches": [],
+          "flagged_indices": [],
+          "max_jaccard": 0.0,
+          "max_containment": 0.0
+        },
+        "test": {
+          "compared": 137,
+          "exact_matches": [],
+          "flagged_indices": [],
+          "max_jaccard": 0.003195,
+          "max_containment": 0.007576
+        }
+      },
+      "context_pdf_pages": [
+        15,
+        16,
+        17
+      ],
+      "confidence": "alta",
+      "rationale": "Demanda de literatura politica, derechos e independencia; la carta es vehiculo del argumento, no negociacion diplomatica.",
+      "direct_reference": "Carta de Juan Ignacio Machado a Tomas Dieguez, Trujillo, 14-10-1821; AGN, Coleccion Tomas Dieguez, 2.7.22, f.1r, notas40-41.",
+      "quality_flags": [
+        "quoted_political_slavery_metaphor",
+        "explicit_extraction_spacing_repair"
+      ],
+      "conditions": [
+        "Las opiniones sobre derechos, injusticia y calidad del periodico pertenecen al remitente.",
+        "Esclavitud es retorica politica en este pasaje; no demuestra condicion juridica individual.",
+        "La impresion en1818 es informacion citada, no comprobada independientemente."
+      ],
+      "related_candidate_ids": [
+        "HUE04"
+      ],
+      "primary_document_independent_from_hue01": "Different cited document; absolute independence unverified.",
+      "annotation_status": "thematically_approved_not_applied",
+      "review": {
+        "decision": "aprobar_etiqueta",
+        "first_reviewer_label": "crisis_ideas_emancipadoras",
+        "second_reviewer_label": "crisis_ideas_emancipadoras",
+        "exact_text_sha256": "016fe2fcf8f5b1085df06331cfef5242a0ab3c5a8c2465d71777831d8bc3d7af",
+        "training_selection": "candidate_for_future_training",
+        "human_expert_validation": false
+      }
+    },
+    {
+      "id": "HUE04",
+      "pdf_page": 17,
+      "printed_page": 141,
+      "start_marker": "Antes del colapso",
+      "end_marker": "acceso directo al material impreso.",
+      "extraction_changes": [
+        {
+          "old": "otros. 42",
+          "new": "otros."
+        }
+      ],
+      "word_count": 181,
+      "text_sha256": "059e61847e9fc5d7d9ed63facf83a8685e0e18c3b95cdda66c0451313ab32a22",
+      "page_text_sha256": "e798fe8eb45bcc24c9662e4888ed4ff636cce6fc332482afa241fc3fe5795e94",
+      "proposed_label": "crisis_ideas_emancipadoras",
+      "source_group": "doi:10.18800/historica.202001.004",
+      "document_group": "Huerta2020/p141/prensa-fidelista-patriota",
+      "source_split": "train",
+      "dataset_applied": false,
+      "overlap_screen": {
+        "train": {
+          "compared": 597,
+          "exact_matches": [],
+          "flagged_indices": [],
+          "max_jaccard": 0.0,
+          "max_containment": 0.0
+        },
+        "val": {
+          "compared": 81,
+          "exact_matches": [],
+          "flagged_indices": [],
+          "max_jaccard": 0.0,
+          "max_containment": 0.0
+        },
+        "test": {
+          "compared": 137,
+          "exact_matches": [],
+          "flagged_indices": [],
+          "max_jaccard": 0.0,
+          "max_containment": 0.0
+        }
+      },
+      "context_pdf_pages": [
+        16,
+        17,
+        18
+      ],
+      "confidence": "media",
+      "rationale": "Posiciones politicas de la prensa y restricciones de circulacion; referencia a Machado secundaria, argumento interpretable con contexto.",
+      "direct_reference": "Alvarez y Martinez Riaza 1992: 66-68, nota42.",
+      "quality_flags": [
+        "contextual_antecedent_previous_passage",
+        "compressed_chronology",
+        "secondary_synthesis_not_independent_primary_document"
+      ],
+      "conditions": [
+        "Conservar dependencia con HUE03: estas obras remite al parrafo anterior.",
+        "No inferir que todos los periodicos existian antes de la libertad de imprenta, circulaban simultaneamente o estaban prohibidos por la Corona.",
+        "Solo nota42 es referencia directa; notas43-44 del volcado local pertenecen al parrafo siguiente y se conservan como contexto."
+      ],
+      "related_candidate_ids": [
+        "HUE03"
+      ],
+      "primary_document_independent_from_hue01": false,
+      "annotation_status": "thematically_approved_not_applied",
+      "review": {
+        "decision": "aprobar_etiqueta",
+        "first_reviewer_label": "crisis_ideas_emancipadoras",
+        "second_reviewer_label": "crisis_ideas_emancipadoras",
+        "exact_text_sha256": "059e61847e9fc5d7d9ed63facf83a8685e0e18c3b95cdda66c0451313ab32a22",
+        "training_selection": "candidate_for_future_training",
+        "human_expert_validation": false
+      }
+    }
+  ],
+  "pairwise_overlap": [
+    {
+      "ids": [
+        "HUE02",
+        "HUE03"
+      ],
+      "jaccard_containment": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "ids": [
+        "HUE02",
+        "HUE04"
+      ],
+      "jaccard_containment": [
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "ids": [
+        "HUE03",
+        "HUE04"
+      ],
+      "jaccard_containment": [
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "context_pages": [
+    {
+      "pdf_page": 13,
+      "printed_page": 137,
+      "text_sha256": "59f6d32135ec54227231f94d01e38f33d464c49f49d157d32a937ab2aecd296c"
+    },
+    {
+      "pdf_page": 14,
+      "printed_page": 138,
+      "text_sha256": "70bc187da04e3f29272b30dfd70f7bb8b87adff31f013c1d8b29b43f58fe4744"
+    },
+    {
+      "pdf_page": 15,
+      "printed_page": 139,
+      "text_sha256": "4d16bb8d616af90eafa26166e2a5074690841dc60e5b426087240c185469e587"
+    },
+    {
+      "pdf_page": 16,
+      "printed_page": 140,
+      "text_sha256": "d98a712e9270e0477c76d1e9fd1b41f27c015b20b63629fe70c27c485cc25ee4"
+    },
+    {
+      "pdf_page": 17,
+      "printed_page": 141,
+      "text_sha256": "e798fe8eb45bcc24c9662e4888ed4ff636cce6fc332482afa241fc3fe5795e94"
+    },
+    {
+      "pdf_page": 18,
+      "printed_page": 142,
+      "text_sha256": "d56c2a2876cf825cd0714db042829e9776b9b30161cdac2091638a56f7f321d7"
+    }
+  ],
+  "review_method": {
+    "second_reviewer": "/root/revision_historica_agn",
+    "independent_system": false,
+    "human_expert_validation": false,
+    "blind": false,
+    "description": "El segundo agente propuso limites desde el PDF antes de recibir las selecciones exactas, luego cotejo textos, hashes y contexto. Conocia el objetivo y la fuente.",
+    "original_documents_consulted": false,
+    "evaluation_texts_read_for_annotation": false
+  },
+  "verification": {
+    "deterministic_reproduction": true,
+    "word_counts": [
+      149,
+      185,
+      181
+    ],
+    "comparisons_per_candidate": 815,
+    "no_flagged_overlaps": true,
+    "positive_duplicate_controls": 3,
+    "context_and_notes_preserved": true,
+    "input_hashes_and_frozen_reference_unchanged": true,
+    "cadiz_contiguous_passage_words": 118,
+    "rejected_controls": [
+      "altered_dataset_hash",
+      "missing_start",
+      "duplicate_start",
+      "missing_end",
+      "invalid_replacement",
+      "too_short",
+      "too_long",
+      "overwrite",
+      "outside_outputs"
+    ]
+  },
+  "excluded_passages": [
+    {
+      "pdf_pages": [
+        7,
+        8
+      ],
+      "printed_pages": [
+        131,
+        132
+      ],
+      "topic": "Cadiz y libertad de imprenta",
+      "words": 118,
+      "decision": "context_only",
+      "reason": "Pasaje continuo menor que120palabras; no ampliar con infraestructura tipografica para alcanzar longitud."
+    }
+  ],
+  "limits": [
+    "Una sola fuente secundaria adicional al corpus original, ya incorporada con HUE01; este lote no aporta tres fuentes independientes.",
+    "Comparacion lexica: 5-gramas normalizados, Jaccard>=0.25 o containment>=0.8; sin coincidencias marcadas, pero no prueba ausencia de parafrasis.",
+    "HUE03 y HUE04 tienen dependencia contextual incluso con solapamiento lexico0.",
+    "No se consultaron manuscritos ni originales periodisticos."
+  ],
+  "dataset_applied": false,
+  "training_performed": false,
+  "production_changed": false,
+  "modal_requests": 0,
+  "next_step": "Incorporar el lote a otra copia experimental, manteniendo fuente train y relaciones documentales; no afirmar mejora sin un experimento posterior."
+}
