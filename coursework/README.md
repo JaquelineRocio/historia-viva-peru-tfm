@@ -12,6 +12,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Comparación tras revisión | Medir el efecto conjunto del enriquecimiento y las correcciones | TF-IDF local: F1 macro validación 0.29004 en ambas versiones; test 0.36300 → 0.36007. Sin mejora global ni cambio en producción |
 | Comparación con Huerta | Medir los cuatro pasajes añadidos con configuración fija | TF-IDF local C=4: F1 macro validación 0.29004 → 0.28968; crisis e ideas sigue en 0. Sin mejora; no se calcularon métricas nuevas de test ni se cambió producción |
 | Comparación de Villanueva | Medir la sustitución con la misma configuración | TF-IDF local C=4: F1 macro validación 0.28968 → 0.28987; mismos 25/81 aciertos, ideas sigue en 0. Sin mejora útil demostrada ni cambios en producción |
+| Generalización entre fuentes | Evaluar cada fuente de train sin usarla para entrenar | Nueve rondas locales: F1 macro agregado 0.32372, 208/598 aciertos; ideas 5/60. Diagnóstico interno, no mejora frente a validación ni prueba final |
 | Diagnóstico de cobertura | Orientar el siguiente cambio de datos | Concentración por fuente, rasgos de transcripción y fragmentos incompletos identificados. Muestra de 21 filas de train revisada; prioridad: cuatro filas de Villanueva. Sin modificar etiquetas |
 | Límites de Villanueva | Recuperar argumentos cortados entre páginas | Seis unidades delimitadas y cotejadas; dos quedan como contexto. Continuaciones ya presentes en filas 10/637 identificadas. Propuesta local, sin aplicar |
 | Reparación de Villanueva | Preparar un reemplazo sin duplicar continuaciones | Cuatro candidatos revisados, cuatro unidades de contexto y seis originales archivados; V02 ambiguo. Extracción local verificada, dataset sin modificar |
@@ -960,7 +961,7 @@ el efecto de esta sustitución con TF-IDF local y configuración fija, usando so
 validación. El comparador anterior supone adiciones; habrá que admitir esta
 sustitución auditada conservando sus controles de evaluación y procedencia.
 
-## Bloque actual: comparación de la reparación de Villanueva
+## Comparación de la reparación de Villanueva — registrada en `719a287`
 
 Se amplió [compare_tfidf_validation.py](../scripts/compare_tfidf_validation.py)
 para aceptar una sustitución respaldada por su evidencia y un informe previo.
@@ -1003,6 +1004,63 @@ para selección y comparaciones; no constituye evaluación externa nueva.
 Siguiente bloque después del commit: evaluar la generalización entre fuentes con
 particiones internas de train, dejando una fuente fuera cada vez. Esto permitirá
 orientar el próximo experimento conservando intacta la evaluación congelada.
+
+## Bloque actual: generalización entre fuentes de train
+
+[evaluate_tfidf_by_source.py](../scripts/evaluate_tfidf_by_source.py) realiza nueve
+rondas: en cada una deja fuera una fuente de train, aprende vocabulario y modelo
+desde cero con las otras ocho y predice exclusivamente la fuente excluida.
+Se conserva TF-IDF con C=4, semilla 42 y un hilo de CPU. Cada una de las 598 filas
+de train se evalúa una sola vez; no se predicen validación ni test.
+
+La [evidencia del diagnóstico](../artifacts/experiments/source-generalization-v1/report.json)
+registra modelos, particiones, clases, métricas y comprobaciones.
+
+| Fuente excluida del entrenamiento | Ejemplos evaluados | Exactitud | Aciertos de ideas / ejemplos de ideas |
+|---|---:|---:|---:|
+| O'Phelan | 103 | 40.78% | 0/28 |
+| AGN | 2 | 50.00% | — |
+| Huerta | 4 | 0.00% | 0/4 |
+| Video de train | 72 | 29.17% | 2/19 |
+| Basadre | 244 | 28.28% | 3/6 |
+| Villanueva | 16 | 56.25% | — |
+| Orrego | 53 | 26.42% | — |
+| Huamanga | 58 | 55.17% | 0/3 |
+| Fonseca | 46 | 43.48% | — |
+
+El agregado de las 598 predicciones obtuvo **F1 macro 0.32372 y 208 aciertos
+(34.78%)**. Crisis e ideas tuvo F1 0.11364 y 5/60 aciertos; contexto colonial,
+F1 0.08163 y 6/71. La referencia que predice la clase mayoritaria de las fuentes
+de entrenamiento obtuvo F1 macro 0.02394 y exactitud 4.18%. Superar esa referencia
+simple no demuestra que el clasificador sea suficientemente bueno para el uso final.
+
+Estos resultados señalan dificultades para transferir lo aprendido entre fuentes,
+sin demostrar una causa única. **0.32372 no es una mejora sobre la validación
+anterior**: se evaluaron otros ejemplos y nueve modelos. Tampoco es una estimación
+final independiente: los datos fueron revisados y los parámetros ya se eligieron
+con la validación original. No se deben ordenar fuentes por calidad usando esta tabla;
+algunas tienen solo dos o cuatro ejemplos y distintas distribuciones de clases.
+El agregado pondera filas: Basadre aporta 244/598. El F1 macro de cada ronda usa
+siempre las siete clases, incluso las ausentes de esa fuente.
+
+Verificación: nueve modelos guardados reprodujeron sus predicciones; vocabulario
+y valores IDF se comprobaron contra las filas de entrenamiento de cada ronda.
+Métricas agregadas, por fuente y de la referencia mayoritaria recalculadas. Pasaron
+11 rechazos, incluidos mezcla con evaluación, fuente única, clases ausentes del
+entrenamiento, duplicados entre fuentes, configuración incompatible y salidas
+inválidas. El duplicado conocido dentro de una misma fuente permanece unido.
+Cambiar en memoria textos y etiquetas de validación/test no altera estas rondas.
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/evaluate_tfidf_by_source.py --dataset outputs/villanueva-snapshot-v1/reviewed-export.json --config configs/experiments/tfidf.json --selection outputs/history-comparison-v1/reviewed/selection.json --previous-report artifacts/experiments/villanueva-comparison-v1/comparison.json --output outputs/source-generalization-reproduccion
+```
+
+Estado: diagnóstico local completado. Los nueve modelos y predicciones están en
+`outputs/source-generalization-v1/`, excluidos de Git; producción permanece intacta.
+Siguiente bloque después del commit: comparar representaciones de palabras y
+secuencias de caracteres con las mismas rondas internas y configuración fija del
+clasificador. Será una prueba de representación del texto, conservando etiquetas
+y evaluación congelada, sin prometer una mejora.
 
 ### Reproducir la muestra de la revisión inicial
 
