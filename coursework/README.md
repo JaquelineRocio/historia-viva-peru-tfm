@@ -9,7 +9,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 |---|---|---|
 | Diagnóstico | Compilar web/API, ejecutar suites y revisar dataset | API 37 pruebas, ML 55 pruebas y web verificados localmente |
 | Experimentos | Comparar hiperparámetros usando validación; test solo del ganador | Tres configuraciones TF-IDF y tres BETO ejecutadas en este equipo |
-| Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Propuesta local asistida por IA: 12 aprobar, 2 corregir, 5 ambiguos y 1 excluir hasta resegmentar. Pendiente segunda revisión; sin cambios al dataset ni a producción |
+| Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Segunda revisión asistida por IA completa: 11 aprobar, 2 corregir, 6 ambiguos y 1 excluir hasta resegmentar. Decisiones sin aplicar al dataset ni a producción |
 | Fuentes para enriquecimiento | Evaluar contenido, procedencia, reutilización y solapamientos | Tres candidatas examinadas; dos fragmentos AGN incorporados solo a copia experimental local. BNP pendiente de OCR/metadatos y Constitución pendiente de cotejo |
 | Piloto AGN | Preparar hasta tres fragmentos con procedencia y etiquetas propuestas | Tres etiquetas coincidentes tras segunda revisión asistida por IA. AGN01/02 candidatos a entrenamiento futuro; AGN03 solo contexto. Snapshot y producción intactos |
 | Copia experimental AGN | Incorporar los dos candidatos y comprobar el mantenimiento | Export local verificado; referencia y evaluación intactas. Mantenimiento omitió entrenar: dos cambios frente al mínimo de 20. Sin métricas nuevas ni despliegue |
@@ -45,7 +45,8 @@ además de decisión, justificación temática, límites del contraste históric
 El snapshot no conserva identificador de segmento, página, minuto ni predicción individual:
 esta revisión evalúa **etiquetas del dataset**, no el acierto actual de BETO.
 Todas las decisiones conservan `applied: false`. La autora delegó después el juicio
-histórico en una segunda revisión asistida por IA; este lote de 20 aún no la tiene.
+histórico en una segunda revisión asistida por IA; el nuevo dictamen se describe
+en el bloque actual, conservando este primer registro intacto.
 
 Se seleccionaron tres ejemplos por categoría histórica y dos de `no_relevante`,
 solo de train, mediante orden SHA-256 con semilla 42. Se ocultaron las etiquetas
@@ -124,8 +125,8 @@ forzar esa etiqueta a los pasajes sociales del AGN.
 Comprobación local: esquema y localizadores del registro, hash/tamaño del PDF,
 reproducción de las cinco búsquedas, dataset intacto y exclusión del PDF por Git.
 La selección de fuentes quedó registrada en `42ee37d`. El piloto posterior se
-describe a continuación. La adjudicación de las 20 etiquetas anteriores sigue
-pendiente; registrar el commit no las aplica.
+describe a continuación. El segundo dictamen de las 20 etiquetas se registra
+por separado más abajo; registrar un commit no aplica las propuestas al dataset.
 
 ## Tres candidatos locales del AGN — registrados en `749eb9c`
 
@@ -205,11 +206,11 @@ es de dos candidatos y un apoyo contextual. Se verificó que el dataset y el pri
 manifiesto permanecen intactos. No se calcula Kappa, accuracy o F1 con tres casos.
 Esta decisión es un consenso asistido por IA, no gold validado por historiadores.
 
-El segundo dictamen quedó registrado en `a0cd0c3`. Las 20 decisiones iniciales
-siguen sin segunda revisión y falta material de crisis e ideas. No se entrenó ni
-se escribieron revisiones en producción durante ese bloque.
+El segundo dictamen AGN quedó registrado en `a0cd0c3`. En ese bloque aún faltaba
+la segunda revisión de las 20 decisiones iniciales, abordada posteriormente abajo.
+No se entrenó ni se escribieron revisiones en producción durante ese bloque.
 
-## Bloque actual: copia experimental AGN y mantenimiento local
+## Copia experimental AGN y mantenimiento local — registrada en `22ad8f6`
 
 [build_agn_snapshot.py](../scripts/build_agn_snapshot.py) conserva las 814 filas de
 la referencia y añade exclusivamente AGN01/02 a entrenamiento, con una identidad
@@ -258,9 +259,53 @@ hash alterado, sobrescritura y salida fuera de `outputs/`. Pasaron las tres prue
 existentes de mantenimiento. La comprobación inicial del número de filas se ajustó
 tras identificar el duplicado; no se cambió la lógica de mantenimiento.
 
-Siguiente paso, después de registrar este bloque: segunda revisión asistida de
-las 20 propuestas iniciales. Continúa pendiente conseguir material adecuado de
-crisis e ideas antes de un experimento que pueda evaluar mejoras.
+La copia experimental quedó registrada en `22ad8f6`; continúa intacta durante la
+revisión posterior. Falta material adecuado de crisis e ideas antes de un
+experimento que pueda evaluar mejoras.
+
+## Bloque actual: segunda revisión de los 20 fragmentos iniciales
+
+El [nuevo dictamen](../artifacts/reviews/history-review-v1-peer-review.json)
+conserva la primera etiqueta del segundo agente, comparación con el primer
+revisor, decisión final, motivos, contexto y límites por caso. El agente comunicó
+su primera lectura antes de consultar etiquetas y razones del primer dictamen.
+Después hubo discusión entre agentes: no se presenta como validación humana
+independiente ni se calcula Kappa o una nueva F1.
+
+| Decisión sobre la etiqueta original | Primera revisión | Segunda revisión |
+|---|---|---|
+| Aprobar | 12 | 11 |
+| Corregir | 2 | 2 |
+| Ambiguo | 5 | 6 |
+| Excluir esta extracción hasta resegmentar | 1 | 1 |
+
+Las correcciones propuestas coinciden: R04 pasa de crisis e ideas a participación
+social y regional; R16, de campañas militares a liderazgo y diplomacia. R05 mezcla
+notas con un argumento cortado: requiere recuperar el párrafo de Fonseca, sin
+borrar el original. R07 conserva `no_relevante`: una presentación contemporánea
+puede ser un ejemplo negativo válido para entrenamiento.
+
+R06 mantiene un desacuerdo: el primer revisor aprobó militar; el segundo observa
+un peso comparable de correspondencia política. Se adopta **ambiguo** por ahora.
+R18 pasó de militar en la primera lectura del segundo agente a ambiguo después
+de discutir el criterio, sin nueva evidencia documental. Se conserva esa secuencia
+y no se fuerza una corrección. También siguen ambiguos R03, R09, R10 y R13.
+
+El segundo agente leyó páginas completas de los PDF de O’Phelan (PDF 6, 24, 34)
+y Fonseca (PDF 4, 5, 11). Para Basadre solo hubo fragmentos de train; el original
+y la edición no están recuperados. Para el video no se cotejó audio ni tiempos.
+La vecindad de índices no demuestra continuidad entre páginas. Aprobar el tema
+no certifica los hechos o interpretaciones históricas de cada autor.
+
+Verificación local: selección reproducible, 20 índices y hashes coincidentes,
+todos de train, recuentos y etiquetas coherentes; dataset, primer manifiesto y
+export AGN intactos. No se consultaron textos de evaluación para adjudicar casos,
+no se entrenó ni se escribió en producción. La vista legible con textos se guarda
+en `outputs/history-review-v1/segunda-revision-legible.md`, excluida de Git.
+
+Siguiente paso después del commit: recuperar y resegmentar R05 con las páginas
+locales disponibles. Las correcciones resueltas solo se aplicarán en otro bloque
+experimental; los seis casos ambiguos requieren contexto adicional.
 
 ### Reproducir la muestra de la revisión inicial
 

@@ -1,0 +1,791 @@
+{
+  "schema_version": 1,
+  "review_id": "history-review-v1-peer-review",
+  "date": "2026-09-07",
+  "status": "second_ai_review_recorded_not_applied",
+  "reviewer": {
+    "agent": "/root/revision_historica_agn",
+    "role": "Segunda revisión temática asistida por IA",
+    "human_expert": false,
+    "independent_system": false
+  },
+  "protocol": {
+    "scope": "20 etiquetas de train; no predicciones del modelo desplegado ni evaluación de exactitud del clasificador.",
+    "first_pass": "El agente leyó guía, selectores y textos de train sin consultar etiquetas/razones del primer dictamen. Comunicó las 20 primeras clasificaciones antes de compararlas.",
+    "second_pass": "Comparación con primer dictamen, páginas de dos PDF y contexto de train. El principal comunicó su criterio sobre R06/R18 después de recibir la primera lectura.",
+    "limitation": "Revisores IA del mismo sistema, selección estratificada por etiquetas originales y discusión posterior: no validación humana ni estudio ciego independiente.",
+    "adoption": "Se conservan dudas sin forzar consenso. Aprobar es una decisión temática, no certificación de todos los hechos históricos. Excluir solo aparta esa extracción de una futura versión; no elimina el original.",
+    "git_commit_is_not_dataset_application": true
+  },
+  "inputs": {
+    "dataset": {
+      "path": "artifacts/datasets/gold-v1-source-aware.json",
+      "file_sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a"
+    },
+    "first_review": {
+      "path": "artifacts/reviews/history-review-v1.json",
+      "file_sha256": "18125b450c1d403780fee33847ac461438307f630cb1e6370cf83de3f8b21fb4"
+    },
+    "taxonomy": {
+      "path": "docs/guia-etiquetado-1780-1842.md",
+      "file_sha256": "737d155a6f8260df4fa00b5f1adc6f469457f678fd144dd8c2d6b80a564d76e7"
+    },
+    "sampler": {
+      "path": "scripts/sample_history_review.py",
+      "file_sha256": "ed6d5560009d870f9ad8fb7b3217a98e403cf65974c76057bebceffbbdb6ebf9"
+    },
+    "ophelan": {
+      "path": ".corpus-downloads/opheland_mito_independencia.pdf",
+      "file_sha256": "1acd9f242328d6901bd6b68f820540473793ca9c5434a600fdd407b95da7a909"
+    },
+    "fonseca": {
+      "path": ".corpus-downloads/fonseca_bandoleros_patrotas.pdf",
+      "file_sha256": "082ca707f2e2246faf43e7bcd3c620a06e287d6f1f2212b549c94d77e0e5306f"
+    }
+  },
+  "context_registry": {
+    "OPH": {
+      "pdf_pages_read": [
+        6,
+        24,
+        34
+      ],
+      "printed_pages": [
+        160,
+        178,
+        188
+      ],
+      "method": "Lectura completa de capa textual del PDF local por el segundo agente; sin manuscritos originales."
+    },
+    "FON": {
+      "pdf_pages_read": [
+        4,
+        5,
+        11
+      ],
+      "printed_pages": [
+        108,
+        109,
+        115
+      ],
+      "method": "Lectura completa de capa textual del PDF local por el segundo agente; sin cotejar cartas originales."
+    },
+    "BAS:fragment": {
+      "method": "Solo fragmento train atribuido a Basadre por el proyecto; PDF y edición no recuperados."
+    },
+    "VIDEO:fragment": {
+      "method": "Solo transcripción train e inventario; sin audio, canal ni timestamps comprobados."
+    },
+    "train": {
+      "additional_indices": [
+        441,
+        547,
+        568,
+        573
+      ],
+      "method": "Mismo recurso y split train verificados; proximidad de índices no demuestra orden físico de páginas."
+    }
+  },
+  "items": [
+    {
+      "review_id": "R01",
+      "item_index": 193,
+      "resource_id": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "split": "train",
+      "text_sha256": "a2996f557e335f07d995171ffc55b8fab3f766acf422b48beca3cb01c694806c",
+      "original_label": "participacion_social_regional",
+      "first_reviewer": {
+        "decision": "aprobar",
+        "proposed_label": "participacion_social_regional"
+      },
+      "second_reviewer": {
+        "initial_label": "participacion_social_regional",
+        "decision": "aprobar",
+        "proposed_label": "participacion_social_regional",
+        "rationale": "Representación comunal y alianza de caciques y clero para movilizar campesinado.",
+        "context_references": [
+          "OPH:pdf24"
+        ],
+        "quality_flags": [
+          "ocr",
+          "truncated_start"
+        ],
+        "historical_limits": "Los motivos atribuidos a los actores son interpretación de O’Phelan; no se contrastaron originales archivísticos."
+      },
+      "final_decision_matches_first": true,
+      "adopted_local_decision": "aprobar",
+      "adopted_local_label": "participacion_social_regional",
+      "dataset_applied": false,
+      "human_expert_validation": false
+    },
+    {
+      "review_id": "R02",
+      "item_index": 767,
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "split": "train",
+      "text_sha256": "fb4ef5102be719d3135dda0ae0eba60f9b916dec454a80068888a16488140218",
+      "original_label": "contexto_colonial_antecedentes",
+      "first_reviewer": {
+        "decision": "aprobar",
+        "proposed_label": "contexto_colonial_antecedentes"
+      },
+      "second_reviewer": {
+        "initial_label": "contexto_colonial_antecedentes",
+        "decision": "aprobar",
+        "proposed_label": "contexto_colonial_antecedentes",
+        "rationale": "Propiedad rural, dependencia laboral y estructura económica colonial dominan.",
+        "context_references": [
+          "BAS:fragment"
+        ],
+        "quality_flags": [
+          "missing_page"
+        ],
+        "historical_limits": "Edición sin comprobar; la caracterización como feudal pertenece a la fuente."
+      },
+      "final_decision_matches_first": true,
+      "adopted_local_decision": "aprobar",
+      "adopted_local_label": "contexto_colonial_antecedentes",
+      "dataset_applied": false,
+      "human_expert_validation": false
+    },
+    {
+      "review_id": "R03",
+      "item_index": 546,
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "split": "train",
+      "text_sha256": "3c66cf4b534b4c806144f1942a5af5bb1c5e95e8295a6ac22645672365698ed1",
+      "original_label": "contexto_colonial_antecedentes",
+      "first_reviewer": {
+        "decision": "ambiguo",
+        "proposed_label": null
+      },
+      "second_reviewer": {
+        "initial_label": null,
+        "decision": "ambiguo",
+        "proposed_label": null,
+        "rationale": "Combina causas de la emancipación y consecuencias de la ruptura sin una unidad dominante suficientemente delimitada.",
+        "context_references": [
+          "BAS:fragment",
+          "train:547"
+        ],
+        "quality_flags": [
+          "mixed_topics",
+          "missing_page"
+        ],
+        "historical_limits": "La tesis de Chaunu se expone y cuestiona. Recuperar página antes de decidir entre crisis e ideas y consecuencias republicanas."
+      },
+      "final_decision_matches_first": true,
+      "adopted_local_decision": "ambiguo",
+      "adopted_local_label": null,
+      "dataset_applied": false,
+      "human_expert_validation": false
+    },
+    {
+      "review_id": "R04",
+      "item_index": 360,
+      "resource_id": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "split": "train",
+      "text_sha256": "7c52fef6f0080f67200d9f6e9b5838982c4128c51ef1734a09df2b50f12b74de",
+      "original_label": "crisis_ideas_emancipadoras",
+      "first_reviewer": {
+        "decision": "corregir",
+        "proposed_label": "participacion_social_regional"
+      },
+      "second_reviewer": {
+        "initial_label": "participacion_social_regional",
+        "decision": "corregir",
+        "proposed_label": "participacion_social_regional",
+        "rationale": "La articulación económica, autonomía y capacidad de movilización del sur andino vertebran el argumento.",
+        "context_references": [
+          "OPH:pdf6"
+        ],
+        "quality_flags": [
+          "ocr",
+          "bibliographic_tail"
+        ],
+        "historical_limits": "La autonomía política es próxima a ideas, pero la dinámica regional domina. Coincide con la primera corrección."
+      },
+      "final_decision_matches_first": true,
+      "adopted_local_decision": "corregir",
+      "adopted_local_label": "participacion_social_regional",
+      "dataset_applied": false,
+      "human_expert_validation": false
+    },
+    {
+      "review_id": "R05",
+      "item_index": 57,
+      "resource_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+      "source_type": "pdf",
+      "split": "train",
+      "text_sha256": "96accf276a3574d3016e60b4666fc0a9552b21f37ee485fe3441f9591c1071fb",
+      "original_label": "participacion_social_regional",
+      "first_reviewer": {
+        "decision": "excluir",
+        "proposed_label": null
+      },
+      "second_reviewer": {
+        "initial_label": "no_relevante",
+        "decision": "excluir",
+        "proposed_label": null,
+        "rationale": "Predominan notas bibliográficas y una frase sustantiva interrumpida. Apartar esta versión hasta resegmentarla.",
+        "context_references": [
+          "FON:pdf4",
+          "FON:pdf5"
+        ],
+        "quality_flags": [
+          "footnotes",
+          "missing_antecedent",
+          "truncated_sentence"
+        ],
+        "historical_limits": "El contexto identifica a Riva Agüero como autor del testimonio hostil; sus acusaciones contra San Martín no son hechos certificados. Conservar el original y recuperar el párrafo continuo."
+      },
+      "final_decision_matches_first": true,
+      "adopted_local_decision": "excluir",
+      "adopted_local_label": null,
+      "dataset_applied": false,
+      "human_expert_validation": false
+    },
+    {
+      "review_id": "R06",
+      "item_index": 741,
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "split": "train",
+      "text_sha256": "47554a1f344a83790901c64cf52b749c0a37edc7f0742ff65da9f5501a9176a3",
+      "original_label": "campanias_conflictos_militares",
+      "first_reviewer": {
+        "decision": "aprobar",
+        "proposed_label": "campanias_conflictos_militares"
+      },
+      "second_reviewer": {
+        "initial_label": null,
+        "decision": "ambiguo",
+        "proposed_label": null,
+        "rationale": "El fracaso militar y la correspondencia sobre regreso, Congreso y unión política tienen peso sustantivo comparable.",
+        "context_references": [
+          "BAS:fragment"
+        ],
+        "quality_flags": [
+          "mixed_topics",
+          "missing_page",
+          "reviewer_disagreement"
+        ],
+        "historical_limits": "El primero aprobó militar; el segundo no resuelve el predominio. Recuperar página y considerar resegmentación, sin forzar acuerdo."
+      },
+      "final_decision_matches_first": false,
+      "adopted_local_decision": "ambiguo",
+      "adopted_local_label": null,
+      "dataset_applied": false,
+      "human_expert_validation": false
+    },
+    {
+      "review_id": "R07",
+      "item_index": 409,
+      "resource_id": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "source_type": "youtube",
+      "split": "train",
+      "text_sha256": "a09597cf267ae1441859d63f6dfdfd17c13a64f5e70394bda7e7b571f4581404",
+      "original_label": "no_relevante",
+      "first_reviewer": {
+        "decision": "aprobar",
+        "proposed_label": "no_relevante"
+      },
+      "second_reviewer": {
+        "initial_label": "no_relevante",
+        "decision": "aprobar",
+        "proposed_label": "no_relevante",
+        "rationale": "Presentación contemporánea del expositor; la referencia histórica es incidental.",
+        "context_references": [
+          "VIDEO:fragment"
+        ],
+        "quality_flags": [
+          "asr",
+          "audio_not_checked"
+        ],
+        "historical_limits": "Se rectifica la sugerencia inicial del segundo agente de excluirlo: un ejemplo negativo válido puede permanecer en entrenamiento."
+      },
+      "final_decision_matches_first": true,
+      "adopted_local_decision": "aprobar",
+      "adopted_local_label": "no_relevante",
+      "dataset_applied": false,
+      "human_expert_validation": false
+    },
+    {
+      "review_id": "R08",
+      "item_index": 142,
+      "resource_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+      "source_type": "pdf",
+      "split": "train",
+      "text_sha256": "4fb825d9309d011be16271d91a3cea3a792389c1e946558096693a1ea2875a37",
+      "original_label": "campanias_conflictos_militares",
+      "first_reviewer": {
+        "decision": "aprobar",
+        "proposed_label": "campanias_conflictos_militares"
+      },
+      "second_reviewer": {
+        "initial_label": "campanias_conflictos_militares",
+        "decision": "aprobar",
+        "proposed_label": "campanias_conflictos_militares",
+        "rationale": "Tamaño de partidas, terreno, flancos, retaguardia y desgaste del enemigo dominan.",
+        "context_references": [
+          "FON:pdf11"
+        ],
+        "quality_flags": [
+          "header",
+          "historical_quote"
+        ],
+        "historical_limits": "No se contrastó la carta original; la presencia de milicias no desplaza el foco táctico."
+      },
+      "final_decision_matches_first": true,
+      "adopted_local_decision": "aprobar",
+      "adopted_local_label": "campanias_conflictos_militares",
+      "dataset_applied": false,
+      "human_expert_validation": false
+    },
+    {
+      "review_id": "R09",
+      "item_index": 570,
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "split": "train",
+      "text_sha256": "7d48a771113fdc4ebfd979bf86a38aada3ef080fcf0cae433d08c1a1152412e9",
+      "original_label": "contexto_colonial_antecedentes",
+      "first_reviewer": {
+        "decision": "ambiguo",
+        "proposed_label": null
+      },
+      "second_reviewer": {
+        "initial_label": null,
+        "decision": "ambiguo",
+        "proposed_label": null,
+        "rationale": "La regulación de la esclavitud no identifica aquí fecha ni autoridad. Otras filas apuntan a 1825, sin probar continuidad.",
+        "context_references": [
+          "BAS:fragment",
+          "train:568",
+          "train:573"
+        ],
+        "quality_flags": [
+          "missing_date",
+          "missing_page"
+        ],
+        "historical_limits": "Recuperar página y norma antes de decidir entre contexto colonial y organización republicana. Las prescripciones no prueban su cumplimiento efectivo."
+      },
+      "final_decision_matches_first": true,
+      "adopted_local_decision": "ambiguo",
+      "adopted_local_label": null,
+      "dataset_applied": false,
+      "human_expert_validation": false
+    },
+    {
+      "review_id": "R10",
+      "item_index": 733,
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "split": "train",
+      "text_sha256": "d5cc23ec7f16eabaac9af833d3ef71c46455deae3e89cdb2fdfd4622c3007c7c",
+      "original_label": "organizacion_consecuencias_republicanas",
+      "first_reviewer": {
+        "decision": "ambiguo",
+        "proposed_label": null
+      },
+      "second_reviewer": {
+        "initial_label": null,
+        "decision": "ambiguo",
+        "proposed_label": null,
+        "rationale": "Reflexión normativa sobre Estado y ciudadanía sin episodio ni periodo identificables.",
+        "context_references": [
+          "BAS:fragment"
+        ],
+        "quality_flags": [
+          "missing_date",
+          "missing_page",
+          "editorial_mix"
+        ],
+        "historical_limits": "Recuperar sección antes de decidir entre organización republicana y no relevante. Los ideales del autor no prueban igualdad efectiva."
+      },
+      "final_decision_matches_first": true,
+      "adopted_local_decision": "ambiguo",
+      "adopted_local_label": null,
+      "dataset_applied": false,
+      "human_expert_validation": false
+    },
+    {
+      "review_id": "R11",
+      "item_index": 441,
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "split": "train",
+      "text_sha256": "91de4cf790e6aea36d75ee817106b7f0bf18bd7ba96438179ef902f1ea69a324",
+      "original_label": "liderazgos_diplomacia_proyectos",
+      "first_reviewer": {
+        "decision": "aprobar",
+        "proposed_label": "liderazgos_diplomacia_proyectos"
+      },
+      "second_reviewer": {
+        "initial_label": "liderazgos_diplomacia_proyectos",
+        "decision": "aprobar",
+        "proposed_label": "liderazgos_diplomacia_proyectos",
+        "rationale": "Trayectoria de Pando, cargos y carrera diplomática dominan.",
+        "context_references": [
+          "BAS:fragment"
+        ],
+        "quality_flags": [
+          "header",
+          "editorial_mix",
+          "missing_page"
+        ],
+        "historical_limits": "El texto contiene el número impreso 158, sin cotejo con PDF. Nombramientos y cronología no verificados; no reordenar el texto sin la página."
+      },
+      "final_decision_matches_first": true,
+      "adopted_local_decision": "aprobar",
+      "adopted_local_label": "liderazgos_diplomacia_proyectos",
+      "dataset_applied": false,
+      "human_expert_validation": false
+    },
+    {
+      "review_id": "R12",
+      "item_index": 58,
+      "resource_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+      "source_type": "pdf",
+      "split": "train",
+      "text_sha256": "9d20b43e8ce0bd92848a342be04c24dce6439e307fb7078bd5f6bcc1aa1e5fa4",
+      "original_label": "participacion_social_regional",
+      "first_reviewer": {
+        "decision": "aprobar",
+        "proposed_label": "participacion_social_regional"
+      },
+      "second_reviewer": {
+        "initial_label": "participacion_social_regional",
+        "decision": "aprobar",
+        "proposed_label": "participacion_social_regional",
+        "rationale": "Representaciones de montoneros, pueblo y élite en la independencia; las fechas posteriores corresponden a estudios.",
+        "context_references": [
+          "FON:pdf4",
+          "FON:pdf5"
+        ],
+        "quality_flags": [
+          "flattened_table",
+          "header"
+        ],
+        "historical_limits": "Reconstruir asociaciones entre columnas. Las expresiones despectivas pertenecen a discursos estudiados críticamente."
+      },
+      "final_decision_matches_first": true,
+      "adopted_local_decision": "aprobar",
+      "adopted_local_label": "participacion_social_regional",
+      "dataset_applied": false,
+      "human_expert_validation": false
+    },
+    {
+      "review_id": "R13",
+      "item_index": 489,
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "split": "train",
+      "text_sha256": "fec7dc16d0936849282a2d1ae55448ba16e55a6f3e37406696a0b5b7fa99ff16",
+      "original_label": "no_relevante",
+      "first_reviewer": {
+        "decision": "ambiguo",
+        "proposed_label": null
+      },
+      "second_reviewer": {
+        "initial_label": null,
+        "decision": "ambiguo",
+        "proposed_label": null,
+        "rationale": "Hay una idea política interpretable pero falta el régimen aludido; Napoleón puede pertenecer a un pie de imagen.",
+        "context_references": [
+          "BAS:fragment"
+        ],
+        "quality_flags": [
+          "truncated_sentence",
+          "editorial_mix",
+          "missing_page"
+        ],
+        "historical_limits": "La brevedad no basta para aprobar no relevante. Recuperar párrafo e imagen antes de asignar una clase temática."
+      },
+      "final_decision_matches_first": true,
+      "adopted_local_decision": "ambiguo",
+      "adopted_local_label": null,
+      "dataset_applied": false,
+      "human_expert_validation": false
+    },
+    {
+      "review_id": "R14",
+      "item_index": 606,
+      "resource_id": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "split": "train",
+      "text_sha256": "49177764bc4c6cf23625eb96092b6091c7b67b6e247b4b707b1b39a450239eb7",
+      "original_label": "crisis_ideas_emancipadoras",
+      "first_reviewer": {
+        "decision": "aprobar",
+        "proposed_label": "crisis_ideas_emancipadoras"
+      },
+      "second_reviewer": {
+        "initial_label": "crisis_ideas_emancipadoras",
+        "decision": "aprobar",
+        "proposed_label": "crisis_ideas_emancipadoras",
+        "rationale": "Las medidas tributarias y antimonopolio de juntas de 1809 y 1814 articulan la selección.",
+        "context_references": [
+          "OPH:pdf34"
+        ],
+        "quality_flags": [
+          "ocr",
+          "footnotes",
+          "context_dependent_edges"
+        ],
+        "historical_limits": "Participación social es alternativa cercana; no inferir homogeneidad social de ambos movimientos."
+      },
+      "final_decision_matches_first": true,
+      "adopted_local_decision": "aprobar",
+      "adopted_local_label": "crisis_ideas_emancipadoras",
+      "dataset_applied": false,
+      "human_expert_validation": false
+    },
+    {
+      "review_id": "R15",
+      "item_index": 475,
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "split": "train",
+      "text_sha256": "40283484ef5d7430691724dbca24279bf54cab927837dbf6f0737d8b187428d0",
+      "original_label": "organizacion_consecuencias_republicanas",
+      "first_reviewer": {
+        "decision": "aprobar",
+        "proposed_label": "organizacion_consecuencias_republicanas"
+      },
+      "second_reviewer": {
+        "initial_label": "organizacion_consecuencias_republicanas",
+        "decision": "aprobar",
+        "proposed_label": "organizacion_consecuencias_republicanas",
+        "rationale": "Atribuciones del Congreso, constitución del Ejecutivo y obtención de recursos fiscales.",
+        "context_references": [
+          "BAS:fragment"
+        ],
+        "quality_flags": [
+          "missing_page",
+          "header"
+        ],
+        "historical_limits": "Fechas, cantidades y controversia siguen atribuidas a la fuente; no se consultaron actas."
+      },
+      "final_decision_matches_first": true,
+      "adopted_local_decision": "aprobar",
+      "adopted_local_label": "organizacion_consecuencias_republicanas",
+      "dataset_applied": false,
+      "human_expert_validation": false
+    },
+    {
+      "review_id": "R16",
+      "item_index": 536,
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "split": "train",
+      "text_sha256": "240e925116ec7e3e7206484f7ac45eed37babd3ef0460d446724ca1a511d55f7",
+      "original_label": "campanias_conflictos_militares",
+      "first_reviewer": {
+        "decision": "corregir",
+        "proposed_label": "liderazgos_diplomacia_proyectos"
+      },
+      "second_reviewer": {
+        "initial_label": "liderazgos_diplomacia_proyectos",
+        "decision": "corregir",
+        "proposed_label": "liderazgos_diplomacia_proyectos",
+        "rationale": "Condiciones de paz, indemnizaciones y comisión negociadora dominan; el relato militar comienza al final.",
+        "context_references": [
+          "BAS:fragment"
+        ],
+        "quality_flags": [
+          "mixed_topics",
+          "missing_page"
+        ],
+        "historical_limits": "Coincide con la primera corrección. Revisar luego el límite del segmento; no se contrastaron documentos diplomáticos originales."
+      },
+      "final_decision_matches_first": true,
+      "adopted_local_decision": "corregir",
+      "adopted_local_label": "liderazgos_diplomacia_proyectos",
+      "dataset_applied": false,
+      "human_expert_validation": false
+    },
+    {
+      "review_id": "R17",
+      "item_index": 456,
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "split": "train",
+      "text_sha256": "b5f71382c0f439d0f41d5b1b15009905aff9744f929e53ca72f540c07cb3141b",
+      "original_label": "liderazgos_diplomacia_proyectos",
+      "first_reviewer": {
+        "decision": "aprobar",
+        "proposed_label": "liderazgos_diplomacia_proyectos"
+      },
+      "second_reviewer": {
+        "initial_label": "liderazgos_diplomacia_proyectos",
+        "decision": "aprobar",
+        "proposed_label": "liderazgos_diplomacia_proyectos",
+        "rationale": "Itinerario de legaciones, cautiverio, cargos y actividad política de una persona.",
+        "context_references": [
+          "BAS:fragment",
+          "train:441"
+        ],
+        "quality_flags": [
+          "missing_subject",
+          "extraction_noise",
+          "missing_page"
+        ],
+        "historical_limits": "La conexión con Pando es compatible con R11, sin certificar continuidad física. La mención constitucional no domina."
+      },
+      "final_decision_matches_first": true,
+      "adopted_local_decision": "aprobar",
+      "adopted_local_label": "liderazgos_diplomacia_proyectos",
+      "dataset_applied": false,
+      "human_expert_validation": false
+    },
+    {
+      "review_id": "R18",
+      "item_index": 437,
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "split": "train",
+      "text_sha256": "3002d21e1f715fcbce8188b653184f44c0c6547880348831ae4083f7b2c416f1",
+      "original_label": "liderazgos_diplomacia_proyectos",
+      "first_reviewer": {
+        "decision": "ambiguo",
+        "proposed_label": null
+      },
+      "second_reviewer": {
+        "initial_label": "campanias_conflictos_militares",
+        "decision": "ambiguo",
+        "proposed_label": null,
+        "rationale": "Las órdenes operativas predominan en extensión, pero el comienzo y epígrafe explican el conflicto Tagle–Bolívar.",
+        "context_references": [
+          "BAS:fragment"
+        ],
+        "quality_flags": [
+          "mixed_topics",
+          "image_caption",
+          "missing_page"
+        ],
+        "historical_limits": "El segundo pasó de militar a ambiguo tras comparar criterios, sin nueva evidencia documental. Coincide con la cautela inicial; las sospechas narradas no prueban conspiración."
+      },
+      "final_decision_matches_first": true,
+      "adopted_local_decision": "ambiguo",
+      "adopted_local_label": null,
+      "dataset_applied": false,
+      "human_expert_validation": false
+    },
+    {
+      "review_id": "R19",
+      "item_index": 813,
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "split": "train",
+      "text_sha256": "d4dc113a07da5a0946e879c11086ba7889af0d52d01be380d42695d327169603",
+      "original_label": "organizacion_consecuencias_republicanas",
+      "first_reviewer": {
+        "decision": "aprobar",
+        "proposed_label": "organizacion_consecuencias_republicanas"
+      },
+      "second_reviewer": {
+        "initial_label": "organizacion_consecuencias_republicanas",
+        "decision": "aprobar",
+        "proposed_label": "organizacion_consecuencias_republicanas",
+        "rationale": "Procedimiento de sucesión presidencial y elecciones de 1829.",
+        "context_references": [
+          "BAS:fragment"
+        ],
+        "quality_flags": [
+          "duplicated_callout",
+          "truncated_end",
+          "missing_page"
+        ],
+        "historical_limits": "Populares no implica sufragio universal. La primacía electoral afirmada queda atribuida a la fuente."
+      },
+      "final_decision_matches_first": true,
+      "adopted_local_decision": "aprobar",
+      "adopted_local_label": "organizacion_consecuencias_republicanas",
+      "dataset_applied": false,
+      "human_expert_validation": false
+    },
+    {
+      "review_id": "R20",
+      "item_index": 687,
+      "resource_id": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "source_type": "youtube",
+      "split": "train",
+      "text_sha256": "2ef457617b4e1e753d972a27f0ac0470762bc19509b6360ec9e6563fe1ec1d11",
+      "original_label": "crisis_ideas_emancipadoras",
+      "first_reviewer": {
+        "decision": "aprobar",
+        "proposed_label": "crisis_ideas_emancipadoras"
+      },
+      "second_reviewer": {
+        "initial_label": "crisis_ideas_emancipadoras",
+        "decision": "aprobar",
+        "proposed_label": "crisis_ideas_emancipadoras",
+        "rationale": "Sociabilidades ilustradas, modernidad y propagación de la crisis política europea hacia Hispanoamérica.",
+        "context_references": [
+          "VIDEO:fragment"
+        ],
+        "quality_flags": [
+          "asr",
+          "incomplete_attribution",
+          "missing_timestamps"
+        ],
+        "historical_limits": "La tesis se atribuye a Guerra; no se restituyen nombre completo ni palabras dudosas sin audio."
+      },
+      "final_decision_matches_first": true,
+      "adopted_local_decision": "aprobar",
+      "adopted_local_label": "crisis_ideas_emancipadoras",
+      "dataset_applied": false,
+      "human_expert_validation": false
+    }
+  ],
+  "summary": {
+    "decisions": {
+      "aprobar": 11,
+      "corregir": 2,
+      "ambiguo": 6,
+      "excluir": 1
+    },
+    "corrections": [
+      "R04",
+      "R16"
+    ],
+    "needs_resegmentation": [
+      "R05"
+    ],
+    "ambiguous": [
+      "R03",
+      "R06",
+      "R09",
+      "R10",
+      "R13",
+      "R18"
+    ],
+    "final_disagreements_with_first": [
+      "R06"
+    ],
+    "initial_to_final_changes": [
+      "R05: no_relevante como primera etiqueta; excluir esta extracción sin etiqueta final",
+      "R07: retirar sugerencia operativa inicial de excluir; aprobar no_relevante",
+      "R18: militar en primera lectura; ambiguo después de comparar criterios"
+    ],
+    "source_count": 4,
+    "basadre_rows": 12,
+    "metrics_calculated": false,
+    "dataset_changed": false,
+    "experimental_agn_export_changed": false,
+    "production_changed": false
+  },
+  "verification": {
+    "deterministic_sample_reproduced": true,
+    "all_twenty_indices_labels_and_hashes_match_reference": true,
+    "all_cases_train": true,
+    "original_manifest_preserved": true,
+    "validation_and_test_not_used_for_adjudication": true
+  },
+  "next_step": "Recuperar y resegmentar R05 desde las páginas disponibles; conservar casos ambiguos sin correcciones automáticas. Aplicar decisiones resueltas solo en otro bloque experimental versionado."
+}
