@@ -11,7 +11,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Experimentos | Comparar hiperparámetros usando validación; test solo del ganador | Tres configuraciones TF-IDF y tres BETO ejecutadas en este equipo |
 | Comparación tras revisión | Medir el efecto conjunto del enriquecimiento y las correcciones | TF-IDF local: F1 macro validación 0.29004 en ambas versiones; test 0.36300 → 0.36007. Sin mejora global ni cambio en producción |
 | Fuente para crisis e ideas | Localizar contenido pertinente y reutilizable | HUE01 de Huerta Vera (2020), revisado por ambos agentes, incorporado a copia experimental local: 597 train, 81 validación y 137 test. Evaluación intacta; sin entrenamiento nuevo |
-| Lote adicional de Huerta | Revisar propaganda, lecturas políticas y prensa | HUE02/03/04 revisados por ambos agentes; 149/185/181 palabras. Preparados localmente; sin incorporar. Una fuente común, con dependencia entre HUE03 y HUE04 |
+| Lote adicional de Huerta | Revisar propaganda, lecturas políticas y prensa | HUE02/03/04 incorporados a copia experimental: 600 train, 81 validación y 137 test. Una fuente común y dependencia HUE03/HUE04 conservadas; sin entrenamiento nuevo |
 | Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Segunda revisión: 11 aprobar, 2 corregir, 6 ambiguos y 1 excluir hasta resegmentar. R04/R16 corregidos solo en copia experimental; referencia y producción intactas |
 | Reparación de R05 | Recuperar prosa separada por notas y salto de página | Sustitución local verificada: train55/57/58 reemplazadas por un fragmento de 203 palabras en una nueva copia experimental. Originales y contexto archivados; referencia intacta |
 | Fuentes para enriquecimiento | Evaluar contenido, procedencia, reutilización y solapamientos | Tres candidatas examinadas; dos fragmentos AGN incorporados solo a copia experimental local. BNP pendiente de OCR/metadatos y Constitución pendiente de cotejo |
@@ -634,7 +634,7 @@ permanece igual y no se ejecutó el pipeline en este bloque.
 La copia quedó registrada en `98874e5`. El lote adicional se describe a continuación;
 un ejemplo adicional no permite afirmar una mejora del modelo.
 
-## Bloque actual: tres candidatos adicionales de Huerta
+## Tres candidatos adicionales de Huerta — registrados en `1c90715`
 
 [prepare_huerta_batch.py](../scripts/prepare_huerta_batch.py) extrae tres unidades
 continuas de la fuente ya descargada. La [revisión del lote](../artifacts/reviews/huerta-batch-v1.json)
@@ -677,10 +677,49 @@ La referencia congelada y todas las versiones anteriores permanecen intactas.
 outputs/venv-ml/Scripts/python.exe scripts/prepare_huerta_batch.py --output outputs/huerta-batch-v1/reproduccion.json
 ```
 
-Estado: lote preparado y revisado localmente, sin filas nuevas, entrenamiento,
-descargas ni llamadas a Modal en este bloque. Siguiente paso después del commit:
-incorporar los tres candidatos a otra copia experimental conservando las relaciones
-documentales. La mejora de métricas queda pendiente de un experimento posterior.
+Al cerrar ese bloque, el lote quedó preparado y revisado localmente, sin filas
+nuevas, entrenamiento, descargas ni llamadas a Modal. El dictamen conserva ese
+estado histórico; la incorporación se registra por separado a continuación.
+
+## Bloque actual: incorporación del lote HUE02/03/04
+
+[build_huerta_batch_snapshot.py](../scripts/build_huerta_batch_snapshot.py) añade
+el lote completo a la copia que ya contenía HUE01. Reproduce la extracción y
+verifica las entradas, el acuerdo de etiquetas y la fuente antes de generar
+`outputs/huerta-batch-snapshot-v1/reviewed-export.json`. La
+[evidencia de incorporación](../artifacts/reviews/huerta-batch-snapshot-v1.json)
+registra resultados, procedencia y hashes sin incluir el corpus completo.
+
+Resultado: **818 filas, 600 train, 81 validación y 137 test**. Crisis e ideas pasa
+de 59 a 62 ejemplos en train. Se conservaron las 815 filas anteriores en su orden,
+las correcciones y todos los registros de procedencia. La referencia congelada
+y sus 218 filas de evaluación permanecen idénticas.
+
+Los nuevos fragmentos usan el mismo identificador de fuente de HUE01 y solo
+aparecen en train; el número total de fuentes continúa en 12. La procedencia por
+fragmento conserva la relación HUE03/HUE04, sus condiciones históricas, páginas,
+referencias, cambios de extracción y acceso al contexto local. Para HUE02 también
+se indica el inicio de la cita, distinguiéndolo del análisis de Huerta. Los archivos
+de contexto anteriores, incluido el de Fonseca, siguen localizables desde el informe.
+
+Verificación local: reproducción idéntica, conservación de filas y metadatos,
+coincidencia de hashes y separación por fuente correctas. Pasaron 17 controles
+de rechazo: evaluación alterada, candidato ausente o repetido, texto o contexto
+alterados, desacuerdo de etiquetas, candidato no aprobado o ya aplicado, partición
+incorrecta del lote o fuente, relación desconocida, incorporación repetida, grupo
+documental o texto duplicados, hash inválido, sobrescritura y salida fuera de `outputs/`.
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/build_huerta_batch_snapshot.py --output outputs/huerta-batch-snapshot-reproduccion
+```
+
+Estado: implementado y probado localmente; sin entrenamiento, métricas nuevas,
+cambios del umbral de mantenimiento ni cambios en producción. Las etiquetas
+siguen siendo revisiones asistidas por IA, no validación humana independiente.
+
+Siguiente paso después del commit: medir el efecto de los cuatro pasajes de Huerta
+con una comparación local TF-IDF usando una configuración ya fijada. Priorizar
+validación y no utilizar resultados de test para decidir nuevas correcciones.
 
 ### Reproducir la muestra de la revisión inicial
 

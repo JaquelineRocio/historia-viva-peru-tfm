@@ -1,0 +1,300 @@
+{
+  "status": "experimental_local_verified",
+  "parent_sha256": "1d33262b369be8fb0f81028cd3024ba4fc74bc81f18da0dc6ec3d40952546dbe",
+  "reference_sha256": "54bd64939cc3bdf4d105d14208a41fd2dbb9095f7ef9cb52a4c3baf083f29ece",
+  "reviewed_sha256": "4d0471f49d79a7059059427b6b31779ce60d14eff6e9af1508d12d3f481c21e4",
+  "evaluation_sha256": "593fe90d68bc282108eab983515598c7c3b5ebbf42e2f79dbdb275c12d8c02a2",
+  "audit": {
+    "dataset_sha256": "4d0471f49d79a7059059427b6b31779ce60d14eff6e9af1508d12d3f481c21e4",
+    "split_counts": {
+      "train": 600,
+      "val": 81,
+      "test": 137
+    },
+    "class_distribution": {
+      "train": {
+        "campanias_conflictos_militares": 88,
+        "participacion_social_regional": 83,
+        "no_relevante": 101,
+        "organizacion_consecuencias_republicanas": 101,
+        "crisis_ideas_emancipadoras": 62,
+        "liderazgos_diplomacia_proyectos": 94,
+        "contexto_colonial_antecedentes": 71
+      },
+      "val": {
+        "contexto_colonial_antecedentes": 16,
+        "crisis_ideas_emancipadoras": 15,
+        "participacion_social_regional": 11,
+        "no_relevante": 16,
+        "liderazgos_diplomacia_proyectos": 4,
+        "organizacion_consecuencias_republicanas": 15,
+        "campanias_conflictos_militares": 4
+      },
+      "test": {
+        "contexto_colonial_antecedentes": 14,
+        "crisis_ideas_emancipadoras": 28,
+        "no_relevante": 39,
+        "participacion_social_regional": 12,
+        "campanias_conflictos_militares": 7,
+        "liderazgos_diplomacia_proyectos": 23,
+        "organizacion_consecuencias_republicanas": 14
+      }
+    },
+    "sources_by_split": {
+      "train": [
+        "0ea45102-057d-4bff-b527-f36326f66d33",
+        "17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+        "48262fb6-dee2-531e-b001-536c5928a9ca",
+        "514f190e-5d01-497a-a6ef-648601cd8bdb",
+        "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+        "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+        "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+        "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+        "e32181bc-41d0-4400-a76d-eb11fc88bf71"
+      ],
+      "val": [
+        "b23a4bf1-b9f4-4c08-bb89-a4cf4a67e004"
+      ],
+      "test": [
+        "15e52806-3d75-4117-937d-7c7eda594579",
+        "4ca9c84a-627b-4027-8216-fdc07c506727"
+      ]
+    },
+    "source_overlap": 0,
+    "exact_text_overlap": 0
+  },
+  "parent_rows_preserved": 815,
+  "added": 3,
+  "removed": 0,
+  "relabeled": 0,
+  "new_sources": 0,
+  "provenance": [
+    {
+      "candidate_id": "HUE02",
+      "resource_id": "48262fb6-dee2-531e-b001-536c5928a9ca",
+      "label": "crisis_ideas_emancipadoras",
+      "source_group": "doi:10.18800/historica.202001.004",
+      "related_document_group": "GGLI/t1/n5/1821-07-25/p18",
+      "text_sha256": "8b9d6b3f148cdd7916984ea7f4202d12db8d81c4baf18b750d7b2ffd8b3389fe",
+      "pdf_page": 14,
+      "printed_page": 138,
+      "direct_reference": "Gaceta del Gobierno de Lima Independiente, tomo 1, numero 5, 25-07-1821, p.18, nota35.",
+      "quality_flags": [
+        "author_analysis_and_documentary_quote",
+        "publication_date_not_proclamation_date"
+      ],
+      "conditions": [
+        "Separar analisis de Huerta y cita de la proclama.",
+        "25-07-1821 es fecha del numero citado; el texto anuncia la proclamacion para el dia28, no para el25."
+      ],
+      "related_candidate_ids": [],
+      "extraction_changes": [
+        {
+          "old": "Soberanos.35",
+          "new": "Soberanos."
+        }
+      ],
+      "confidence": "alta",
+      "annotation_origin": "two_ai_reviews_nonblind",
+      "human_expert_validation": false,
+      "local_context": {
+        "path": "outputs/huerta-batch-v1/candidates.json",
+        "file_sha256": "53d0f2eec4e1d488dab42147a485ea6416f230098a4754ab685cf3b7f59275d7"
+      },
+      "review_path": "artifacts/reviews/huerta-batch-v1.json",
+      "review_sha256": "ab618508beb16e763760dedd028d470c8be566c8a4921b659709736ada594f0d",
+      "quotation_start_marker": "Por tanto, ciudadanos,"
+    },
+    {
+      "candidate_id": "HUE03",
+      "resource_id": "48262fb6-dee2-531e-b001-536c5928a9ca",
+      "label": "crisis_ideas_emancipadoras",
+      "source_group": "doi:10.18800/historica.202001.004",
+      "related_document_group": "AGN/ColeccionTomasDieguez/2.7.22/f1r/1821-10-14",
+      "text_sha256": "016fe2fcf8f5b1085df06331cfef5242a0ab3c5a8c2465d71777831d8bc3d7af",
+      "pdf_page": 16,
+      "printed_page": 140,
+      "direct_reference": "Carta de Juan Ignacio Machado a Tomas Dieguez, Trujillo, 14-10-1821; AGN, Coleccion Tomas Dieguez, 2.7.22, f.1r, notas40-41.",
+      "quality_flags": [
+        "quoted_political_slavery_metaphor",
+        "explicit_extraction_spacing_repair"
+      ],
+      "conditions": [
+        "Las opiniones sobre derechos, injusticia y calidad del periodico pertenecen al remitente.",
+        "Esclavitud es retorica politica en este pasaje; no demuestra condicion juridica individual.",
+        "La impresion en1818 es informacion citada, no comprobada independientemente."
+      ],
+      "related_candidate_ids": [
+        "HUE04"
+      ],
+      "extraction_changes": [
+        {
+          "old": "1818».40",
+          "new": "1818»."
+        },
+        {
+          "old": "escritos».41",
+          "new": "escritos»."
+        },
+        {
+          "old": "T omás",
+          "new": "Tomás"
+        }
+      ],
+      "confidence": "alta",
+      "annotation_origin": "two_ai_reviews_nonblind",
+      "human_expert_validation": false,
+      "local_context": {
+        "path": "outputs/huerta-batch-v1/candidates.json",
+        "file_sha256": "53d0f2eec4e1d488dab42147a485ea6416f230098a4754ab685cf3b7f59275d7"
+      },
+      "review_path": "artifacts/reviews/huerta-batch-v1.json",
+      "review_sha256": "ab618508beb16e763760dedd028d470c8be566c8a4921b659709736ada594f0d"
+    },
+    {
+      "candidate_id": "HUE04",
+      "resource_id": "48262fb6-dee2-531e-b001-536c5928a9ca",
+      "label": "crisis_ideas_emancipadoras",
+      "source_group": "doi:10.18800/historica.202001.004",
+      "related_document_group": "Huerta2020/p141/prensa-fidelista-patriota",
+      "text_sha256": "059e61847e9fc5d7d9ed63facf83a8685e0e18c3b95cdda66c0451313ab32a22",
+      "pdf_page": 17,
+      "printed_page": 141,
+      "direct_reference": "Alvarez y Martinez Riaza 1992: 66-68, nota42.",
+      "quality_flags": [
+        "contextual_antecedent_previous_passage",
+        "compressed_chronology",
+        "secondary_synthesis_not_independent_primary_document"
+      ],
+      "conditions": [
+        "Conservar dependencia con HUE03: estas obras remite al parrafo anterior.",
+        "No inferir que todos los periodicos existian antes de la libertad de imprenta, circulaban simultaneamente o estaban prohibidos por la Corona.",
+        "Solo nota42 es referencia directa; notas43-44 del volcado local pertenecen al parrafo siguiente y se conservan como contexto."
+      ],
+      "related_candidate_ids": [
+        "HUE03"
+      ],
+      "extraction_changes": [
+        {
+          "old": "otros. 42",
+          "new": "otros."
+        }
+      ],
+      "confidence": "media",
+      "annotation_origin": "two_ai_reviews_nonblind",
+      "human_expert_validation": false,
+      "local_context": {
+        "path": "outputs/huerta-batch-v1/candidates.json",
+        "file_sha256": "53d0f2eec4e1d488dab42147a485ea6416f230098a4754ab685cf3b7f59275d7"
+      },
+      "review_path": "artifacts/reviews/huerta-batch-v1.json",
+      "review_sha256": "ab618508beb16e763760dedd028d470c8be566c8a4921b659709736ada594f0d"
+    }
+  ],
+  "training_performed": false,
+  "production_changed": false,
+  "inputs": {
+    "source_review": {
+      "path": "artifacts/reviews/huerta-pilot-v1.json",
+      "file_sha256": "add75d193013f9ff94581b2f2a026857b135c3e9caf6246d5d2034308202e1c0"
+    },
+    "dataset": {
+      "path": "outputs/huerta-snapshot-v1/reviewed-export.json",
+      "file_sha256": "eb1442c51b09dd66f691d77c6d9e412f5bebdef153e9b4efb6a30c905c03293b"
+    },
+    "pdf": {
+      "path": "outputs/ideas-source-v1/huerta-2020.pdf",
+      "file_sha256": "2d98c10b6915b00f9208582e6321d444f3fcdff512b5d72a12016793a7fe5020"
+    },
+    "taxonomy": {
+      "path": "docs/guia-etiquetado-1780-1842.md",
+      "file_sha256": "737d155a6f8260df4fa00b5f1adc6f469457f678fd144dd8c2d6b80a564d76e7"
+    },
+    "overlap_helpers": {
+      "path": "scripts/prepare_agn_pilot.py",
+      "file_sha256": "2c1cd9c93bb1f658c0f1d23046fba8589e130e2778038aadc6797df4d501f00a"
+    },
+    "candidates": {
+      "path": "outputs/huerta-batch-v1/candidates.json",
+      "file_sha256": "53d0f2eec4e1d488dab42147a485ea6416f230098a4754ab685cf3b7f59275d7"
+    },
+    "builder": {
+      "path": "scripts/prepare_huerta_batch.py",
+      "file_sha256": "41cd20706c2dd6ea23051b2e7decbebee63a059821d94a8fddc898ec06fbbaf9"
+    },
+    "reference": {
+      "path": "artifacts/datasets/gold-v1-source-aware.json",
+      "file_sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a"
+    },
+    "parent_evidence": {
+      "path": "artifacts/reviews/huerta-snapshot-v1.json",
+      "file_sha256": "9f8571f0642d4b9fd993929fa192ea149da817e1941a478a3a8702c4f36b7e71"
+    },
+    "review": {
+      "path": "artifacts/reviews/huerta-batch-v1.json",
+      "file_sha256": "850f4b3d6870ee7586122e92cccc84c81ab5e3016fc0f1ab3081c7e1d90829fe"
+    }
+  },
+  "parent_context_directory": "outputs/huerta-snapshot-v1",
+  "prior_context_archives": [
+    {
+      "path": "outputs/fonseca-snapshot-v1/replacement-archive.json",
+      "file_sha256": "d07a6e00fa48a724deb215bb14392442009905c82f707a5ab6ea7386e4c00b86"
+    }
+  ],
+  "schema_version": 1,
+  "review_commit": "1c90715",
+  "verification": {
+    "deterministic_reproduction": true,
+    "parent_rows_preserved": 815,
+    "prior_metadata_preserved": true,
+    "relations_and_review_conditions_preserved": true,
+    "frozen_reference_and_evaluation_unchanged": true,
+    "input_and_context_hashes_verified": true,
+    "rejected_controls": [
+      "changed_holdout",
+      "missing_candidate",
+      "repeated_candidate_id",
+      "changed_text",
+      "changed_context",
+      "label_disagreement",
+      "unapproved_candidate",
+      "candidate_already_applied",
+      "batch_not_train",
+      "source_registry_not_train",
+      "unknown_related_candidate",
+      "already_incorporated",
+      "same_document_other_id",
+      "duplicate_text",
+      "altered_input_hash",
+      "overwrite",
+      "outside_outputs"
+    ]
+  },
+  "builder": {
+    "path": "scripts/build_huerta_batch_snapshot.py",
+    "file_sha256": "1161d923186ada6eceaf41766341bf1eac8837c01ebf85a2a7535988594934bc"
+  },
+  "outputs": {
+    "reviewed-export.json": {
+      "path": "outputs/huerta-batch-snapshot-v1/reviewed-export.json",
+      "file_sha256": "38c71b1548b89848142edc1aadab24d6651393f7361140a516e36d758e7ba244"
+    },
+    "build-report.json": {
+      "path": "outputs/huerta-batch-snapshot-v1/build-report.json",
+      "file_sha256": "378dd82aa758bc5d842eb1deb5a84b62d1f6199ba758f65c499b0c6170b9340a"
+    },
+    "verification.json": {
+      "path": "outputs/huerta-batch-snapshot-v1/verification.json",
+      "file_sha256": "663edca76f0bdadd7e2d22212c41087ceea7c317e4f049466d3d97d2505ad4ff"
+    }
+  },
+  "limits": [
+    "AI-assisted thematic labels; no independent human expert validation.",
+    "HUE02/03/04 share the existing Huerta source in train. They are not three new independent sources.",
+    "HUE03 and HUE04 remain contextually related; the HUE04 chronology caveat is preserved.",
+    "All previous review decisions remain historical records, unchanged. Application is recorded in this new version.",
+    "No training, metrics, deployment or remote calls in this block."
+  ],
+  "next_step": "Compare locally with the preceding TF-IDF experiment using a fixed configuration; do not use test scores to choose data corrections."
+}
