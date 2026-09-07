@@ -1,0 +1,198 @@
+{
+  "candidate_id": "FON-R05-v1",
+  "status": "pending_group_replacement",
+  "source": {
+    "resource_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+    "author": "Juan Fonseca Ariza",
+    "title": "¿Bandoleros o patriotas? Las guerrillas y la dinámica popular en la independencia del Perú",
+    "year": 2010,
+    "url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/95",
+    "license": "CC BY 4.0 displayed on article page, checked 2026-09-07",
+    "local_file": ".corpus-downloads/fonseca_bandoleros_patrotas.pdf"
+  },
+  "source_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+  "source_split": "train",
+  "proposed_label": "participacion_social_regional",
+  "peer_review_file_sha256": "e1aaf47ed45119a50c54127476fc33aefbca2a49097a4308cabc9d9f10a68f83",
+  "inputs": {
+    "dataset": {
+      "path": "artifacts/datasets/gold-v1-source-aware.json",
+      "file_sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a"
+    },
+    "first_review": {
+      "path": "artifacts/reviews/history-review-v1.json",
+      "file_sha256": "18125b450c1d403780fee33847ac461438307f630cb1e6370cf83de3f8b21fb4"
+    },
+    "taxonomy": {
+      "path": "docs/guia-etiquetado-1780-1842.md",
+      "file_sha256": "737d155a6f8260df4fa00b5f1adc6f469457f678fd144dd8c2d6b80a564d76e7"
+    },
+    "sampler": {
+      "path": "scripts/sample_history_review.py",
+      "file_sha256": "ed6d5560009d870f9ad8fb7b3217a98e403cf65974c76057bebceffbbdb6ebf9"
+    },
+    "ophelan": {
+      "path": ".corpus-downloads/opheland_mito_independencia.pdf",
+      "file_sha256": "1acd9f242328d6901bd6b68f820540473793ca9c5434a600fdd407b95da7a909"
+    },
+    "fonseca": {
+      "path": ".corpus-downloads/fonseca_bandoleros_patrotas.pdf",
+      "file_sha256": "082ca707f2e2246faf43e7bcd3c620a06e287d6f1f2212b549c94d77e0e5306f"
+    }
+  },
+  "pypdf_version": "5.9.0",
+  "parts": [
+    {
+      "pdf_page": 4,
+      "printed_page": 108,
+      "start_marker": "Además de la CDIP",
+      "end_marker": "Esta afirmación es significativa, pues refuerza la",
+      "page_text_sha256": "df8be135aa60570da4520585b2ff3739a5e9e8a133fa2b3a8c82184e0294c3b0",
+      "selected_text_sha256": "37136397fd530f15358fa093a2f62ff11374e72a4f7cc6a6e4221e3ba62549a9"
+    },
+    {
+      "pdf_page": 5,
+      "printed_page": 109,
+      "start_marker": "visión oficial",
+      "end_marker": "desdibujado por su salvajismo.",
+      "page_text_sha256": "f562d7b7b473d73ff5d09c7c20e86abfeca8230a84442db41b5c4ae4b0764d80",
+      "selected_text_sha256": "3cab932f77a36ad2da8f4925f3f4d461751ebd7e699204eebce44a0cdd6bf9f8"
+    }
+  ],
+  "extraction_changes": [
+    {
+      "old": "CDIP ,",
+      "new": "CDIP,"
+    },
+    {
+      "old": "Quirós. 5 También",
+      "new": "Quirós. También"
+    },
+    {
+      "old": "Arenales6",
+      "new": "Arenales"
+    },
+    {
+      "old": "historiografía. 7 Finalmente",
+      "new": "historiografía. Finalmente"
+    },
+    {
+      "old": "matar. 8 Esta",
+      "new": "matar. Esta"
+    }
+  ],
+  "word_count": 203,
+  "text_sha256": "d09a1cbb2e94ebbb7b5773b040472b7a2416e58e17a56c131bc6b3696cf3fd78",
+  "normalization": "Unir guiones de fin de línea y espacios; quitar llamadas 5–8 y coma separada de CDIP.",
+  "overlap_screen": {
+    "train": {
+      "compared": 596,
+      "exact_matches": [],
+      "flagged_indices": [
+        55
+      ],
+      "max_jaccard": 0.456274,
+      "max_containment": 0.652174
+    },
+    "val": {
+      "compared": 81,
+      "exact_matches": [],
+      "flagged_indices": [],
+      "max_jaccard": 0.002793,
+      "max_containment": 0.00625
+    },
+    "test": {
+      "compared": 137,
+      "exact_matches": [],
+      "flagged_indices": [],
+      "max_jaccard": 0.002674,
+      "max_containment": 0.005682
+    }
+  },
+  "documentary_overlap_group": [
+    {
+      "item_index": 55,
+      "text_sha256": "88571ef1f26a112fd43523b5b76d9283a6146735f5aa737be6fde8e065a2633c",
+      "label": "participacion_social_regional",
+      "jaccard": 0.456274,
+      "containment": 0.652174
+    },
+    {
+      "item_index": 57,
+      "text_sha256": "96accf276a3574d3016e60b4666fc0a9552b21f37ee485fe3441f9591c1071fb",
+      "label": "participacion_social_regional",
+      "jaccard": 0.090652,
+      "containment": 0.172043
+    },
+    {
+      "item_index": 58,
+      "text_sha256": "9d20b43e8ce0bd92848a342be04c24dce6439e307fb7078bd5f6bcc1aa1e5fa4",
+      "label": "participacion_social_regional",
+      "jaccard": 0.07438,
+      "containment": 0.141361
+    }
+  ],
+  "screening_rule": "5-gramas normalizados; Jaccard >= 0.25 o containment >= 0.8",
+  "screening_limit": "El umbral no detecta todos los tramos compartidos; conservar también el grupo documental.",
+  "next_action": "Resolver conjuntamente train55/57/58 antes de sustituir; no añadir como contenido nuevo.",
+  "dataset_applied": false,
+  "production_changed": false,
+  "local_candidate": {
+    "path": "outputs/fonseca-repair-v1/candidate.json",
+    "file_sha256": "62de915fc94c7554c1a4fd440f42bc7c7bec28b15d8232bf1689101fd854f16d"
+  },
+  "builder": {
+    "path": "scripts/prepare_fonseca_repair.py",
+    "file_sha256": "9689fb478971a666d2c1e2a6d3864a07f21f26e0e03196104048d295465f6aa6"
+  },
+  "overlap_helpers": {
+    "path": "scripts/prepare_agn_pilot.py",
+    "file_sha256": "2c1cd9c93bb1f658c0f1d23046fba8589e130e2778038aadc6797df4d501f00a"
+  },
+  "schema_version": 1,
+  "date": "2026-09-07",
+  "review": {
+    "type": "AI-assisted thematic review",
+    "reviewer_agent": "/root/revision_historica_agn",
+    "human_expert_validation": false,
+    "independent_system": false,
+    "protocol": "Selección discutida entre el agente principal y el revisor; no lectura independiente ciega. El agente cotejó la capa textual de PDF4–5; el principal además leyó PDF3 para identificar CDIP.",
+    "decision": "aceptar_como_candidato_de_reparacion",
+    "label": "participacion_social_regional",
+    "rationale": "Los testimonios construyen representaciones de los guerrilleros y de la participación popular; nombres de militares y acusaciones quedan subordinados a ese análisis.",
+    "selection_rationale": "El párrafo previo sobre Miller aporta contexto pertinente. El final conserva una oración completa y evita anunciar una tabla omitida.",
+    "limits": "Las acusaciones contra San Martín y caracterizaciones del pueblo son representaciones que Fonseca estudia, no hechos certificados. No se cotejaron testimonios originales.",
+    "abbreviation_context": "CDIP se identifica como Colección documental de la independencia del Perú en PDF3/impresa107; la sigla se conserva sin expansión dentro del candidato."
+  },
+  "disposition": {
+    "is_new_source": false,
+    "is_independent_new_content": false,
+    "append_as_new_row": false,
+    "automatic_replacement": false,
+    "reason": "Comparte prosa con train55, R05/train57 y R12/train58. La sustitución exige recuperar los tramos útiles restantes y tratar la tabla por separado, sin eliminar las tres filas automáticamente."
+  },
+  "verification": {
+    "deterministic_reproduction": true,
+    "word_count": 203,
+    "joined_sentence_verified": true,
+    "footnotes_and_header_excluded": true,
+    "known_lexical_match": 55,
+    "documentary_overlap_preserved": [
+      55,
+      57,
+      58
+    ],
+    "rejected_controls": [
+      "límites ausentes",
+      "límites repetidos",
+      "hash de entrada alterado",
+      "ajuste inexistente",
+      "longitud insuficiente",
+      "sobrescritura",
+      "salida fuera de outputs"
+    ],
+    "reference_and_agn_export_unchanged": true,
+    "training_performed": false,
+    "remote_services_called": false
+  }
+}

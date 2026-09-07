@@ -10,6 +10,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Diagnóstico | Compilar web/API, ejecutar suites y revisar dataset | API 37 pruebas, ML 55 pruebas y web verificados localmente |
 | Experimentos | Comparar hiperparámetros usando validación; test solo del ganador | Tres configuraciones TF-IDF y tres BETO ejecutadas en este equipo |
 | Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Segunda revisión asistida por IA completa: 11 aprobar, 2 corregir, 6 ambiguos y 1 excluir hasta resegmentar. Decisiones sin aplicar al dataset ni a producción |
+| Reparación de R05 | Recuperar prosa separada por notas y salto de página | Candidato local de 203 palabras verificado. Se solapa con train55/57/58; pendiente sustitución conjunta, sin incorporarlo como contenido nuevo |
 | Fuentes para enriquecimiento | Evaluar contenido, procedencia, reutilización y solapamientos | Tres candidatas examinadas; dos fragmentos AGN incorporados solo a copia experimental local. BNP pendiente de OCR/metadatos y Constitución pendiente de cotejo |
 | Piloto AGN | Preparar hasta tres fragmentos con procedencia y etiquetas propuestas | Tres etiquetas coincidentes tras segunda revisión asistida por IA. AGN01/02 candidatos a entrenamiento futuro; AGN03 solo contexto. Snapshot y producción intactos |
 | Copia experimental AGN | Incorporar los dos candidatos y comprobar el mantenimiento | Export local verificado; referencia y evaluación intactas. Mantenimiento omitió entrenar: dos cambios frente al mínimo de 20. Sin métricas nuevas ni despliegue |
@@ -263,7 +264,7 @@ La copia experimental quedó registrada en `22ad8f6`; continúa intacta durante 
 revisión posterior. Falta material adecuado de crisis e ideas antes de un
 experimento que pueda evaluar mejoras.
 
-## Bloque actual: segunda revisión de los 20 fragmentos iniciales
+## Segunda revisión de los 20 fragmentos iniciales — registrada en `e2c3e74`
 
 El [nuevo dictamen](../artifacts/reviews/history-review-v1-peer-review.json)
 conserva la primera etiqueta del segundo agente, comparación con el primer
@@ -303,9 +304,51 @@ export AGN intactos. No se consultaron textos de evaluación para adjudicar caso
 no se entrenó ni se escribió en producción. La vista legible con textos se guarda
 en `outputs/history-review-v1/segunda-revision-legible.md`, excluida de Git.
 
-Siguiente paso después del commit: recuperar y resegmentar R05 con las páginas
-locales disponibles. Las correcciones resueltas solo se aplicarán en otro bloque
-experimental; los seis casos ambiguos requieren contexto adicional.
+El dictamen quedó registrado en `e2c3e74`. Las correcciones resueltas solo se
+aplicarán en otro bloque experimental; los seis casos ambiguos requieren contexto
+adicional. La recuperación de R05 se describe a continuación.
+
+## Bloque actual: recuperación del texto de R05
+
+[prepare_fonseca_repair.py](../scripts/prepare_fonseca_repair.py) recupera prosa de
+las páginas impresas 108–109 (PDF4–5) de Fonseca. Une la frase interrumpida entre
+páginas, excluye notas y encabezado, y retira las llamadas bibliográficas 5–8.
+Conserva las grafías y atribuciones; CDIP se mantiene como sigla. Las entradas,
+límites de extracción y cambios quedan fijados para reproducir el resultado.
+
+El candidato `FON-R05-v1` tiene **203 palabras**. Comienza con los testimonios sobre
+guerrilleros y completa la interpretación del testimonio de Riva Agüero. Termina
+en una oración completa antes de anunciar la tabla siguiente. El segundo agente
+considera coherente la selección y propone `participacion_social_regional`.
+La revisión es asistida por IA y discutida entre agentes; no certifica como hechos
+las acusaciones y caracterizaciones que la fuente analiza.
+
+La [evidencia de reparación](../artifacts/reviews/fonseca-repair-v1.json) contiene
+procedencia, hashes, dictamen y solapamientos. El texto y su vista legible están
+en `outputs/fonseca-repair-v1/`, excluidos de Git.
+
+**No es una fuente ni un ejemplo independiente nuevo.** La comparación léxica
+marca train55 (Jaccard 0.456274). También reutiliza prosa de R05/train57 y
+R12/train58, aunque esos tramos no superan el umbral automático. Las tres relaciones
+se conservan. El candidato queda `pending_group_replacement`: no añadirlo ni
+eliminar automáticamente las tres filas originales, que contienen otros tramos.
+
+Reproducción con los PDF locales ya disponibles y una salida nueva:
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/prepare_fonseca_repair.py --output outputs/fonseca-repair-v1/reproduccion.json
+```
+
+Verificación local: reproducción idéntica, 203 palabras, frase unida correctamente,
+notas excluidas y 814 comparaciones léxicas. Sin coincidencias exactas ni superiores
+al umbral con validación/test; solo se consultaron indicadores de esos conjuntos.
+Pasaron los controles de límites, hash, ajustes, longitud, sobrescritura y ruta.
+El dataset congelado y el export AGN permanecen intactos; no hubo entrenamiento
+ni llamadas a servicios remotos.
+
+Siguiente paso después del commit: resolver la sustitución de train55/57/58,
+preservando su prosa útil y tratando la tabla por separado. Solo entonces preparar
+la siguiente versión experimental; el candidato actual no aumenta el corpus.
 
 ### Reproducir la muestra de la revisión inicial
 
