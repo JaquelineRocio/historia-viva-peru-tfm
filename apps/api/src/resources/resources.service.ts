@@ -1,4 +1,4 @@
-import { BadRequestException, ConflictException, ForbiddenException, Inject, Injectable, Logger, NotFoundException, OnModuleDestroy, OnModuleInit } from '@nestjs/common';
+import { BadRequestException, ConflictException, ForbiddenException, Inject, Injectable, Logger, NotFoundException, OnModuleDestroy, OnModuleInit, ServiceUnavailableException } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { InjectRepository } from '@nestjs/typeorm';
 import { createHash, randomUUID } from 'node:crypto';
@@ -189,7 +189,13 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
     const existing = await this.resources.findOne({ where: { projectId, checksum, isDeleted: false } });
     if (existing) throw new ConflictException('Ese PDF ya existe en el proyecto');
     const safeName = `${randomUUID()}${extname(file.originalname).toLowerCase() || '.pdf'}`;
-    const stored = await this.storage.put(`${projectId}/${safeName}`, file.buffer, file.mimetype);
+    let stored: Awaited<ReturnType<FileStorageService['put']>>;
+    try {
+      stored = await this.storage.put(`${projectId}/${safeName}`, file.buffer, file.mimetype);
+    } catch (error) {
+      this.logger.warn(`No se pudo almacenar el PDF: ${error instanceof Error ? error.message : String(error)}`);
+      throw new ServiceUnavailableException('No se pudo guardar el PDF en el almacenamiento. Inténtalo más tarde.');
+    }
     return this.resources.save(this.resources.create({
       projectId,
       type: 'pdf',
@@ -276,7 +282,12 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
       };
     } catch (error) {
       this.logger.warn(`Documento ${id} no disponible: ${error instanceof Error ? error.message : error}`);
-      throw new NotFoundException('El archivo PDF ya no está disponible');
+      const storageError = error as { name?: string; code?: string; Code?: string } | null;
+      const missing = storageError?.name === 'NoSuchKey'
+        || storageError?.code === 'NoSuchKey' || storageError?.Code === 'NoSuchKey'
+        || storageError?.code === 'ENOENT';
+      if (missing) throw new NotFoundException('El archivo PDF no se encuentra en el almacenamiento');
+      throw new ServiceUnavailableException('No se pudo acceder al almacenamiento del PDF. Inténtalo más tarde.');
     }
   }
 
