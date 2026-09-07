@@ -6,6 +6,7 @@ Uso desde la raíz del repositorio:
 El secreto `historia-viva-ml` debe contener ML_INTERNAL_TOKEN. El modelo BETO
 público se incorpora a la imagen durante el build para reducir el arranque en frío.
 """
+import os
 from pathlib import Path
 
 import modal
@@ -36,6 +37,7 @@ image = (
             "ML_STORAGE_DIR": "/opt/models",
             "ML_DEFAULT_MODEL_REPO": MODEL_REPO,
             "ML_DEFAULT_MODEL_PATH": REMOTE_MODEL,
+            "ML_DEPLOYMENT_SHA": os.environ.get("DEPLOYMENT_SHA", "unknown"),
         }
     )
     # Modal exige que add_local_* sea el último paso de la receta.

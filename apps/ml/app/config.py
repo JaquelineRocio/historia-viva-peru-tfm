@@ -14,6 +14,7 @@ class Settings(BaseSettings):
     # Servidor
     host: str = "0.0.0.0"
     port: int = 8000
+    deployment_sha: str = "unknown"
 
     # Idiomas preferidos para subtítulos de YouTube (orden de prioridad)
     transcript_languages: List[str] = ["es", "es-PE", "es-419", "es-ES"]

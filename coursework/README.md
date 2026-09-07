@@ -7,7 +7,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 
 | Bloque | Resultado | Estado |
 |---|---|---|
-| Diagnóstico | Compilar web/API, ejecutar suites y revisar dataset | API 37 pruebas, ML 42 pruebas y web verificados localmente |
+| Diagnóstico | Compilar web/API, ejecutar suites y revisar dataset | API 37 pruebas, ML 51 pruebas y web verificados localmente |
 | Experimentos | Comparar hiperparámetros usando validación; test solo del ganador | Tres configuraciones TF-IDF y tres BETO ejecutadas en este equipo |
 | Informe Unidad I | Dataset, características, parámetros, resultados, despliegue y límites | Borrador en informe-unidad-1.md |
 | Demo Unidad I | Dos pruebas funcionales completas y explicación en inglés | PDF cargado, predicho tras reintento y revisión persistida vía API. Primera clasificación fallida y recorrido visual pendientes |
@@ -28,7 +28,7 @@ Las consultas de Git pueden realizarlas el asistente o la autora. Las ramas, el 
 | Automatización y configuración de Render | `62073ac` | Publicado; CI y mantenimiento TF-IDF ejecutados correctamente |
 | Evidencias e informes | `847b141` | Publicado |
 | Exclusiones del material local | `3974f4a` | Publicado; presentación conservada localmente |
-| Arranque de BETO antes de aceptar peticiones | `24f03be` | Registrado; pruebas locales correctas, despliegue ML pendiente |
+| Arranque de BETO antes de aceptar peticiones | `24f03be` | Publicado; Modal v7 desplegado manualmente y predicción verificada |
 | Errores de almacenamiento PDF | `0bc365a` | Registrado; pruebas y compilación correctas, despliegue API pendiente |
 
 Las modificaciones personales de `.gitignore` se revisan por separado.
@@ -163,3 +163,31 @@ Se preparó una corrección local para terminar la carga de BETO durante el arra
 En producción, la reclasificación del PDF privado existente obtuvo tres predicciones. Se confirmó `no_relevante` en la página 3 y se comprobó su persistencia desde una sesión autenticada nueva. El archivo descargado coincidió byte por byte con el PDF cargado. [Evidencia del recorrido con reintento](../artifacts/experiments/course-u1/evidence/source-flow-reviewed.json). La revisión confirmó una etiqueta ya correcta; no demuestra la corrección de una predicción equivocada. El primer intento de clasificación falló, por lo que no se declara aprobada la ejecución automática completa.
 
 Las correcciones quedaron registradas en `24f03be` (ML) y `0bc365a` (API). Siguiente paso: registrar estas evidencias, publicar los commits y, con autorización de la autora, desplegar ML y verificar un arranque nuevo con predicción automática. Permanecen pendientes la corrección de una etiqueta distinta y la comprobación visual de la interfaz.
+
+## Despliegue automático de Modal
+
+La autora desplegó manualmente la versión Modal v7 el 6 de septiembre de 2026 a las 23:34 en Lima. Se comprobó BETO listo, tres predicciones sobre el PDF privado y conservación de la revisión anterior. El historial de ese despliegue no registró un SHA de Git.
+
+El nuevo workflow `.github/workflows/modal-deploy.yml` automatiza el siguiente ciclo:
+
+1. Esperar una ejecución correcta de CI en `main`, originada por push o ejecución manual de CI. No despliega pull requests.
+2. Descargar exactamente el commit que CI verificó. Si `main` ya avanzó, omitir ese despliegue antiguo.
+3. Comprobar secretos, desplegar con Modal 1.5.5 y etiquetar la versión con el SHA. Los despliegues de este workflow se serializan.
+4. Consultar `/health` y `/infer` con autenticación. Ambas respuestas deben identificar el SHA esperado; BETO debe estar listo y producir una predicción válida.
+5. Archivar el resultado JSON durante 90 días. Si la verificación falla, el workflow falla; todavía no restaura automáticamente la versión anterior.
+
+Antes de publicar este workflow, configurar en **GitHub → repositorio → Settings → Secrets and variables → Actions → New repository secret**:
+
+| Nombre exacto | Procedencia y uso |
+|---|---|
+| `MODAL_TOKEN_ID` | ID de un token de API de [Modal Settings → Tokens](https://modal.com/settings/tokens); permite desplegar |
+| `MODAL_TOKEN_SECRET` | Secreto correspondiente al token de API anterior |
+| `MODAL_PROXY_TOKEN_ID` | Mismo valor que usa Render para acceder al servicio ML |
+| `MODAL_PROXY_TOKEN_SECRET` | Mismo valor que usa Render para autenticar el proxy ML |
+| `ML_INTERNAL_TOKEN` | Token compartido de Render y el secreto `historia-viva-ml` en Modal; autoriza `/infer` |
+
+Introducir los valores directamente en GitHub; no guardarlos en archivos ni pegarlos en el chat. Los tokens de API y los del proxy son pares diferentes. La configuración remota del secreto `historia-viva-ml` permanece necesaria. Referencias: [despliegue continuo de Modal](https://modal.com/docs/guide/continuous-deployment) y [autenticación del proxy](https://modal.com/docs/guide/webhook-proxy-auth).
+
+El workflow fija la URL del servicio verificado en esta sesión. Si cambia la cuenta o la aplicación Modal, debe revisarse esa URL antes de desplegar. El identificador se transmite mediante `DEPLOYMENT_SHA` al desplegar y se expone como `deployment_sha`; una ejecución manual sin esa variable informa `unknown` y no satisface la verificación de un SHA concreto.
+
+Estado: implementación y validación locales completas; 51 pruebas ML pasan y actionlint valida el workflow. Pendientes: configurar los cinco secretos, publicar por parte de la autora y conservar la primera ejecución remota correcta de **Deploy Modal**. Esta automatización verifica el servicio ML; el recorrido completo por API y web y la recuperación automática siguen siendo tareas separadas del plan.

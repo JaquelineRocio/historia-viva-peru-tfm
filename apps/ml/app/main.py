@@ -117,6 +117,7 @@ def health() -> dict:
         "status": "ok",
         "service": "ml",
         "version": app.version,
+        "deployment_sha": settings.deployment_sha,
         "components": {
             "beto": {"ready": beto.is_loaded(), **_model_bootstrap},
             "embeddings": {"ready": embeddings.is_loaded(), "model": settings.embedding_model},
@@ -265,7 +266,7 @@ def infer(req: InferRequest) -> dict:
 
     if not beto.is_loaded():
         raise HTTPException(status_code=409, detail="No hay modelo activo cargado")
-    return {"predictions": beto.infer(req.texts)}
+    return {"predictions": beto.infer(req.texts), "deployment_sha": settings.deployment_sha}
 
 
 @app.post("/embeddings", dependencies=PROTECTED)

@@ -1,0 +1,94 @@
+name: Deploy Modal
+
+on:
+  workflow_run:
+    workflows: [CI]
+    types: [completed]
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: modal-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    if: >-
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.head_repository.full_name == github.repository &&
+      (github.event.workflow_run.event == 'push' || github.event.workflow_run.event == 'workflow_dispatch')
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      DEPLOYMENT_SHA: ${{ github.event.workflow_run.head_sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Skip superseded commits
+        id: current
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+        run: |
+          python - <<'PY'
+          import json, os, urllib.request
+          req = urllib.request.Request(
+              'https://api.github.com/repos/' + os.environ['REPOSITORY'] + '/commits/main',
+              headers={'Authorization': 'Bearer ' + os.environ['GH_TOKEN'], 'Accept': 'application/vnd.github+json'})
+          with urllib.request.urlopen(req, timeout=30) as response:
+              current = json.load(response)['sha']
+          matches = current == os.environ['DEPLOYMENT_SHA']
+          with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+              output.write('deploy=' + str(matches).lower() + '\n')
+          print('Commit is current' if matches else 'Skipped: main has a newer commit')
+          PY
+      - name: Check required secrets
+        if: steps.current.outputs.deploy == 'true'
+        env:
+          MODAL_TOKEN_ID: ${{ secrets.MODAL_TOKEN_ID }}
+          MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
+          MODAL_PROXY_TOKEN_ID: ${{ secrets.MODAL_PROXY_TOKEN_ID }}
+          MODAL_PROXY_TOKEN_SECRET: ${{ secrets.MODAL_PROXY_TOKEN_SECRET }}
+          ML_INTERNAL_TOKEN: ${{ secrets.ML_INTERNAL_TOKEN }}
+        run: |
+          python - <<'PY'
+          import os
+          required = ('MODAL_TOKEN_ID', 'MODAL_TOKEN_SECRET', 'MODAL_PROXY_TOKEN_ID', 'MODAL_PROXY_TOKEN_SECRET', 'ML_INTERNAL_TOKEN')
+          missing = [key for key in required if not os.environ.get(key)]
+          if missing:
+              raise SystemExit('Missing GitHub Actions secrets: ' + ', '.join(missing))
+          PY
+      - name: Install deployment tools
+        if: steps.current.outputs.deploy == 'true'
+        run: python -m pip install modal==1.5.5 httpx==0.28.1
+      - name: Deploy tested commit
+        if: steps.current.outputs.deploy == 'true'
+        env:
+          MODAL_TOKEN_ID: ${{ secrets.MODAL_TOKEN_ID }}
+          MODAL_TOKEN_SECRET: ${{ secrets.MODAL_TOKEN_SECRET }}
+        run: python -m modal deploy --tag "$DEPLOYMENT_SHA" apps/ml/modal_app.py
+      - name: Verify deployed SHA and BETO prediction
+        if: steps.current.outputs.deploy == 'true'
+        env:
+          MODAL_PROXY_TOKEN_ID: ${{ secrets.MODAL_PROXY_TOKEN_ID }}
+          MODAL_PROXY_TOKEN_SECRET: ${{ secrets.MODAL_PROXY_TOKEN_SECRET }}
+          ML_INTERNAL_TOKEN: ${{ secrets.ML_INTERNAL_TOKEN }}
+        run: >-
+          python scripts/verify_modal_deployment.py
+          --url https://jaquelineramosvargas--historia-viva-peru-ml-ml-api.modal.run
+          --expected-sha "$DEPLOYMENT_SHA"
+          --output outputs/modal-deployment.json
+      - uses: actions/upload-artifact@v4
+        if: always() && steps.current.outputs.deploy == 'true'
+        with:
+          name: modal-deployment-${{ github.run_id }}-${{ github.run_attempt }}
+          path: outputs/modal-deployment.json
+          if-no-files-found: warn
+          retention-days: 90
