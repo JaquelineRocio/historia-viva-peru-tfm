@@ -1,0 +1,561 @@
+{
+  "schema_version": 1,
+  "status": "reviewed_repair_proposal_not_applied",
+  "source": {
+    "author": "Carmen Villanueva",
+    "title": "La Constitución de 1823 y los inicios de la República",
+    "journal": "BIRA",
+    "volume": 23,
+    "year": 1996,
+    "printed_pages": "427–435",
+    "basis": "Local PDF title and footer; no new license verification"
+  },
+  "source_id": "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+  "inputs": [
+    {
+      "path": "outputs/huerta-batch-snapshot-v1/reviewed-export.json",
+      "file_sha256": "38c71b1548b89848142edc1aadab24d6651393f7361140a516e36d758e7ba244"
+    },
+    {
+      "path": ".corpus-downloads/constitucion_1823.pdf",
+      "file_sha256": "56e6ec5d01aee7af31fe857ff63190ea1a088ccddcfe479b906dcbe7405d8c50"
+    },
+    {
+      "path": "artifacts/datasets/gold-v1-source-aware.json",
+      "file_sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a"
+    }
+  ],
+  "boundary_manifest": {
+    "path": "artifacts/reviews/villanueva-boundaries-v1.json",
+    "file_sha256": "eecb567a777189571d9f9a02b2a5f824e439f43682f6cc75cd87ddfa0957fce2"
+  },
+  "builder": {
+    "path": "scripts/prepare_villanueva_repair.py",
+    "file_sha256": "2b3499d95f3c01b8a090ad4e25cc283f1c3935dd5bf6c1a7a93c3cbde82b994c",
+    "helper_path": "scripts/prepare_agn_pilot.py",
+    "helper_sha256": "2c1cd9c93bb1f658c0f1d23046fba8589e130e2778038aadc6797df4d501f00a",
+    "pypdf_version": "5.9.0"
+  },
+  "local_archive": {
+    "path": "outputs/villanueva-repair-v1/reviewed-proposal.json",
+    "file_sha256": "271816f64f213cd684f58e14b1cbe2a957b4e68fc23165e5e55f07ac15e0d85d",
+    "contents": "Six original rows with exact character partitions, eight raw and edited units, seven context/notes PDF pages. Ignored by Git."
+  },
+  "proposed_removal": [
+    {
+      "index": 7,
+      "split": "train",
+      "label": "organizacion_consecuencias_republicanas",
+      "text_sha256": "2abd19afe54182a5ccb60b5746b124e78ff1150b35a7213c4a5f768b9baf4d6c",
+      "partitions": [
+        {
+          "destination": "paratext",
+          "start": 0,
+          "end": 72,
+          "text_sha256": "6af891691b9184aae02bbfb4510cd8a790daee4d2d89d70abdf01818f654fcc6"
+        },
+        {
+          "destination": "V01",
+          "start": 72,
+          "end": 552,
+          "text_sha256": "375203a38fe6c2b3ac3472e93220e8ebb4f994089baa7b4bdd7ab1a1c40453c6"
+        },
+        {
+          "destination": "V02",
+          "start": 552,
+          "end": 1301,
+          "text_sha256": "d0885565a6607032944cfffb25890736eabe71cf870e55b67ae1a3e6a81c206c"
+        }
+      ]
+    },
+    {
+      "index": 633,
+      "split": "train",
+      "label": "crisis_ideas_emancipadoras",
+      "text_sha256": "f649d51708d4691e79afdcd250c057c2f3aeac762a11b04e1b0d4216e7d5ac5f",
+      "partitions": [
+        {
+          "destination": "V02",
+          "start": 0,
+          "end": 413,
+          "text_sha256": "0b4e62b8fac87ba7f61ae42f81e4588f45cc663ba85017d316c803dac0228b26"
+        },
+        {
+          "destination": "V03",
+          "start": 413,
+          "end": 559,
+          "text_sha256": "4ab6101b33232d4287286c050d1904ab5c6bb310ad4c438ec83b227ad42c9142"
+        },
+        {
+          "destination": "paratext",
+          "start": 559,
+          "end": 589,
+          "text_sha256": "78dc3657a2457ed3dca8cbfc387af8daf5da5818e91f78e0922a115d3388dea1"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "split": "train",
+      "label": "crisis_ideas_emancipadoras",
+      "text_sha256": "050a9c6527a081a5d8c6965d66ee074fd450bce282a52ae2a753589e2e728643",
+      "partitions": [
+        {
+          "destination": "paratext",
+          "start": 0,
+          "end": 52,
+          "text_sha256": "c53eba7e4a5f414f131127cd2dd37cbf3f6d48332c4764c4188cf861144dd747"
+        },
+        {
+          "destination": "V03",
+          "start": 52,
+          "end": 885,
+          "text_sha256": "dfe6bf11a1f2f351e1de4cf38419762ff1a405aab814007df54235250ca64f77"
+        },
+        {
+          "destination": "V04",
+          "start": 885,
+          "end": 1405,
+          "text_sha256": "d89cf5c3511c5bf5c1e18bca195ff89dde0dee906722a37c4fa6bd11f0326229"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "split": "train",
+      "label": "organizacion_consecuencias_republicanas",
+      "text_sha256": "c98de9d2eec4ffd5ba747531414a380c24bc0bf33d58a81adccfd6ba2c20a604",
+      "partitions": [
+        {
+          "destination": "V05",
+          "start": 0,
+          "end": 405,
+          "text_sha256": "f9e766a1794d4a3eb616dcff55605d1cc6257977c4504e4f7f80de70889bbfdd"
+        },
+        {
+          "destination": "V06",
+          "start": 405,
+          "end": 1075,
+          "text_sha256": "814fd028131a3b9dc821bbb764f63a430ad791ac9f735c815189f4071c4634ab"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "split": "train",
+      "label": "organizacion_consecuencias_republicanas",
+      "text_sha256": "03dfa8e9fc4c407e0889a5475ae4ab7fc7fe1a020b40989793808356565a80e6",
+      "partitions": [
+        {
+          "destination": "V06",
+          "start": 0,
+          "end": 272,
+          "text_sha256": "29b14779f04b63ff30d693be733ec303718f07ba2fb32ec9896713cf5b92b982"
+        },
+        {
+          "destination": "V07",
+          "start": 272,
+          "end": 1169,
+          "text_sha256": "9aa31876111007bd09b25bf43addd389bc9c302727829ba25e4fe31e36385a99"
+        }
+      ]
+    },
+    {
+      "index": 637,
+      "split": "train",
+      "label": "liderazgos_diplomacia_proyectos",
+      "text_sha256": "69f7ade875bdc894ba9a436b7a9dfe0b4dbe673ad948278df4a1e1d573980462",
+      "partitions": [
+        {
+          "destination": "V04",
+          "start": 0,
+          "end": 607,
+          "text_sha256": "5deb25dbc4a97c42d8b2bdea7f0d7e316bdf2a0d4903d6eff23572e308aaeb83"
+        },
+        {
+          "destination": "V08",
+          "start": 607,
+          "end": 769,
+          "text_sha256": "5bc81f1c45589b1e43683260d8787923cbbc9ea4262dc2af328c5b54f1fea108"
+        }
+      ]
+    }
+  ],
+  "units": [
+    {
+      "id": "V01",
+      "parts": [
+        {
+          "pdf_page": 1,
+          "printed_page": 427,
+          "start_marker": "Al estudiar",
+          "end_marker": "sumamente rigurosa.",
+          "page_text_sha256": "4baafb60e3856dc1a16bf354d6a011fac1118f0ae8254cf77109b72d66a49b30",
+          "selected_text_sha256": "26da16fb033da67067313f6d43da3f50a216918e08b548c2dab67b2a400e53a4"
+        }
+      ],
+      "text_sha256": "26da16fb033da67067313f6d43da3f50a216918e08b548c2dab67b2a400e53a4",
+      "raw_text_sha256": "26da16fb033da67067313f6d43da3f50a216918e08b548c2dab67b2a400e53a4",
+      "word_count": 82,
+      "changes": [],
+      "proposed_label": null,
+      "disposition": "context_only",
+      "dataset_applied": false,
+      "reason": "Introducción interpretable de 82 palabras: conservar contexto, sin rellenar ni etiquetar no_relevante.",
+      "decision": "preserve_context",
+      "quality_flags": []
+    },
+    {
+      "id": "V02",
+      "parts": [
+        {
+          "pdf_page": 1,
+          "printed_page": 427,
+          "start_marker": "Es interesante",
+          "end_marker": "acción inmediata del Libertador.",
+          "page_text_sha256": "4baafb60e3856dc1a16bf354d6a011fac1118f0ae8254cf77109b72d66a49b30",
+          "selected_text_sha256": "ba9bb5244388301c3f1e2d39caa76ae403972ed711a1d13d807772cb3250955d"
+        }
+      ],
+      "text_sha256": "ba9bb5244388301c3f1e2d39caa76ae403972ed711a1d13d807772cb3250955d",
+      "raw_text_sha256": "ba9bb5244388301c3f1e2d39caa76ae403972ed711a1d13d807772cb3250955d",
+      "word_count": 178,
+      "changes": [],
+      "proposed_label": null,
+      "disposition": "context_only",
+      "dataset_applied": false,
+      "reason": "Desacuerdo conservado: el principal favoreció ideas; el segundo agente no encontró predominio firme entre liberalismo y antecedentes constitucionales. Apartar como ambiguo.",
+      "decision": "ambiguous",
+      "quality_flags": []
+    },
+    {
+      "id": "V03",
+      "parts": [
+        {
+          "pdf_page": 1,
+          "printed_page": 427,
+          "start_marker": "Así, el Congreso",
+          "end_marker": "colombiana de 1821 o",
+          "page_text_sha256": "4baafb60e3856dc1a16bf354d6a011fac1118f0ae8254cf77109b72d66a49b30",
+          "selected_text_sha256": "30a5a5fa1c5a262d908c363413823cff781d866aea759baccfde5215ef075dd8"
+        },
+        {
+          "pdf_page": 2,
+          "printed_page": 428,
+          "start_marker": "la argentina",
+          "end_marker": "repúblicas vecinas.",
+          "page_text_sha256": "6183be9943b167352599bd5346eeb1cecba3a55df55bb9d82678365682ffa80a",
+          "selected_text_sha256": "8a4cd4e60d4257e626cc32dfaf1a6824b0b22f316ef13736ec516534e83bef0f"
+        }
+      ],
+      "text_sha256": "fd3554708a4f458fa38f745c856086d3b0bb2cd4afed3264441356a82a58bc73",
+      "raw_text_sha256": "fd3554708a4f458fa38f745c856086d3b0bb2cd4afed3264441356a82a58bc73",
+      "word_count": 145,
+      "changes": [],
+      "proposed_label": "organizacion_consecuencias_republicanas",
+      "disposition": "candidate",
+      "dataset_applied": false,
+      "remaining_train_screen": {
+        "compared": 594,
+        "exact_matches": [],
+        "flagged": []
+      },
+      "reason": "El objeto central es la comparación de antecedentes y diseños constitucionales. Conservar V02 como contexto asociado para los enlaces Así y Esta primera observación.",
+      "decision": "candidate_after_joint_review",
+      "quality_flags": [
+        "Apóstrofo aislado y construcción «de los no» conservados; sin corrección inferida.",
+        "Depende argumentalmente de V02."
+      ]
+    },
+    {
+      "id": "V04",
+      "parts": [
+        {
+          "pdf_page": 2,
+          "printed_page": 428,
+          "start_marker": "El Manifiesto",
+          "end_marker": "más asequible2•",
+          "page_text_sha256": "6183be9943b167352599bd5346eeb1cecba3a55df55bb9d82678365682ffa80a",
+          "selected_text_sha256": "3e3fed6397ffde0f0103678e7bf3390ff6588aa7e44459e11286dab8549bcbec"
+        }
+      ],
+      "text_sha256": "c2348d1f74472092453f1c13c49b9cf90e9eba20279ec304e48bd8dc7808a464",
+      "raw_text_sha256": "3e3fed6397ffde0f0103678e7bf3390ff6588aa7e44459e11286dab8549bcbec",
+      "word_count": 175,
+      "changes": [
+        {
+          "old": "humano \"l.",
+          "new": "humano \"."
+        },
+        {
+          "old": "asequible2•",
+          "new": "asequible."
+        }
+      ],
+      "proposed_label": "liderazgos_diplomacia_proyectos",
+      "disposition": "candidate",
+      "dataset_applied": false,
+      "remaining_train_screen": {
+        "compared": 594,
+        "exact_matches": [],
+        "flagged": []
+      },
+      "reason": "Evolución del proyecto político de Bolívar mediante sus textos; predomina liderazgo y proyecto estatal sobre historia general del liberalismo.",
+      "decision": "candidate_after_joint_review",
+      "quality_flags": [
+        "asequible2• → asequible. incluye normalización editorial del cierre, no cotejo visual de puntuación."
+      ]
+    },
+    {
+      "id": "V05",
+      "parts": [
+        {
+          "pdf_page": 4,
+          "printed_page": 430,
+          "start_marker": "Las manifestaciones",
+          "end_marker": "mucho menos de ganar.",
+          "page_text_sha256": "d6fbf40bfba2c21f8ce2b6b2d791e074ec15bc878a2c11db99812fa94ee90e1e",
+          "selected_text_sha256": "4a2e921ad713b13872c499d087cd9371308070e11ff252e6bcbc6a67ff29db9f"
+        }
+      ],
+      "text_sha256": "4a2e921ad713b13872c499d087cd9371308070e11ff252e6bcbc6a67ff29db9f",
+      "raw_text_sha256": "4a2e921ad713b13872c499d087cd9371308070e11ff252e6bcbc6a67ff29db9f",
+      "word_count": 61,
+      "changes": [],
+      "proposed_label": null,
+      "disposition": "context_only",
+      "dataset_applied": false,
+      "reason": "Cierre monárquico de 61 palabras: conservar contexto de la discusión anterior, sin añadir relleno.",
+      "decision": "preserve_context",
+      "quality_flags": []
+    },
+    {
+      "id": "V06",
+      "parts": [
+        {
+          "pdf_page": 4,
+          "printed_page": 430,
+          "start_marker": "El Congreso General",
+          "end_marker": "5 militares",
+          "page_text_sha256": "d6fbf40bfba2c21f8ce2b6b2d791e074ec15bc878a2c11db99812fa94ee90e1e",
+          "selected_text_sha256": "7458c06f7e12b6e5e41236b8f905f0c45898a8b9ac2b7701316f08a63d4a6ed3"
+        },
+        {
+          "pdf_page": 5,
+          "printed_page": 431,
+          "start_marker": "y 5 propietarios.",
+          "end_marker": "su calidad personal.",
+          "page_text_sha256": "78c2caaa3586e1acb5b75b71f2974209c9286b675e77c348e8fca0d3850cfe72",
+          "selected_text_sha256": "d1369c7c858a33101eeed252aba4ee4c0a9333c56cb729693ce06a2a103579b4"
+        }
+      ],
+      "text_sha256": "a5bc9415c2cf7b432f24a61d8bffebc62c0039b5fd8554c914836e062c45a459",
+      "raw_text_sha256": "a5bc9415c2cf7b432f24a61d8bffebc62c0039b5fd8554c914836e062c45a459",
+      "word_count": 163,
+      "changes": [],
+      "proposed_label": "organizacion_consecuencias_republicanas",
+      "disposition": "candidate",
+      "dataset_applied": false,
+      "remaining_train_screen": {
+        "compared": 594,
+        "exact_matches": [],
+        "flagged": []
+      },
+      "reason": "Convocatoria, representación y composición del Congreso como unidad institucional; los grupos sociales se describen dentro de esa institución.",
+      "decision": "candidate_after_joint_review",
+      "quality_flags": [
+        "Grafía extraída Tarrna conservada; pendiente cotejo visual."
+      ]
+    },
+    {
+      "id": "V07",
+      "parts": [
+        {
+          "pdf_page": 5,
+          "printed_page": 431,
+          "start_marker": "Las \"Bases para la Constitución Política\"",
+          "end_marker": "liberalismo\"7.",
+          "page_text_sha256": "78c2caaa3586e1acb5b75b71f2974209c9286b675e77c348e8fca0d3850cfe72",
+          "selected_text_sha256": "83f0e15e0f7c40de1ea7c041c0a1bf58a9c7c1e808b5371fdea7c64390c33316"
+        }
+      ],
+      "text_sha256": "d68349f0e3b115c5759a8c3aaad7b13e51085f2d6a49c9eadc0963cd0c2da692",
+      "raw_text_sha256": "83f0e15e0f7c40de1ea7c041c0a1bf58a9c7c1e808b5371fdea7c64390c33316",
+      "word_count": 142,
+      "changes": [
+        {
+          "old": "liberalismo\"7.",
+          "new": "liberalismo\"."
+        }
+      ],
+      "proposed_label": "organizacion_consecuencias_republicanas",
+      "disposition": "candidate",
+      "dataset_applied": false,
+      "remaining_train_screen": {
+        "compared": 594,
+        "exact_matches": [],
+        "flagged": []
+      },
+      "reason": "Fundamentos legales y preparación constitucional; las referencias a los Incas y al liberalismo están subordinadas a ese proceso.",
+      "decision": "candidate_after_joint_review",
+      "quality_flags": [
+        "Grafía extraída mayore s conservada; pendiente cotejo visual."
+      ]
+    },
+    {
+      "id": "V08",
+      "parts": [
+        {
+          "pdf_page": 2,
+          "printed_page": 428,
+          "start_marker": "En esta línea",
+          "end_marker": "las ideas expuestas en",
+          "page_text_sha256": "6183be9943b167352599bd5346eeb1cecba3a55df55bb9d82678365682ffa80a",
+          "selected_text_sha256": "5bc81f1c45589b1e43683260d8787923cbbc9ea4262dc2af328c5b54f1fea108"
+        }
+      ],
+      "text_sha256": "5bc81f1c45589b1e43683260d8787923cbbc9ea4262dc2af328c5b54f1fea108",
+      "raw_text_sha256": "5bc81f1c45589b1e43683260d8787923cbbc9ea4262dc2af328c5b54f1fea108",
+      "word_count": 25,
+      "changes": [],
+      "proposed_label": null,
+      "disposition": "context_only",
+      "dataset_applied": false,
+      "reason": "Transición incompleta hacia Burke, continuada en la página siguiente: conservar sin expandir el alcance a la fila 651.",
+      "decision": "preserve_context",
+      "quality_flags": []
+    }
+  ],
+  "candidate_pair_screen": [
+    {
+      "ids": [
+        "V03",
+        "V04"
+      ],
+      "exact": false,
+      "jaccard": 0.0,
+      "containment": 0.0
+    },
+    {
+      "ids": [
+        "V03",
+        "V06"
+      ],
+      "exact": false,
+      "jaccard": 0.0,
+      "containment": 0.0
+    },
+    {
+      "ids": [
+        "V03",
+        "V07"
+      ],
+      "exact": false,
+      "jaccard": 0.0,
+      "containment": 0.0
+    },
+    {
+      "ids": [
+        "V04",
+        "V06"
+      ],
+      "exact": false,
+      "jaccard": 0.0,
+      "containment": 0.0
+    },
+    {
+      "ids": [
+        "V04",
+        "V07"
+      ],
+      "exact": false,
+      "jaccard": 0.0,
+      "containment": 0.0
+    },
+    {
+      "ids": [
+        "V06",
+        "V07"
+      ],
+      "exact": false,
+      "jaccard": 0.0,
+      "containment": 0.0
+    }
+  ],
+  "screening_rule": "Train remaining after proposed removal only; normalized five-word shingles, Jaccard >= .25 or containment >= .8. Not proof of absence of all partial overlap.",
+  "note_references": [
+    {
+      "unit": "V04",
+      "call": "1 (extracted as l)",
+      "pdf_page": 8,
+      "printed_page": 434,
+      "reference": "Manifiesto de Cartagena, 15 diciembre 1812; Bolívar, Doctrina del Libertador, edición 1979, p.9, citado por Villanueva."
+    },
+    {
+      "unit": "V04",
+      "call": "2",
+      "pdf_page": 9,
+      "printed_page": 435,
+      "reference": "Carta de Jamaica, 6 septiembre 1815; Bolívar, op.cit., p.69, citado por Villanueva."
+    },
+    {
+      "unit": "V07",
+      "call": "7",
+      "pdf_page": 9,
+      "printed_page": 435,
+      "reference": "Pareja, op.cit., p.146; la nota5 identifica Las Constituciones del Perú (1954). No se consultó esa obra."
+    }
+  ],
+  "review": {
+    "primary_agent": "/root",
+    "second_agent": "/root/revision_historica_agn",
+    "human_expert_validation": false,
+    "blind": false,
+    "independent_system": false,
+    "primary_initial_V02": "crisis_ideas_emancipadoras",
+    "second_initial_V02": null,
+    "final_V02": null,
+    "disagreement_preserved": true,
+    "agreement": "Both agents support V03/V06/V07 organization and V04 leadership/projects; V02 remains ambiguous.",
+    "scope": "Labels concern dominant theme. PDF text layer and labeling guide consulted; no visual or primary-document fact verification. Existing local source, no new license verification."
+  },
+  "verification": {
+    "passed": true,
+    "checks": [
+      "Full preparation reproduced exactly",
+      "Every original character archived and assigned to a unit or paratext",
+      "All editorial changes replayed from raw PDF text",
+      "Four candidates; ambiguous and short context have no training label",
+      "Dataset, frozen evaluation source and PDF unchanged"
+    ],
+    "rejections": [
+      "Missing extraction marker",
+      "Ambiguous extraction marker",
+      "Reversed extraction bounds",
+      "Partition omits prefix",
+      "Partition out of order",
+      "Altered reviewed manifest",
+      "Existing output",
+      "Output outside outputs"
+    ]
+  },
+  "integrity_checks": {
+    "original_partition_lossless": true,
+    "all_units_match_original_alphanumeric_content": true,
+    "reviewed_rows_same_source_train": true,
+    "input_hashes_unchanged": true
+  },
+  "projected_counts_if_applied": {
+    "before_total": 818,
+    "after_total": 816,
+    "before_train": 600,
+    "after_train": 598,
+    "val": 81,
+    "test": 137,
+    "note": "Projection only: remove six original train rows, add four candidates. Context remains archived, not added to training."
+  },
+  "next_step": "Build a new local experimental snapshot with this exact six-row replacement, preserve archive and metadata, verify all other rows and the frozen evaluation partition. No training in that incorporation block.",
+  "dataset_applied": false,
+  "production_changed": false,
+  "new_metrics": false
+}

@@ -13,6 +13,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Comparación con Huerta | Medir los cuatro pasajes añadidos con configuración fija | TF-IDF local C=4: F1 macro validación 0.29004 → 0.28968; crisis e ideas sigue en 0. Sin mejora; no se calcularon métricas nuevas de test ni se cambió producción |
 | Diagnóstico de cobertura | Orientar el siguiente cambio de datos | Concentración por fuente, rasgos de transcripción y fragmentos incompletos identificados. Muestra de 21 filas de train revisada; prioridad: cuatro filas de Villanueva. Sin modificar etiquetas |
 | Límites de Villanueva | Recuperar argumentos cortados entre páginas | Seis unidades delimitadas y cotejadas; dos quedan como contexto. Continuaciones ya presentes en filas 10/637 identificadas. Propuesta local, sin aplicar |
+| Reparación de Villanueva | Preparar un reemplazo sin duplicar continuaciones | Cuatro candidatos revisados, cuatro unidades de contexto y seis originales archivados; V02 ambiguo. Extracción local verificada, dataset sin modificar |
 | Fuente para crisis e ideas | Localizar contenido pertinente y reutilizable | HUE01 de Huerta Vera (2020), revisado por ambos agentes, incorporado a copia experimental local: 597 train, 81 validación y 137 test. Evaluación intacta; sin entrenamiento nuevo |
 | Lote adicional de Huerta | Revisar propaganda, lecturas políticas y prensa | HUE02/03/04 incorporados a copia experimental: 600 train, 81 validación y 137 test. Una fuente común y dependencia HUE03/HUE04 conservadas; sin entrenamiento nuevo |
 | Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Segunda revisión: 11 aprobar, 2 corregir, 6 ambiguos y 1 excluir hasta resegmentar. R04/R16 corregidos solo en copia experimental; referencia y producción intactas |
@@ -825,7 +826,7 @@ descargas ni cambios en producción. Siguiente paso después del commit: revisar
 únicamente las filas **7, 633, 15 y 14 de Villanueva**, recuperar su continuidad
 y proponer límites argumentales con evidencia antes de modificar el dataset.
 
-## Bloque actual: límites argumentales de Villanueva
+## Límites argumentales de Villanueva — registrados en `f2d96c6`
 
 El [mapa de límites](../artifacts/reviews/villanueva-boundaries-v1.json) coteja
 las filas 7, 633, 15 y 14 con las páginas PDF 1–5 (impresas 427–431) del artículo
@@ -865,6 +866,54 @@ Siguiente bloque después del commit: preparar un reemplazo reversible que
 considere las seis filas implicadas (7, 633, 15, 14, 10 y 637), conservando los
 originales y el texto restante de 10/637. Revisar etiquetas y ajustes de extracción
 antes de incorporar candidatos; no añadir continuaciones duplicando las existentes.
+
+## Bloque actual: propuesta de reparación de Villanueva
+
+[prepare_villanueva_repair.py](../scripts/prepare_villanueva_repair.py) reproduce
+los límites revisados y prepara la [propuesta trazable](../artifacts/reviews/villanueva-repair-v1.json).
+No escribe un dataset nuevo ni modifica el actual. Los seis originales (7, 633,
+15, 14, 10 y 637) se conservan íntegros, con una partición de cada carácter que
+indica su destino: candidato, contexto o paratexto.
+
+| Unidad | Palabras | Decisión propuesta tras revisión |
+|---|---|---|
+| V03 | 145 | Organización y consecuencias republicanas: comparación constitucional |
+| V04 | 175 | Liderazgos, diplomacia y proyectos: pensamiento político de Bolívar |
+| V06 | 163 | Organización y consecuencias republicanas: formación del Congreso |
+| V07 | 142 | Organización y consecuencias republicanas: Bases y preparación constitucional, resto de fila 10 |
+
+V01 (82 palabras), V05 (61) y V08 (25, resto incompleto de fila 637) se conservan
+como contexto. **V02 (178) queda ambiguo**: el principal favoreció ideas, mientras
+el segundo agente no encontró predominio suficiente sobre los antecedentes
+constitucionales. Se registra el desacuerdo y no se fuerza una etiqueta.
+V03 conserva V02 como contexto asociado. No se amplía V08 hacia la fila 651.
+
+Se retiraron las llamadas de notas 1/2 de V04 y 7 de V07, conservando sus referencias
+y texto original. El cierre `asequible2• → asequible.` incluye normalización
+editorial de puntuación, sin cotejo visual. Se conservan y señalan `Tarrna`,
+`mayore s` y el apóstrofo aislado de V03. La revisión temática es asistida por IA;
+no certifica los hechos citados ni sustituye validación humana independiente.
+
+Verificación local: preparación reproducida exactamente; originales reconstruidos
+sin pérdida; todas las unidades conservan la secuencia de letras y números de sus
+pasajes originales antes de los ajustes documentados. No hay duplicados exactos
+ni coincidencias por encima del umbral de cinco palabras entre candidatos o con
+las 594 filas restantes de train. El umbral no garantiza ausencia de todo solapamiento.
+Pasaron ocho rechazos, incluidos marcadores inválidos, particiones incompletas,
+manifiesto alterado, sobrescritura y salida fuera de `outputs/`. PDF y datasets intactos.
+
+Los textos, páginas, originales y comprobaciones están en
+`outputs/villanueva-repair-v1/`, excluido de Git. Para reproducir en un archivo nuevo:
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/prepare_villanueva_repair.py --output outputs/villanueva-repair-reproduccion/proposal.json
+```
+
+Siguiente bloque después del commit: incorporar el reemplazo en **otra copia
+experimental local**, con su archivo de originales y contexto. La proyección es
+600 → 598 filas de train: retirar seis originales e incorporar cuatro candidatos;
+validación (81) y test (137) deben permanecer idénticos. Esa incorporación todavía
+no ocurrió. No hay entrenamiento, métricas nuevas ni cambios en producción.
 
 ### Reproducir la muestra de la revisión inicial
 
