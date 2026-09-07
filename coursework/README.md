@@ -13,7 +13,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Demo Unidad I | Dos pruebas funcionales completas y explicación en inglés | PDF cargado, predicho tras reintento y revisión persistida vía API. Primera clasificación fallida y recorrido visual pendientes |
 | Mantenimiento | Validar snapshot, entrenar, evaluar y archivar candidato | TF-IDF ejecutado en GitHub; métricas y candidato archivados. Correcciones automáticas pendientes |
 | Integración continua | Tests, builds y comprobación agregada Quality gate | Ejecución en GitHub correcta para `3974f4a` |
-| Despliegue | Esperar CI, verificar versión y recuperar ante fallos | Nueva ruta de salud accesible en Render; falta verificar SHA y controles de despliegue |
+| Despliegue | Esperar CI, verificar versión y recuperar ante fallos | Modal desplegado desde CI con SHA y predicción verificados para `6f26e9a`; controles API/web y recuperación pendientes |
 | Entrega Unidad II | Tres casos ejecutados, con logs y resultados | Controles locales; demostración remota pendiente |
 
 ## Organización de los cambios en Git
@@ -190,4 +190,8 @@ Introducir los valores directamente en GitHub; no guardarlos en archivos ni pega
 
 El workflow fija la URL del servicio verificado en esta sesión. Si cambia la cuenta o la aplicación Modal, debe revisarse esa URL antes de desplegar. El identificador se transmite mediante `DEPLOYMENT_SHA` al desplegar y se expone como `deployment_sha`; una ejecución manual sin esa variable informa `unknown` y no satisface la verificación de un SHA concreto.
 
-Estado: implementación y validación locales completas; 51 pruebas ML pasan y actionlint valida el workflow. Pendientes: configurar los cinco secretos, publicar por parte de la autora y conservar la primera ejecución remota correcta de **Deploy Modal**. Esta automatización verifica el servicio ML; el recorrido completo por API y web y la recuperación automática siguen siendo tareas separadas del plan.
+Estado: implementación y validación locales completas; 51 pruebas ML pasaron al implementar el workflow. El 7 de septiembre de 2026, a las 13:18 UTC, el [despliegue automático de Modal](https://github.com/JaquelineRocio/historia-viva-peru-tfm/actions/runs/34124983079/job/101756701017) terminó correctamente tras configurar los secretos. La verificación informó `passed: true`, BETO listo y SHA servido `6f26e9a91d1d9129666dfdf594aadbc1f543a6cb`, igual al esperado. El resultado quedó archivado como `modal-deployment-34124983079-5`. Esta automatización verifica el servicio ML; el recorrido completo por API y web y la recuperación automática siguen pendientes.
+
+Siguiente bloque de mantenimiento: actualizar las acciones de los cuatro workflows a `checkout@v6`, `setup-node@v6`, `setup-python@v6` y `upload-artifact@v6`, que ejecutan internamente Node 24. Cambios preparados localmente; falta comprobar su ejecución en GitHub tras publicarlos. Esto atiende el [aviso de retirada de Node 20 en Actions](https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/). Un futuro runner propio de BETO deberá tener versión 2.327.1 o superior para estas acciones.
+
+Después: actualizar y probar el Dockerfile de la API, que todavía utiliza `node:20-slim`. CI prueba API y web con Node 22; el Node interno de las acciones es independiente de la versión de la aplicación.

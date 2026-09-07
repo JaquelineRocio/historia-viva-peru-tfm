@@ -43,8 +43,8 @@ jobs:
       run:
         shell: bash
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
         with:
           python-version: '3.11'
       - name: Install experiment dependencies
@@ -68,7 +68,7 @@ jobs:
         run: cat outputs/maintenance/report.md >> "$GITHUB_STEP_SUMMARY"
       - name: Archive evidence
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: ml-evidence-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
@@ -80,7 +80,7 @@ jobs:
         # Solo se copia el ganador; los informes conservan todos los experimentos.
         run: |
           python -c "import json,pathlib,shutil; p=pathlib.Path('outputs/maintenance'); r=json.loads((p/'report.json').read_text(encoding='utf-8')); shutil.copytree(p/r['selected'], 'outputs/candidate') if r.get('selected') else print('No new candidate: training skipped')"
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         if: success()
         with:
           name: ml-candidate-${{ github.run_id }}-${{ github.run_attempt }}
