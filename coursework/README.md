@@ -13,6 +13,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Comparación con Huerta | Medir los cuatro pasajes añadidos con configuración fija | TF-IDF local C=4: F1 macro validación 0.29004 → 0.28968; crisis e ideas sigue en 0. Sin mejora; no se calcularon métricas nuevas de test ni se cambió producción |
 | Comparación de Villanueva | Medir la sustitución con la misma configuración | TF-IDF local C=4: F1 macro validación 0.28968 → 0.28987; mismos 25/81 aciertos, ideas sigue en 0. Sin mejora útil demostrada ni cambios en producción |
 | Generalización entre fuentes | Evaluar cada fuente de train sin usarla para entrenar | Nueve rondas locales: F1 macro agregado 0.32372, 208/598 aciertos; ideas 5/60. Diagnóstico interno, no mejora frente a validación ni prueba final |
+| Palabras frente a caracteres | Comparar dos representaciones en las mismas rondas internas | Caracteres: F1 macro 0.33909 frente a 0.32372; 218 frente a 208 aciertos. Mejora interna modesta; validación original de esta variante pendiente |
 | Diagnóstico de cobertura | Orientar el siguiente cambio de datos | Concentración por fuente, rasgos de transcripción y fragmentos incompletos identificados. Muestra de 21 filas de train revisada; prioridad: cuatro filas de Villanueva. Sin modificar etiquetas |
 | Límites de Villanueva | Recuperar argumentos cortados entre páginas | Seis unidades delimitadas y cotejadas; dos quedan como contexto. Continuaciones ya presentes en filas 10/637 identificadas. Propuesta local, sin aplicar |
 | Reparación de Villanueva | Preparar un reemplazo sin duplicar continuaciones | Cuatro candidatos revisados, cuatro unidades de contexto y seis originales archivados; V02 ambiguo. Extracción local verificada, dataset sin modificar |
@@ -1005,7 +1006,7 @@ Siguiente bloque después del commit: evaluar la generalización entre fuentes c
 particiones internas de train, dejando una fuente fuera cada vez. Esto permitirá
 orientar el próximo experimento conservando intacta la evaluación congelada.
 
-## Bloque actual: generalización entre fuentes de train
+## Generalización entre fuentes de train — registrada en `3c72b21`
 
 [evaluate_tfidf_by_source.py](../scripts/evaluate_tfidf_by_source.py) realiza nueve
 rondas: en cada una deja fuera una fuente de train, aprende vocabulario y modelo
@@ -1061,6 +1062,56 @@ Siguiente bloque después del commit: comparar representaciones de palabras y
 secuencias de caracteres con las mismas rondas internas y configuración fija del
 clasificador. Será una prueba de representación del texto, conservando etiquetas
 y evaluación congelada, sin prometer una mejora.
+
+## Bloque actual: palabras frente a secuencias de caracteres
+
+Se amplió [evaluate_tfidf_by_source.py](../scripts/evaluate_tfidf_by_source.py)
+con la alternativa `char_wb`: secuencias de 3–5 caracteres dentro de palabras,
+con el tratamiento de bordes del analizador. La referencia usa palabras y pares
+de palabras. Se conservaron C=4, semilla 42, pesos de clase equilibrados,
+`min_df=2`, máximo de 50 000 características y las demás opciones del clasificador
+y vectorizador. Se cambió únicamente el analizador y la longitud de sus secuencias.
+
+Las predicciones de palabras se reutilizaron tras comprobar hashes, textos,
+particiones y métricas. Solo se entrenaron nueve modelos nuevos de caracteres,
+con vocabulario ajustado desde cero en cada ronda. No se cambiaron etiquetas ni
+se usaron val/test. La [evidencia comparativa](../artifacts/experiments/character-comparison-v1/report.json)
+conserva los resultados y comprobaciones.
+
+| Métrica interna, mismos 598 ejemplos y nueve fuentes | Palabras | Caracteres |
+|---|---:|---:|
+| F1 macro | 0.32372 | 0.33909 |
+| Exactitud | 34.78% | 36.46% |
+| Aciertos | 208 | 218 |
+| F1 de crisis e ideas | 0.11364 | 0.17204 |
+| Aciertos de crisis e ideas | 5/60 | 8/60 |
+
+La exactitud mejora en O'Phelan, Basadre, Orrego y Huamanga; disminuye en Fonseca
+y permanece igual en las otras cuatro fuentes. De las predicciones, 48 pasan a
+ser correctas y 38 dejan de serlo; 196 cambian de etiqueta en total. Por clase,
+el F1 de campañas, liderazgos y organización republicana disminuye, aunque el
+promedio global sube. No se ha demostrado significación estadística ni que los
+errores de extracción sean la causa del problema.
+
+Verificación: mismas nueve particiones y parámetros del clasificador, modelos
+guardados recargados, vocabulario/IDF contrastados con las filas de ajuste,
+métricas y diferencias recalculadas. Pasaron 19 rechazos, incluidos una referencia
+alterada, otra representación o semilla, cambios de rondas, datos fuera de train
+y salidas inválidas. Los nueve ajustes y predicciones tardaron aproximadamente
+17.4 segundos sumados; no incluye verificaciones ni importaciones. Los modelos
+y predicciones permanecen en `outputs/character-comparison-v1/`, excluidos de Git.
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/evaluate_tfidf_by_source.py --dataset outputs/villanueva-snapshot-v1/reviewed-export.json --config configs/experiments/tfidf.json --selection outputs/history-comparison-v1/reviewed/selection.json --previous-report artifacts/experiments/villanueva-comparison-v1/comparison.json --representation char_wb --word-baseline artifacts/experiments/source-generalization-v1/report.json --output outputs/character-comparison-reproduccion
+```
+
+Estado: mejora modesta observada **en estas rondas internas**; no es una métrica
+de validación original ni de test y no afecta producción. Fue una comparación
+de representación prevista, sin nueva búsqueda de parámetros del clasificador.
+Siguiente bloque después del commit: ajustar esta variante de caracteres sobre
+las 598 filas de train y comprobarla una vez en las 81 de validación original,
+comparándola con el resultado registrado de palabras. Mantener test intacto y
+decidir según ese resultado, sin desplegar automáticamente el candidato.
 
 ### Reproducir la muestra de la revisión inicial
 

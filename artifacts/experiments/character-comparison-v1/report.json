@@ -1,0 +1,3566 @@
+{
+  "created_at": "2026-09-07T21:44:08.831356+00:00",
+  "inputs": {
+    "dataset": {
+      "path": "outputs/villanueva-snapshot-v1/reviewed-export.json",
+      "file_sha256": "30c5e648476fcfcb1bd9eddd3e99a7cca3ce5f23fabf09290cd7e4ec8791074a"
+    },
+    "config": {
+      "path": "configs/experiments/tfidf.json",
+      "file_sha256": "0273afefe732b4780af98f49bd87ec953a139967500004ca3897492f12edf018"
+    },
+    "selection": {
+      "path": "outputs/history-comparison-v1/reviewed/selection.json",
+      "file_sha256": "c29b73a56907bbc4bc45aa567b04ea16786401eaa4a82c2eb2e813b0b7623b69"
+    },
+    "previous_report": {
+      "path": "artifacts/experiments/villanueva-comparison-v1/comparison.json",
+      "file_sha256": "5bffc6137818db26d4d700e3015289e8cfef1241d04365ca59237186512d4a99"
+    },
+    "runner": {
+      "path": "scripts/evaluate_tfidf_by_source.py",
+      "file_sha256": "b196b26a66fbfb45eae8abbf630e10a95c3c093270bebbf1cbe0fa0088d95ac7"
+    },
+    "trainer": {
+      "path": "apps/ml/app/ml/experiments.py",
+      "file_sha256": "301f182cae16e106c7d2af807a4d4f754706211e7c970a0bb0f6178a0dafae9a"
+    },
+    "metrics": {
+      "path": "apps/ml/app/ml/baselines.py",
+      "file_sha256": "78d5f731290bfe1c703dbc3bb8061e75a8eb221fa89bb8ec1777fc6e32dbe609"
+    },
+    "validation": {
+      "path": "apps/ml/app/ml/experiment_data.py",
+      "file_sha256": "df9807ebc99810feea70b9835837ef8a557f6180786531decbc3468b8d331840"
+    },
+    "comparison_helpers": {
+      "path": "scripts/compare_tfidf_validation.py",
+      "file_sha256": "dbd865554d13e8960b9e19e5dc3949fc4e820a73a1adf6131d03e26ab05a063f"
+    },
+    "word_baseline": {
+      "path": "artifacts/experiments/source-generalization-v1/report.json",
+      "file_sha256": "7a801849f0d4f9fec4b2db211b3f3d3945313d0a7dc399cfadac5b9ff0bccdb6"
+    }
+  },
+  "git_commit": "3c72b21410a61206aa0f2b7fd1d098af94080891",
+  "working_tree_dirty": true,
+  "hyperparams": {
+    "id": "tfidf-c4",
+    "C": 4.0
+  },
+  "seed": 42,
+  "thread_limit": 1,
+  "python": "3.10.10",
+  "representation": "char_wb",
+  "vectorizer": {
+    "analyzer": "char_wb",
+    "ngram_range": [
+      3,
+      5
+    ],
+    "strip_accents": "unicode",
+    "min_df": 2,
+    "max_features": 50000,
+    "sublinear_tf": true
+  },
+  "dependencies": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.6.0"
+  },
+  "dataset_sha256": "167a994133655d16661f9711a2adcf00053fb9dd6f477378180d71acfa2bbbdd",
+  "train_sha256": "e2d4ffcebfc65f5e74f30a4b515b9a484ba1b5b535030ad832f4ff715aef2590",
+  "audit": {
+    "dataset_sha256": "167a994133655d16661f9711a2adcf00053fb9dd6f477378180d71acfa2bbbdd",
+    "split_counts": {
+      "train": 598,
+      "val": 81,
+      "test": 137
+    },
+    "class_distribution": {
+      "train": {
+        "campanias_conflictos_militares": 88,
+        "participacion_social_regional": 83,
+        "no_relevante": 101,
+        "organizacion_consecuencias_republicanas": 101,
+        "liderazgos_diplomacia_proyectos": 94,
+        "contexto_colonial_antecedentes": 71,
+        "crisis_ideas_emancipadoras": 60
+      },
+      "val": {
+        "contexto_colonial_antecedentes": 16,
+        "crisis_ideas_emancipadoras": 15,
+        "participacion_social_regional": 11,
+        "no_relevante": 16,
+        "liderazgos_diplomacia_proyectos": 4,
+        "organizacion_consecuencias_republicanas": 15,
+        "campanias_conflictos_militares": 4
+      },
+      "test": {
+        "contexto_colonial_antecedentes": 14,
+        "crisis_ideas_emancipadoras": 28,
+        "no_relevante": 39,
+        "participacion_social_regional": 12,
+        "campanias_conflictos_militares": 7,
+        "liderazgos_diplomacia_proyectos": 23,
+        "organizacion_consecuencias_republicanas": 14
+      }
+    },
+    "sources_by_split": {
+      "train": [
+        "0ea45102-057d-4bff-b527-f36326f66d33",
+        "17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+        "48262fb6-dee2-531e-b001-536c5928a9ca",
+        "514f190e-5d01-497a-a6ef-648601cd8bdb",
+        "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+        "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+        "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+        "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+        "e32181bc-41d0-4400-a76d-eb11fc88bf71"
+      ],
+      "val": [
+        "b23a4bf1-b9f4-4c08-bb89-a4cf4a67e004"
+      ],
+      "test": [
+        "15e52806-3d75-4117-937d-7c7eda594579",
+        "4ca9c84a-627b-4027-8216-fdc07c506727"
+      ]
+    },
+    "source_overlap": 0,
+    "exact_text_overlap": 0
+  },
+  "evaluation_sha256": "593fe90d68bc282108eab983515598c7c3b5ebbf42e2f79dbdb275c12d8c02a2",
+  "protocol": "Leave one existing training source out; fit vocabulary and classifier from scratch on other training sources. Fixed prior hyperparameters.",
+  "metric_policy": "Macro F1 always uses all seven labels, including classes absent from an individual evaluation source. Pooled metrics weight rows, not sources.",
+  "folds": [
+    {
+      "source_id": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "fit_count": 495,
+      "evaluation_count": 103,
+      "fit_sources": [
+        "17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+        "48262fb6-dee2-531e-b001-536c5928a9ca",
+        "514f190e-5d01-497a-a6ef-648601cd8bdb",
+        "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+        "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+        "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+        "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+        "e32181bc-41d0-4400-a76d-eb11fc88bf71"
+      ],
+      "fit_class_counts": {
+        "campanias_conflictos_militares": 87,
+        "participacion_social_regional": 65,
+        "no_relevante": 73,
+        "organizacion_consecuencias_republicanas": 100,
+        "liderazgos_diplomacia_proyectos": 73,
+        "contexto_colonial_antecedentes": 65,
+        "crisis_ideas_emancipadoras": 32
+      },
+      "evaluation_class_counts": {
+        "contexto_colonial_antecedentes": 6,
+        "crisis_ideas_emancipadoras": 28,
+        "participacion_social_regional": 18,
+        "no_relevante": 28,
+        "liderazgos_diplomacia_proyectos": 21,
+        "organizacion_consecuencias_republicanas": 1,
+        "campanias_conflictos_militares": 1
+      },
+      "absent_evaluation_classes": [],
+      "fit_sha256": "84fb033ee6ae679673c37fcfd7590dd21f4a144e2f41d8a36460f60868219400",
+      "evaluation_sha256": "0a13aab2efecfb960fb516419f03e69c10d1e05bc74a1761f63b345c8ce3fb4f",
+      "tfidf": {
+        "accuracy": 0.43689,
+        "precision_macro": 0.28759,
+        "recall_macro": 0.28798,
+        "f1_macro": 0.24205,
+        "f1_weighted": 0.38442,
+        "per_class": [
+          {
+            "label": "campanias_conflictos_militares",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          },
+          {
+            "label": "contexto_colonial_antecedentes",
+            "precision": 0.05263,
+            "recall": 0.16667,
+            "f1": 0.08,
+            "support": 6
+          },
+          {
+            "label": "crisis_ideas_emancipadoras",
+            "precision": 0.75,
+            "recall": 0.10714,
+            "f1": 0.1875,
+            "support": 28
+          },
+          {
+            "label": "liderazgos_diplomacia_proyectos",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 21
+          },
+          {
+            "label": "no_relevante",
+            "precision": 0.71053,
+            "recall": 0.96429,
+            "f1": 0.81818,
+            "support": 28
+          },
+          {
+            "label": "organizacion_consecuencias_republicanas",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          },
+          {
+            "label": "participacion_social_regional",
+            "precision": 0.5,
+            "recall": 0.77778,
+            "f1": 0.6087,
+            "support": 18
+          }
+        ],
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            1,
+            3,
+            1
+          ],
+          [
+            0,
+            10,
+            3,
+            0,
+            5,
+            4,
+            6
+          ],
+          [
+            1,
+            4,
+            0,
+            0,
+            5,
+            4,
+            7
+          ],
+          [
+            0,
+            0,
+            1,
+            0,
+            27,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0,
+            0,
+            1,
+            14
+          ]
+        ],
+        "labels": [
+          "campanias_conflictos_militares",
+          "contexto_colonial_antecedentes",
+          "crisis_ideas_emancipadoras",
+          "liderazgos_diplomacia_proyectos",
+          "no_relevante",
+          "organizacion_consecuencias_republicanas",
+          "participacion_social_regional"
+        ],
+        "split": "internal_train_source_holdout"
+      },
+      "majority": {
+        "accuracy": 0.00971,
+        "precision_macro": 0.00139,
+        "recall_macro": 0.14286,
+        "f1_macro": 0.00275,
+        "f1_weighted": 0.00019,
+        "per_class": [
+          {
+            "label": "campanias_conflictos_militares",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          },
+          {
+            "label": "contexto_colonial_antecedentes",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 6
+          },
+          {
+            "label": "crisis_ideas_emancipadoras",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 28
+          },
+          {
+            "label": "liderazgos_diplomacia_proyectos",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 21
+          },
+          {
+            "label": "no_relevante",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 28
+          },
+          {
+            "label": "organizacion_consecuencias_republicanas",
+            "precision": 0.00971,
+            "recall": 1.0,
+            "f1": 0.01923,
+            "support": 1
+          },
+          {
+            "label": "participacion_social_regional",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 18
+          }
+        ],
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            28,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            21,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            28,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            18,
+            0
+          ]
+        ],
+        "labels": [
+          "campanias_conflictos_militares",
+          "contexto_colonial_antecedentes",
+          "crisis_ideas_emancipadoras",
+          "liderazgos_diplomacia_proyectos",
+          "no_relevante",
+          "organizacion_consecuencias_republicanas",
+          "participacion_social_regional"
+        ],
+        "split": "internal_train_source_holdout"
+      },
+      "majority_label": "organizacion_consecuencias_republicanas",
+      "vocabulary_size": 33814,
+      "solver_iterations": [
+        30
+      ],
+      "fit_and_predict_seconds": 1.677,
+      "model": {
+        "path": "outputs/character-comparison-v1/fold-01.joblib",
+        "file_sha256": "f7d290c496d5ff6f3aaadf76e91a24e9c2a72d219c6e942ae87d4856bf7030c1"
+      }
+    },
+    {
+      "source_id": "17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+      "fit_count": 596,
+      "evaluation_count": 2,
+      "fit_sources": [
+        "0ea45102-057d-4bff-b527-f36326f66d33",
+        "48262fb6-dee2-531e-b001-536c5928a9ca",
+        "514f190e-5d01-497a-a6ef-648601cd8bdb",
+        "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+        "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+        "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+        "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+        "e32181bc-41d0-4400-a76d-eb11fc88bf71"
+      ],
+      "fit_class_counts": {
+        "campanias_conflictos_militares": 88,
+        "participacion_social_regional": 82,
+        "no_relevante": 101,
+        "organizacion_consecuencias_republicanas": 101,
+        "liderazgos_diplomacia_proyectos": 94,
+        "contexto_colonial_antecedentes": 70,
+        "crisis_ideas_emancipadoras": 60
+      },
+      "evaluation_class_counts": {
+        "contexto_colonial_antecedentes": 1,
+        "participacion_social_regional": 1
+      },
+      "absent_evaluation_classes": [
+        "campanias_conflictos_militares",
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos",
+        "no_relevante",
+        "organizacion_consecuencias_republicanas"
+      ],
+      "fit_sha256": "8e22aad6e4bf86ea4203c2847846a2daef2fbe92d7ec857d3cfe0468569ecf9a",
+      "evaluation_sha256": "4f3af2436e15ef54602e4ba491a3d7d8517a490dc25f914bcc99c0e43abf568a",
+      "tfidf": {
+        "accuracy": 0.5,
+        "precision_macro": 0.14286,
+        "recall_macro": 0.14286,
+        "f1_macro": 0.14286,
+        "f1_weighted": 0.5,
+        "per_class": [
+          {
+            "label": "campanias_conflictos_militares",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "contexto_colonial_antecedentes",
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 1
+          },
+          {
+            "label": "crisis_ideas_emancipadoras",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "liderazgos_diplomacia_proyectos",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "no_relevante",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "organizacion_consecuencias_republicanas",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "participacion_social_regional",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          }
+        ],
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        ],
+        "labels": [
+          "campanias_conflictos_militares",
+          "contexto_colonial_antecedentes",
+          "crisis_ideas_emancipadoras",
+          "liderazgos_diplomacia_proyectos",
+          "no_relevante",
+          "organizacion_consecuencias_republicanas",
+          "participacion_social_regional"
+        ],
+        "split": "internal_train_source_holdout"
+      },
+      "majority": {
+        "accuracy": 0.0,
+        "precision_macro": 0.0,
+        "recall_macro": 0.0,
+        "f1_macro": 0.0,
+        "f1_weighted": 0.0,
+        "per_class": [
+          {
+            "label": "campanias_conflictos_militares",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "contexto_colonial_antecedentes",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          },
+          {
+            "label": "crisis_ideas_emancipadoras",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "liderazgos_diplomacia_proyectos",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "no_relevante",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "organizacion_consecuencias_republicanas",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "participacion_social_regional",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          }
+        ],
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        ],
+        "labels": [
+          "campanias_conflictos_militares",
+          "contexto_colonial_antecedentes",
+          "crisis_ideas_emancipadoras",
+          "liderazgos_diplomacia_proyectos",
+          "no_relevante",
+          "organizacion_consecuencias_republicanas",
+          "participacion_social_regional"
+        ],
+        "split": "internal_train_source_holdout"
+      },
+      "majority_label": "no_relevante",
+      "vocabulary_size": 37849,
+      "solver_iterations": [
+        34
+      ],
+      "fit_and_predict_seconds": 1.878,
+      "model": {
+        "path": "outputs/character-comparison-v1/fold-02.joblib",
+        "file_sha256": "f9636832430152ecd810e1283b0c9ff85afc5cc1dc3d57179456e4c30998d7fa"
+      }
+    },
+    {
+      "source_id": "48262fb6-dee2-531e-b001-536c5928a9ca",
+      "fit_count": 594,
+      "evaluation_count": 4,
+      "fit_sources": [
+        "0ea45102-057d-4bff-b527-f36326f66d33",
+        "17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+        "514f190e-5d01-497a-a6ef-648601cd8bdb",
+        "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+        "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+        "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+        "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+        "e32181bc-41d0-4400-a76d-eb11fc88bf71"
+      ],
+      "fit_class_counts": {
+        "campanias_conflictos_militares": 88,
+        "participacion_social_regional": 83,
+        "no_relevante": 101,
+        "organizacion_consecuencias_republicanas": 101,
+        "liderazgos_diplomacia_proyectos": 94,
+        "contexto_colonial_antecedentes": 71,
+        "crisis_ideas_emancipadoras": 56
+      },
+      "evaluation_class_counts": {
+        "crisis_ideas_emancipadoras": 4
+      },
+      "absent_evaluation_classes": [
+        "campanias_conflictos_militares",
+        "contexto_colonial_antecedentes",
+        "liderazgos_diplomacia_proyectos",
+        "no_relevante",
+        "organizacion_consecuencias_republicanas",
+        "participacion_social_regional"
+      ],
+      "fit_sha256": "bb9381fa1d031b50d04b546057712c715f21e26d3d9bb332a39c8730218424cb",
+      "evaluation_sha256": "dc31c14774e813db56a530d402051b18bd1a796bfabfe90ca37c5583867964c5",
+      "tfidf": {
+        "accuracy": 0.0,
+        "precision_macro": 0.0,
+        "recall_macro": 0.0,
+        "f1_macro": 0.0,
+        "f1_weighted": 0.0,
+        "per_class": [
+          {
+            "label": "campanias_conflictos_militares",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "contexto_colonial_antecedentes",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "crisis_ideas_emancipadoras",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 4
+          },
+          {
+            "label": "liderazgos_diplomacia_proyectos",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "no_relevante",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "organizacion_consecuencias_republicanas",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "participacion_social_regional",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          }
+        ],
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            3,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "labels": [
+          "campanias_conflictos_militares",
+          "contexto_colonial_antecedentes",
+          "crisis_ideas_emancipadoras",
+          "liderazgos_diplomacia_proyectos",
+          "no_relevante",
+          "organizacion_consecuencias_republicanas",
+          "participacion_social_regional"
+        ],
+        "split": "internal_train_source_holdout"
+      },
+      "majority": {
+        "accuracy": 0.0,
+        "precision_macro": 0.0,
+        "recall_macro": 0.0,
+        "f1_macro": 0.0,
+        "f1_weighted": 0.0,
+        "per_class": [
+          {
+            "label": "campanias_conflictos_militares",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "contexto_colonial_antecedentes",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "crisis_ideas_emancipadoras",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 4
+          },
+          {
+            "label": "liderazgos_diplomacia_proyectos",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "no_relevante",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "organizacion_consecuencias_republicanas",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "participacion_social_regional",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          }
+        ],
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            4,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "labels": [
+          "campanias_conflictos_militares",
+          "contexto_colonial_antecedentes",
+          "crisis_ideas_emancipadoras",
+          "liderazgos_diplomacia_proyectos",
+          "no_relevante",
+          "organizacion_consecuencias_republicanas",
+          "participacion_social_regional"
+        ],
+        "split": "internal_train_source_holdout"
+      },
+      "majority_label": "no_relevante",
+      "vocabulary_size": 37803,
+      "solver_iterations": [
+        34
+      ],
+      "fit_and_predict_seconds": 1.846,
+      "model": {
+        "path": "outputs/character-comparison-v1/fold-03.joblib",
+        "file_sha256": "8ef4becc1620bb86f7e5d8b1e4764999224d57ff38c642d1886f0653a3243a2c"
+      }
+    },
+    {
+      "source_id": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "fit_count": 526,
+      "evaluation_count": 72,
+      "fit_sources": [
+        "0ea45102-057d-4bff-b527-f36326f66d33",
+        "17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+        "48262fb6-dee2-531e-b001-536c5928a9ca",
+        "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+        "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+        "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+        "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+        "e32181bc-41d0-4400-a76d-eb11fc88bf71"
+      ],
+      "fit_class_counts": {
+        "campanias_conflictos_militares": 87,
+        "participacion_social_regional": 80,
+        "no_relevante": 73,
+        "organizacion_consecuencias_republicanas": 95,
+        "liderazgos_diplomacia_proyectos": 79,
+        "contexto_colonial_antecedentes": 71,
+        "crisis_ideas_emancipadoras": 41
+      },
+      "evaluation_class_counts": {
+        "crisis_ideas_emancipadoras": 19,
+        "no_relevante": 28,
+        "participacion_social_regional": 3,
+        "liderazgos_diplomacia_proyectos": 15,
+        "organizacion_consecuencias_republicanas": 6,
+        "campanias_conflictos_militares": 1
+      },
+      "absent_evaluation_classes": [
+        "contexto_colonial_antecedentes"
+      ],
+      "fit_sha256": "48f06eaaa85b6c997db657d4531c8b91733c5d716bb2a680970a7cad9f5da0f8",
+      "evaluation_sha256": "4028793ee02cc5dda1f6b833e31bf07e1d9ccbd11561faec76ccd16f60cf0dd2",
+      "tfidf": {
+        "accuracy": 0.29167,
+        "precision_macro": 0.28939,
+        "recall_macro": 0.28749,
+        "f1_macro": 0.19624,
+        "f1_weighted": 0.27667,
+        "per_class": [
+          {
+            "label": "campanias_conflictos_militares",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          },
+          {
+            "label": "contexto_colonial_antecedentes",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "crisis_ideas_emancipadoras",
+            "precision": 0.5,
+            "recall": 0.10526,
+            "f1": 0.17391,
+            "support": 19
+          },
+          {
+            "label": "liderazgos_diplomacia_proyectos",
+            "precision": 0.54545,
+            "recall": 0.8,
+            "f1": 0.64865,
+            "support": 15
+          },
+          {
+            "label": "no_relevante",
+            "precision": 0.75,
+            "recall": 0.10714,
+            "f1": 0.1875,
+            "support": 28
+          },
+          {
+            "label": "organizacion_consecuencias_republicanas",
+            "precision": 0.125,
+            "recall": 0.33333,
+            "f1": 0.18182,
+            "support": 6
+          },
+          {
+            "label": "participacion_social_regional",
+            "precision": 0.10526,
+            "recall": 0.66667,
+            "f1": 0.18182,
+            "support": 3
+          }
+        ],
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            6,
+            2,
+            2,
+            0,
+            1,
+            8
+          ],
+          [
+            0,
+            0,
+            0,
+            12,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            1,
+            2,
+            5,
+            3,
+            9,
+            8
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            1,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            2
+          ]
+        ],
+        "labels": [
+          "campanias_conflictos_militares",
+          "contexto_colonial_antecedentes",
+          "crisis_ideas_emancipadoras",
+          "liderazgos_diplomacia_proyectos",
+          "no_relevante",
+          "organizacion_consecuencias_republicanas",
+          "participacion_social_regional"
+        ],
+        "split": "internal_train_source_holdout"
+      },
+      "majority": {
+        "accuracy": 0.08333,
+        "precision_macro": 0.0119,
+        "recall_macro": 0.14286,
+        "f1_macro": 0.02198,
+        "f1_weighted": 0.01282,
+        "per_class": [
+          {
+            "label": "campanias_conflictos_militares",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          },
+          {
+            "label": "contexto_colonial_antecedentes",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "crisis_ideas_emancipadoras",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 19
+          },
+          {
+            "label": "liderazgos_diplomacia_proyectos",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15
+          },
+          {
+            "label": "no_relevante",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 28
+          },
+          {
+            "label": "organizacion_consecuencias_republicanas",
+            "precision": 0.08333,
+            "recall": 1.0,
+            "f1": 0.15385,
+            "support": 6
+          },
+          {
+            "label": "participacion_social_regional",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 3
+          }
+        ],
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            19,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            15,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            28,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0
+          ]
+        ],
+        "labels": [
+          "campanias_conflictos_militares",
+          "contexto_colonial_antecedentes",
+          "crisis_ideas_emancipadoras",
+          "liderazgos_diplomacia_proyectos",
+          "no_relevante",
+          "organizacion_consecuencias_republicanas",
+          "participacion_social_regional"
+        ],
+        "split": "internal_train_source_holdout"
+      },
+      "majority_label": "organizacion_consecuencias_republicanas",
+      "vocabulary_size": 37034,
+      "solver_iterations": [
+        36
+      ],
+      "fit_and_predict_seconds": 1.939,
+      "model": {
+        "path": "outputs/character-comparison-v1/fold-04.joblib",
+        "file_sha256": "ce8cccc5b74866b514634c77b3c733d69b11c0540b17283d1fd14694c87db92a"
+      }
+    },
+    {
+      "source_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "fit_count": 354,
+      "evaluation_count": 244,
+      "fit_sources": [
+        "0ea45102-057d-4bff-b527-f36326f66d33",
+        "17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+        "48262fb6-dee2-531e-b001-536c5928a9ca",
+        "514f190e-5d01-497a-a6ef-648601cd8bdb",
+        "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+        "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+        "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+        "e32181bc-41d0-4400-a76d-eb11fc88bf71"
+      ],
+      "fit_class_counts": {
+        "participacion_social_regional": 82,
+        "no_relevante": 88,
+        "organizacion_consecuencias_republicanas": 42,
+        "liderazgos_diplomacia_proyectos": 51,
+        "campanias_conflictos_militares": 18,
+        "contexto_colonial_antecedentes": 19,
+        "crisis_ideas_emancipadoras": 54
+      },
+      "evaluation_class_counts": {
+        "campanias_conflictos_militares": 70,
+        "organizacion_consecuencias_republicanas": 59,
+        "contexto_colonial_antecedentes": 52,
+        "liderazgos_diplomacia_proyectos": 43,
+        "no_relevante": 13,
+        "crisis_ideas_emancipadoras": 6,
+        "participacion_social_regional": 1
+      },
+      "absent_evaluation_classes": [],
+      "fit_sha256": "547820c385adba673083039963742886a1b1573b7932933d33dfcb0d57d8f253",
+      "evaluation_sha256": "c693f12023ebcb0de6278175a4a478751fcc5e5098d1d928774fec7b3bf1f80f",
+      "tfidf": {
+        "accuracy": 0.28689,
+        "precision_macro": 0.4702,
+        "recall_macro": 0.43177,
+        "f1_macro": 0.23956,
+        "f1_weighted": 0.25033,
+        "per_class": [
+          {
+            "label": "campanias_conflictos_militares",
+            "precision": 1.0,
+            "recall": 0.11429,
+            "f1": 0.20513,
+            "support": 70
+          },
+          {
+            "label": "contexto_colonial_antecedentes",
+            "precision": 1.0,
+            "recall": 0.01923,
+            "f1": 0.03774,
+            "support": 52
+          },
+          {
+            "label": "crisis_ideas_emancipadoras",
+            "precision": 0.15,
+            "recall": 0.5,
+            "f1": 0.23077,
+            "support": 6
+          },
+          {
+            "label": "liderazgos_diplomacia_proyectos",
+            "precision": 0.27358,
+            "recall": 0.67442,
+            "f1": 0.38926,
+            "support": 43
+          },
+          {
+            "label": "no_relevante",
+            "precision": 0.5,
+            "recall": 0.30769,
+            "f1": 0.38095,
+            "support": 13
+          },
+          {
+            "label": "organizacion_consecuencias_republicanas",
+            "precision": 0.33333,
+            "recall": 0.40678,
+            "f1": 0.36641,
+            "support": 59
+          },
+          {
+            "label": "participacion_social_regional",
+            "precision": 0.03448,
+            "recall": 1.0,
+            "f1": 0.06667,
+            "support": 1
+          }
+        ],
+        "confusion_matrix": [
+          [
+            8,
+            0,
+            2,
+            49,
+            1,
+            5,
+            5
+          ],
+          [
+            0,
+            1,
+            11,
+            2,
+            0,
+            23,
+            15
+          ],
+          [
+            0,
+            0,
+            3,
+            0,
+            1,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            29,
+            1,
+            13,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            3,
+            4,
+            5,
+            1
+          ],
+          [
+            0,
+            0,
+            4,
+            23,
+            1,
+            24,
+            7
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "labels": [
+          "campanias_conflictos_militares",
+          "contexto_colonial_antecedentes",
+          "crisis_ideas_emancipadoras",
+          "liderazgos_diplomacia_proyectos",
+          "no_relevante",
+          "organizacion_consecuencias_republicanas",
+          "participacion_social_regional"
+        ],
+        "split": "internal_train_source_holdout"
+      },
+      "majority": {
+        "accuracy": 0.05328,
+        "precision_macro": 0.00761,
+        "recall_macro": 0.14286,
+        "f1_macro": 0.01445,
+        "f1_weighted": 0.00539,
+        "per_class": [
+          {
+            "label": "campanias_conflictos_militares",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 70
+          },
+          {
+            "label": "contexto_colonial_antecedentes",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 52
+          },
+          {
+            "label": "crisis_ideas_emancipadoras",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 6
+          },
+          {
+            "label": "liderazgos_diplomacia_proyectos",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 43
+          },
+          {
+            "label": "no_relevante",
+            "precision": 0.05328,
+            "recall": 1.0,
+            "f1": 0.10117,
+            "support": 13
+          },
+          {
+            "label": "organizacion_consecuencias_republicanas",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 59
+          },
+          {
+            "label": "participacion_social_regional",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 1
+          }
+        ],
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            70,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            52,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            6,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            43,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            13,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            59,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        ],
+        "labels": [
+          "campanias_conflictos_militares",
+          "contexto_colonial_antecedentes",
+          "crisis_ideas_emancipadoras",
+          "liderazgos_diplomacia_proyectos",
+          "no_relevante",
+          "organizacion_consecuencias_republicanas",
+          "participacion_social_regional"
+        ],
+        "split": "internal_train_source_holdout"
+      },
+      "majority_label": "no_relevante",
+      "vocabulary_size": 28447,
+      "solver_iterations": [
+        31
+      ],
+      "fit_and_predict_seconds": 1.593,
+      "model": {
+        "path": "outputs/character-comparison-v1/fold-05.joblib",
+        "file_sha256": "0784d92499523072c4c850abd4b897392fb018f4152be12bc1bccd91f66576ac"
+      }
+    },
+    {
+      "source_id": "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+      "fit_count": 582,
+      "evaluation_count": 16,
+      "fit_sources": [
+        "0ea45102-057d-4bff-b527-f36326f66d33",
+        "17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+        "48262fb6-dee2-531e-b001-536c5928a9ca",
+        "514f190e-5d01-497a-a6ef-648601cd8bdb",
+        "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+        "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+        "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+        "e32181bc-41d0-4400-a76d-eb11fc88bf71"
+      ],
+      "fit_class_counts": {
+        "campanias_conflictos_militares": 88,
+        "participacion_social_regional": 81,
+        "no_relevante": 100,
+        "organizacion_consecuencias_republicanas": 93,
+        "liderazgos_diplomacia_proyectos": 89,
+        "contexto_colonial_antecedentes": 71,
+        "crisis_ideas_emancipadoras": 60
+      },
+      "evaluation_class_counts": {
+        "organizacion_consecuencias_republicanas": 8,
+        "liderazgos_diplomacia_proyectos": 5,
+        "participacion_social_regional": 2,
+        "no_relevante": 1
+      },
+      "absent_evaluation_classes": [
+        "campanias_conflictos_militares",
+        "contexto_colonial_antecedentes",
+        "crisis_ideas_emancipadoras"
+      ],
+      "fit_sha256": "ffd501eba3d1456e67004cb1c856c795f53ea18719739e1c7d5876f472c3b6ce",
+      "evaluation_sha256": "a5be60a939fdf3a65966a9a5b710c91e174e481a15c5b3d1151526e4a522ef2e",
+      "tfidf": {
+        "accuracy": 0.5625,
+        "precision_macro": 0.29762,
+        "recall_macro": 0.29643,
+        "f1_macro": 0.24286,
+        "f1_weighted": 0.49583,
+        "per_class": [
+          {
+            "label": "campanias_conflictos_militares",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "contexto_colonial_antecedentes",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "crisis_ideas_emancipadoras",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "liderazgos_diplomacia_proyectos",
+            "precision": 1.0,
+            "recall": 0.2,
+            "f1": 0.33333,
+            "support": 5
+          },
+          {
+            "label": "no_relevante",
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.66667,
+            "support": 1
+          },
+          {
+            "label": "organizacion_consecuencias_republicanas",
+            "precision": 0.58333,
+            "recall": 0.875,
+            "f1": 0.7,
+            "support": 8
+          },
+          {
+            "label": "participacion_social_regional",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 2
+          }
+        ],
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            7,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0
+          ]
+        ],
+        "labels": [
+          "campanias_conflictos_militares",
+          "contexto_colonial_antecedentes",
+          "crisis_ideas_emancipadoras",
+          "liderazgos_diplomacia_proyectos",
+          "no_relevante",
+          "organizacion_consecuencias_republicanas",
+          "participacion_social_regional"
+        ],
+        "split": "internal_train_source_holdout"
+      },
+      "majority": {
+        "accuracy": 0.0625,
+        "precision_macro": 0.00893,
+        "recall_macro": 0.14286,
+        "f1_macro": 0.01681,
+        "f1_weighted": 0.00735,
+        "per_class": [
+          {
+            "label": "campanias_conflictos_militares",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "contexto_colonial_antecedentes",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "crisis_ideas_emancipadoras",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "liderazgos_diplomacia_proyectos",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 5
+          },
+          {
+            "label": "no_relevante",
+            "precision": 0.0625,
+            "recall": 1.0,
+            "f1": 0.11765,
+            "support": 1
+          },
+          {
+            "label": "organizacion_consecuencias_republicanas",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 8
+          },
+          {
+            "label": "participacion_social_regional",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 2
+          }
+        ],
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            5,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            8,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0
+          ]
+        ],
+        "labels": [
+          "campanias_conflictos_militares",
+          "contexto_colonial_antecedentes",
+          "crisis_ideas_emancipadoras",
+          "liderazgos_diplomacia_proyectos",
+          "no_relevante",
+          "organizacion_consecuencias_republicanas",
+          "participacion_social_regional"
+        ],
+        "split": "internal_train_source_holdout"
+      },
+      "majority_label": "no_relevante",
+      "vocabulary_size": 37486,
+      "solver_iterations": [
+        41
+      ],
+      "fit_and_predict_seconds": 2.294,
+      "model": {
+        "path": "outputs/character-comparison-v1/fold-06.joblib",
+        "file_sha256": "f6370fcbe084edac70509fbab6c06176e8328ac7a05cd21ce29ba161b3831c57"
+      }
+    },
+    {
+      "source_id": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+      "fit_count": 545,
+      "evaluation_count": 53,
+      "fit_sources": [
+        "0ea45102-057d-4bff-b527-f36326f66d33",
+        "17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+        "48262fb6-dee2-531e-b001-536c5928a9ca",
+        "514f190e-5d01-497a-a6ef-648601cd8bdb",
+        "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+        "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+        "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+        "e32181bc-41d0-4400-a76d-eb11fc88bf71"
+      ],
+      "fit_class_counts": {
+        "campanias_conflictos_militares": 88,
+        "organizacion_consecuencias_republicanas": 74,
+        "liderazgos_diplomacia_proyectos": 90,
+        "participacion_social_regional": 72,
+        "no_relevante": 90,
+        "contexto_colonial_antecedentes": 71,
+        "crisis_ideas_emancipadoras": 60
+      },
+      "evaluation_class_counts": {
+        "participacion_social_regional": 11,
+        "no_relevante": 11,
+        "organizacion_consecuencias_republicanas": 27,
+        "liderazgos_diplomacia_proyectos": 4
+      },
+      "absent_evaluation_classes": [
+        "campanias_conflictos_militares",
+        "contexto_colonial_antecedentes",
+        "crisis_ideas_emancipadoras"
+      ],
+      "fit_sha256": "5a67843b8a54db7e07bde074650146a59fcc67c185c2f749abc36443d2f2e3ec",
+      "evaluation_sha256": "df616847f1123d720313d6541fa76e1ad447628bc2ccf4680ac2d5ff52f1c3cb",
+      "tfidf": {
+        "accuracy": 0.28302,
+        "precision_macro": 0.25714,
+        "recall_macro": 0.16402,
+        "f1_macro": 0.16601,
+        "f1_weighted": 0.31666,
+        "per_class": [
+          {
+            "label": "campanias_conflictos_militares",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "contexto_colonial_antecedentes",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "crisis_ideas_emancipadoras",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "liderazgos_diplomacia_proyectos",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 4
+          },
+          {
+            "label": "no_relevante",
+            "precision": 0.66667,
+            "recall": 0.90909,
+            "f1": 0.76923,
+            "support": 11
+          },
+          {
+            "label": "organizacion_consecuencias_republicanas",
+            "precision": 0.8,
+            "recall": 0.14815,
+            "f1": 0.25,
+            "support": 27
+          },
+          {
+            "label": "participacion_social_regional",
+            "precision": 0.33333,
+            "recall": 0.09091,
+            "f1": 0.14286,
+            "support": 11
+          }
+        ],
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            10,
+            0,
+            0
+          ],
+          [
+            0,
+            20,
+            0,
+            0,
+            3,
+            4,
+            0
+          ],
+          [
+            1,
+            8,
+            0,
+            0,
+            1,
+            0,
+            1
+          ]
+        ],
+        "labels": [
+          "campanias_conflictos_militares",
+          "contexto_colonial_antecedentes",
+          "crisis_ideas_emancipadoras",
+          "liderazgos_diplomacia_proyectos",
+          "no_relevante",
+          "organizacion_consecuencias_republicanas",
+          "participacion_social_regional"
+        ],
+        "split": "internal_train_source_holdout"
+      },
+      "majority": {
+        "accuracy": 0.07547,
+        "precision_macro": 0.01078,
+        "recall_macro": 0.14286,
+        "f1_macro": 0.02005,
+        "f1_weighted": 0.01059,
+        "per_class": [
+          {
+            "label": "campanias_conflictos_militares",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "contexto_colonial_antecedentes",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "crisis_ideas_emancipadoras",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "liderazgos_diplomacia_proyectos",
+            "precision": 0.07547,
+            "recall": 1.0,
+            "f1": 0.14035,
+            "support": 4
+          },
+          {
+            "label": "no_relevante",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 11
+          },
+          {
+            "label": "organizacion_consecuencias_republicanas",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 27
+          },
+          {
+            "label": "participacion_social_regional",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 11
+          }
+        ],
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            4,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            11,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            27,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            11,
+            0,
+            0,
+            0
+          ]
+        ],
+        "labels": [
+          "campanias_conflictos_militares",
+          "contexto_colonial_antecedentes",
+          "crisis_ideas_emancipadoras",
+          "liderazgos_diplomacia_proyectos",
+          "no_relevante",
+          "organizacion_consecuencias_republicanas",
+          "participacion_social_regional"
+        ],
+        "split": "internal_train_source_holdout"
+      },
+      "majority_label": "liderazgos_diplomacia_proyectos",
+      "vocabulary_size": 36092,
+      "solver_iterations": [
+        37
+      ],
+      "fit_and_predict_seconds": 2.182,
+      "model": {
+        "path": "outputs/character-comparison-v1/fold-07.joblib",
+        "file_sha256": "ec77abce999c4c34a0d506d4547f88eeb644db26a67e7d5efd7bd78e4e38a2c0"
+      }
+    },
+    {
+      "source_id": "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+      "fit_count": 540,
+      "evaluation_count": 58,
+      "fit_sources": [
+        "0ea45102-057d-4bff-b527-f36326f66d33",
+        "17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+        "48262fb6-dee2-531e-b001-536c5928a9ca",
+        "514f190e-5d01-497a-a6ef-648601cd8bdb",
+        "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+        "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+        "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+        "e32181bc-41d0-4400-a76d-eb11fc88bf71"
+      ],
+      "fit_class_counts": {
+        "campanias_conflictos_militares": 82,
+        "participacion_social_regional": 62,
+        "no_relevante": 85,
+        "organizacion_consecuencias_republicanas": 101,
+        "liderazgos_diplomacia_proyectos": 94,
+        "contexto_colonial_antecedentes": 59,
+        "crisis_ideas_emancipadoras": 57
+      },
+      "evaluation_class_counts": {
+        "contexto_colonial_antecedentes": 12,
+        "participacion_social_regional": 21,
+        "crisis_ideas_emancipadoras": 3,
+        "campanias_conflictos_militares": 6,
+        "no_relevante": 16
+      },
+      "absent_evaluation_classes": [
+        "liderazgos_diplomacia_proyectos",
+        "organizacion_consecuencias_republicanas"
+      ],
+      "fit_sha256": "bab94a384a1e1ced0fa3a41805186b2350a060b1ae7f8c64c978a2d8a3835452",
+      "evaluation_sha256": "cf6f3abe3451ed9ebd8e5e7591533cb857c3b74b807f88b49fd3375ceb693d91",
+      "tfidf": {
+        "accuracy": 0.67241,
+        "precision_macro": 0.4136,
+        "recall_macro": 0.41071,
+        "f1_macro": 0.409,
+        "f1_weighted": 0.68936,
+        "per_class": [
+          {
+            "label": "campanias_conflictos_militares",
+            "precision": 0.625,
+            "recall": 0.83333,
+            "f1": 0.71429,
+            "support": 6
+          },
+          {
+            "label": "contexto_colonial_antecedentes",
+            "precision": 0.6,
+            "recall": 0.5,
+            "f1": 0.54545,
+            "support": 12
+          },
+          {
+            "label": "crisis_ideas_emancipadoras",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 3
+          },
+          {
+            "label": "liderazgos_diplomacia_proyectos",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "no_relevante",
+            "precision": 0.93333,
+            "recall": 0.875,
+            "f1": 0.90323,
+            "support": 16
+          },
+          {
+            "label": "organizacion_consecuencias_republicanas",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "participacion_social_regional",
+            "precision": 0.73684,
+            "recall": 0.66667,
+            "f1": 0.7,
+            "support": 21
+          }
+        ],
+        "confusion_matrix": [
+          [
+            5,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            6,
+            0,
+            0,
+            0,
+            4,
+            2
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            14,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            3,
+            2,
+            0,
+            1,
+            0,
+            1,
+            14
+          ]
+        ],
+        "labels": [
+          "campanias_conflictos_militares",
+          "contexto_colonial_antecedentes",
+          "crisis_ideas_emancipadoras",
+          "liderazgos_diplomacia_proyectos",
+          "no_relevante",
+          "organizacion_consecuencias_republicanas",
+          "participacion_social_regional"
+        ],
+        "split": "internal_train_source_holdout"
+      },
+      "majority": {
+        "accuracy": 0.0,
+        "precision_macro": 0.0,
+        "recall_macro": 0.0,
+        "f1_macro": 0.0,
+        "f1_weighted": 0.0,
+        "per_class": [
+          {
+            "label": "campanias_conflictos_militares",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 6
+          },
+          {
+            "label": "contexto_colonial_antecedentes",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 12
+          },
+          {
+            "label": "crisis_ideas_emancipadoras",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 3
+          },
+          {
+            "label": "liderazgos_diplomacia_proyectos",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "no_relevante",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 16
+          },
+          {
+            "label": "organizacion_consecuencias_republicanas",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "participacion_social_regional",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 21
+          }
+        ],
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            12,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            16,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            21,
+            0
+          ]
+        ],
+        "labels": [
+          "campanias_conflictos_militares",
+          "contexto_colonial_antecedentes",
+          "crisis_ideas_emancipadoras",
+          "liderazgos_diplomacia_proyectos",
+          "no_relevante",
+          "organizacion_consecuencias_republicanas",
+          "participacion_social_regional"
+        ],
+        "split": "internal_train_source_holdout"
+      },
+      "majority_label": "organizacion_consecuencias_republicanas",
+      "vocabulary_size": 35740,
+      "solver_iterations": [
+        33
+      ],
+      "fit_and_predict_seconds": 1.829,
+      "model": {
+        "path": "outputs/character-comparison-v1/fold-08.joblib",
+        "file_sha256": "af64fc7bc21aabdf1295754c2de533d084ae3e7a9ad1e8b81a8877eba3a9e38e"
+      }
+    },
+    {
+      "source_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+      "fit_count": 552,
+      "evaluation_count": 46,
+      "fit_sources": [
+        "0ea45102-057d-4bff-b527-f36326f66d33",
+        "17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+        "48262fb6-dee2-531e-b001-536c5928a9ca",
+        "514f190e-5d01-497a-a6ef-648601cd8bdb",
+        "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+        "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+        "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+        "9fecbe5a-9fb2-4002-a088-8a2810db938e"
+      ],
+      "fit_class_counts": {
+        "campanias_conflictos_militares": 78,
+        "participacion_social_regional": 57,
+        "no_relevante": 97,
+        "organizacion_consecuencias_republicanas": 101,
+        "liderazgos_diplomacia_proyectos": 88,
+        "contexto_colonial_antecedentes": 71,
+        "crisis_ideas_emancipadoras": 60
+      },
+      "evaluation_class_counts": {
+        "participacion_social_regional": 26,
+        "campanias_conflictos_militares": 10,
+        "liderazgos_diplomacia_proyectos": 6,
+        "no_relevante": 4
+      },
+      "absent_evaluation_classes": [
+        "contexto_colonial_antecedentes",
+        "crisis_ideas_emancipadoras",
+        "organizacion_consecuencias_republicanas"
+      ],
+      "fit_sha256": "76d99ecaf6b23c7d1b720dcf4a3a76a077eb0aa9bdfd15951c2063d363dd57a0",
+      "evaluation_sha256": "8de0f08ada50daa83c2a497e9932dddd400488105602b803576b06b98fbb6c81",
+      "tfidf": {
+        "accuracy": 0.3913,
+        "precision_macro": 0.29134,
+        "recall_macro": 0.25183,
+        "f1_macro": 0.24089,
+        "f1_weighted": 0.44778,
+        "per_class": [
+          {
+            "label": "campanias_conflictos_militares",
+            "precision": 0.83333,
+            "recall": 0.5,
+            "f1": 0.625,
+            "support": 10
+          },
+          {
+            "label": "contexto_colonial_antecedentes",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "crisis_ideas_emancipadoras",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "liderazgos_diplomacia_proyectos",
+            "precision": 0.33333,
+            "recall": 0.16667,
+            "f1": 0.22222,
+            "support": 6
+          },
+          {
+            "label": "no_relevante",
+            "precision": 0.27273,
+            "recall": 0.75,
+            "f1": 0.4,
+            "support": 4
+          },
+          {
+            "label": "organizacion_consecuencias_republicanas",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "participacion_social_regional",
+            "precision": 0.6,
+            "recall": 0.34615,
+            "f1": 0.43902,
+            "support": 26
+          }
+        ],
+        "confusion_matrix": [
+          [
+            5,
+            0,
+            0,
+            1,
+            0,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            1,
+            2,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            3,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            5,
+            1,
+            7,
+            3,
+            9
+          ]
+        ],
+        "labels": [
+          "campanias_conflictos_militares",
+          "contexto_colonial_antecedentes",
+          "crisis_ideas_emancipadoras",
+          "liderazgos_diplomacia_proyectos",
+          "no_relevante",
+          "organizacion_consecuencias_republicanas",
+          "participacion_social_regional"
+        ],
+        "split": "internal_train_source_holdout"
+      },
+      "majority": {
+        "accuracy": 0.0,
+        "precision_macro": 0.0,
+        "recall_macro": 0.0,
+        "f1_macro": 0.0,
+        "f1_weighted": 0.0,
+        "per_class": [
+          {
+            "label": "campanias_conflictos_militares",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 10
+          },
+          {
+            "label": "contexto_colonial_antecedentes",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "crisis_ideas_emancipadoras",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "liderazgos_diplomacia_proyectos",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 6
+          },
+          {
+            "label": "no_relevante",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 4
+          },
+          {
+            "label": "organizacion_consecuencias_republicanas",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          {
+            "label": "participacion_social_regional",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 26
+          }
+        ],
+        "confusion_matrix": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            10,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            6,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            26,
+            0
+          ]
+        ],
+        "labels": [
+          "campanias_conflictos_militares",
+          "contexto_colonial_antecedentes",
+          "crisis_ideas_emancipadoras",
+          "liderazgos_diplomacia_proyectos",
+          "no_relevante",
+          "organizacion_consecuencias_republicanas",
+          "participacion_social_regional"
+        ],
+        "split": "internal_train_source_holdout"
+      },
+      "majority_label": "organizacion_consecuencias_republicanas",
+      "vocabulary_size": 36524,
+      "solver_iterations": [
+        40
+      ],
+      "fit_and_predict_seconds": 2.135,
+      "model": {
+        "path": "outputs/character-comparison-v1/fold-09.joblib",
+        "file_sha256": "54df50963a00c3664edf612c2835499753824c9d2d573c0ffd00f9ae31ce7f59"
+      }
+    }
+  ],
+  "validation_predictions_performed": false,
+  "test_predictions_performed": false,
+  "production_changed": false,
+  "hyperparameter_search_performed": false,
+  "pooled_tfidf": {
+    "accuracy": 0.36455,
+    "precision_macro": 0.39329,
+    "recall_macro": 0.34232,
+    "f1_macro": 0.33909,
+    "f1_weighted": 0.35871,
+    "per_class": [
+      {
+        "label": "campanias_conflictos_militares",
+        "precision": 0.75,
+        "recall": 0.20455,
+        "f1": 0.32143,
+        "support": 88
+      },
+      {
+        "label": "contexto_colonial_antecedentes",
+        "precision": 0.13043,
+        "recall": 0.12676,
+        "f1": 0.12857,
+        "support": 71
+      },
+      {
+        "label": "crisis_ideas_emancipadoras",
+        "precision": 0.24242,
+        "recall": 0.13333,
+        "f1": 0.17204,
+        "support": 60
+      },
+      {
+        "label": "liderazgos_diplomacia_proyectos",
+        "precision": 0.31387,
+        "recall": 0.45745,
+        "f1": 0.37229,
+        "support": 94
+      },
+      {
+        "label": "no_relevante",
+        "precision": 0.66667,
+        "recall": 0.61386,
+        "f1": 0.63918,
+        "support": 101
+      },
+      {
+        "label": "organizacion_consecuencias_republicanas",
+        "precision": 0.28682,
+        "recall": 0.36634,
+        "f1": 0.32174,
+        "support": 101
+      },
+      {
+        "label": "participacion_social_regional",
+        "precision": 0.36283,
+        "recall": 0.49398,
+        "f1": 0.41837,
+        "support": 83
+      }
+    ],
+    "confusion_matrix": [
+      [
+        18,
+        0,
+        2,
+        51,
+        1,
+        6,
+        10
+      ],
+      [
+        0,
+        9,
+        11,
+        2,
+        1,
+        30,
+        18
+      ],
+      [
+        0,
+        18,
+        8,
+        5,
+        7,
+        8,
+        14
+      ],
+      [
+        2,
+        4,
+        0,
+        43,
+        8,
+        27,
+        10
+      ],
+      [
+        0,
+        2,
+        3,
+        8,
+        62,
+        14,
+        12
+      ],
+      [
+        0,
+        22,
+        4,
+        25,
+        5,
+        37,
+        8
+      ],
+      [
+        4,
+        14,
+        5,
+        3,
+        9,
+        7,
+        41
+      ]
+    ],
+    "labels": [
+      "campanias_conflictos_militares",
+      "contexto_colonial_antecedentes",
+      "crisis_ideas_emancipadoras",
+      "liderazgos_diplomacia_proyectos",
+      "no_relevante",
+      "organizacion_consecuencias_republicanas",
+      "participacion_social_regional"
+    ],
+    "split": "internal_train_source_holdout"
+  },
+  "pooled_majority": {
+    "accuracy": 0.04181,
+    "precision_macro": 0.02188,
+    "recall_macro": 0.03578,
+    "f1_macro": 0.02394,
+    "f1_weighted": 0.02766,
+    "per_class": [
+      {
+        "label": "campanias_conflictos_militares",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 88
+      },
+      {
+        "label": "contexto_colonial_antecedentes",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 71
+      },
+      {
+        "label": "crisis_ideas_emancipadoras",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 60
+      },
+      {
+        "label": "liderazgos_diplomacia_proyectos",
+        "precision": 0.07547,
+        "recall": 0.04255,
+        "f1": 0.05442,
+        "support": 94
+      },
+      {
+        "label": "no_relevante",
+        "precision": 0.05263,
+        "recall": 0.13861,
+        "f1": 0.07629,
+        "support": 101
+      },
+      {
+        "label": "organizacion_consecuencias_republicanas",
+        "precision": 0.02509,
+        "recall": 0.06931,
+        "f1": 0.03684,
+        "support": 101
+      },
+      {
+        "label": "participacion_social_regional",
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 83
+      }
+    ],
+    "confusion_matrix": [
+      [
+        0,
+        0,
+        0,
+        0,
+        70,
+        18,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        53,
+        18,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        10,
+        50,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4,
+        48,
+        42,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        11,
+        14,
+        76,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        27,
+        67,
+        7,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        11,
+        4,
+        68,
+        0
+      ]
+    ],
+    "labels": [
+      "campanias_conflictos_militares",
+      "contexto_colonial_antecedentes",
+      "crisis_ideas_emancipadoras",
+      "liderazgos_diplomacia_proyectos",
+      "no_relevante",
+      "organizacion_consecuencias_republicanas",
+      "participacion_social_regional"
+    ],
+    "split": "internal_train_source_holdout"
+  },
+  "each_train_row_evaluated_once": true,
+  "equal_source_mean_accuracy": 0.38052,
+  "word_comparison": {
+    "baseline_pooled": {
+      "accuracy": 0.34783,
+      "precision_macro": 0.38507,
+      "recall_macro": 0.32199,
+      "f1_macro": 0.32372,
+      "f1_weighted": 0.34805,
+      "per_class": [
+        {
+          "label": "campanias_conflictos_militares",
+          "precision": 0.85185,
+          "recall": 0.26136,
+          "f1": 0.4,
+          "support": 88
+        },
+        {
+          "label": "contexto_colonial_antecedentes",
+          "precision": 0.07895,
+          "recall": 0.08451,
+          "f1": 0.08163,
+          "support": 71
+        },
+        {
+          "label": "crisis_ideas_emancipadoras",
+          "precision": 0.17857,
+          "recall": 0.08333,
+          "f1": 0.11364,
+          "support": 60
+        },
+        {
+          "label": "liderazgos_diplomacia_proyectos",
+          "precision": 0.33803,
+          "recall": 0.51064,
+          "f1": 0.40678,
+          "support": 94
+        },
+        {
+          "label": "no_relevante",
+          "precision": 0.68235,
+          "recall": 0.57426,
+          "f1": 0.62366,
+          "support": 101
+        },
+        {
+          "label": "organizacion_consecuencias_republicanas",
+          "precision": 0.30081,
+          "recall": 0.36634,
+          "f1": 0.33036,
+          "support": 101
+        },
+        {
+          "label": "participacion_social_regional",
+          "precision": 0.26496,
+          "recall": 0.37349,
+          "f1": 0.31,
+          "support": 83
+        }
+      ],
+      "confusion_matrix": [
+        [
+          23,
+          0,
+          0,
+          33,
+          4,
+          10,
+          18
+        ],
+        [
+          0,
+          6,
+          9,
+          3,
+          0,
+          28,
+          25
+        ],
+        [
+          0,
+          17,
+          5,
+          17,
+          5,
+          5,
+          11
+        ],
+        [
+          2,
+          10,
+          3,
+          48,
+          5,
+          22,
+          4
+        ],
+        [
+          0,
+          4,
+          3,
+          14,
+          58,
+          9,
+          13
+        ],
+        [
+          0,
+          22,
+          2,
+          21,
+          4,
+          37,
+          15
+        ],
+        [
+          2,
+          17,
+          6,
+          6,
+          9,
+          12,
+          31
+        ]
+      ],
+      "labels": [
+        "campanias_conflictos_militares",
+        "contexto_colonial_antecedentes",
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos",
+        "no_relevante",
+        "organizacion_consecuencias_republicanas",
+        "participacion_social_regional"
+      ],
+      "split": "internal_train_source_holdout"
+    },
+    "delta_pooled_f1_macro": 0.01537,
+    "delta_pooled_accuracy": 0.01672,
+    "changed_predictions": 196,
+    "baseline_models_retrained": false,
+    "per_source": [
+      {
+        "source_id": "0ea45102-057d-4bff-b527-f36326f66d33",
+        "delta_accuracy": 0.02912,
+        "delta_f1_macro": -0.00524
+      },
+      {
+        "source_id": "17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+        "delta_accuracy": 0.0,
+        "delta_f1_macro": 0.0
+      },
+      {
+        "source_id": "48262fb6-dee2-531e-b001-536c5928a9ca",
+        "delta_accuracy": 0.0,
+        "delta_f1_macro": 0.0
+      },
+      {
+        "source_id": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+        "delta_accuracy": 0.0,
+        "delta_f1_macro": 0.01833
+      },
+      {
+        "source_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+        "delta_accuracy": 0.0041,
+        "delta_f1_macro": 0.02686
+      },
+      {
+        "source_id": "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+        "delta_accuracy": 0.0,
+        "delta_f1_macro": -0.04762
+      },
+      {
+        "source_id": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+        "delta_accuracy": 0.01887,
+        "delta_f1_macro": 0.00736
+      },
+      {
+        "source_id": "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+        "delta_accuracy": 0.12069,
+        "delta_f1_macro": 0.01754
+      },
+      {
+        "source_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+        "delta_accuracy": -0.04348,
+        "delta_f1_macro": -0.04582
+      }
+    ]
+  },
+  "schema_version": 1,
+  "word_baseline_commit": "3c72b21",
+  "verification": {
+    "passed": true,
+    "checks": [
+      "All 598 training rows evaluated exactly once; no val/test rows included",
+      "All input hashes unchanged",
+      "Nine saved models reproduce all internal predictions",
+      "Vocabulary terms and IDF values agree with fit rows only in every fold",
+      "Every source disjoint between fitting and evaluation",
+      "Per-source metrics and fold-specific majority baseline independently recalculated",
+      "Pooled metrics independently recalculated",
+      "Frozen evaluation hash unchanged; changes to holdout content do not alter internal folds",
+      "Baseline predictions and metrics verified before reuse",
+      "Same nine partitions and classifier settings; only analyzer and ngram range differ",
+      "Paired prediction changes and metric deltas reconciled"
+    ],
+    "rejected_cases": [
+      "Empty training data",
+      "Accidental val/test row",
+      "Only one source",
+      "Class absent from fitting fold",
+      "Exact duplicate across source boundary",
+      "Changed backend",
+      "Selection based on test",
+      "Changed seed",
+      "Dataset inconsistent with previous report",
+      "Existing output directory",
+      "Output outside outputs",
+      "Baseline wrong representation",
+      "Baseline wrong training data",
+      "Baseline missing fold",
+      "Baseline altered fold membership",
+      "Baseline altered pooled metrics",
+      "Unknown representation",
+      "Characters require word baseline",
+      "Word mode rejects character comparison baseline"
+    ],
+    "new_fits_in_verification": 0,
+    "verification_predictions_split": "train_sources_only",
+    "correct_predictions": 218,
+    "ideas_correct": 8,
+    "paired_counts": {
+      "both_correct": 170,
+      "word_only_correct": 38,
+      "char_only_correct": 48,
+      "both_wrong": 342
+    }
+  },
+  "outputs": [
+    {
+      "path": "outputs/character-comparison-v1/report.json",
+      "file_sha256": "11171ceb730ef1e373d993efc384979123c22ba732d69938114c4c82773cfa95"
+    },
+    {
+      "path": "outputs/character-comparison-v1/predictions.json",
+      "file_sha256": "4cbc95b5c2835b60f788fc37e9ea30c21a21bfcb1ec445f09e52401ebac77084"
+    },
+    {
+      "path": "outputs/character-comparison-v1/verification.json",
+      "file_sha256": "b6f762ea26df9e12134ca02adce57cd03ebdca96dc23134bc430ba153403a5df"
+    }
+  ],
+  "source_comparison": [
+    {
+      "name": "O’Phelan",
+      "source_id": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "rows": 103,
+      "word_accuracy": 0.40777,
+      "char_accuracy": 0.43689
+    },
+    {
+      "name": "AGN",
+      "source_id": "17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+      "rows": 2,
+      "word_accuracy": 0.5,
+      "char_accuracy": 0.5
+    },
+    {
+      "name": "Huerta",
+      "source_id": "48262fb6-dee2-531e-b001-536c5928a9ca",
+      "rows": 4,
+      "word_accuracy": 0.0,
+      "char_accuracy": 0.0
+    },
+    {
+      "name": "Video de train",
+      "source_id": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "rows": 72,
+      "word_accuracy": 0.29167,
+      "char_accuracy": 0.29167
+    },
+    {
+      "name": "Basadre",
+      "source_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "rows": 244,
+      "word_accuracy": 0.28279,
+      "char_accuracy": 0.28689
+    },
+    {
+      "name": "Villanueva",
+      "source_id": "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+      "rows": 16,
+      "word_accuracy": 0.5625,
+      "char_accuracy": 0.5625
+    },
+    {
+      "name": "Orrego",
+      "source_id": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+      "rows": 53,
+      "word_accuracy": 0.26415,
+      "char_accuracy": 0.28302
+    },
+    {
+      "name": "Huamanga",
+      "source_id": "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+      "rows": 58,
+      "word_accuracy": 0.55172,
+      "char_accuracy": 0.67241
+    },
+    {
+      "name": "Fonseca",
+      "source_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+      "rows": 46,
+      "word_accuracy": 0.43478,
+      "char_accuracy": 0.3913
+    }
+  ],
+  "interpretation": {
+    "internal_comparison_only": true,
+    "word_correct": 208,
+    "char_correct": 218,
+    "total": 598,
+    "ideas_word_correct": 5,
+    "ideas_char_correct": 8,
+    "ideas_total": 60,
+    "accuracy_improved_sources": 4,
+    "accuracy_worse_sources": 1,
+    "accuracy_tied_sources": 4,
+    "conclusion": "Modest pooled improvement with tradeoffs across sources and classes. Character variant is eligible for the next validation check, not production promotion.",
+    "next_candidate": "char_wb_3_5_C4",
+    "candidate_selection_basis": "One planned representation comparison on the same internal source folds; pooled seven-class F1 macro increases. No new classifier tuning."
+  },
+  "limits": [
+    "Nine source groups; unequal group sizes and some very small groups. Pooled metrics weight rows.",
+    "Internal train-source comparison uses already reviewed data and previously selected C=4; not fresh external evaluation or final test.",
+    "Character features do not fix historical labels or prove that OCR noise caused errors.",
+    "Campaigns, leadership and republican organization F1 decrease while four other classes improve.",
+    "No statistical significance established; 48 newly correct and 38 newly incorrect examples.",
+    "Only analyzer/feature lengths changed: word unigrams+bigrams vs char_wb3-5. Other vectorizer settings and classifier parameters identical.",
+    "No new val/test predictions, BETO training, remote computation or production changes."
+  ],
+  "prediction_text_hash_encoding": "The text_sha256 in predictions.json is fingerprint(text): SHA-256 of the canonical JSON string, not raw UTF-8 text.",
+  "next_step": "Fit the preselected character variant on all 598 train rows and evaluate once on the original 81 validation rows, comparing with the recorded word model; do not predict test or deploy."
+}

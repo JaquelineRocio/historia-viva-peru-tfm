@@ -18,6 +18,61 @@ from app.ml.experiments import fit_tfidf
 from app.ml.baselines import _metric_report
 
 
+def fit_representation(train: list[dict], params: dict, seed: int, representation: str):
+    if representation == "word":
+        return fit_tfidf(train, params, seed)
+    if representation != "char_wb":
+        raise ValueError("Representación desconocida")
+    from sklearn.feature_extraction.text import TfidfVectorizer
+    from sklearn.linear_model import LogisticRegression
+    from sklearn.pipeline import Pipeline
+
+    model = Pipeline([
+        ("tfidf", TfidfVectorizer(analyzer="char_wb", ngram_range=(3, 5), strip_accents="unicode",
+                                  min_df=2, max_features=50_000, sublinear_tf=True)),
+        ("classifier", LogisticRegression(C=params["C"], class_weight="balanced", max_iter=2000,
+                                          random_state=seed, solver="lbfgs")),
+    ])
+    model.fit([r["text"] for r in train], [r["label"] for r in train])
+    return model
+
+
+def validate_word_baseline(baseline: dict, train: list[dict], folds: list[dict], params: dict,
+                           seed: int, inputs: dict) -> list[dict]:
+    if (baseline.get("representation", "word") != "word" or baseline["hyperparams"] != params
+            or baseline["seed"] != seed or baseline["train_sha256"] != fingerprint(train)
+            or baseline["dataset_sha256"] != baseline["audit"]["dataset_sha256"]
+            or len(baseline["folds"]) != len(folds)):
+        raise ValueError("La referencia de palabras no coincide con este experimento")
+    for name in ("dataset", "config", "selection", "trainer", "metrics", "validation"):
+        if baseline["inputs"][name]["file_sha256"] != inputs[name]["file_sha256"]:
+            raise ValueError("Entradas distintas de la referencia de palabras")
+    outputs = baseline["outputs"]
+    for entry in outputs + [f["model"] for f in baseline["folds"]]:
+        if file_info(ROOT / entry["path"])["file_sha256"] != entry["file_sha256"]:
+            raise ValueError("Predicciones o modelos de referencia alterados")
+    paths = [e["path"] for e in outputs if Path(e["path"]).name == "predictions.json"]
+    if len(paths) != 1:
+        raise ValueError("Falta un archivo único de predicciones de palabras")
+    predictions = read(ROOT / paths[0])
+    if (len(predictions) != len(train)
+            or any(p["actual"] != r["label"] or p["source_id"] != r["resourceId"]
+                   or p["text_sha256"] != fingerprint(r["text"]) for p, r in zip(predictions, train))):
+        raise ValueError("Las predicciones de referencia no corresponden a train")
+    labels = baseline["pooled_tfidf"]["labels"]
+    for fold, record in zip(folds, baseline["folds"]):
+        fit = [train[i] for i in fold["fit_indices"]]
+        evaluation = [train[i] for i in fold["evaluation_indices"]]
+        if (fold["source_id"] != record["source_id"] or fingerprint(fit) != record["fit_sha256"]
+                or fingerprint(evaluation) != record["evaluation_sha256"]
+                or metrics([r["label"] for r in evaluation],
+                           [predictions[i]["predicted"] for i in fold["evaluation_indices"]], labels) != record["tfidf"]):
+            raise ValueError("Cambió una ronda o métrica de la referencia")
+    if metrics([p["actual"] for p in predictions], [p["predicted"] for p in predictions], labels) != baseline["pooled_tfidf"]:
+        raise ValueError("Métricas agregadas de referencia no reproducibles")
+    return predictions
+
+
 def make_folds(train: list[dict], labels: list[str]) -> list[dict]:
     if not train or any(r["split"] != "train" for r in train):
         raise ValueError("Solo se aceptan filas de train")
@@ -58,7 +113,11 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     for name in ("dataset", "config", "selection", "previous-report", "output"):
         parser.add_argument("--" + name, type=Path, required=True)
+    parser.add_argument("--representation", choices=("word", "char_wb"), default="word")
+    parser.add_argument("--word-baseline", type=Path)
     args = parser.parse_args()
+    if (args.representation == "char_wb") != bool(args.word_baseline):
+        parser.error("char_wb requiere --word-baseline; word conserva el modo anterior")
     target = args.output.resolve()
     if not target.is_relative_to((ROOT / "outputs").resolve()) or target.exists():
         parser.error("Usa una carpeta nueva dentro de outputs/; no se sobrescribe")
@@ -78,6 +137,11 @@ def main() -> None:
     train = [r for _, r in rows]
     labels = sorted(data["labels"])
     folds = make_folds(train, labels)
+    word_baseline, word_predictions = None, None
+    if args.word_baseline:
+        word_baseline = read(args.word_baseline)
+        word_predictions = validate_word_baseline(word_baseline, train, folds, params, config["seed"], inputs)
+        inputs["word_baseline"] = file_info(args.word_baseline)
     import joblib
     from sklearn.exceptions import ConvergenceWarning
     from threadpoolctl import threadpool_limits
@@ -86,6 +150,9 @@ def main() -> None:
                   git_commit=subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
                   working_tree_dirty=bool(subprocess.check_output(["git", "status", "--porcelain"], text=True).strip()),
                   hyperparams=params, seed=config["seed"], thread_limit=1, python=platform.python_version(),
+                  representation=args.representation,
+                  vectorizer=dict(analyzer=args.representation, ngram_range=[1, 2] if args.representation == "word" else [3, 5],
+                                  strip_accents="unicode", min_df=2, max_features=50000, sublinear_tf=True),
                   dependencies={p: importlib.metadata.version(p) for p in ("numpy", "scipy", "scikit-learn", "joblib", "threadpoolctl")},
                   dataset_sha256=fingerprint(data), train_sha256=fingerprint(train), audit=audit,
                   evaluation_sha256=fingerprint([r for r in data["items"] if r["split"] != "train"]),
@@ -103,7 +170,7 @@ def main() -> None:
         started = time.perf_counter()
         with threadpool_limits(limits=1), warnings.catch_warnings():
             warnings.simplefilter("error", ConvergenceWarning)
-            model = fit_tfidf(fit, params, config["seed"])
+            model = fit_representation(fit, params, config["seed"], args.representation)
             predicted = model.predict([r["text"] for r in evaluation]).tolist()
         elapsed = time.perf_counter() - started
         model_path = target / f"fold-{number:02}.joblib"
@@ -133,6 +200,17 @@ def main() -> None:
     report["pooled_majority"] = metrics([p["actual"] for p in predictions], [p["majority_predicted"] for p in predictions], labels)
     report["each_train_row_evaluated_once"] = True
     report["equal_source_mean_accuracy"] = round(sum(f["tfidf"]["accuracy"] for f in report["folds"])/len(folds), 5)
+    if word_baseline is not None:
+        report["word_comparison"] = dict(
+            baseline_pooled=word_baseline["pooled_tfidf"],
+            delta_pooled_f1_macro=round(report["pooled_tfidf"]["f1_macro"]-word_baseline["pooled_tfidf"]["f1_macro"], 5),
+            delta_pooled_accuracy=round(report["pooled_tfidf"]["accuracy"]-word_baseline["pooled_tfidf"]["accuracy"], 5),
+            changed_predictions=sum(a["predicted"] != b["predicted"] for a, b in zip(word_predictions, predictions)),
+            baseline_models_retrained=False,
+            per_source=[dict(source_id=new["source_id"],
+                             delta_accuracy=round(new["tfidf"]["accuracy"]-old["tfidf"]["accuracy"], 5),
+                             delta_f1_macro=round(new["tfidf"]["f1_macro"]-old["tfidf"]["f1_macro"], 5))
+                        for old, new in zip(word_baseline["folds"], report["folds"])])
     for entry in inputs.values():
         if file_info(ROOT / entry["path"])["file_sha256"] != entry["file_sha256"]:
             raise ValueError("Cambió una entrada durante el diagnóstico")
