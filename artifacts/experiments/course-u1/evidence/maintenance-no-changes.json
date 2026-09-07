@@ -1,0 +1,71 @@
+{
+  "status": "skipped",
+  "reason": "insufficient_changes",
+  "min_changes": 20,
+  "changes": {
+    "added": 0,
+    "removed": 0,
+    "relabeled": 0,
+    "changed_examples": 0,
+    "evaluation_sha256": "593fe90d68bc282108eab983515598c7c3b5ebbf42e2f79dbdb275c12d8c02a2",
+    "heldout_rows_ignored_from_reviewed_export": 218,
+    "audit": {
+      "dataset_sha256": "2872f2537e95a17a6f2abe3b5e7dcef7e26a17383b9eefd42cd74acdb4788c7a",
+      "split_counts": {
+        "train": 595,
+        "val": 81,
+        "test": 137
+      },
+      "class_distribution": {
+        "train": {
+          "contexto_colonial_antecedentes": 70,
+          "organizacion_consecuencias_republicanas": 101,
+          "liderazgos_diplomacia_proyectos": 93,
+          "campanias_conflictos_militares": 88,
+          "participacion_social_regional": 83,
+          "no_relevante": 101,
+          "crisis_ideas_emancipadoras": 59
+        },
+        "val": {
+          "contexto_colonial_antecedentes": 16,
+          "crisis_ideas_emancipadoras": 15,
+          "participacion_social_regional": 11,
+          "no_relevante": 16,
+          "liderazgos_diplomacia_proyectos": 4,
+          "organizacion_consecuencias_republicanas": 15,
+          "campanias_conflictos_militares": 4
+        },
+        "test": {
+          "contexto_colonial_antecedentes": 14,
+          "crisis_ideas_emancipadoras": 28,
+          "no_relevante": 39,
+          "participacion_social_regional": 12,
+          "campanias_conflictos_militares": 7,
+          "liderazgos_diplomacia_proyectos": 23,
+          "organizacion_consecuencias_republicanas": 14
+        }
+      },
+      "sources_by_split": {
+        "train": [
+          "0ea45102-057d-4bff-b527-f36326f66d33",
+          "514f190e-5d01-497a-a6ef-648601cd8bdb",
+          "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+          "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+          "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+          "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+          "e32181bc-41d0-4400-a76d-eb11fc88bf71"
+        ],
+        "val": [
+          "b23a4bf1-b9f4-4c08-bb89-a4cf4a67e004"
+        ],
+        "test": [
+          "15e52806-3d75-4117-937d-7c7eda594579",
+          "4ca9c84a-627b-4027-8216-fdc07c506727"
+        ]
+      },
+      "source_overlap": 0,
+      "exact_text_overlap": 0
+    }
+  },
+  "production_changed": false
+}

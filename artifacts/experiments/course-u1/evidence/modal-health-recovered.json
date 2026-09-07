@@ -1,0 +1,26 @@
+{
+  "url": "https://jaquelineramosvargas--historia-viva-peru-ml-ml-api.modal.run",
+  "status": 200,
+  "body": {
+    "status": "ok",
+    "service": "ml",
+    "version": "0.1.0",
+    "components": {
+      "beto": {
+        "ready": true,
+        "status": "ready",
+        "error": null,
+        "repo": "Jaqueline98/historia-viva-beto-v1"
+      },
+      "embeddings": {
+        "ready": true,
+        "model": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+      },
+      "ner": {
+        "ready": false,
+        "model": "mrm8488/bert-spanish-cased-finetuned-ner"
+      }
+    }
+  },
+  "temporary_token_deleted": true
+}

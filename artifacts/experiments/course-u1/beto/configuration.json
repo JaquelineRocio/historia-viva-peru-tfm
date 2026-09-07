@@ -1,0 +1,32 @@
+{
+  "backend": "beto",
+  "base_model": "dccuchile/bert-base-spanish-wwm-cased",
+  "revision": "c4d86612f51b4f46759c8390d1798c2febe71b93",
+  "seed": 42,
+  "trials": [
+    {
+      "id": "beto-lr1e5",
+      "lr": 1e-05,
+      "epochs": 3,
+      "batch_size": 2,
+      "gradient_accumulation_steps": 8,
+      "max_len": 192
+    },
+    {
+      "id": "beto-lr2e5",
+      "lr": 2e-05,
+      "epochs": 3,
+      "batch_size": 2,
+      "gradient_accumulation_steps": 8,
+      "max_len": 192
+    },
+    {
+      "id": "beto-lr3e5",
+      "lr": 3e-05,
+      "epochs": 3,
+      "batch_size": 2,
+      "gradient_accumulation_steps": 8,
+      "max_len": 192
+    }
+  ]
+}

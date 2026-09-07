@@ -1,0 +1,29 @@
+{
+  "created_at": "2026-09-07T02:20:23.549886+00:00",
+  "checks": [
+    {
+      "name": "API and ML health",
+      "status": "failed",
+      "error_type": "ReadTimeout",
+      "seconds": 60.22
+    },
+    {
+      "name": "Invalid credentials rejected",
+      "status": "failed",
+      "error_type": "ReadTimeout",
+      "seconds": 60.12
+    },
+    {
+      "name": "Demo login",
+      "status": "failed",
+      "error_type": "ReadTimeout",
+      "seconds": 60.64
+    },
+    {
+      "name": "Web application shell",
+      "status": "passed",
+      "seconds": 0.42
+    }
+  ],
+  "passed": false
+}

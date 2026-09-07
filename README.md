@@ -131,6 +131,10 @@ cd apps/ml && python -m venv .venv && .venv/Scripts/pip install -r requirements.
 
 ## Entrenamiento reproducible
 
+Para el plan del curso, experimentos comparativos y automatización de mantenimiento,
+consulte [Unidad I y Unidad II](coursework/README.md). Allí se distingue lo ejecutado
+localmente de los pasos que todavía requieren verificación en producción.
+
 El notebook [train_beto_colab.ipynb](notebooks/train_beto_colab.ipynb) entrena con
 GPU en Colab. El snapshot versionado mantiene una fuente completa en un único
 split. El modelo descargado no se versiona en GitHub: se publica en Hugging Face
