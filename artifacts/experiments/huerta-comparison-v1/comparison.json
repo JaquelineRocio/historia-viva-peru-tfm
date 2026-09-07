@@ -1,0 +1,557 @@
+{
+  "created_at": "2026-09-07T18:10:46.883638+00:00",
+  "inputs": {
+    "before": {
+      "path": "outputs/history-corrections-v1/reviewed-export.json",
+      "file_sha256": "9913ffc95ac82761d1295815afb836907bb239fa52e48cfa5126307d5a56a76f"
+    },
+    "after": {
+      "path": "outputs/huerta-batch-snapshot-v1/reviewed-export.json",
+      "file_sha256": "38c71b1548b89848142edc1aadab24d6651393f7361140a516e36d758e7ba244"
+    },
+    "config": {
+      "path": "configs/experiments/tfidf.json",
+      "file_sha256": "0273afefe732b4780af98f49bd87ec953a139967500004ca3897492f12edf018"
+    },
+    "selection": {
+      "path": "outputs/history-comparison-v1/reviewed/selection.json",
+      "file_sha256": "c29b73a56907bbc4bc45aa567b04ea16786401eaa4a82c2eb2e813b0b7623b69"
+    },
+    "runner": {
+      "path": "scripts/compare_tfidf_validation.py",
+      "file_sha256": "523f804e1b40eb1d9963e2afb4490f42c89f17cfcb93753b3b1b314c97bafaec"
+    },
+    "trainer": {
+      "path": "apps/ml/app/ml/experiments.py",
+      "file_sha256": "301f182cae16e106c7d2af807a4d4f754706211e7c970a0bb0f6178a0dafae9a"
+    },
+    "metrics": {
+      "path": "apps/ml/app/ml/baselines.py",
+      "file_sha256": "78d5f731290bfe1c703dbc3bb8061e75a8eb221fa89bb8ec1777fc6e32dbe609"
+    },
+    "validation": {
+      "path": "apps/ml/app/ml/experiment_data.py",
+      "file_sha256": "df9807ebc99810feea70b9835837ef8a557f6180786531decbc3468b8d331840"
+    }
+  },
+  "git_commit": "b7e70947cd517bb2fee830cfd1325827f0a1ea80",
+  "working_tree_dirty": true,
+  "hyperparams": {
+    "id": "tfidf-c4",
+    "C": 4.0
+  },
+  "seed": 42,
+  "selection_policy": "Use the previous selection unchanged; no new hyperparameter search.",
+  "python": "3.10.10",
+  "thread_limit": 1,
+  "dependencies": {
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.7.2",
+    "joblib": "1.6.0",
+    "threadpoolctl": "3.6.0"
+  },
+  "runs": {
+    "before": {
+      "dataset_sha256": "cc67e8f6fafd3a8abd0243643f656477ad6415baa86d97a48d22c0909a68aa0c",
+      "audit": {
+        "dataset_sha256": "cc67e8f6fafd3a8abd0243643f656477ad6415baa86d97a48d22c0909a68aa0c",
+        "split_counts": {
+          "train": 596,
+          "val": 81,
+          "test": 137
+        },
+        "class_distribution": {
+          "train": {
+            "campanias_conflictos_militares": 88,
+            "participacion_social_regional": 83,
+            "no_relevante": 101,
+            "organizacion_consecuencias_republicanas": 101,
+            "crisis_ideas_emancipadoras": 58,
+            "liderazgos_diplomacia_proyectos": 94,
+            "contexto_colonial_antecedentes": 71
+          },
+          "val": {
+            "contexto_colonial_antecedentes": 16,
+            "crisis_ideas_emancipadoras": 15,
+            "participacion_social_regional": 11,
+            "no_relevante": 16,
+            "liderazgos_diplomacia_proyectos": 4,
+            "organizacion_consecuencias_republicanas": 15,
+            "campanias_conflictos_militares": 4
+          },
+          "test": {
+            "contexto_colonial_antecedentes": 14,
+            "crisis_ideas_emancipadoras": 28,
+            "no_relevante": 39,
+            "participacion_social_regional": 12,
+            "campanias_conflictos_militares": 7,
+            "liderazgos_diplomacia_proyectos": 23,
+            "organizacion_consecuencias_republicanas": 14
+          }
+        },
+        "sources_by_split": {
+          "train": [
+            "0ea45102-057d-4bff-b527-f36326f66d33",
+            "17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+            "514f190e-5d01-497a-a6ef-648601cd8bdb",
+            "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+            "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+            "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+            "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+            "e32181bc-41d0-4400-a76d-eb11fc88bf71"
+          ],
+          "val": [
+            "b23a4bf1-b9f4-4c08-bb89-a4cf4a67e004"
+          ],
+          "test": [
+            "15e52806-3d75-4117-937d-7c7eda594579",
+            "4ca9c84a-627b-4027-8216-fdc07c506727"
+          ]
+        },
+        "source_overlap": 0,
+        "exact_text_overlap": 0
+      },
+      "validation": {
+        "accuracy": 0.30864,
+        "precision_macro": 0.32265,
+        "recall_macro": 0.32803,
+        "f1_macro": 0.29004,
+        "f1_weighted": 0.28203,
+        "per_class": [
+          {
+            "label": "campanias_conflictos_militares",
+            "precision": 0.33333,
+            "recall": 0.25,
+            "f1": 0.28571,
+            "support": 4
+          },
+          {
+            "label": "contexto_colonial_antecedentes",
+            "precision": 0.35294,
+            "recall": 0.375,
+            "f1": 0.36364,
+            "support": 16
+          },
+          {
+            "label": "crisis_ideas_emancipadoras",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15
+          },
+          {
+            "label": "liderazgos_diplomacia_proyectos",
+            "precision": 0.28571,
+            "recall": 0.5,
+            "f1": 0.36364,
+            "support": 4
+          },
+          {
+            "label": "no_relevante",
+            "precision": 0.8,
+            "recall": 0.25,
+            "f1": 0.38095,
+            "support": 16
+          },
+          {
+            "label": "organizacion_consecuencias_republicanas",
+            "precision": 0.25926,
+            "recall": 0.46667,
+            "f1": 0.33333,
+            "support": 15
+          },
+          {
+            "label": "participacion_social_regional",
+            "precision": 0.22727,
+            "recall": 0.45455,
+            "f1": 0.30303,
+            "support": 11
+          }
+        ],
+        "confusion_matrix": [
+          [
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            6,
+            0,
+            1,
+            0,
+            2,
+            7
+          ],
+          [
+            0,
+            3,
+            0,
+            1,
+            0,
+            8,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0,
+            2,
+            4,
+            4,
+            3
+          ],
+          [
+            1,
+            4,
+            0,
+            0,
+            0,
+            7,
+            3
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            5,
+            5
+          ]
+        ],
+        "labels": [
+          "campanias_conflictos_militares",
+          "contexto_colonial_antecedentes",
+          "crisis_ideas_emancipadoras",
+          "liderazgos_diplomacia_proyectos",
+          "no_relevante",
+          "organizacion_consecuencias_republicanas",
+          "participacion_social_regional"
+        ],
+        "split": "val"
+      },
+      "fit_and_predict_seconds": 0.744,
+      "vocabulary_size": 15417,
+      "solver_iterations": [
+        34
+      ],
+      "model": {
+        "path": "outputs/huerta-comparison-v1/before.joblib",
+        "file_sha256": "3e43adcc85e5a2ee3956d15f56e439a6f4395a4e34ea2f9ab2f924ae6a6a2d92"
+      }
+    },
+    "after": {
+      "dataset_sha256": "4d0471f49d79a7059059427b6b31779ce60d14eff6e9af1508d12d3f481c21e4",
+      "audit": {
+        "dataset_sha256": "4d0471f49d79a7059059427b6b31779ce60d14eff6e9af1508d12d3f481c21e4",
+        "split_counts": {
+          "train": 600,
+          "val": 81,
+          "test": 137
+        },
+        "class_distribution": {
+          "train": {
+            "campanias_conflictos_militares": 88,
+            "participacion_social_regional": 83,
+            "no_relevante": 101,
+            "organizacion_consecuencias_republicanas": 101,
+            "crisis_ideas_emancipadoras": 62,
+            "liderazgos_diplomacia_proyectos": 94,
+            "contexto_colonial_antecedentes": 71
+          },
+          "val": {
+            "contexto_colonial_antecedentes": 16,
+            "crisis_ideas_emancipadoras": 15,
+            "participacion_social_regional": 11,
+            "no_relevante": 16,
+            "liderazgos_diplomacia_proyectos": 4,
+            "organizacion_consecuencias_republicanas": 15,
+            "campanias_conflictos_militares": 4
+          },
+          "test": {
+            "contexto_colonial_antecedentes": 14,
+            "crisis_ideas_emancipadoras": 28,
+            "no_relevante": 39,
+            "participacion_social_regional": 12,
+            "campanias_conflictos_militares": 7,
+            "liderazgos_diplomacia_proyectos": 23,
+            "organizacion_consecuencias_republicanas": 14
+          }
+        },
+        "sources_by_split": {
+          "train": [
+            "0ea45102-057d-4bff-b527-f36326f66d33",
+            "17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+            "48262fb6-dee2-531e-b001-536c5928a9ca",
+            "514f190e-5d01-497a-a6ef-648601cd8bdb",
+            "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+            "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+            "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+            "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+            "e32181bc-41d0-4400-a76d-eb11fc88bf71"
+          ],
+          "val": [
+            "b23a4bf1-b9f4-4c08-bb89-a4cf4a67e004"
+          ],
+          "test": [
+            "15e52806-3d75-4117-937d-7c7eda594579",
+            "4ca9c84a-627b-4027-8216-fdc07c506727"
+          ]
+        },
+        "source_overlap": 0,
+        "exact_text_overlap": 0
+      },
+      "validation": {
+        "accuracy": 0.30864,
+        "precision_macro": 0.32127,
+        "recall_macro": 0.32803,
+        "f1_macro": 0.28968,
+        "f1_weighted": 0.28142,
+        "per_class": [
+          {
+            "label": "campanias_conflictos_militares",
+            "precision": 0.33333,
+            "recall": 0.25,
+            "f1": 0.28571,
+            "support": 4
+          },
+          {
+            "label": "contexto_colonial_antecedentes",
+            "precision": 0.33333,
+            "recall": 0.375,
+            "f1": 0.35294,
+            "support": 16
+          },
+          {
+            "label": "crisis_ideas_emancipadoras",
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 15
+          },
+          {
+            "label": "liderazgos_diplomacia_proyectos",
+            "precision": 0.28571,
+            "recall": 0.5,
+            "f1": 0.36364,
+            "support": 4
+          },
+          {
+            "label": "no_relevante",
+            "precision": 0.8,
+            "recall": 0.25,
+            "f1": 0.38095,
+            "support": 16
+          },
+          {
+            "label": "organizacion_consecuencias_republicanas",
+            "precision": 0.26923,
+            "recall": 0.46667,
+            "f1": 0.34146,
+            "support": 15
+          },
+          {
+            "label": "participacion_social_regional",
+            "precision": 0.22727,
+            "recall": 0.45455,
+            "f1": 0.30303,
+            "support": 11
+          }
+        ],
+        "confusion_matrix": [
+          [
+            1,
+            1,
+            0,
+            1,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            6,
+            0,
+            1,
+            0,
+            2,
+            7
+          ],
+          [
+            0,
+            4,
+            0,
+            1,
+            0,
+            7,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0,
+            2,
+            4,
+            4,
+            3
+          ],
+          [
+            1,
+            4,
+            0,
+            0,
+            0,
+            7,
+            3
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            0,
+            5,
+            5
+          ]
+        ],
+        "labels": [
+          "campanias_conflictos_militares",
+          "contexto_colonial_antecedentes",
+          "crisis_ideas_emancipadoras",
+          "liderazgos_diplomacia_proyectos",
+          "no_relevante",
+          "organizacion_consecuencias_republicanas",
+          "participacion_social_regional"
+        ],
+        "split": "val"
+      },
+      "fit_and_predict_seconds": 0.753,
+      "vocabulary_size": 15504,
+      "solver_iterations": [
+        33
+      ],
+      "model": {
+        "path": "outputs/huerta-comparison-v1/after.joblib",
+        "file_sha256": "cf3f5e319624457f8d13c78e736a3b9505be8d5092be5291e418621feb313d51"
+      }
+    }
+  },
+  "test_predictions_performed": false,
+  "production_changed": false,
+  "validation_predictions_changed": 1,
+  "delta_validation_f1_macro": -0.00036,
+  "before_reproduced_previous_metrics": true,
+  "evaluation_sha256": "593fe90d68bc282108eab983515598c7c3b5ebbf42e2f79dbdb275c12d8c02a2",
+  "schema_version": 1,
+  "status": "completed_no_validation_improvement",
+  "verification": {
+    "previous_validation_reproduced": true,
+    "metrics_recomputed_from_predictions": true,
+    "models_reloaded_and_predictions_reproduced": true,
+    "four_appended_training_rows_only": true,
+    "input_and_frozen_reference_hashes_unchanged": true,
+    "solver_converged_both_runs": true,
+    "correct_predictions_each_run": 25,
+    "changed_prediction_summary": [
+      {
+        "true_label": "crisis_ideas_emancipadoras",
+        "before": "organizacion_consecuencias_republicanas",
+        "after": "contexto_colonial_antecedentes"
+      }
+    ],
+    "rejected_controls": [
+      "modified_existing_row",
+      "new_non_train_row",
+      "no_added_rows",
+      "changed_hyperparameters",
+      "different_backend",
+      "unknown_selection",
+      "test_selection_criterion",
+      "overwrite",
+      "outside_outputs"
+    ]
+  },
+  "outputs": {
+    "report.json": {
+      "path": "outputs/huerta-comparison-v1/report.json",
+      "file_sha256": "de5b9223484e13691b52a5b55d3f22769580a965cbbb8283d30ae8c9fdec64a4"
+    },
+    "validation-predictions.json": {
+      "path": "outputs/huerta-comparison-v1/validation-predictions.json",
+      "file_sha256": "dec8beb4b197f949b65b16cf2eaab68c02a34d31dadb77df0d72d5084ba01161"
+    },
+    "verification.json": {
+      "path": "outputs/huerta-comparison-v1/verification.json",
+      "file_sha256": "4a3b3b7be27db2b3c3bb9e6d03f481935654a2193965356a683f7c0de348e58e"
+    }
+  },
+  "model_configuration": {
+    "vectorizer": "TfidfVectorizer",
+    "lowercase": true,
+    "strip_accents": "unicode",
+    "ngram_range": [
+      1,
+      2
+    ],
+    "min_df": 2,
+    "max_features": 50000,
+    "sublinear_tf": true,
+    "classifier": "LogisticRegression",
+    "C": 4.0,
+    "class_weight": "balanced",
+    "max_iter": 2000,
+    "solver": "lbfgs",
+    "random_state": 42
+  },
+  "scope": {
+    "models_fitted": 2,
+    "rows_added_to_train": 4,
+    "new_hyperparameter_trials": 0,
+    "test_inference": false,
+    "network_calls": 0,
+    "modal_requests": 0,
+    "deployment": false
+  },
+  "decision": {
+    "validation_improved": false,
+    "production_changed": false,
+    "target_class_validation_f1_before": 0.0,
+    "target_class_validation_f1_after": 0.0,
+    "target_class_support": 15,
+    "reason": "No measured validation improvement; retain the reviewed data as experimental and do not replace production based on this comparison."
+  },
+  "limits": [
+    "Validation has81 rows from one source and was already used in earlier experiments; this is not a new independent evaluation.",
+    "Four excerpts from the same added secondary source provide limited enrichment; no general claim that enrichment cannot help.",
+    "TF-IDF is the local comparison model; production uses BETO and was not retrained or assessed here.",
+    "Historical labels are AI-assisted, not independent human gold.",
+    "The small numerical change is not a statistical significance claim.",
+    "Test was loaded only for dataset integrity validation, without test predictions or new test metrics.",
+    "Local sequential CPU execution limited to one thread; peak RAM was not measured."
+  ],
+  "next_step": "Diagnose training-source coverage and class boundaries before more data collection; do not change evaluation labels or tune data choices on test."
+}

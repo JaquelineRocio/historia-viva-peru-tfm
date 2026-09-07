@@ -10,6 +10,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Diagnóstico | Compilar web/API, ejecutar suites y revisar dataset | API 37 pruebas, ML 55 pruebas y web verificados localmente |
 | Experimentos | Comparar hiperparámetros usando validación; test solo del ganador | Tres configuraciones TF-IDF y tres BETO ejecutadas en este equipo |
 | Comparación tras revisión | Medir el efecto conjunto del enriquecimiento y las correcciones | TF-IDF local: F1 macro validación 0.29004 en ambas versiones; test 0.36300 → 0.36007. Sin mejora global ni cambio en producción |
+| Comparación con Huerta | Medir los cuatro pasajes añadidos con configuración fija | TF-IDF local C=4: F1 macro validación 0.29004 → 0.28968; crisis e ideas sigue en 0. Sin mejora; no se calcularon métricas nuevas de test ni se cambió producción |
 | Fuente para crisis e ideas | Localizar contenido pertinente y reutilizable | HUE01 de Huerta Vera (2020), revisado por ambos agentes, incorporado a copia experimental local: 597 train, 81 validación y 137 test. Evaluación intacta; sin entrenamiento nuevo |
 | Lote adicional de Huerta | Revisar propaganda, lecturas políticas y prensa | HUE02/03/04 incorporados a copia experimental: 600 train, 81 validación y 137 test. Una fuente común y dependencia HUE03/HUE04 conservadas; sin entrenamiento nuevo |
 | Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Segunda revisión: 11 aprobar, 2 corregir, 6 ambiguos y 1 excluir hasta resegmentar. R04/R16 corregidos solo en copia experimental; referencia y producción intactas |
@@ -681,7 +682,7 @@ Al cerrar ese bloque, el lote quedó preparado y revisado localmente, sin filas
 nuevas, entrenamiento, descargas ni llamadas a Modal. El dictamen conserva ese
 estado histórico; la incorporación se registra por separado a continuación.
 
-## Bloque actual: incorporación del lote HUE02/03/04
+## Incorporación del lote HUE02/03/04 — registrada en `b7e7094`
 
 [build_huerta_batch_snapshot.py](../scripts/build_huerta_batch_snapshot.py) añade
 el lote completo a la copia que ya contenía HUE01. Reproduce la extracción y
@@ -717,9 +718,65 @@ Estado: implementado y probado localmente; sin entrenamiento, métricas nuevas,
 cambios del umbral de mantenimiento ni cambios en producción. Las etiquetas
 siguen siendo revisiones asistidas por IA, no validación humana independiente.
 
-Siguiente paso después del commit: medir el efecto de los cuatro pasajes de Huerta
-con una comparación local TF-IDF usando una configuración ya fijada. Priorizar
-validación y no utilizar resultados de test para decidir nuevas correcciones.
+La incorporación quedó registrada en `b7e7094`. La comparación posterior se
+describe a continuación.
+
+## Bloque actual: comparación local del enriquecimiento con Huerta
+
+[compare_tfidf_validation.py](../scripts/compare_tfidf_validation.py) reutiliza
+el entrenamiento TF-IDF y las métricas existentes para comparar una ampliación
+de train, sin ejecutar el ciclo completo que también predice sobre test.
+Se fijaron **C=4 y semilla 42**, seleccionados en el experimento anterior, antes
+de medir esta nueva versión. No se buscaron hiperparámetros nuevos.
+
+Se entrenaron dos modelos en CPU local, con un hilo: la copia corregida anterior
+a Huerta (596 train) y la que incluye HUE01/02/03/04 (600 train). Conservan las
+mismas 81 filas de validación. El resultado anterior reprodujo exactamente sus
+métricas registradas. La [evidencia](../artifacts/experiments/huerta-comparison-v1/comparison.json)
+incluye parámetros, hashes, versiones, métricas por clase y matrices de confusión.
+Los modelos y las predicciones locales quedan excluidos de Git en
+`outputs/huerta-comparison-v1/`.
+
+| Métrica de validación | Antes de Huerta | Con Huerta |
+|---|---:|---:|
+| F1 macro | 0.29004 | 0.28968 |
+| Exactitud | 0.30864 | 0.30864 |
+| Aciertos / total | 25 / 81 | 25 / 81 |
+| F1 crisis e ideas, 15 casos | 0 | 0 |
+
+**No se observó mejora.** La variación de F1 macro es −0.00036, equivalente a
+−0.036 puntos porcentuales. Cambió una predicción incorrecta por otra incorrecta:
+un caso de crisis e ideas pasó de organización republicana a contexto colonial.
+No se interpreta esa diferencia pequeña como evidencia de significancia estadística.
+
+Esta comparación no evalúa BETO, que continúa en producción. Tampoco demuestra
+que enriquecer datos sea inútil: solo se añadieron cuatro pasajes de una misma
+fuente secundaria. Validación contiene una sola fuente y ya se utilizó antes;
+no es una evaluación externa nueva. Test se conservó para las comprobaciones de
+integridad del dataset, sin predicciones ni métricas nuevas en este bloque.
+
+Verificación: las métricas se recalcularon desde las predicciones guardadas,
+ambos modelos convergieron y reprodujeron las predicciones después de recargarlos.
+Se verificó que las únicas diferencias entre los datos fueran las cuatro filas
+añadidas a train; referencia, evaluación y entradas permanecieron intactas.
+Pasaron nueve rechazos: modificación de filas existentes, filas nuevas fuera de
+train, ausencia de ampliación, hiperparámetros alterados, otro tipo de modelo,
+selección desconocida, selección por test, sobrescritura y salida fuera de `outputs/`.
+
+Reproducción hacia una carpeta local nueva:
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/compare_tfidf_validation.py --before outputs/history-corrections-v1/reviewed-export.json --after outputs/huerta-batch-snapshot-v1/reviewed-export.json --config configs/experiments/tfidf.json --selection outputs/history-comparison-v1/reviewed/selection.json --output outputs/huerta-comparison-reproduccion
+```
+
+Estado: ejecutado y verificado localmente, sin gastos remotos ni despliegues.
+Se conservan los datos revisados como experimentales; no se revierten etiquetas
+históricamente justificadas para buscar una puntuación mayor.
+
+Siguiente paso después del commit: diagnosticar cobertura de temas y fuentes de
+entrenamiento, especialmente la frontera entre crisis e ideas y organización
+republicana, antes de recopilar más fragmentos. Mantener la evaluación congelada
+y evitar decisiones de corrección basadas en resultados de test.
 
 ### Reproducir la muestra de la revisión inicial
 
