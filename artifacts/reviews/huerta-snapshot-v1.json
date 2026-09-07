@@ -1,0 +1,203 @@
+{
+  "status": "experimental_local_verified",
+  "parent_sha256": "cc67e8f6fafd3a8abd0243643f656477ad6415baa86d97a48d22c0909a68aa0c",
+  "reference_sha256": "54bd64939cc3bdf4d105d14208a41fd2dbb9095f7ef9cb52a4c3baf083f29ece",
+  "reviewed_sha256": "1d33262b369be8fb0f81028cd3024ba4fc74bc81f18da0dc6ec3d40952546dbe",
+  "evaluation_sha256": "593fe90d68bc282108eab983515598c7c3b5ebbf42e2f79dbdb275c12d8c02a2",
+  "audit": {
+    "dataset_sha256": "1d33262b369be8fb0f81028cd3024ba4fc74bc81f18da0dc6ec3d40952546dbe",
+    "split_counts": {
+      "train": 597,
+      "val": 81,
+      "test": 137
+    },
+    "class_distribution": {
+      "train": {
+        "campanias_conflictos_militares": 88,
+        "participacion_social_regional": 83,
+        "no_relevante": 101,
+        "organizacion_consecuencias_republicanas": 101,
+        "crisis_ideas_emancipadoras": 59,
+        "liderazgos_diplomacia_proyectos": 94,
+        "contexto_colonial_antecedentes": 71
+      },
+      "val": {
+        "contexto_colonial_antecedentes": 16,
+        "crisis_ideas_emancipadoras": 15,
+        "participacion_social_regional": 11,
+        "no_relevante": 16,
+        "liderazgos_diplomacia_proyectos": 4,
+        "organizacion_consecuencias_republicanas": 15,
+        "campanias_conflictos_militares": 4
+      },
+      "test": {
+        "contexto_colonial_antecedentes": 14,
+        "crisis_ideas_emancipadoras": 28,
+        "no_relevante": 39,
+        "participacion_social_regional": 12,
+        "campanias_conflictos_militares": 7,
+        "liderazgos_diplomacia_proyectos": 23,
+        "organizacion_consecuencias_republicanas": 14
+      }
+    },
+    "sources_by_split": {
+      "train": [
+        "0ea45102-057d-4bff-b527-f36326f66d33",
+        "17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+        "48262fb6-dee2-531e-b001-536c5928a9ca",
+        "514f190e-5d01-497a-a6ef-648601cd8bdb",
+        "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+        "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+        "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+        "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+        "e32181bc-41d0-4400-a76d-eb11fc88bf71"
+      ],
+      "val": [
+        "b23a4bf1-b9f4-4c08-bb89-a4cf4a67e004"
+      ],
+      "test": [
+        "15e52806-3d75-4117-937d-7c7eda594579",
+        "4ca9c84a-627b-4027-8216-fdc07c506727"
+      ]
+    },
+    "source_overlap": 0,
+    "exact_text_overlap": 0
+  },
+  "parent_rows_preserved": 814,
+  "added": 1,
+  "removed": 0,
+  "relabeled": 0,
+  "provenance": {
+    "candidate_id": "HUE01",
+    "resource_id": "48262fb6-dee2-531e-b001-536c5928a9ca",
+    "text_sha256": "674972b0ac958812c62dc12735b3e663ca6019a21467cd0e682c0d3856e134f7",
+    "label": "crisis_ideas_emancipadoras",
+    "pdf_page": 21,
+    "printed_page": 145,
+    "source_group": "doi:10.18800/historica.202001.004",
+    "related_document_group": "AAL/Emancipacion/CurasPatriotas/Proclamas/leg1/exp1/f2r-v/1822-02-21",
+    "archival_reference": {
+      "as_cited_in_article": "AAL, Serie Emancipación, Curas Patriotas, Proclamas, legajo 1, expediente 1, f. 2r-v",
+      "footnote": 58,
+      "attributed_author": "Manuel de Vega Bazán, cura y vicario de Guañec",
+      "document_date": "1822-02-21",
+      "original_manuscript_consulted": false
+    },
+    "quality_flags": [
+      "anaphora_without_explicit_antecedent_in_quotation",
+      "historical_spelling"
+    ],
+    "normalization": "Unir palabras partidas por guion de fin de línea y espacios; retirar solo llamada58. Conservar grafía, mayúsculas y atribuciones.",
+    "extraction_changes": [
+      {
+        "old": "Dominio.58",
+        "new": "Dominio."
+      }
+    ],
+    "local_context": {
+      "path": "outputs/huerta-pilot-v1/candidate.json",
+      "file_sha256": "9d7db6575d19e622bcab325438e863cf6608551c925d5856c3565bbe36fae9a6"
+    },
+    "review_path": "artifacts/reviews/huerta-pilot-v1.json",
+    "review_sha256": "e8ed0527753674769434a6422148491e1602ae277f3e19aec4e40dd168af6a29",
+    "annotation_origin": "two_ai_reviews_nonblind",
+    "human_expert_validation": false
+  },
+  "training_performed": false,
+  "production_changed": false,
+  "inputs": {
+    "dataset": {
+      "path": "outputs/history-corrections-v1/reviewed-export.json",
+      "file_sha256": "9913ffc95ac82761d1295815afb836907bb239fa52e48cfa5126307d5a56a76f"
+    },
+    "pdf": {
+      "path": "outputs/ideas-source-v1/huerta-2020.pdf",
+      "file_sha256": "2d98c10b6915b00f9208582e6321d444f3fcdff512b5d72a12016793a7fe5020"
+    },
+    "probe": {
+      "path": "outputs/ideas-source-v1/overlap-probe.json",
+      "file_sha256": "e0ec63ded762c7abba3c7d79955e24b9788fea3f170b63c321e4cdfdd2f32cb6"
+    },
+    "taxonomy": {
+      "path": "docs/guia-etiquetado-1780-1842.md",
+      "file_sha256": "737d155a6f8260df4fa00b5f1adc6f469457f678fd144dd8c2d6b80a564d76e7"
+    },
+    "overlap_helpers": {
+      "path": "scripts/prepare_agn_pilot.py",
+      "file_sha256": "2c1cd9c93bb1f658c0f1d23046fba8589e130e2778038aadc6797df4d501f00a"
+    },
+    "candidate": {
+      "path": "outputs/huerta-pilot-v1/candidate.json",
+      "file_sha256": "9d7db6575d19e622bcab325438e863cf6608551c925d5856c3565bbe36fae9a6"
+    },
+    "builder": {
+      "path": "scripts/prepare_huerta_pilot.py",
+      "file_sha256": "dda5d0c44f538783c07be909d44a3c6c7c5797859027ff14e146daa3ddf914a8"
+    },
+    "reference": {
+      "path": "artifacts/datasets/gold-v1-source-aware.json",
+      "file_sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a"
+    },
+    "review": {
+      "path": "artifacts/reviews/huerta-pilot-v1.json",
+      "file_sha256": "add75d193013f9ff94581b2f2a026857b135c3e9caf6246d5d2034308202e1c0"
+    }
+  },
+  "parent_context_directory": "outputs/history-corrections-v1",
+  "prior_context_archives": [
+    {
+      "path": "outputs/fonseca-snapshot-v1/replacement-archive.json",
+      "file_sha256": "d07a6e00fa48a724deb215bb14392442009905c82f707a5ab6ea7386e4c00b86"
+    }
+  ],
+  "schema_version": 1,
+  "verification": {
+    "deterministic_reproduction": true,
+    "parent_rows_preserved": 814,
+    "prior_metadata_preserved": true,
+    "frozen_reference_and_holdout_unchanged": true,
+    "prior_fonseca_archive_verified": true,
+    "rejected_controls": [
+      "changed_evaluation",
+      "label_disagreement",
+      "unapproved_review",
+      "changed_text",
+      "changed_context",
+      "already_assigned",
+      "already_applied",
+      "duplicate_source",
+      "duplicate_text_other_source",
+      "duplicate_document_group",
+      "duplicate_candidate",
+      "altered_input_hash",
+      "overwrite",
+      "outside_outputs"
+    ]
+  },
+  "builder": {
+    "path": "scripts/build_huerta_snapshot.py",
+    "file_sha256": "42c2b5535d669a48f0c281c2ce97fb4ef7e78700e00c90eb5510e013c619a519"
+  },
+  "outputs": {
+    "reviewed-export.json": {
+      "path": "outputs/huerta-snapshot-v1/reviewed-export.json",
+      "file_sha256": "eb1442c51b09dd66f691d77c6d9e412f5bebdef153e9b4efb6a30c905c03293b"
+    },
+    "build-report.json": {
+      "path": "outputs/huerta-snapshot-v1/build-report.json",
+      "file_sha256": "3f2880bc50b251f70b5b6c5629fa8f305943882e6b7fadd42488ccb76c6bf0ac"
+    },
+    "verification.json": {
+      "path": "outputs/huerta-snapshot-v1/verification.json",
+      "file_sha256": "2b2d9ddeb370762c02d93925af1e720a4562865f7bc02b2ee3f2ac4a946371dc"
+    }
+  },
+  "review_commit": "6c641c3",
+  "limits": [
+    "AI-assisted thematic review; not independent human gold.",
+    "One new example does not demonstrate model improvement.",
+    "Lexical screening and document metadata do not prove absence of all paraphrases.",
+    "No training, deployment, remote calls or maintenance-threshold changes in this block.",
+    "Keep local candidate context and the prior Fonseca archive at the recorded paths."
+  ]
+}
