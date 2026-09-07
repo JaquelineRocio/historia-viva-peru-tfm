@@ -10,6 +10,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Diagnóstico | Compilar web/API, ejecutar suites y revisar dataset | API 37 pruebas, ML 55 pruebas y web verificados localmente |
 | Experimentos | Comparar hiperparámetros usando validación; test solo del ganador | Tres configuraciones TF-IDF y tres BETO ejecutadas en este equipo |
 | Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Propuesta local asistida por IA: 12 aprobar, 2 corregir, 5 ambiguos y 1 excluir hasta resegmentar. Pendiente adjudicación de la autora; sin cambios al dataset ni a producción |
+| Fuentes para enriquecimiento | Evaluar contenido, procedencia, reutilización y solapamientos | Tres candidatas examinadas; AGN propuesto para piloto local, BNP pendiente de OCR/metadatos y Constitución pendiente de cotejo. Cero ejemplos incorporados |
 | Informe Unidad I | Dataset, características, parámetros, resultados, despliegue y límites | Borrador en informe-unidad-1.md |
 | Demo Unidad I | Dos pruebas funcionales completas y explicación en inglés | PDF cargado, predicho tras reintento y revisión persistida vía API. Primera clasificación fallida y recorrido visual pendientes |
 | Mantenimiento | Validar snapshot, entrenar, evaluar y archivar candidato | TF-IDF ejecutado en GitHub; métricas y candidato archivados. Correcciones automáticas pendientes |
@@ -34,7 +35,7 @@ Las consultas de Git pueden realizarlas el asistente o la autora. Las ramas, el 
 
 Las modificaciones personales de `.gitignore` se revisan por separado.
 
-## Bloque actual: revisión histórica de 20 fragmentos
+## Revisión histórica de 20 fragmentos — registrada en `95e9dd1`
 
 La propuesta está en [history-review-v1.json](../artifacts/reviews/history-review-v1.json).
 Cada registro conserva índice (base cero), fuente, hash del texto y etiqueta original,
@@ -83,13 +84,47 @@ Hallazgos que orientan el siguiente experimento:
 - Antes de enriquecer: recuperar páginas/minutos y procedencia, reparar extracción
   y resolver criterios entre programas políticos, participación regional y organización estatal.
 
-Fuentes que conviene examinar en el siguiente bloque, aún **sin incorporar**:
+## Bloque actual: selección de fuentes gratuitas
 
-| Candidata | Carencia que podría cubrir | Verificación pendiente |
+El registro auditable está en [source-candidates-v1.json](../artifacts/reviews/source-candidates-v1.json).
+Contiene procedencia, fecha cuando se conoce, localizadores, decisiones, límites de
+reutilización y comprobaciones de solapamiento. Las tres candidatas se mantienen
+**sin incorporar**; no se les ha asignado un split ni se han creado ejemplos de entrenamiento.
+
+| Candidata | Carencia que podría cubrir | Resultado de la revisión |
 |---|---|---|
-| [La Abeja Republicana, BNP](https://repositoriodigital.bnp.gob.pe/bnp/recursos/2/html/la-abeja-republicana/) | Prensa e ideas políticas; distinguir argumentación republicana de descripción institucional | Precisar número, fecha, autoría y páginas; revisar OCR y condiciones de reutilización del ejemplar. No se seleccionaron ni transcribieron páginas |
-| [Constitución de 1823, Congreso Constituyente / Congreso de la República](https://www3.congreso.gob.pe/Docs/sites/webs/quipu/constitu/1823.htm) | Organización estatal y ciudadanía como contraste con ideas y proyectos | Identificar artículos, cotejar transcripción y derechos de la edición; evitar duplicar citas ya presentes en el corpus. Una norma no prueba su cumplimiento social |
-| [Juan José Brito Ramos, Josefa Montes, la última esclava del Congo (2017), Revista del AGN 32(1), 15–45](https://revista.agn.gob.pe/ojs/index.php/ragn/article/view/5) | Trayectorias afrodescendientes y contexto de esclavitud | Solo se consultó ficha y resumen; CC BY 4.0 visible. Localizar páginas de 1780–1842: el artículo también estudia un litigio de 1873, fuera del alcance |
+| [La Abeja Republicana, BNP](https://repositoriodigital.bnp.gob.pe/bnp/recursos/2/html/la-abeja-republicana/56/) | Prensa e ideas políticas | Página 56 del visor con argumentación antimonárquica; OCR defectuoso. Faltan fecha/número, autoría y condiciones de reutilización de la edición. Posponer extracción |
+| [Constitución de 1823, Congreso Constituyente / Congreso de la República](https://www3.congreso.gob.pe/Docs/sites/webs/quipu/constitu/1823.htm) | Organización estatal y ciudadanía | Artículos 17, 22–23 y 27–29 localizados en HTML. Hay una anomalía de numeración entre 32 y 34 y una cita del artículo 11 ya en train. Cotejar y resolver solapamientos; derechos de la edición sin verificar |
+| [Juan José Brito Ramos, Josefa Montes, la última esclava del Congo (2017), Revista del AGN 32(1), 15–45](https://revista.agn.gob.pe/ojs/index.php/ragn/article/view/5) | Contexto colonial y actuación de cofradías afrodescendientes | Licencia CC BY 4.0 comprobada; PDF local de 1 128 046 bytes. Pasajes candidatos en pp. 21, 35 y comienzo de 36, con fechas 1805, 1834 y 1836. Propuesto para un piloto pequeño |
+
+Se contrastó una afirmación de la p. 17 del artículo del AGN: sitúa la abolición
+británica de la esclavitud en 1808. La [cronología del Parlamento británico](https://www.parliament.uk/about/living-heritage/transformingsociety/tradeindustry/slavetrade/key-dates/)
+distingue la ley contra el tráfico de 1807 de la ley de abolición de 1833. Ese pasaje
+queda apartado del piloto; no se corrige silenciosamente el documento. En la p. 36
+debe detenerse la selección antes del testamento de 1875, fuera del alcance.
+La clasificación temática propuesta no certifica todas las afirmaciones de la fuente.
+
+La búsqueda preliminar de cinco frases cortas en los **596 ejemplos de train**
+encontró una cita constitucional en el índice 9, fuente `9154f7f7-86c9-4bad-bcba-47eaf54b93e1`.
+La ausencia de las otras frases no demuestra novedad: falta comparar los fragmentos
+concretos y las citas compartidas. De validación/test solo se consultaron las
+identidades y títulos de fuentes; no se extrajeron ejemplos para entrenar.
+
+El único PDF descargado quedó en `outputs/source-candidates-v1/josefa-montes.pdf`,
+excluido de Git, con su hash registrado. No se invocó Modal, entrenamiento remoto ni
+escrituras en producción. El intento de cotejar el PDF constitucional desde la
+herramienta web devolvió 403; solo se verificó la transcripción HTML. Estas fuentes
+no resuelven todavía la carencia de ejemplos listos de crisis e ideas: no se debe
+forzar esa etiqueta a los pasajes sociales del AGN.
+
+Comprobación local: esquema y localizadores del registro, hash/tamaño del PDF,
+reproducción de las cinco búsquedas, dataset intacto y exclusión del PDF por Git.
+Los archivos de este bloque son el registro de candidatas y este plan.
+Siguiente paso, tras confirmar el bloque: preparar hasta tres fragmentos locales
+del AGN con atribución, límites claros y revisión de solapamientos. La adjudicación
+de las 20 etiquetas anteriores sigue pendiente; registrar el commit no las aplica.
+
+### Reproducir la muestra de la revisión inicial
 
 Reproducir la muestra en un archivo local nuevo desde la raíz (no sobrescribe):
 
@@ -108,10 +143,8 @@ byte a byte. También se comprobó el rechazo de muestras insuficientes, taxonom
 incompatibles, sobrescrituras y salidas con texto fuera de `outputs/`.
 `git diff --check` pasó y las dos vistas locales quedaron excluidas por `.gitignore`.
 
-Siguiente paso de este bloque: revisar la propuesta y registrar los tres archivos
-con Git. Esperar confirmación de la autora antes de ampliar la muestra, incorporar
-fuentes o aplicar correcciones. La prueba visual de producción sigue pendiente en
-paralelo; este bloque no entrena, no publica ni guarda revisiones en la aplicación.
+La muestra inicial quedó registrada en `95e9dd1`; sus decisiones no fueron aplicadas.
+La prueba visual de producción sigue pendiente en paralelo.
 
 ## Qué debes poder explicar
 

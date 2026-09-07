@@ -1,0 +1,243 @@
+{
+  "schema_version": 1,
+  "created_on": "2026-09-07",
+  "status": "local_source_screening_only",
+  "dataset_reference": {
+    "path": "artifacts/datasets/gold-v1-source-aware.json",
+    "file_sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a",
+    "semantic_sha256": "54bd64939cc3bdf4d105d14208a41fd2dbb9095f7ef9cb52a4c3baf083f29ece"
+  },
+  "scope": {
+    "sources_screened": 3,
+    "new_training_examples": 0,
+    "source_assignments_applied": 0,
+    "remote_training_jobs": 0,
+    "production_writes": 0,
+    "modal_requests": 0,
+    "reviewer": "AI-assisted; not independent human validation",
+    "limitations": [
+      "Screening is not historical certification of entire sources",
+      "No source assigned to a split; group related editions, quotations and documents before future assignment",
+      "Exact anchor search is not full duplicate or semantic similarity detection",
+      "Existing labels in history-review-v1.json remain pending adjudication; committing a proposal did not apply it"
+    ]
+  },
+  "duplicate_screen": {
+    "method": "NFKD, remove combining marks, casefold, regex word tokens joined by spaces; substring probes only in train",
+    "items_examined": 596,
+    "held_out_policy": "Validation/test source IDs and titles only; no held-out text mined for training",
+    "metadata_result": "None of the three candidate titles equals a title in the local inventory for the ten frozen sources; this does not establish independence",
+    "probes": [
+      {
+        "id": "abeja_title",
+        "anchor": "abeja republicana",
+        "train_item_indices": []
+      },
+      {
+        "id": "josefa_name",
+        "anchor": "josefa montes",
+        "train_item_indices": []
+      },
+      {
+        "id": "constitution_11",
+        "anchor": "nadie nace esclavo en el perú",
+        "train_item_indices": [
+          9
+        ]
+      },
+      {
+        "id": "constitution_27",
+        "anchor": "el gobierno del perú es popular representativo",
+        "train_item_indices": []
+      },
+      {
+        "id": "constitution_17",
+        "anchor": "para ser ciudadano es necesario",
+        "train_item_indices": []
+      }
+    ],
+    "interpretation": "An article-11 quotation is already in training source 9154f7f7-86c9-4bad-bcba-47eaf54b93e1. This is passage overlap, not evidence that an entire candidate duplicates an entire source. Zero hits do not prove novelty."
+  },
+  "candidates": [
+    {
+      "id": "bnp-abeja",
+      "title": "La Abeja Republicana",
+      "institution": "Biblioteca Nacional del Perú",
+      "author": null,
+      "publication_date": null,
+      "publication_date_note": "Exact issue and date not recovered from consulted viewer pages; do not infer them from collection name",
+      "url": "https://repositoriodigital.bnp.gob.pe/bnp/recursos/2/html/la-abeja-republicana/",
+      "content_url": "https://repositoriodigital.bnp.gob.pe/bnp/recursos/2/html/la-abeja-republicana/56/",
+      "source_type": "historical_press",
+      "access": "Public HTML viewer; consulted without account",
+      "rights": {
+        "status": "unverified_for_specific_digitization",
+        "license": null,
+        "evidence_url": null,
+        "action": "Confirm edition and reuse terms before committing extracted text"
+      },
+      "decision": "defer_pending_metadata_and_ocr",
+      "suggested_labels": [
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos"
+      ],
+      "provisional_passages": [
+        {
+          "locator": {
+            "viewer_page": 56,
+            "printed_page_hint": 48
+          },
+          "topic": "Argumentación contra la monarquía y el vasallaje",
+          "suggested_label": "crisis_ideas_emancipadoras",
+          "status": "not_transcribed",
+          "reason": "La argumentación política domina; no son reglas de administración estatal.",
+          "requirements": [
+            "Confirmar página impresa en imagen, fecha y número",
+            "Transcribir cotejando imagen; el OCR mezcla caracteres y corta palabras",
+            "Leer páginas contiguas antes de fijar límites"
+          ]
+        }
+      ],
+      "historical_caution": "Prensa polémica: conservar su voz y posición política sin presentarlas como descripción neutral."
+    },
+    {
+      "id": "congreso-constitucion-1823",
+      "title": "Constitución Política de la República Peruana",
+      "institution": "Congreso de la República del Perú",
+      "author": "Primer Congreso Constituyente",
+      "publication_date": "1823-11-12",
+      "publication_date_note": "Fecha de sanción indicada en la transcripción, no fecha de digitalización",
+      "url": "https://www3.congreso.gob.pe/Docs/sites/webs/quipu/constitu/1823.htm",
+      "source_type": "primary_normative_text",
+      "access": "HTML público leído; PDF alternativo del Congreso devolvió 403 en la herramienta web",
+      "rights": {
+        "status": "edition_terms_not_verified",
+        "license": null,
+        "evidence_url": null,
+        "action": "Distinguir texto normativo histórico de condiciones de su edición digital; no se declara una conclusión legal"
+      },
+      "decision": "conditional_after_collation_and_overlap_check",
+      "suggested_labels": [
+        "organizacion_consecuencias_republicanas"
+      ],
+      "provisional_passages": [
+        {
+          "locator": {
+            "articles": [
+              17,
+              22,
+              23
+            ]
+          },
+          "topic": "Condiciones y efectos de ciudadanía",
+          "status": "not_extracted",
+          "suggested_label": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "locator": {
+            "articles": [
+              27,
+              28,
+              29
+            ]
+          },
+          "topic": "Forma de gobierno y división de poderes",
+          "status": "not_extracted",
+          "suggested_label": "organizacion_consecuencias_republicanas"
+        }
+      ],
+      "excluded_passage": {
+        "article": 11,
+        "reason": "Cita ya encontrada en train; no contar como ejemplo independiente sin resolver solapamiento."
+      },
+      "quality_caution": "HTML numera como 23 el artículo entre 32 y 34; cotejar con una edición fiable antes de extraer. No corregir silenciosamente la fuente.",
+      "historical_caution": "El contenido prescribe instituciones; no demuestra que funcionaran ni que existiera sufragio universal."
+    },
+    {
+      "id": "agn-josefa-montes-2017",
+      "title": "Josefa Montes, la última esclava del Congo",
+      "institution": "Revista del Archivo General de la Nación",
+      "author": "Juan José Brito Ramos",
+      "publication_date": "2017-05-15",
+      "citation": "32(1), 15–45",
+      "doi": "10.37840/ragn.v32i1.5",
+      "url": "https://revista.agn.gob.pe/ojs/index.php/ragn/article/view/5",
+      "pdf_url": "https://revista.agn.gob.pe/ojs/index.php/ragn/article/download/5/1/",
+      "source_type": "research_article_with_document_transcriptions",
+      "access": "Artículo y PDF públicos",
+      "rights": {
+        "status": "license_verified_on_article_page",
+        "license": "CC BY 4.0",
+        "evidence_url": "https://revista.agn.gob.pe/ojs/index.php/ragn/article/view/5",
+        "action": "Atribuir autor, título, revista, DOI y licencia; identificar modificaciones y comprobar avisos particulares de material de terceros"
+      },
+      "decision": "conditional_candidate_for_small_local_pilot",
+      "suggested_labels": [
+        "contexto_colonial_antecedentes",
+        "participacion_social_regional"
+      ],
+      "local_copy": {
+        "path": "outputs/source-candidates-v1/josefa-montes.pdf",
+        "bytes": 1128046,
+        "sha256": "65a271f2016780bf621b9040d7409bff3fd745a28524b76662d5266243986602",
+        "pdf_pages": 31,
+        "tracked": false
+      },
+      "provisional_passages": [
+        {
+          "locator": {
+            "printed_page": 21,
+            "pdf_page": 7
+          },
+          "topic": "Llegada y venta en 1805",
+          "suggested_label": "contexto_colonial_antecedentes",
+          "status": "not_extracted"
+        },
+        {
+          "locator": {
+            "printed_page": 35,
+            "pdf_page": 21
+          },
+          "topic": "Representación de cofradía en compra de 1834",
+          "suggested_label": "participacion_social_regional",
+          "status": "not_extracted"
+        },
+        {
+          "locator": {
+            "printed_page": 36,
+            "pdf_page": 22,
+            "portion": "Párrafo inicial de 1836; detenerse antes del anexo 3"
+          },
+          "topic": "Actuación de representantes de la cofradía",
+          "suggested_label": "participacion_social_regional",
+          "status": "not_extracted"
+        }
+      ],
+      "excluded_material": [
+        {
+          "locator": {
+            "printed_page": 17,
+            "pdf_page": 3
+          },
+          "reason": "Afirma abolición británica de esclavitud en 1808; confunde procesos. El Parlamento británico distingue la ley contra el tráfico de 1807 y la ley de abolición de 1833.",
+          "contrast_url": "https://www.parliament.uk/about/living-heritage/transformingsociety/tradeindustry/slavetrade/key-dates/"
+        },
+        {
+          "locator": {
+            "printed_page": 36,
+            "pdf_page": 22,
+            "portion": "Anexo 3"
+          },
+          "reason": "Testamento de 1875 fuera del periodo; no incluir la página completa."
+        }
+      ],
+      "historical_caution": "Preservar atribución. Transcripciones notariales consultadas en el artículo, no documentos originales del archivo."
+    }
+  ],
+  "next_block": {
+    "proposal": "Pilot local de hasta tres fragmentos del AGN en los pasajes señalados; revisar límites, transcripción, atribución y solapamientos antes de proponer un snapshot",
+    "not_a_metric_claim": "No hay entrenamiento ni mejora de F1 medida",
+    "remaining_gap": "Estas tres candidatas todavía no aportan un lote listo de crisis e ideas. BNP queda pendiente; no forzar esa etiqueta a contenido social.",
+    "evaluation": "No convertir fuentes examinadas para enriquecimiento en un test supuestamente ciego. Reservar otras fuentes independientes."
+  }
+}
