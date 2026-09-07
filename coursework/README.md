@@ -9,9 +9,9 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 |---|---|---|
 | Diagnóstico | Compilar web/API, ejecutar suites y revisar dataset | API 37 pruebas, ML 55 pruebas y web verificados localmente |
 | Experimentos | Comparar hiperparámetros usando validación; test solo del ganador | Tres configuraciones TF-IDF y tres BETO ejecutadas en este equipo |
-| Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Propuesta local asistida por IA: 12 aprobar, 2 corregir, 5 ambiguos y 1 excluir hasta resegmentar. Pendiente adjudicación de la autora; sin cambios al dataset ni a producción |
+| Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Propuesta local asistida por IA: 12 aprobar, 2 corregir, 5 ambiguos y 1 excluir hasta resegmentar. Pendiente segunda revisión; sin cambios al dataset ni a producción |
 | Fuentes para enriquecimiento | Evaluar contenido, procedencia, reutilización y solapamientos | Tres candidatas examinadas; AGN propuesto para piloto local, BNP pendiente de OCR/metadatos y Constitución pendiente de cotejo. Cero ejemplos incorporados |
-| Piloto AGN | Preparar hasta tres fragmentos con procedencia y etiquetas propuestas | Tres candidatos locales de 138/210/126 palabras; controles de extracción y similitud ejecutados. Etiquetas pendientes de adjudicación; snapshot y producción intactos |
+| Piloto AGN | Preparar hasta tres fragmentos con procedencia y etiquetas propuestas | Tres etiquetas coincidentes tras segunda revisión asistida por IA. AGN01/02 candidatos a entrenamiento futuro; AGN03 solo contexto. Snapshot y producción intactos |
 | Informe Unidad I | Dataset, características, parámetros, resultados, despliegue y límites | Borrador en informe-unidad-1.md |
 | Demo Unidad I | Dos pruebas funcionales completas y explicación en inglés | PDF cargado, predicho tras reintento y revisión persistida vía API. Primera clasificación fallida y recorrido visual pendientes |
 | Mantenimiento | Validar snapshot, entrenar, evaluar y archivar candidato | TF-IDF ejecutado en GitHub; métricas y candidato archivados. Correcciones automáticas pendientes |
@@ -43,7 +43,8 @@ Cada registro conserva índice (base cero), fuente, hash del texto y etiqueta or
 además de decisión, justificación temática, límites del contraste histórico y contexto consultado.
 El snapshot no conserva identificador de segmento, página, minuto ni predicción individual:
 esta revisión evalúa **etiquetas del dataset**, no el acierto actual de BETO.
-Todas las decisiones están pendientes de adjudicación de la autora y tienen `applied: false`.
+Todas las decisiones conservan `applied: false`. La autora delegó después el juicio
+histórico en una segunda revisión asistida por IA; este lote de 20 aún no la tiene.
 
 Se seleccionaron tres ejemplos por categoría histórica y dos de `no_relevante`,
 solo de train, mediante orden SHA-256 con semilla 42. Se ocultaron las etiquetas
@@ -124,7 +125,7 @@ La selección de fuentes quedó registrada en `42ee37d`. El piloto posterior se
 describe a continuación. La adjudicación de las 20 etiquetas anteriores sigue
 pendiente; registrar el commit no las aplica.
 
-## Bloque actual: tres candidatos locales del AGN
+## Tres candidatos locales del AGN — registrados en `749eb9c`
 
 El [manifiesto del piloto](../artifacts/reviews/agn-pilot-v1.json) registra autoría,
 licencia, páginas, límites exactos, hashes, ajustes de extracción, justificaciones
@@ -169,9 +170,43 @@ duplicado conocido usado como control. Pasaron los rechazos de PDF incorrecto,
 límites inexistentes, texto demasiado corto, sobrescritura y salida fuera de
 `outputs/`. El snapshot quedó intacto byte a byte; `git diff --check` pasó.
 
-Siguiente paso: revisar estas propuestas y registrar el bloque; decidir su
-incorporación solo tras adjudicación. Las 20 decisiones iniciales siguen pendientes.
-No hay mejora de métricas medida y falta material específico de crisis e ideas.
+## Bloque actual: segunda revisión mediante otro agente
+
+La autora indicó que no es especialista en historia y solicitó explícitamente otro
+agente para verificar las propuestas. El juicio temático se delegó a ese revisor;
+no se le exige a la autora certificar hechos históricos. El control de Git y las
+autorizaciones de publicación/producción siguen a su cargo.
+
+El [registro de segunda revisión](../artifacts/reviews/agn-pilot-v1-peer-review.json)
+conserva agente, hashes de entradas, primera clasificación previa a la comparación,
+contexto consultado y decisiones. El agente recibió los textos sin las etiquetas
+en su primera lectura y comunicó sus etiquetas antes de consultar el manifiesto.
+Eso reduce la influencia de la propuesta inicial, pero no constituye validación
+humana ni independencia del sistema: ambos revisores pueden compartir sesgos.
+
+| Candidato | Dictamen temático del segundo agente | Selección recomendada |
+|---|---|---|
+| AGN01 | Coincide: contexto colonial | Candidato para entrenamiento futuro, preservando las reservas de la fuente |
+| AGN02 | Coincide: participación social | Candidato para entrenamiento futuro, conservando contexto y fecha documental |
+| AGN03 | Coincide: participación social | Solo soporte contextual de AGN02; no añadir como fila separada |
+
+AGN03 no se reclasifica como `no_relevante`: su etiqueta es defendible, pero el
+recibo repite actores y operación de AGN02. La selección de ejemplos es distinta
+de su clasificación. Se adopta esta recomendación para el siguiente bloque sin
+alterar el primer manifiesto ni el snapshot. La referencia complementaria de
+[Lévano Medina (2022)](https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26040)
+respalda el tratamiento social de las cofradías; no verifica esta compraventa y su
+periodo de estudio no se incorpora al corpus de 1780–1842.
+
+Los hashes y las tres etiquetas fueron contrastados con las entradas; la selección
+es de dos candidatos y un apoyo contextual. Se verificó que el dataset y el primer
+manifiesto permanecen intactos. No se calcula Kappa, accuracy o F1 con tres casos.
+Esta decisión es un consenso asistido por IA, no gold validado por historiadores.
+
+Siguiente paso: registrar el segundo dictamen; después preparar cualquier cambio
+de datos como versión experimental con procedencia explícita. Las 20 decisiones
+iniciales siguen sin segunda revisión y falta material de crisis e ideas. No se
+entrenó ni se escribieron revisiones en producción.
 
 ### Reproducir la muestra de la revisión inicial
 

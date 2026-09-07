@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "review_id": "agn-pilot-v1-peer-review",
+  "date": "2026-09-07",
+  "reviewer": {
+    "agent": "/root/revision_historica_agn",
+    "role": "Segunda revisión temática e histórica asistida por IA",
+    "human_expert": false,
+    "independent_system": false,
+    "delegation": "Solicitada explícitamente por la usuaria, que delega el juicio temático al no ser especialista",
+    "scope": "Solo tres candidatos AGN; no se revisaron aquí las 20 etiquetas del primer lote"
+  },
+  "protocol": {
+    "first_pass": "El agente recibió la taxonomía, textos y localizadores. Se le indicó ocultar etiquetas/justificaciones del manifiesto en su primera lectura.",
+    "sequence": [
+      "Primera clasificación comunicada al agente principal antes de consultar el manifiesto",
+      "Comparación posterior con la primera propuesta",
+      "Discusión de la selección de AGN03 y recomendación final"
+    ],
+    "limitation": "Secuencia declarada y documentada en los mensajes del agente; no es un estudio ciego independiente ni segunda anotación humana.",
+    "primary_agent_role": "Comprobar trazabilidad, contrastar la referencia complementaria y registrar la recomendación; no reescribir el primer manifiesto."
+  },
+  "inputs": {
+    "first_review": {
+      "path": "artifacts/reviews/agn-pilot-v1.json",
+      "file_sha256": "dc5a10866d183c150409e0927dd7d79e54c60a350a93af409e5e1041350ef40d"
+    },
+    "local_texts": {
+      "path": "outputs/agn-pilot-v1/candidates-verified.json",
+      "file_sha256": "a7941cdb088d790b41277b3970aae740eb03b538f553b1997b6b48bf20fc270a"
+    },
+    "taxonomy": {
+      "path": "docs/guia-etiquetado-1780-1842.md",
+      "file_sha256": "737d155a6f8260df4fa00b5f1adc6f469457f678fd144dd8c2d6b80a564d76e7"
+    },
+    "pdf": {
+      "path": "outputs/source-candidates-v1/josefa-montes.pdf",
+      "file_sha256": "65a271f2016780bf621b9040d7409bff3fd745a28524b76662d5266243986602"
+    },
+    "dataset": {
+      "path": "artifacts/datasets/gold-v1-source-aware.json",
+      "file_sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a"
+    }
+  },
+  "items": [
+    {
+      "id": "AGN01",
+      "text_sha256": "42c53cbd2007a225bbd752aa3ee406171153719d1afe679c345289eb76cef810",
+      "proposed_label": "contexto_colonial_antecedentes",
+      "pdf_page": 7,
+      "printed_page": 21,
+      "first_reviewer_label": "contexto_colonial_antecedentes",
+      "second_reviewer_initial_label": "contexto_colonial_antecedentes",
+      "second_reviewer_final_label": "contexto_colonial_antecedentes",
+      "comparison_decision": "aprobar_etiqueta",
+      "ai_label_consensus": true,
+      "human_validation": "not_performed",
+      "dataset_applied": false,
+      "confidence": "alta (juicio cualitativo, no probabilidad calibrada)",
+      "reason": "Predomina la estructura económica y coercitiva de la esclavitud: abastecimiento, compraventa y destino de una adolescente en 1805. Su condición africana y femenina no basta para clasificarla como participación social.",
+      "training_selection": "candidate_for_future_training",
+      "context_printed_pages": [
+        20,
+        21,
+        22
+      ],
+      "context_pdf_pages": [
+        6,
+        7,
+        8
+      ],
+      "source_limits": "Edad aproximada y destino doméstico probable: conservar esas reservas. La nota 6 remite a un protocolo de 1826 que sustenta la narración de 1805; no se inspeccionó una escritura original de ese año.",
+      "archive_reference_as_cited": "AGN, Ignacio Ayllón Salazar, Protocolo 43, f. 1020 (1826); referencia en nota 6 del artículo"
+    },
+    {
+      "id": "AGN02",
+      "text_sha256": "0ba4a8ea7ccb70fd363921c41c96a0184abcc15f2df76e89bba48d4c807cf0a9",
+      "proposed_label": "participacion_social_regional",
+      "pdf_page": 21,
+      "printed_page": 35,
+      "first_reviewer_label": "participacion_social_regional",
+      "second_reviewer_initial_label": "participacion_social_regional",
+      "second_reviewer_final_label": "participacion_social_regional",
+      "comparison_decision": "aprobar_etiqueta",
+      "ai_label_consensus": true,
+      "human_validation": "not_performed",
+      "dataset_applied": false,
+      "confidence": "media-alta (juicio cualitativo, no probabilidad calibrada)",
+      "reason": "Los representantes son sujetos de una actuación colectiva concreta: adquieren un inmueble para una cofradía. Las fórmulas notariales no eliminan ese contenido social; no describe organización estatal ni militancia independentista.",
+      "training_selection": "candidate_for_future_training",
+      "context_printed_pages": [
+        32,
+        33,
+        34,
+        35
+      ],
+      "context_pdf_pages": [
+        18,
+        19,
+        20,
+        21
+      ],
+      "source_limits": "La fecha 31-12-1834 está en el cierre de la página, fuera del extracto. Conservarla como contexto, sin añadirla al texto original. No se cotejó el manuscrito.",
+      "archive_reference_as_cited": "Anexo 2, nota 33: AGN (1834), Francisco de Paula Casós, Protocolo 143, ff. 453–457v"
+    },
+    {
+      "id": "AGN03",
+      "text_sha256": "ec9bf46299f42bfde3a2a0f4d88a0e50880c8f2a1dc0839e1e2d5d1702d90506",
+      "proposed_label": "participacion_social_regional",
+      "pdf_page": 22,
+      "printed_page": 36,
+      "first_reviewer_label": "participacion_social_regional",
+      "second_reviewer_initial_label": "participacion_social_regional",
+      "second_reviewer_final_label": "participacion_social_regional",
+      "comparison_decision": "aprobar_etiqueta",
+      "ai_label_consensus": true,
+      "human_validation": "not_performed",
+      "dataset_applied": false,
+      "confidence": "media (juicio cualitativo, no probabilidad calibrada)",
+      "reason": "El pago por representantes de la cofradía admite la etiqueta social, pero añade poca información a AGN02. Es un recibo relacionado, no una operación militar ni una nueva fuente independiente.",
+      "training_selection": "context_only_not_separate_training_row",
+      "context_printed_pages": [
+        34,
+        35,
+        36
+      ],
+      "context_pdf_pages": [
+        20,
+        21,
+        22
+      ],
+      "source_limits": "Anotación marginal de 18-04-1836 sobre el saldo de la compra de 1834. El testamento de 1875 empieza después y no pertenece al extracto.",
+      "archive_reference_as_cited": "Continuación marginal del anexo 2 en p. 36; misma operación de AGN02",
+      "supports_candidate": "AGN02"
+    }
+  ],
+  "result": {
+    "label_agreements": 3,
+    "label_changes": 0,
+    "proposed_training_candidates": [
+      "AGN01",
+      "AGN02"
+    ],
+    "context_only": [
+      "AGN03"
+    ],
+    "selection_adopted_by_primary_agent": true,
+    "source_group": "doi:10.37840/ragn.v32i1.5",
+    "related_document_group": "solar-cofradia-1834-1836",
+    "metric_claim": null
+  },
+  "references": [
+    {
+      "author": "Juan José Brito Ramos",
+      "year": 2017,
+      "title": "Josefa Montes, la última esclava del Congo",
+      "url": "https://revista.agn.gob.pe/ojs/index.php/ragn/article/view/5",
+      "use": "Fuente del conjunto y de las transcripciones citadas; revisión en capa textual del PDF local, no manuscritos ni cotejo visual."
+    },
+    {
+      "author": "Diego Lévano Medina",
+      "year": 2022,
+      "title": "Terremoto, reconstrucción y reforma. Las cofradías limeñas frente al seísmo de 1746",
+      "url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26040",
+      "use": "Resumen académico consultado para el carácter social de las cofradías. No verifica la compraventa concreta y trata un periodo anterior al proyecto; no se incorpora al dataset."
+    }
+  ],
+  "operational_decision": "Aceptar las tres etiquetas como consenso de dos revisiones asistidas por IA. Proponer AGN01 y AGN02 para una futura versión experimental; conservar AGN03 solo como contexto, sin cambiar su etiqueta a no_relevante. No exigir a la usuaria un juicio experto de historia.",
+  "not_done": [
+    "Incorporación al dataset",
+    "Entrenamiento o medición de F1",
+    "Escrituras en producción",
+    "Validación humana independiente",
+    "Segunda revisión de las 20 etiquetas iniciales"
+  ],
+  "next_step": "Registrar este bloque. Para futuros cambios de datos, mantener el origen asistido por IA y la agrupación de fuente/documento; no transformar este consenso en gold validado por expertos humanos."
+}
