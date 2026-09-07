@@ -14,6 +14,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Diagnóstico de cobertura | Orientar el siguiente cambio de datos | Concentración por fuente, rasgos de transcripción y fragmentos incompletos identificados. Muestra de 21 filas de train revisada; prioridad: cuatro filas de Villanueva. Sin modificar etiquetas |
 | Límites de Villanueva | Recuperar argumentos cortados entre páginas | Seis unidades delimitadas y cotejadas; dos quedan como contexto. Continuaciones ya presentes en filas 10/637 identificadas. Propuesta local, sin aplicar |
 | Reparación de Villanueva | Preparar un reemplazo sin duplicar continuaciones | Cuatro candidatos revisados, cuatro unidades de contexto y seis originales archivados; V02 ambiguo. Extracción local verificada, dataset sin modificar |
+| Copia experimental Villanueva | Aplicar únicamente la sustitución revisada | Seis filas sustituidas por cuatro: 598 train, 81 validación, 137 test. Otras 812 filas idénticas; originales y contexto archivados. Sin entrenamiento ni despliegue |
 | Fuente para crisis e ideas | Localizar contenido pertinente y reutilizable | HUE01 de Huerta Vera (2020), revisado por ambos agentes, incorporado a copia experimental local: 597 train, 81 validación y 137 test. Evaluación intacta; sin entrenamiento nuevo |
 | Lote adicional de Huerta | Revisar propaganda, lecturas políticas y prensa | HUE02/03/04 incorporados a copia experimental: 600 train, 81 validación y 137 test. Una fuente común y dependencia HUE03/HUE04 conservadas; sin entrenamiento nuevo |
 | Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Segunda revisión: 11 aprobar, 2 corregir, 6 ambiguos y 1 excluir hasta resegmentar. R04/R16 corregidos solo en copia experimental; referencia y producción intactas |
@@ -867,7 +868,7 @@ considere las seis filas implicadas (7, 633, 15, 14, 10 y 637), conservando los
 originales y el texto restante de 10/637. Revisar etiquetas y ajustes de extracción
 antes de incorporar candidatos; no añadir continuaciones duplicando las existentes.
 
-## Bloque actual: propuesta de reparación de Villanueva
+## Propuesta de reparación de Villanueva — registrada en `e0e0b3d`
 
 [prepare_villanueva_repair.py](../scripts/prepare_villanueva_repair.py) reproduce
 los límites revisados y prepara la [propuesta trazable](../artifacts/reviews/villanueva-repair-v1.json).
@@ -914,6 +915,49 @@ experimental local**, con su archivo de originales y contexto. La proyección es
 600 → 598 filas de train: retirar seis originales e incorporar cuatro candidatos;
 validación (81) y test (137) deben permanecer idénticos. Esa incorporación todavía
 no ocurrió. No hay entrenamiento, métricas nuevas ni cambios en producción.
+
+## Bloque actual: copia experimental con la reparación de Villanueva
+
+[build_villanueva_snapshot.py](../scripts/build_villanueva_snapshot.py) aplica
+la propuesta revisada en una carpeta local nueva. La [evidencia de incorporación](../artifacts/reviews/villanueva-snapshot-v1.json)
+registra hashes, recuentos, comprobaciones y ubicación de los archivos.
+
+Se sustituyeron las filas del padre 7, 633, 15, 14, 10 y 637 por V03, V04, V06 y
+V07. El resultado contiene **816 filas: 598 train, 81 validación y 137 test**.
+Las otras 812 filas conservaron texto, etiqueta, fuente, partición y orden.
+Los 218 ejemplos de evaluación coinciden exactamente con la referencia congelada.
+
+El archivo `outputs/villanueva-snapshot-v1/replacement-archive.json` conserva
+las seis filas originales, sus particiones completas, las ocho unidades extraídas
+y siete páginas de contexto/notas. V01, V02, V05 y V08 quedan fuera del entrenamiento;
+V02 conserva el desacuerdo histórico, y V03 lo referencia como contexto asociado.
+La prosa usada para entrenar se reduce: no se presenta esta reparación como una
+ampliación del corpus ni como mejora demostrada del modelo.
+
+Se conservaron el historial de correcciones, la procedencia de AGN/Huerta/Fonseca
+y la referencia al archivo anterior de Fonseca. Se añadió procedencia específica
+para los cuatro candidatos, incluidos sus ajustes de extracción, advertencias y
+origen de revisión asistida por IA. La fuente continúa exclusivamente en train.
+El duplicado conocido fuera de este grupo sigue intacto.
+
+Verificación: los tres archivos se reprodujeron exactamente; archivo de originales
+sin pérdida, metadatos anteriores conservados y evaluación idéntica. Pasaron 14
+rechazos: cambios de evaluación/taxonomía, originales/candidatos alterados, grupo
+incompleto, contexto ambiguo etiquetado, archivo incompleto, fuente distinta,
+revisión ya aplicada o alterada, solapamiento fuera del grupo y salidas inválidas.
+Las operaciones fallidas no modificaron sus entradas.
+
+Para reproducir en una carpeta nueva:
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/build_villanueva_snapshot.py --output outputs/villanueva-snapshot-reproduccion
+```
+
+Estado: incorporación local completada; dataset anterior y referencia intactos.
+No se entrenó ni desplegó un modelo. Siguiente bloque después del commit: comparar
+el efecto de esta sustitución con TF-IDF local y configuración fija, usando solo
+validación. El comparador anterior supone adiciones; habrá que admitir esta
+sustitución auditada conservando sus controles de evaluación y procedencia.
 
 ### Reproducir la muestra de la revisión inicial
 

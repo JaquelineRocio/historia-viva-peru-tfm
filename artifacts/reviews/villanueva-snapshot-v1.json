@@ -1,0 +1,165 @@
+{
+  "status": "experimental_local",
+  "parent_sha256": "4d0471f49d79a7059059427b6b31779ce60d14eff6e9af1508d12d3f481c21e4",
+  "reference_sha256": "54bd64939cc3bdf4d105d14208a41fd2dbb9095f7ef9cb52a4c3baf083f29ece",
+  "reviewed_sha256": "167a994133655d16661f9711a2adcf00053fb9dd6f477378180d71acfa2bbbdd",
+  "evaluation_sha256": "593fe90d68bc282108eab983515598c7c3b5ebbf42e2f79dbdb275c12d8c02a2",
+  "archive_sha256": "3587a76fd17a17ec41b96c440975ef73958c5c6a78b88ad9417b67f985411ded",
+  "removed": 6,
+  "added": 4,
+  "remaining_rows_preserved": 812,
+  "context_ids": [
+    "V01",
+    "V02",
+    "V05",
+    "V08"
+  ],
+  "ambiguous_context_ids": [
+    "V02"
+  ],
+  "new_sources": 0,
+  "audit": {
+    "dataset_sha256": "167a994133655d16661f9711a2adcf00053fb9dd6f477378180d71acfa2bbbdd",
+    "split_counts": {
+      "train": 598,
+      "val": 81,
+      "test": 137
+    },
+    "class_distribution": {
+      "train": {
+        "campanias_conflictos_militares": 88,
+        "participacion_social_regional": 83,
+        "no_relevante": 101,
+        "organizacion_consecuencias_republicanas": 101,
+        "liderazgos_diplomacia_proyectos": 94,
+        "contexto_colonial_antecedentes": 71,
+        "crisis_ideas_emancipadoras": 60
+      },
+      "val": {
+        "contexto_colonial_antecedentes": 16,
+        "crisis_ideas_emancipadoras": 15,
+        "participacion_social_regional": 11,
+        "no_relevante": 16,
+        "liderazgos_diplomacia_proyectos": 4,
+        "organizacion_consecuencias_republicanas": 15,
+        "campanias_conflictos_militares": 4
+      },
+      "test": {
+        "contexto_colonial_antecedentes": 14,
+        "crisis_ideas_emancipadoras": 28,
+        "no_relevante": 39,
+        "participacion_social_regional": 12,
+        "campanias_conflictos_militares": 7,
+        "liderazgos_diplomacia_proyectos": 23,
+        "organizacion_consecuencias_republicanas": 14
+      }
+    },
+    "sources_by_split": {
+      "train": [
+        "0ea45102-057d-4bff-b527-f36326f66d33",
+        "17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+        "48262fb6-dee2-531e-b001-536c5928a9ca",
+        "514f190e-5d01-497a-a6ef-648601cd8bdb",
+        "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+        "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+        "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+        "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+        "e32181bc-41d0-4400-a76d-eb11fc88bf71"
+      ],
+      "val": [
+        "b23a4bf1-b9f4-4c08-bb89-a4cf4a67e004"
+      ],
+      "test": [
+        "15e52806-3d75-4117-937d-7c7eda594579",
+        "4ca9c84a-627b-4027-8216-fdc07c506727"
+      ]
+    },
+    "source_overlap": 0,
+    "exact_text_overlap": 0
+  },
+  "training_performed": false,
+  "production_changed": false,
+  "new_metrics": false,
+  "inputs": [
+    {
+      "path": "outputs/huerta-batch-snapshot-v1/reviewed-export.json",
+      "file_sha256": "38c71b1548b89848142edc1aadab24d6651393f7361140a516e36d758e7ba244"
+    },
+    {
+      "path": ".corpus-downloads/constitucion_1823.pdf",
+      "file_sha256": "56e6ec5d01aee7af31fe857ff63190ea1a088ccddcfe479b906dcbe7405d8c50"
+    },
+    {
+      "path": "artifacts/datasets/gold-v1-source-aware.json",
+      "file_sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a"
+    }
+  ],
+  "review_path": "artifacts/reviews/villanueva-repair-v1.json",
+  "review_file_sha256": "93a16704a5e777a0d557e3553cd49451b82ba884abb8b2b1374213b207e859e9",
+  "prior_context_archives": [
+    {
+      "path": "outputs/fonseca-snapshot-v1/replacement-archive.json",
+      "file_sha256": "d07a6e00fa48a724deb215bb14392442009905c82f707a5ab6ea7386e4c00b86"
+    }
+  ],
+  "parent_evidence": {
+    "path": "artifacts/reviews/huerta-batch-snapshot-v1.json",
+    "file_sha256": "46dd97c12ef8089e359f3270f369179db73e3a373163ab60502a0e06b86731bc"
+  },
+  "schema_version": 1,
+  "review_commit": "e0e0b3d",
+  "verification": {
+    "passed": true,
+    "checks": [
+      "All three outputs reproduced exactly",
+      "812 other rows and 218 frozen evaluation rows preserved exactly",
+      "Prior provenance, correction history, source registry and archive links preserved",
+      "Six originals, all four context units and seven PDF pages archived",
+      "598/81/137 rows; source groups unchanged; no training or deployment"
+    ],
+    "rejected_cases": [
+      "Changed frozen evaluation",
+      "Changed taxonomy order",
+      "Changed original row",
+      "Changed removal group",
+      "Missing candidate unit",
+      "Changed candidate text",
+      "Ambiguous context given training label",
+      "Incomplete archived original",
+      "Changed source",
+      "Already applied review",
+      "Overlap outside replacement group",
+      "Existing output directory",
+      "Output outside outputs",
+      "Altered review file rejected before build"
+    ],
+    "inputs_unchanged": true,
+    "failed_operations_did_not_mutate_arguments": true
+  },
+  "builder": {
+    "path": "scripts/build_villanueva_snapshot.py",
+    "file_sha256": "743166b44340832c62c90403240925b12eed47b070091b566901bcd7274e9a18"
+  },
+  "outputs": [
+    {
+      "path": "outputs/villanueva-snapshot-v1/reviewed-export.json",
+      "file_sha256": "30c5e648476fcfcb1bd9eddd3e99a7cca3ce5f23fabf09290cd7e4ec8791074a"
+    },
+    {
+      "path": "outputs/villanueva-snapshot-v1/replacement-archive.json",
+      "file_sha256": "76f0698ca0fab38359bedb2a45224ac3b6b59043507eff9bc7ac6885befa1ffa"
+    },
+    {
+      "path": "outputs/villanueva-snapshot-v1/build-report.json",
+      "file_sha256": "5ffe96d4aba420c33c3ee133a17fc1823157ce0cae8dc167456754cd05446007"
+    }
+  ],
+  "limits": [
+    "Local experimental replacement, not a new human-validated gold dataset.",
+    "Six rows removed and four added; four context units archived, including ambiguous V02. Coverage of training text was reduced.",
+    "Existing same-source duplicate outside the replaced group remains; this block does not deduplicate the entire corpus.",
+    "Original PDF extraction flags and AI-review limits remain in provenance.",
+    "No new metrics or production changes."
+  ],
+  "next_step": "Compare before and after locally with fixed TF-IDF settings and validation only; adapt comparison to the audited replacement instead of assuming additions only. Preserve frozen test and do not deploy."
+}
