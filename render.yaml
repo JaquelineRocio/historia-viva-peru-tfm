@@ -7,7 +7,11 @@ services:
     dockerContext: apps/api
     dockerfilePath: apps/api/Dockerfile
     plan: free
-    healthCheckPath: /api/health
+    # Liveness no consulta Modal: su arranque en frío puede superar los 5 s
+    # permitidos por Render. /api/health conserva el diagnóstico API + ML.
+    healthCheckPath: /api/health/live
+    # Render debe esperar los checks de CI antes de desplegar un commit.
+    autoDeployTrigger: checksPass
     envVars:
       - key: NODE_ENV
         value: production
