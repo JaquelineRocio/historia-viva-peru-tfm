@@ -1,0 +1,36 @@
+{
+  "created_at": "2026-09-07T04:07:58.344098+00:00",
+  "checks": [
+    {
+      "name": "API and ML health",
+      "status": "passed",
+      "seconds": 25.72
+    },
+    {
+      "name": "Invalid credentials rejected",
+      "status": "passed",
+      "seconds": 0.83
+    },
+    {
+      "name": "Demo login",
+      "status": "passed",
+      "seconds": 0.7
+    },
+    {
+      "name": "Project access",
+      "status": "passed",
+      "seconds": 0.25
+    },
+    {
+      "name": "Out-of-scope query abstains without evidence",
+      "status": "passed",
+      "seconds": 23.56
+    },
+    {
+      "name": "Web application shell",
+      "status": "passed",
+      "seconds": 0.69
+    }
+  ],
+  "passed": true
+}

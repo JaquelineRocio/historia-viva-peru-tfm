@@ -11,9 +11,9 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Experimentos | Comparar hiperparámetros usando validación; test solo del ganador | Tres configuraciones TF-IDF y tres BETO ejecutadas en este equipo |
 | Informe Unidad I | Dataset, características, parámetros, resultados, despliegue y límites | Borrador en informe-unidad-1.md |
 | Demo Unidad I | Dos pruebas funcionales completas y explicación en inglés | Smoke de producción recuperado: seis comprobaciones pasan; recorrido fuente/corrección pendiente |
-| Mantenimiento | Validar snapshot, entrenar, evaluar y archivar candidato | Workflow escrito; ejecución remota pendiente |
-| Integración continua | Tests, builds y comprobación agregada Quality gate | Implementado; ejecución remota del cambio pendiente |
-| Despliegue | Esperar CI, verificar versión y recuperar ante fallos | Render configurado en código; Vercel y recuperación pendientes |
+| Mantenimiento | Validar snapshot, entrenar, evaluar y archivar candidato | TF-IDF ejecutado en GitHub; métricas y candidato archivados. Correcciones automáticas pendientes |
+| Integración continua | Tests, builds y comprobación agregada Quality gate | Ejecución en GitHub correcta para `3974f4a` |
+| Despliegue | Esperar CI, verificar versión y recuperar ante fallos | Nueva ruta de salud accesible en Render; falta verificar SHA y controles de despliegue |
 | Entrega Unidad II | Tres casos ejecutados, con logs y resultados | Controles locales; demostración remota pendiente |
 
 ## Organización de los cambios en Git
@@ -22,11 +22,12 @@ Las consultas de Git pueden realizarlas el asistente o la autora. Las ramas, el 
 
 | Bloque | Commit local verificado | Estado |
 |---|---|---|
-| Salud de la API y pruebas | `ca2da38` | Registrado; despliegue pendiente |
+| Salud de la API y pruebas | `ca2da38` | Publicado; ruta accesible en Render |
 | Experimentos y preparación del reentrenamiento | `3548851` | Registrado; pruebas locales correctas |
 | Scripts de verificación | `2483a4f` | Registrado; pruebas locales correctas |
-| Automatización y configuración de Render | `62073ac` | Registrado; validación estática correcta, ejecución remota pendiente |
-| Evidencias e informes | Pendiente | Siguiente commit, a cargo de la autora |
+| Automatización y configuración de Render | `62073ac` | Publicado; CI y mantenimiento TF-IDF ejecutados correctamente |
+| Evidencias e informes | `847b141` | Publicado |
+| Exclusiones del material local | `3974f4a` | Publicado; presentación conservada localmente |
 
 Las modificaciones personales de `.gitignore` se revisan por separado.
 
@@ -104,7 +105,7 @@ Los tests locales ya comprueban que un dataset con fuga de fuentes se rechaza, q
 - [x] Verificar carga e inferencia con pesos reales y conservación del modelo ante una carga fallida (FastAPI local).
 - [ ] Repetir recorrido real PDF/YouTube → predicción → corrección persistida.
 - [ ] Confirmar si la exigencia de inglés alcanza también a la interfaz.
-- [ ] Publicar los cambios y conservar URLs de GitHub Actions.
+- [x] Publicar los cambios y conservar URLs de GitHub Actions.
 - [ ] Conectar snapshots de correcciones, identidad estable de evaluación y detección de cambios.
 - [ ] Guardar pesos BETO en almacenamiento accesible al servicio ML: un artefacto de Actions por sí solo no es una ruta de Modal.
 - [ ] Comparar candidato y activo, verificar carga y hacer activación recuperable.
@@ -122,3 +123,15 @@ No es necesario incorporar MLflow, Airflow o un feature store independiente para
 - [Recuperación de producción](recuperacion-produccion.md): posteriormente pasaron las seis comprobaciones; BETO v1 y embeddings cargados. Corrección preventiva de liveness preparada y pendiente de despliegue.
 - [Mantenimiento sin cambios](../artifacts/experiments/course-u1/evidence/maintenance-no-changes.json): se omitió entrenamiento.
 - Los tres workflows pasaron validación estática con actionlint 1.7.12. Los checks locales no demuestran que GitHub haya ejecutado los workflows nuevos.
+
+## Verificación tras publicar `3974f4a`
+
+El 7 de septiembre de 2026 a las 04:08 UTC se verificaron las ejecuciones disparadas por el push:
+
+- [CI correcto](https://github.com/JaquelineRocio/historia-viva-peru-tfm/actions/runs/34081879616): API, web, ML y Quality gate terminaron con éxito.
+- [Mantenimiento correcto](https://github.com/JaquelineRocio/historia-viva-peru-tfm/actions/runs/34081879646): se repitió el experimento TF-IDF sobre el snapshot académico. Se seleccionó C=4, con F1 macro de test 0.363; se archivaron informes y candidato. Producción no fue modificada por este workflow. Esto aún no demuestra reentrenamiento automático desde correcciones.
+- [Comprobación de producción posterior](../artifacts/experiments/course-u1/evidence/production-smoke-post-push.json): las seis comprobaciones pasaron desde este equipo. No equivale a una ejecución del workflow Production smoke en GitHub, que continúa pendiente.
+- `/api/health/live` respondió HTTP 200 con `status: ok` y `service: api`. Esto confirma que la ruta está disponible, pero no identifica el SHA exacto ni confirma la configuración del health check en el panel de Render.
+- Vercel reportó éxito mientras CI seguía en curso. Falta configurar y demostrar que el despliegue espere a CI.
+
+Los estados y SHA de las ejecuciones se conservan en [github-actions-post-push.json](../artifacts/experiments/course-u1/evidence/github-actions-post-push.json). Siguiente bloque: verificar el recorrido fuente → predicción → corrección persistida en producción.

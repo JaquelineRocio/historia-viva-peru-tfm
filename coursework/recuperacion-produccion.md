@@ -47,7 +47,7 @@ Motivo: [Render exige una respuesta en cinco segundos](https://render.com/docs/h
 
 Pruebas locales: 31 tests de API y compilación correctos. Los tres tests nuevos comprueban liveness con ML sin respuesta, visibilidad del fallo ML en diagnóstico y diagnóstico saludable.
 
-La nueva ruta **todavía no está desplegada**. No cambiar manualmente el health check remoto a esa ruta antes de desplegar el código que la incorpora.
+Actualización posterior al push, 7 de septiembre de 2026, 04:08 UTC: la nueva ruta respondió HTTP 200 desde Render. Las seis comprobaciones de producción también pasaron; [evidencia posterior](../artifacts/experiments/course-u1/evidence/production-smoke-post-push.json). Falta confirmar el SHA exacto desplegado y que el panel de Render utilice `/api/health/live` como health check.
 
 ## Criterio para dar por recuperado el servicio
 

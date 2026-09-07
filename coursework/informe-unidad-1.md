@@ -72,7 +72,9 @@ acceso al proyecto y abstención. BETO v1 y embeddings figuran cargados en Modal
 Se conserva la evidencia en `artifacts/experiments/course-u1/evidence/production-smoke-recovered.json`.
 No fue necesario modificar `ML_SERVICE_URL` ni el modelo de producción. La causa
 exacta del 404 inicial continúa sin confirmar; la corrección preventiva del chequeo
-de salud está probada localmente y pendiente de despliegue.
+de salud estaba probada localmente y pendiente de despliegue en esa comprobación.
+
+Tras el push de `3974f4a`, a las 04:08 UTC, se verificó que `/api/health/live` ya respondía HTTP 200 en Render y que las seis comprobaciones seguían pasando. [Evidencia posterior al push](../artifacts/experiments/course-u1/evidence/production-smoke-post-push.json). El SHA exacto desplegado y la configuración del health check en el panel siguen pendientes de verificación.
 
 Para completar esta sección: registrar la versión desplegada, verificar la nueva ruta de salud tras su despliegue y completar el recorrido de fuente y corrección de la tabla siguiente. La comprobación de producción debe repetirse después del despliegue.
 
