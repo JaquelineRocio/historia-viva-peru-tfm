@@ -9,6 +9,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 |---|---|---|
 | Diagnóstico | Compilar web/API, ejecutar suites y revisar dataset | API 37 pruebas, ML 55 pruebas y web verificados localmente |
 | Experimentos | Comparar hiperparámetros usando validación; test solo del ganador | Tres configuraciones TF-IDF y tres BETO ejecutadas en este equipo |
+| Comparación tras revisión | Medir el efecto conjunto del enriquecimiento y las correcciones | TF-IDF local: F1 macro validación 0.29004 en ambas versiones; test 0.36300 → 0.36007. Sin mejora global ni cambio en producción |
 | Revisión histórica inicial | Auditar 20 fragmentos de train antes de enriquecer el corpus | Segunda revisión: 11 aprobar, 2 corregir, 6 ambiguos y 1 excluir hasta resegmentar. R04/R16 corregidos solo en copia experimental; referencia y producción intactas |
 | Reparación de R05 | Recuperar prosa separada por notas y salto de página | Sustitución local verificada: train55/57/58 reemplazadas por un fragmento de 203 palabras en una nueva copia experimental. Originales y contexto archivados; referencia intacta |
 | Fuentes para enriquecimiento | Evaluar contenido, procedencia, reutilización y solapamientos | Tres candidatas examinadas; dos fragmentos AGN incorporados solo a copia experimental local. BNP pendiente de OCR/metadatos y Constitución pendiente de cotejo |
@@ -395,7 +396,7 @@ outputs/venv-ml/Scripts/python.exe scripts/build_fonseca_snapshot.py --output ou
 La sustitución quedó registrada en `f300747`. Las correcciones consensuadas
 R04/R16 se aplican en otra versión experimental, descrita a continuación.
 
-## Bloque actual: aplicación de las correcciones R04 y R16
+## Aplicación de las correcciones R04 y R16 — registrada en `a996f24`
 
 [apply_reviewed_labels.py](../scripts/apply_reviewed_labels.py) aplica únicamente
 correcciones solicitadas por identificador y coincidentes entre ambos dictámenes.
@@ -436,10 +437,70 @@ Reproducción con las entradas locales previas y una carpeta nueva:
 outputs/venv-ml/Scripts/python.exe scripts/apply_reviewed_labels.py --base outputs/fonseca-snapshot-v1/reviewed-export.json --review artifacts/reviews/history-review-v1-peer-review.json --ids R04 R16 --output outputs/history-corrections-reproduccion
 ```
 
-Siguiente paso después del commit: comprobar recursos locales y ejecutar una
-comparación TF-IDF con la referencia, conservando configuración y evaluación.
-La clase de crisis e ideas queda con 58 filas de train: sigue pendiente enriquecerla
-con contenido pertinente, sin mantener etiquetas incorrectas por su frecuencia.
+Las correcciones quedaron registradas en `a996f24`. La clase de crisis e ideas
+queda con 58 filas de train: sigue pendiente enriquecerla con contenido pertinente,
+sin mantener etiquetas incorrectas por su frecuencia.
+
+## Bloque actual: comparación TF-IDF después de la revisión
+
+Se ejecutó el entrenador existente dos veces: sobre la referencia congelada y
+sobre `outputs/history-corrections-v1/reviewed-export.json`. Ambas versiones
+tienen 596 filas de train, 81 de validación y 137 de test; la evaluación es idéntica.
+El duplicado preexistente de train permanece en ambas ejecuciones. El cambio de
+datos combina dos ejemplos AGN, la sustitución de tres extracciones de Fonseca
+por una y las dos correcciones de etiqueta; no se aislaron sus efectos individuales.
+
+La [comparación completa](../artifacts/experiments/history-comparison-v1/comparison.json)
+conserva hashes, configuración, entorno, métricas por clase y matrices de confusión.
+Se utilizaron los mismos C (0.25, 1 y 4), semilla 42 y versiones de NumPy y
+scikit-learn. El equipo tenía 15.34 GB de RAM total y 0.45 GB libres al comprobarlo;
+las ejecuciones fueron secuenciales con un hilo configurado. No se midió el pico
+real de RAM ni se usaron servicios remotos.
+
+| Dataset | C seleccionado por validación | F1 macro validación | F1 macro test | Aciertos en test |
+|---|---|---|---|---|
+| Referencia congelada | 4 | 0.29004 | 0.36300 | 57/137 |
+| Copia revisada | 4 | 0.29004 | 0.36007 | 57/137 |
+
+**No se observa mejora global.** La variación de F1 macro test es −0.00293
+(−0.293 puntos porcentuales); validación y accuracy de test permanecen iguales.
+F1 macro promedia el resultado de cada clase, por lo que puede variar aunque el
+número total de aciertos coincida. La clase de crisis e ideas conserva F1 de
+validación 0 con 15 casos; continúa siendo una carencia que investigar.
+
+Cada ejecución seleccionó por validación antes de evaluar el trial ganador en
+test. El ejecutor también ajusta y evalúa un baseline fijo C=1 que no interviene
+en la selección: en total se hicieron ocho ajustes y se guardaron seis modelos
+de trials. El experimento manual no cambia el mínimo de 20 cambios del
+mantenimiento automático.
+
+Verificación: la referencia reprodujo las tres validaciones y las métricas de test
+del experimento original. Se comprobaron configuraciones, dependencias, selección,
+recuentos y F1/accuracy calculadas desde las matrices de confusión. Los dos datasets
+permanecen intactos. Modelos y reportes completos están en
+`outputs/history-comparison-v1/reference/` y `outputs/history-comparison-v1/reviewed/`,
+excluidos de Git. La ejecución se hizo con el árbol limpio en `a996f24`.
+
+Reproducción con carpetas nuevas:
+
+```powershell
+$env:PYTHONPATH = 'apps/ml'
+$env:OMP_NUM_THREADS = '1'
+$env:OPENBLAS_NUM_THREADS = '1'
+$env:MKL_NUM_THREADS = '1'
+outputs/venv-ml/Scripts/python.exe -m app.ml.experiments --dataset artifacts/datasets/gold-v1-source-aware.json --config configs/experiments/tfidf.json --output outputs/history-comparison-reproduccion/reference
+outputs/venv-ml/Scripts/python.exe -m app.ml.experiments --dataset outputs/history-corrections-v1/reviewed-export.json --config configs/experiments/tfidf.json --output outputs/history-comparison-reproduccion/reviewed
+```
+
+La comparación es descriptiva: el test ya se consultó anteriormente y no es una
+evaluación externa nueva. No se demostró significación estadística ni mejora de
+BETO, que permanece en producción sin cambios. Las correcciones históricamente
+justificadas se conservan; el candidato TF-IDF sigue experimental.
+
+Siguiente paso después del commit: buscar una fuente complementaria para crisis
+e ideas, con procedencia y reutilización verificadas, partiendo de las carencias
+de entrenamiento/validación. No generar ejemplos copiando el test ni ajustar
+etiquetas para mejorar artificialmente su resultado.
 
 ### Reproducir la muestra de la revisión inicial
 
