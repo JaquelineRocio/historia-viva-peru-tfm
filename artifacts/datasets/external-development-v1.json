@@ -1,0 +1,1224 @@
+{
+  "schema_version": 1,
+  "id": "external-development-v1",
+  "purpose": "external_development",
+  "status": "frozen",
+  "frozen_at_utc": "2026-09-08T04:09:50.043505+00:00",
+  "scope_years": [
+    1780,
+    1842
+  ],
+  "labels": [
+    "campanias_conflictos_militares",
+    "contexto_colonial_antecedentes",
+    "crisis_ideas_emancipadoras",
+    "liderazgos_diplomacia_proyectos",
+    "no_relevante",
+    "organizacion_consecuencias_republicanas",
+    "participacion_social_regional"
+  ],
+  "metric_labels": [
+    "campanias_conflictos_militares",
+    "crisis_ideas_emancipadoras",
+    "liderazgos_diplomacia_proyectos",
+    "organizacion_consecuencias_republicanas",
+    "participacion_social_regional"
+  ],
+  "unassessed_labels": [
+    "contexto_colonial_antecedentes",
+    "no_relevante"
+  ],
+  "class_counts": {
+    "crisis_ideas_emancipadoras": 17,
+    "participacion_social_regional": 6,
+    "campanias_conflictos_militares": 4,
+    "organizacion_consecuencias_republicanas": 2,
+    "liderazgos_diplomacia_proyectos": 2
+  },
+  "source_counts": {
+    "doi:10.3989/revindias.2011.023": 26,
+    "sobrevilla-2021-intermedios": 5
+  },
+  "sources": {
+    "doi:10.3989/revindias.2011.023": {
+      "author": "Núria Sala i Vila",
+      "title": "El Trienio Liberal en el Virreinato peruano: los ayuntamientos constitucionales de Arequipa, Cusco y Huamanga, 1820-1824",
+      "year": 2011,
+      "journal": "Revista de Indias",
+      "volume_issue": "71(253)",
+      "article_printed_pages": [
+        693,
+        728
+      ],
+      "url": "https://revistadeindias.revistas.csic.es/index.php/revistadeindias/article/view/877",
+      "repository_url": null,
+      "pdf_url": "https://revistadeindias.revistas.csic.es/index.php/revistadeindias/article/download/877/949",
+      "local_pdf": "outputs/external-development-v1/sala-2011.pdf",
+      "pdf_sha256": "561569be58d1ca8853e2ef3c5621064c11a22bfbac72968a607ac926d8be9a5c",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_evidence": {
+        "name": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/",
+        "evidence_local": "outputs\\external-development-v1\\sala-editorial.html",
+        "evidence_sha256": "24b95cce322b8e4279f93b1fb2b5020c943ba971bc0066e274f1f15d854003f1",
+        "evidence_url": "https://revistadeindias.revistas.csic.es/index.php/revistadeindias/article/view/877",
+        "checked_date_lima": "2026-09-07",
+        "scope": "Declaración individual del artículo; no se presume licencia sobre todas las ediciones de documentos citados. Atribución y aviso de cambios requeridos."
+      },
+      "attribution": "Sala i Vila, Núria (2011). El Trienio Liberal en el Virreinato peruano: los ayuntamientos constitucionales de Arequipa, Cusco y Huamanga, 1820-1824. Revista de Indias71(253),693–728. DOI10.3989/revindias.2011.023. CC BY4.0. Se seleccionan párrafos, se reúnen palabras partidas y espacios y se retiran llamadas de notas, archivadas aparte. No se moderniza ni corrige el léxico de la autora.",
+      "role": "external_development_only",
+      "doi": "10.3989/revindias.2011.023",
+      "metadata_discrepancies": null,
+      "doi_variant_in_pdf": null,
+      "retrieval_incident": "CSIC devolvió errores de certificado tanto con requests verificado como con TLS de Windows. La descarga pública del PDF y HTML se realizó con requests verify=False; no se enviaron credenciales. Metadatos del PDF coinciden con ficha editorial indexada por búsqueda. CORE devolvió404. No se afirma validación criptográfica de identidad del servidor; SHA256 fija los bytes recibidos.",
+      "documentary_independence": "not_established; same journal and cross-citation, shared primary references",
+      "family_reservation": "All versions of this work stay out of training and final test in this protocol."
+    },
+    "sobrevilla-2021-intermedios": {
+      "author": "Natalia Sobrevilla Perea",
+      "title": "Las campañas a los puertos intermedios y la fase «peruana» de la independencia",
+      "year": 2021,
+      "journal": "Revista de Indias",
+      "volume_issue": "81(281)",
+      "article_printed_pages": "115–141",
+      "url": "https://revistadeindias.revistas.csic.es/index.php/revistadeindias/article/view/1484",
+      "repository_url": "https://kar.kent.ac.uk/101763/",
+      "pdf_url": "https://kar.kent.ac.uk/101763/1/1484-Texto%20del%20art%C3%ADculo%20en%20fichero%20de%20Microsoft%20Word%20%28OBLIGATORIO%29-2272-1-10-20210421.pdf",
+      "local_pdf": "outputs/external-development-v1/sobrevilla-2021.pdf",
+      "pdf_sha256": "425a22547db1ad4c73033d952ba14c1b0f2f1eb573eba55d3f49e293aab0ed19",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_evidence": {
+        "pdf_page": 2,
+        "printed_page": 115,
+        "zone": "footer copyright notice",
+        "quote": "Creative Commons Reconocimiento 4.0 Internacional (CC BY 4.0)"
+      },
+      "attribution": "Sobrevilla Perea, Natalia (2021), Revista de Indias81(281):115–141. CC BY4.0. Extractos; espacios y palabras partidas reunidos; llamadas de notas archivadas separadamente.",
+      "role": "external_development_only",
+      "doi": "10.3989/revindias.2021.04",
+      "metadata_discrepancies": "Kent title singular and language English; publisher PDF title plural and body Spanish. DOI spellings retained.",
+      "doi_variant_in_pdf": "10.3989/revindias.2021.004",
+      "retrieval_incident": null,
+      "documentary_independence": "not_established; same journal and cross-citation, shared primary references",
+      "family_reservation": "All versions of this work stay out of training and final test in this protocol."
+    }
+  },
+  "items": [
+    {
+      "id": "SAL-P001",
+      "text": "El Trienio Liberal (1820-1823) supuso el retorno del virreinato peruano a los principios liberales establecidos en la Constitución de 1812, vigentes hasta 1814, con lo que comportaba de cambios profundos en la concepción del Estado español concebido como representación de la Nación y sustentado sobre la base de la división de poderes y una nueva organización territorial. Entre las reformas sustanciales que se produjeron, aparte de las ya citadas, junto a la liquidación paulatina del entramado legal absolutista y la libertad de imprenta, no fue el menor la nueva terminología que se impuso, por la cual se difundieron expresiones como Banderas Nacionales, Audiencia Nacional, Caja Nacional, Ejército Nacional, Milicias Nacionales, expresión política y militar de la emanación de todo poder de la Nación. Ello nos lleva a pensar que en las mentes de la época se fue gestando un enfrentamiento entre nacionales y patriotas, o lo que era lo mismo en el marco de dos proyectos liberales contrapuestos. El retorno al absolutismo en 1824, volvería a convertir las luchas por la Independencia en un enfrentamiento entre un Estado colonial de Antiguo Régimen y el sistema liberal independentista.",
+      "label": "crisis_ideas_emancipadoras",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "494bee8c8d4a2d57cb8889e46a07290aa456c0f88a73eb81bca08e83ec23efe9",
+      "word_count": 187,
+      "provenance": {
+        "paragraph_id": "SAL-P001",
+        "printed_pages": [
+          693,
+          694
+        ],
+        "pdf_pages_1_based": [
+          1,
+          2
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P001"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P002",
+      "text": "La cuestión americana había sido sustancial en los debates de la Constitución de 1812, sobre todo en lo relativo a la representación que debían tener las gentes y los territorios de Ultramar. Aunque en 1820 buena parte de ellos se habían independizado, restaban bajo el dominio español los virreinatos del Perú, de la Nueva España y las Antillas. Y si bien al promediar el Trienio Liberal una parte considerable del Perú, ya independiente, caminaba indefectiblemente hacia la construcción de un Estado republicano, los territorios del sur y Charcas siguieron bajo el dominio español hasta fines de 1824. En general, la historiografía que ha analizado la actuación del virrey La Serna ha dado por supuesto que atenuó, en lo posible, la vigencia de la Constitución de 1812. Tal supuesto inspiró buena parte de las memorias y alegatos de los militares derrotados en Ayacucho, cuando de regreso a España, de nuevo absolutista, buscaron redimir su conducta militar y su vinculación liberal.",
+      "label": "crisis_ideas_emancipadoras",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "fc6ea865068072c81c3e038055dd05509061d6216e72cab7baf06bd548dbe27b",
+      "word_count": 159,
+      "provenance": {
+        "paragraph_id": "SAL-P002",
+        "printed_pages": [
+          694
+        ],
+        "pdf_pages_1_based": [
+          2
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P002"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P011",
+      "text": "El Decreto de las Cortes de 23 de mayo de 1812 reconocía 18 diputaciones provinciales en América, dos de ellas en Perú —Lima y Cusco—, que coincidían con la jurisdicción de las audiencias existentes. La Junta Preparatoria de Elecciones decidió en octubre de 1812 hacer coincidir las demarcaciones electorales con las antiguas intendencias, optándose por un número de representantes en función de los partidos que las componían, con una corrección pertinente en proporción a sus habitantes. En consecuencia, se primó la representación territorial sobre la proporcional al número de ciudadanos. A principios de 1813 se eligieron 49 electores, distribuidos de la siguiente forma: 12 electores por Trujillo, 9 por Tarma, 8 por Lima, 7 por Arequipa y Huamanga, 5 por Huancavelica y 1 por Guayaquil. A fines de marzo de 1813 eligieron la primera Diputación Provincial de Lima. La del Cusco la compondrían 4 representantes por Puno y 3 por Cusco —elegidos por 9 y 11 electores respectivamente—, una proporción que reconocía el mayor peso demográfico de Puno. La instalación efectiva se produjo el 13 de setiembre de 1813.",
+      "label": "crisis_ideas_emancipadoras",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "d5dd6f6e04775bcf0c0d852190c9a595664823dd8014cf2a052d4a6ab742f6fe",
+      "word_count": 179,
+      "provenance": {
+        "paragraph_id": "SAL-P011",
+        "printed_pages": [
+          698,
+          699
+        ],
+        "pdf_pages_1_based": [
+          6,
+          7
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P011"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P012",
+      "text": "A poco de haber retomado su actividad el 26 de setiembre de 1820, «en los mismos términos y con los propios vocales de que constaba el año de 814», la Diputación Provincial de Lima quedó inhabilitada, como tantas otras instituciones capitalinas, como consecuencia de la ocupación de la ciudad por San Martín. En Cusco se dilató a tal punto su constitución, que las autoridades locales instaron, en enero de 1821, a que se procediera sin dilación, argumentando que solo entonces se fijarían las atribuciones propias del Ayuntamiento constitucional, puesto que mientras tanto «no puede dar el más pequeño paso». Es muy posible que la actuación del consistorio hiciera que volviera a instaurarse definitivamente el 26 de febrero de 1821, tras varias dificultades para poder reunir a sus miembros —fallecidos o ausentes—. No fue el último de los problemas que se hubo de afrontar, como demostraría la intervención decidida del Jefe Político de la provincia, Pío Tristán, exigiendo que se aplicaran los decretos recientes de las Cortes relativos a los mecanismos de elecciones provinciales y locales y que los diputados puneños se hicieran presentes en la ciudad.",
+      "label": "crisis_ideas_emancipadoras",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "4c0c3937b66b4fb3afd9ec2dc00924972ad9c5acea3e8542b4896dd74eace310",
+      "word_count": 186,
+      "provenance": {
+        "paragraph_id": "SAL-P012",
+        "printed_pages": [
+          699
+        ],
+        "pdf_pages_1_based": [
+          7
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P012"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P013",
+      "text": "El 18 de abril de 1822 llegaba al Cusco uno de los cada vez más espaciados correos con noticias oficiales de la Península, en el que se informaba, entre otras muchas cuestiones, que las Cortes habían reconocido el derecho de que se constituyeran diputaciones provinciales propias en cada una de las «Intendencias de provincia» de Ultramar, con sede en su capital. Ello dio lugar a la disolución de la Diputación Provincial del Cusco y a un nuevo proceso de elección de diputados provinciales y de constitución de dichas instituciones en Arequipa, Cusco, Huamanga, Huancavelica y Puno. Si bien su actividad se desarrolló desde al menos junio de 1822 hasta el retorno al absolutismo, y a pesar de ser su gestión clave sobre todo en temas de hacienda y coordinación de los gobiernos locales, carecemos de un balance sobre su política no solo durante el Trienio Liberal, sino también en el primer liberalismo. Anotemos que su papel en el proceso de instauración de ayuntamientos fue determinante, al punto que el propio jefe político superior del Cusco solicitaba el 7 de agosto de 1823 a la diputación provincial de su provincia que le informara de cuántos se habían constituido y los nombres de las autoridades electas.",
+      "label": "crisis_ideas_emancipadoras",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "8b25a823252af643a034401f447332bf6ea994cf7095e4f946a0904ad890187d",
+      "word_count": 204,
+      "provenance": {
+        "paragraph_id": "SAL-P013",
+        "printed_pages": [
+          699,
+          700
+        ],
+        "pdf_pages_1_based": [
+          7,
+          8
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P013"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P014",
+      "text": "Peralta ha advertido, con acierto, que seguimos sin tener un balance del número de municipios que se crearon a partir de la aplicación de la Constitución de 1812, ni si hubo continuidad entre los municipios coloniales y los constitucionales. Sin embargo, estudios recientes de Chiaramonti apuntan a que durante el primer liberalismo se habría iniciado un proceso de ruralización de la política, lo que habría condicionado el proceso de construcción del Estado-Nación. Mientras, Paniagua ha enfatizado la importancia que el proceso supuso en lo que ha denominado el inicio del régimen representativo, si bien para el Trienio Liberal solo aporta datos sobre el intento en 1820 del virrey Pezuela en Lima de imponer el consistorio de 1814, evitando nuevas elecciones y un ambiente favorable a los patriotas, junto a referencias puntuales sobre lo acaecido en Huancavelica y Trujillo. Siguiendo la propuesta de Peralta habría que considerar que la extensión de los procedimientos electorales al último confín del Virreinato, permitió una profunda reorganización de las estructuras de poder al interior de pueblos y ciudades y de las relaciones de los ayuntamientos con las altas estructuras de la administración gubernativa. Veamos como se plasmó en Arequipa, Cusco y Huamanga esa nueva realidad.",
+      "label": "crisis_ideas_emancipadoras",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "1c8508ac06240f0547709ed842d30116f010d899649bde0723a791fd6c20b73a",
+      "word_count": 200,
+      "provenance": {
+        "paragraph_id": "SAL-P014",
+        "printed_pages": [
+          700
+        ],
+        "pdf_pages_1_based": [
+          8
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P014"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P017",
+      "text": "Sí es oportuno introducir un breve apunte relativo a quién ejerció las competencias judiciales durante el Trienio Liberal. El Jefe Político Superior del Perú —antiguo virrey absolutista— y los respectivos de las provincias dejaron de tener intervención alguna en temas de justicia. La Audiencia Nacional del Cusco, tras la desaparición formal de la de Lima, pasó a convertirse en la más alta instancia judicial. En cada uno de los partidos se nombró un Juez de Letras, que necesariamente debía ser abogado, mientras que a nivel local y donde se hubiera constituido Ayuntamiento Constitucional, los alcaldes debían actuar de forma obligatoria y al inicio de cualquier causa en actos de conciliación —sin los cuales no se podía iniciar ningún procedimiento judicial—, a los cuales estaban sujetos el conjunto de los habitantes, incluido los aforados militares o eclesiásticos.",
+      "label": "crisis_ideas_emancipadoras",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "f6af3e9d0d23ef30e1c4ae1c3070912dc62227b6cda7023610c86202eaf8f74a",
+      "word_count": 136,
+      "provenance": {
+        "paragraph_id": "SAL-P017",
+        "printed_pages": [
+          701,
+          702
+        ],
+        "pdf_pages_1_based": [
+          9,
+          10
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P017"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P019",
+      "text": "El constitucionalismo doceañista introdujo principios de racionalidad y proporcionalidad en el número de vecinos, como regla básica para fijar los criterios que permitían a un pueblo o núcleo poblado constituirse en Ayuntamiento Constitucional. Y de forma más subrepticia, ello comportó delimitar el área de influencia de las ciudades capitales de provincia a prácticamente el área urbanizada y poco más allá, dando pie a que determinados vecinos vieran en ello una posibilidad de escapar de su control y constituir entidades administrativas propias que les dieran autonomía. Al menos algo así parece haberse dado en el Cusco, cuando las parroquias de San Jerónimo y San Sebastián alegaron en 1821 que superaban las 1.000 almas establecidas por ley, y solicitaron a la Diputación Provincial del Cusco que se les permitiera constituir un ayuntamiento propio para superar las dificultades que comportaba la distancia que les separaba del núcleo urbano del Cusco. De este modo se revertiría una situación en la que solo contaban con alcaldes de pueblo, barrio o cuartel, investidos únicamente de jurisdicción de policía, —léase en la concepción del término en la época, competencias en la gestión de recursos, ornato y orden público—, cuando lo deseable sería que los alcaldes pudieran actuar, como establecía la Constitución, en casos de justicia conciliatoria. Es posible que el mismo proceso se repitiera en Arequipa, donde se creó un ayuntamiento propio en Yanahuara.",
+      "label": "participacion_social_regional",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "16961eba6ed2506f96bdea9fd2544d65974c1899e31dc2da4b8df0650c752f93",
+      "word_count": 227,
+      "provenance": {
+        "paragraph_id": "SAL-P019",
+        "printed_pages": [
+          702,
+          703
+        ],
+        "pdf_pages_1_based": [
+          10,
+          11
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P019"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P021",
+      "text": "Podríamos apuntar que los ayuntamientos constitucionales se convirtieron en una suerte de espacio institucional en que confluyeron las voluntades de los legisladores constitucionales y las demandas y necesidades de los vecinos, lo que pudo dar lugar a innovaciones y, al mismo tiempo, ciertas continuidades respecto al antiguo Cabildo. La realidad de acercar la gestión a las gentes y a la particularidad de los distintos barrios y espacios urbanos, llevó a que se mantuviera la costumbre de dividir internamente las ciudades en barrios o cuarteles, para cuyo gobierno y administración se nombraron alcaldes o comisarios de barrio, con competencias en asuntos relacionados con el orden público, control de la población y sus desplazamientos, regulación del mercado, distribución de víveres y la recaudación de propios y arbitrios. Arequipa fue dividida en 17 cuarteles, y el Cusco lo sería en 8 barrios, coincidentes más o menos con sus parroquias urbanas. En Huamanga se nombraron en abril de 1823 15 alcaldes de barrio y bajo el absolutismo, en junio de 1824, se dividió en 5 cuarteles. No disponemos de referencias al origen de tal práctica, ni cuál fue la base jurídica de su aplicación durante el periodo constitucional y, sin embargo, todo apunta a que se trató de una de tantas medidas que buscaban resolver las eventualidades cotidianas y mantener normas de convivencia que habían probado su bondad en el tiempo.",
+      "label": "crisis_ideas_emancipadoras",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "4f20a6073bf43e032a53bb870f6069d18a1d658b44eb0f01cd32c4283b7b2bbc",
+      "word_count": 227,
+      "provenance": {
+        "paragraph_id": "SAL-P021",
+        "printed_pages": [
+          703,
+          704
+        ],
+        "pdf_pages_1_based": [
+          11,
+          12
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P021"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P022",
+      "text": "El ordenamiento constitucional que surgió de los debates gaditanos basó el poder local en un sistema electivo sustentado en el principio de vecindad y su arraigo parroquial. La condición de vecino se reservaba a los hombres, cabezas de familia, radicados de forma estable en una determinada ciudad y que se ocuparan en labores honrosas. El núcleo que registraba y daba carta de naturaleza a la representación política se circunscribía a la parroquia, espacio no solo de ritualización religiosa, sino también de registro estadístico y de organización de una comunidad de base. En las dos etapas liberales se reunían periódicamente a efectos políticos para delegar su voto en varios electores, quienes a su vez, y junto a los representantes del conjunto de las parroquias, procedían a elegir a los miembros de los ayuntamientos constitucionales y a electores que luego elegirían a diputados provinciales y a Cortes.",
+      "label": "crisis_ideas_emancipadoras",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "2e4435e94cbcc3e79761b536c229ab02ba3b2807d8731c6d74f06baa731c38b9",
+      "word_count": 145,
+      "provenance": {
+        "paragraph_id": "SAL-P022",
+        "printed_pages": [
+          704
+        ],
+        "pdf_pages_1_based": [
+          12
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P022"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P024",
+      "text": "En las tres ciudades se fijó el número de electores de parroquia en 25. El número de circunscripciones electorales fue disímil, adecuándose más o menos al número de parroquias, con alguna corrección relativa a su área de influencia, cuyo alcance es difícil de comprender, aunque es posible que respondiera al objetivo de lograr un mejor control electoral por determinados grupos de interés. En Arequipa desde las elecciones de 1820 se asignaron 16 y 9 electores respectivamente a dos colegios electorales instalados en los conventos de Santo Domingo y San Francisco, correspondientes a las parroquias de Santiago y Santa Marta. En el Cusco, los electores se distribuyeron proporcionalmente al vecindario estimado en cada una de las ocho parroquias. Por último en Huamanga, aunque desconocemos la distribución concreta, sabemos que se hizo en base a tres parroquias, Sagrario, Santa Ana y Santa Magdalena. A la del Sagrario se le anexó San Juan Bautista, extendiendo el área de influencia de Santa Ana hasta la Chiara.",
+      "label": "crisis_ideas_emancipadoras",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "889e272f4c7439e5ebf6705a0337996b3f16c1fa587d44dc9afc605fdab077dd",
+      "word_count": 162,
+      "provenance": {
+        "paragraph_id": "SAL-P024",
+        "printed_pages": [
+          704,
+          705
+        ],
+        "pdf_pages_1_based": [
+          12,
+          13
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P024"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P025",
+      "text": "Santa Ana y Santa Magdalena eran las parroquias huamanguinas de indios, anan y urin respectivamente. El hecho de que se extendiera la circunscripción electoral de Santa Ana hasta la Chiara, un núcleo relativamente lejano de la ciudad, de poblamiento disperso y dominado por haciendas ganaderas, o la inclusión de los habitantes —indios y mestizos— de San Juan Bautista en una parroquia de españoles como el Sagrario, pudo obedecer al deseo de relativizar el peso específico de la población india urbana, un objetivo que se logró puesto que no hay constancia documental de su presencia entre los cargos electos. En Arequipa la parroquia de indios era Santa Marta, sobre la cual disponemos de referencia documental suficiente de los vecinos sufragantes en diciembre de 1821. Del total de 112 vecinos registrados, solo nueve podrían ser identificados por su apellido tentativamente como tales, y entre los electores de parroquia solo dos lo serían. En Cusco solo hemos podido documentar a dos indios, Ilario Yanquirimachi (sic) y Jorge Puma Inga, como electores, ambos en la parroquia de Piezas. Ello indicaría o bien una abstención generalizada de los indios de dichas parroquias o dificultades para obtener la preceptiva papeleta de vecino para ejercer el derecho a voto, que debía otorgarles el párroco respectivo.",
+      "label": "participacion_social_regional",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "61be09b9f193555d830f5ad030a2198e4afd331cf3c39a4950c38d5c997a0abc",
+      "word_count": 208,
+      "provenance": {
+        "paragraph_id": "SAL-P025",
+        "printed_pages": [
+          705
+        ],
+        "pdf_pages_1_based": [
+          13
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P025"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P026",
+      "text": "Los legisladores proyectaron un Ayuntamiento Constitucional entendido como una institución nueva y electiva, sin embargo no se derogaron los principios de organización urbana colonial, que tendía a segregarse internamente en espacios asignados a distintos grupos étnicos, cada uno con su propia parroquia. Ello comportó que se crearan ayuntamientos multiétnicos, al eliminarse los cabildos diferenciados de españoles e indios, al mismo tiempo que se mantenía la parroquia como base de definición de la circunscripción electoral. Su resultado fue que, por simple correlación de fuerzas, los indios quedaron relegados en las elecciones, al ser las parroquias de blancos y mestizos superiores en número o como consecuencia de políticas, más o menos subrepticias, que, como hemos apuntado, difuminaron o eliminaron pura y llanamente su presencia entre los electores o cargos ediles. Algo distinto ocurrió en los pueblos constituidos en torno a una única parroquia, en los que por su corto vecindario no había una que fuera específica de españoles. Allí hemos detectado que la presencia indígena entre electores de parroquia y cargos electos fue significativa, como muestran los casos de Azángaro, Coasa y Asillo en Puno, o el de San Jerónimo en Cusco, que hemos expuesto anteriormente, donde fue electo en las primeras elecciones de 1821 como alcalde el capitán Mariano Tisoc Saritupa.",
+      "label": "participacion_social_regional",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "708a772dfd4399bfab247bce54cca1e079b4971ce0a9bbc9ec8e43630f8c3406",
+      "word_count": 210,
+      "provenance": {
+        "paragraph_id": "SAL-P026",
+        "printed_pages": [
+          705,
+          706
+        ],
+        "pdf_pages_1_based": [
+          13,
+          14
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P026"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P027",
+      "text": "No solo el nuevo ordenamiento constitucional, sino también la cultura política de corte liberal, impusieron un cambio sustancial en la representatividad y escenificación pública de las diferencias étnicas. Quizás la metáfora de todo ello podemos situarla en el Cusco, donde desde tiempo inmemorial el cabildo de indios, representado por su alférez real y los 24 electores, desfilaba la víspera y festividad de Santiago Apóstol, patrón de Estaña, portando el Estandarte Real. Si la costumbre había perdurado a lo largo del periodo colonial, se vería truncada en las dos etapas liberales. Como afirmaba textualmente Antonio Martínez, subdelegado del Cercado en junio de 1824, su desfile cívico se había efectuado anualmente «a excepción de las épocas constitucionales que han interrumpido, igualmente que al Exmo. Cabildo de españoles». El liberalismo casaba mal con el mantenimiento de las divisiones estamentales, y ello fue percibido a la cabalidad por la nobleza indígena en todo el Virreinato, cuando constató que este les situaba en igualdad de derechos al común de los indios, aboliendo de forma implícita el gobierno de tipo señorial que presuponía el cacicazgo, pero también cualquier preeminencia social basada en principios estamentales o la propia capacidad de organizarse en cabildos y disponer de alcaldes étnicos.",
+      "label": "participacion_social_regional",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "416f783b0b560a26016683cef4230e370ab9a8591f531bbe9bdd8e0df6898f3e",
+      "word_count": 201,
+      "provenance": {
+        "paragraph_id": "SAL-P027",
+        "printed_pages": [
+          706
+        ],
+        "pdf_pages_1_based": [
+          14
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P027"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P033",
+      "text": "Las elecciones locales no estuvieron exentas de incidentes, y en ocasiones debieron repetirse de forma puntual al constatarse a posteriori que ciertos cargos electos no cumplían alguna de las exigencias establecidas en la legislación vigente, como la vecindad. En las elecciones de 1823 en el Cusco se cuestionó la vecindad del alcalde de tercer voto y de uno de los regidores, con consecuencias disímiles. El subdelegado de Paruro, Juan Pinto y Guerra, pidió la anulación de la elección del alcalde de 3.er voto, Jacinto Ccama, porque previamente había sido electo alcalde constitucional de Yaurisque, en Paruro, donde tenía fijada su residencia. Tras debatir el caso, los electores decidieron que debía tomar posesión en el Cusco, porque cualquier elección para un cargo en la capital debía ser preferente a la que se había hecho en Yaurisque y por el hecho de estar casado con una vecina del Cusco. Lorenzo Sugarciaga no tomó posesión de regidor tras manifestar de motu propio que no era vecino, aportando como prueba el pasaporte firmado por el virrey Pezuela. En Huamanga se tuvo que repetir la elección del alcalde para el ejercicio de 1824, al constatarse que el electo marqués de Mozobamba del Pozo era en realidad vecino de la doctrina de Ocobamba.",
+      "label": "crisis_ideas_emancipadoras",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "7a9803845ba1acda04794488fd959a3268139dc454026d637d27977300ecb20d",
+      "word_count": 207,
+      "provenance": {
+        "paragraph_id": "SAL-P033",
+        "printed_pages": [
+          709,
+          710
+        ],
+        "pdf_pages_1_based": [
+          17,
+          18
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P033"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P034",
+      "text": "La ingerencia del jefe político superior de la provincia en los procesos electorales fue evidente en alguna ocasión, como en el caso del Cusco, donde Antonio María Álvarez anuló el 8 de enero de 1823 las elecciones del alcalde de 1.ª elección, de los regidores 11.º y 12.º y del síndico 2.º, por motivos legales que no se explicitan en la documentación, procediéndose a una nueva elección. Hubo otras convocatorias de elecciones parciales. Así en Huamanga, el regidor electo Vicente Ruiz fue eximido por el virrey de tomar posesión en 1823 por causas justificadas, lo que dio pie a convocar una nueva elección el 24 de febrero de 1823, en la que fue sustituido por Pedro José Bendezu. Del mismo modo hubo varias renuncias, a pesar de lo que dictaba la legislación, como las del alcalde de 2.º voto de 1823, Norberto Torres de la Cámara, que pidió una sustitución temporal y, poco después, renunció definitivamente a causa de la enfermedad de su esposa; la del regidor conde de Villaminaya, que no llegó a tomar posesión de regidor en 1824 aduciendo razones de salud; la petición de permisos temporales, como la del alcalde Juan José Miota en enero de 1823 para ausentarse al valle del Urubamba a recaudar diezmos y administrar sus haciendas, o la del síndico Dionisio Dávila en marzo de 1824, para desplazarse al partido de Tinta donde debía resolver asuntos familiares.",
+      "label": "crisis_ideas_emancipadoras",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "fce987932c955c167b3435b39bf81243e0c6920b71c9776eaee9911fa7baff71",
+      "word_count": 234,
+      "provenance": {
+        "paragraph_id": "SAL-P034",
+        "printed_pages": [
+          710
+        ],
+        "pdf_pages_1_based": [
+          18
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P034"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P040",
+      "text": "En tiempos de guerra se promovieron especiales manifestaciones cívicas para celebrar las victorias militares o rendir homenaje a los oficiales destacados, además de demostraciones públicas en honor de las altas autoridades virreinales que pasaron a residir en una zona que les había sido ajena tradicionalmente. En el Cusco se festejó en 1822 la llegada del virrey a la nueva sede de gobierno con corridas de toros, cuyo importe superó los 2.500 pesos. En Huamanga se decidió organizar el primero de noviembre de 1823 una noche de refresco en honor de los generales Canterac y Valdés con motivo de «la campaña que con tanta gloria acaban de concluir» y regalar al primero un sable de oro para celebrar sus victorias en Torata y Moquegua.",
+      "label": "participacion_social_regional",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "a9416b5d21247c2115c7493656be2394bf742452c7ff5acbea2c58bbfe35490a",
+      "word_count": 123,
+      "provenance": {
+        "paragraph_id": "SAL-P040",
+        "printed_pages": [
+          713
+        ],
+        "pdf_pages_1_based": [
+          21
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P040"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P041",
+      "text": "En asuntos religiosos, los ayuntamientos constitucionales buscaron establecer relaciones de igualdad con los cabildos eclesiásticos, sobre todo en temas de protocolo, en un contexto político liberal poco proclive a mantener formas de religiosidad barroca y tendente a ejercer desde el poder político el control y reformar las fiestas y ceremonias religiosas tradicionales. En tal sentido se tendió a reducir los costos de determinadas fiestas, que gravaban sobre el erario municipal, lo que comportó enfrentamientos con los eclesiásticos encargados de tales celebraciones, como en el caso del Cusco donde se regatearon constantemente las aportaciones a determinadas fiestas organizadas por parroquias y conventos. Pero, sobre todo, se buscó imponer una nueva estética religiosa, como mostró la exigencia del jefe político de la provincia del Cusco para que el ayuntamiento pusiera fin a la tradición de construir altares efímeros y nombrar diputados para organizar la festividad del Corpus, lo que llevó a reducir todo el aparato tradicional a solo un dosel y cuatro candeleros en 1823. O cuando el propio ayuntamiento exigió a principios de 1824 que se retiraran las imágenes que se veneraban en plena calle de La Merced y en la plaza de San Francisco, exigiendo a sus devotos que las trasladaran a las iglesias que quisieran, «por ser indecorosos al culto de los santos que sus imágenes se hallen en lugares de esta publicidad».",
+      "label": "crisis_ideas_emancipadoras",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "3a372465a0f22a519541bd390959e41960146d68d1580bdc0cfeff040e04d4bf",
+      "word_count": 224,
+      "provenance": {
+        "paragraph_id": "SAL-P041",
+        "printed_pages": [
+          713,
+          714
+        ],
+        "pdf_pages_1_based": [
+          21,
+          22
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P041"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P044",
+      "text": "En Arequipa el ayuntamiento constitucional se implicó decididamente en la creación y financiación de la Academia Lauretana de Ciencias y Artes. A iniciativa del síndico procurador Dr. D. Evaristo Gómez Sánchez, el virrey La Serna aprobó sus constituciones, celebrándose su puesta en funcionamiento el 10 de diciembre de 1821, día de su patrona la virgen de Loreto. Tal institución sentó las bases de la educación superior pública y laica en la ciudad, sustituyendo la hegemonía religiosa en los estudios superiores, ejercida por el Seminario, reformado por el obispo José Chávez de la Rosa, o por determinados miembros de órdenes religiosas. Desde fines del s. XVIII el cabildo había solicitado a la Corona el privilegio de fundar una Universidad y no se perdió la oportunidad de insistir ante las Cortes en el primer liberalismo, cuando se incluyó en las instrucciones al diputado regional Mariano Rivero. Sin embargo fue al abrigo de las nuevas competencias, cuando el ayuntamiento encontró un resquicio que le permitió actuar de forma autónoma y priorizar la educación superior en la ciudad. La Academia Lauretana puede considerarse como el agente clave en la difusión del saber y las ideas liberales en Arequipa.",
+      "label": "crisis_ideas_emancipadoras",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "fc5ac1c0ef1c7f319fea7cf3259c87c3383d14bd4e8e756c1e4df727c93b22b7",
+      "word_count": 194,
+      "provenance": {
+        "paragraph_id": "SAL-P044",
+        "printed_pages": [
+          715,
+          716
+        ],
+        "pdf_pages_1_based": [
+          23,
+          24
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P044"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P049",
+      "text": "Uno de los capítulos más complejos y costosos para los ayuntamientos fue la gestión de los hospitales urbanos, sobre todo cuando al socaire de la aplicación, a partir de mayo de 1822, del Soberano Decreto de 25 de octubre de 1820, relativo a la reforma de las órdenes regulares, les fueron traspasados los establecimientos que habían sido atendidos por conventos supresos por contar con menos de ocho miembros. Tal fue el caso de los hospitales de la Almudena y el de San Bartolomé (o de San Juan de Dios) en el Cusco, y los respectivos de San Juan de Dios en Huamanga y Arequipa. Hubo que nombrar ecónomos laicos, atender los salarios del personal y especialistas médicos, y también las necesidades de mobiliario, ropa, alimentos y medicinas. En Cusco, además, las autoridades locales tuvieron que organizar y tutelar un hospital de presidiarios y reos dentro de la cárcel nacional, y en Arequipa se exigieron 3.000 pesos a su ayuntamiento para crear un hospital militar.",
+      "label": "crisis_ideas_emancipadoras",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "154e4afbd7d21f42213f5db4accd941c880cd85ad116e802315f7f1a35dfe7b9",
+      "word_count": 164,
+      "provenance": {
+        "paragraph_id": "SAL-P049",
+        "printed_pages": [
+          718
+        ],
+        "pdf_pages_1_based": [
+          26
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P049"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P052",
+      "text": "El Ayuntamiento del Cusco evaluó el esfuerzo local para sostener las sucesivas campañas militares entre 1809 y 1821 en 28.000 hombres de leva y 8 millones de pesos en numerario. La perentoria situación militar fue elevando paulatinamente los impuestos y tasas extraordinarias exigidas a la población: medio diezmo real; un 2% sobre el 16% que tributaban de alcabalas, que ascendía al 26% al comerciar en otras provincias; 5% sobre los beneficios estimados de las fincas urbanas, sin distinción entre propietarios y censualistas; 4 y 2 reales por semestre sobre el tributo a los indios originarios y forasteros respectivamente. Se trataba de poder cubrir el contingente mensual de 20.000 pesos que pesaba sobre el Cusco, destinado al ejército realista. Los años sucesivos trajeron mayores necesidades para cubrir los costos bélicos, al punto que para el ejercicio de 1824 se encomendó al alcalde de 3.er voto, Jacinto Ccama, como única competencia, el «suministro de bagajes y alojamiento de las tropas nacionales que transiten por su capital».",
+      "label": "campanias_conflictos_militares",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "beed6a5f4269d0504e63543ebc6313673121d7d2c51b32765ad81151181c01fd",
+      "word_count": 164,
+      "provenance": {
+        "paragraph_id": "SAL-P052",
+        "printed_pages": [
+          719,
+          720
+        ],
+        "pdf_pages_1_based": [
+          27,
+          28
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P052"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P053",
+      "text": "En Huamanga, las actas de su ayuntamiento recogen constantes exigencias de la intendencia militar: empréstitos a comerciantes, clérigos, hacendados o autoridades; confiscación de determinadas rentas eclesiásticas —del obispo ausente o de toda la plata labrada de sus iglesias y conventos para ser amonedada—; cupos o requisa de ganado, alimentos, sal, leña u ollas, pero también de indios de mita a pesar de la especial prohibición constitucional. En Arequipa, las tropas acantonadas tuvieron asimismo un alto impacto sobre la economía local, tanto por su requisa de animales o exigencia de forrajes. En Cusco y Huamanga se alojaron oficiales y tropas acantonadas o en tránsito, con importantes costos para su vecindario. La cotidianeidad no siempre fue fluida entre militares y civiles, sobre todo por el trato desconsiderado a indios y criados a los que se exigía coactivamente sus servicios en los cuarteles.",
+      "label": "campanias_conflictos_militares",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "1b73d9b737b986da969b83d39835af9ad5a2a16868a8c6178cfc5614598b2a1e",
+      "word_count": 140,
+      "provenance": {
+        "paragraph_id": "SAL-P053",
+        "printed_pages": [
+          720
+        ],
+        "pdf_pages_1_based": [
+          28
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P053"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P054",
+      "text": "En 1823, el gobierno virreinal se encontraba enrocado en el centro y sur andino, sin comunicación directa con la Península debido a la carencia de transportes navales, al punto de que hasta el 13 de mayo de 1824 no se recibió en Arequipa la correspondencia oficial de la península relativa a 1822. Solo se podía obtener información sobre el acontecer político peninsular a través de los buques franceses, ingleses o norteamericanos que siguieron comerciando con los puertos intermedios de la costa de Arequipa y Arica, o por intermedio de los medios de comunicación patriotas. La noticia de que España había vuelto al absolutismo se conoció a través de la Gaceta de Buenos Aires, aunque fue la presión política del general Pedro Antonio de Olañeta, lo que obligó al virrey La Serna a derogar la Constitución en el Perú, y liquidar el entramado institucional liberal. Y, por lo tanto, quedaron suprimidos a nivel regional y local los jefes políticos superiores de la provincia, diputaciones provinciales y ayuntamientos constitucionales.",
+      "label": "crisis_ideas_emancipadoras",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "3a8e490a0224ef0ce5a48087de614f5ec18c9e21543d9a3b9cbfb58e12320eec",
+      "word_count": 167,
+      "provenance": {
+        "paragraph_id": "SAL-P054",
+        "printed_pages": [
+          720,
+          721
+        ],
+        "pdf_pages_1_based": [
+          28,
+          29
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P054"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P055",
+      "text": "El retorno al absolutismo supuso la vuelta inmediata al sistema de intendencias y a los cabildos perpetuos. Las órdenes de cese de los respectivos ayuntamientos constitucionales se sucedieron con pocos días de diferencia durante el mes de marzo de 1824: el del Cusco el día 13, el de Arequipa el 18 y el de Huamanga el 24. La disposición tuvo inmediatas consecuencias. El Cusco volvió a denominarse «muy Noble Leal y Fidelísima Gran Ciudad del Cusco cabeza de estos Reynos y Provincias del Perú», se imprimieron varios ejemplares de la «antigua fundación de esta Capital por los primeros españoles», texto extraído del primer Libro de Actas del Cabildo, «para conservar y perpetuar en cualquiera vicisitud de los tiempos», y en la festividad de Santiago Apóstol, el 25 de julio, volvieron a desfilar por la ciudad los cabildos de españoles y de indios, el primero presidido por el alcalde de 1.er voto y alférez real, Mariano Campero, y el segundo por Matías Castro Guaypartopa, junto a los 24 electores representantes de las panacas incaicas, portando el estandarte real de los nobles indios de las 8 parroquias. La representación indígena solo fue posible luego que instaran una solicitud específica, que incluía poder elegir los 14 electores cuyas representaciones habían quedado vacantes desde 1815 y volver a desfilar el cabildo pleno tras el impasse del periodo constitucional.",
+      "label": "participacion_social_regional",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "c32a9ffe3cff50f1228cbf971f347a94629fd6901a6cc560128f06ae2ffe2b7f",
+      "word_count": 224,
+      "provenance": {
+        "paragraph_id": "SAL-P055",
+        "printed_pages": [
+          721,
+          722
+        ],
+        "pdf_pages_1_based": [
+          29,
+          30
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P055"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P059",
+      "text": "En setiembre se tuvo que afrontar en Cusco el alojamiento de seis batallones de los Ejércitos del Norte y del Sur, el mayor contingente acantonado jamás en la ciudad. Iban camino al que sería el último acto de la guerra, la batalla de Ayacucho. El 17 de diciembre se recibió la noticia de la derrota definitiva y el 26 entró entre honores el nuevo prefecto, Agustín Gamarra. Recibido por las diversas corporaciones locales, desfiló entre arcos triunfales, banderas de la libertad y puñados de mixturas de flores y dinero tirados al aire, entre vítores jubilosos de Viva la Patria, la Independencia y la libertad del Perú. El año de 1824 se cerró con el nombramiento por parte de Gamarra de la primera municipalidad republicana, cuyos integrantes juraron por Dios y por la Patria reconocer la Independencia del Perú. El cabildo de indios nunca volvió a ser electo, ni menos a desfilar cívicamente. Era el inició de un tiempo en que los nobles indígenas fueron deviniendo en objeto de curiosidad para viajeros extranjeros, lejos de su papel de elites nobiliarias con un papel protagónico en el gobierno señorial indígena y en la sociedad colonial.",
+      "label": "organizacion_consecuencias_republicanas",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "d7acb2c210bb9952d25568cff2426542d0a0a9830552c6070baf3ec73f447235",
+      "word_count": 193,
+      "provenance": {
+        "paragraph_id": "SAL-P059",
+        "printed_pages": [
+          722,
+          723
+        ],
+        "pdf_pages_1_based": [
+          30,
+          31
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P059"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SAL-P065",
+      "text": "Varias cuestiones son de difícil resolución en el actual estado de nuestros conocimientos. Entre 1820 y 1824 mudó sustancialmente la administración local en el Virreinato del Perú. El sistema representativo fue la punta de lanza de una nueva concepción del poder local, que acercaba a los vecinos a la participación política y a la resolución cercana de sus problemas y demandas. La pregunta que surge es: ¿en qué medida la derogación de la Constitución por Fernando VII, y la liquidación del segundo liberalismo, no aceleró el fin de la guerra y la pérdida del Virreinato? Si la respuesta fuera afirmativa, quizás se podría entender porqué el influjo del liberalismo gaditano puede rastrearse en el temprano constitucionalismo republicano peruano y porqué tantos hombres pudieron hacer el tránsito desde las filas del liberalismo hispano y la participación en las instituciones locales y provinciales del Trienio Liberal a puestos de responsabilidad en la naciente República peruana. Pero también nos ayudaría a comprender que muchos de los que dejaron de ser nacionales para ser patriotas, lo hicieron porque Fernando VII había traicionado por segunda vez sus obligaciones como monarca constitucional, despojándoles de derechos y deberes que el liberalismo les había concedido y que habían ejercido con prácticas de gobierno representativo. Ya no restaba incertidumbre alguna, la única vía política posible era implicarse en construir la naciente república peruana.",
+      "label": "crisis_ideas_emancipadoras",
+      "split": "val",
+      "resourceId": "doi:10.3989/revindias.2011.023",
+      "sourceType": "pdf",
+      "text_sha256": "f04c0f15c9e478ec3505f190c7dd64b198f8eaeca21f255411b5ea39ffea5953",
+      "word_count": 224,
+      "provenance": {
+        "paragraph_id": "SAL-P065",
+        "printed_pages": [
+          724,
+          725
+        ],
+        "pdf_pages_1_based": [
+          32,
+          33
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sala-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SAL-P065"
+      },
+      "document_groups": [
+        "doi:10.3989/revindias.2011.023"
+      ]
+    },
+    {
+      "id": "SOB-P007",
+      "text": "El inicio del desmoronamiento del virreinato peruano, sin embargo, había comenzado antes con la llegada de las noticias de la reimplantación de la Constitución de Cádiz. El virrey Joaquín de la Pezuela, veterano de las campañas militares en la Audiencia de Charcas de 1813 a 1816, demoró la jura de la carta, y su posición a cargo del poder en Lima era precaria. Los oficiales llegados a América después de la derrota de Napoleón desconfiaban de su criterio y de su cercanía a los criollos. Entre ellos el más encumbrado era el General José de la Serna, a cargo de los destacamentos militares en el Sur del Perú y la Audiencia de Charcas, y quien en 1819 había forzado al virrey a convocar una Junta de Guerra para responder al bloqueo naval. La rivalidad entre estos dos grupos se ha tendido a ver ligada a la cercanía de los recién llegados al liberalismo, esto hasta cierta medida ha sido así por la demora de Pezuela en hacer jurar la Carta de 1812. Pero las diferencias no se limitaban a su relación con las nuevas autoridades encargadas del poder en la Península, o con el retorno de la constitución sino que incluían además como debía llevarse a cabo la guerra, así como llevar a cabo las negociaciones de paz ordenadas por el Rey, en el contexto del Trienio Liberal.",
+      "label": "liderazgos_diplomacia_proyectos",
+      "split": "val",
+      "resourceId": "sobrevilla-2021-intermedios",
+      "sourceType": "pdf",
+      "text_sha256": "458f097aade3e101e40e9c03f8f4ece2b8fae43cee761397e11cb0c5cab305b8",
+      "word_count": 228,
+      "provenance": {
+        "paragraph_id": "SOB-P007",
+        "printed_pages": [
+          120
+        ],
+        "pdf_pages_1_based": [
+          7
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sobrevilla-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SOB-P007"
+      },
+      "document_groups": [
+        "sobrevilla-2021-intermedios"
+      ]
+    },
+    {
+      "id": "SOB-P008",
+      "text": "La situación llegó a tal punto que el 29 de enero de 1821, inspirados por Rafael Riego, diecinueve oficiales se pronunciaron en el campamento militar de Aznapuquio y depusieron al virrey Pezuela en favor del General José de la Serna. A pesar de haber criticado la política de conciliación de su antecesor, el nuevo virrey entró en tratativas con San Martín, pero al fallar estas también, y ante la cada vez más precaria situación, los defensores de la corona abandonaron la capital y establecieron un nuevo centro del virreinato en el Cuzco. Con la ciudad de Lima desguarecida los miembros de la elite le imploraron a San Martín que la tomara y declarara la independencia, cosa que hizo el 15 de julio y que luego ratificó con una Proclamación pública el día 28. Con esto el Perú quedó decididamente dividido entre un estado independiente en el norte y el virreinato constitucional en el sur. A pesar de que los peruanos que estaban del lado de San Martín eran quienes menos experiencia bélica tenían, esto se fue subsanando con el progresivo cambio de bando de quienes habían luchado por la corona por más de una década y habían aprendido a llevar a cabo la guerra en el sur andino. Criollos y mestizos como Domingo Tristán, Agustín Gamarra, Andrés de Santa Cruz y José de La Mar, todos ellos actores claves en las campañas a los puertos intermedios.",
+      "label": "liderazgos_diplomacia_proyectos",
+      "split": "val",
+      "resourceId": "sobrevilla-2021-intermedios",
+      "sourceType": "pdf",
+      "text_sha256": "52ceb0527aedc8fc3ef4c7e813f090c22e4b23cba5029ea84406ecc758fbd610",
+      "word_count": 236,
+      "provenance": {
+        "paragraph_id": "SOB-P008",
+        "printed_pages": [
+          121
+        ],
+        "pdf_pages_1_based": [
+          8
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sobrevilla-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SOB-P008"
+      },
+      "document_groups": [
+        "sobrevilla-2021-intermedios"
+      ]
+    },
+    {
+      "id": "SOB-P022",
+      "text": "La derrota en estas dos batallas resultó en la completa destrucción del ejército construido con tanto esfuerzo y liquidó casi todos los batallones llegados desde el Río de la Plata, sus jefes se dispersaron y las tropas fueron donde pudieron. La mayoría de los chilenos optaron por abandonar el Perú para navegar al sur y contribuir con la campaña que se estaba organizando contra los últimos realistas en Valdivia. Solo algunos hombres volvieron a Lima a tratar de recomponer de alguna manera lo que se había logrado construir con tanto esfuerzo. Miller lamentó la absoluta destrucción de la Legión Peruana de la Guardia que había organizado con tanto esfuerzo e intentó de seguir hostilizando a Carratalá en la costa de Arequipa. Las noticias de la derrota de la expedición no tardaron de esparcirse por todo el Perú, quedando en claro que el no haber aprovechado la posibilidad de marchar sobre la sierra central ante la ausencia de Canterac había sido un error estratégico. El General victorioso volvió a Huancayo en febrero de 1823 con 1500 hombres que había tomado prisioneros en la campaña, algunos de los cuales lograron desertar y unirse a las guerrillas. Las consecuencias de la pérdida del ejército en esta campaña a los Puertos Intermedios fueron mayores y una de ellas fue la inmediata caída del triunvirato.",
+      "label": "campanias_conflictos_militares",
+      "split": "val",
+      "resourceId": "sobrevilla-2021-intermedios",
+      "sourceType": "pdf",
+      "text_sha256": "21384e7293c7056e624e2533c798efc4d671793d0e84e23266a94c5bfa1e0fff",
+      "word_count": 220,
+      "provenance": {
+        "paragraph_id": "SOB-P022",
+        "printed_pages": [
+          127,
+          128
+        ],
+        "pdf_pages_1_based": [
+          14,
+          15
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sobrevilla-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SOB-P022"
+      },
+      "document_groups": [
+        "sobrevilla-2021-intermedios"
+      ]
+    },
+    {
+      "id": "SOB-P023",
+      "text": "Al volver a Lima con los remanentes de las tropas Agustín Gamarra juntó fuerzas con Santa Cruz, su antiguo compañero de armas y el 26 de febrero desde el pueblo de Balconcillo, a las afueras de la capital, mandaron una representación al Congreso en nombre del Ejército Unido Libertador pidiéndole que se designara como presidente a José de la Riva Agüero. El ultimátum militar venía acompañado de un memorial de los ciudadanos de Lima, firmado por Mariano Tramarria y una nota anónima de la Municipalidad de Lima pidiendo que se depusiera al triunvirato. Un día más tarde el Sub Inspector General de cívicos, el Conde de San Donás, escribió apoyando el pedido del ejército. Algunos representantes como el clérigo Javier de Luna Pizarro se rehusaron a aceptar esta imposición, mientras que otros como el médico Hipólito Unanue buscó resolver el impase tratando de darle la presidencia a Torre Tagle, quien en ese momento tenía la colocación más alta que Riva Agüero en el ejército peruano. Tagle no estaba muy entusiasmando y Santa Cruz rechazó la propuesta amenazando con dejar la ciudad si no se respetaban los deseos del ejército.",
+      "label": "organizacion_consecuencias_republicanas",
+      "split": "val",
+      "resourceId": "sobrevilla-2021-intermedios",
+      "sourceType": "pdf",
+      "text_sha256": "994e3b31bdf70806634e9ea8f83d26da4e41aeb47843e1da247e3f74a42ae9f1",
+      "word_count": 189,
+      "provenance": {
+        "paragraph_id": "SOB-P023",
+        "printed_pages": [
+          129
+        ],
+        "pdf_pages_1_based": [
+          16
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sobrevilla-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SOB-P023"
+      },
+      "document_groups": [
+        "sobrevilla-2021-intermedios"
+      ]
+    },
+    {
+      "id": "SOB-P031",
+      "text": "Una vez más todo el ejército libertador del sur fue completamente destruido y la segunda campaña de intermedios terminó en una derrota absoluta. A pesar de haber logrado dividir las fuerzas de los realistas con Canterac en Lima y Olañeta en el sur de la Audiencia de Charcas defendiéndose de Arenales, Valdés y Carratalá siguieron firmes y el virrey mostró su capacidad al maniobrar de tal forma que Santa Cruz y Gamarra quedaron sin posibilidades. Si bien Sucre se encontraba en Arequipa, su correspondencia con Bolívar muestra que no tenía intenciones de servir bajo el comando de Santa Cruz. A fines de octubre se encontraron entre Tacna y Arica los dispersos que venían del altiplano, con los refuerzos recién llegados de Chile, que al ver la situación desesperada del ejército libertador se dividieron entre los pocos que siguieron viaje a Lima y la mayoría que regresó a Valparaíso a seguir la campaña contra los realistas en Valdivia. Santa Cruz se embarcó en el O’Higgings donde el almirante Guisse le dio la bienvenida y enrumbó a Lima. En Arequipa el virrey nombró a Canterac general en jefe del ejército del norte y a Valdés del sur, reorganizando todas sus fuerzas después de la victoria absoluta. La situación después de todos los esfuerzos hechos durante el año 1823, era prácticamente la misma que un año antes, la única esperanza que mantenían era el apoyo de Bolívar.",
+      "label": "campanias_conflictos_militares",
+      "split": "val",
+      "resourceId": "sobrevilla-2021-intermedios",
+      "sourceType": "pdf",
+      "text_sha256": "1d059154158d4030526f684d051f39a859f73b708667c86ff302f72a4798e866",
+      "word_count": 234,
+      "provenance": {
+        "paragraph_id": "SOB-P031",
+        "printed_pages": [
+          134,
+          135
+        ],
+        "pdf_pages_1_based": [
+          21,
+          22
+        ],
+        "extraction_evidence": "outputs/external-development-v1/sobrevilla-inventory.json"
+      },
+      "label_review": {
+        "final_decision": "include",
+        "human_independent_validation": false,
+        "review_artifact": "artifacts/reviews/external-development-v1.json",
+        "adjudication_id": "SOB-P031"
+      },
+      "document_groups": [
+        "sobrevilla-2021-intermedios"
+      ]
+    }
+  ],
+  "selection_protocol": {
+    "content": {
+      "id": "external-development-v1",
+      "declared_at_utc": "2026-09-08T03:55:09.273388+00:00",
+      "role": "external_development_exploratory_not_final_test",
+      "source_reservation": [
+        "Sala2011 DOI10.3989/revindias.2011.023",
+        "Sobrevilla2021 DOI10.3989/revindias.2021.04 / .004"
+      ],
+      "scope_years": [
+        1780,
+        1842
+      ],
+      "unit_rule": {
+        "selection": "Full main-body paragraphs in article order, including page continuations; no sampling by category or prediction.",
+        "words_min": 120,
+        "words_max": 250,
+        "word_count": "whitespace after reversible normalization",
+        "not_combined_or_resegmented_for_quota": true,
+        "outside_length": "retain as context/excluded inventory, not new length exceptions",
+        "abstract_footnotes_bibliography": "excluded zones, not negative examples in this pilot",
+        "autonomy": "complete argumentative unit; unresolved essential referent/ambiguous equal themes excluded with reason"
+      },
+      "review": "Two AI reviews, second blind to first label but may see source context; root adjudication preserves disagreement. No claim of human gold.",
+      "leakage_rule": "Compare against frozen reference, current repaired corpus and six proposed additions. Exclude exact/near duplicates or same quoted primary passage; a shared author citation or topic alone is not proof of leakage. Same work/version/document stays on one side.",
+      "lexical_thresholds": {
+        "normalized_exact": true,
+        "whole_word_substring": true,
+        "word_ngram": 5,
+        "jaccard": 0.25,
+        "containment_smaller_set": 0.8
+      },
+      "metrics_predeclared": {
+        "primary": "F1 macro over labels present in frozen admitted items, declared before predictions",
+        "secondary": [
+          "F1/precision/recall/support per class",
+          "Confusion matrix over unchanged seven-label taxonomy",
+          "Results/support per work",
+          "Predictions into classes absent from evaluation support"
+        ],
+        "absent_classes": "Not assessed; do not imply seven-class coverage or compare partial macro directly to old0.43766.",
+        "selection_use": "Exploratory development only, no production substitution decision or final-test claim"
+      },
+      "freeze": "Texts, labels, selected/excluded IDs, groups, protocol and sources covered by canonical hash before any model call. No model calls this block.",
+      "limits": [
+        "Two related academic works, same journal, mainly1820–1824; not coverage of full1780–1842.",
+        "Selection of autonomous120–250-word paragraphs limits applicability to noisy fragments or shorter inputs.",
+        "Old validation already reused; original test used here only for mechanical leakage exclusion.",
+        "New final test not yet selected; do not randomly split these works between development and final."
+      ],
+      "training_performed": false,
+      "predictions_performed": false
+    },
+    "sha256": "dd7fcffedf202691c8b94c719c95d8cfc206dc2157dd620472c924b633a53f8d"
+  },
+  "review_artifact": {
+    "path": "artifacts/reviews/external-development-v1.json",
+    "sha256": "33a10711ed13186406719b02ffe38892a7252e57a5ac060ac8f1b73475d5d004"
+  },
+  "local_input_guards": [
+    {
+      "path": "docs/guia-etiquetado-1780-1842.md",
+      "sha256": "d53dea3532359afc851c2bdd59ae1ddb47a0673609d82d40372a6f62edc55179"
+    },
+    {
+      "path": "artifacts/reviews/source-diversity-v1.json",
+      "sha256": "93474eca48f045f2a0b1e3c6f9ac7ac6f353b30f570f48a18bed4dff8a20c7e1"
+    },
+    {
+      "path": "artifacts/datasets/gold-v1-source-aware.json",
+      "sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a"
+    },
+    {
+      "path": "outputs/corpus-snapshot-v2/reviewed-export.json",
+      "sha256": "5de9ea1a4be3c9d628da51cdf1d07108f43e0ac8ee580acb483013c6dc27c35c"
+    },
+    {
+      "path": "scripts/compare_beto_validation.py",
+      "sha256": "bc8f02cd3b096ceea2a22f192b5e30205fcd067e2e45865152f406ca10e15037"
+    },
+    {
+      "path": "apps/ml/app/ml/beto_experiment.py",
+      "sha256": "7a55c204f569cc891c8dbdffd4668a3f20abcf13139d901e9db298e3525a121d"
+    },
+    {
+      "path": "configs/experiments/beto.json",
+      "sha256": "0752b044c39cbe403fbe2e8a8a074cf095f6475502e6b074505558fefdcc1ab9"
+    },
+    {
+      "path": "outputs/external-development-v1/sala-inventory.json",
+      "sha256": "41cce7277fe5dedf591039e6ea90952c961086eab5fa31202be41f9572e39461"
+    },
+    {
+      "path": "outputs/external-development-v1/sala-raw-pages.json",
+      "sha256": "8bd539365b26239a920c6bc74bf21ba1f328c2ab1096359e0dcae8ee59ac79e7"
+    },
+    {
+      "path": "outputs/external-development-v1/sala-source.json",
+      "sha256": "05840e91cc15c3effb94c7b71a94ff16eea641f4c9f4478df92207bfb6343967"
+    },
+    {
+      "path": "outputs/external-development-v1/sala-first-review.json",
+      "sha256": "d61bcb08fd5645f79d1b7399c2761891a3af65364c42e4dc55da43a656e7ba0d"
+    },
+    {
+      "path": "outputs/external-development-v1/sala-second-review.json",
+      "sha256": "07a85f89cbd186745df0be165a7de4e68c7f6da68810fdb1ec62ed4a362d3c4b"
+    },
+    {
+      "path": "outputs/external-development-v1/sala-candidates-blind.json",
+      "sha256": "e584ada04a40095271c8042011afbbf888c8aaf1c111158176670432f8635905"
+    },
+    {
+      "path": "outputs/external-development-v1/sobrevilla-inventory.json",
+      "sha256": "40d398575c3ae30458635dcf0a313a05e1a63c242f0d09bf80b98ee1feb3fa33"
+    },
+    {
+      "path": "outputs/external-development-v1/sobrevilla-raw-pages.json",
+      "sha256": "f48bc3e410217ffeaa1905d764929982d6432d5a206c012680edea1f833745b4"
+    },
+    {
+      "path": "outputs/external-development-v1/sobrevilla-source.json",
+      "sha256": "77d18de53e9d2f5d41ff7971197af89b6ce8b270ff99730eba591fd741b77ecf"
+    },
+    {
+      "path": "outputs/external-development-v1/sobrevilla-first-review.json",
+      "sha256": "02eff49433acb64d48e3bab37ef22d3ba937bd99a33c3fd04bd2ce73e9e0d0a9"
+    },
+    {
+      "path": "outputs/external-development-v1/sobrevilla-second-review.json",
+      "sha256": "9689174ed5ec6dd06d2516d9e13550ad7b09821dea21c28cc261848ac4ca786d"
+    },
+    {
+      "path": "outputs/external-development-v1/sobrevilla-candidates-blind.json",
+      "sha256": "279b7ffca0c80428643bf46d89daec7755ea05248135ba242a6942369c10a179"
+    },
+    {
+      "path": "outputs/external-development-v1/protocol-before-selection.json",
+      "sha256": "13723f3d147819d9cff0bfcf21a76f882893ba9bd6daa2a0a61bdba752f9438c"
+    },
+    {
+      "path": "outputs/external-development-v1/root-adjudications.json",
+      "sha256": "dd0df858fbe4380a9af74a616b352b984a837b3e5e67dcfb80c68bf388307457"
+    },
+    {
+      "path": "outputs/external-development-v1/dependency-screen.json",
+      "sha256": "cc9251128f477e150b44a1c8e3c980eb84859dea991a21b0ba296cb6f5b59240"
+    },
+    {
+      "path": "outputs/external-development-v1/root-overlap.json",
+      "sha256": "ae70dfb308e2f5c66814897bce62f85c3212bb5d20f5b956aadf1e1a5a5bd20c"
+    },
+    {
+      "path": "outputs/external-development-v1/root-quote-screen.json",
+      "sha256": "c4f158de08ffbebbdbe841b847656b1a62afd7df18aea2bcdda4c5ffc879ddb2"
+    },
+    {
+      "path": "outputs/external-development-v1/sala-2011.pdf",
+      "sha256": "561569be58d1ca8853e2ef3c5621064c11a22bfbac72968a607ac926d8be9a5c"
+    },
+    {
+      "path": "outputs/external-development-v1/sobrevilla-2021.pdf",
+      "sha256": "425a22547db1ad4c73033d952ba14c1b0f2f1eb573eba55d3f49e293aab0ed19"
+    }
+  ],
+  "use_constraints": [
+    "Development only: not original validation replacement, not final test, not production promotion evidence.",
+    "Use macro F1 over metric_labels; report seven-class confusion matrix and per-work/class counts. Do not compare this partial macro directly with old0.43766.",
+    "Two related works from same journal; skewed class/source support and mainly1820–1824. No full1780–1842 or seven-class coverage.",
+    "Keep both works and related editions out of training and a future final test; no paragraph-level random split.",
+    "AI annotation with preserved disagreements, no independent human validation.",
+    "Do not feed metadata, author, notes, labels or context to the classifier; prediction input is item.text only.",
+    "Do not use this artifact with the original full train/val/test snapshot validator or existing training comparator without a separate adapter.",
+    "Frozen means versioned with integrity checks, not immutable against an intentional rewrite. Later corrections require a new version before model selection."
+  ],
+  "training_performed": false,
+  "predictions_performed": false,
+  "production_changed": false,
+  "content_sha256": "0a12b4d4ac4b8ef58e561ed7c8632c73558454ec37edd8d269b9184fe49b6c82"
+}

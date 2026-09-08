@@ -22,6 +22,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Cierre de las reparaciones v2 | Delimitar reemplazos, residuales y dos excepciones de longitud | Propuesta comprobada: 9 filas → 7 unidades; dos excepciones nominales de 109/114 palabras en la guía. Simulación: 596 train con reparaciones, 597 si además se añade Francisca. Ningún dataset modificado |
 | Copia experimental del corpus v2 | Aplicar únicamente las reparaciones revisadas | Copia local creada: 596 train, 81 validación y 137 test. Siete textos reemplazados y dos filas retiradas; otras 807 filas intactas. Francisca excluida; sin entrenamiento ni cambios en producción |
 | Diversidad de fuentes y reserva de evaluación | Preparar aportes y separar obras relacionadas | Seis unidades propuestas de Contreras/Hünefeldt; un ambiguo, un original conservado y dos textos de Majluf en cuarentena. Dos obras reservadas para evaluación, sin ejemplos extraídos. Dataset intacto; los seis textos propuestos superan 192 tokens |
+| Desarrollo externo parcial | Congelar ejemplos y criterios antes de comparar modelos | 31 párrafos: 26 de Sala y 5 de Sobrevilla; cinco categorías. Procedencia, desacuerdos y exclusiones conservados; verificador local y 13 controles de alteración aprobados. Sin entrenamiento ni predicciones |
 | Diagnóstico de cobertura | Orientar el siguiente cambio de datos | Concentración por fuente, rasgos de transcripción y fragmentos incompletos identificados. Muestra de 21 filas de train revisada; prioridad: cuatro filas de Villanueva. Sin modificar etiquetas |
 | Límites de Villanueva | Recuperar argumentos cortados entre páginas | Seis unidades delimitadas y cotejadas; dos quedan como contexto. Continuaciones ya presentes en filas 10/637 identificadas. Propuesta local, sin aplicar |
 | Reparación de Villanueva | Preparar un reemplazo sin duplicar continuaciones | Cuatro candidatos revisados, cuatro unidades de contexto y seis originales archivados; V02 ambiguo. Extracción local verificada, dataset sin modificar |
@@ -1930,9 +1931,103 @@ del agente principal respecto de esa validación ya reutilizada.
 **Estado:** propuesta y comprobaciones locales; cero filas incorporadas, cero
 entrenamientos, predicciones o métricas nuevas y ninguna acción en producción.
 Se mantienen los entregables académicos de ambas unidades. **Siguiente bloque
-propuesto:** preparar el desarrollo externo con las dos obras reservadas y
-congelar su alcance real antes de comparar modelos. Esperar confirmación de la
-autora para iniciarlo.
+propuesto en ese momento:** preparar el desarrollo externo con las dos obras
+reservadas y congelar su alcance real antes de comparar modelos. La autora lo
+confirmó; el resultado de ese bloque se registra a continuación.
+
+## Desarrollo externo parcial congelado — 7 de septiembre de 2026, Lima
+
+El [dataset separado](../artifacts/datasets/external-development-v1.json) contiene
+**31 párrafos**, con sus textos, etiquetas, fuentes y páginas. El
+[registro de revisión](../artifacts/reviews/external-development-v1.json) conserva
+el inventario, ambas lecturas IA, adjudicaciones y exclusiones. No reemplaza los
+81 ejemplos originales de validación ni constituye un test final nuevo.
+La referencia y la copia reparada conservan **596 train / 81 val / 137 test**;
+las seis adiciones de Contreras/Hünefeldt siguen siendo propuestas.
+
+Se censaron 100 unidades de cuerpo: 98 párrafos narrativos y dos citas en bloque.
+La regla previa exigía párrafos completos de 120–250 palabras, dentro de
+1780–1842 y con argumento autónomo, sin unirlos o cortarlos para completar cuotas.
+De las 43 unidades de longitud admisible, 39 pasaron a segunda lectura sin la
+primera etiqueta; las cuatro retenidas recibieron una auditoría adicional,
+conociendo sus motivos de retención. Las 100 unidades tienen estado final:
+31 incluidas y 69 fuera del conjunto, con motivo registrado.
+
+| Categoría evaluable | Sala 2011 | Sobrevilla 2021 | Total |
+|---|---:|---:|---:|
+| Crisis e ideas emancipadoras | 17 | 0 | 17 |
+| Participación social y regional | 6 | 0 | 6 |
+| Campañas y conflictos militares | 2 | 2 | 4 |
+| Liderazgos, diplomacia y proyectos | 0 | 2 | 2 |
+| Organización y consecuencias republicanas | 1 | 1 | 2 |
+| **Total** | **26** | **5** | **31** |
+
+**Antecedentes coloniales y `no_relevante` no quedan evaluados por este conjunto.**
+Esto describe su soporte, no demuestra ausencia de esos temas en los artículos.
+La métrica principal futura será F1 macro sobre las cinco clases presentes,
+fijadas en `metric_labels`; se acompañará de soportes y resultados por clase/obra,
+matriz de confusión con las siete etiquetas y predicciones hacia clases sin
+soporte. Ese macro parcial no se comparará directamente con el antiguo 0.43766.
+
+Las fuentes son [Sala i Vila (2011), pp.693–728](https://revistadeindias.revistas.csic.es/index.php/revistadeindias/article/view/877)
+y [Sobrevilla Perea (2021), pp.115–141](https://kar.kent.ac.uk/101763/), ambas con
+CC BY 4.0 y atribución en el dataset. Se preservan las discrepancias editoriales
+de Sobrevilla y las dudas puntuales de Sala. La descarga pública de Sala requirió
+desactivar la verificación TLS tras fallos de certificado; se registraron el
+incidente, metadatos y hash, sin afirmar que el hash autentique al servidor.
+
+El cotejo mecánico de los 39 candidatos realizó 63 726 comparaciones contra la
+referencia, la copia reparada y las seis adiciones propuestas; no hubo alertas
+de duplicación según los umbrales declarados ni entre candidatos. Once citas
+marcadas de ocho o más palabras tampoco coincidieron exactamente con el corpus.
+La evaluación antigua solo se usó para estos controles mecánicos, sin leer sus
+etiquetas o contenidos para decidir la selección. La ausencia de alertas no
+demuestra independencia documental: Sobrevilla cita Sala y ambas comparten
+referencias con train. Se agrupa el documento concreto y sus ediciones; la
+colección CDIP por sí sola no identifica un documento único.
+
+Tres unidades quedan ambiguas; otras conservan dudas históricas, falta de
+autonomía o longitud incompatible. `SOB-P024` queda en cuarentena provisional:
+cita la ley de Riva Agüero del 1 de marzo de 1823 y Basadre train menciona el
+adiestramiento de milicias, pero no permite identificar esa misma ley. No se
+afirma filtración demostrada. Las decisiones IA no son validación humana
+independiente ni garantía de exactitud de todas las afirmaciones de los autores.
+
+El [verificador](../scripts/verify_external_development.py) comprueba el hash
+del conjunto, adjudicación, etiquetas, recuentos y procedencia. El modo local
+también coteja 26 archivos de entrada, los PDF y cada texto con su extracción.
+Pasaron ambos modos y 13 controles de alteraciones en memoria; los archivos
+congelados permanecieron intactos. No se ejecutaron entrenamientos ni inferencia.
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/verify_external_development.py
+outputs/venv-ml/Scripts/python.exe scripts/verify_external_development.py --check-local-inputs
+```
+
+El primer comando usa los dos JSON versionados. El segundo requiere los archivos
+locales ignorados, identificados por ruta/hash; PDF completos y salidas auxiliares
+permanecen en `outputs/external-development-v1/`, fuera del commit. Huella canónica
+del dataset: `0a12b4d4ac4b8ef58e561ed7c8632c73558454ec37edd8d269b9184fe49b6c82`.
+
+Después de congelar se midió longitud con el tokenizador BETO local, sin pesos:
+**28/31 superan 192 tokens, 16/31 superan 256 y ninguno supera 384**; rango 158–319,
+incluidos tokens especiales. Estos recuentos no decidieron la selección ni
+demuestran que ampliar la entrada mejore el F1.
+
+**Estado:** preparado y comprobado localmente; modelo, corpus y producción sin
+cambios. Es desarrollo exploratorio pequeño, concentrado en una obra y en
+1820–1824, con dependencia entre fuentes. No autoriza una sustitución en producción.
+Se mantienen los entregables de ambas unidades y el público escolar aún por confirmar.
+**Siguiente bloque propuesto:** comparar localmente longitud 192 frente a 384,
+usando este desarrollo separado y el mismo entrenamiento original congelado de
+596 filas, con los demás hiperparámetros fijos. Reutilizar el checkpoint de
+referencia de 192 cuando el protocolo permita una comparación equivalente.
+Antes de entrenar, declarar protocolo, costo local y criterio de decisión;
+adaptar la evaluación separada sin ejecutar por error el comparador anterior,
+que entrena y asume la validación de 81 filas. Esperar confirmación de la autora
+antes de iniciar ese bloque; no incorporar simultáneamente las reparaciones,
+los seis textos nuevos ni cambios en la ponderación del error. Una evaluación
+final independiente continúa pendiente.
 
 ### Reproducir la muestra de la revisión inicial
 
