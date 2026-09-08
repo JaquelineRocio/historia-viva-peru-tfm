@@ -1,0 +1,1381 @@
+{
+  "schema_version": 1,
+  "review_id": "source-diversity-v1",
+  "date_lima": "2026-09-07",
+  "status": "proposal_prepared_and_locally_checked_no_dataset_application",
+  "scope": "1780–1842; mismas siete etiquetas; fuentes nuevas y reserva de evaluación.",
+  "input_files": [
+    {
+      "path": "coursework/README.md",
+      "sha256": "8b978da691e74d797f70f26257263a93fd4a380b116aa5c0e17651dc907b9dc2"
+    },
+    {
+      "path": "scripts/compare_beto_validation.py",
+      "sha256": "bc8f02cd3b096ceea2a22f192b5e30205fcd067e2e45865152f406ca10e15037"
+    },
+    {
+      "path": "apps/ml/app/ml/beto_experiment.py",
+      "sha256": "7a55c204f569cc891c8dbdffd4668a3f20abcf13139d901e9db298e3525a121d"
+    },
+    {
+      "path": "configs/experiments/beto.json",
+      "sha256": "0752b044c39cbe403fbe2e8a8a074cf095f6475502e6b074505558fefdcc1ab9"
+    },
+    {
+      "path": "artifacts/datasets/gold-v1-source-aware.json",
+      "sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a"
+    },
+    {
+      "path": "outputs/corpus-snapshot-v2/reviewed-export.json",
+      "sha256": "5de9ea1a4be3c9d628da51cdf1d07108f43e0ac8ee580acb483013c6dc27c35c"
+    },
+    {
+      "path": "outputs/villanueva-snapshot-v1/reviewed-export.json",
+      "sha256": "30c5e648476fcfcb1bd9eddd3e99a7cca3ce5f23fabf09290cd7e4ec8791074a"
+    }
+  ],
+  "git_preexisting": [
+    "M coursework/README.md",
+    "M scripts/compare_beto_validation.py",
+    "?? artifacts/experiments/beto-reference-control-v1/"
+  ],
+  "counts": {
+    "original_candidates": 9,
+    "derived_variants": 1,
+    "stored_versions": 10,
+    "training_proposed": 6,
+    "ambiguous": 1,
+    "superseded_originals": 1,
+    "quarantined": 2,
+    "works_examined_with_excerpts": 3,
+    "new_training_works_proposed": 2,
+    "training_labels_represented": 3,
+    "external_works_reserved": 2,
+    "external_examples_extracted": 0,
+    "rows_added": 0,
+    "rows_removed": 0,
+    "existing_labels_changed": 0
+  },
+  "training_proposal": {
+    "ids": [
+      "CON2011-P103-104",
+      "CON2011-P111",
+      "CON2011-P125",
+      "CON2011-P127",
+      "HUN-02",
+      "HUN-03B"
+    ],
+    "current_train": 596,
+    "projected_train": 602,
+    "actual_split_counts": {
+      "val": 81,
+      "train": 596,
+      "test": 137
+    },
+    "current_label_counts": {
+      "campanias_conflictos_militares": 87,
+      "participacion_social_regional": 83,
+      "no_relevante": 101,
+      "organizacion_consecuencias_republicanas": 100,
+      "liderazgos_diplomacia_proyectos": 94,
+      "contexto_colonial_antecedentes": 71,
+      "crisis_ideas_emancipadoras": 60
+    },
+    "proposed_additions": {
+      "organizacion_consecuencias_republicanas": 4,
+      "contexto_colonial_antecedentes": 1,
+      "participacion_social_regional": 1
+    },
+    "projected_label_counts": {
+      "campanias_conflictos_militares": 87,
+      "participacion_social_regional": 84,
+      "no_relevante": 101,
+      "organizacion_consecuencias_republicanas": 104,
+      "liderazgos_diplomacia_proyectos": 94,
+      "contexto_colonial_antecedentes": 72,
+      "crisis_ideas_emancipadoras": 60
+    },
+    "current_sources": 9,
+    "projected_sources": 11,
+    "basadre_rows": 244,
+    "current_basadre_share": 0.40939597315436244,
+    "projected_basadre_share": 0.4053156146179402,
+    "projection_not_applied": true,
+    "limitation": "Seis unidades reducen muy poco la concentración total; no se espera ni promete una mejora por su cantidad. Nuevas obras no equivalen a nuevos autores o documentos independientes."
+  },
+  "sources": {
+    "contreras": {
+      "source_id": "contreras-2011-menos-plata-mas-papas",
+      "document_group": "doi:10.18800/historica.201102.004",
+      "assigned_split": null,
+      "author": "Carlos Contreras Carranza",
+      "affiliation": "Pontificia Universidad Católica del Perú",
+      "year": 2011,
+      "publication_date": "2011-12-21",
+      "title": "Menos plata pero más papas: consecuencias económicas de la independencia en el Perú",
+      "journal": "Histórica",
+      "volume_issue": "35(2)",
+      "printed_pages": "101–132",
+      "doi": "10.18800/historica.201102.004",
+      "article_url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/3849",
+      "pdf_url": "https://revistas.pucp.edu.pe/index.php/historica/article/download/3849/3823",
+      "local_pdf": "outputs/source-diversity-v1/contreras-2011.pdf",
+      "pdf_sha256": "a142578bfcfaaf5fe7ed7613ca3f3bf5565a79456dd5cf23abbb4ed04f2f1a5a",
+      "pdf_bytes": 534664,
+      "pdf_pages": 32,
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_evidence_url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/3849",
+      "license_checked": "2026-09-07; editorial section Licencia explicitly names CC Atribución4.0; author, date, volume and pages verified there and first PDF page.",
+      "local_license_evidence": "contreras-editorial-evidence.json; HTML original en contreras-editorial.html",
+      "attribution": "Contreras Carranza, Carlos (2011). Menos plata pero más papas: consecuencias económicas de la independencia en el Perú. Histórica35(2),101–132. https://doi.org/10.18800/historica.201102.004. CC BY4.0. Extractos seleccionados, palabras partidas y espacios reunidos; llamadas de notas retiradas del texto y conservadas como procedencia.",
+      "scope_limit": "La obra completa se extiende más allá de1842. Solo se proponen aquí cuatro párrafos con anclajes temporales internos dentro de1780–1842. No trasladar sus conclusiones demográficas hasta1876 ni gendarmería1870 al periodo inicial.",
+      "evaluation_design_caution": "No asignar fragmentos distintos de esta obra a entrenamiento y evaluación. Revisar también versiones previas y materiales primarios citados antes de proponerla como fuente retenida.",
+      "possible_predecessor": {
+        "author": "Carlos Contreras",
+        "year": 2010,
+        "title": "El legado económico de la independencia en el Perú",
+        "series": "Documento de Trabajo301, Departamento de Economía PUCP",
+        "url": "https://repositorio.pucp.edu.pe/items/c8ac6592-b8af-4667-878a-a839523e76bd/full",
+        "observed_license": "CC BY-NC-ND2.5PE in repository record",
+        "relation_status": "potential_version_family_not_textually_compared",
+        "evidence": "Mismo autor y resumen con costos de guerra, fin de protección minera, alivio fiscal y descenso mercantil. No se afirma identidad textual sin cotejar PDF2010. Agrupar conservadoramente para selección futura de splits; la licencia de2010 no se transfiere al artículo2011 ni viceversa."
+      },
+      "edition_note": "La primera página del artículo2011 informa presentación preliminar en el congreso de historia económica de Carmona,8–10septiembre2011. No identifica explícitamente el documento2010 como versión anterior."
+    },
+    "hunefeldt": {
+      "source_id": "doi:10.18800/historica.197902.004",
+      "author": "Christine Hünefeldt",
+      "title": "Cimarrones, bandoleros y milicianos: 1821",
+      "publication_year": 1979,
+      "published_date_as_landing_page": "1979-12-01",
+      "journal": "Histórica",
+      "volume": 3,
+      "issue": 2,
+      "printed_pages": [
+        71,
+        88
+      ],
+      "landing_url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/7858",
+      "pdf_url": "https://revistas.pucp.edu.pe/index.php/historica/article/download/7858/8131/30888",
+      "doi": "10.18800/historica.197902.004",
+      "accessed_utc": "2026-09-08T02:54:06.916268+00:00",
+      "local_pdf": "outputs/source-diversity-v1/hunefeldt-1979.pdf",
+      "file_sha256": "aa49530a2481d4172b1131042cbcee532093dac2c261443a3204a58825ffd1bb",
+      "raw_pages_file": "outputs/source-diversity-v1/hunefeldt-raw-pages.json",
+      "license": {
+        "name": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/",
+        "evidence_url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/7858",
+        "evidence_quote": "Esta obra está bajo una licencia internacional Creative Commons Atribución 4.0.",
+        "policy_url": "https://revistas.pucp.edu.pe/index.php/historica/oa",
+        "scope_note": "La ficha individual del artículo de1979 declara CC BY4.0. La política general menciona modalidad online desde2016 y consulta gratuita de números anteriores; se utiliza la declaración individual, no solo acceso gratuito.",
+        "attribution_required": true,
+        "changes_must_be_recorded": true,
+        "limitations": "No se presume licencia de material de terceros por la licencia del artículo. Las unidades seleccionadas son prosa de la autora y una cita breve de carta de1822, con referencias conservadas."
+      },
+      "visual_pages": [
+        {
+          "printed_page": 74,
+          "pdf_page": 4,
+          "path": "outputs/source-diversity-v1/hunefeldt-page-74.png",
+          "file_sha256": "74fee1dfc86d497cb440c9ca0d85a8de89347fc36e3f377ce087a195b215f361"
+        },
+        {
+          "printed_page": 87,
+          "pdf_page": 17,
+          "path": "outputs/source-diversity-v1/hunefeldt-page-87.png",
+          "file_sha256": "5361414c3922adf548632608deaca13c56506b13885f34f83be8897421499e8d"
+        },
+        {
+          "printed_page": 88,
+          "pdf_page": 18,
+          "path": "outputs/source-diversity-v1/hunefeldt-page-88.png",
+          "file_sha256": "2bcc376091ddf9edc09bf76a7f46e854d55974c5a44fe4c0ebbe3d87a655ab72"
+        }
+      ],
+      "method_limits": [
+        "Se cotejaron páginas impresas74,87,88 visualmente; no se afirma cotejo de documentos primarios citados.",
+        "No se abrieron datasets ni evaluación para estas selecciones.",
+        "No se afirma novedad textual respecto de todo entrenamiento ni mejora de clasificación.",
+        "Los tres contrastes propuestos no son cuota por etiqueta: reclutamiento, agencia y efectos sobre esclavitud son argumentos distintos."
+      ],
+      "dependency_audit": {
+        "fonseca_local_pdf": ".corpus-downloads/fonseca_bandoleros_patrotas.pdf",
+        "fonseca_file_sha256": "082ca707f2e2246faf43e7bcd3c620a06e287d6f1f2212b549c94d77e0e5306f",
+        "source_pages": [
+          {
+            "pdf_page": 8,
+            "printed_page": 112,
+            "note": 19
+          },
+          {
+            "pdf_page": 21,
+            "printed_page": 125,
+            "note": 64
+          }
+        ],
+        "shared_work": "Memorias del general Miller, en edición1829 para Hünefeldt y edición1975 para Fonseca. No se ha cotejado equivalencia de páginas entre ediciones.",
+        "fonseca_miller_explicit_locators": [
+          "p.108 nota5: edición1975",
+          "p.120 nota47: vol.I p.250",
+          "p.123 nota59: vol.I p.258"
+        ],
+        "candidate_reference_overlap": "HUN-01 cita vol.I p.196 en edición1829; misma obra, sin confirmar pasaje idéntico. HUN-02 sintetiza tesis del artículo citado por Fonseca. HUN-03 remite a Sales y carta SanMartín/TorreTagle; no se localizó en el recorrido la misma referencia expresa en Fonseca, lo cual no prueba independencia."
+      },
+      "mendez_screening": {
+        "title": "Tradiciones liberales en los Andes: militares y campesinos en la formación del estado peruano",
+        "author": "Cecilia G. Méndez",
+        "year": 2004,
+        "volume_issue": "EIAL15(1)",
+        "pages": [
+          35,
+          63
+        ],
+        "editorial_url": "https://eialonline.org/index.php/eial/article/view/826",
+        "author_university_page": "https://www.history.ucsb.edu/faculty/mendez/",
+        "finding": "La página de autora UCSB enlaza la versión EIAL y confirma páginas35–63. No se encontró en ese enlace una autorización alternativa de reutilización.",
+        "license": "CC BY-NC-ND4.0 según editorial",
+        "decision": "Mantener admisión pendiente para corpus compartible; no inferir prohibición absoluta de entrenamiento por ND."
+      }
+    },
+    "majluf": {
+      "id": "majluf-2013",
+      "author": "Natalia Majluf",
+      "affiliation": "Museo de Arte de Lima",
+      "title": "De cómo reemplazar a un rey: retrato, visualidad y poder en la crisis de la independencia (1808–1830)",
+      "year": 2013,
+      "journal": "Histórica",
+      "volume_issue": "37(1)",
+      "printed_pages": "73–108",
+      "doi": "10.18800/historica.201301.003",
+      "url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/7642",
+      "pdf_url": "https://revistas.pucp.edu.pe/index.php/historica/article/download/7642/7892/29981",
+      "license": "CC BY 4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "license_evidence": "Sección Licencia específica del artículo, consultada2026-09-07",
+      "pdf_sha256": "3f7e2fc7003792051378a544b20e59daee637844429d8dcae54003ee24c02ca7",
+      "relationships": [
+        "La obra también trata celebraciones enChile1821 y cita Gazeta Ministerial de Chile25-08-1821,p27: relación posible con obraSánchez reservada a test. No se seleccionó ese tramo; pendiente resolver grupo antes de incorporación.",
+        "Referencias aCDIP,MemoriaAbascal1944 yGacetas: una nueva obra no garantiza independencia documental."
+      ],
+      "visual_check": {
+        "pages_pdf_1_based": [
+          4,
+          5,
+          25,
+          26
+        ],
+        "pages_printed": [
+          76,
+          77,
+          97,
+          98
+        ],
+        "checked": true,
+        "method": "Local PyMuPDF reused; image inspection by root"
+      },
+      "license_evidence_local": {
+        "path": "outputs/source-diversity-v1/majluf-editorial.html",
+        "sha256": "4a5f789558addeff1edec3a936a6ba002c33587238e1dbe9c8bc69cb8693dba5"
+      },
+      "role_proposal": "quarantine_related_to_original_test_source",
+      "scope_of_exclusion": "Conservative work-level guard; no selected-fragment leakage asserted"
+    }
+  },
+  "units": [
+    {
+      "id": "CON2011-P103-104",
+      "source": "contreras",
+      "status": "proposed_for_training",
+      "proposed_label": "organizacion_consecuencias_republicanas",
+      "text": "El virreinato del Perú se emancipó en 1821, aunque el ejército realista no fue derrotado hasta fines de 1824, momento en que el Estado independiente pudo tomar recién el control del territorio. Fue una de las últimas reparticiones coloniales en emanciparse, lo que hizo que las mejores oportunidades comerciales que brindaba la nueva situación —como, por ejemplo, servir de sede redistribuidora del comercio europeo en la región sudamericana— estuviesen ya tomadas por los países emancipados antes. De otro lado, la guerra de independencia fue prolongada. Se había iniciado en 1809, cuando el virreinato se convirtió en el centro de la contrarrevolución en el subcontinente sudamericano, y perduró por los siguientes quince años. Esos tres lustros de guerra consumieron una gran cantidad de hombres, animales y capital. Las pérdidas se acentuaron cuando los ejércitos libertadores que habían venido de Chile, el Río de la Plata y la Gran Colombia cobraron sus salarios y repatriaron las ganancias de los capitales que pudieron arrancar a los derrotados españoles. El país quedó, así, independiente, pero su comercio, sin barcos ni capitales; sus minas, sin mulas ni operarios; y sus haciendas, sin semillas y con menos esclavos de los que habían tenido antes.",
+      "text_sha256": "f2f10b978ea30fa3a98b4436f978ebaf4e8cc6661140724b6625911de7d140f9",
+      "words": 198,
+      "tokens": 270,
+      "printed_pages": [
+        103,
+        104
+      ],
+      "pdf_pages_1_based": [
+        3,
+        4
+      ],
+      "extraction_evidence": {
+        "path": "outputs/source-diversity-v1/contreras-candidates-unlabelled.json",
+        "file_sha256": "d9f701af2a4202f431d28ce403739450ef17356999310ee517c572709cceb876"
+      },
+      "first_review": {
+        "id": "CON2011-P103-104",
+        "proposed_label": "organizacion_consecuencias_republicanas",
+        "alternative": "campanias_conflictos_militares",
+        "reason": "El argumento explica consecuencias económicas del proceso, no operaciones tácticas. Combina efectos sobre varios sectores y pérdida de oportunidades comerciales.",
+        "confidence": "high"
+      },
+      "second_review": {
+        "decision": "apto",
+        "proposed_label": "organizacion_consecuencias_republicanas",
+        "alternative_label": "campanias_conflictos_militares",
+        "label_reason": "El resultado económico del proceso organiza el párrafo. Las tropas y salarios explican las pérdidas; no se narra una operación, estrategia ni el abastecimiento de una campaña concreta.",
+        "temporal_assessment": {
+          "autonomous_for_scope": true,
+          "internal_anchors": [
+            1809,
+            1821,
+            1824
+          ],
+          "context_note_anchor": 1826,
+          "reason": "La guerra regional y la emancipación están fechadas dentro del alcance. La nota 3 conserva la resistencia realista del Callao hasta enero de 1826."
+        },
+        "historical_cautions": [
+          "La fecha 1809 se presenta como periodización regional del autor, no como origen único indiscutible de toda la independencia peruana.",
+          "No convertir la síntesis de pérdidas en un censo literal que afirme inexistencia total de barcos, operarios o semillas.",
+          "El contexto siguiente matiza la duración de las pérdidas y las oportunidades abiertas por la emancipación; mantenerlo como contexto pedagógico. El candidato solo no prueba un declive permanente."
+        ]
+      },
+      "context": "Contexto original y transformaciones completas conservados en extraction_evidence y archivos locales citados.",
+      "historical_limits": "Interpretación causal y síntesis del autor. La enumeración final no es un censo que permita afirmar ausencia literal de todos los barcos, operarios o semillas."
+    },
+    {
+      "id": "CON2011-P111",
+      "source": "contreras",
+      "status": "proposed_for_training",
+      "proposed_label": "contexto_colonial_antecedentes",
+      "text": "Una explicación posible del declive de la minería de la plata sería que el crecimiento de la producción agropecuaria antes mencionado implicó una competencia para la minería por los escasos capitales disponibles en el virreinato. La atracción de capital de inversión era una de las dificultades más grandes de la minería en estos años finales, en que se venían trabajando niveles profundos bajo las técnicas de socavón subterráneo. La coexistencia de dos «tribunales» o gremios, el de los comerciantes (Tribunal del Consulado) y el de los mineros (Tribunal de Minería), hacía difícil que el capital de aquellos pudiese fluir hacia estos, porque en caso de diferendo, no quedaba claro a cuál de los dos entes le correspondía ventilarlo. Los mineros estaban protegidos, además, por la legislación (las nuevas ordenanzas de minería, implantadas en el Perú desde 1786), de posibles embargos de sus «bienes de minero», lo que volvía más riesgoso prestarles dinero. Uno de los pedidos más constantes de este gremio en los años finales del periodo colonial fue que el Estado estableciese un fondo de «rescate» de los marcos de plata en los asientos mineros, o constituyese un fondo dotal con el que pudiese financiarse a los empresarios mineros, dado lo costoso que para ellos resultaba el financiamiento de los comerciantes.",
+      "text_sha256": "28144e90b20bd243f6d9c7d35298ebd77eeba3b5a78bfd5ddac6c4e24ab69177",
+      "words": 212,
+      "tokens": 272,
+      "printed_pages": [
+        111
+      ],
+      "pdf_pages_1_based": [
+        11
+      ],
+      "extraction_evidence": {
+        "path": "outputs/source-diversity-v1/contreras-candidates-unlabelled.json",
+        "file_sha256": "d9f701af2a4202f431d28ce403739450ef17356999310ee517c572709cceb876"
+      },
+      "first_review": {
+        "id": "CON2011-P111",
+        "proposed_label": "contexto_colonial_antecedentes",
+        "alternative": "organizacion_consecuencias_republicanas",
+        "reason": "Marco de ordenanzas1786, gremios y dificultades de capital durante el periodo colonial final; aún no trata organización republicana.",
+        "confidence": "high"
+      },
+      "second_review": {
+        "decision": "apto",
+        "proposed_label": "contexto_colonial_antecedentes",
+        "alternative_label": "organizacion_consecuencias_republicanas",
+        "label_reason": "El propio texto sitúa el problema en el virreinato y en los años finales del periodo colonial. Tribunales, ordenanzas, capital y crédito describen el funcionamiento de la economía colonial; no contiene una consecuencia republicana explícita.",
+        "temporal_assessment": {
+          "autonomous_for_scope": true,
+          "internal_anchors": [
+            1786
+          ],
+          "reason": "1786 y la expresión años finales del periodo colonial delimitan el ámbito del párrafo. El contexto de p.110 sitúa el declive discutido en los inicios del siglo XIX y p.111 menciona la medida minera de 1809. No se usa la presencia aislada del número 1786 como prueba suficiente.",
+          "precision_caution": "1786 fecha las ordenanzas, no el inicio demostrado de todo el proceso. No convertir temporal_scope.events_start=1786 en una fecha histórica exacta del declive. Las obras citadas cubren periodos más amplios, lo que tampoco vuelve automáticamente fuera de alcance al fragmento."
+        },
+        "historical_cautions": [
+          "Conservar la expresión de incertidumbre: es una explicación posible del autor, no una causa única verificada por esta revisión.",
+          "La lectura contextual confirma el marco tardocolonial, pero no establece fecha exacta de creación de todos los tribunales mencionados.",
+          "La bibliografía y el gráfico abarcan años fuera de 1780–1842; no incorporarlos completos al ejemplo por arrastre."
+        ]
+      },
+      "context": "Contexto original y transformaciones completas conservados en extraction_evidence y archivos locales citados.",
+      "historical_limits": "Hipótesis histórica marcada expresamente por «Una explicación posible». No se elimina esa cautela ni se transforma en hecho causal indiscutible."
+    },
+    {
+      "id": "CON2011-P125",
+      "source": "contreras",
+      "status": "proposed_for_training",
+      "proposed_label": "organizacion_consecuencias_republicanas",
+      "text": "En 1821, meses después de desembarcar en el Perú, el general San Martín abolió el tributo de los indios, que había sido restaurado en 1814 con el absolutismo, y las alcabalas, cuya extensión al comercio indígena había sido causa de varios levantamientos, el más grande y famoso de los cuales fue el de Túpac Amaru II en 1780. Alguien podría pensar que se trataba de medidas dirigidas a conquistar adeptos para la independencia y que los impuestos volverían una vez que se hubiese expulsado a los españoles. Al comienzo pareció así: en 1826, arriada la última bandera peninsular en el puerto del Callao, el libertador Bolívar restauró la contribución indígena y elevó los aranceles hasta los niveles de prohibición que vimos antes. Sin embargo, el impuesto de capitación a los indios, que intentó extenderse al resto de la población masculina, fue rebajado en un peso en relación con el monto vigente en 1820, y las odiadas alcabalas no se reimplantaron, salvo para la compraventa de bienes raíces.",
+      "text_sha256": "812ed5a35702fcb07412fa52b43590b594e5aba1b9b824e11140f770c72a755a",
+      "words": 167,
+      "tokens": 223,
+      "printed_pages": [
+        125
+      ],
+      "pdf_pages_1_based": [
+        25
+      ],
+      "extraction_evidence": {
+        "path": "outputs/source-diversity-v1/contreras-candidates-unlabelled.json",
+        "file_sha256": "d9f701af2a4202f431d28ce403739450ef17356999310ee517c572709cceb876"
+      },
+      "first_review": {
+        "id": "CON2011-P125",
+        "proposed_label": "organizacion_consecuencias_republicanas",
+        "alternative": "liderazgos_diplomacia_proyectos",
+        "reason": "La comparación normativa y fiscal1821/1826 es dominante; San Martín y Bolívar son agentes de medidas, no una biografía ni el contraste central de proyectos de Estado.",
+        "confidence": "high"
+      },
+      "second_review": {
+        "decision": "apto",
+        "proposed_label": "organizacion_consecuencias_republicanas",
+        "alternative_label": "participacion_social_regional",
+        "label_reason": "Predominan abolición, restablecimiento, rebajas y excepciones de impuestos. Los indígenas son sujetos afectados y hay referencia a una rebelión, pero no se desarrolla su agencia, organización o posición ante bandos como asunto central. Los líderes aparecen por sus medidas fiscales.",
+        "temporal_assessment": {
+          "autonomous_for_scope": true,
+          "internal_anchors": [
+            1780,
+            1814,
+            1820,
+            1821,
+            1826
+          ],
+          "reason": "La comparación se fecha internamente; el núcleo es 1821–1826 y los antecedentes 1780–1820 quedan dentro del alcance."
+        },
+        "historical_cautions": [
+          "Es una exposición historiográfica de medidas fiscales, no una comprobación independiente de su ejecución uniforme en todo el territorio.",
+          "No interpretar la mención a las alcabalas como explicación exclusiva de la rebelión de 1780.",
+          "Las referencias a líderes no bastan para priorizar la etiqueta de liderazgo sobre la fiscalidad."
+        ]
+      },
+      "context": "Contexto original y transformaciones completas conservados en extraction_evidence y archivos locales citados.",
+      "historical_limits": "Se preserva la explicación de Contreras y sus matices; no se equipara abolición jurídica con cumplimiento homogéneo en todo el territorio."
+    },
+    {
+      "id": "CON2011-P127",
+      "source": "contreras",
+      "status": "proposed_for_training",
+      "proposed_label": "organizacion_consecuencias_republicanas",
+      "text": "Un proyecto de Constitución política presentado en 1827 para sustituir a la Carta vitalicia que dejó Simón Bolívar proponía que los ingresos del Estado debían reducirse a los derechos pagados en las aduanas por la internación de productos extranjeros y los pagados por los mineros en las cajas fiscales y por concepto de amonedación. Solo en caso de necesidad se admitirían los impuestos indirectos, que deberían limitarse a gravar artículos de lujo «o de menor necesidad», de acuerdo con el responsable del mencionado proyecto. «Gravar al industrioso a proporción de lo que progresa, solo puede ocurrírsele a un enemigo declarado de nuestros adelantamientos», señalaba otro autor en 1836. Para él, los impuestos se oponían a la libertad, de modo que no podía considerarse libre una actividad cuyo ejercicio supusiese el pago de gravámenes. Estos autores, del mismo modo que personajes como Mariano de Rivero, respaldaban sus ideas en lo que consideraban una ley de la fiscalidad, basada —según declaraban— en la experiencia inglesa y en «el saber de los economistas»; esta norma decía que «el aumento de las entradas del Erario está en razón inversa de lo subido de los impuestos». Por lo mismo, reclamaron que los derechos de aduana debían ser rebajados.",
+      "text_sha256": "ce865f46a7b0ba1dc916196823e1d53eabd804ed065f022ffd2d79432b459381",
+      "words": 203,
+      "tokens": 262,
+      "printed_pages": [
+        127
+      ],
+      "pdf_pages_1_based": [
+        27
+      ],
+      "extraction_evidence": {
+        "path": "outputs/source-diversity-v1/contreras-candidates-unlabelled.json",
+        "file_sha256": "d9f701af2a4202f431d28ce403739450ef17356999310ee517c572709cceb876"
+      },
+      "first_review": {
+        "id": "CON2011-P127",
+        "proposed_label": "organizacion_consecuencias_republicanas",
+        "alternative": "liderazgos_diplomacia_proyectos",
+        "reason": "Debate sobre ingresos, impuestos y fiscalidad republicana dentro de un proyecto constitucional1827 y una publicación1836. El foco fiscal resulta más específico que liderazgos; conservar alternativa para segunda lectura. No etiquetar crisis/ideas solo por decir ideas liberales en1836.",
+        "confidence": "medium_high"
+      },
+      "second_review": {
+        "decision": "apto",
+        "proposed_label": "organizacion_consecuencias_republicanas",
+        "alternative_label": "liderazgos_diplomacia_proyectos",
+        "label_reason": "La fiscalidad es el objeto común a todas las voces y propuestas del párrafo, incluido el proyecto constitucional inicial. No se desarrolla una alternativa general de forma de Estado ni la actuación de un dirigente. La guía incluye expresamente fiscalidad en la clase republicana; por esa especificidad la prefiero sobre proyectos políticos.",
+        "temporal_assessment": {
+          "autonomous_for_scope": true,
+          "internal_anchors": [
+            1827,
+            1836
+          ],
+          "reason": "Las propuestas de 1827 y 1836 están fechadas dentro del periodo. La referencia a la Carta vitalicia es antecedente del proyecto, no fecha de aprobación de este."
+        },
+        "historical_cautions": [
+          "Las citas son opiniones históricas atribuidas y reproducidas por Contreras, no prueba de consenso ni de validez económica universal.",
+          "No afirmar que el proyecto se aprobó o que las propuestas se aplicaron.",
+          "No inferir que el liberalismo fiscal de 1836 sea necesariamente una idea emancipadora: el argumento se ubica ya en la República."
+        ]
+      },
+      "context": "Contexto original y transformaciones completas conservados en extraction_evidence y archivos locales citados.",
+      "historical_limits": "Opiniones históricas atribuidas, no prueba de validez de la supuesta ley fiscal ni de que el proyecto de Constitución se haya aprobado."
+    },
+    {
+      "id": "HUN-01",
+      "source": "hunefeldt",
+      "status": "ambiguous_label",
+      "proposed_label": null,
+      "text": "Cuando San Martín emprendió su camino hacia el Virreynato peruano, su propósito era engrosar las filas de su ejército con los negros manumitidos en las haciendas. Desembarcó en Pisco - zona de viñedos e ingenios de azúcar con fuerte población esclava. Encontró trabados sus propósitos. Los dueños de esclavos alertados por las promesas patriotas, habían optado por recluír a sus esclavos en lugares seguros, hasta ver pasar la tormenta. San Martín se encontró ante haciendas prácticamente despobladas. Aún antes de que las promesas patriotas hacia los esclavos fueran volcadas al idioma oficial, desde marzo de 1821, San Martín había enviado comisionados a las haciendas del norte cercanas a Lima, para que estos leyeran bandos a los esclavos, con el fin de comunicarles las ventajas que tendrían afiliándose al ejército. La lectura y la \"acción de convencimiento\" deberían de ser realizadas por los comisionados sin presencia de los amos amantes.",
+      "text_sha256": "eb510c89e9febd2df36eebc3e7e8ec44b6706229e8528b56ab79db510a9fd75a",
+      "words": 149,
+      "tokens": 204,
+      "printed_pages": [
+        74
+      ],
+      "pdf_pages_1_based": [
+        4
+      ],
+      "extraction_evidence": {
+        "path": "outputs/source-diversity-v1/hunefeldt-candidates-blind.json",
+        "file_sha256": "89d29972bcef0b8ccecc1de58f33c8d619cff371ca5ccc2c64fb64771f5aeee0"
+      },
+      "first_review": {
+        "id": "HUN-01",
+        "proposed_label": "campanias_conflictos_militares",
+        "alternative_label": "participacion_social_regional",
+        "reason": "La unidad organiza el argumento por reclutamiento del ejército, obstáculos de propietarios y procedimiento de comisiones. Las condiciones sociales hacen plausible alternativa participación, pero decisiones de los esclavos no están relatadas aquí; aparecen en contexto posterior.",
+        "caveats": [
+          "Promesas de libertad no equivalen a libertad efectivamente obtenida.",
+          "Los dos párrafos están completos; no añadir resultados de Sayán sin una unidad distinta."
+        ]
+      },
+      "second_review": {
+        "decision": "ambiguo",
+        "proposed_label": null,
+        "alternative_label": "campanias_conflictos_militares",
+        "label_candidates": [
+          "participacion_social_regional",
+          "campanias_conflictos_militares"
+        ],
+        "preferred_if_adjudication_requires_order": "participacion_social_regional",
+        "label_reason": "Las relaciones de esclavitud, el control de los dueños y la promesa de libertad constituyen contenido social sustantivo; no son una mención incidental a un grupo en una batalla. A la vez, ambos párrafos explican el objetivo, obstáculos y procedimiento de reclutamiento para engrosar el ejército, lo que permite una lectura logística. La guía no ofrece una frontera adicional para este cruce. El contexto siguiente aporta respuestas de los esclavos, pero esas respuestas no están en la unidad y no deben sustituir su foco. Conservar el desacuerdo potencial para adjudicación, sin fijar una etiqueta gold automáticamente.",
+        "temporal_scope": {
+          "within_1780_1842": true,
+          "internal_years": [
+            1821
+          ],
+          "basis": "San Martín en Pisco y comisionados del norte de Lima desde marzo de1821. La fecha1821 está en el propio texto.",
+          "date_added": false
+        },
+        "autonomy": {
+          "status": "sufficient_for_understanding_selected_argument",
+          "referents": "San Martín, haciendas, esclavos, propietarios y comisionados se identifican dentro del fragmento.",
+          "limit": "No muestra por sí solo las elecciones efectivas de los esclavos ni el cumplimiento de las promesas; evita usarlo como prueba de liberación general. La expresión impresa «amos amantes» se conserva, sin reinterpretarla como «ausentes»."
+        }
+      },
+      "context": "Contexto original y transformaciones completas conservados en extraction_evidence y archivos locales citados.",
+      "historical_limits": [
+        "Se conserva amos amantes, expresión que efectivamente figura en la página impresa; no se sustituye por ausentes.",
+        "Se conserva Virreynato y la grafía recluír del texto extraído; no se moderniza por diccionario."
+      ]
+    },
+    {
+      "id": "HUN-02",
+      "source": "hunefeldt",
+      "status": "proposed_for_training",
+      "proposed_label": "participacion_social_regional",
+      "text": "En un trabajo anterior publicado en el número precedente de esta revista se trató de demostrar, como el fraccionamiento interno de la sociedad negra urbana a lo largo de líneas étnicas y de clase evitó el surgimiento de una actuación de conjunto de los negros. Sin embargo, la sociedad negra urbana segregó a los elementos más dinámicos; por un lado, aquellos que como resultado de la saturación de mano de obra artesanal en el recinto urbano tuvieron que encontrar nuevas plazas de trabajo en otros lugares, y que con ello se exponían a ser perseguidos, recapturados y devueltos a sus antiguas condiciones de vida, y por otro lado, aquellos que de por sí tuvieron el coraje de exponerse a una vida incierta, en donde la única forma de subsistencia fue el robo y la integración a bandas que actuaban en los valles alrededor de Lima. Así, fuera del recinto estrictamente urbano, pero recogiendo las experiencias que la permanencia les había enseñado, se fue forjando un grupo de negros que aprendieron a sobrevivir sin los amos y liberados de la esclavitud, Estas vivencias fueron elementales y útiles en el momento en que toda la sociedad se vió envuelta en la contienda bélica independicista. Las bandas de cimarrones se fortalecieron al interior de los primeros años de lucha, llegando a formularse reivindicaciones propias, al margen de los cometidos patriotas o realistas.",
+      "text_sha256": "bdf48f763015ae357e29dca5e7a20aea14aa8eeb39cce9957ec04a57f294950b",
+      "words": 229,
+      "tokens": 282,
+      "printed_pages": [
+        87,
+        88
+      ],
+      "pdf_pages_1_based": [
+        17,
+        18
+      ],
+      "extraction_evidence": {
+        "path": "outputs/source-diversity-v1/hunefeldt-candidates-blind.json",
+        "file_sha256": "89d29972bcef0b8ccecc1de58f33c8d619cff371ca5ccc2c64fb64771f5aeee0"
+      },
+      "first_review": {
+        "id": "HUN-02",
+        "proposed_label": "participacion_social_regional",
+        "alternative_label": "campanias_conflictos_militares",
+        "reason": "Tema dominante es agencia de grupos afrodescendientes y reivindicaciones propias al margen de partidos contendores; la guerra aporta contexto, no relato operacional.",
+        "caveats": [
+          "La síntesis de la autora es generalizadora: no atribuir robo como único sustento de todos los afrodescendientes.",
+          "Su alcance concreto es la fracción descrita y valles de Lima durante independencia.",
+          "Fonseca cita y resume esta autora: fuente editorial diferente no significa evidencia independiente."
+        ]
+      },
+      "second_review": {
+        "decision": "thematic_label_supported",
+        "proposed_label": "participacion_social_regional",
+        "alternative_label": "contexto_colonial_antecedentes",
+        "label_reason": "El argumento central explica agencia, diferenciación interna y demandas sociales, incluyendo objetivos distintos de los de patriotas y realistas. Los antecedentes urbanos explican ese proceso; el cierre lo sitúa en la contienda independentista. No describe tácticas ni una campaña militar como tema dominante.",
+        "temporal_scope": {
+          "within_1780_1842": true,
+          "internal_years": [],
+          "basis": "Referencia interna inequívoca a los primeros años de la lucha independentista. El título de la fuente, «Cimarrones, bandoleros y milicianos:1821», y el contexto conservado permiten situarlo en el alcance; el fragmento no permite fechar cada antecedente urbano con un año preciso.",
+          "date_added": false
+        },
+        "autonomy": {
+          "status": "sufficient_with_temporal_provenance",
+          "referents": "La referencia al trabajo anterior no impide comprender su tesis, porque la resume inmediatamente. Los grupos, procesos y guerra están nombrados en el propio texto.",
+          "limit": "Se trata de una interpretación de la autora, con vocabulario histórico y generalizaciones que requieren lectura crítica. No equivale a describir a toda la población afrodescendiente ni a demostrar que su única posibilidad de subsistencia fuera el robo. El texto no da una fecha numérica interna."
+        }
+      },
+      "context": "Contexto original y transformaciones completas conservados en extraction_evidence y archivos locales citados.",
+      "historical_limits": [
+        "Se conserva el término independicista y vió de la impresión; no se modernizan.",
+        "El párrafo sintetiza una interpretación de la autora; no se presenta como descripción neutral de toda la población afrodescendiente."
+      ]
+    },
+    {
+      "id": "HUN-03",
+      "source": "hunefeldt",
+      "status": "superseded_by_HUN-03B",
+      "proposed_label": "organizacion_consecuencias_republicanas",
+      "text": "Mientras RivaAgüero soñaba en que podría organizar una resistencia sobre los hombros de estos grupos unificándolos bajo su mandato, ya en 1822, San Martín tenía en mente un proyecto en relación a los esclavos, que según escribía \"ha de agradar a todos los amigos\", y que incluía la suspensión de la leva esclava. Los intereses de los hacendados y los dueños de esclavos ganan la batalla. Los 1,500 negros alistados en 1821 en las filas patriotas, y otro tanto que fueron reclutados por La Serna, fueron llevados nuevamente a cultivar las tierras, en condiciones que no diferían de aquellas de 1820. El estado de caos, la necesidad de seguir produciendo, así como el temor a las actitudes de aquellos que durante cinco años habían aprendido a usar recursos en función propia, fueron argumentos suficientes para lograr en 1825 la ratificación de un Reglamento (en Junta de Hacendados, el 14 de octubre de 1825) que consolidaba la esclavitud: prohibiendo a los esclavos el uso de toda arma, la entrada a los pueblos próximos a la hacienda sin boletos firmados por el amo o el dueño de la hacienda, y dejaba enteramente a discreción del viejo o el nuevo amo, decidir si la manumisión previa a la leva era efectiva o no.",
+      "text_sha256": "19773feb4ba6ce32544f3b0db764b3d809ca6c7b4e8fa7072c63c219ed768f33",
+      "words": 210,
+      "tokens": 261,
+      "printed_pages": [
+        87
+      ],
+      "pdf_pages_1_based": [
+        17
+      ],
+      "extraction_evidence": {
+        "path": "outputs/source-diversity-v1/hunefeldt-candidates-blind.json",
+        "file_sha256": "89d29972bcef0b8ccecc1de58f33c8d619cff371ca5ccc2c64fb64771f5aeee0"
+      },
+      "first_review": {
+        "id": "HUN-03",
+        "proposed_label": "organizacion_consecuencias_republicanas",
+        "alternative_label": "participacion_social_regional",
+        "reason": "El desarrollo culmina en condiciones de esclavitud y regulación de1825 tras campañas; foco en continuidad de subordinación y expectativas frustradas.",
+        "caveats": [
+          "El texto inicia con estos grupos, cuyo antecedente son bandas que se precisa en contexto.",
+          "No verificar a partir de esta sola prosa la universalidad de la devolución de todos los reclutas ni eficacia de manumisiones.",
+          "La escala nacional/privada y efecto normativo del Reglamento citado exigen conservar atribución a la Junta, sin convertirlo en una ley nacional comprobada."
+        ]
+      },
+      "second_review": {
+        "decision": "thematic_label_supported_context_autonomy_pending",
+        "proposed_label": "organizacion_consecuencias_republicanas",
+        "alternative_label": "participacion_social_regional",
+        "label_reason": "El peso argumental está en las consecuencias de la guerra y en la restauración del control laboral, explicadas mediante el reglamento de1825. Los grupos esclavizados son centrales socialmente, pero aquí se describen ante todo límites y decisiones institucionales posteriores, no sus estrategias de participación. La mención de San Martín o RivaAgüero no convierte el texto en una biografía.",
+        "temporal_scope": {
+          "within_1780_1842": true,
+          "internal_years": [
+            1820,
+            1821,
+            1822,
+            1825
+          ],
+          "basis": "Fechas y comparación con1820 explícitas. Se identifica la Junta de Hacendados del14deoctubrede1825.",
+          "date_added": false
+        },
+        "autonomy": {
+          "status": "not_fully_autonomous_opening_referent_unresolved",
+          "unresolved_phrase": "estos grupos",
+          "reason": "El comienzo remite a grupos antes descritos. El contexto previo conservado habla de bandas perseguidas o absorbidas por cuerpos regulares; no debe reemplazarse automáticamente ese referente por el conjunto de esclavos mencionado después. El resto del párrafo se entiende, pero el sujeto de la resistencia que RivaAgüero pretendía organizar queda insuficientemente identificado en el texto aislado.",
+          "treatment": "Conservar texto y referente como pendientes; no añadir una glosa inventada. Resolver mediante selección documentada o contexto real antes de presentarlo como unidad plenamente autónoma.",
+          "other_limits": "La ratificación en Junta de Hacendados no se presenta como ley nacional comprobada. Las cantidades1500yotro tanto son afirmaciones de la fuente, no recuentos auditados en registros originales."
+        }
+      },
+      "context": "Contexto original y transformaciones completas conservados en extraction_evidence y archivos locales citados.",
+      "historical_limits": [
+        "Los recuentos de 1,500 y otro tanto son afirmaciones de la fuente; no se han comprobado contra registros originales.",
+        "No confundir ratificación de un reglamento en Junta de Hacendados con comprobación aquí de una ley nacional."
+      ]
+    },
+    {
+      "id": "MAJ01",
+      "source": "majluf",
+      "status": "quarantine_related_to_original_test_work",
+      "proposed_label": "crisis_ideas_emancipadoras",
+      "text": "Más que una proclamación real, la jura de Fernando VII fue la expresión de la lealtad de pueblos y ciudades vinculados a la Corona. La descripción oficial de las celebraciones en Lima señalaba que todos llevaban «no solo en sus corazones a nuestro amado señor don Fernando Séptimo, sino su real efigie en las escarapelas de los sombreros o colgados al cuello, según lo exigía la calidad del trage». Sobre el pecho de cada ciudadano, el retrato del rey se convertía en el emblema de una adhesión personal, y se insertaba además, claramente, en el campo naciente de la opinión pública. Esta nueva esfera política es el lugar desde donde se hace posible cuestionar el cariz absoluto del poder del monarca e, inevitablemente, también el de su imagen.",
+      "text_sha256": "b00805416ed679c6a1297e958172632bd81aca786ec3332a5d6610fb75d12d3f",
+      "words": 128,
+      "tokens": 162,
+      "printed_pages": [
+        76,
+        77
+      ],
+      "pdf_pages_1_based": [
+        4,
+        5
+      ],
+      "extraction_evidence": {
+        "path": "outputs/source-diversity-v1/majluf-candidates-blind.json",
+        "file_sha256": "9c221cea07d533759e04ae4e1586aacada6a01397b72d966229c2184179fd649"
+      },
+      "first_review": {
+        "id": "MAJ01",
+        "proposed_label": "crisis_ideas_emancipadoras",
+        "alternative_label": "participacion_social_regional",
+        "reason": "Lealtad al rey y formación de opinión pública en la crisis monárquica; actuación colectiva al servicio de esa explicación.",
+        "educational_question": "¿Cómo podían coexistir lealtad al rey y una nueva esfera de opinión política?"
+      },
+      "second_review": {
+        "decision": "thematic_label_supported",
+        "proposed_label": "crisis_ideas_emancipadoras",
+        "alternative_label": "liderazgos_diplomacia_proyectos",
+        "label_reason": "La unidad trata legitimidad monárquica, opinión pública y posibilidad de crítica al absolutismo. No es una biografía de FernandoVII ni una descripción ornamental sin explicación política. Tampoco supone que portar el retrato expresara una postura independentista.",
+        "temporal_scope": {
+          "within_1780_1842": true,
+          "internal_years": [],
+          "contextual_year": 1808,
+          "basis": "El contexto anterior y la nota7 del candidato remiten al oficio del cabildo de Lima del26deoctubrede1808. El año no está en la unidad y no se añadió.",
+          "date_added": false,
+          "limit": "La fecha exacta debe permanecer ligada a la procedencia. El modelo que reciba solo el texto no recibe la nota ni el año1808."
+        },
+        "autonomy": {
+          "status": "argument_autonomous_exact_date_from_context",
+          "referents": "Se identifican rey, jura, celebraciones limeñas, retrato y nueva esfera de opinión. «Esta nueva esfera» tiene antecedente dentro del texto.",
+          "limit": "La explicación de la opinión pública es interpretación de Majluf. La descripción oficial de las celebraciones no demuestra por sí sola que todos los habitantes tuvieran idéntica adhesión."
+        }
+      },
+      "context": "Contexto original y transformaciones completas conservados en extraction_evidence y archivos locales citados.",
+      "historical_limits": null
+    },
+    {
+      "id": "MAJ02",
+      "source": "majluf",
+      "status": "quarantine_related_to_original_test_work",
+      "proposed_label": "liderazgos_diplomacia_proyectos",
+      "text": "Bolívar, por su parte, no tendrá la mesura política o simbólica de San Martín. Por el contrario, su llegada al Perú desata una intensa campaña iconográfica de exaltación de su imagen que tiene pocos paralelos en la historia republicana. El punto de partida podría fijarse el 12 de febrero de 1825, cuando en agradecimiento a Bolívar, el Congreso peruano dispone la acuñación de una medalla, la erección de un monumento ecuestre, la instalación de una lápida conmemorativa en la plaza mayor de todas las capitales de departamento y la colocación de su retrato en las casas de las municipalidades «con todo el decoro posible». Era solo el inicio de una intensa campaña de exaltación de la imagen del libertador, que se manifestaría en medallas, retratos, fiestas y otras celebraciones públicas, que no podemos describir en detalle, pero que tendrán un sentido radicalmente distinto del que habían tenido las imágenes conmemorativas de San Martín.",
+      "text_sha256": "582178568ae4fa69f10ecf3bcf34cd36b0c1fd0bc33fbb6794d99229fad4d966",
+      "words": 153,
+      "tokens": 194,
+      "printed_pages": [
+        97,
+        98
+      ],
+      "pdf_pages_1_based": [
+        25,
+        26
+      ],
+      "extraction_evidence": {
+        "path": "outputs/source-diversity-v1/majluf-candidates-blind.json",
+        "file_sha256": "9c221cea07d533759e04ae4e1586aacada6a01397b72d966229c2184179fd649"
+      },
+      "first_review": {
+        "id": "MAJ02",
+        "proposed_label": "liderazgos_diplomacia_proyectos",
+        "alternative_label": "organizacion_consecuencias_republicanas",
+        "reason": "Construcción de legitimidad personal de Bolívar mediante una campaña pública y contraste con San Martín; Congreso como medio.",
+        "educational_question": "¿Qué función política atribuye la autora a los homenajes a Bolívar en1825?"
+      },
+      "second_review": {
+        "decision": "thematic_label_supported_with_comparative_context_limit",
+        "proposed_label": "liderazgos_diplomacia_proyectos",
+        "alternative_label": "organizacion_consecuencias_republicanas",
+        "label_reason": "El foco es la representación y legitimación simbólica de un liderazgo, no la organización municipal ni el funcionamiento administrativo del Congreso. Las disposiciones republicanas sirven como evidencia de esa exaltación personal. No se decide solo por aparecer el nombre de Bolívar.",
+        "temporal_scope": {
+          "within_1780_1842": true,
+          "internal_years": [
+            1825
+          ],
+          "internal_exact_date": "1825-02-12",
+          "basis": "La disposición del Congreso queda fechada en el propio texto; el contexto remite a Gaceta del Gobierno del17deFebrero1825.",
+          "date_added": false
+        },
+        "autonomy": {
+          "status": "descriptive_core_autonomous_comparison_needs_context",
+          "reason": "El lector puede identificar qué honores se dispusieron para Bolívar y cuándo. Sin embargo, «no tendrá la mesura» y «sentido radicalmente distinto» comparan con las imágenes de San Martín sin explicar aquí su función ni la diferencia sustantiva: ese desarrollo está en el contexto de la obra.",
+          "treatment": "Conservar esta distinción. El párrafo puede apoyar la identificación del tema de legitimación simbólica, pero aislado no basta para defender una comparación completa entre ambos liderazgos.",
+          "claim_status": "El juicio sobre mesura y singularidad de la campaña pertenece a Majluf; no se convierte en rasgo objetivo de carácter de Bolívar. No se propone reescribirlo como una descripción neutral."
+        }
+      },
+      "context": "Contexto original y transformaciones completas conservados en extraction_evidence y archivos locales citados.",
+      "historical_limits": null
+    },
+    {
+      "id": "HUN-03B",
+      "source": "hunefeldt",
+      "status": "proposed_for_training",
+      "proposed_label": "organizacion_consecuencias_republicanas",
+      "text": "Los intereses de los hacendados y los dueños de esclavos ganan la batalla. Los 1,500 negros alistados en 1821 en las filas patriotas, y otro tanto que fueron reclutados por La Serna, fueron llevados nuevamente a cultivar las tierras, en condiciones que no diferían de aquellas de 1820. El estado de caos, la necesidad de seguir produciendo, así como el temor a las actitudes de aquellos que durante cinco años habían aprendido a usar recursos en función propia, fueron argumentos suficientes para lograr en 1825 la ratificación de un Reglamento (en Junta de Hacendados, el 14 de octubre de 1825) que consolidaba la esclavitud: prohibiendo a los esclavos el uso de toda arma, la entrada a los pueblos próximos a la hacienda sin boletos firmados por el amo o el dueño de la hacienda, y dejaba enteramente a discreción del viejo o el nuevo amo, decidir si la manumisión previa a la leva era efectiva o no.",
+      "text_sha256": "a50ff1dc93bfbd727fbe3f35017a93bf003579f6b7184714be04d128ecc2fc3e",
+      "words": 157,
+      "tokens": 194,
+      "printed_pages": [
+        87
+      ],
+      "pdf_pages_1_based": [
+        17
+      ],
+      "extraction_evidence": {
+        "path": "outputs/source-diversity-v1/hunefeldt-03b-candidate.json",
+        "file_sha256": "7f711ff9d820aadb60a71c0a39ea396fefaf07ac8dbe19a6fe13b5f5db2271b2"
+      },
+      "parent": "HUN-03",
+      "segmentation": "HUN-03B selecciona las últimas tres oraciones continuas de HUN-03; las primeras53palabras se conservan como contexto. No incorporar padre y variante juntos.",
+      "context": "Contexto original y transformaciones completas conservados en extraction_evidence y archivos locales citados.",
+      "second_review": {
+        "decision": "apto",
+        "proposed_label": "organizacion_consecuencias_republicanas",
+        "alternative_label": "participacion_social_regional",
+        "label_reason": "La acción central es el retorno al trabajo y la consolidación de restricciones sociales al concluir el conflicto. El reclutamiento de 1821 y la autonomía ganada durante la guerra funcionan como antecedentes del resultado; no se desarrolla una operación militar ni principalmente una estrategia de participación de los grupos.",
+        "temporal_assessment": {
+          "autonomous_for_scope": true,
+          "internal_anchors": [
+            1820,
+            1821,
+            1825
+          ],
+          "explicit_date": "14 de octubre de 1825",
+          "reason": "El contraste entre condiciones de 1820, reclutamiento de 1821 y decisión de 1825 sitúa el argumento dentro de 1780–1842 sin necesitar el título del artículo.",
+          "limit": "Durante cinco años es una referencia relativa de la autora, no una cronología individual comprobada de cada persona."
+        },
+        "integrity_assessment": {
+          "autonomous_enough_for_bounded_argument": true,
+          "description": "Es un sufijo continuo de un párrafo original, desde una oración completa hasta el cierre original. Nombra propietarios y reclutados, compara 1820 con el retorno al cultivo y expone la decisión de 1825 y sus restricciones.",
+          "removed_reference": "Estos grupos no quedó identificado mediante una reescritura: salió de la unidad junto con la primera oración íntegra, que se conserva como contexto. La unidad elegida ya no exige resolver ese demostrativo.",
+          "necessary_argument_loss": "La oración retirada aporta el contraste entre proyectos de Riva Agüero y San Martín y la suspensión de la leva. Es relevante para la exposición mayor, pero no es indispensable para entender el resultado sobre esclavitud que describen las tres oraciones retenidas. No se retiró una negación o reserva de ese resultado.",
+          "remaining_links": "Ganan la batalla es un enlace retórico con el contexto, explicado dentro de la selección por el retorno al cultivo y las restricciones. Aquellos que durante cinco años alude ampliamente a personas con margen de acción durante el conflicto: no identifica por sí solo una banda concreta ni demuestra que todos los reclutados y bandoleros fueran el mismo grupo.",
+          "do_not_claim": "No describir la unidad como párrafo íntegro ni como reconstrucción completa de los proyectos de reclutamiento y de todos los actores."
+        },
+        "historical_limits": [
+          "Los recuentos de 1,500 y otro tanto se conservan como afirmaciones de Hünefeldt; esta revisión no los coteja con padrones originales.",
+          "Ratificación en Junta de Hacendados no equivale a demostrar aquí promulgación, alcance nacional o cumplimiento uniforme de una ley estatal.",
+          "La prohibición de armas y desplazamientos y la situación de manumisión se evalúan como contenido historiográfico atribuido; no constituyen prueba de consenso ni de verdad documental independientemente comprobada.",
+          "No convertir negros, esclavos, reclutados y bandoleros en categorías históricas idénticas para todos los individuos."
+        ]
+      },
+      "adjudication": "La unidad explica retorno a las haciendas y restricciones de1825; «ganan la batalla» es una formulación retórica, no una batalla militar. Se conserva la primera oración en el contexto. Son tres oraciones continuas del párrafo, no un párrafo íntegro."
+    }
+  ],
+  "coverage": [
+    {
+      "axis": "contexto_colonial_antecedentes",
+      "unit_ids": [
+        "CON2011-P111"
+      ],
+      "question": "¿Cómo podían las reglas y los gremios dificultar el crédito minero?",
+      "boundary": "Instituciones del virreinato; no presentar1786como inicio probado del declive."
+    },
+    {
+      "axis": "crisis_ideas_emancipadoras",
+      "unit_ids": [],
+      "not_admitted": [
+        "MAJ01"
+      ],
+      "question": "¿Cómo cambia la legitimidad de la monarquía?",
+      "boundary": "Majluf se retiene por procedencia; no prueba ausencia de crisis en train."
+    },
+    {
+      "axis": "participacion_social_regional",
+      "unit_ids": [
+        "HUN-02"
+      ],
+      "question": "¿Qué demandas propias distingue la autora entre los cimarrones?",
+      "boundary": "Actuación social; no generalizar robo ni una postura única a toda población afrodescendiente."
+    },
+    {
+      "axis": "campanias_conflictos_militares",
+      "unit_ids": [],
+      "not_admitted": [
+        "HUN-01"
+      ],
+      "question": "¿Cómo incidían esclavitud y propiedad en el reclutamiento?",
+      "boundary": "HUN-01 comparte foco social y logístico: mantener ambiguo, no imponer etiqueta para llenar el eje."
+    },
+    {
+      "axis": "liderazgos_diplomacia_proyectos",
+      "unit_ids": [],
+      "not_admitted": [
+        "MAJ02"
+      ],
+      "question": "¿Cómo se construye la legitimidad de un dirigente?",
+      "boundary": "Majluf en cuarentena; propuestas fiscales deCON127se mantienen en republicana por objeto dominante, no duplicar texto."
+    },
+    {
+      "axis": "organizacion_consecuencias_republicanas",
+      "unit_ids": [
+        "CON2011-P103-104",
+        "CON2011-P125",
+        "CON2011-P127",
+        "HUN-03B"
+      ],
+      "question": "¿Qué cambió y qué permaneció en recursos, tributación y trabajo?",
+      "boundary": "Distinguir consecuencias económicas, medidas, proyectos no aprobados y restricciones de una Junta; no atribuir vigencia nacional sin evidencia."
+    }
+  ],
+  "external_source_reservation": [
+    {
+      "author": "Natalia Sobrevilla Perea",
+      "year": 2021,
+      "title": "Las campañas a los puertos intermedios y la fase «peruana» de la independencia",
+      "journal": "Revista de Indias",
+      "volume_issue": "81(281)",
+      "pages": "115–141",
+      "license": "CC BY 4.0",
+      "editorial_url": "https://revistadeindias.revistas.csic.es/index.php/revistadeindias/article/view/1484",
+      "institutional_url": "https://kar.kent.ac.uk/101763/",
+      "doi_as_editorial_and_kent": "10.3989/revindias.2021.04",
+      "doi_variant_in_pdf": "10.3989/revindias.2021.004",
+      "metadata_discrepancy": "Kent usa título singular y etiqueta idioma inglés; el artículo publicado tiene título plural y texto español. No corregir silenciosamente.",
+      "inferred_coverage": "Campañas, movilización transregional, proyectos y dificultades estatales; no son recuentos de categorías.",
+      "relationships": [
+        "Cita Sala2011,CDIP,Miller1829,GarcíaCamba yPezuela; cotejar documentos concretos antes de admitir unidades como externas."
+      ],
+      "role": "reserved_external_evaluation_pool_do_not_use_for_training",
+      "examples_extracted": 0,
+      "final_split_assigned": false
+    },
+    {
+      "author": "Núria Sala i Vila",
+      "affiliation": "Universitat de Girona",
+      "year": 2011,
+      "title": "El Trienio Liberal en el Virreinato peruano: los ayuntamientos constitucionales de Arequipa, Cusco y Huamanga, 1820–1824",
+      "journal": "Revista de Indias",
+      "volume_issue": "71(253)",
+      "pages": "693–728",
+      "doi": "10.3989/revindias.2011.023",
+      "license": "CC BY 4.0",
+      "editorial_url": "https://revistadeindias.revistas.csic.es/index.php/revistadeindias/article/view/877/0",
+      "inferred_coverage": "Representación, elecciones, poderes locales y cambios institucionales; gobierno virreinal constitucional no equivale automáticamente a República.",
+      "relationships": [
+        "CitaCDIP tomoXXIIvol3,periódicos y documentación municipal; bibliografía común no equivale por sí sola a fuga.",
+        "Acceso a PDF completo no comprobado en este bloque."
+      ],
+      "role": "reserved_external_evaluation_pool_do_not_use_for_training",
+      "examples_extracted": 0,
+      "final_split_assigned": false
+    }
+  ],
+  "document_groups": [
+    {
+      "group": "contreras_training_family",
+      "role": "train_proposal",
+      "members": [
+        "Contreras2011",
+        "Contreras2010 posible versión",
+        "video train514f190e-5d01-497a-a6ef-648601cd8bdb"
+      ],
+      "evidence": "Contreras modera la mesa del video. No se comprobó qué filas corresponden a cada participante; no contar autor completamente nuevo.",
+      "url": "https://facultad-ciencias-sociales.pucp.edu.pe/eventos/comision-bicentenario-y-mas-historiografia-y-politica-en-la-independencia-del-peru/"
+    },
+    {
+      "group": "hunefeldt_fonseca",
+      "role": "same_training_side",
+      "members": [
+        "Hünefeldt1979",
+        "Fonseca2010",
+        "Miller1829/1975"
+      ],
+      "evidence": "Fonseca112nota19y125nota64 cita Hünefeldt. Misma obra Miller en ediciones distintas: no dividir citas iguales entreparticiones."
+    },
+    {
+      "group": "majluf_sanchez_original_test",
+      "role": "quarantine_majluf_from_training",
+      "members": [
+        "Majluf2013",
+        "Sánchez fuente de test",
+        "Generosidad cívica,Gazeta Ministerial de Chile25-08-1821"
+      ],
+      "evidence": {
+        "purpose": "mechanical shared-document screen, no evaluation content inspected",
+        "evaluation_source_pdf_sha256": "e77f15bceac41ed20dd2e91e4e6893fd12f1649d1bf59179a64353100f3bbf42",
+        "checks": {
+          "document_title_generosidad_civica": true,
+          "gazeta_issue_date_25_august_1821": true,
+          "author_majluf_cited": true,
+          "majluf_2013_exact_title_stem": true,
+          "majluf_2006_exact_title_stem": false,
+          "generosidad_and_date_within_300_chars": true
+        },
+        "limit": "Separate keyword matches do not prove that a single bibliographic entry or selected candidate repeats the same passage."
+      },
+      "decision": "Guardia conservadora de obra: título exacto deMajluf citado y documento común detectados mecánicamente. No afirma que los dos extractos seleccionados sean copias del test."
+    },
+    {
+      "group": "external_pool",
+      "role": "reserve_before_segmentation",
+      "members": [
+        "Sobrevilla2021",
+        "Sala2011"
+      ],
+      "evidence": "Sobrevilla cita Sala; no tratar ambos como dos bloques documentales plenamente independientes sin comprobar citas concretas."
+    }
+  ],
+  "rejected_external_author": {
+    "author": "Elizabeth Hernández García",
+    "reason": "Ponente del video de entrenamiento; su artículo no ofrece autoría nueva para ese contraste.",
+    "train_video": "https://www.youtube.com/watch?v=gZpo1PjY0ao"
+  },
+  "evaluation_design": {
+    "status": "source_reservation_and_protocol_proposal_not_a_frozen_evaluation_dataset",
+    "next_material": "Las dos obras reservadas: pilotar desarrollo externo explícitamente parcial; no extraer de ellas entrenamiento.",
+    "selection": "Antes de predicciones: delimitar unidades120–250palabras por argumento; conservar ambigüedad, citas y páginas; revisar por dos agentes con primeras etiquetas ocultas. No seleccionar por acierto/error del modelo.",
+    "leakage_guard": "Agrupar misma obra, versión y documento primario; revisar citas concretas entre autores. Reservar también variantes de títulos/DOI. Una bibliografía compartida no implica automáticamente copia.",
+    "freeze": "Guardar textos/etiquetas finales,lista de exclusiones,grupos,IDs,soportes reales ySHA256antes de cualquier experimento. Este bloque solo fija la reserva de obras; no simula un congelamiento de filas inexistentes.",
+    "size_rule": "El tamaño será el censo de unidades admisibles de las obras reservadas después de exclusiones; no fijar una cuota por palabra clave ni inventar soportes. Si una clase queda ausente se informa; no se rellena con entrenamiento.",
+    "metrics": "Comparar referencia y candidato en exactamente los mismos ejemplos nuevos: F1macro con lista de clases presentes declarada, F1/precision/recall/soporte por clase, confusiones y por obra. Si faltan clases, no presentar el macro parcial como macro integral de siete clases ni compararlo directamente con0.43766.",
+    "interpretation": "Con dos obras de una revista y concentración1820–1824, resultado exploratorio. Informar aciertos y desacuerdos, no estimar independencia o intervalos robustos por fuente con solo dos obras.",
+    "final_test": "Prueba final nueva: grupo separado aún no seleccionado ni congelado. No repartir al azar párrafos de estas mismas obras entre desarrollo y final. Test original intacto y no usado para elegir hiperparámetros.",
+    "later_experiment": "Una sola pregunta por comparación. Longitud192→384manteniendo datos/receta; alta de seis unidades manteniendo longitud/receta; normalización de pérdida por grupo manteniendo lo demás. No combinarlas ni entrenar en este bloque.",
+    "decision_rule": "Una ganancia exploratoria exige comparación pareada positiva y revisar categorías/obras que retroceden; no autoriza sustitución en producción. Antes de selección definitiva hacen falta cobertura y evaluación final separadas."
+  },
+  "review_limitations": [
+    "Revisión asistida por IA, no validación humana independiente.",
+    "Ceguera respecto de primera etiqueta, no respecto de notas y contexto del recolector.",
+    "HUN-01 tiene desacuerdo real; no se calculó Kappa ni se interpretó acuerdo como accuracy.",
+    "Las interpretaciones de autores y testimonios se conservan atribuidos; manuscritos originales no cotejados.",
+    "Las tres fuentes de extractos pertenecen a Histórica; diversidad autoral/temática no equivale a diversidad editorial.",
+    "Tercero de secundaria sigue siendo hipótesis; preguntas educativas propias vinculadas al mapa curricular existente, no contenidos MINEDU nuevos."
+  ],
+  "checks": {
+    "original_batch": {
+      "dataset": {
+        "path": "outputs/corpus-snapshot-v2/reviewed-export.json",
+        "sha256_before": "5de9ea1a4be3c9d628da51cdf1d07108f43e0ac8ee580acb483013c6dc27c35c",
+        "sha256_after": "5de9ea1a4be3c9d628da51cdf1d07108f43e0ac8ee580acb483013c6dc27c35c",
+        "total_rows": 814,
+        "split_counts": {
+          "val": 81,
+          "train": 596,
+          "test": 137
+        }
+      },
+      "method": {
+        "reused_functions": [
+          "normalize",
+          "grams",
+          "similarities"
+        ],
+        "module": "scripts/prepare_agn_pilot.py",
+        "module_sha256": "2c1cd9c93bb1f658c0f1d23046fba8589e130e2778038aadc6797df4d501f00a",
+        "normalization": "AGN normalize: casefold, NFKD, remove combining marks, regex word tokens, join with spaces.",
+        "grams": "Unique contiguous normalized word 5-grams.",
+        "thresholds_inclusive": {
+          "jaccard": 0.25,
+          "containment": 0.8
+        },
+        "containment_denominator": "Smaller of the two unique 5-gram sets.",
+        "substring": "Normalized whole-word-boundary substring, tested in both directions.",
+        "candidate_dataset_direction": "a=candidate; b=dataset row.",
+        "dataset_index": "0-based index in dataset.items; no evaluation text, labels or source IDs exported.",
+        "candidate_pair_count": 36,
+        "candidate_dataset_comparison_count": 7326,
+        "raw_replay": "Source-page character offsets checked before replaying documented transformations; no source correction."
+      },
+      "summary": {
+        "candidate_count": 9,
+        "dataset_overlap_alert_count": 0,
+        "candidate_pair_overlap_alert_count": 0,
+        "candidate_normalization_failures": [],
+        "over_token_limits": {
+          "192": 8,
+          "256": 5,
+          "384": 0
+        },
+        "mechanical_integrity_passed": true
+      },
+      "global_checks": {
+        "nine_candidates": true,
+        "unique_candidate_ids": true,
+        "dataset_counts_596_81_137": true,
+        "dataset_unchanged": true,
+        "candidate_and_raw_page_files_unchanged": true,
+        "all_raw_normalization_checks_passed": true
+      }
+    },
+    "incremental_variant": {
+      "candidate_id": "HUN-03B",
+      "word_count_whitespace": 157,
+      "tokens_with_special_tokens": 194,
+      "mechanical_integrity_passed": true,
+      "dataset_comparison_count": 814,
+      "candidate_pair_comparison_count_including_parent": 9,
+      "intentional_parent_overlap": {
+        "candidate_a": "HUN-03B",
+        "candidate_b": "HUN-03",
+        "expected_intentional_overlap": true,
+        "excluded_from_unrelated_candidate_alerts": true,
+        "alert_criteria_triggered": true,
+        "jaccard_5grams": 0.7439613526570048,
+        "containment_smaller_5gram_set": 1.0,
+        "exact_text": false,
+        "exact_normalized": false,
+        "a_is_normalized_word_substring_of_b": true,
+        "b_is_normalized_word_substring_of_a": false
+      }
+    },
+    "tokenizer": {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5",
+      "class": "BertTokenizerFast",
+      "transformers_version": "4.57.6",
+      "local_files_only": true,
+      "hf_hub_offline": true,
+      "truncation": false,
+      "padding": false,
+      "special_tokens_included_for_thresholds": true,
+      "asset_sha256": {
+        "config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+        "special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+        "tokenizer.json": "f0ee18fc8f95db74ce5c5c3a4070e0eb32a4b31bcde4865af63b1308e924c0c4",
+        "tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+        "vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+      },
+      "model_weights_loaded": false,
+      "predictions_performed": false
+    },
+    "bibliographic_screen": {
+      "purpose": "Mechanical bibliographic title-presence check only, no evaluation text/labels/predictions output or used for thematic choices.",
+      "results": [
+        {
+          "split": "val",
+          "source_file": ".corpus-downloads/guarisco_san_martin_espacio_indigena.pdf",
+          "file_sha256": "487d7a137072be42168b48529279b04e349945b8867edcd31929d6766fe8567b",
+          "known_work_title_presence": {
+            "contreras2011": false,
+            "hunefeldt1979": false,
+            "majluf2013": false,
+            "sala2011": false,
+            "sobrevilla2021": false
+          }
+        },
+        {
+          "split": "test",
+          "source_file": ".corpus-downloads/sanchez_celebracion_1821_chile.pdf",
+          "file_sha256": "e77f15bceac41ed20dd2e91e4e6893fd12f1649d1bf59179a64353100f3bbf42",
+          "known_work_title_presence": {
+            "contreras2011": false,
+            "hunefeldt1979": false,
+            "majluf2013": true,
+            "sala2011": false,
+            "sobrevilla2021": false
+          }
+        }
+      ],
+      "limits": [
+        "Title presence signals citation/dependence; does not prove selected units copied.",
+        "No match cannot rule out variants, paraphrases or a cited primary document.",
+        "The evaluation video has no local original checked in this screen."
+      ]
+    },
+    "proposed_units_over_192": 6,
+    "proposed_units_over_256": 4,
+    "proposed_units_over_384": 0,
+    "full_checks_local": [
+      "outputs/source-diversity-v1/mechanical-check.json",
+      "outputs/source-diversity-v1/hunefeldt-03b-check.json"
+    ]
+  },
+  "process_incident": "Una inspección inicial de la estructura imprimió incidentalmente una fila de validación al no excluir la claveitems. No se usó su contenido para seleccionar temas o etiquetas. Las inspecciones siguientes separarontrain y los controles de evaluación solo emitieron hashes/presencia de títulos/coincidencias mecánicas. Se conserva esta incidencia, no se afirma ceguera completa del agente principal.",
+  "academic_deliverables": "UnidadI eII y demostraciones siguen pendientes según el plan; no se sustituyen por este registro.",
+  "portability": "Este JSON conserva textos seleccionados,atribución,licencias y decisiones. PDFs,imágenes,raw/contexto completo y auxiliares permanecen enoutputs,excluido deGit; en otro equipo será necesario recuperar esos materiales para repetir todo el cotejo.",
+  "training_performed": false,
+  "model_weights_loaded": false,
+  "new_predictions": false,
+  "new_model_metrics": false,
+  "production_changed": false,
+  "local_evidence": [
+    {
+      "path": "outputs/source-diversity-v1/assemble-review.py",
+      "sha256": "de6f772443acc501325f7cc066994ffb0a82957e7202394aa4636dc90c48aec9",
+      "bytes": 17425
+    },
+    {
+      "path": "outputs/source-diversity-v1/build-majluf.py",
+      "sha256": "6e102522a73c39cc767043fa994ead5ce1148d9cabe3dd904eb5553bda73777b",
+      "bytes": 4471
+    },
+    {
+      "path": "outputs/source-diversity-v1/check-source-diversity.py",
+      "sha256": "08fe8f85a1ca1ef3fc1e9cbdabe15854bca07f6b99d167e76bfa69826268860f",
+      "bytes": 15485
+    },
+    {
+      "path": "outputs/source-diversity-v1/contreras-2011.pdf",
+      "sha256": "a142578bfcfaaf5fe7ed7613ca3f3bf5565a79456dd5cf23abbb4ed04f2f1a5a",
+      "bytes": 534664
+    },
+    {
+      "path": "outputs/source-diversity-v1/contreras-candidates-unlabelled.json",
+      "sha256": "d9f701af2a4202f431d28ce403739450ef17356999310ee517c572709cceb876",
+      "bytes": 32998
+    },
+    {
+      "path": "outputs/source-diversity-v1/contreras-dependencies.json",
+      "sha256": "bc3693a8fd9b1d06eec30abb3a0cc491a6759cb87a7112176a8cf68e2e98fc2b",
+      "bytes": 4010
+    },
+    {
+      "path": "outputs/source-diversity-v1/contreras-editorial-evidence.json",
+      "sha256": "7052dd3f70adfcc3cf6a062bd96b47b2693f907938e910060ae91c2c9e7df742",
+      "bytes": 578
+    },
+    {
+      "path": "outputs/source-diversity-v1/contreras-editorial.html",
+      "sha256": "3d519c2b436d09bb9248f2aaf6a42f5622dd0999b6ea47bfe8c54df93ca3c532",
+      "bytes": 38082
+    },
+    {
+      "path": "outputs/source-diversity-v1/contreras-first-review.json",
+      "sha256": "4a5dc237ddbb4d3a978377d6bb92fd5ea8bbe43d1dd5d9a4bc90e7a91d0be3a0",
+      "bytes": 2979
+    },
+    {
+      "path": "outputs/source-diversity-v1/contreras-page-11.png",
+      "sha256": "7cc4dda26b68d0d45d121f81816794c7995c910f7d958d38ea2e8124debe488e",
+      "bytes": 202215
+    },
+    {
+      "path": "outputs/source-diversity-v1/contreras-page-25.png",
+      "sha256": "77eae48466ae14ed596a37660c091afdca5b717ee290bcc824a7413fe3f29231",
+      "bytes": 199468
+    },
+    {
+      "path": "outputs/source-diversity-v1/contreras-page-27.png",
+      "sha256": "9b9b9739d6fdd22003a16cb3c7a8522b6628c81247dc484b44a10d749d5ba889",
+      "bytes": 208430
+    },
+    {
+      "path": "outputs/source-diversity-v1/contreras-page-3.png",
+      "sha256": "e55b5594d224c850fde705fba79a2e42c5deec044bbf740f2382868568f5f347",
+      "bytes": 205108
+    },
+    {
+      "path": "outputs/source-diversity-v1/contreras-page-4.png",
+      "sha256": "6c17fe52f2a22ed8458455f2a0986fd21f5b20db9f4dd9412c65ee5b89d35ae7",
+      "bytes": 205642
+    },
+    {
+      "path": "outputs/source-diversity-v1/contreras-prepare.py",
+      "sha256": "c768b82b4ac809fd3e848e652c2aa0c35d3e57c748a6adf2676749d13911bc19",
+      "bytes": 19599
+    },
+    {
+      "path": "outputs/source-diversity-v1/contreras-raw-pages.json",
+      "sha256": "4c270142c37579e8f580c1d5e4176f45153c12b22387ed9728fe573232921792",
+      "bytes": 78017
+    },
+    {
+      "path": "outputs/source-diversity-v1/contreras-second-review.json",
+      "sha256": "8673e86ad5c5a1105c8d947200a75f3270f291c60942e7a380adbecaf3d863d5",
+      "bytes": 13429
+    },
+    {
+      "path": "outputs/source-diversity-v1/contreras-source.json",
+      "sha256": "f551eb8bfae9b6dcbd88f214d207785cda50ec3c53152bbd6f57de173e634f74",
+      "bytes": 3228
+    },
+    {
+      "path": "outputs/source-diversity-v1/contreras-verification.json",
+      "sha256": "ae05ef35f166b4d39f1a67ef269c43979887bf87cba211fb60530965afa03565",
+      "bytes": 2481
+    },
+    {
+      "path": "outputs/source-diversity-v1/evaluation-work-title-screen.json",
+      "sha256": "4fcb254ec49aca1831df5768b4504414b1226b20ab6aeecd40448114658336a6",
+      "bytes": 1265
+    },
+    {
+      "path": "outputs/source-diversity-v1/hunefeldt-03b-candidate.json",
+      "sha256": "7f711ff9d820aadb60a71c0a39ea396fefaf07ac8dbe19a6fe13b5f5db2271b2",
+      "bytes": 40046
+    },
+    {
+      "path": "outputs/source-diversity-v1/hunefeldt-03b-check.json",
+      "sha256": "95659ccbb2cd0a36ed4da83189e1245e8dace0176b9b1d37f75a27ae8f7709c8",
+      "bytes": 12001
+    },
+    {
+      "path": "outputs/source-diversity-v1/hunefeldt-03b-second-review.json",
+      "sha256": "ac9067a4bc352cc6ddaa0143d2cc372700cf5513a16d7357576bc3a311357972",
+      "bytes": 5990
+    },
+    {
+      "path": "outputs/source-diversity-v1/hunefeldt-1979.pdf",
+      "sha256": "aa49530a2481d4172b1131042cbcee532093dac2c261443a3204a58825ffd1bb",
+      "bytes": 967572
+    },
+    {
+      "path": "outputs/source-diversity-v1/hunefeldt-build.py",
+      "sha256": "aa4fdfb0342bb1276791bcdc027040935dbce56f223ae114bf43fdd592dfaa66",
+      "bytes": 14405
+    },
+    {
+      "path": "outputs/source-diversity-v1/hunefeldt-candidates-blind.json",
+      "sha256": "89d29972bcef0b8ccecc1de58f33c8d619cff371ca5ccc2c64fb64771f5aeee0",
+      "bytes": 55763
+    },
+    {
+      "path": "outputs/source-diversity-v1/hunefeldt-first-review.json",
+      "sha256": "165de3669f80fa0124c4d06c00c96c70d3b4558400d00da37ffe78fc0e4ccdef",
+      "bytes": 2382
+    },
+    {
+      "path": "outputs/source-diversity-v1/hunefeldt-page-74.png",
+      "sha256": "74fee1dfc86d497cb440c9ca0d85a8de89347fc36e3f377ce087a195b215f361",
+      "bytes": 318047
+    },
+    {
+      "path": "outputs/source-diversity-v1/hunefeldt-page-87.png",
+      "sha256": "5361414c3922adf548632608deaca13c56506b13885f34f83be8897421499e8d",
+      "bytes": 302491
+    },
+    {
+      "path": "outputs/source-diversity-v1/hunefeldt-page-88.png",
+      "sha256": "2bcc376091ddf9edc09bf76a7f46e854d55974c5a44fe4c0ebbe3d87a655ab72",
+      "bytes": 281665
+    },
+    {
+      "path": "outputs/source-diversity-v1/hunefeldt-raw-pages.json",
+      "sha256": "d3da50ba4857eba2f1276409d2e8d8e289704a2f67d26393fdf3912e54276b34",
+      "bytes": 58503
+    },
+    {
+      "path": "outputs/source-diversity-v1/hunefeldt-second-review.json",
+      "sha256": "56f52b95923e64dc3c92702da527d44041f3b4ebcff97d0f1d841a66528a7dd8",
+      "bytes": 9240
+    },
+    {
+      "path": "outputs/source-diversity-v1/hunefeldt-source.json",
+      "sha256": "9f4644f4859fdf448ce86431e908797191078a140aa3d8066c5d48745bc4b789",
+      "bytes": 4792
+    },
+    {
+      "path": "outputs/source-diversity-v1/inputs-before.json",
+      "sha256": "907dcfd18a8f5e66c4db0442a352baab4332bd3aff2719ccf39311eb9c2106d9",
+      "bytes": 1033
+    },
+    {
+      "path": "outputs/source-diversity-v1/majluf-2013.pdf",
+      "sha256": "3f7e2fc7003792051378a544b20e59daee637844429d8dcae54003ee24c02ca7",
+      "bytes": 834672
+    },
+    {
+      "path": "outputs/source-diversity-v1/majluf-candidates-blind.json",
+      "sha256": "9c221cea07d533759e04ae4e1586aacada6a01397b72d966229c2184179fd649",
+      "bytes": 6713
+    },
+    {
+      "path": "outputs/source-diversity-v1/majluf-editorial.html",
+      "sha256": "4a5f789558addeff1edec3a936a6ba002c33587238e1dbe9c8bc69cb8693dba5",
+      "bytes": 36072
+    },
+    {
+      "path": "outputs/source-diversity-v1/majluf-evaluation-document-screen.json",
+      "sha256": "c429b3ca151b646d69de00e93a373ba947e34a5778e62dcda0986f45fe2cdc08",
+      "bytes": 615
+    },
+    {
+      "path": "outputs/source-diversity-v1/majluf-first-review.json",
+      "sha256": "ac23f6575247eef25dc34ca8516693e6c47684b347ce204d202220fb97f16f3d",
+      "bytes": 874
+    },
+    {
+      "path": "outputs/source-diversity-v1/majluf-page-25.png",
+      "sha256": "41a8298dbb33cdebe2845c17b30cfceb95179ae71443ee10017bd1fe61a28959",
+      "bytes": 86296
+    },
+    {
+      "path": "outputs/source-diversity-v1/majluf-page-26.png",
+      "sha256": "04dcd110a890a777e774877a17f84389f5822b4fb213c731d766c15e5af3c482",
+      "bytes": 90263
+    },
+    {
+      "path": "outputs/source-diversity-v1/majluf-page-4.png",
+      "sha256": "ca1d8831ed2398066731aca9dcef3f1db0ce8baa749acb2e1513b296dffb2979",
+      "bytes": 93076
+    },
+    {
+      "path": "outputs/source-diversity-v1/majluf-page-5.png",
+      "sha256": "aea8be84e3ebd0d29608f57868379831e16599d0f7c7b865b3a14178db7d8923",
+      "bytes": 87373
+    },
+    {
+      "path": "outputs/source-diversity-v1/majluf-pages.json",
+      "sha256": "079838b9036f631a0bc91a612d6b89c357e8e5efa02bdaf52520daafad0a4c26",
+      "bytes": 81230
+    },
+    {
+      "path": "outputs/source-diversity-v1/majluf-second-review.json",
+      "sha256": "8cc3e3de01e9c8bec10542ce365fecaf0ec7dd00f25f7d68fb68e9eb8c48c5c6",
+      "bytes": 6798
+    },
+    {
+      "path": "outputs/source-diversity-v1/majluf-source.json",
+      "sha256": "ec8ecb1a14045568d9d5e86b117809d0d08cca10addcc210ab4966ef1498c192",
+      "bytes": 1808
+    },
+    {
+      "path": "outputs/source-diversity-v1/mechanical-check.json",
+      "sha256": "ba36577b01c77bbca8363521adcc1c5f91db6a1d8f0c66717ea0a75c3d3b90e6",
+      "bytes": 45236
+    }
+  ]
+}

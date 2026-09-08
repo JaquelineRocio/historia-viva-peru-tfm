@@ -17,6 +17,11 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Validación de caracteres | Comprobar la variante elegida en los 81 ejemplos originales | F1 macro 0.23521 frente a 0.28987 de palabras; 24 frente a 25 aciertos. Variante descartada para sustituir al TF-IDF de referencia; BETO y producción intactos |
 | Preparación de BETO revisado | Verificar recursos y fijar la comparación local | GPU, tokenizador offline, dependencias y artefactos previos comprobados. Receta ganadora conservada y usada en la comparación posterior |
 | BETO con datos revisados | Comparar con el checkpoint académico anterior | Entrenamiento local completado: F1 validación 0.43766 → 0.32951; 37 → 33 aciertos de 81. Candidato no seleccionado para sustitución; producción intacta |
+| Control de reproducción BETO | Reentrenar los datos originales con la misma receta | Tres épocas con los mismos F1 originales y las 81 predicciones del checkpoint reproducidas; F1 0.43766. Control local completado, sin test ni despliegue |
+| Preparación del lote histórico v2 | Recuperar unidades y comprobar su aptitud antes de entrenar | 3 propuestas de reparación, 8 candidatos nuevos condicionados y 1 contexto; ninguna fila incorporada. Medición offline: 443/598 textos de train superan 192 tokens; sin mejora del modelo demostrada |
+| Cierre de las reparaciones v2 | Delimitar reemplazos, residuales y dos excepciones de longitud | Propuesta comprobada: 9 filas → 7 unidades; dos excepciones nominales de 109/114 palabras en la guía. Simulación: 596 train con reparaciones, 597 si además se añade Francisca. Ningún dataset modificado |
+| Copia experimental del corpus v2 | Aplicar únicamente las reparaciones revisadas | Copia local creada: 596 train, 81 validación y 137 test. Siete textos reemplazados y dos filas retiradas; otras 807 filas intactas. Francisca excluida; sin entrenamiento ni cambios en producción |
+| Diversidad de fuentes y reserva de evaluación | Preparar aportes y separar obras relacionadas | Seis unidades propuestas de Contreras/Hünefeldt; un ambiguo, un original conservado y dos textos de Majluf en cuarentena. Dos obras reservadas para evaluación, sin ejemplos extraídos. Dataset intacto; los seis textos propuestos superan 192 tokens |
 | Diagnóstico de cobertura | Orientar el siguiente cambio de datos | Concentración por fuente, rasgos de transcripción y fragmentos incompletos identificados. Muestra de 21 filas de train revisada; prioridad: cuatro filas de Villanueva. Sin modificar etiquetas |
 | Límites de Villanueva | Recuperar argumentos cortados entre páginas | Seis unidades delimitadas y cotejadas; dos quedan como contexto. Continuaciones ya presentes en filas 10/637 identificadas. Propuesta local, sin aplicar |
 | Reparación de Villanueva | Preparar un reemplazo sin duplicar continuaciones | Cuatro candidatos revisados, cuatro unidades de contexto y seis originales archivados; V02 ambiguo. Extracción local verificada, dataset sin modificar |
@@ -1220,7 +1225,7 @@ entrenamiento ni cambios en producción. Siguiente bloque después del commit:
 implementar y verificar el ejecutor de comparación solo en validación, y ejecutar
 el ajuste local si la comprobación de recursos sigue siendo satisfactoria.
 
-## Bloque actual: BETO entrenado con los datos revisados
+## BETO entrenado con los datos revisados — registrado en `e788d3a`
 
 [compare_beto_validation.py](../scripts/compare_beto_validation.py) implementa
 la comparación limitada a validación. Coteja la preparación y los archivos,
@@ -1278,6 +1283,656 @@ Siguiente bloque después del commit: reproducir el entrenamiento de la referenc
 original con esta misma receta y entorno, limitado a validación, para comprobar
 su reproducibilidad antes de atribuir la caída a los cambios de datos. No iniciar
 otra búsqueda de hiperparámetros ni descartar las revisiones históricas por su F1.
+
+## Control de reproducción de BETO — completado localmente, pendiente de Git
+
+Se añadió `--dataset reference` al mismo ejecutor para entrenar exclusivamente
+las **596 filas originales**, conservando su orden y toda la receta anterior.
+La opción por defecto sigue usando los datos revisados. Ambas opciones cotejan
+el dataset correspondiente con su huella registrada antes de entrenar.
+
+El [control local](../artifacts/experiments/beto-reference-control-v1/report.json)
+reprodujo los resultados originales:
+
+| Época | F1 original | F1 del control |
+|---|---:|---:|
+| 1 | 0.32406 | 0.32406 |
+| 2, seleccionada | 0.43766 | 0.43766 |
+| 3 | 0.31839 | 0.31839 |
+
+Las **81 predicciones de validación coinciden** con las del checkpoint académico:
+37 aciertos, mismas métricas por clase y misma matriz de confusión. El candidato
+guardado también reprodujo sus propias predicciones al recargarlo. Esto demuestra
+reproducción de estos resultados en este equipo; no igualdad de todos los pesos
+ni determinismo garantizado en otro entorno.
+
+El BETO revisado sigue por debajo: **0.32951 frente a 0.43766**, con idéntica
+receta, versiones de dependencias y evaluación. El control no detectó un fallo
+de reproducción que explique esa diferencia. Los cambios de textos, etiquetas,
+cantidad y orden de filas se aplicaron juntos: no permite culpar a una corrección
+concreta ni invalidar su fundamento histórico. Se conservan ambos datasets y
+todos los modelos; no se selecciona el candidato revisado para sustitución.
+
+Verificación: métricas recalculadas desde las predicciones, archivos de entrada
+y candidatos cotejados por hash, evaluación congelada intacta y **19 casos de
+rechazo aprobados**. Incluyen dataset equivocado, alteración del orden o de
+train/val/test, receta diferente y salidas que sobrescribirían archivos. La
+prueba con funciones simuladas comprueba que test no llega al ajuste ni a la
+predicción; la ejecución real solo utilizó train/val. No se repitió el ajuste
+durante la verificación ni se ejecutó el control automático de promoción.
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/compare_beto_validation.py --readiness artifacts/reviews/beto-readiness-v1.json --dataset reference --output outputs/beto-reference-control-reproduccion
+```
+
+Estado: código implementado y control ejecutado localmente. Pesos, predicciones
+y comprobaciones en `outputs/beto-reference-control-v1/`, excluidos de Git.
+Sin descargas, uso de Modal, inferencia de test ni cambios en producción.
+
+Siguiente bloque después del commit: consolidar los experimentos y sus límites
+en el informe existente de Unidad I, sin seguir ajustando sobre esta misma
+validación. Después, retomar las demostraciones funcionales y de mantenimiento
+pendientes del plan.
+
+## Mapa curricular e histórico — bloque completado
+
+**Resultado: conservar 1780–1842 y las siete etiquetas; preparar un lote transversal
+guiado por cobertura, procedencia y unidades argumentales completas.** No hay
+entrenamiento, nuevas etiquetas aplicadas, migración ni cambios en producción en
+este bloque. La preparación del lote requiere la confirmación de la autora.
+Este bloque, solicitado después del control, pasa a ser la prioridad del plan;
+la consolidación del informe y las demostraciones académicas siguen pendientes.
+
+### Evidencia y alcance de la auditoría
+
+Todos los archivos solicitados existen. Se revisaron el informe de Unidad I, la
+guía, los dos snapshots, los informes de BETO y generalización, los registros de
+revisión y los dos módulos de entrenamiento/comparación. No se encontró un
+`AGENTS.md` en el repositorio ni en sus directorios ascendentes consultados.
+Git ya mostraba cambios de la autora en este README y en
+`scripts/compare_beto_validation.py`, y el directorio del control BETO sin registrar.
+Se conservaron. El export de Villanueva está disponible aquí y excluido de Git:
+su presencia no garantiza disponibilidad en otro equipo ni despliegue.
+
+Los [recuentos y hashes](../artifacts/reviews/curricular-coverage-v1.json) se
+recalcularon sobre todas las filas. La lectura temática abarcó **35 filas de train**:
+una por cada combinación existente de fuente y categoría histórica (33), más dos
+negativos. Dentro de cada combinación se eligió el primer SHA-256 del texto; los
+negativos corresponden a los dos primeros identificadores de fuente ordenados.
+Los índices y hashes permiten identificar exactamente la muestra. Las etiquetas
+eran visibles: es revisión asistida por IA, no validación humana independiente ni
+estimación de la frecuencia de errores. Se aprovecharon también las revisiones
+anteriores; no se suman sus muestras como si fueran observaciones independientes.
+
+| Categoría existente | Train congelado | Train revisado | Fuentes en revisado | Concentración comprobada en revisado |
+|---|---:|---:|---:|---|
+| `contexto_colonial_antecedentes` | 70 | 71 | 4 | Basadre: 52/71 (73.2%) |
+| `crisis_ideas_emancipadoras` | 59 | 60 | 5 | O'Phelan y video: 47/60 (78.3%) |
+| `participacion_social_regional` | 83 | 83 | 8 | Fonseca y Huamanga: 47/83 (56.6%) |
+| `campanias_conflictos_militares` | 89 | 88 | 5 | Basadre: 70/88 (79.5%) |
+| `liderazgos_diplomacia_proyectos` | 93 | 94 | 6 | Basadre y O'Phelan: 64/94 (68.1%) |
+| `organizacion_consecuencias_republicanas` | 101 | 101 | 5 | Basadre y Orrego: 86/101 (85.1%) |
+| `no_relevante` | 101 | 101 | 7 | O'Phelan y video: 56/101 (55.4%) |
+| **Total** | **596** | **598** | **9 distintas** | 244/598 filas atribuidas a Basadre (40.8%) |
+
+Se conservan **81 de validación y 137 de test**, idénticas y en el mismo orden
+entre versiones. Train revisado contiene 526 filas PDF y 72 de un solo video.
+Hay cero coincidencias de `resourceId` y cero textos normalizados idénticos entre
+particiones. Esto no descarta reediciones, paráfrasis ni documentos primarios
+compartidos. El duplicado de train permanece: índices **709/737** del export
+revisado, equivalentes a 718/746 del congelado. No son los índices del diagnóstico
+anterior de 600 filas, que no debe reutilizarse como recuento de la versión actual.
+
+**Procedencia y extracción.** Ninguna de las 598 filas lleva página/minuto dentro
+del propio registro. Los metadatos adicionales de `added_rows_provenance` permiten
+vincular 11 textos por hash con sus localizadores; existen además localizaciones
+parciales en revisiones anteriores. No significa que las otras 587 sean imposibles
+de rastrear, sino que falta completar esa vinculación. Basadre conserva atribución
+del inventario, pero su edición y PDF no se recuperaron; el video carece de audio
+y minutos cotejados. O'Phelan, Fonseca, Villanueva, Orrego, Huerta y AGN tienen
+PDF locales; no se localizó aquí un PDF de Huamanga en `.corpus-downloads/`.
+
+En el revisado hay **86 PDF con menos de 120 palabras**: 53 negativos y 33
+históricos; ninguno supera 250 con el recuento por espacios. Son alertas, no
+exclusiones automáticas. La muestra contiene finales cortados (608, 67, 288),
+notas mezcladas (161, 278) y biografías sin sujeto explícito (750, 687).
+El código de BETO trunca a 192 **tokens**, distintos de palabras: un argumento
+completo para el lector puede quedar cortado para el modelo. No se midió aquí la
+proporción tokenizada ni se atribuye a esto la caída de F1.
+
+**Resultados existentes.** El control reproduce F1 0.43766 y las 81 predicciones;
+el revisado obtiene 0.32951. Ideas permanece en F1 0, pero también hay variaciones
+en otras clases: militar 0.75 → 0; liderazgos 0.33333 → 0.57143 (solo cuatro casos
+de validación en cada una). Nueve de los 15 casos de ideas se confundían con
+organización en la referencia. La validación contiene únicamente el artículo de
+Guarisco y ya se reutilizó. La evaluación interna TF-IDF dejando fuera fuentes
+obtuvo 0.32372; los caracteres mejoraron ese diagnóstico a 0.33909, pero empeoraron
+la validación a 0.23521 frente a 0.28987. Ninguno de esos resultados demuestra
+mejora de BETO ni aísla una causa: variaron textos, etiquetas, cantidad y orden.
+
+### Fundamento curricular y público todavía provisional
+
+**Oficial.** Se consultó el [Programa curricular de Educación Secundaria del
+MINEDU](https://www.minedu.gob.pe/curriculo/pdf/programa-curricular-educacion-secundaria.pdf),
+documento con RM 649-2016-MINEDU, pp. **45 y 48**, cotejadas visualmente en el PDF
+oficial descargado. La competencia es «Construye interpretaciones históricas»:
+interpretar críticamente fuentes diversas, comprender el tiempo histórico y
+elaborar explicaciones sobre procesos históricos. En tercero se trabaja desde
+la organización virreinal hasta el surgimiento republicano; se comparan fuentes,
+causas, consecuencias, simultaneidades, cambios y permanencias. En cuarto aparece
+el primer militarismo. El MINEDU no impone nuestras seis categorías ni el corte
+exacto de 1842. No se confunde este documento con la versión preliminar de junio
+de 2016, también accesible en su web, cuya redacción es diferente.
+
+**Interpretación curricular.** Tercero es una hipótesis bien sustentada para el
+núcleo de independencia, con mediación docente. La formación republicana hasta
+1842 puede funcionar como articulación con cuarto; no se presenta todo el alcance
+como contenido exclusivo de tercero. Falta confirmar con la autora el grado,
+el contexto de uso y la dificultad de lectura antes de adaptar definitivamente
+la aplicación. Esto no condiciona la auditoría histórica del corpus.
+
+**Propuesta propia.** Para cada eje, ofrecer un fragmento con autor, fecha y
+localizador, una fuente de contraste y una pregunta que exija explicar una
+relación histórica. Evaluar si el estudiante cita evidencia, sitúa el proceso y
+justifica una causa o permanencia. Clasificar correctamente un texto no demuestra
+aprendizaje. Estas actividades son diseños del proyecto, no desempeños copiados
+del MINEDU ni funcionalidades nuevas ya implementadas.
+
+### Mapa de los seis ejes
+
+Las presencias siguientes están comprobadas **en muestras**, con índices del
+export revisado (base cero). Describen contenido, sin aprobar automáticamente su
+etiqueta. Las necesidades son insuficiencias de evidencia utilizable o diversidad;
+no se declara ausente un asunto por no encontrar una palabra.
+
+| Eje | Propósito educativo y pregunta histórica propia | Representado en train observado | Insuficiente o pendiente de comprobar | Ejemplos y fuentes prioritarios |
+|---|---|---|---|---|
+| Antecedentes coloniales | Explicar condiciones y distinguirlas de detonantes: ¿por qué las cargas y jerarquías generaban respuestas distintas? | Reformas y acceso a cargos (608); circuitos textiles de Huamanga, 1780–1830 (67); esclavización y venta de 1805, AGN01 (805). | Diversidad escasa fuera de Basadre; argumentos fiscales cortados. Cobertura sistemática de tributo, mita, mercados y diferencias sociales todavía sin inventario por pasaje. No confundir contexto regional con fronteras nacionales actuales. | Recuperar unidad fiscal de O'Phelan y unidad económica de Huamanga; AGN01 ya está incorporado y sirve de contraste, no de nueva fila. Excluir del lote los tramos de O'Phelan anteriores a 1780 que no constituyan contexto necesario del proceso delimitado. |
+| Crisis e ideas | Comparar legitimidades: ¿cómo se justificó obedecer al rey, reformar la monarquía o romper con ella? | Manifiestos y despotismo (185); lectura de literatura política, HUE03 (810); argumentación sobre libertad y orden (751). | No está acreditada una secuencia completa y bien localizada de crisis de 1808, soberanía, Cádiz y censura; 47/60 dependen de dos fuentes. El video mezcla historiografía posterior (385). | Contrastar HUE01–04 existentes con Martínez Riaza o Hampe sobre imprenta/Cádiz; localizar un argumento de soberanía de 1808–1814. No duplicar HUE03/HUE04 ni forzar como ideas toda mención de Constitución. |
+| Participación social y regional | Explicar decisiones de actores: ¿por qué comunidades próximas apoyaron bandos distintos y qué intentaban conseguir? | Alianzas de caciques (591); divergencia Huanta/Huamanga (348); reclutamiento indígena y afrodescendiente (765); cofradía de negros libres en 1834, AGN02 (806); tierras comunales (36). | Ocho fuentes no prueban amplitud territorial. No se cuantificó cobertura del norte, Amazonía, mujeres ni agencia afrodescendiente; AGN aporta un solo caso social. Hay opiniones historiográficas, no testimonios directos, en 46/679. | Recuperar motivaciones regionales en Huamanga/Fonseca; contrastar agencia y coerción. Examinar Arguedas Pinasco sobre mujeres/rabonas, conservando la perspectiva mediada por Flora Tristán. AGN02 conserva fecha en contexto y no se duplica. |
+| Campañas y conflictos | Relacionar espacio, recursos y resultados: ¿cómo condicionaron abastecimiento, terreno y guerrillas el curso de la guerra? | Maniobra y munición de 1829 (549); confiscaciones, deserciones y represión de 1814–1815 (324); estrategia guerrillera junto con discusión de fuentes (161). | 79.5% depende de Basadre. Falta comprobar equilibrio entre guerras de independencia y conflictos republicanos; los recuentos por etiqueta no dicen cuántos ejemplos completos hay de Junín, Ayacucho, campañas del sur o del norte. | Fonseca pp. 117–118 para estrategia y unidades completas; localizar abastecimiento o financiamiento en fuente distinta de Basadre. No añadir relatos redundantes de batallas ni etiquetar militar una reflexión general sobre violencia (699) sin contexto. |
+| Liderazgos, diplomacia y proyectos | Comparar alternativas y restricciones: ¿qué Estado se propuso y cómo se buscó hacerlo viable? | Crítica bolivariana al diseño constitucional (645); organización atribuida a Otero (63); alianzas políticas en transcripción (683); caudillismo (626); reparación V04 de Villanueva ya incorporada. | Algunas unidades mezclan actuación personal, instituciones y grupos. Falta localizar contrastes completos entre monarquía, república y proyectos de unión/confederación; escasez documental diplomática no cuantificada. | Villanueva p. 428 como referencia ya revisada; una misión de reconocimiento o negociación en la colección oficial Misiones peruanas, una vez verificada edición/página/reutilización. No convertir la mera presencia de San Martín o Bolívar en criterio. |
+| Organización y consecuencias republicanas | Contrastar norma y experiencia: ¿qué cambió con la República y qué relaciones persistieron? | Elección presidencial y predominio del Congreso (7); mercado regional y continuidad social (199); militarismo y fragmentación (288); organización/ciudadanía en V03/V06/V07 existentes. | 85.1% proviene de Basadre/Orrego. Hay recortes que alcanzan 1845 o cincuenta años republicanos (288/469), sin tramo autónomo de 1780–1842 delimitado. La economía sí está representada, pero falta continuidad y cobertura comprobada por subtema. | Recuperar Orrego pp. 191–192 sobre minería y agricultura hasta 1840; contrastar ciudadanía constitucional con condiciones sociales. Constitución de 1823, arts. 17 y 22–23, como pista para cotejar norma, vigencia y práctica. |
+
+No se crean subetiquetas para economía, género, región o tiempo. Pueden
+registrarse como dimensiones descriptivas de la revisión, sin cambiar el esquema
+del dataset. Un mismo hecho puede dar lugar a unidades diferentes según la
+pregunta dominante; no a copias del mismo texto con etiquetas contrapuestas.
+
+### Fronteras operativas propuestas, sin modificar la guía ni adjudicar filas
+
+Los siguientes son **ejemplos didácticos de criterios**, no citas recuperadas ni
+texto apto para entrenamiento. La decisión final exige el pasaje y su contexto.
+
+| Frontera | Ejemplo de criterio positivo | Contraejemplo / otra categoría |
+|---|---|---|
+| Colonial ↔ ideas | Describir cómo se cobra el tributo y quién soporta la carga: colonial. | Argumentar quién tiene soberanía tras la crisis monárquica: ideas; la fecha temprana no basta para colonial. |
+| Ideas ↔ proyectos | Defender legitimidad, derechos o libertad de imprenta: ideas. | Diseñar o negociar una monarquía, república o unión concreta: proyectos. Un liberalismo mencionado al describir órganos ya establecidos puede ser organización. |
+| Social ↔ militar | Explicar por qué una comunidad negocia apoyo o resiste una leva: social. | Describir posición, maniobra, abastecimiento o resultado bélico: militar, aunque participen indígenas o mujeres. |
+| Militar ↔ diplomacia | Relatar operaciones y términos operativos de rendición: militar. | Negociar reconocimiento, paz, indemnizaciones o alianzas: diplomacia, aunque ocurra durante una guerra. |
+| Proyectos ↔ organización | Defender una alternativa futura de gobierno: proyectos. | Explicar competencias constitucionales, aplicación de leyes o funcionamiento fiscal: organización. Un proyecto fallido no equivale a una institución vigente. |
+| Social ↔ organización | Reconstruir acciones e intereses de cofradías/comunidades: social. | Explicar reglas generales de ciudadanía, propiedad o contribución y sus consecuencias: organización. |
+| Histórico ↔ no relevante | Bibliografía aislada, moderación del evento o discusión contemporánea sin argumento histórico del periodo: negativo. | Una nota con evidencia sustantiva o interpretación posterior sobre 1780–1842 no es negativa automáticamente. Distinguir fecha del hecho y fecha de publicación. |
+
+Para unidades mixtas: recuperar primero la página anterior/siguiente o audio,
+resumir la tesis en una frase de revisión y decidir por su función explicativa.
+Si pueden separarse dos argumentos completos, proponer resegmentación conservando
+original y relación; si no, mantener el caso **ambiguo fuera del lote candidato**.
+`ambiguo` es estado de revisión, no una octava etiqueta. No usar la predicción
+ni el F1 para resolver la interpretación. Los casos 768 (ideas en colonial),
+626 (caudillismo entre proyectos e instituciones), 161 (estrategia e historiografía)
+y 288/469 (alcance temporal) quedan como señales, no correcciones aprobadas.
+
+### Fuentes con prioridad y condiciones de uso
+
+Se priorizan las descargas existentes. Acceso público no se interpreta como
+licencia abierta. Los localizadores siguientes identifican zonas para recuperar
+o contrastar; no certifican candidatos inéditos ni independientes de evaluación.
+
+| Fuente y procedencia | Localizador / aportación | Reutilización y estado |
+|---|---|---|
+| Scarlett O'Phelan, 1985, Histórica 9(2), 155–191, [ficha editorial](https://revistas.pucp.edu.pe/index.php/historica/article/view/8222) | pp. 188–189, PDF 34–35: fiscalidad y programas; recuperar contexto al principio/final. | CC BY 4.0 visible. PDF local; ya es fuente train. Solo pasajes necesarios y no duplicados; distinguir interpretación de autora y documentos citados. |
+| Juan Fonseca Ariza, 2010, Histórica 34(1), 105–128, [ficha editorial](https://revistas.pucp.edu.pe/index.php/historica/article/view/95) | pp. 115–118: participación, guerrillas y estrategia; pp. 108–109 ya reparadas. | CC BY 4.0 visible. PDF local, train; la CDIP citada impide tratar cada cita como fuente independiente. |
+| María Claudia Huerta Vera, 2020, Histórica 44(1), 125–158, [ficha editorial](https://revistas.pucp.edu.pe/index.php/historica/article/view/23275) | pp. 138, 140–141 y 145: HUE02/03/04/01 existentes. | CC BY 4.0 visible. Reutilizar como referencia, sin volver a añadir. Lectura política y propaganda no prueban recepción idéntica entre todos los sectores. |
+| Juan José Brito Ramos, 2017, Revista del AGN 32(1), 15–45, [ficha editorial](https://revista.agn.gob.pe/ojs/index.php/ragn/article/view/5) | pp. 21 y 35: AGN01/02 existentes, colonial y social. | CC BY 4.0 visible. PDF local. AGN03 es contexto relacionado; los episodios tardíos y el error cronológico identificado en p. 17 siguen apartados. |
+| Carmen Villanueva, 1996, BIRA 23, 427–435, PDF local `.corpus-downloads/constitucion_1823.pdf` | pp. 428 y 430–431: proyectos y organización; V04/V06/V07 ya incorporados. | Metadatos de reparación cotejados; licencia no verificada nuevamente. Este archivo es el artículo de Villanueva, **no** el facsímil de la Constitución. Evitar nuevas sustituciones redundantes. |
+| Juan Luis Orrego Penagos, BIRA 15, 179–197, [repositorio PUCP](https://repositorio.pucp.edu.pe/items/3344e6fb-39b9-4266-aabc-7900373c1126) | pp. 185–187 y 191–192, PDF local 7–9 y 13–14: militarismo, sectores populares, minería y agricultura. | PDF local consultado; edición marcada 1988, con nota que remite a una memoria prevista para 1989. Ficha completa/licencia pendientes de cotejo; reparar antes que acumular más Orrego. |
+| Ascensión Martínez Riaza, Libertad de imprenta y periodismo político en el Perú, 1811–1824, [metadatos PUCP](https://repositorio.pucp.edu.pe/items/4886bb23-1e37-4584-a5bb-9b964137e6ee/full) | Cádiz, imprenta y debate; página de los candidatos pendiente. | La ficha registra 2010, Summa Humanitatis 4(2), y CC BY 4.0. Referencias académicas identifican un texto homónimo de 1984: cotejar edición antes de asignar autoría/fecha al extracto y agrupar ambas versiones. Huerta la cita; no asumir independencia documental. |
+| María José Arguedas Pinasco, 2022, Conexión 17, 85–105, [ficha editorial](https://revistas.pucp.edu.pe/index.php/conexion/article/view/26124) | Mujeres y rabonas a través de Flora Tristán; página exacta y contexto del pasaje pendientes. | CC BY 4.0 visible; publicación 28-07-2022 y aviso de copyright 2024 en ficha, conservar distinción. El resumen sitúa el viaje en 1832–1833: cotejar cronología con la edición de Tristán antes de usarla. No se extrajeron citas para train. |
+| Primer Congreso Constituyente, Constitución de 1823, [transcripción del Congreso](https://www3.congreso.gob.pe/Docs/sites/webs/quipu/constitu/1823.htm) | Arts. 17, 22–23 y 27–29; ciudadanías y reglas institucionales. | Texto oficial consultable; licencia de la edición digital sin comprobar. Falta facsímil y hay anomalía de numeración ya registrada. El art. 11 figura en train; rastrear otras citas compartidas. |
+| Misiones peruanas 1820–1826, vol. 1, [repositorio oficial Bicentenario](https://repositorio.bicentenario.gob.pe/handle/20.500.12934/148?show=full) | Reconocimiento, apoyo económico y alianzas; elegir documento con remitente, destinatario y fecha dentro del periodo. | Pista del catálogo/indexación; acceso directo falló en esta sesión. Compilador, fecha de edición, páginas y licencia pendientes: **no listo para extracción**. Comprobar relación con CDIP, Basadre y otras citas antes de seleccionarlo. |
+
+La Abeja Republicana de BNP sigue pospuesta por OCR, fecha/número y condiciones
+de la edición no resueltos. Hampe (2012), [La primavera de Cádiz](https://www.historiaconstitucional.com/index.php/historiaconstitucional/article/view/336),
+es respaldo bibliográfico alternativo para ideas; falta comprobar licencia y
+página antes de seleccionar un pasaje. No ampliar búsquedas indefinidamente si
+Martínez Riaza proporciona las unidades necesarias.
+
+**Separación documental obligatoria.** El inventario local vincula validación con
+Guarisco, José de San Martín y el espacio político indígena (2023), y test con el
+artículo sobre la celebración en Santiago de Chile y el video de la rebelión de
+Huánuco. No proponer textos, otras ediciones ni citas derivadas de esas obras
+para train. El control por `resourceId` es insuficiente: comparar también título,
+autor, edición, DOI y documento primario. De evaluación solo se usan identidades
+y controles mecánicos de integridad/solapamiento, no contenido para elegir el lote.
+
+### Propuesta del lote — preparación confirmada y resultado registrado abajo
+
+El siguiente bloque debe **preparar candidatos y decisiones**, todavía sin
+entrenar. El lote se organiza por estas doce necesidades; son objetivos de
+selección propios, **no doce ausencias demostradas ni una cuota de doce filas**.
+Primero comprobar qué unidades existentes ya los cumplen. Cada objetivo termina
+como cubierto, reparable, candidato nuevo o pendiente, con evidencia y motivo.
+
+| Prioridad | Necesidades que deben quedar resueltas | Acción limitada |
+|---|---|---|
+| 1. Integridad antes de añadir | **A1** fiscalidad/reformas; **A2** relaciones coloniales de trabajo y esclavitud; **F2** economía republicana | Recuperar contexto de 608/67; aprovechar AGN01; delimitar economía de Orrego pp. 191–192 y comprobar solapamientos. Revisar 709/737 como duplicado propuesto, sin borrarlo automáticamente. |
+| 2. Contrastes explicativos | **B1** crisis y soberanía; **B2** circulación/censura; **E1** alternativas de gobierno; **F1** ciudadanía e instituciones | Usar Huerta y Villanueva existentes como contraste. Examinar una fuente adicional de ideas y la Constitución cotejada. No volver a añadir los mismos HUE/VIL. |
+| 3. Actores y guerra | **C1** decisiones de comunidades y grupos afrodescendientes; **C2** acciones de mujeres; **D1** logística/recursos; **D2** estrategia guerrillera | Reutilizar Huamanga/Fonseca y AGN02; revisar Arguedas Pinasco como nueva perspectiva; buscar para D1 una unidad documental que reduzca dependencia de Basadre. Un pasaje de rabonas no satisface automáticamente C2 y D1 con dos copias. |
+| 4. Dependiente de acceso | **E2** negociación diplomática y reconocimiento | Abrir y verificar un documento de Misiones peruanas. Si no hay acceso o derechos claros, registrar pendiente y no reemplazarlo con texto generado. |
+
+La cantidad final será el saldo de unidades completas aprobadas, reemplazos y
+duplicados identificados, no el mínimo de 20 cambios que activa mantenimiento ni
+una meta de equilibrio artificial. Antes de incorporarlas, presentar el manifiesto
+con originales, página impresa/PDF o minutos, fecha del hecho/publicación, autoría,
+enlace, licencia, hash, cambios de extracción, clase propuesta y alternativa,
+relaciones documentales y decisiones ambiguas. Conservar todas las versiones.
+Ningún candidato aprobado debe carecer de localizador o condición de uso resuelta.
+
+**Comprobación de calidad del lote:** informar necesidades cubiertas de las 12,
+unidades nuevas/reparadas/pendientes por eje, fuentes y documentos primarios
+distintos, porcentaje con trazabilidad completa, concentración por fuente y
+alertas de extracción resueltas. Examinar semejanza exacta y secuencias de cinco
+palabras con los umbrales existentes (Jaccard ≥0.25 o contención ≥0.8), además de
+dependencia bibliográfica; los umbrales solo señalan revisión. Un desacuerdo entre
+dos agentes sigue siendo revisión IA, no validación humana. No se pide a la autora
+resolver disputas históricas: se busca evidencia o se conserva la ambigüedad.
+
+**Hipótesis para una comparación posterior, no autorizada por este bloque:** las
+unidades íntegras, los contrastes claros y la diversidad documental pueden mejorar
+la clasificación y la recuperación de evidencia. Separar reparación de extracción
+y ampliación de cobertura en manifiestos, conservando orden de las filas no
+afectadas; no cambiar a la vez hiperparámetros ni arquitectura. Medir primero
+truncamiento real a 192 tokens sin entrenar. Si hay que modificar la longitud,
+formular otra hipótesis: no mezclarla silenciosamente con el cambio de datos.
+
+Antes de experimentar, congelar una evaluación nueva por **obras y documentos
+relacionados**, con fuentes distintas de las usadas para construir el lote,
+cobertura de las siete clases y varios contextos documentales por clase. Definir
+por separado conjunto de desarrollo y prueba final, protocolo de revisión y
+tamaño según los materiales disponibles; el diseño no está todavía congelado.
+Los textos reservados no se reutilizan como entrenamiento. Comparar referencia y
+candidato con la misma receta y partición; medir F1 macro, F1/soporte por clase,
+confusiones y resultados por fuente. Solo considerar mejora si supera la referencia
+en el criterio predeclarado, sin convertir una clase en inoperante, y exponer la
+incertidumbre por fuente. Un incremento aislado en la validación antigua no basta.
+No usar test para decidir datos o hiperparámetros ni sustituir producción con un
+candidato inferior; cualquier entrenamiento remoto o despliegue requiere permiso.
+
+**Utilidad educativa propuesta:** preparar seis pares de fuentes, uno por eje,
+con las preguntas del mapa y criterios observables de respuesta (evidencia,
+tiempo, explicación). Esos pares sirven para revisar el material con mediación
+docente; no constituyen seis nuevas pruebas aprobadas ni una métrica de aprendizaje.
+Las entregas siguen siendo: Unidad I con funcionamiento en inglés, dataset,
+entrenamiento, características, optimización, métricas, despliegue y dos pruebas;
+Unidad II con producto, mantenimiento/CI y tres casos ejecutados de esos procesos.
+El mapa contribuye a su fundamento y no sustituye las demostraciones pendientes.
+
+Estado del bloque: propuesta documentada y auditoría local; ninguna nueva
+verificación en producción. Se conservan los datasets, etiquetas y código.
+Comprobaciones de cierre: hashes de entradas, recuentos, muestra, igualdad de
+evaluación y taxonomía, conservación de cambios previos y `git diff --check`.
+PDF oficial, imágenes de cotejo y auxiliar de cálculo quedan solo en
+`outputs/curricular-coverage-v1/`, excluido de Git. Siguiente paso: confirmar la
+preparación del lote descrito; el grado definitivo puede decidirse antes de la
+adaptación del producto, sin bloquear esa preparación histórica.
+
+## Preparación del lote histórico v2 — bloque cerrado
+
+La autora confirmó preparar el lote. Resultado local del 7 de septiembre de
+2026: **3 propuestas de reparación, 8 candidatos de obras nuevas condicionados
+y 1 párrafo de contexto**. No hay filas incorporadas ni mejora del modelo
+demostrada. El [manifiesto](../artifacts/reviews/corpus-batch-v2.json) conserva
+localizadores, hashes, propuestas de categoría, revisiones y condiciones.
+Las transcripciones y originales están en `outputs/corpus-batch-v2/`.
+
+| Unidades recuperadas | Páginas impresas; palabras | Resultado y condición pendiente |
+|---|---|---|
+| OPH-A1, reformas y cargos | O'Phelan, 183–184; 212 | Colonial. Reparación cotejada; revisar juntas 598/608 para no duplicar el cierre ni perder los demás párrafos de 598. Oruro de 1780 se conserva como comparación andina. |
+| FON-D1, convocatoria y autosostenimiento | Fonseca, 117–118; 246 | Militar. Dos apartados completos de una enumeración que continúa. Revisar 78/149/157 y conservar el contenido restante. Mantener las conjeturas atribuidas al autor. El cierre posterior verificó seis apartados al consultar p. 119. |
+| ORR-F2 y su contexto | Orrego, 191–192; 218 + 109 | Republicana. Las regiones agrícolas dependen del párrafo previo para fijar el periodo hasta 1840; BETO no recibe ese contexto. 109 palabras quedan como contexto, sin rellenar. Revisar 19/24/25. |
+| MR1984-P151-A y P157-A | Martínez Riaza, 151 y 157; 183 y 149 | Ideas: prensa y censura, no crisis de soberanía de 1808. La edición textual es 1984; dos registros oficiales discrepan en año/licencia. No incorporar hasta aclararlo. |
+| Rabonas 01 y 02 | Arguedas, 100–101; 233 y 166 | Militar y social respectivamente, por el argumento dominante. Citan traducción de Tristán de 2003 cuyos derechos no quedaron acreditados. No confundir licencia del artículo con la de la traducción. |
+| Francisca, prosa de Arguedas | Arguedas, 97; 114 | Social, con alternativa liderazgo. Párrafo completo de la autora, pero inferior a las 120 palabras de la guía; cualquier excepción requiere decisión explícita. No se añadió relleno. |
+| diplomacy-01 y 02 | Misiones peruanas, 431 y 218; 174 y 228 | Diplomacia: expectativa de reconocimiento y negativa a un empréstito. El reconocimiento todavía es esperado en la carta; las finanzas son el argumento de la parte chilena. |
+| diplomacy-03 | Misiones peruanas, 258; 223 | Militar: amenaza naval, escolta y aplazamiento de refuerzos. El formato de carta diplomática no determina la categoría. |
+
+Las tres cartas corresponden al 25-05-1822, 22-01-1824 y 28-08-1824, en la
+compilación de Carlos Ortiz de Zevallos Paz-Soldán (1975). Se cotejaron imágenes
+del visor de la BNP. El [catálogo oficial de Misiones peruanas](https://repositorio.bicentenario.gob.pe/handle/20.500.12934/148?show=full)
+indexado declara CC BY-NC-SA 4.0, pero su consulta directa falló: queda
+condicionada la incorporación, sin afirmar que el catálogo actual se descargó.
+
+Las fichas editoriales de [O'Phelan](https://revistas.pucp.edu.pe/index.php/historica/article/view/8222)
+y [Fonseca](https://revistas.pucp.edu.pe/index.php/historica/article/view/95)
+declaran CC BY 4.0. El registro de [Orrego](https://repositorio.pucp.edu.pe/items/3344e6fb-39b9-4266-aabc-7900373c1126)
+enlaza esa licencia, aunque su rótulo visible dice acceso abierto; un intento
+posterior de lectura agotó el tiempo. Para Martínez Riaza se conservaron los
+metadatos de ambos registros: [1984, CC BY-NC-ND 2.5 PE](https://repositorio.pucp.edu.pe/items/89ad9193-bee7-45cf-8174-8f410cdf9c3f)
+y [2010, CC BY 4.0](https://repositorio.pucp.edu.pe/items/4886bb23-1e37-4584-a5bb-9b964137e6ee/full).
+El [artículo de Arguedas](https://revistas.pucp.edu.pe/index.php/conexion/article/view/26124)
+declara CC BY 4.0; se conservaron sus discrepancias cronológicas y se apartaron
+los párrafos con erratas. No se corrigieron afirmaciones históricas para hacerlas
+encajar en el periodo. Las voces de autora, viajera y corresponsales permanecen
+atribuidas; no se autenticaron manuscritos ni la traducción original.
+
+**Saldo de las doce necesidades, sin declarar cobertura exhaustiva.** A1 y D1
+tienen reparaciones propuestas; F2 necesita resolver el contexto temporal.
+B2, C2 y E2 tienen candidatos condicionados. A2 y C1 ya cuentan con AGN01/02,
+pero las unidades de Huamanga 67/348 siguen cortadas y su PDF no está localmente.
+E1/F1 conservan V04 y V03/V06/V07 ya incorporados; no se duplican. B1 continúa
+pendiente; D2 tiene material en 157/161, aún sin unidad completa revisada de
+estrategia guerrillera. Diez unidades previas AGN/HUE/VIL fueron identificadas
+en el export actual; ocho mediante cotejo de hashes con sus revisiones previas.
+La Constitución original de 1823 sigue pendiente de cotejo. No se cambia el
+mapa MINEDU ni se confirma todavía el grado definitivo del producto.
+
+**Medición que orienta el siguiente experimento.** El tokenizador local de BETO,
+sin cargar pesos ni hacer inferencia, produjo estos recuentos de train, incluidos
+los tokens especiales:
+
+| Dataset | Filas | Superan 192 tokens | Superan 256 | Superan 384 |
+|---|---:|---:|---:|---:|
+| Referencia congelada | 596 | 442 (74.2%) | 272 | 4 |
+| Copia revisada | 598 | 443 (74.1%) | 269 | 4 |
+
+Diez de las doce unidades preparadas también superan 192 tokens. El recorte es
+común a ambas versiones: **no demuestra la causa de la caída de F1** ni que todos
+los finales contengan información decisiva. Mantenerlo como hipótesis separada:
+comparar, si se autoriza posteriormente, 192 frente a 384 con los mismos datos,
+orden y parámetros restantes. Puede aumentar memoria y tiempo; todavía no se ha
+medido ese coste ni se promete mejora. No combinarlo con un cambio del corpus.
+
+**Controles locales.** Doce unidades cotejadas visualmente y revisadas dos veces
+con la primera etiqueta oculta; las doce propuestas principales coinciden. Son
+juicios de IA que comparten contexto, no validación humana ni una métrica del
+modelo. Los ocho candidatos nuevos no activan alertas léxicas con train; ninguna
+de las doce unidades las activa con validación/test ni entre sí. Los umbrales
+son los del mapa. Esto no certifica independencia bibliográfica: se conservaron
+relaciones Huerta/Martínez, Arguedas/Tristán/Iribarne y CDIP/Fonseca/Basadre.
+Se archivaron ocho filas originales relacionadas con las reparaciones. El
+duplicado 709/737 sigue identificado y sin retirar. Los datasets, su evaluación,
+las etiquetas y los dos archivos de código comprobados mantienen sus hashes.
+
+Incidente registrado: un agente mostró accidentalmente una fila de validación
+al inspeccionar la estructura del export. No la usó para seleccionar o etiquetar
+candidatos ni la copió a los artefactos. No se afirma que ningún revisor viera
+validación. Los controles posteriores procesaron evaluación solo mecánicamente,
+sin mostrar sus textos o usar sus resultados para ajustar la propuesta.
+
+Para el cotejo visual se instaló PyMuPDF 1.26.7 únicamente en
+`outputs/corpus-batch-v2/pdf-renderer`, sin modificar dependencias del proyecto.
+PDFs, imágenes y auxiliares quedan fuera de Git y pueden faltar en otro equipo.
+No hubo entrenamiento, métricas nuevas, llamadas a Modal ni cambios o nuevas
+comprobaciones en producción. Las obligaciones de ambas unidades académicas
+permanecen como figuran en el plan.
+
+**Continuación confirmada, resultado registrado a continuación:** cerrar la
+resegmentación de los tres grupos y decidir una excepción documentada para los
+dos párrafos completos de 109/114 palabras; no ampliar búsquedas a otras obras.
+Los candidatos con derechos sin resolver permanecen fuera del corpus aplicable.
+Antes de entrenar se necesita fijar la evaluación separada por obras/documentos
+ya propuesta y elegir una sola hipótesis. Una mejora solo en la validación
+antigua, de una fuente y reutilizada, no acreditaría generalización.
+
+## Reemplazos y excepciones v2 — propuesta cerrada
+
+La propuesta concreta está en [corpus-closure-v2.json](../artifacts/reviews/corpus-closure-v2.json).
+**Se cerraron los tres grupos y se documentaron las dos excepciones; no se aplicó
+la propuesta al dataset ni se entrenó.** Los índices siguientes pertenecen al
+export revisado actual y empiezan en cero. Los hashes impiden aplicarlos por
+posición a otro export diferente.
+
+| Grupo | Reemplazo propuesto | Contenido y efecto |
+|---|---|---|
+| O'Phelan | 598 → OPH-R1 (157 palabras); 608 → OPH-A1 (212) | Dos filas por dos. Se recompone el cierre fiscal y se conserva el resto sobre aduanas y respuesta de Túpac Amaru; mismas etiquetas y posiciones. |
+| Orrego | 19 → párrafo causal (109); 24 → regiones (218); retirar 25 | Tres filas por dos. Conserva causas económicas y geografía; recortes minero/estadístico quedan como contexto. La fecha del pasaje regional sigue dependiendo del párrafo anterior. |
+| Fonseca | 78 → convocatoria/recursos (246); 157 → jerarquías/coordinación (169); 162 → espionaje/trato civil (125); retirar 149 | Cuatro filas por tres. El cierre ya estaba en 162: incluirla evita duplicarlo. El subpunto de 1825–1828 queda como contexto. |
+
+La primera propuesta de Orrego retiraba también la geografía de 218 palabras.
+La revisión separada objetó esa pérdida: la dependencia temporal del contexto
+no demuestra inutilidad para BETO y la guía permite consultar contexto. Se
+aceptó la objeción y se conservaron ambas alternativas y sus motivos. No se
+añadió una fecha sintética al texto para resolver la limitación del modelo.
+
+El cotejo de Fonseca p. 119 corrigió la descripción anterior: la enumeración
+tiene **seis apartados**, no cuatro. La unidad de 125 palabras conserva la
+reserva sobre incumplimiento de las recomendaciones de buen trato; su apartado
+final continúa con una oración de 13 palabras, archivada como contexto. Tampoco
+OPH-R1 contiene íntegro su segundo párrafo: selecciona dos oraciones completas y
+conserva el resto como contexto. No se declara cubierta toda la estrategia D2.
+
+La [guía](../docs/guia-etiquetado-1780-1842.md) incorpora excepciones de longitud
+solo para los hashes de **ORR-F2-context (109)** y
+**arguedas-francisca-author-01 (114)**: párrafos íntegros, autónomos, con periodo,
+argumento y atribución. No se añadió relleno ni se redujo el mínimo general.
+Orrego pasa de contexto a candidato en la propuesta; Francisca queda como
+**alta separada**, para no mezclar reparación y nueva fuente en un experimento.
+Las etiquetas existentes no cambian; se sostienen por la revisión temática.
+
+**Coste de cobertura declarado antes de aplicar:** 43 palabras brutas de créditos
+mineros y 57 de estadísticas en Orrego, más 44 del subpunto de Fonseca sobre
+1825–1828, quedan fuera de estas filas propuestas de entrenamiento. Las 144
+palabras y los originales completos se conservan; no se marcan `no_relevante`.
+Este recuento no significa que esos temas desaparezcan del conjunto completo.
+
+**Comprobación local:** 75 particiones reconstruyen todos los caracteres de
+nueve originales. Se recompusieron seis límites entre filas y la simulación
+conserva las otras 807 filas, su orden relativo y las 81/137 de evaluación.
+Las ocho unidades, incluida el alta separada, no activan alertas de duplicación
+exacta/contención ni los umbrales de cinco palabras frente a las 589 filas train
+restantes, validación/test o entre sí. Se conserva la cautela sobre dependencias
+documentales y el incidente de validación del bloque anterior; en este bloque
+la evaluación solo se procesó mecánicamente, sin mostrar textos ni etiquetas.
+
+| Escenario simulado; ninguno aplicado | Train | Fuentes de train | Validación / test |
+|---|---:|---:|---:|
+| Export revisado actual | 598 | 9 | 81 / 137 |
+| Solo las reparaciones propuestas | 596 | 9 | 81 / 137 |
+| Reparaciones y alta separada de Francisca | 597 | 10 | 81 / 137 |
+
+Las revisiones son asistidas por IA y no ciegas en este cierre; no son validación
+humana. Cinco de las siete unidades reparadas aún superan 192 tokens. No cambió
+`max_len`, no hay nuevas métricas y ninguna mejora de BETO está demostrada por
+esta simulación. Los siete candidatos con derechos pendientes del lote anterior
+siguen excluidos; el duplicado previo 709/737 permanece sin retirar.
+
+Fuentes, imágenes y auxiliares existentes se reutilizaron; no se instalaron
+dependencias ni se abrieron nuevas obras. Evidencia local en
+`outputs/corpus-closure-v2/`, excluida de Git. Datasets, configuración y código
+comprobados mantienen sus hashes; no hubo operaciones de escritura de Git ni
+acceso a producción. Las exigencias curriculares y académicas del plan siguen
+vigentes.
+
+**Aplicación confirmada; resultado registrado a continuación:** aplicar únicamente
+las reparaciones 9 → 7 en una copia experimental nueva, archivando contexto y
+conservando evaluación, etiquetas y orden de las filas restantes. Mantener
+Francisca como alta separada. Antes de entrenar hay que fijar la evaluación por
+obras/documentos y elegir una sola hipótesis de comparación; todavía no se
+autoriza un entrenamiento con esta propuesta.
+
+## Bloque actual cerrado: copia experimental del corpus v2
+
+Se aplicó únicamente la operación 9 → 7 aprobada en el bloque anterior. El nuevo
+export está en `outputs/corpus-snapshot-v2/reviewed-export.json`; su
+[registro verificable](../artifacts/reviews/corpus-snapshot-v2.json) identifica
+entradas, script, salida, archivo de contexto y comprobaciones mediante hashes.
+La referencia académica y el export padre de Villanueva permanecen intactos.
+
+Resultado local: **596 train, 81 validación y 137 test, con las mismas nueve
+fuentes de entrenamiento**. Se reemplazó solo el texto de siete filas y se
+retiraron las dos filas cuyo contenido quedó repartido: índices parentales
+25/149. Las otras 807 filas conservan contenido y orden relativo; también se
+conservan etiquetas, tipos y fuentes de las filas reemplazadas. Los índices de
+salida se guardan en el mapa de correspondencias, porque los retiros desplazan
+las posiciones posteriores. Francisca y los candidatos condicionados no se
+incorporaron. Coincidir con los 596 ejemplos del conjunto académico no hace
+idénticos ambos datasets: sus textos y hashes son distintos.
+
+`replacement-archive.json` conserva los nueve originales, sus 75 particiones
+(9312 caracteres), siete unidades, los contextos actuales y los dos archivos
+ancestrales de Fonseca/Villanueva. Las páginas textuales de O'Phelan están
+incorporadas para evitar enlaces relativos ambiguos. Las páginas de Fonseca,
+vacías en el resumen consolidado, se recuperaron de su propuesta verificada y
+quedaron registradas por unidad. El historial previo permanece completo.
+Las 144 palabras brutas retiradas de estas filas siguen como contexto, con el
+coste de cobertura declarado en el bloque anterior.
+
+**Verificación local:** once comprobaciones del constructor, incluidas rechazo
+de cambios en evaluación, etiquetas, texto, excepción de longitud, archivo
+incompleto, inclusión de Francisca, hash incorrecto y destino existente o ajeno
+a `outputs/`. Se verificaron los objetos resultantes fila por fila y la copia
+guardada. Los controles de similitud no encontraron alertas en los candidatos;
+el duplicado previo 709/737 se conserva en los nuevos índices 707/735. No se
+declara eliminado todo duplicado del corpus.
+
+El constructor reproducible es `scripts/build_corpus_snapshot_v2.py`. Exige
+las entradas locales verificadas y una carpeta de salida nueva:
+
+```powershell
+python scripts/build_corpus_snapshot_v2.py --output outputs/corpus-snapshot-v2-reproduced
+```
+
+El script reutiliza herramientas existentes y no instala dependencias. No
+sobrescribe datos, no invoca mantenimiento, entrenamiento ni servicios. Los
+JSON con textos y contexto quedan en `outputs/`, fuera de Git; el script y el
+registro ligero pueden versionarse. Los hashes de archivos y de JSON canónico
+se identifican por separado. Otra máquina necesitará las entradas locales.
+
+**Estado:** implementación y aplicación local verificadas; ninguna nueva
+comprobación en producción, inferencia o métrica del modelo. Cinco de las siete
+unidades reparadas todavía superan 192 tokens y la validez temática sigue basada
+en revisión asistida por IA. La limitación de validación de una sola fuente y su
+reutilización permanece. Las obligaciones de ambas unidades académicas siguen
+vigentes; esta copia no sustituye sus demostraciones pendientes.
+
+El bloque de preparación de fuentes y reserva de evaluación fue confirmado por
+la autora; su resultado se registra a continuación. No se autorizó aquí un
+entrenamiento ni una incorporación automática al snapshot.
+
+## Diversidad de fuentes y reserva de evaluación — preparación cerrada
+
+El [registro del lote](../artifacts/reviews/source-diversity-v1.json) conserva
+textos, atribuciones, licencias, localizadores, hashes y decisiones. Se examinaron
+nueve candidatos y se preparó una variante de uno de ellos: son **diez versiones,
+no diez ejemplos independientes**. Se proponen seis para una futura copia local.
+Los PDF, imágenes, extracciones originales, contextos completos y auxiliares
+quedan en `outputs/source-diversity-v1/`, excluido de Git. El registro permite
+leer la propuesta en otro equipo; repetir todo el cotejo requiere esos materiales.
+
+### Unidades propuestas y fronteras
+
+| Unidad | Fuente y páginas impresas | Palabras / tokens BETO | Categoría propuesta y aporte |
+|---|---|---:|---|
+| CON2011-P103-104 | Contreras, 103–104 | 198 / 270 | Republicana: consecuencias de la guerra sobre comercio, capital y producción; no relato de operaciones militares |
+| CON2011-P111 | Contreras, 111 | 212 / 272 | Colonial: instituciones y crédito minero; 1786 fecha las ordenanzas, no el inicio demostrado del declive |
+| CON2011-P125 | Contreras, 125 | 167 / 223 | Republicana: cambios tributarios 1821–1826; distinguir medidas y aplicación efectiva |
+| CON2011-P127 | Contreras, 127 | 203 / 262 | Republicana: propuestas fiscales 1827/1836; alternativa proyectos políticos conservada, sin afirmar que se aprobaron |
+| HUN-02 | Hünefeldt, 87–88 | 229 / 282 | Social/regional: demandas propias de cimarrones; interpretación referida a grupos concretos, no a toda población afrodescendiente |
+| HUN-03B | Hünefeldt, 87 | 157 / 194 | Republicana: retorno a haciendas y restricciones de 1825; no presentar la Junta de Hacendados como ley nacional comprobada |
+
+Las denominaciones abreviadas remiten a las categorías existentes de la guía.
+HUN-03B contiene tres oraciones consecutivas del párrafo original: se conservan
+las primeras 53 palabras como contexto. Evita la apertura con «estos grupos»
+sin inventar ni identificar su referente. No incorporar simultáneamente HUN-03 y su variante.
+Las preguntas educativas del registro son propuestas propias vinculadas al mapa
+curricular anterior; tercero de secundaria sigue pendiente de confirmación.
+
+**Exclusiones conservadas:** HUN-01 tiene un desacuerdo entre reclutamiento
+militar y participación social; queda ambiguo, sin nueva etiqueta de dataset.
+MAJ01/02 tienen temas reconocibles de crisis y liderazgo, pero la obra de Majluf
+queda en cuarentena para entrenamiento: el control documental encontró su título
+citado en la fuente de Sánchez reservada a test y una referencia compartida a
+«Generosidad cívica», 25 de agosto de 1821. Es una decisión conservadora por relación
+entre obras; no se demostró copia literal de los dos extractos seleccionados.
+Este lote propone aportes a tres ejes. Los otros tres quedan con candidatos
+ambiguos o retenidos, no declarados ausentes del entrenamiento.
+
+### Fuentes y grupos documentales
+
+[Contreras 2011, *Histórica* 35(2), 101–132](https://revistas.pucp.edu.pe/index.php/historica/article/view/3849)
+y [Hünefeldt 1979, *Histórica* 3(2), 71–88](https://revistas.pucp.edu.pe/index.php/historica/article/view/7858)
+tienen autoría y CC BY 4.0 comprobadas en sus fichas individuales. Se conserva la
+atribución y el aviso de cambios de extracción. No se reutilizan balances de
+Contreras que llegan a 1870/1876 como si describieran únicamente 1780–1842.
+
+Son dos **obras** adicionales, no dos fuentes históricas independientes
+certificadas. Fonseca cita Hünefeldt y ambos remiten a Miller en ediciones
+distintas. Contreras modera el video ya usado en train, según la
+[convocatoria oficial PUCP](https://facultad-ciencias-sociales.pucp.edu.pe/eventos/comision-bicentenario-y-mas-historiografia-y-politica-en-la-independencia-del-peru/).
+No se comprobó qué filas pertenecen a cada voz. También se descartó como autora
+nueva para evaluación a Elizabeth Hernández, ponente de esa mesa. La posible
+versión Contreras 2010 se agrupa con 2011; su licencia no se intercambia entre ediciones.
+
+Se reservan para **evaluación externa**, excluidas del próximo entrenamiento:
+
+- [Natalia Sobrevilla Perea 2021, campañas a los puertos intermedios](https://kar.kent.ac.uk/101763/), *Revista de Indias* 81(281), 115–141, CC BY 4.0. PDF accesible. Registrar discrepancias del título/idioma de Kent y DOI `.04`/`.004`; no normalizarlas silenciosamente.
+- [Núria Sala i Vila 2011, ayuntamientos del Trienio Liberal](https://revistadeindias.revistas.csic.es/index.php/revistadeindias/article/view/877/0), *Revista de Indias* 71(253), 693–728, CC BY 4.0. Ficha y bibliografía consultadas; PDF completo pendiente de acceso.
+
+Sobrevilla cita Sala y documentos presentes en la bibliografía de train. Antes
+de separar conjuntos se cotejarán los documentos concretos; una cita común es
+una señal de revisión, no prueba automática de filtración. Ambas obras tienen
+la misma revista y se concentran en 1820–1824: no aseguran cobertura completa
+de 1780–1842, de las siete clases ni de varios contextos por categoría.
+
+### Diseño propuesto y comprobaciones
+
+La reserva de obras está documentada; **no existe todavía una evaluación nueva
+congelada**. El siguiente paso es delimitar y revisar sus unidades sin ver
+predicciones, excluir documentos repetidos y contar los soportes reales. Su
+tamaño será el saldo de unidades admisibles, sin fabricar cuotas. Antes de
+experimentar se guardarán textos, etiquetas, exclusiones, grupos y SHA-256.
+No repartir al azar párrafos de una misma obra entre desarrollo y prueba final.
+
+Con estas dos obras solo se plantea un desarrollo externo exploratorio. Se
+compararán referencia y candidato sobre exactamente las mismas filas: F1 macro,
+resultados/soportes por categoría, confusiones y por obra. Si faltan clases, se
+declarará la lista utilizada y no se comparará ese macro parcial directamente
+con 0.43766. Una prueba final nueva y separada continúa pendiente; un resultado
+exploratorio no autoriza sustituir producción. La validación original de 81 filas
+sigue siendo de una fuente y ya reutilizada.
+
+Los diez textos/variantes pasan hashes, recuentos, offsets y reproducción de la
+normalización. Hubo 8140 comparaciones con el corpus y 45 entre versiones: ninguna
+alerta salvo el solapamiento deliberado padre/variante. La ausencia de alertas
+léxicas no garantiza independencia documental. Hubo cotejo visual de páginas y
+segunda revisión IA sin primeras etiquetas, aunque con contexto del recolector;
+no se presenta como validación humana ni se calcula una métrica de acuerdo.
+
+**Los seis propuestos superan 192 tokens, cuatro superan 256 y ninguno 384**, con
+tokens especiales incluidos. No se midió cuánto afecta cada recorte al F1.
+Se mantiene separada una futura comparación de longitud 192/384, otra de alta
+de datos y otra sobre normalización del error ponderado. No se cambiaron esos
+parámetros ni se cargaron pesos para esta comprobación.
+
+Una incorporación posterior llevaría train 596→602 y fuentes 9→11; es una
+proyección. Basadre pasaría de 244/596 (40.94%) a 244/602 (40.53%): este lote pequeño
+no resuelve la concentración ni justifica prometer mejora. El dataset conserva
+596/81/137, las etiquetas y sus hashes. Se conservaron los cambios previos del
+README, del comparador y del control BETO.
+
+Incidencia registrada: una inspección inicial de estructura mostró por error una
+fila de validación al incluir la clave `items`. No se usó para elegir temas o
+etiquetas; las inspecciones posteriores separaron train y los controles de
+evaluación solo emitieron integridad/coincidencias. No se afirma ceguera completa
+del agente principal respecto de esa validación ya reutilizada.
+
+**Estado:** propuesta y comprobaciones locales; cero filas incorporadas, cero
+entrenamientos, predicciones o métricas nuevas y ninguna acción en producción.
+Se mantienen los entregables académicos de ambas unidades. **Siguiente bloque
+propuesto:** preparar el desarrollo externo con las dos obras reservadas y
+congelar su alcance real antes de comparar modelos. Esperar confirmación de la
+autora para iniciarlo.
 
 ### Reproducir la muestra de la revisión inicial
 
