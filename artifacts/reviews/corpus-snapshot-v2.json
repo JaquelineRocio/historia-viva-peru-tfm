@@ -1,0 +1,523 @@
+{
+  "schema_version": 1,
+  "status": "experimental_local_applied_and_verified",
+  "review_id": "corpus-snapshot-v2",
+  "scope": "Únicamente reparaciones9→7 aprobadas; sin alta de Francisca, nuevas fuentes o entrenamiento.",
+  "review": {
+    "path": "artifacts/reviews/corpus-closure-v2.json",
+    "file_sha256": "9f8bee3c7070fd7ec190abd51b8c843d426e6f64b5204d179a60259acab23875"
+  },
+  "builder": {
+    "path": "scripts/build_corpus_snapshot_v2.py",
+    "file_sha256": "51eae3cd6e994ab7014367dc137080b5976224a511c16e78019c0a42d7135e69"
+  },
+  "builder_helpers": [
+    {
+      "path": "scripts/prepare_agn_pilot.py",
+      "file_sha256": "2c1cd9c93bb1f658c0f1d23046fba8589e130e2778038aadc6797df4d501f00a"
+    },
+    {
+      "path": "apps/ml/app/ml/experiment_data.py",
+      "file_sha256": "df9807ebc99810feea70b9835837ef8a557f6180786531decbc3468b8d331840"
+    }
+  ],
+  "input_files": [
+    {
+      "path": "artifacts/reviews/corpus-closure-v2.json",
+      "file_sha256": "9f8bee3c7070fd7ec190abd51b8c843d426e6f64b5204d179a60259acab23875"
+    },
+    {
+      "path": "artifacts/reviews/villanueva-snapshot-v1.json",
+      "file_sha256": "e1695bf84f9c25a727d8047dfe5694665eddee08da55e872c778f9c73a9664f6"
+    },
+    {
+      "path": "artifacts/datasets/gold-v1-source-aware.json",
+      "file_sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a"
+    },
+    {
+      "path": "outputs/villanueva-snapshot-v1/reviewed-export.json",
+      "file_sha256": "30c5e648476fcfcb1bd9eddd3e99a7cca3ce5f23fabf09290cd7e4ec8791074a"
+    },
+    {
+      "path": "outputs/corpus-closure-v2/consolidated-local.json",
+      "file_sha256": "e4615029a13445bfb168d4e79fc4b87d062071be2cd3343c452b566410f66bca"
+    }
+  ],
+  "outputs": [
+    {
+      "path": "outputs/corpus-snapshot-v2/reviewed-export.json",
+      "file_sha256": "5de9ea1a4be3c9d628da51cdf1d07108f43e0ac8ee580acb483013c6dc27c35c",
+      "canonical_json_sha256": "1ac13e9cd582ce1d1718e803fb3667284c76b83c4676dd340eda7633f071105e",
+      "bytes": 1027471
+    },
+    {
+      "path": "outputs/corpus-snapshot-v2/replacement-archive.json",
+      "file_sha256": "dac743647c4ca2715b4e915475dcae999a41f00264243ad64500eeaa5a173777",
+      "canonical_json_sha256": "e3347ca1aaeea0c2ed87f790ddfb4d4c5176c8b2b232c0124d4e17d77aefe0e7",
+      "bytes": 304455
+    },
+    {
+      "path": "outputs/corpus-snapshot-v2/build-report.json",
+      "file_sha256": "a230e0ac1c171e60b6b5721826fc6499118c95536a712bd6d94568d08fa80254",
+      "canonical_json_sha256": "c0c8a7a637c489de4c58ff30cf87f1e272066209bcff0cf23b3e0ec46f4dd2ba",
+      "bytes": 15691
+    }
+  ],
+  "fingerprints": {
+    "kind": "SHA256 de JSON canónico: ensure_ascii=False, sort_keys=True, separators=comma/colon",
+    "parent": "167a994133655d16661f9711a2adcf00053fb9dd6f477378180d71acfa2bbbdd",
+    "reference": "54bd64939cc3bdf4d105d14208a41fd2dbb9095f7ef9cb52a4c3baf083f29ece",
+    "reviewed": "1ac13e9cd582ce1d1718e803fb3667284c76b83c4676dd340eda7633f071105e",
+    "evaluation": "593fe90d68bc282108eab983515598c7c3b5ebbf42e2f79dbdb275c12d8c02a2",
+    "archive": "e3347ca1aaeea0c2ed87f790ddfb4d4c5176c8b2b232c0124d4e17d77aefe0e7"
+  },
+  "operation": {
+    "parent_total_rows": 816,
+    "new_total_rows": 814,
+    "affected_rows": 9,
+    "text_replacements": 7,
+    "retired_rows": 2,
+    "retired_parent_indices": [
+      25,
+      149
+    ],
+    "unchanged_rows_preserved_in_relative_order": 807,
+    "existing_labels_changed": 0,
+    "evaluation_rows_and_order_preserved": true,
+    "new_sources": 0,
+    "francisca_included": false,
+    "mapping": [
+      {
+        "parent_index": 19,
+        "new_index": 19,
+        "action": "text_replaced",
+        "unit_id": "ORR-F2-context"
+      },
+      {
+        "parent_index": 24,
+        "new_index": 24,
+        "action": "text_replaced",
+        "unit_id": "ORR-F2"
+      },
+      {
+        "parent_index": 25,
+        "new_index": null,
+        "action": "retired"
+      },
+      {
+        "parent_index": 78,
+        "new_index": 77,
+        "action": "text_replaced",
+        "unit_id": "FON-D1"
+      },
+      {
+        "parent_index": 149,
+        "new_index": null,
+        "action": "retired"
+      },
+      {
+        "parent_index": 157,
+        "new_index": 155,
+        "action": "text_replaced",
+        "unit_id": "FON-R157"
+      },
+      {
+        "parent_index": 162,
+        "new_index": 160,
+        "action": "text_replaced",
+        "unit_id": "FON-R162"
+      },
+      {
+        "parent_index": 598,
+        "new_index": 596,
+        "action": "text_replaced",
+        "unit_id": "OPH-R1"
+      },
+      {
+        "parent_index": 608,
+        "new_index": 606,
+        "action": "text_replaced",
+        "unit_id": "OPH-A1"
+      }
+    ]
+  },
+  "split_counts": {
+    "train": 596,
+    "val": 81,
+    "test": 137
+  },
+  "train_class_distribution": {
+    "campanias_conflictos_militares": 87,
+    "participacion_social_regional": 83,
+    "no_relevante": 101,
+    "organizacion_consecuencias_republicanas": 100,
+    "liderazgos_diplomacia_proyectos": 94,
+    "contexto_colonial_antecedentes": 71,
+    "crisis_ideas_emancipadoras": 60
+  },
+  "train_sources": 9,
+  "provenance": [
+    {
+      "candidate_id": "CORPUS-v2-ORR-F2-context",
+      "unit_id": "ORR-F2-context",
+      "resource_id": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+      "text_sha256": "a1fa148c95732256b62a29668f731ee785d5d22aab9f95cbe17df7126dfaf66b",
+      "label": "organizacion_consecuencias_republicanas",
+      "parent_index": 19,
+      "index_in_this_snapshot": 19,
+      "index_base": 0,
+      "locators": {
+        "printed_pages": [
+          191
+        ],
+        "pdf_pages": [
+          13
+        ]
+      },
+      "locator_basis": "outputs\\corpus-closure-v2\\orrego\\proposal-v2.json",
+      "resolved_missing_consolidated_locator": false,
+      "review_path": "artifacts/reviews/corpus-closure-v2.json",
+      "review_file_sha256": "9f8bee3c7070fd7ec190abd51b8c843d426e6f64b5204d179a60259acab23875",
+      "length_exception": {
+        "sha256": "a1fa148c95732256b62a29668f731ee785d5d22aab9f95cbe17df7126dfaf66b",
+        "word_count": 109
+      },
+      "decision": {
+        "id": "ORR-F2-context",
+        "label": "organizacion_consecuencias_republicanas",
+        "decision": "Aceptar excepción nominal109palabras: unidad causal completa, periodo explícito, atribución conservada."
+      },
+      "annotation_origin": "ai_assisted_nonblind",
+      "human_expert_validation": false
+    },
+    {
+      "candidate_id": "CORPUS-v2-ORR-F2",
+      "unit_id": "ORR-F2",
+      "resource_id": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+      "text_sha256": "f83309ced4d0613a902d82fb3f10817e91097d6aee58d1c153a2eae8291fbea5",
+      "label": "organizacion_consecuencias_republicanas",
+      "parent_index": 24,
+      "index_in_this_snapshot": 24,
+      "index_base": 0,
+      "locators": {
+        "printed_pages": [
+          191,
+          192
+        ],
+        "pdf_pages": [
+          13,
+          14
+        ]
+      },
+      "locator_basis": "outputs\\corpus-closure-v2\\orrego\\proposal-v2.json",
+      "resolved_missing_consolidated_locator": false,
+      "review_path": "artifacts/reviews/corpus-closure-v2.json",
+      "review_file_sha256": "9f8bee3c7070fd7ec190abd51b8c843d426e6f64b5204d179a60259acab23875",
+      "length_exception": null,
+      "decision": {
+        "id": "ORR-F2",
+        "label": "organizacion_consecuencias_republicanas",
+        "decision": "Conservar218palabras como candidato. Aceptada objeción del segundo revisor: dependencia temporal del párrafo anterior no basta para eliminar geografía. Registrar limitación para BETO, sin añadir fecha al texto."
+      },
+      "annotation_origin": "ai_assisted_nonblind",
+      "human_expert_validation": false
+    },
+    {
+      "candidate_id": "CORPUS-v2-FON-D1",
+      "unit_id": "FON-D1",
+      "resource_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+      "text_sha256": "8facf884bfdcafd09def49e66aed70db1dcba73cb541e772f1f1173329ef4386",
+      "label": "campanias_conflictos_militares",
+      "parent_index": 78,
+      "index_in_this_snapshot": 77,
+      "index_base": 0,
+      "locators": {
+        "printed_pages": [
+          117,
+          118
+        ],
+        "pdf_pages": [
+          13,
+          14
+        ]
+      },
+      "locator_basis": "outputs\\corpus-closure-v2\\fonseca\\proposal-v2.json",
+      "resolved_missing_consolidated_locator": true,
+      "review_path": "artifacts/reviews/corpus-closure-v2.json",
+      "review_file_sha256": "9f8bee3c7070fd7ec190abd51b8c843d426e6f64b5204d179a60259acab23875",
+      "length_exception": null,
+      "decision": {
+        "id": "FON-D1",
+        "label": "campanias_conflictos_militares",
+        "decision": "Mantener candidato previo246palabras y hash; dos apartados completos de organización militar, no toda la instrucción."
+      },
+      "annotation_origin": "ai_assisted_nonblind",
+      "human_expert_validation": false
+    },
+    {
+      "candidate_id": "CORPUS-v2-FON-R157",
+      "unit_id": "FON-R157",
+      "resource_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+      "text_sha256": "a90ac63996ed5b1701c8eed6d09a05484f443c8fe2890058a65997bcd987a5cd",
+      "label": "campanias_conflictos_militares",
+      "parent_index": 157,
+      "index_in_this_snapshot": 155,
+      "index_base": 0,
+      "locators": {
+        "printed_pages": [
+          118,
+          119
+        ],
+        "pdf_pages": [
+          14,
+          15
+        ]
+      },
+      "locator_basis": "outputs\\corpus-closure-v2\\fonseca\\proposal-v2.json",
+      "resolved_missing_consolidated_locator": true,
+      "review_path": "artifacts/reviews/corpus-closure-v2.json",
+      "review_file_sha256": "9f8bee3c7070fd7ec190abd51b8c843d426e6f64b5204d179a60259acab23875",
+      "length_exception": null,
+      "decision": {
+        "id": "FON-R157-context",
+        "selected_as": "FON-R157",
+        "label": "campanias_conflictos_militares",
+        "alternative": "participacion_social_regional",
+        "decision": "Jerarquías, nombramientos, armamento y coordinación muestran organización de guerrillas; intereses de grupos sociales sostienen la explicación. Texto169palabras coherente. Cierre duplicado localizado en162 y transferido en la propuesta4→3; contenido y hash se conservan al pasar a candidato."
+      },
+      "annotation_origin": "ai_assisted_nonblind",
+      "human_expert_validation": false
+    },
+    {
+      "candidate_id": "CORPUS-v2-FON-R162",
+      "unit_id": "FON-R162",
+      "resource_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+      "text_sha256": "6931259fc23e4f413b667d51709079cabdc6c9a6da10c5993dedd7625d1adbfd",
+      "label": "campanias_conflictos_militares",
+      "parent_index": 162,
+      "index_in_this_snapshot": 160,
+      "index_base": 0,
+      "locators": {
+        "printed_pages": [
+          119
+        ],
+        "pdf_pages": [
+          15
+        ]
+      },
+      "locator_basis": "outputs\\corpus-closure-v2\\fonseca\\proposal-v2.json",
+      "resolved_missing_consolidated_locator": true,
+      "review_path": "artifacts/reviews/corpus-closure-v2.json",
+      "review_file_sha256": "9f8bee3c7070fd7ec190abd51b8c843d426e6f64b5204d179a60259acab23875",
+      "length_exception": null,
+      "decision": {
+        "id": "FON-R162",
+        "label": "campanias_conflictos_militares",
+        "alternative": "participacion_social_regional",
+        "decision": "Espionaje y órdenes sobre trato civil organizan la actuación militar. Conserva la reserva Aunque estas recomendaciones algunas veces no fueron oídas, por lo que no afirma cumplimiento general.125palabras; selecciona oraciones completas pero el apartado6 continúa con13palabras en la fuente. Sin excepción de longitud ni fecha sintética añadida."
+      },
+      "annotation_origin": "ai_assisted_nonblind",
+      "human_expert_validation": false
+    },
+    {
+      "candidate_id": "CORPUS-v2-OPH-R1",
+      "unit_id": "OPH-R1",
+      "resource_id": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "text_sha256": "3b1eaa8ab548af7e43ee27c158d6a4a31ea01d4436ab6df27a88d9cf03e66260",
+      "label": "contexto_colonial_antecedentes",
+      "parent_index": 598,
+      "index_in_this_snapshot": 596,
+      "index_base": 0,
+      "locators": [
+        {
+          "pdf_page": 30,
+          "printed_page": 184,
+          "start": "Una de las áreas más sensibles",
+          "end": "el puesto de alcalde ordinario.",
+          "selection": "Segundo párrafo impreso completo y las dos primeras oraciones del tercer párrafo."
+        }
+      ],
+      "locator_basis": "outputs\\corpus-closure-v2\\opheland\\proposal.json",
+      "resolved_missing_consolidated_locator": false,
+      "review_path": "artifacts/reviews/corpus-closure-v2.json",
+      "review_file_sha256": "9f8bee3c7070fd7ec190abd51b8c843d426e6f64b5204d179a60259acab23875",
+      "length_exception": null,
+      "decision": {
+        "id": "OPH-R1",
+        "label": "contexto_colonial_antecedentes",
+        "alternative": "liderazgos_diplomacia_proyectos",
+        "decision": "Aduanas y respuesta a exclusión fiscal en1780 son el foco. La propuesta de Túpac Amaru se interpreta en esas relaciones coloniales. Conservar que se seleccionan oraciones completas pero no todo el segundo párrafo."
+      },
+      "annotation_origin": "ai_assisted_nonblind",
+      "human_expert_validation": false
+    },
+    {
+      "candidate_id": "CORPUS-v2-OPH-A1",
+      "unit_id": "OPH-A1",
+      "resource_id": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "text_sha256": "770fba587df5bdcea4e2873c14eb07b41d2a0630ee5e3753df93a08247f26c4d",
+      "label": "contexto_colonial_antecedentes",
+      "parent_index": 608,
+      "index_in_this_snapshot": 606,
+      "index_base": 0,
+      "locators": [
+        {
+          "pdf_page": 29,
+          "printed_page": 183,
+          "start": "Las reformas fiscales borbónicas",
+          "end": "Si a esto le suma-"
+        },
+        {
+          "pdf_page": 30,
+          "printed_page": 184,
+          "start": "mos el hecho",
+          "end": "ducente e intolerable."
+        }
+      ],
+      "locator_basis": "outputs\\corpus-closure-v2\\opheland\\proposal.json",
+      "resolved_missing_consolidated_locator": false,
+      "review_path": "artifacts/reviews/corpus-closure-v2.json",
+      "review_file_sha256": "9f8bee3c7070fd7ec190abd51b8c843d426e6f64b5204d179a60259acab23875",
+      "length_exception": null,
+      "decision": {
+        "id": "OPH-A1",
+        "label": "contexto_colonial_antecedentes",
+        "decision": "Mantener candidato previo y hash. El cierre recuperado pertenece al mismo argumento fiscal y de cargos."
+      },
+      "annotation_origin": "ai_assisted_nonblind",
+      "human_expert_validation": false
+    }
+  ],
+  "archive_contents": {
+    "original_rows": 9,
+    "partitions": 75,
+    "original_characters": 9312,
+    "candidate_units": 7,
+    "current_source_context_payloads": 4,
+    "embedded_ophelan_text_pages": 2,
+    "prior_archives": [
+      {
+        "path": "outputs/fonseca-snapshot-v1/replacement-archive.json",
+        "file_sha256": "d07a6e00fa48a724deb215bb14392442009905c82f707a5ab6ea7386e4c00b86",
+        "canonical_json_sha256": "af22ed5aa10c35ee76b94dbeef41218c01fb7244e90efae99fad014b644dce94",
+        "embedded_in": "replacement-archive.json:prior_archives"
+      },
+      {
+        "path": "outputs/villanueva-snapshot-v1/replacement-archive.json",
+        "file_sha256": "76f0698ca0fab38359bedb2a45224ac3b6b59043507eff9bc7ac6885befa1ffa",
+        "canonical_json_sha256": "3587a76fd17a17ec41b96c440975ef73958c5c6a78b88ad9417b67f985411ded",
+        "embedded_in": "replacement-archive.json:prior_archives"
+      }
+    ],
+    "prior_dataset_metadata_embedded": true,
+    "prior_added_provenance_preserved": 11,
+    "new_provenance_records": 7,
+    "prior_replacement_history_preserved": 2,
+    "coverage_raw_words_retained_as_context": 144,
+    "reason": "Archivar contexto no equivale a conservar ese contenido en las filas de entrenamiento; coste declarado en revisión."
+  },
+  "similarity": {
+    "scope": "Siete candidatos frente a filas restantes y entre candidatos; no auditoría de duplicados de todo train",
+    "comparisons": 5670,
+    "alerts": 0,
+    "preexisting_duplicate_preserved": {
+      "parent_indices": [
+        709,
+        737
+      ],
+      "new_indices": [
+        707,
+        735
+      ]
+    },
+    "limitation": "No certifica independencia bibliográfica ni ausencia global de duplicados."
+  },
+  "verification": {
+    "builder_checks": [
+      {
+        "case": "valid_build_in_memory",
+        "passed": true
+      },
+      {
+        "case": "evaluation_change",
+        "passed": true,
+        "rejection": "Taxonomía o evaluación distintas de la referencia"
+      },
+      {
+        "case": "original_label_change",
+        "passed": true,
+        "rejection": "Cambió una fila de la operación"
+      },
+      {
+        "case": "candidate_text_change",
+        "passed": true,
+        "rejection": "Texto candidato alterado"
+      },
+      {
+        "case": "extra_francisca_candidate",
+        "passed": true,
+        "rejection": "Solo se admiten siete reparaciones"
+      },
+      {
+        "case": "wrong_length_exception",
+        "passed": true,
+        "rejection": "Excepción de longitud no autorizada"
+      },
+      {
+        "case": "incomplete_original_archive",
+        "passed": true,
+        "rejection": "Partición incompleta o alterada"
+      },
+      {
+        "case": "altered_input_file_hash",
+        "passed": true
+      },
+      {
+        "case": "existing_destination",
+        "passed": true
+      },
+      {
+        "case": "outside_outputs",
+        "passed": true
+      },
+      {
+        "case": "independent_rows_metadata_and_archive_checks",
+        "passed": true
+      }
+    ],
+    "builder_check_count": 11,
+    "builder_check_evidence": {
+      "path": "outputs/corpus-snapshot-v2-preflight/builder-verification.json",
+      "file_sha256": "ef71985e1e8782dbd8c6445631673faab5804a9fc85fb998fd35e2dff65623ef"
+    },
+    "saved_json_fingerprints_match_report": true,
+    "parent_and_reference_files_unchanged": true,
+    "prior_readme_changes_preserved": true,
+    "guide_and_existing_code_config_unchanged": true,
+    "git_diff_check_passed": true,
+    "large_local_outputs_ignored": true,
+    "second_agent_read_only_audit": {
+      "reviewer": "/root/fuente_mujeres",
+      "kind": "Revisión técnica asistida por IA; no validación histórica humana ni métrica del modelo.",
+      "result": "Sin fallos: comprobó807filas,7reemplazos,2retiros,evaluación idéntica,596/81/137,9fuentes,archivo y metadatos.",
+      "limitations": "El agente imprimió inicialmente agregados del audit que incluían nombres de clases de evaluación; no textos ni casos, y no los usó para elegir datos o etiquetas. Se conserva este hecho sin afirmar que ningún agregado fuera visible."
+    }
+  },
+  "reproduce_command": "python scripts/build_corpus_snapshot_v2.py --output outputs/corpus-snapshot-v2-reproduced",
+  "portability": "Requiere las entradas locales originales con sus hashes y un destino nuevo dentro de outputs. Este registro no contiene los textos completos ni sustituye una copia de seguridad de outputs.",
+  "limits": [
+    "Cinco de las siete unidades reparadas superan192tokens; max_len permanece igual.",
+    "Las etiquetas tienen revisión asistida por IA; no revisión humana independiente.",
+    "Validación sigue siendo de una fuente y reutilizada; no hay nueva evaluación externa.",
+    "No se incorporó Francisca ni candidatos con derechos pendientes.",
+    "Misma cantidad train596 que la referencia académica, pero datasets y hashes diferentes."
+  ],
+  "dataset_applied": true,
+  "application_scope": "new_local_experimental_copy_only",
+  "training_performed": false,
+  "new_predictions": false,
+  "new_metrics": false,
+  "production_changed": false,
+  "production_verified": false,
+  "next_step": "Confirmar diseño de evaluación por obras/documentos y una hipótesis de comparación antes de entrenar; separar datos, longitud y altas."
+}
