@@ -15,7 +15,8 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Generalización entre fuentes | Evaluar cada fuente de train sin usarla para entrenar | Nueve rondas locales: F1 macro agregado 0.32372, 208/598 aciertos; ideas 5/60. Diagnóstico interno, no mejora frente a validación ni prueba final |
 | Palabras frente a caracteres | Comparar dos representaciones en las mismas rondas internas | Caracteres: F1 macro 0.33909 frente a 0.32372; 218 frente a 208 aciertos. Mejora interna modesta que no se mantuvo en validación original |
 | Validación de caracteres | Comprobar la variante elegida en los 81 ejemplos originales | F1 macro 0.23521 frente a 0.28987 de palabras; 24 frente a 25 aciertos. Variante descartada para sustituir al TF-IDF de referencia; BETO y producción intactos |
-| Preparación de BETO revisado | Verificar recursos y fijar la comparación local | GPU y tokenizador offline comprobados; dependencias y artefactos previos disponibles. Receta ganadora conservada; ejecutor solo de validación y entrenamiento pendientes |
+| Preparación de BETO revisado | Verificar recursos y fijar la comparación local | GPU, tokenizador offline, dependencias y artefactos previos comprobados. Receta ganadora conservada y usada en la comparación posterior |
+| BETO con datos revisados | Comparar con el checkpoint académico anterior | Entrenamiento local completado: F1 validación 0.43766 → 0.32951; 37 → 33 aciertos de 81. Candidato no seleccionado para sustitución; producción intacta |
 | Diagnóstico de cobertura | Orientar el siguiente cambio de datos | Concentración por fuente, rasgos de transcripción y fragmentos incompletos identificados. Muestra de 21 filas de train revisada; prioridad: cuatro filas de Villanueva. Sin modificar etiquetas |
 | Límites de Villanueva | Recuperar argumentos cortados entre páginas | Seis unidades delimitadas y cotejadas; dos quedan como contexto. Continuaciones ya presentes en filas 10/637 identificadas. Propuesta local, sin aplicar |
 | Reparación de Villanueva | Preparar un reemplazo sin duplicar continuaciones | Cuatro candidatos revisados, cuatro unidades de contexto y seis originales archivados; V02 ambiguo. Extracción local verificada, dataset sin modificar |
@@ -1165,7 +1166,7 @@ para preparar una comparación con configuración fija sobre los datos revisados
 El propósito es volver al clasificador de la aplicación sin seguir ajustando TF-IDF
 contra esta misma validación.
 
-## Bloque actual: preparación de la comparación local de BETO
+## Preparación de la comparación local de BETO — registrada en `2cd193b`
 
 [check_beto_readiness.py](../scripts/check_beto_readiness.py) verifica la receta,
 los datos, versiones, caché y checkpoint anterior. Funciona con Hugging Face en
@@ -1218,6 +1219,65 @@ Estado: prerrequisitos comprobados y protocolo preparado; sin métricas nuevas,
 entrenamiento ni cambios en producción. Siguiente bloque después del commit:
 implementar y verificar el ejecutor de comparación solo en validación, y ejecutar
 el ajuste local si la comprobación de recursos sigue siendo satisfactoria.
+
+## Bloque actual: BETO entrenado con los datos revisados
+
+[compare_beto_validation.py](../scripts/compare_beto_validation.py) implementa
+la comparación limitada a validación. Coteja la preparación y los archivos,
+comprueba recursos y trabaja offline. Primero recarga el checkpoint académico
+anterior y reproduce su F1 de validación 0.43766; si no coincide, detiene el flujo
+antes de entrenar. Después llama al ajuste BETO existente solo con train/val.
+
+Se ejecutó **una configuración** desde BETO base con las 598 filas revisadas:
+lr=0.00002, semilla 42, tres épocas, microbatch 2, acumulación 8 y longitud 192.
+La [evidencia de la ejecución](../artifacts/experiments/beto-reviewed-validation-v1/report.json)
+conserva el resultado negativo y la procedencia del candidato.
+
+| Época del nuevo entrenamiento | F1 macro de validación |
+|---|---:|
+| 1 | 0.29531 |
+| 2 | 0.32055 |
+| 3, seleccionada | 0.32951 |
+
+| Métrica en los mismos 81 ejemplos | BETO anterior | BETO con datos revisados |
+|---|---:|---:|
+| F1 macro | 0.43766 | 0.32951 |
+| Exactitud | 45.68% | 40.74% |
+| Aciertos | 37 | 33 |
+| F1 de crisis e ideas | 0 | 0 |
+
+**Decisión: no seleccionar este candidato para sustituir al modelo anterior.**
+Seis ejemplos pasan a ser correctos y diez dejan de serlo. Se conservan ambos
+artefactos y los datos revisados. La caída no demuestra que las correcciones
+históricas sean falsas: cambian conjuntamente textos, etiquetas y orden de filas,
+y solo se midió una ejecución con una semilla. La referencia es el checkpoint
+académico local; no se cotejaron sus pesos con producción en este bloque.
+
+El ajuste duró 77.33 segundos; la comparación con reproducción de predicciones,
+81.37 segundos, sin incluir todas las comprobaciones previas y posteriores.
+PyTorch informó un máximo de 2.07 GiB de memoria GPU asignada y 2.26 GiB reservada;
+son medidas de ese proceso, no de toda la memoria ocupada por el sistema.
+El entrenamiento terminó con los recursos disponibles y sin descargas.
+
+Verificación: el checkpoint guardado reprodujo exactamente sus predicciones de
+validación; métricas por clase y matrices recalculadas; hashes y evaluación
+congelada intactos. La prueba de orquestación con funciones simuladas comprobó
+que test nunca se entrega al entrenador ni al predictor. Pasaron 12 rechazos,
+incluidos referencia no reproducible, checkpoint diferente, época/revisión
+incorrectas, prerrequisitos alterados y salidas inválidas. No se ejecutó el
+pipeline automático de promoción: es evidencia de comparación experimental.
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/compare_beto_validation.py --readiness artifacts/reviews/beto-readiness-v1.json --output outputs/beto-reviewed-validation-reproduccion
+```
+
+Estado: ejecutor implementado y entrenamiento local completado; modelos,
+predicciones y comprobaciones en `outputs/beto-reviewed-validation-v1/`,
+excluidos de Git. Sin predicciones de test ni cambios en producción.
+Siguiente bloque después del commit: reproducir el entrenamiento de la referencia
+original con esta misma receta y entorno, limitado a validación, para comprobar
+su reproducibilidad antes de atribuir la caída a los cambios de datos. No iniciar
+otra búsqueda de hiperparámetros ni descartar las revisiones históricas por su F1.
 
 ### Reproducir la muestra de la revisión inicial
 
