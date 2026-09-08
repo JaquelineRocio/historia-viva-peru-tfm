@@ -1,0 +1,620 @@
+{
+  "schema_version": 1,
+  "review_id": "corpus-closure-v2",
+  "status": "reviewed_local_proposal_not_applied",
+  "scope": "Cierre de tres grupos y dos excepciones nominales; mismo periodo1780–1842 y taxonomía. Sin nuevas obras ni experimentos.",
+  "parent_review": {
+    "path": "artifacts/reviews/corpus-batch-v2.json",
+    "sha256": "8caeafbf3dbfc93db03c5d9076e90a650fede9d990b06bfef22e5da2d2ec1e64"
+  },
+  "input_snapshot": {
+    "path": "outputs/villanueva-snapshot-v1/reviewed-export.json",
+    "sha256": "30c5e648476fcfcb1bd9eddd3e99a7cca3ce5f23fabf09290cd7e4ec8791074a"
+  },
+  "operations_repairs_only": [
+    {
+      "index_base_zero": 19,
+      "expected_text_sha256": "b7f4e2dcb7c8c402711d500853ed9c449527804659bca734b5070248c99cf0c7",
+      "original_label": "organizacion_consecuencias_republicanas",
+      "resource_id": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+      "action": "replace_text_only",
+      "unit_id": "ORR-F2-context",
+      "new_text_sha256": "a1fa148c95732256b62a29668f731ee785d5d22aab9f95cbe17df7126dfaf66b"
+    },
+    {
+      "index_base_zero": 24,
+      "expected_text_sha256": "37417362cbdee022bf81e1560813a180788ecd244adbc01818aaaeef4e517fc1",
+      "original_label": "organizacion_consecuencias_republicanas",
+      "resource_id": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+      "action": "replace_text_only",
+      "unit_id": "ORR-F2",
+      "new_text_sha256": "f83309ced4d0613a902d82fb3f10817e91097d6aee58d1c153a2eae8291fbea5"
+    },
+    {
+      "index_base_zero": 25,
+      "expected_text_sha256": "6d0c7ebd2868a4d3b1e170b0cde654723c2a86eceb8e08b2d3864c0a75bedbe6",
+      "original_label": "organizacion_consecuencias_republicanas",
+      "resource_id": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+      "action": "retire_row_after_archiving",
+      "reason": "Contenido repartido entre unidades del mismo grupo; residuales conservados y coste declarado."
+    },
+    {
+      "index_base_zero": 78,
+      "expected_text_sha256": "5d0943b5975ed51897cc64346a5aae34f224c87859df21f01a162744ed82455c",
+      "original_label": "campanias_conflictos_militares",
+      "resource_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+      "action": "replace_text_only",
+      "unit_id": "FON-D1",
+      "new_text_sha256": "8facf884bfdcafd09def49e66aed70db1dcba73cb541e772f1f1173329ef4386"
+    },
+    {
+      "index_base_zero": 149,
+      "expected_text_sha256": "676424562d7bd1c4e7d3d5b47643c3a161833a921c2a02bce1688f0644704f7b",
+      "original_label": "campanias_conflictos_militares",
+      "resource_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+      "action": "retire_row_after_archiving",
+      "reason": "Contenido repartido entre unidades del mismo grupo; residuales conservados y coste declarado."
+    },
+    {
+      "index_base_zero": 157,
+      "expected_text_sha256": "52e47fd1d8b1afb1a7bd27e461fd81589735167a14846fc30724e5afbeb2145d",
+      "original_label": "campanias_conflictos_militares",
+      "resource_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+      "action": "replace_text_only",
+      "unit_id": "FON-R157",
+      "new_text_sha256": "a90ac63996ed5b1701c8eed6d09a05484f443c8fe2890058a65997bcd987a5cd"
+    },
+    {
+      "index_base_zero": 162,
+      "expected_text_sha256": "4e22c80f9be3572aa782cf90106066468b658f457d121bdc2470b74cda406562",
+      "original_label": "campanias_conflictos_militares",
+      "resource_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+      "action": "replace_text_only",
+      "unit_id": "FON-R162",
+      "new_text_sha256": "6931259fc23e4f413b667d51709079cabdc6c9a6da10c5993dedd7625d1adbfd"
+    },
+    {
+      "index_base_zero": 598,
+      "expected_text_sha256": "3cc615b652864cf7d899b44e960003e9fadbb5bdd7240cdd31702a4c74ee2e68",
+      "original_label": "contexto_colonial_antecedentes",
+      "resource_id": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "action": "replace_text_only",
+      "unit_id": "OPH-R1",
+      "new_text_sha256": "3b1eaa8ab548af7e43ee27c158d6a4a31ea01d4436ab6df27a88d9cf03e66260"
+    },
+    {
+      "index_base_zero": 608,
+      "expected_text_sha256": "0815092297a728d83204b51d3e0952916e5b09c253fb7f0d4186feead112d900",
+      "original_label": "contexto_colonial_antecedentes",
+      "resource_id": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "action": "replace_text_only",
+      "unit_id": "OPH-A1",
+      "new_text_sha256": "770fba587df5bdcea4e2873c14eb07b41d2a0630ee5e3753df93a08247f26c4d"
+    }
+  ],
+  "append_separate": {
+    "unit_id": "arguedas-francisca-author-01",
+    "source_work": "doi:10.18800/conexion.202201.003",
+    "proposed_resource_id": "0e8f429b-4a8f-5266-9c12-d8e01bcd27b2",
+    "source_id_status": "Identidad UUIDv5 propuesta para copia experimental; no recurso registrado en producción.",
+    "label": "participacion_social_regional",
+    "reason_separate": "Una fuente adicional cambia cobertura y distribución. Mantener separada de reparación para una comparación posterior interpretable.",
+    "applied": false
+  },
+  "units": [
+    {
+      "id": "OPH-A1",
+      "text_sha256": "770fba587df5bdcea4e2873c14eb07b41d2a0630ee5e3753df93a08247f26c4d",
+      "word_count": 212,
+      "label": "contexto_colonial_antecedentes",
+      "replace_index": 608,
+      "source_id": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "local_proposal": "outputs\\corpus-closure-v2\\opheland\\proposal.json",
+      "locators": [
+        {
+          "pdf_page": 29,
+          "printed_page": 183,
+          "start": "Las reformas fiscales borbónicas",
+          "end": "Si a esto le suma-"
+        },
+        {
+          "pdf_page": 30,
+          "printed_page": 184,
+          "start": "mos el hecho",
+          "end": "ducente e intolerable."
+        }
+      ],
+      "tokens_with_special": 289,
+      "decision": {
+        "id": "OPH-A1",
+        "label": "contexto_colonial_antecedentes",
+        "decision": "Mantener candidato previo y hash. El cierre recuperado pertenece al mismo argumento fiscal y de cargos."
+      },
+      "applied": false,
+      "length_exception": null
+    },
+    {
+      "id": "OPH-R1",
+      "text_sha256": "3b1eaa8ab548af7e43ee27c158d6a4a31ea01d4436ab6df27a88d9cf03e66260",
+      "word_count": 157,
+      "label": "contexto_colonial_antecedentes",
+      "replace_index": 598,
+      "source_id": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "local_proposal": "outputs\\corpus-closure-v2\\opheland\\proposal.json",
+      "locators": [
+        {
+          "pdf_page": 30,
+          "printed_page": 184,
+          "start": "Una de las áreas más sensibles",
+          "end": "el puesto de alcalde ordinario.",
+          "selection": "Segundo párrafo impreso completo y las dos primeras oraciones del tercer párrafo."
+        }
+      ],
+      "tokens_with_special": 225,
+      "decision": {
+        "id": "OPH-R1",
+        "label": "contexto_colonial_antecedentes",
+        "alternative": "liderazgos_diplomacia_proyectos",
+        "decision": "Aduanas y respuesta a exclusión fiscal en1780 son el foco. La propuesta de Túpac Amaru se interpreta en esas relaciones coloniales. Conservar que se seleccionan oraciones completas pero no todo el segundo párrafo."
+      },
+      "applied": false,
+      "length_exception": null
+    },
+    {
+      "id": "ORR-F2-context",
+      "text_sha256": "a1fa148c95732256b62a29668f731ee785d5d22aab9f95cbe17df7126dfaf66b",
+      "word_count": 109,
+      "label": "organizacion_consecuencias_republicanas",
+      "replace_index": 19,
+      "source_id": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+      "local_proposal": "outputs\\corpus-closure-v2\\orrego\\proposal-v2.json",
+      "locators": {
+        "printed_pages": [
+          191
+        ],
+        "pdf_pages": [
+          13
+        ]
+      },
+      "tokens_with_special": 135,
+      "decision": {
+        "id": "ORR-F2-context",
+        "label": "organizacion_consecuencias_republicanas",
+        "decision": "Aceptar excepción nominal109palabras: unidad causal completa, periodo explícito, atribución conservada."
+      },
+      "applied": false,
+      "length_exception": {
+        "sha256": "a1fa148c95732256b62a29668f731ee785d5d22aab9f95cbe17df7126dfaf66b",
+        "word_count": 109
+      }
+    },
+    {
+      "id": "ORR-F2",
+      "text_sha256": "f83309ced4d0613a902d82fb3f10817e91097d6aee58d1c153a2eae8291fbea5",
+      "word_count": 218,
+      "label": "organizacion_consecuencias_republicanas",
+      "replace_index": 24,
+      "source_id": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+      "local_proposal": "outputs\\corpus-closure-v2\\orrego\\proposal-v2.json",
+      "locators": {
+        "printed_pages": [
+          191,
+          192
+        ],
+        "pdf_pages": [
+          13,
+          14
+        ]
+      },
+      "tokens_with_special": 273,
+      "decision": {
+        "id": "ORR-F2",
+        "label": "organizacion_consecuencias_republicanas",
+        "decision": "Conservar218palabras como candidato. Aceptada objeción del segundo revisor: dependencia temporal del párrafo anterior no basta para eliminar geografía. Registrar limitación para BETO, sin añadir fecha al texto."
+      },
+      "applied": false,
+      "length_exception": null
+    },
+    {
+      "id": "FON-D1",
+      "text_sha256": "8facf884bfdcafd09def49e66aed70db1dcba73cb541e772f1f1173329ef4386",
+      "word_count": 246,
+      "label": "campanias_conflictos_militares",
+      "replace_index": 78,
+      "source_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+      "local_proposal": "outputs\\corpus-closure-v2\\fonseca\\proposal-v2.json",
+      "locators": {
+        "printed_pages": null,
+        "pdf_pages": null
+      },
+      "tokens_with_special": 321,
+      "decision": {
+        "id": "FON-D1",
+        "label": "campanias_conflictos_militares",
+        "decision": "Mantener candidato previo246palabras y hash; dos apartados completos de organización militar, no toda la instrucción."
+      },
+      "applied": false,
+      "length_exception": null
+    },
+    {
+      "id": "FON-R157",
+      "text_sha256": "a90ac63996ed5b1701c8eed6d09a05484f443c8fe2890058a65997bcd987a5cd",
+      "word_count": 169,
+      "label": "campanias_conflictos_militares",
+      "replace_index": 157,
+      "source_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+      "local_proposal": "outputs\\corpus-closure-v2\\fonseca\\proposal-v2.json",
+      "locators": {
+        "printed_pages": null,
+        "pdf_pages": null
+      },
+      "tokens_with_special": 221,
+      "decision": {
+        "id": "FON-R157-context",
+        "selected_as": "FON-R157",
+        "label": "campanias_conflictos_militares",
+        "alternative": "participacion_social_regional",
+        "decision": "Jerarquías, nombramientos, armamento y coordinación muestran organización de guerrillas; intereses de grupos sociales sostienen la explicación. Texto169palabras coherente. Cierre duplicado localizado en162 y transferido en la propuesta4→3; contenido y hash se conservan al pasar a candidato."
+      },
+      "applied": false,
+      "length_exception": null
+    },
+    {
+      "id": "FON-R162",
+      "text_sha256": "6931259fc23e4f413b667d51709079cabdc6c9a6da10c5993dedd7625d1adbfd",
+      "word_count": 125,
+      "label": "campanias_conflictos_militares",
+      "replace_index": 162,
+      "source_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+      "local_proposal": "outputs\\corpus-closure-v2\\fonseca\\proposal-v2.json",
+      "locators": {
+        "printed_pages": null,
+        "pdf_pages": null
+      },
+      "tokens_with_special": 164,
+      "decision": {
+        "id": "FON-R162",
+        "label": "campanias_conflictos_militares",
+        "alternative": "participacion_social_regional",
+        "decision": "Espionaje y órdenes sobre trato civil organizan la actuación militar. Conserva la reserva Aunque estas recomendaciones algunas veces no fueron oídas, por lo que no afirma cumplimiento general.125palabras; selecciona oraciones completas pero el apartado6 continúa con13palabras en la fuente. Sin excepción de longitud ni fecha sintética añadida."
+      },
+      "applied": false,
+      "length_exception": null
+    },
+    {
+      "id": "arguedas-francisca-author-01",
+      "text_sha256": "cae127746c6d05daafebf45af2cb6e411c72ff2f0623f917b7ebc113e3c6178d",
+      "word_count": 114,
+      "label": "participacion_social_regional",
+      "replace_index": null,
+      "source_id": "0e8f429b-4a8f-5266-9c12-d8e01bcd27b2",
+      "source_work": "doi:10.18800/conexion.202201.003",
+      "source_id_status": "Identidad UUIDv5 propuesta para copia experimental; no recurso registrado en producción.",
+      "local_proposal": "outputs/corpus-batch-v2/women/blind-author-candidate.json",
+      "locators": {
+        "printed_pages": [
+          97
+        ],
+        "pdf_pages": [
+          13
+        ]
+      },
+      "tokens_with_special": 148,
+      "decision": {
+        "id": "arguedas-francisca-author-01",
+        "label": "participacion_social_regional",
+        "alternative": "liderazgos_diplomacia_proyectos",
+        "decision": "Aceptar excepción nominal114palabras: agencia femenina y restricciones de género son argumento explícito. Mantener se decía y referencia a Iribarne; no atribuir presidencia constitucional ni rendimiento probado a Francisca."
+      },
+      "applied": false,
+      "length_exception": {
+        "sha256": "cae127746c6d05daafebf45af2cb6e411c72ff2f0623f917b7ebc113e3c6178d",
+        "word_count": 114
+      }
+    }
+  ],
+  "length_policy": {
+    "guide": "docs/guia-etiquetado-1780-1842.md",
+    "ordinary_pdf_range": [
+      120,
+      250
+    ],
+    "exceptions_by_id_and_exact_hash": {
+      "ORR-F2-context": {
+        "sha256": "a1fa148c95732256b62a29668f731ee785d5d22aab9f95cbe17df7126dfaf66b",
+        "word_count": 109
+      },
+      "arguedas-francisca-author-01": {
+        "sha256": "cae127746c6d05daafebf45af2cb6e411c72ff2f0623f917b7ebc113e3c6178d",
+        "word_count": 114
+      }
+    },
+    "general_lower_bound_created": false,
+    "criteria": [
+      "Párrafo íntegro y autónomo",
+      "Periodo y referentes esenciales explícitos en estos dos casos",
+      "Argumento histórico y atribuciones conservados",
+      "Sin relleno ni introducción sintética",
+      "Procedencia, derechos, duplicados y revisiones siguen exigibles"
+    ],
+    "dataset_admission_automatic": false,
+    "historical_vs_model_input": "La excepción exige señal temporal interna en estos dos textos cortos. Para unidades ordinarias, la guía permite decidir con contexto: no se declara inútil una unidad por carecer de una fecha explícita."
+  },
+  "simulation": {
+    "current": {
+      "splits": {
+        "val": 81,
+        "train": 598,
+        "test": 137
+      },
+      "train_by_label": {
+        "campanias_conflictos_militares": 88,
+        "contexto_colonial_antecedentes": 71,
+        "crisis_ideas_emancipadoras": 60,
+        "liderazgos_diplomacia_proyectos": 94,
+        "no_relevante": 101,
+        "organizacion_consecuencias_republicanas": 101,
+        "participacion_social_regional": 83
+      },
+      "train_sources": 9
+    },
+    "repairs_only": {
+      "splits": {
+        "val": 81,
+        "train": 596,
+        "test": 137
+      },
+      "train_by_label": {
+        "campanias_conflictos_militares": 87,
+        "contexto_colonial_antecedentes": 71,
+        "crisis_ideas_emancipadoras": 60,
+        "liderazgos_diplomacia_proyectos": 94,
+        "no_relevante": 101,
+        "organizacion_consecuencias_republicanas": 100,
+        "participacion_social_regional": 83
+      },
+      "train_sources": 9
+    },
+    "repairs_plus_francisca": {
+      "splits": {
+        "val": 81,
+        "train": 597,
+        "test": 137
+      },
+      "train_by_label": {
+        "campanias_conflictos_militares": 87,
+        "contexto_colonial_antecedentes": 71,
+        "crisis_ideas_emancipadoras": 60,
+        "liderazgos_diplomacia_proyectos": 94,
+        "no_relevante": 101,
+        "organizacion_consecuencias_republicanas": 100,
+        "participacion_social_regional": 84
+      },
+      "train_sources": 10
+    }
+  },
+  "simulation_checks": {
+    "original_rows_reconstructed": 9,
+    "partitions": 75,
+    "all_unaffected_rows_preserved_in_relative_order": 807,
+    "all_evaluation_rows_and_order_preserved": true,
+    "existing_labels_preserved": true,
+    "new_export_written": false
+  },
+  "boundaries_reconstructed": [
+    {
+      "source": "OPhelan",
+      "from_index": 608,
+      "to_index": 598,
+      "boundary": "suma-/mos"
+    },
+    {
+      "source": "Orrego",
+      "from_index": 19,
+      "to_index": 24,
+      "boundary": "regiones; / todas eran"
+    },
+    {
+      "source": "Orrego",
+      "from_index": 24,
+      "to_index": 25,
+      "boundary": "arroz, / trigo"
+    },
+    {
+      "source": "Fonseca",
+      "from_index": 78,
+      "to_index": 149,
+      "boundary": "nos / sugiere"
+    },
+    {
+      "source": "Fonseca",
+      "from_index": 149,
+      "to_index": 157,
+      "boundary": "otros conceptos; / solo debía"
+    },
+    {
+      "source": "Fonseca",
+      "from_index": 157,
+      "to_index": 162,
+      "boundary": "Esto / muestra"
+    }
+  ],
+  "coverage_tradeoffs": {
+    "training_content_not_retained_from_selected_rows": [
+      {
+        "source": "Orrego",
+        "original_index": 19,
+        "words_before_cleaning": 43,
+        "content": "Recorte de créditos a minería",
+        "disposition": "context_only"
+      },
+      {
+        "source": "Orrego",
+        "original_index": 25,
+        "words_before_cleaning": 57,
+        "content": "Recorte de valor de producción y exportaciones",
+        "disposition": "context_only"
+      },
+      {
+        "source": "Fonseca",
+        "original_index": 78,
+        "words_before_cleaning": 44,
+        "content": "Subpunto sobre guerra1825–1828 e iquichanos",
+        "disposition": "context_only"
+      }
+    ],
+    "total_raw_words": 144,
+    "count_limit": "Recuento de las porciones originales, con grafía y espaciado de extracción. No es cantidad de tokens BETO ni reducción global de cobertura del corpus.",
+    "all_original_characters_archived": true,
+    "context_not_relabeled_no_relevante": true,
+    "regional_agriculture_preserved": true,
+    "military_hierarchy_espionage_civilian_instructions_preserved": true
+  },
+  "review_decisions": {
+    "orrego_initial_proposal": "Tres filas auna unidad109palabras, no seleccionada; archivo original conservado.",
+    "peer_objection": "Eliminar regiones por anáfora temporal sacrifica contenido completo sin evidencia de inutilidad.",
+    "selected_orrego": "Tres filas a dos unidades109/218; conservargeografía y limitación temporal.",
+    "fonseca_duplicate_found": "Cierre69palabras está en162; incluir esa fila en grupo evita repetirlo.",
+    "correction_to_previous_description": "La enumeración de Fonseca contiene seis apartados; el bloque anterior solo había comprobado hasta4 en118. Se cotejó119; no se declara completa la cobertura tácticaD2.",
+    "remaining_scope_limits": [
+      "OPH-R1 termina tras dos oraciones del segundo párrafo; continuación archivada.",
+      "FON-R162 conserva Aunque estas recomendaciones algunas veces no fueron oídas; apartado6 continúa con13palabras archivadas.",
+      "ORR-F2 recibe fecha hasta1840 del contexto, no del texto que BETO ve.",
+      "No se inspecciona toda la estrategia guerrillera ni se completa el pasaje táctico posterior que requierep120."
+    ],
+    "human_independent_validation": false,
+    "review_blind": false,
+    "model_predictions_used": false
+  },
+  "similarity": {
+    "method": "Normalización y conjuntos de cinco palabras de scripts/prepare_agn_pilot.py; umbrales Jaccard>=0.25 o contención>=0.8, más igualdad/contención exactas.",
+    "candidate_count_including_separate_addition": 8,
+    "compared_with": {
+      "remaining_train": 589,
+      "val": 81,
+      "test": 137
+    },
+    "threshold_alerts": 0,
+    "exact_duplicate_or_containment_alerts": 0,
+    "candidate_pair_alerts": 0,
+    "evaluation_text_or_labels_exposed_in_this_block": false,
+    "limitation": "Control mecánico no prueba independencia de obras, traducciones o documentos primarios. Se conservan grupos y relaciones del manifiesto padre; no se cambia la evaluación. El incidente de exposición de una fila val del bloque anterior permanece registrado allí."
+  },
+  "tokenization": {
+    "method": {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5",
+      "sha256": "f0ee18fc8f95db74ce5c5c3a4070e0eb32a4b31bcde4865af63b1308e924c0c4",
+      "special_tokens_included": true,
+      "model_weights_loaded": false
+    },
+    "repaired_units_above192": 5,
+    "repair_unit_count": 7,
+    "interpretation": "Cinco unidades reparadas siguen superando192tokens. Esta propuesta no cambia max_len ni acredita ganancia de F1."
+  },
+  "evidence_local": [
+    {
+      "path": "outputs/corpus-closure-v2/inputs-before.json",
+      "sha256": "9c8472cdd85d3f0bd6a2343e5184d688328364d61747c7b1aab76e5007ed05e8"
+    },
+    {
+      "path": "outputs/corpus-closure-v2/consolidated-local.json",
+      "sha256": "e4615029a13445bfb168d4e79fc4b87d062071be2cd3343c452b566410f66bca"
+    },
+    {
+      "path": "outputs/corpus-closure-v2/audit_proposal.py",
+      "sha256": "0666e44c12a311b851aa876b2363798ffb8be0b48c7229b93872fee28a5bca7e"
+    },
+    {
+      "path": "outputs/corpus-closure-v2/save_manifest.py",
+      "sha256": "d770acc88e8d36a861e0794a06229c3fe97d5db4d98541c70d3b7de9b5e29d91"
+    },
+    {
+      "path": "outputs/corpus-closure-v2/prepare_orrego.py",
+      "sha256": "06e86d9e462aa99aa71d54a9b72cf28cf4d79aa6596e5c83272d81b85a4aa304"
+    },
+    {
+      "path": "outputs/corpus-closure-v2/revise_orrego.py",
+      "sha256": "b0e87c231a7ffd168bef093bcfa340fb19d4e1ea0c4063911b6fdc06abdd24b1"
+    },
+    {
+      "path": "outputs/corpus-closure-v2/root-second-review.json",
+      "sha256": "03d0bc04efdb6ca18e7cf98ac12a820eb08d38ec5b0c3e41e5e05e8082aee78c"
+    },
+    {
+      "path": "outputs/corpus-closure-v2/opheland/proposal.json",
+      "sha256": "4b5d73b05e4b1a3ce14d5c3f935f42a773957b95d97727beabe489a53f6919e6"
+    },
+    {
+      "path": "outputs/corpus-closure-v2/opheland/original-group.json",
+      "sha256": "97aec03616b64311aeb77d88e641ae2febb04f1d3771a7e3b244cb7721ada26a"
+    },
+    {
+      "path": "outputs/corpus-closure-v2/opheland/context.json",
+      "sha256": "42c65287d317a62a7c57e5b9f550fa270a2a802dcf700db27dbcb8e7100d4e45"
+    },
+    {
+      "path": "outputs/corpus-closure-v2/opheland/verification.json",
+      "sha256": "df579683bf95aa51b8560bb2183b178d8d88e2f2cb7d96ae561e0cd50cc7fbc9"
+    },
+    {
+      "path": "outputs/corpus-closure-v2/fonseca/proposal.json",
+      "sha256": "c3252d95bb42aedfc8f8e7fca9d23c672ff0ac33c48617981b513d33fa18e2ee"
+    },
+    {
+      "path": "outputs/corpus-closure-v2/fonseca/proposal-v2.json",
+      "sha256": "63cc17fe955cfa5d669b6659e793e1ccc22189fb73b47d3d9739c82306cc6dc4"
+    },
+    {
+      "path": "outputs/corpus-closure-v2/fonseca/first-review.json",
+      "sha256": "fcf954e9015361a0d227fb28e9323ad811b6053e83de67633b0a36dd7d46793a"
+    },
+    {
+      "path": "outputs/corpus-closure-v2/orrego/proposal.json",
+      "sha256": "0e6bf15702b89eaca31de7c1c27074e0f9ddc947da57ea14a3eec69a12793574"
+    },
+    {
+      "path": "outputs/corpus-closure-v2/orrego/proposal-v2.json",
+      "sha256": "a71e04d6998579514bbdb56c34fcb128da68451256744dadbf3decfbd56886b4"
+    },
+    {
+      "path": "outputs/corpus-closure-v2/orrego/second-review.json",
+      "sha256": "4dd98faa47b0a0218b00e289d610c0eed889fb53e733348d3e599fef626ec65c"
+    },
+    {
+      "path": "outputs/corpus-closure-v2/short-units/review.json",
+      "sha256": "6fe7522f26ede3f3fb027dcbb2bf158b75b6836b5bb396e9708b057136687762"
+    }
+  ],
+  "portability": "Transcripciones, originales, imágenes y auxiliares están en outputs excluido de Git. El manifiesto enlaza sus rutas/hashes; por sí solo no reconstruye las fuentes en otro equipo.",
+  "preexisting_duplicate_untouched": [
+    709,
+    737
+  ],
+  "source_conditions_unchanged": [
+    "Martínez Riaza: discrepancia de licencias entre registros1984/2010.",
+    "Rabonas: derechos de traducción y cotejo de edición citada pendientes.",
+    "Diplomacia: licencia de catálogo directo sin confirmar.",
+    "Francisca: prosa propia del artículo CC BY4.0, con atribución a Iribarne; el grupo documental y las cautelas históricas se conservan."
+  ],
+  "proposed_next_block": "Aplicar solo la operación de reparación9→7 en una copia experimental nueva, preservando referencia/evaluación y el archivo de contexto. Mantener Francisca como alta separada; antes de cualquier entrenamiento fijar evaluación y una única hipótesis. Requiere confirmación para comenzar el siguiente bloque.",
+  "dataset_applied": false,
+  "training_performed": false,
+  "new_metrics": false,
+  "new_predictions": false,
+  "production_changed": false,
+  "closing_verification": {
+    "passed": true,
+    "datasets_config_code_and_parent_review_unchanged": true,
+    "prior_readme_and_guide_content_preserved_except_declared_edits": true,
+    "local_evidence_hashes_match": true,
+    "residual_word_counts_recomputed": [
+      43,
+      57,
+      44
+    ],
+    "git_diff_check_passed": true,
+    "local_data_excluded_from_git": true,
+    "new_dataset_saved": false,
+    "production_verified": false
+  }
+}

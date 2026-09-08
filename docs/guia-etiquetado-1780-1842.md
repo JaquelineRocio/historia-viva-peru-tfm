@@ -4,6 +4,29 @@
 
 La unidad es un segmento de 120–250 palabras (PDF) o 45–90 segundos (YouTube). Se etiqueta por la idea histórica dominante, no por una palabra aislada. Años, personas y lugares se corrigen como entidades separadas. Si dos temas tienen el mismo peso y no puede decidirse con el contexto inmediato, se marca `ambiguo`. Portadas, índices, créditos, bibliografías y texto ajeno al periodo se marcan `no_relevante`.
 
+### Dos excepciones documentadas de longitud
+
+Se admite una excepción de longitud para estos dos textos exactos del
+[cierre del lote v2](../artifacts/reviews/corpus-closure-v2.json), identificados
+allí por su SHA-256. El recuento usa palabras separadas por espacios.
+
+| Unidad | Palabras | Motivo |
+|---|---:|---|
+| `ORR-F2-context` | 109 | Párrafo íntegro con periodo hasta 1840 y explicación causal del estancamiento agrícola. Su función propuesta pasa de contexto a candidato, conservando el identificador. |
+| `arguedas-francisca-author-01` | 114 | Párrafo íntegro sobre agencia política femenina, con personaje, periodo y argumento identificables en el propio texto. |
+
+Ambos conservan inicio y cierre del párrafo, referentes esenciales, señal
+temporal interna, atribuciones y tema dominante. No se añadió relleno, un título
+artificial ni una frase introductoria que dejara pendiente una cita. Se mantienen
+los controles de procedencia, derechos, duplicados y revisión temática. La
+excepción permite evaluar su incorporación; no aplica cambios al dataset.
+
+La pauta ordinaria sigue siendo 120–250 palabras. Otros textos breves necesitan
+su propia decisión documentada; no quedan admitidos por analogía ni por terminar
+en punto. Un fragmento truncado de 119 palabras no cumple estos criterios.
+Las revisiones de estos dos casos fueron asistidas por IA, no validación humana
+independiente, y no demuestran una mejora del clasificador.
+
 ## Clases
 
 ### `contexto_colonial_antecedentes`
