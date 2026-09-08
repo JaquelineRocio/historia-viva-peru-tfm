@@ -23,6 +23,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Copia experimental del corpus v2 | Aplicar únicamente las reparaciones revisadas | Copia local creada: 596 train, 81 validación y 137 test. Siete textos reemplazados y dos filas retiradas; otras 807 filas intactas. Francisca excluida; sin entrenamiento ni cambios en producción |
 | Diversidad de fuentes y reserva de evaluación | Preparar aportes y separar obras relacionadas | Seis unidades propuestas de Contreras/Hünefeldt; un ambiguo, un original conservado y dos textos de Majluf en cuarentena. Dos obras reservadas para evaluación, sin ejemplos extraídos. Dataset intacto; los seis textos propuestos superan 192 tokens |
 | Desarrollo externo parcial | Congelar ejemplos y criterios antes de comparar modelos | 31 párrafos: 26 de Sala y 5 de Sobrevilla; cinco categorías. Procedencia, desacuerdos y exclusiones conservados; verificador local y 13 controles de alteración aprobados. Sin entrenamiento ni predicciones |
+| Longitud BETO 192 frente a 384 | Aislar max_len con train original y época 2 fija | Comparación local completada: F1 macro externo parcial 0.10000→0.13333; 3→4 aciertos/31. Solo mejora un caso militar; cuatro categorías evaluadas siguen con F1 0. Sin mejora general demostrada ni despliegue |
 | Diagnóstico de cobertura | Orientar el siguiente cambio de datos | Concentración por fuente, rasgos de transcripción y fragmentos incompletos identificados. Muestra de 21 filas de train revisada; prioridad: cuatro filas de Villanueva. Sin modificar etiquetas |
 | Límites de Villanueva | Recuperar argumentos cortados entre páginas | Seis unidades delimitadas y cotejadas; dos quedan como contexto. Continuaciones ya presentes en filas 10/637 identificadas. Propuesta local, sin aplicar |
 | Reparación de Villanueva | Preparar un reemplazo sin duplicar continuaciones | Cuatro candidatos revisados, cuatro unidades de contexto y seis originales archivados; V02 ambiguo. Extracción local verificada, dataset sin modificar |
@@ -2018,16 +2019,101 @@ demuestran que ampliar la entrada mejore el F1.
 cambios. Es desarrollo exploratorio pequeño, concentrado en una obra y en
 1820–1824, con dependencia entre fuentes. No autoriza una sustitución en producción.
 Se mantienen los entregables de ambas unidades y el público escolar aún por confirmar.
-**Siguiente bloque propuesto:** comparar localmente longitud 192 frente a 384,
-usando este desarrollo separado y el mismo entrenamiento original congelado de
-596 filas, con los demás hiperparámetros fijos. Reutilizar el checkpoint de
-referencia de 192 cuando el protocolo permita una comparación equivalente.
-Antes de entrenar, declarar protocolo, costo local y criterio de decisión;
-adaptar la evaluación separada sin ejecutar por error el comparador anterior,
-que entrena y asume la validación de 81 filas. Esperar confirmación de la autora
-antes de iniciar ese bloque; no incorporar simultáneamente las reparaciones,
-los seis textos nuevos ni cambios en la ponderación del error. Una evaluación
-final independiente continúa pendiente.
+**Bloque confirmado y completado:** comparación local de longitud 192 frente
+a 384 con el entrenamiento original congelado y la evaluación separada.
+El protocolo y los resultados se registran a continuación; no se incorporaron
+simultáneamente reparaciones, textos nuevos ni cambios en la ponderación.
+Una evaluación final independiente continúa pendiente.
+
+## Comparación BETO 192 frente a 384 — 7 de septiembre de 2026, Lima
+
+**Resultado: mejora numérica mínima, insuficiente para considerar resuelto el
+problema del modelo.** El [informe](../artifacts/experiments/beto-length-v1/report.json)
+conserva métricas, confusiones, 31 resultados pareados y comprobaciones. El
+[protocolo](../artifacts/experiments/beto-length-v1/protocol.json) se congeló antes
+de obtener predicciones; sus criterios no se cambiaron después del resultado.
+
+| Medida sobre el mismo desarrollo externo | Referencia 192 | Candidato 384 |
+|---|---:|---:|
+| F1 macro, cinco categorías presentes | 0.10000 | 0.13333 |
+| Aciertos totales | 3/31 | 4/31 |
+| Aciertos en Sala | 1/26 | 2/26 |
+| Aciertos en Sobrevilla | 2/5 | 2/5 |
+| F1 de campañas y conflictos militares | 0.50000 | 0.66667 |
+| F1 de crisis e ideas, participación social, liderazgos y organización republicana | 0 en las cuatro | 0 en las cuatro |
+
+Cambian cinco predicciones: `SAL-P052` pasa de error a acierto y otras cuatro
+siguen equivocadas; ningún acierto previo se pierde. Los 17 ejemplos de crisis
+e ideas continúan sin aciertos. El candidato predice siete de ellos como contexto
+colonial y diez como organización republicana. Esta confusión observada no
+identifica una causa única ni demuestra que las etiquetas históricas sean falsas.
+
+El resultado cumple **la señal exploratoria mínima** predeclarada: aumenta el
+macro y no disminuyen aciertos totales ni por obra. No se confunde ese criterio
+con calidad suficiente: 27 de 31 respuestas siguen erradas. Tampoco se compara
+0.13333 con el antiguo 0.43766, calculado sobre otra evaluación y siete clases.
+No se predijeron ni puntuaron nuevamente validación antigua o test.
+
+Se conservó el entrenamiento original de 596 filas, incluidos textos, etiquetas
+y orden. No entraron las reparaciones ni los seis textos nuevos propuestos.
+Solo cambió `max_len`, de 192 a 384, tanto al entrenar como al inferir; este
+experimento no separa esos dos efectos.
+
+| Parámetro | Valor conservado |
+|---|---|
+| BETO base y revisión | `dccuchile/bert-base-spanish-wwm-cased`, `c4d86612f51b4f46759c8390d1798c2febe71b93` |
+| Semilla y tasa de aprendizaje | 42; `2e-5` |
+| Microbatch y acumulación | 2; 8 microbatches, tamaño nominal 16 |
+| Optimizador, decay y clipping | AdamW; 0.01; norma máxima 1.0 |
+| Pérdida | Frecuencia inversa por clase; media ponderada dentro de cada microbatch, normalización original conservada |
+| Memoria y precisión | Gradient checkpointing y precisión mixta CUDA |
+| Checkpoint comparado | Época 2 fija, heredada de la referencia existente |
+| Calendario de aprendizaje | Horizonte de 3 épocas: 114 pasos nominales y 11 de calentamiento |
+
+No se puso simplemente `epochs=2`: eso habría cambiado también el calendario.
+El nuevo [entrenador](../scripts/beto_fixed_epoch.py) se detiene y guarda una vez
+tras la época 2, manteniendo el horizonte original de tres. Recibe únicamente
+train y no selecciona por validación. El [comparador](../scripts/compare_beto_length.py)
+reutiliza el checkpoint de 192 y evalúa ambos sobre exactamente las 31 filas
+congeladas, verificando 23 entradas y los archivos de la revisión base en caché.
+
+El entrenamiento registró 70.16 s; el tramo de comparación medido, 79.62 s.
+PyTorch registró máximos de 2.22 GB asignados y 2.42 GB reservados en la RTX 3050
+local. Hubo 76 intentos de actualización: 75 aplicados y uno omitido por la
+protección numérica de AMP, conforme a la política original. El informe de 192
+no registraba esas omisiones; no se afirma igualdad de actualizaciones efectivas.
+No hubo falta de memoria, reintentos de entrenamiento, descargas ni uso de Modal.
+
+Comprobaciones: equivalencia bit a bit de pesos y tasas de aprendizaje hasta la
+época 2 en un modelo sintético CPU; 11 controles del comparador, con 126 casos
+de métricas contrastados con scikit-learn; 22 comprobaciones del recálculo
+independiente de los resultados reales a partir de las predicciones archivadas; evaluación externa
+y sus 26 archivos locales íntegros después de ejecutar. La prueba sintética no
+certifica igualdad numérica en CUDA. Se conservan las limitaciones de una sola
+semilla, dos obras relacionadas y etiquetas revisadas por IA.
+
+Reproducción local, en una carpeta de salida nueva y con los archivos requeridos:
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/compare_beto_length.py --protocol artifacts/experiments/beto-length-v1/protocol.json --output outputs/beto-length-v1-reproduction
+```
+
+Ese comando **sí entrena**; queda documentado, no se ejecutó una repetición.
+Pesos, fixtures y salidas auxiliares permanecen en `outputs/beto-length-v1/`,
+excluidos de Git. El candidato se conserva localmente y **no se seleccionó para
+producción**. Implementación y ejecución local comprobadas; ninguna acción ni
+verificación remota de producción en este bloque. Los cambios previos del
+comparador de validación y del informe del control se conservaron.
+
+**Siguiente bloque propuesto:** preparar un lote diverso a partir de la auditoría
+del entrenamiento y del mapa de los seis ejes. Priorizar ejemplos con fronteras
+claras entre instituciones virreinales, ideas políticas y organización republicana,
+sin abandonar participación, economía y guerra; reutilizar las propuestas de
+fuentes ya verificadas. Conservar las ambigüedades y no cambiar etiquetas del
+desarrollo para mejorar la métrica. Esta evaluación ya fue utilizada: evitar
+encadenar ajustes sobre ella y mantener pendiente una prueba final independiente.
+Esperar confirmación de la autora antes de iniciar ese bloque. Se mantienen los
+entregables académicos de las dos unidades.
 
 ### Reproducir la muestra de la revisión inicial
 

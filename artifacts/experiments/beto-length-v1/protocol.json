@@ -1,0 +1,281 @@
+{
+  "schema_version": 1,
+  "id": "beto-length-v1",
+  "status": "frozen_before_predictions",
+  "declared_at_utc": "2026-09-08T04:24:40.926279+00:00",
+  "hypothesis": "Aumentar max_len de192 a384 durante entrenamiento e inferencia puede mejorar la clasificación al conservar más texto. No atribuir cambios a entrenamiento o inferencia por separado ni a una causa histórica única.",
+  "training_dataset": "artifacts/datasets/gold-v1-source-aware.json",
+  "training_rows": 596,
+  "training_rows_sha256": "bdf80e593c6ff9e23c05f160d9d1cdc01359e170783ff345cecbf401b8afc766",
+  "training_order": "Exact train-filtered order of frozen reference; unchanged texts and labels.",
+  "external_dataset": "artifacts/datasets/external-development-v1.json",
+  "external_content_sha256": "0a12b4d4ac4b8ef58e561ed7c8632c73558454ec37edd8d269b9184fe49b6c82",
+  "external_rows": 31,
+  "labels": [
+    "campanias_conflictos_militares",
+    "contexto_colonial_antecedentes",
+    "crisis_ideas_emancipadoras",
+    "liderazgos_diplomacia_proyectos",
+    "no_relevante",
+    "organizacion_consecuencias_republicanas",
+    "participacion_social_regional"
+  ],
+  "metric_labels": [
+    "campanias_conflictos_militares",
+    "crisis_ideas_emancipadoras",
+    "liderazgos_diplomacia_proyectos",
+    "organizacion_consecuencias_republicanas",
+    "participacion_social_regional"
+  ],
+  "per_source_metric_labels": {
+    "doi:10.3989/revindias.2011.023": [
+      "campanias_conflictos_militares",
+      "crisis_ideas_emancipadoras",
+      "organizacion_consecuencias_republicanas",
+      "participacion_social_regional"
+    ],
+    "sobrevilla-2021-intermedios": [
+      "campanias_conflictos_militares",
+      "liderazgos_diplomacia_proyectos",
+      "organizacion_consecuencias_republicanas"
+    ]
+  },
+  "baseline_directory": "outputs/experiments/beto-u1/beto-lr2e5",
+  "baseline_checkpoint_epoch": 2,
+  "baseline_params": {
+    "lr": 2e-05,
+    "epochs": 3,
+    "batch_size": 2,
+    "gradient_accumulation_steps": 8,
+    "max_len": 192
+  },
+  "candidate_params": {
+    "lr": 2e-05,
+    "epochs": 3,
+    "batch_size": 2,
+    "gradient_accumulation_steps": 8,
+    "max_len": 384
+  },
+  "checkpoint_epoch": 2,
+  "training_config": {
+    "base_model": "dccuchile/bert-base-spanish-wwm-cased",
+    "revision": "c4d86612f51b4f46759c8390d1798c2febe71b93",
+    "seed": 42
+  },
+  "baseline_reuse": {
+    "model_sha256": "4fea08ebf3da420a8ef1b04b151822b32c7f4869408335ab0c5885eb7945ef1f",
+    "historical_selection": "Epoch2 chosen on old validation before this external set existed; no new epoch selection here.",
+    "control_report": "artifacts/experiments/beto-reference-control-v1/report.json",
+    "control_reproduced_original_predictions": 81,
+    "control_recorded_weights_hash_equals_baseline": true
+  },
+  "fixed_recipe": {
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "gradient_clipping_max_norm": 1.0,
+    "inverse_frequency_class_weights": true,
+    "weighted_loss_normalization": "Keep original weighted mean inside each microbatch, divided by actual accumulation group size; not equivalent to one weighted batch16.",
+    "mixed_precision": "float16 CUDA autocast and GradScaler, skip scheduler on overflow as in original",
+    "gradient_checkpointing": true,
+    "schedule_epochs": 3,
+    "schedule_total_steps": 114,
+    "warmup_steps": 11,
+    "microbatches_per_epoch": 298,
+    "last_accumulation_group_microbatches": 2,
+    "fixed_epochs_executed": 2,
+    "optimizer_update_attempts": 76,
+    "why_not_epochs_2": "That would shorten scheduler to76 and warmup7, confounding the comparison."
+  },
+  "decision_rule": {
+    "primary": "macro F1 over the same five predeclared labels, unrounded comparison",
+    "favorable_exploratory_signal": "delta_macro >0 AND total_correct_after >= before AND correct_after >= before in each work",
+    "mixed_signal": "delta_macro >0 but a correct-count guard fails",
+    "no_positive_signal": "delta_macro <=0",
+    "class_regressions": "Always report precision/recall/F1/support and changes, even if aggregate rule passes.",
+    "secondary": [
+      "seven-label confusion matrix",
+      "per-work macro over fixed labels present in that work",
+      "correct/error counts per work",
+      "predictions to truth-absent labels",
+      "paired row outcomes"
+    ],
+    "production_promotion": false,
+    "statistical_significance_claim": false
+  },
+  "evaluation_schedule": "Predict reference192 once on31 frozen rows; train one384 candidate from pinned base to fixed epoch2; predict saved candidate once on same31. No early stopping or selection among checkpoints.",
+  "resource_policy": {
+    "local_only": true,
+    "paid_services": false,
+    "modal_training": false,
+    "observed_gpu": {
+      "available": true,
+      "torch_cuda": "12.6",
+      "matmul_passed": true,
+      "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+      "free_total_bytes": [
+        3459986228,
+        4294443008
+      ]
+    },
+    "observed_ram": {
+      "total_bytes": 16473034752,
+      "available_bytes": 356392960,
+      "load_percent": 97
+    },
+    "disk_free_bytes": 190901014528,
+    "prior_control_three_epoch_training_seconds": 75.28,
+    "prior_comparison_seconds": 79.84,
+    "prior_peak_cuda_allocated_bytes": 2219693056,
+    "forecast": "One two-epoch candidate at384; allow several minutes locally. Historical192 timings are not a runtime/memory guarantee. RAM currently tight; monitor actual execution.",
+    "on_oom": "Record failure and stop. No silent microbatch/accumulation/precision/CPU fallback or extra trials."
+  },
+  "packages": {
+    "torch": "2.7.1+cu126",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "safetensors": "0.8.0",
+    "huggingface-hub": "0.36.2",
+    "numpy": "2.2.6",
+    "scikit-learn": "1.7.2"
+  },
+  "base_cache_files": [
+    {
+      "name": "config.json",
+      "bytes": 648,
+      "file_sha256": "3694a761b0ba882c24baab95df01cf7e7e1424797af557272e944ec2452f9f31"
+    },
+    {
+      "name": "pytorch_model.bin",
+      "bytes": 439621341,
+      "file_sha256": "e131a95091c777bbd45250fb647fec415010cb8cd1ad6e1d59babeb82a0be360"
+    },
+    {
+      "name": "special_tokens_map.json",
+      "bytes": 134,
+      "file_sha256": "bd6ed009009f8264d0ef87d5b50798cb57c5219a0bbb7c8973372855241aa05f"
+    },
+    {
+      "name": "tokenizer.json",
+      "bytes": 480199,
+      "file_sha256": "ea7a58026720ba45a8a401d9f86bbe8337f2725d3b02d3a1011305c46cbbd9cd"
+    },
+    {
+      "name": "tokenizer_config.json",
+      "bytes": 364,
+      "file_sha256": "2f5cde6bbb9959fccd280e9e9c08d41d05e96743fac1a3b5b67e0e5691ae7d10"
+    },
+    {
+      "name": "vocab.txt",
+      "bytes": 241796,
+      "file_sha256": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+    }
+  ],
+  "input_guards": [
+    {
+      "path": "apps/ml/app/ml/beto_experiment.py",
+      "sha256": "7a55c204f569cc891c8dbdffd4668a3f20abcf13139d901e9db298e3525a121d"
+    },
+    {
+      "path": "scripts/compare_beto_validation.py",
+      "sha256": "bc8f02cd3b096ceea2a22f192b5e30205fcd067e2e45865152f406ca10e15037"
+    },
+    {
+      "path": "configs/experiments/beto.json",
+      "sha256": "0752b044c39cbe403fbe2e8a8a074cf095f6475502e6b074505558fefdcc1ab9"
+    },
+    {
+      "path": "artifacts/datasets/gold-v1-source-aware.json",
+      "sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a"
+    },
+    {
+      "path": "artifacts/datasets/external-development-v1.json",
+      "sha256": "901f50f13a60642b316896abd9d4d68b945e699f7befc696b9e7506bc8fa4ceb"
+    },
+    {
+      "path": "artifacts/reviews/external-development-v1.json",
+      "sha256": "33a10711ed13186406719b02ffe38892a7252e57a5ac060ac8f1b73475d5d004"
+    },
+    {
+      "path": "outputs/corpus-snapshot-v2/reviewed-export.json",
+      "sha256": "5de9ea1a4be3c9d628da51cdf1d07108f43e0ac8ee580acb483013c6dc27c35c"
+    },
+    {
+      "path": "artifacts/reviews/source-diversity-v1.json",
+      "sha256": "93474eca48f045f2a0b1e3c6f9ac7ac6f353b30f570f48a18bed4dff8a20c7e1"
+    },
+    {
+      "path": "artifacts/experiments/beto-reference-control-v1/report.json",
+      "sha256": "bfa40f2972885bda657174f62f7242030ef653f277c70717d3a58620a189b315"
+    },
+    {
+      "path": "scripts/beto_fixed_epoch.py",
+      "sha256": "5e162abde50fe3c7cf4d47fcc322565a60cea7f388df24df1fa83df6ea4dd100"
+    },
+    {
+      "path": "scripts/compare_beto_length.py",
+      "sha256": "54798f66319133edd5b3456786cdcb3a0e5e4e92dcc5c72893fd99fcaa15dcbb"
+    },
+    {
+      "path": "scripts/verify_external_development.py",
+      "sha256": "ae84592b9258cf7db6198f9a76adac86647b126906f6a01d56de80166052c4da"
+    },
+    {
+      "path": "apps/ml/app/ml/baselines.py",
+      "sha256": "78d5f731290bfe1c703dbc3bb8061e75a8eb221fa89bb8ec1777fc6e32dbe609"
+    },
+    {
+      "path": "artifacts/reviews/beto-readiness-v1.json",
+      "sha256": "ddd8edc24c45e01a4301e717263dbfd29dc3d3b068f71f683b5a494016e95995"
+    },
+    {
+      "path": "outputs/beto-length-v1/readiness.json",
+      "sha256": "79b7cc3d9e2abb835e5fb4c8444b05052e032b77fb1e3ccddd001943f24d8e06"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/model.safetensors",
+      "sha256": "4fea08ebf3da420a8ef1b04b151822b32c7f4869408335ab0c5885eb7945ef1f"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/config.json",
+      "sha256": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/labels.json",
+      "sha256": "3e8d21fda1c3a8c0d83249dbf89a9d5fce0e89a6635e9e52a49dac04dd59b169"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/validation.json",
+      "sha256": "58460604ea3cd86f07f167f4714e6396083f705652269ff99c0a8ca9aae8780c"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/special_tokens_map.json",
+      "sha256": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/tokenizer.json",
+      "sha256": "f0ee18fc8f95db74ce5c5c3a4070e0eb32a4b31bcde4865af63b1308e924c0c4"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/tokenizer_config.json",
+      "sha256": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/vocab.txt",
+      "sha256": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+    }
+  ],
+  "limits": [
+    "One seed and fixed recipe inherited from reused one-source original validation; not an unbiased hyperparameter search.",
+    "31 AI-reviewed paragraphs,26Sala and5Sobrevilla, related works from same journal; five labels only, largely1820–1824.",
+    "17of31 truth labels are crisis/ideas; report every class and work, do not generalize to entire corpus.",
+    "Original validation81 and test137 are not predicted, scored or used for new selection; full reference file hashed only for integrity.",
+    "No repaired rows or six proposed additions enter this comparison; no labels altered.",
+    "Changing max_len changes both training truncation and inference truncation; these effects are not disentangled here.",
+    "No proof of statistical significance, full-source independence or human gold; a final independent test remains pending.",
+    "CPU synthetic regression checks recipe equivalence, not numerical CUDA reproducibility or AMP overflow behavior.",
+    "No automatic next trial or production substitution regardless of result."
+  ],
+  "training_started": false,
+  "model_predictions_started": false,
+  "content_sha256": "1442c712968ca9de631582b473d6d558878464137b2286b49a9ed3e8790e43be"
+}
