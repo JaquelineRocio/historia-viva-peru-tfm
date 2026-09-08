@@ -1,0 +1,887 @@
+{
+  "schema_version": 1,
+  "review_id": "corpus-batch-v2",
+  "date_lima": "2026-09-07",
+  "status": "preparacion_local_cerrada_sin_incorporacion_ni_mejora_del_modelo_demostrada",
+  "scope": "1780–1842; categorías existentes; preparar propuestas, sin entrenar",
+  "inputs": [
+    {
+      "path": "artifacts/datasets/gold-v1-source-aware.json",
+      "sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a"
+    },
+    {
+      "path": "outputs/villanueva-snapshot-v1/reviewed-export.json",
+      "sha256": "30c5e648476fcfcb1bd9eddd3e99a7cca3ce5f23fabf09290cd7e4ec8791074a"
+    },
+    {
+      "path": "scripts/compare_beto_validation.py",
+      "sha256": "bc8f02cd3b096ceea2a22f192b5e30205fcd067e2e45865152f406ca10e15037"
+    },
+    {
+      "path": "apps/ml/app/ml/beto_experiment.py",
+      "sha256": "7a55c204f569cc891c8dbdffd4668a3f20abcf13139d901e9db298e3525a121d"
+    },
+    {
+      "path": "coursework/README.md",
+      "sha256": "b891d3a4eff6d0b0a4e4400de0bf783a62c955bbf1132f4c081f208da343dc31"
+    }
+  ],
+  "counts": {
+    "extracted_units": 12,
+    "repair_candidates": 3,
+    "new_work_candidates_conditional": 8,
+    "context_only": 1,
+    "units_with_author_year_page_link_and_hash": 12,
+    "units_visually_checked": 12,
+    "ai_reviewed_twice": 12,
+    "same_primary_label": 12,
+    "source_works": 6,
+    "new_source_works_examined": 3,
+    "fully_admitted_for_migration": 0,
+    "rows_added": 0,
+    "rows_removed": 0,
+    "existing_units_reidentified": 10,
+    "unit_label_proposals_including_context": {
+      "contexto_colonial_antecedentes": 1,
+      "organizacion_consecuencias_republicanas": 2,
+      "campanias_conflictos_militares": 3,
+      "crisis_ideas_emancipadoras": 2,
+      "participacion_social_regional": 2,
+      "liderazgos_diplomacia_proyectos": 2
+    }
+  },
+  "needs": [
+    {
+      "id": "A1",
+      "status": "reparacion_propuesta",
+      "evidence": [
+        "OPH-A1"
+      ],
+      "limit": "Revisar juntas filas598/608, preservar resto de598 y antecedente contextual; no duplicar continuación."
+    },
+    {
+      "id": "A2",
+      "status": "representado_parcialmente_en_train",
+      "evidence": [
+        "AGN01:805",
+        "Huamanga:67"
+      ],
+      "limit": "AGN01 ya incorporado, no añadir otra vez.67 sigue cortado y no hay PDF local de Huamanga; no certificar relaciones de trabajo en general."
+    },
+    {
+      "id": "B1",
+      "status": "pendiente",
+      "evidence": [],
+      "limit": "No se recuperó unidad nueva sobre crisis/soberanía1808. Los dos pasajes de imprenta no satisfacen este objetivo."
+    },
+    {
+      "id": "B2",
+      "status": "candidatos_condicionados",
+      "evidence": [
+        "MR1984-P151-A",
+        "MR1984-P157-A",
+        "HUE03:810"
+      ],
+      "limit": "HUE03 existente; MR añade censura1810–1814, licencia discrepante y dependencia bibliográfica de Huerta."
+    },
+    {
+      "id": "C1",
+      "status": "representado_parcialmente_en_train",
+      "evidence": [
+        "AGN02:806",
+        "Huamanga:348"
+      ],
+      "limit": "AGN02 no se duplica.348 contiene explicación regional pero termina cortado; su contexto sigue pendiente."
+    },
+    {
+      "id": "C2",
+      "status": "candidatos_condicionados",
+      "evidence": [
+        "arguedas-rabonas-02",
+        "arguedas-francisca-author-01"
+      ],
+      "limit": "Derechos de traducción pendientes para rabonas; Francisca es prosa de autora pero114palabras, inferior a guía. No rellenar."
+    },
+    {
+      "id": "D1",
+      "status": "reparacion_y_candidatos_condicionados",
+      "evidence": [
+        "FON-D1",
+        "arguedas-rabonas-01",
+        "diplomacy-03"
+      ],
+      "limit": "Unidades distintas: convocatoria/autosostenimiento, abastecimiento femenino, riesgo/escolta naval. No tres duplicados ni tres fuentes independientes certificadas."
+    },
+    {
+      "id": "D2",
+      "status": "representado_con_reparacion_pendiente",
+      "evidence": [
+        "Fonseca:157",
+        "Fonseca:161"
+      ],
+      "limit": "157 abre/cierra con cortes;161 mezcla estrategia, crítica documental y nuevo apartado. No declarar reparada estrategia guerrillera por extraer solo convocatoria/autosostenimiento."
+    },
+    {
+      "id": "E1",
+      "status": "representado_en_unidad_previamente_revisada",
+      "evidence": [
+        "V04"
+      ],
+      "limit": "Ya incorporada. El lote no añade contraste monarquía/república ni Confederación; cobertura completa no certificada."
+    },
+    {
+      "id": "E2",
+      "status": "candidatos_condicionados",
+      "evidence": [
+        "diplomacy-01",
+        "diplomacy-02"
+      ],
+      "limit": "Reconocimiento esperado y negativa a empréstito. Derechos observados en catálogo indexado, revalidación directa fallida."
+    },
+    {
+      "id": "F1",
+      "status": "representado_en_unidades_previamente_revisadas",
+      "evidence": [
+        "V03",
+        "V06",
+        "V07"
+      ],
+      "limit": "Ya incorporadas. Constitución original1823 y diferencia norma/práctica siguen sin cotejo nuevo en este bloque."
+    },
+    {
+      "id": "F2",
+      "status": "reparacion_condicionada_por_contexto",
+      "evidence": [
+        "ORR-F2",
+        "ORR-F2-context"
+      ],
+      "limit": "Regiones218palabras dependen del párrafo causal109palabras para fijar hasta1840; BETO no recibe ese contexto. Preservar originales19/24/25."
+    }
+  ],
+  "sources": [
+    {
+      "id": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "author": "Scarlett O'Phelan",
+      "year": 1985,
+      "title": "El mito de la independencia concedida",
+      "url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/8222",
+      "license": "CC BY 4.0",
+      "local_pdf": ".corpus-downloads\\opheland_mito_independencia.pdf",
+      "pdf_sha256": "1acd9f242328d6901bd6b68f820540473793ca9c5434a600fdd407b95da7a909",
+      "edition_limit": "Artículo consultado; no se autenticaron los documentos primarios que cita."
+    },
+    {
+      "id": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+      "author": "Juan Luis Orrego Penagos",
+      "year": 1988,
+      "title": "Los primeros años del Perú republicano",
+      "url": "https://repositorio.pucp.edu.pe/items/3344e6fb-39b9-4266-aabc-7900373c1126",
+      "license": "CC BY 4.0 linked by item license URL; human-readable anchor says openAccess",
+      "local_pdf": ".corpus-downloads\\orrego_primeros_anos_republicanos.pdf",
+      "pdf_sha256": "8d0c8819c800ed2289722a26af618c3d5917bdbec586dbb7c5c1309a2b274729",
+      "edition_limit": "Artículo consultado; no se autenticaron los documentos primarios que cita."
+    },
+    {
+      "id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+      "author": "Juan Fonseca Ariza",
+      "year": 2010,
+      "title": "¿Bandoleros o patriotas? Las guerrillas y la dinámica popular en la independencia del Perú",
+      "url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/95",
+      "license": "CC BY 4.0",
+      "local_pdf": ".corpus-downloads\\fonseca_bandoleros_patrotas.pdf",
+      "pdf_sha256": "082ca707f2e2246faf43e7bcd3c620a06e287d6f1f2212b549c94d77e0e5306f",
+      "edition_limit": "Artículo consultado; no se autenticaron los documentos primarios que cita."
+    },
+    {
+      "source_id": "martinez-riaza-1984-libertad-imprenta",
+      "author": "Ascensión Martínez Riaza",
+      "title": "Libertad de imprenta y periodismo político en el Perú, 1811–1824",
+      "textual_edition_year": 1984,
+      "textual_publication": "Revista de la Universidad Católica, nos. 15–16",
+      "downloaded_from_record": "https://repositorio.pucp.edu.pe/items/4886bb23-1e37-4584-a5bb-9b964137e6ee/full",
+      "original_1984_record": "https://repositorio.pucp.edu.pe/items/89ad9193-bee7-45cf-8174-8f410cdf9c3f",
+      "pdf_url": "https://repositorio.pucp.edu.pe/bitstreams/940a8cae-21fa-49af-9648-5b8660f97f56/download",
+      "pdf_sha256": "26f95b2a2de0a901a72ad058274715b0e082c2f2cabbe1af8bd075fefc713bf6",
+      "license_observations": [
+        {
+          "record_year": 2010,
+          "license": "CC BY 4.0",
+          "license_url": "http://creativecommons.org/licenses/by/4.0",
+          "evidence": "repo-2010-record.json",
+          "field": "metadata.dc.rights.uri[0].value"
+        },
+        {
+          "record_year": 1984,
+          "license": "CC BY-NC-ND 2.5 PE",
+          "license_url": "http://creativecommons.org/licenses/by-nc-nd/2.5/pe/",
+          "evidence": "repo-1984-record.json",
+          "field": "metadata.dc.rights.uri[0].value"
+        }
+      ],
+      "reuse_status": "pending_clarification_of_metadata_discrepancy_not_selected_for_corpus",
+      "reuse_reason": "El registro2010 del PDF escaneado de1984 anuncia CC BY4; el registro1984 del mismo título/autora anuncia CC BY-NC-ND2.5PE. Se conservan ambos hechos; no se afirma que exista prohibición universal ni autorización inequívoca para publicar un corpus derivado. No se copia automáticamente la licencia más permisiva al lote.",
+      "related_not_same_work": [
+        {
+          "source": "Huerta Vera2020, doi:10.18800/historica.202001.004",
+          "relationship": "Cita esta obra en bibliografía,p156; esto es dependencia bibliográfica, no prueba de identidad textual. Se comprueba solapamiento con sus fragmentos de train."
+        }
+      ]
+    },
+    {
+      "source_id": "arguedas-pinasco-2022-conexion-17",
+      "author": "Maria Jose Arguedas Pinasco",
+      "year": 2022,
+      "title": "Mujeres peruanas en los primeros años de la República, según Flora Tristán en su libro Peregrinaciones de una paria",
+      "doi": "10.18800/conexion.202201.003",
+      "landing_url": "https://revistas.pucp.edu.pe/index.php/conexion/article/view/26124",
+      "pdf_url": "https://revistas.pucp.edu.pe/index.php/conexion/article/download/26124/24557/103385",
+      "pdf_sha256": "3a649e06d4892d5c1be0435f59ae8f186d3e5fe2be1252ab367a821ddd85652c",
+      "license": {
+        "article": "CC BY 4.0",
+        "url": "https://creativecommons.org/licenses/by/4.0/",
+        "evidence": [
+          "Ficha editorial, apartado Licencia",
+          "PDF página impresa 105 declara acceso abierto CC BY 4.0",
+          "https://revistas.pucp.edu.pe/index.php/conexion/oa"
+        ],
+        "attribution_required": true,
+        "third_party_quotes": "Pasajes citados de Tristán, edición 2003, traducción E. Romero. No se ha demostrado que la licencia editorial cubra los derechos propios de esa traducción. No admitir automáticamente para redistribución o entrenamiento."
+      },
+      "quoted_work": {
+        "author": "Flora Tristán",
+        "title": "Peregrinaciones de una paria",
+        "original_year": 1838,
+        "edition_year": 2003,
+        "translator": "E. Romero",
+        "publisher": "Centro de la Mujer Peruana Flora Tristán; Fondo Editorial de la UNMSM",
+        "reference_evidence": "Arguedas 2022, p.104",
+        "primary_edition_consulted": false,
+        "cited_pages": [
+          365,
+          366
+        ],
+        "document_group": "flora-tristan-peregrinations-1838-all-editions-and-secondary-excerpts"
+      },
+      "date_discrepancies": [
+        {
+          "where": "Ficha web y PDF p.87",
+          "reported": "Viaje 1832–1833",
+          "assessment": "No coincide con título de obra 1833–1834 ni encuentro en junio de 1834 registrado en p.98. No se modifica texto fuente."
+        },
+        {
+          "where": "PDF p.89",
+          "reported": "Inicio del viaje 1832 y regreso 1834",
+          "assessment": "Discrepancia conservada; no se añade año al texto candidato."
+        },
+        {
+          "where": "PDF p.98",
+          "reported": "guerra civil de 1934",
+          "assessment": "El párrafo fecha encuentro en junio de 1834. Fragmento no seleccionado; sin corrección silenciosa."
+        },
+        {
+          "where": "PDF p.99",
+          "reported": "Muerte de Francisca en 1935",
+          "assessment": "El contexto sitúa exilio en 1834 y dice un año después. Fragmento no seleccionado; no se toma 1935 como hecho."
+        },
+        {
+          "where": "Ficha web / PDF p.105 / PDF p.87",
+          "reported": "Publicado 2022-07-28 / primera publicación 27 de julio de 2022 / aceptado 29-07-2022",
+          "assessment": "Se conserva año editorial 2022, pero no una fecha diaria como única correcta. Ficha también dice derechos de autor 2024."
+        }
+      ],
+      "chronology_crosscheck": {
+        "institution": "Bibliothèque nationale de France",
+        "url": "https://catalogue.bnf.fr/ark:/12148/cb37625389d",
+        "evidence": "Título catalogado Pérégrinations d’une paria : 1833–1834, tomo 2. Verificación bibliográfica; no cotejo de pasajes en español.",
+        "candidate_date_granularity": "1833–1834 contextual; no fecha exacta del campamento"
+      }
+    },
+    {
+      "id": "cdip-11-01-ortiz-1975",
+      "title": "Misiones peruanas 1820–1826. Volumen 1. Las primeras misiones diplomáticas en América",
+      "compiler": "Carlos Ortiz de Zevallos Paz-Soldán",
+      "edition_year": 1975,
+      "catalog_url": "https://repositorio.bicentenario.gob.pe/handle/20.500.12934/148?show=full",
+      "page_viewer_base": "https://repositoriodigital.bnp.gob.pe/bnp/recursos/2/html/misiones-peruanas-1820-1826-las-primeras-misiones-diplomaticas-en-america-324449/",
+      "catalog_evidence_method": "Contenido indexado del catálogo oficial devuelto por búsqueda web el 7-09-2026; rastreo indicado hace 3 meses. Acceso directo actual falló: web 502; urllib getaddrinfo failed. No se presenta como catálogo descargado en esta sesión.",
+      "license_as_indexed": "CC BY-NC-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "reuse_condition": "Conservar atribución, enlace, aviso de cambios y condiciones NC/SA. La licencia se observó en índice de fuente oficial, no se revalidó en ficha accesible actualmente. Pendiente confirmar para incorporación final; el acceso a BNP por sí solo no demuestra una licencia abierta.",
+      "known_related_train_resources": [
+        {
+          "resource_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+          "relation": "Fonseca cita CDIP; no demostrado que sean estos tres documentos"
+        },
+        {
+          "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+          "relation": "Basadre trata misiones, empréstitos y García del Río–Paroissien; no demostrado que cite estos tres documentos"
+        }
+      ],
+      "limitations": "Los nombres, fechas y páginas se toman de la edición/transcripción institucional; no se autenticaron manuscritos originales. El título general 1820–1826 no sustituye verificar las fechas individuales."
+    }
+  ],
+  "units": [
+    {
+      "id": "OPH-A1",
+      "sha256": "770fba587df5bdcea4e2873c14eb07b41d2a0630ee5e3753df93a08247f26c4d",
+      "words": 212,
+      "local_file": "outputs\\corpus-batch-v2\\repairs\\candidates-visual.json",
+      "tokens": 289,
+      "cut_at192": 97,
+      "role": "repair",
+      "source_id": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "printed_pages": [
+        183,
+        184
+      ],
+      "proposed_label": "contexto_colonial_antecedentes",
+      "second_label": "contexto_colonial_antecedentes",
+      "alternative": "participacion_social_regional",
+      "rationale": "El párrafo explica tensiones del orden colonial y pérdida de acceso criollo a cargos bajo las reformas borbónicas. El conflicto en Oruro es evidencia de esa estructura y no una narración dominante de movilización regional. No se formula un programa independentista ni se exponen ideas emancipadoras.",
+      "document_date": null,
+      "document_group": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "status": "reparacion_revisada_pendiente_de_resegmentar_grupo",
+      "admitted_to_dataset": false,
+      "applied": false
+    },
+    {
+      "id": "ORR-F2",
+      "sha256": "f83309ced4d0613a902d82fb3f10817e91097d6aee58d1c153a2eae8291fbea5",
+      "words": 218,
+      "local_file": "outputs\\corpus-batch-v2\\repairs\\candidates-visual.json",
+      "tokens": 273,
+      "cut_at192": 81,
+      "role": "repair",
+      "source_id": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+      "printed_pages": [
+        191,
+        192
+      ],
+      "proposed_label": "organizacion_consecuencias_republicanas",
+      "second_label": "organizacion_consecuencias_republicanas",
+      "alternative": "participacion_social_regional",
+      "rationale": "Describe organización económica y mercados regionales de la primera república. La división por regiones y cultivos no equivale a participación de actores sociales o movilización regional, por lo que esa alternativa es débil.",
+      "document_date": null,
+      "document_group": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+      "status": "pendiente_contexto_temporal_y_resegmentacion",
+      "admitted_to_dataset": false,
+      "applied": false
+    },
+    {
+      "id": "ORR-F2-context",
+      "sha256": "a1fa148c95732256b62a29668f731ee785d5d22aab9f95cbe17df7126dfaf66b",
+      "words": 109,
+      "local_file": "outputs\\corpus-batch-v2\\repairs\\candidates-visual.json",
+      "tokens": 135,
+      "cut_at192": 0,
+      "role": "context",
+      "source_id": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+      "printed_pages": [
+        191
+      ],
+      "proposed_label": "organizacion_consecuencias_republicanas",
+      "second_label": "organizacion_consecuencias_republicanas",
+      "alternative": "campanias_conflictos_militares",
+      "rationale": "El centro son las consecuencias económicas de las luchas independentistas: destrucción, trabajo, capital y pérdida de mercados, seguidas de predominio del mercado interno. Las guerras aparecen como una causa, sin operaciones o estrategia militar.",
+      "document_date": null,
+      "document_group": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+      "status": "solo_contexto_109_palabras",
+      "admitted_to_dataset": false,
+      "applied": false
+    },
+    {
+      "id": "FON-D1",
+      "sha256": "8facf884bfdcafd09def49e66aed70db1dcba73cb541e772f1f1173329ef4386",
+      "words": 246,
+      "local_file": "outputs\\corpus-batch-v2\\repairs\\candidates-visual.json",
+      "tokens": 321,
+      "cut_at192": 129,
+      "role": "repair",
+      "source_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+      "printed_pages": [
+        117,
+        118
+      ],
+      "proposed_label": "campanias_conflictos_militares",
+      "second_label": "campanias_conflictos_militares",
+      "alternative": "participacion_social_regional",
+      "rationale": "Examina organización militar de guerrillas mediante convocatoria, disciplina, mantenimiento y pertrechos. El respeto a familias y subsistencia es una interpretación subordinada al funcionamiento de los cuerpos armados.",
+      "document_date": null,
+      "document_group": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+      "status": "reparacion_revisada_pendiente_de_resegmentar_grupo",
+      "admitted_to_dataset": false,
+      "applied": false
+    },
+    {
+      "id": "MR1984-P151-A",
+      "sha256": "42d0d2bf8270e9b19d3e8a2aa6fe204f94ad33ce8722f5271b172b00274d6532",
+      "words": 183,
+      "local_file": "outputs\\corpus-batch-v2\\ideas\\candidates-unlabelled.json",
+      "tokens": 261,
+      "cut_at192": 69,
+      "role": "candidate_new_work",
+      "source_id": "martinez-riaza-1984-libertad-imprenta",
+      "printed_pages": [
+        151
+      ],
+      "proposed_label": "crisis_ideas_emancipadoras",
+      "second_label": "crisis_ideas_emancipadoras",
+      "alternative": null,
+      "rationale": "Libertad de imprenta, circulación de prensa y censura; no atribuir al texto una cobertura de soberanía de 1808 que no ofrece.",
+      "document_date": null,
+      "document_group": "work:martinez-riaza-libertad-imprenta-peru-1811-1824-1984",
+      "status": "pendiente_aclarar_licencia_de_edicion",
+      "admitted_to_dataset": false,
+      "applied": false
+    },
+    {
+      "id": "MR1984-P157-A",
+      "sha256": "63518437659a399529a5e0048c5c9ace51166adcef54374eed8396ae345f62c2",
+      "words": 149,
+      "local_file": "outputs\\corpus-batch-v2\\ideas\\candidates-unlabelled.json",
+      "tokens": 194,
+      "cut_at192": 2,
+      "role": "candidate_new_work",
+      "source_id": "martinez-riaza-1984-libertad-imprenta",
+      "printed_pages": [
+        157
+      ],
+      "proposed_label": "crisis_ideas_emancipadoras",
+      "second_label": "crisis_ideas_emancipadoras",
+      "alternative": null,
+      "rationale": "Aplicación y obstrucciones a la libertad de imprenta en Lima y actuaciones del Cabildo.",
+      "document_date": null,
+      "document_group": "work:martinez-riaza-libertad-imprenta-peru-1811-1824-1984",
+      "status": "pendiente_aclarar_licencia_de_edicion",
+      "admitted_to_dataset": false,
+      "applied": false
+    },
+    {
+      "id": "arguedas-rabonas-01",
+      "sha256": "0280446b2e7ee2f1c9ed0431e0e9f1bdc87aab0be5084b83e445b9da574269ef",
+      "words": 233,
+      "local_file": "outputs\\corpus-batch-v2\\women\\blind-candidates.json",
+      "tokens": 332,
+      "cut_at192": 140,
+      "role": "candidate_new_work",
+      "source_id": "arguedas-pinasco-2022-conexion-17",
+      "printed_pages": [
+        100
+      ],
+      "proposed_label": "campanias_conflictos_militares",
+      "second_label": "campanias_conflictos_militares",
+      "alternative": "participacion_social_regional",
+      "rationale": "Predominan transporte, abastecimiento, cocina y requisas que sostienen a la tropa. El sujeto femenino también permite una lectura social; conservar desacuerdo si lo hubiera.",
+      "document_date": null,
+      "document_group": "flora-tristan-peregrinations-1838-all-editions-and-secondary-excerpts",
+      "status": "pendiente_derechos_traduccion_y_cotejo_obra_citada",
+      "admitted_to_dataset": false,
+      "applied": false
+    },
+    {
+      "id": "arguedas-rabonas-02",
+      "sha256": "7d42de75a8f49b73be331dc39ada9798e67220177b964923e45a50b14f59655f",
+      "words": 166,
+      "local_file": "outputs\\corpus-batch-v2\\women\\blind-candidates.json",
+      "tokens": 215,
+      "cut_at192": 23,
+      "role": "candidate_new_work",
+      "source_id": "arguedas-pinasco-2022-conexion-17",
+      "printed_pages": [
+        100,
+        101
+      ],
+      "proposed_label": "participacion_social_regional",
+      "second_label": "participacion_social_regional",
+      "alternative": "campanias_conflictos_militares",
+      "rationale": "La prosa de la autora destaca redes, autonomía y agencia de las mujeres, aunque el contexto sea militar.",
+      "document_date": null,
+      "document_group": "flora-tristan-peregrinations-1838-all-editions-and-secondary-excerpts",
+      "status": "pendiente_derechos_traduccion_y_cotejo_obra_citada",
+      "admitted_to_dataset": false,
+      "applied": false
+    },
+    {
+      "id": "arguedas-francisca-author-01",
+      "sha256": "cae127746c6d05daafebf45af2cb6e411c72ff2f0623f917b7ebc113e3c6178d",
+      "words": 114,
+      "local_file": "outputs\\corpus-batch-v2\\women\\blind-author-candidate.json",
+      "tokens": 148,
+      "cut_at192": 0,
+      "role": "candidate_new_work",
+      "source_id": "arguedas-pinasco-2022-conexion-17",
+      "printed_pages": [
+        97
+      ],
+      "proposed_label": "participacion_social_regional",
+      "second_label": "participacion_social_regional",
+      "alternative": "liderazgos_diplomacia_proyectos",
+      "rationale": "Predomina la agencia política femenina y sus límites sociales. Ser una persona conocida no determina por sí solo liderazgo/proyectos. La valoración de su gobierno es una afirmación atribuida por la autora, no un hecho establecido aquí.",
+      "document_date": null,
+      "document_group": "flora-tristan-peregrinations-1838-all-editions-and-secondary-excerpts",
+      "status": "pendiente_excepcion_longitud_114_palabras",
+      "admitted_to_dataset": false,
+      "applied": false
+    },
+    {
+      "id": "diplomacy-01",
+      "sha256": "e21a84fb1ad24c64d7239efe624b80552477089b4c3e91be93369adfbe1c4b58",
+      "words": 174,
+      "local_file": "outputs\\corpus-batch-v2\\diplomacy\\candidates-unlabelled.json",
+      "tokens": 212,
+      "cut_at192": 20,
+      "role": "candidate_new_work",
+      "source_id": "cdip-11-01-ortiz-1975",
+      "printed_pages": [
+        431
+      ],
+      "proposed_label": "liderazgos_diplomacia_proyectos",
+      "second_label": "liderazgos_diplomacia_proyectos",
+      "alternative": null,
+      "rationale": "Comunicación diplomática sobre la expectativa de reconocimiento de la independencia; el remitente aún no confirma la autorización del Congreso estadounidense.",
+      "document_date": "1822-05-25",
+      "document_group": "cdip-11-01-ortiz-1975:1822-05-25:diplomacy-01",
+      "status": "pendiente_confirmar_licencia_catalogo_actual",
+      "admitted_to_dataset": false,
+      "applied": false
+    },
+    {
+      "id": "diplomacy-02",
+      "sha256": "0a8066a7fc6851b06aa709a93b2e2fb3f13f1acdf759597e204f9b841afd9a49",
+      "words": 228,
+      "local_file": "outputs\\corpus-batch-v2\\diplomacy\\candidates-unlabelled.json",
+      "tokens": 276,
+      "cut_at192": 84,
+      "role": "candidate_new_work",
+      "source_id": "cdip-11-01-ortiz-1975",
+      "printed_pages": [
+        218
+      ],
+      "proposed_label": "liderazgos_diplomacia_proyectos",
+      "second_label": "liderazgos_diplomacia_proyectos",
+      "alternative": "organizacion_consecuencias_republicanas",
+      "rationale": "La situación del erario fundamenta la respuesta a la negociación de un empréstito entre Estados. El foco del documento es la solicitud diplomática, aunque aporta historia fiscal.",
+      "document_date": "1824-01-22",
+      "document_group": "cdip-11-01-ortiz-1975:1824-01-22:diplomacy-02",
+      "status": "pendiente_confirmar_licencia_catalogo_actual",
+      "admitted_to_dataset": false,
+      "applied": false
+    },
+    {
+      "id": "diplomacy-03",
+      "sha256": "b986957589c286c5d9b4db99e6e9ab644f7b8682461e0f690ef8d73ee0a83f6f",
+      "words": 223,
+      "local_file": "outputs\\corpus-batch-v2\\diplomacy\\candidates-unlabelled.json",
+      "tokens": 283,
+      "cut_at192": 91,
+      "role": "candidate_new_work",
+      "source_id": "cdip-11-01-ortiz-1975",
+      "printed_pages": [
+        258
+      ],
+      "proposed_label": "campanias_conflictos_militares",
+      "second_label": "campanias_conflictos_militares",
+      "alternative": "liderazgos_diplomacia_proyectos",
+      "rationale": "Predominan el riesgo naval, aplazamiento del transporte de tropas, escolta y coordinación de escuadras. El canal diplomático no basta para clasificarlo como diplomacia.",
+      "document_date": "1824-08-28",
+      "document_group": "cdip-11-01-ortiz-1975:1824-08-28:diplomacy-03",
+      "status": "pendiente_confirmar_licencia_catalogo_actual",
+      "admitted_to_dataset": false,
+      "applied": false
+    }
+  ],
+  "previous_units_reidentified": [
+    {
+      "id": "V03",
+      "current_index": 812,
+      "sha256": "fd3554708a4f458fa38f745c856086d3b0bb2cd4afed3264441356a82a58bc73"
+    },
+    {
+      "id": "V04",
+      "current_index": 813,
+      "sha256": "c2348d1f74472092453f1c13c49b9cf90e9eba20279ec304e48bd8dc7808a464"
+    },
+    {
+      "id": "V06",
+      "current_index": 814,
+      "sha256": "a5bc9415c2cf7b432f24a61d8bffebc62c0039b5fd8554c914836e062c45a459"
+    },
+    {
+      "id": "V07",
+      "current_index": 815,
+      "sha256": "d68349f0e3b115c5759a8c3aaad7b13e51085f2d6a49c9eadc0963cd0c2da692"
+    },
+    {
+      "id": "HUE01",
+      "current_index": 808,
+      "sha256": "674972b0ac958812c62dc12735b3e663ca6019a21467cd0e682c0d3856e134f7"
+    },
+    {
+      "id": "HUE02",
+      "current_index": 809,
+      "sha256": "8b9d6b3f148cdd7916984ea7f4202d12db8d81c4baf18b750d7b2ffd8b3389fe"
+    },
+    {
+      "id": "HUE03",
+      "current_index": 810,
+      "sha256": "016fe2fcf8f5b1085df06331cfef5242a0ab3c5a8c2465d71777831d8bc3d7af"
+    },
+    {
+      "id": "HUE04",
+      "current_index": 811,
+      "sha256": "059e61847e9fc5d7d9ed63facf83a8685e0e18c3b95cdda66c0451313ab32a22"
+    },
+    {
+      "id": "AGN01",
+      "current_index": 805,
+      "sha256": "42c53cbd2007a225bbd752aa3ee406171153719d1afe679c345289eb76cef810"
+    },
+    {
+      "id": "AGN02",
+      "current_index": 806,
+      "sha256": "0ba4a8ea7ccb70fd363921c41c96a0184abcc15f2df76e89bba48d4c807cf0a9"
+    }
+  ],
+  "tokenization": {
+    "method": {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5",
+      "local_files_only": true,
+      "special_tokens_included": true,
+      "sha256": "f0ee18fc8f95db74ce5c5c3a4070e0eb32a4b31bcde4865af63b1308e924c0c4"
+    },
+    "counts": {
+      "reference": {
+        "train_rows": 596,
+        "over192": 442,
+        "over256": 272,
+        "over384": 4,
+        "over512": 0,
+        "median": 251.0,
+        "max": 479,
+        "by_label": {
+          "campanias_conflictos_militares": {
+            "rows": 89,
+            "over192": 78
+          },
+          "contexto_colonial_antecedentes": {
+            "rows": 70,
+            "over192": 63
+          },
+          "crisis_ideas_emancipadoras": {
+            "rows": 59,
+            "over192": 37
+          },
+          "liderazgos_diplomacia_proyectos": {
+            "rows": 93,
+            "over192": 78
+          },
+          "no_relevante": {
+            "rows": 101,
+            "over192": 26
+          },
+          "organizacion_consecuencias_republicanas": {
+            "rows": 101,
+            "over192": 88
+          },
+          "participacion_social_regional": {
+            "rows": 83,
+            "over192": 72
+          }
+        }
+      },
+      "reviewed": {
+        "train_rows": 598,
+        "over192": 443,
+        "over256": 269,
+        "over384": 4,
+        "over512": 0,
+        "median": 250.0,
+        "max": 479,
+        "by_label": {
+          "campanias_conflictos_militares": {
+            "rows": 88,
+            "over192": 77
+          },
+          "contexto_colonial_antecedentes": {
+            "rows": 71,
+            "over192": 64
+          },
+          "crisis_ideas_emancipadoras": {
+            "rows": 60,
+            "over192": 38
+          },
+          "liderazgos_diplomacia_proyectos": {
+            "rows": 94,
+            "over192": 80
+          },
+          "no_relevante": {
+            "rows": 101,
+            "over192": 26
+          },
+          "organizacion_consecuencias_republicanas": {
+            "rows": 101,
+            "over192": 86
+          },
+          "participacion_social_regional": {
+            "rows": 83,
+            "over192": 72
+          }
+        }
+      }
+    },
+    "candidates_over192": 10,
+    "interpretation": "442/596 y443/598 superan192. Problema compartido por ambas versiones, no explicación causal del descenso de F1. No se midió pérdida de información decisiva ni inferencia. Ninguna longitud configurada cambió."
+  },
+  "overlap": {
+    "method": "prepare_agn_pilot.normalize/grams/similarities: exacta normalizada, contención exacta, cinco palabras; alertas Jaccard>=0.25 o contención>=0.8",
+    "new_candidates_train_threshold_alerts": 0,
+    "all_units_validation_threshold_alerts": 0,
+    "all_units_test_threshold_alerts": 0,
+    "candidate_pair_threshold_alerts": 0,
+    "repair_groups_local_archive": "outputs/corpus-batch-v2/repairs/original-groups.json",
+    "repair_related_indices": {
+      "OPH-A1": [
+        598,
+        608
+      ],
+      "ORR-F2": [
+        19,
+        24,
+        25
+      ],
+      "FON-D1": [
+        78,
+        149,
+        157
+      ]
+    },
+    "duplicate_proposed_not_applied": [
+      709,
+      737
+    ],
+    "limitation": "No alertas léxicas no garantiza independencia entre obras, ediciones o documentos. Conservar relaciones Huerta/Martínez, Arguedas/Tristán/Iribarne y CDIP/Fonseca/Basadre. En Francisca, la cita expresa corresponde a Iribarne2010; el grupo Tristán es una precaución por obra secundaria, no prueba de que el párrafo proceda de Tristán."
+  },
+  "review_limits": [
+    "Ceguera respecto de la primera etiqueta propuesta; no respecto de tema, autoría o contexto compartido.",
+    "Todos los revisores son IA de la misma familia; coincidencia12/12 no es accuracy, Kappa ni validación humana.",
+    "Fragmentos representan interpretaciones o testimonios atribuidos, no hechos confirmados por consenso.",
+    "ORR-F2 necesita contexto temporal que el clasificador actual no recibe.",
+    "FON-D1 contiene completos los apartados1–2; no toda la instrucción, que continúa con3–4.",
+    "Páginas y fechas documentales se comprobaron en ediciones publicadas; manuscritos y traducción primaria no consultados.",
+    "No se cuantifica exhaustivamente la presencia de los doce subtemas en todo train."
+  ],
+  "process_incident": {
+    "kind": "accidental_validation_exposure",
+    "description": "Una inspección inicial de estructura imprimió por error el primer item del export, cuyo split era val. No se copió ese texto a artefactos ni se usó para seleccionar, etiquetar o medir similitud. Las comparaciones siguientes filtraron train antes de leer sus textos. No afirmar que no se vio ningún texto de validación.",
+    "test_texts_read": false
+  },
+  "software_note": "PyMuPDF1.26.7 instalado con --no-deps --target outputs/corpus-batch-v2/pdf-renderer solo para cotejo visual. No cambia requisitos ni entorno del proyecto. Tokenizador preexistente cargado offline; ningún peso de modelo cargado.",
+  "evidence_local": [
+    {
+      "path": "outputs\\corpus-batch-v2\\inputs-before.json",
+      "sha256": "2f962b323ea7a5ddb24fd102112bc9f11f5ad8192f1a1b83d9e236e406f0fc43"
+    },
+    {
+      "path": "outputs\\corpus-batch-v2\\verification.json",
+      "sha256": "ff60caf4d74d585bb72f25a51236d7e5c59c621ca21d88fea31af59dc47bdbfd"
+    },
+    {
+      "path": "outputs\\corpus-batch-v2\\verify_batch.py",
+      "sha256": "c4054efcd8c8838ef7bdd9837ebbad77ff82a89f5347f7d8dac6d6980edf4979"
+    },
+    {
+      "path": "outputs\\corpus-batch-v2\\build_manifest.py",
+      "sha256": "4b80d0fe67e17009381690fc0dbc4579ca9b3aaa5744abfce533ac756b4a8887"
+    },
+    {
+      "path": "outputs\\corpus-batch-v2\\root-blind-review.json",
+      "sha256": "25af5674fd75c92306fe31ab5afbd1deb2333cb07230cc3baae07e8e81dd5dc7"
+    },
+    {
+      "path": "outputs\\corpus-batch-v2\\repairs\\prepare.py",
+      "sha256": "166d9485112288cb6966ae595f567d71be22a0c663aabb44685f4ab80102e9f9"
+    },
+    {
+      "path": "outputs\\corpus-batch-v2\\repairs\\visual_corrections.py",
+      "sha256": "b1e8dcc4f9be3a8c598a7109e730d81b7c6099afca6a296c661e5b5b114457f4"
+    },
+    {
+      "path": "outputs\\corpus-batch-v2\\repairs\\original-groups.json",
+      "sha256": "cc1390473348b97b58798e6ef8f80a4ed159a61b7120f690e47106209d1d6ec3"
+    },
+    {
+      "path": "outputs\\corpus-batch-v2\\repairs\\first-review.json",
+      "sha256": "88653fe58a93d5d0f45d8b003ea122c9060f603b84602af9e4444ea06441f99c"
+    },
+    {
+      "path": "outputs\\corpus-batch-v2\\repairs\\second-review.json",
+      "sha256": "0e99edde5af8d9e2555162b6e0ce6d4c9b3063ca436a1c3b3f0acd5caa0ea05c"
+    },
+    {
+      "path": "outputs\\corpus-batch-v2\\ideas\\first-review.json",
+      "sha256": "5ac3f15a3c8467538f2ad31ab53f77836fc0e26e7ed343ceaa276416f9ca56aa"
+    },
+    {
+      "path": "outputs\\corpus-batch-v2\\ideas\\verification.json",
+      "sha256": "0d30ad12203d09c6e10fb11078279cba9f960319001b921b3c2e05f501ea67a2"
+    },
+    {
+      "path": "outputs\\corpus-batch-v2\\women\\first-review.json",
+      "sha256": "ebe4ff770a75fe245123f02a1cdffb33aa3bb5ebf748f6caff3e3b1e058a3241"
+    },
+    {
+      "path": "outputs\\corpus-batch-v2\\women\\first-review-author-candidate.json",
+      "sha256": "e2e9d58841e694e72e685d390c94e10d05bbfaaed1a672f8ada8d2877e24504f"
+    },
+    {
+      "path": "outputs\\corpus-batch-v2\\women\\visual-check.json",
+      "sha256": "d20b075c1f3f397e5025a8b13ce96ca91d66c64076a6468e518901bc08055683"
+    },
+    {
+      "path": "outputs\\corpus-batch-v2\\diplomacy\\first-review.json",
+      "sha256": "dc66c4889b98e636575f8f4a858bce82111d09e05440a201bd7c4e9c5936e85a"
+    },
+    {
+      "path": "outputs\\corpus-batch-v2\\repairs\\candidates-visual.json",
+      "sha256": "755752a68f73d4820c0f248e23f302063c1157aedda5c0b8f842c6c57be9136b"
+    },
+    {
+      "path": "outputs\\corpus-batch-v2\\ideas\\candidates-unlabelled.json",
+      "sha256": "84775049efb5e99d93031ceb62aa58b354e9962480bde2e72bfda762f61689a6"
+    },
+    {
+      "path": "outputs\\corpus-batch-v2\\women\\blind-candidates.json",
+      "sha256": "824b9e0471ec2a0a73c03f047214c66b4908fd9873e1602102b2426b491d038a"
+    },
+    {
+      "path": "outputs\\corpus-batch-v2\\women\\blind-author-candidate.json",
+      "sha256": "abe2b00e85863d2f4eef4a2d2be13cca89165b232d64dc90de1521889fb6ec53"
+    },
+    {
+      "path": "outputs\\corpus-batch-v2\\diplomacy\\candidates-unlabelled.json",
+      "sha256": "993009506e0f898ce7c0ca038921dbfef615ed65160a661ce614c512acbc9914"
+    }
+  ],
+  "local_files_portability": "PDFs, imágenes, transcripciones, contextos y auxiliares están en outputs excluido de Git. Este manifiesto conserva rutas/hashes/metadatos, no garantiza que esos archivos existan en otro equipo.",
+  "next_step_proposal": "Confirmar un bloque acotado para cerrar resegmentación de grupos y excepciones de unidades completas; resolver únicamente derechos de candidatos ya localizados. Antes de entrenar, fijar evaluación separada por obras/documentos y elegir una sola hipótesis: longitud o reparación de datos. No mezclar cambios ni volver a optimizar indefinidamente sobre validación antigua.",
+  "training_performed": false,
+  "new_predictions": false,
+  "new_model_metrics": false,
+  "dataset_labels_changed": false,
+  "production_changed": false,
+  "closing_verification": {
+    "datasets_and_checked_code_unchanged": true,
+    "prior_readme_changes_preserved": true,
+    "readme_only_declared_headings_status_row_and_new_block_changed": true,
+    "git_diff_check_passed": true,
+    "local_evidence_hashes_match": true,
+    "ignored_examples_verified": [
+      "outputs\\corpus-batch-v2\\verification.json",
+      "outputs\\corpus-batch-v2\\pdf-renderer\\pymupdf\\__init__.py",
+      "outputs\\corpus-batch-v2\\women\\visual-page-13.png",
+      "outputs\\corpus-batch-v2\\repairs\\original-groups.json"
+    ],
+    "scope": "Local checks; no new production verification, no training or inference.",
+    "reproduction": "Auxiliares de una ejecución local con rutas fijas y hashes de entrada. Se conservan para inspeccionar el cálculo; no constituyen un pipeline portátil ni se ofrece su ejecución inmediata como reproducción: rechazan sobrescrituras y README ya cambió respecto del estado inicial."
+  }
+}
