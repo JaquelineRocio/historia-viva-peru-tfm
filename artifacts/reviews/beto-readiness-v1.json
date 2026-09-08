@@ -1,0 +1,501 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-07T23:30:20.551191+00:00",
+  "status": "prerequisites_checked_runner_pending",
+  "inputs": {
+    "config": {
+      "path": "configs/experiments/beto.json",
+      "name": "beto.json",
+      "bytes": 534,
+      "file_sha256": "0752b044c39cbe403fbe2e8a8a074cf095f6475502e6b074505558fefdcc1ab9"
+    },
+    "selection": {
+      "path": "artifacts/experiments/course-u1/beto/selection.json",
+      "name": "selection.json",
+      "bytes": 12061,
+      "file_sha256": "ee92e6834a13271a592626b4381d274e99f6cbe00d1a298f55247a8766f001c6"
+    },
+    "previous_report": {
+      "path": "artifacts/experiments/course-u1/beto/report.json",
+      "name": "report.json",
+      "bytes": 26628,
+      "file_sha256": "eac4e54a5a13850000439f1b59291fe2da5969c7a434b0600f0635ef01b10b42"
+    },
+    "reference": {
+      "path": "artifacts/datasets/gold-v1-source-aware.json",
+      "name": "gold-v1-source-aware.json",
+      "bytes": 952810,
+      "file_sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a"
+    },
+    "reviewed": {
+      "path": "outputs/villanueva-snapshot-v1/reviewed-export.json",
+      "name": "reviewed-export.json",
+      "bytes": 1023917,
+      "file_sha256": "30c5e648476fcfcb1bd9eddd3e99a7cca3ce5f23fabf09290cd7e4ec8791074a"
+    },
+    "trainer": {
+      "path": "apps/ml/app/ml/beto_experiment.py",
+      "name": "beto_experiment.py",
+      "bytes": 7001,
+      "file_sha256": "7a55c204f569cc891c8dbdffd4668a3f20abcf13139d901e9db298e3525a121d"
+    },
+    "general_runner": {
+      "path": "apps/ml/app/ml/experiments.py",
+      "name": "experiments.py",
+      "bytes": 8574,
+      "file_sha256": "301f182cae16e106c7d2af807a4d4f754706211e7c970a0bb0f6178a0dafae9a"
+    },
+    "checker": {
+      "path": "scripts/check_beto_readiness.py",
+      "name": "check_beto_readiness.py",
+      "bytes": 9904,
+      "file_sha256": "9ad31ab570bf88ad2e8b249557f8e184c783171ce503dc97201e8bed31fa2f28"
+    }
+  },
+  "python": "3.10.10",
+  "packages": {
+    "torch": "2.7.1+cu126",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "safetensors": "0.8.0",
+    "huggingface-hub": "0.36.2",
+    "numpy": "2.2.6",
+    "scikit-learn": "1.7.2"
+  },
+  "previous_dependency_versions_match": true,
+  "ram": {
+    "total_bytes": 16473034752,
+    "available_bytes": 1043337216,
+    "load_percent": 93
+  },
+  "disk_free_bytes": 179521482752,
+  "cuda": {
+    "available": true,
+    "torch_cuda": "12.6",
+    "matmul_passed": true,
+    "name": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "free_total_bytes": [
+      3459986228,
+      4294443008
+    ]
+  },
+  "cache": {
+    "model": "dccuchile/bert-base-spanish-wwm-cased",
+    "revision": "c4d86612f51b4f46759c8390d1798c2febe71b93",
+    "files": [
+      {
+        "name": "config.json",
+        "bytes": 648,
+        "file_sha256": "3694a761b0ba882c24baab95df01cf7e7e1424797af557272e944ec2452f9f31"
+      },
+      {
+        "name": "pytorch_model.bin",
+        "bytes": 439621341,
+        "file_sha256": "e131a95091c777bbd45250fb647fec415010cb8cd1ad6e1d59babeb82a0be360"
+      },
+      {
+        "name": "special_tokens_map.json",
+        "bytes": 134,
+        "file_sha256": "bd6ed009009f8264d0ef87d5b50798cb57c5219a0bbb7c8973372855241aa05f"
+      },
+      {
+        "name": "tokenizer.json",
+        "bytes": 480199,
+        "file_sha256": "ea7a58026720ba45a8a401d9f86bbe8337f2725d3b02d3a1011305c46cbbd9cd"
+      },
+      {
+        "name": "tokenizer_config.json",
+        "bytes": 364,
+        "file_sha256": "2f5cde6bbb9959fccd280e9e9c08d41d05e96743fac1a3b5b67e0e5691ae7d10"
+      },
+      {
+        "name": "vocab.txt",
+        "bytes": 241796,
+        "file_sha256": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+      }
+    ],
+    "missing": [],
+    "offline_tokenizer_passed": true
+  },
+  "baseline": {
+    "files": [
+      {
+        "path": "outputs/experiments/beto-u1/beto-lr2e5/model.safetensors",
+        "name": "model.safetensors",
+        "bytes": 439448588,
+        "file_sha256": "4fea08ebf3da420a8ef1b04b151822b32c7f4869408335ab0c5885eb7945ef1f"
+      },
+      {
+        "path": "outputs/experiments/beto-u1/beto-lr2e5/config.json",
+        "name": "config.json",
+        "bytes": 1301,
+        "file_sha256": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc"
+      },
+      {
+        "path": "outputs/experiments/beto-u1/beto-lr2e5/labels.json",
+        "name": "labels.json",
+        "bytes": 290,
+        "file_sha256": "3e8d21fda1c3a8c0d83249dbf89a9d5fce0e89a6635e9e52a49dac04dd59b169"
+      },
+      {
+        "path": "outputs/experiments/beto-u1/beto-lr2e5/validation.json",
+        "name": "validation.json",
+        "bytes": 3311,
+        "file_sha256": "58460604ea3cd86f07f167f4714e6396083f705652269ff99c0a8ca9aae8780c"
+      },
+      {
+        "path": "outputs/experiments/beto-u1/beto-lr2e5/special_tokens_map.json",
+        "name": "special_tokens_map.json",
+        "bytes": 732,
+        "file_sha256": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140"
+      },
+      {
+        "path": "outputs/experiments/beto-u1/beto-lr2e5/tokenizer.json",
+        "name": "tokenizer.json",
+        "bytes": 729619,
+        "file_sha256": "f0ee18fc8f95db74ce5c5c3a4070e0eb32a4b31bcde4865af63b1308e924c0c4"
+      },
+      {
+        "path": "outputs/experiments/beto-u1/beto-lr2e5/tokenizer_config.json",
+        "name": "tokenizer_config.json",
+        "bytes": 1325,
+        "file_sha256": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673"
+      },
+      {
+        "path": "outputs/experiments/beto-u1/beto-lr2e5/vocab.txt",
+        "name": "vocab.txt",
+        "bytes": 241796,
+        "file_sha256": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+      }
+    ],
+    "missing": [],
+    "metadata_matches": true,
+    "validation": {
+      "accuracy": 0.45679,
+      "precision_macro": 0.43964,
+      "recall_macro": 0.4579,
+      "f1_macro": 0.43766,
+      "f1_weighted": 0.42393,
+      "per_class": [
+        {
+          "label": "campanias_conflictos_militares",
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "support": 4
+        },
+        {
+          "label": "contexto_colonial_antecedentes",
+          "precision": 0.52941,
+          "recall": 0.5625,
+          "f1": 0.54545,
+          "support": 16
+        },
+        {
+          "label": "crisis_ideas_emancipadoras",
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 15
+        },
+        {
+          "label": "liderazgos_diplomacia_proyectos",
+          "precision": 0.5,
+          "recall": 0.25,
+          "f1": 0.33333,
+          "support": 4
+        },
+        {
+          "label": "no_relevante",
+          "precision": 0.76471,
+          "recall": 0.8125,
+          "f1": 0.78788,
+          "support": 16
+        },
+        {
+          "label": "organizacion_consecuencias_republicanas",
+          "precision": 0.33333,
+          "recall": 0.46667,
+          "f1": 0.38889,
+          "support": 15
+        },
+        {
+          "label": "participacion_social_regional",
+          "precision": 0.2,
+          "recall": 0.36364,
+          "f1": 0.25806,
+          "support": 11
+        }
+      ],
+      "confusion_matrix": [
+        [
+          3,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          9,
+          0,
+          0,
+          0,
+          3,
+          4
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          1,
+          9,
+          3
+        ],
+        [
+          1,
+          0,
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          0,
+          0,
+          13,
+          0,
+          2
+        ],
+        [
+          0,
+          3,
+          0,
+          0,
+          0,
+          7,
+          5
+        ],
+        [
+          0,
+          2,
+          0,
+          1,
+          2,
+          2,
+          4
+        ]
+      ],
+      "labels": [
+        "campanias_conflictos_militares",
+        "contexto_colonial_antecedentes",
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos",
+        "no_relevante",
+        "organizacion_consecuencias_republicanas",
+        "participacion_social_regional"
+      ],
+      "split": "val"
+    },
+    "best_epoch": 2,
+    "historical_training_seconds": 84.58,
+    "predictions_reproduced": false
+  },
+  "recipe": {
+    "base_model": "dccuchile/bert-base-spanish-wwm-cased",
+    "revision": "c4d86612f51b4f46759c8390d1798c2febe71b93",
+    "seed": 42,
+    "hyperparams": {
+      "id": "beto-lr2e5",
+      "lr": 2e-05,
+      "epochs": 3,
+      "batch_size": 2,
+      "gradient_accumulation_steps": 8,
+      "max_len": 192
+    },
+    "epoch_selection": "Best validation F1 among the same three epochs; no new learning-rate search.",
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "effective_batch_size": 16,
+    "gradient_checkpointing": true,
+    "mixed_precision": true
+  },
+  "reference_audit": {
+    "dataset_sha256": "54bd64939cc3bdf4d105d14208a41fd2dbb9095f7ef9cb52a4c3baf083f29ece",
+    "split_counts": {
+      "train": 596,
+      "val": 81,
+      "test": 137
+    },
+    "class_distribution": {
+      "train": {
+        "campanias_conflictos_militares": 89,
+        "participacion_social_regional": 83,
+        "no_relevante": 101,
+        "organizacion_consecuencias_republicanas": 101,
+        "crisis_ideas_emancipadoras": 59,
+        "liderazgos_diplomacia_proyectos": 93,
+        "contexto_colonial_antecedentes": 70
+      },
+      "val": {
+        "contexto_colonial_antecedentes": 16,
+        "crisis_ideas_emancipadoras": 15,
+        "participacion_social_regional": 11,
+        "no_relevante": 16,
+        "liderazgos_diplomacia_proyectos": 4,
+        "organizacion_consecuencias_republicanas": 15,
+        "campanias_conflictos_militares": 4
+      },
+      "test": {
+        "contexto_colonial_antecedentes": 14,
+        "crisis_ideas_emancipadoras": 28,
+        "no_relevante": 39,
+        "participacion_social_regional": 12,
+        "campanias_conflictos_militares": 7,
+        "liderazgos_diplomacia_proyectos": 23,
+        "organizacion_consecuencias_republicanas": 14
+      }
+    },
+    "sources_by_split": {
+      "train": [
+        "0ea45102-057d-4bff-b527-f36326f66d33",
+        "514f190e-5d01-497a-a6ef-648601cd8bdb",
+        "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+        "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+        "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+        "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+        "e32181bc-41d0-4400-a76d-eb11fc88bf71"
+      ],
+      "val": [
+        "b23a4bf1-b9f4-4c08-bb89-a4cf4a67e004"
+      ],
+      "test": [
+        "15e52806-3d75-4117-937d-7c7eda594579",
+        "4ca9c84a-627b-4027-8216-fdc07c506727"
+      ]
+    },
+    "source_overlap": 0,
+    "exact_text_overlap": 0
+  },
+  "reviewed_audit": {
+    "dataset_sha256": "167a994133655d16661f9711a2adcf00053fb9dd6f477378180d71acfa2bbbdd",
+    "split_counts": {
+      "train": 598,
+      "val": 81,
+      "test": 137
+    },
+    "class_distribution": {
+      "train": {
+        "campanias_conflictos_militares": 88,
+        "participacion_social_regional": 83,
+        "no_relevante": 101,
+        "organizacion_consecuencias_republicanas": 101,
+        "liderazgos_diplomacia_proyectos": 94,
+        "contexto_colonial_antecedentes": 71,
+        "crisis_ideas_emancipadoras": 60
+      },
+      "val": {
+        "contexto_colonial_antecedentes": 16,
+        "crisis_ideas_emancipadoras": 15,
+        "participacion_social_regional": 11,
+        "no_relevante": 16,
+        "liderazgos_diplomacia_proyectos": 4,
+        "organizacion_consecuencias_republicanas": 15,
+        "campanias_conflictos_militares": 4
+      },
+      "test": {
+        "contexto_colonial_antecedentes": 14,
+        "crisis_ideas_emancipadoras": 28,
+        "no_relevante": 39,
+        "participacion_social_regional": 12,
+        "campanias_conflictos_militares": 7,
+        "liderazgos_diplomacia_proyectos": 23,
+        "organizacion_consecuencias_republicanas": 14
+      }
+    },
+    "sources_by_split": {
+      "train": [
+        "0ea45102-057d-4bff-b527-f36326f66d33",
+        "17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+        "48262fb6-dee2-531e-b001-536c5928a9ca",
+        "514f190e-5d01-497a-a6ef-648601cd8bdb",
+        "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+        "9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+        "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+        "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+        "e32181bc-41d0-4400-a76d-eb11fc88bf71"
+      ],
+      "val": [
+        "b23a4bf1-b9f4-4c08-bb89-a4cf4a67e004"
+      ],
+      "test": [
+        "15e52806-3d75-4117-937d-7c7eda594579",
+        "4ca9c84a-627b-4027-8216-fdc07c506727"
+      ]
+    },
+    "source_overlap": 0,
+    "exact_text_overlap": 0
+  },
+  "evaluation_sha256": "593fe90d68bc282108eab983515598c7c3b5ebbf42e2f79dbdb275c12d8c02a2",
+  "required_runner": "Dedicated validation-only runner; general run_experiments automatically predicts test and must not be used for this comparison.",
+  "training_performed": false,
+  "historical_predictions_performed": false,
+  "downloads_performed": false,
+  "production_changed": false,
+  "limits": [
+    "CUDA kernel and tokenizer checked; model weights hashed but not loaded or trained.",
+    "Free RAM/VRAM are a transient observation, not proof that fine-tuning will fit.",
+    "Previous 84.58-second training is historical, not an estimate guaranteed for the next run."
+  ],
+  "previous_commit": "98351af",
+  "verification": {
+    "passed": true,
+    "checks": [
+      "Prior selection and exact configuration reproduced",
+      "598/81/137 split counts and frozen evaluation verified",
+      "Input and baseline artifact hashes checked",
+      "CUDA kernel and offline tokenization passed",
+      "Cached base files and selected checkpoint present; dependencies match prior run"
+    ],
+    "rejected_cases": [
+      "Changed seed",
+      "Changed model base",
+      "Changed revision",
+      "Changed learning rate",
+      "Changed number of epochs",
+      "Missing selected trial",
+      "Test-based selection",
+      "Changed baseline selection",
+      "Changed original reference",
+      "Changed validation",
+      "Changed test",
+      "Changed taxonomy",
+      "Existing output",
+      "Output outside outputs"
+    ],
+    "training_performed": false,
+    "historical_predictions_performed": false
+  },
+  "local_report": {
+    "path": "outputs/beto-readiness-v1/checked-report.json",
+    "file_sha256": "2e5c1d1ab46779b5b8ce3acd403af454906c7892a5d9c8098ffcf134da2021f2"
+  },
+  "comparison_plan": {
+    "base": "Same cached pretrained BETO revision; initialize a new classifier with seed42, not continued training from the old tuned checkpoint.",
+    "reference": "Reload and reproduce the previous selected BETO checkpoint on the same 81 validation rows before comparison. Recorded F1 macro=0.43766; not reverified by inference in this preflight.",
+    "fit": "One previously selected lr=2e-5 run, three epochs on 598 reviewed train rows, batch2 and accumulation8, max_len192.",
+    "epoch_policy": "Retain original best-validation-epoch selection across three epochs. Using only two epochs would also change the learning-rate schedule and would not reproduce the original recipe.",
+    "offline": "Set HF_HUB_OFFLINE=1 and TRANSFORMERS_OFFLINE=1 before Transformers is imported; use existing cache.",
+    "evaluation": "Validation only. Do not invoke run_experiments because it automatically predicts test.",
+    "resources": "Check memory again immediately before fit; do not stop unrelated applications automatically.",
+    "outputs": "New folder under outputs/, preserve all prior checkpoints and experimental datasets.",
+    "production": "No deployment or registration of a production model."
+  },
+  "next_step": "Implement and verify a validation-only comparison runner, then run the fixed BETO experiment locally if the resource check still passes; retain test untouched."
+}

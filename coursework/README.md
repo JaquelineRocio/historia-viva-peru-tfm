@@ -15,6 +15,7 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Generalización entre fuentes | Evaluar cada fuente de train sin usarla para entrenar | Nueve rondas locales: F1 macro agregado 0.32372, 208/598 aciertos; ideas 5/60. Diagnóstico interno, no mejora frente a validación ni prueba final |
 | Palabras frente a caracteres | Comparar dos representaciones en las mismas rondas internas | Caracteres: F1 macro 0.33909 frente a 0.32372; 218 frente a 208 aciertos. Mejora interna modesta que no se mantuvo en validación original |
 | Validación de caracteres | Comprobar la variante elegida en los 81 ejemplos originales | F1 macro 0.23521 frente a 0.28987 de palabras; 24 frente a 25 aciertos. Variante descartada para sustituir al TF-IDF de referencia; BETO y producción intactos |
+| Preparación de BETO revisado | Verificar recursos y fijar la comparación local | GPU y tokenizador offline comprobados; dependencias y artefactos previos disponibles. Receta ganadora conservada; ejecutor solo de validación y entrenamiento pendientes |
 | Diagnóstico de cobertura | Orientar el siguiente cambio de datos | Concentración por fuente, rasgos de transcripción y fragmentos incompletos identificados. Muestra de 21 filas de train revisada; prioridad: cuatro filas de Villanueva. Sin modificar etiquetas |
 | Límites de Villanueva | Recuperar argumentos cortados entre páginas | Seis unidades delimitadas y cotejadas; dos quedan como contexto. Continuaciones ya presentes en filas 10/637 identificadas. Propuesta local, sin aplicar |
 | Reparación de Villanueva | Preparar un reemplazo sin duplicar continuaciones | Cuatro candidatos revisados, cuatro unidades de contexto y seis originales archivados; V02 ambiguo. Extracción local verificada, dataset sin modificar |
@@ -1114,7 +1115,7 @@ las 598 filas de train y comprobarla una vez en las 81 de validación original,
 comparándola con el resultado registrado de palabras. Mantener test intacto y
 decidir según ese resultado, sin desplegar automáticamente el candidato.
 
-## Bloque actual: validación original de la variante de caracteres
+## Validación original de la variante de caracteres — registrada en `98351af`
 
 [validate_character_candidate.py](../scripts/validate_character_candidate.py)
 verifica la configuración elegida en las rondas internas, el dataset y sus
@@ -1163,6 +1164,60 @@ la selección previa de BETO, la GPU y dependencias locales, y el flujo de exper
 para preparar una comparación con configuración fija sobre los datos revisados.
 El propósito es volver al clasificador de la aplicación sin seguir ajustando TF-IDF
 contra esta misma validación.
+
+## Bloque actual: preparación de la comparación local de BETO
+
+[check_beto_readiness.py](../scripts/check_beto_readiness.py) verifica la receta,
+los datos, versiones, caché y checkpoint anterior. Funciona con Hugging Face en
+modo offline; no descarga, entrena ni clasifica textos históricos.
+La [evidencia de preparación](../artifacts/reviews/beto-readiness-v1.json) conserva
+hashes, recursos observados y el protocolo de comparación.
+
+Comprobaciones locales del 7 de septiembre de 2026:
+
+- RTX 3050 Laptop de 4 GB detectada; operación matricial CUDA correcta y unos
+  3.2 GB libres en la observación. Esa prueba no garantiza que el entrenamiento quepa.
+- PyTorch `2.7.1+cu126`, Transformers `4.57.6`, Tokenizers `0.22.2`, NumPy y
+  scikit-learn coinciden con el experimento anterior.
+- Revisión BETO `c4d86612f51b4f46759c8390d1798c2febe71b93` disponible en caché,
+  incluidos pesos; archivos comprobados por hash. Tokenización local sin conexión correcta.
+- Checkpoint seleccionado `beto-lr2e5` presente; metadatos y mapa de etiquetas
+  coinciden. Sus predicciones todavía no se reprodujeron en este bloque.
+- RAM libre reducida; se registra la medida en la evidencia y deberá revisarse
+  antes del ajuste. No se cerraron aplicaciones ni cambiaron dependencias.
+
+La comparación propuesta conserva **lr=0.00002, tres épocas, semilla 42,
+microbatch 2, acumulación 8 y longitud máxima 192**, con AdamW, precisión mixta
+y gradient checkpointing como antes. La mejor época anterior fue la segunda,
+con F1 macro de validación **0.43766**. Se mantienen tres épocas y la selección
+de la mejor por validación; reducir a dos cambiaría también el calendario de
+aprendizaje. No se repetirá la búsqueda de tres tasas de aprendizaje.
+
+El candidato se ajustará desde la misma revisión BETO base sobre las 598 filas
+revisadas, con una cabeza nueva inicializada con la semilla fijada. El checkpoint
+afinado anterior servirá para reproducir la referencia en las 81 filas de
+validación. No se continuará entrenando ese checkpoint como si fuera el mismo
+experimento de comparación entre datasets.
+
+El ejecutor general `run_experiments` **evalúa test automáticamente** después de
+seleccionar. Para esta comparación hay que preparar un ejecutor limitado a
+validación que llame al ajuste BETO existente con modo offline y guarde evidencia
+en una carpeta nueva. No se ejecutó el flujo general ni se consultó test.
+
+Verificación: selección y configuración reproducidas, evaluación congelada idéntica,
+artefactos y versiones comprobados. Pasaron 14 rechazos ante cambios de receta,
+selección, referencia/evaluación y salidas inválidas. La prueba de GPU y la
+tokenización no incluyen carga del modelo ni entrenamiento; el tiempo histórico
+de 84.58 segundos no garantiza la duración futura.
+
+```powershell
+outputs/venv-ml/Scripts/python.exe scripts/check_beto_readiness.py --output outputs/beto-readiness-reproduccion/report.json
+```
+
+Estado: prerrequisitos comprobados y protocolo preparado; sin métricas nuevas,
+entrenamiento ni cambios en producción. Siguiente bloque después del commit:
+implementar y verificar el ejecutor de comparación solo en validación, y ejecutar
+el ajuste local si la comprobación de recursos sigue siendo satisfactoria.
 
 ### Reproducir la muestra de la revisión inicial
 
