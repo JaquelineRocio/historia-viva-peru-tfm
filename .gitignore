@@ -54,3 +54,16 @@ outputs/
 /docs/*
 /BORRADOR_TESIS*.docx
 /2. Hernandez, Fernandez y Baptista-metodología Investigacion Cientifica 6ta ed.pdf
+
+# Copias integras del dataset de trabajo dentro de artifacts/.
+# El original vive en outputs/ (junction a E:\BETO\outputs) y cada copia queda
+# trazada por el sha256 que registran su manifiesto o su campo parent_sha256.
+# Los manifiestos, resumenes, decisiones y metricas de esos mismos directorios si se versionan.
+artifacts/**/checkpoints/*/dataset.json
+artifacts/**/before/all-development-units.json
+/artifacts/beto-v3/development-admission-02/prepared-development.json
+
+# Informes de auditoria v2 que embeben el texto de los segmentos.
+# Son derivados reproducibles con scripts/audit_beto_v2.py y el dataset de outputs/.
+/artifacts/beto-v2/audit/suspicious-labels.csv
+/artifacts/beto-v2/audit/similarity-pairs.json
