@@ -1,4 +1,4 @@
-"""Compara BETO revisado con el checkpoint previo, offline y solo en validación."""
+"""Compara BETO con el checkpoint previo, offline y solo en validación."""
 from __future__ import annotations
 
 import argparse
@@ -27,7 +27,9 @@ def write(path: Path, value: dict) -> None:
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2, allow_nan=False)+"\n", encoding="utf-8")
 
 
-def verify_readiness(reviewed: dict, expected: dict, current: dict) -> None:
+def verify_readiness(data: dict, expected: dict, current: dict, dataset: str = "reviewed") -> None:
+    if dataset not in ("reviewed", "reference"):
+        raise ValueError("Dataset no admitido")
     if (expected["status"] != "prerequisites_checked_runner_pending"
             or not expected["verification"]["passed"]
             or current["status"] != "prerequisites_checked_runner_pending"
@@ -36,10 +38,10 @@ def verify_readiness(reviewed: dict, expected: dict, current: dict) -> None:
             or current["baseline"] != expected["baseline"]
             or current["packages"] != expected["packages"]):
         raise ValueError("Prerrequisitos o receta distintos de la preparación revisada")
-    if (fingerprint(reviewed) != expected["reviewed_audit"]["dataset_sha256"]
-            or fingerprint([r for r in reviewed["items"] if r["split"] != "train"]) != expected["evaluation_sha256"]):
+    if (fingerprint(data) != expected[f"{dataset}_audit"]["dataset_sha256"]
+            or fingerprint([r for r in data["items"] if r["split"] != "train"]) != expected["evaluation_sha256"]):
         raise ValueError("Dataset o evaluación distintos de la preparación")
-    validate_snapshot(reviewed)
+    validate_snapshot(data)
 
 
 def compare(data: dict, readiness: dict, baseline: Path, output: Path) -> tuple[dict, dict]:
@@ -88,6 +90,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--readiness", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
+    parser.add_argument("--dataset", choices=("reviewed", "reference"), default="reviewed",
+                        help="reference reproduce el entrenamiento original; reviewed compara los datos revisados")
     args = parser.parse_args()
     target = args.output.resolve()
     if not target.is_relative_to((ROOT / "outputs").resolve()) or target.exists():
@@ -99,8 +103,8 @@ def main() -> None:
         if file_info(ROOT / entry["path"])["file_sha256"] != entry["file_sha256"]:
             raise ValueError(f"Entrada alterada: {entry['path']}")
     current = check()
-    data = read(ROOT / expected["inputs"]["reviewed"]["path"])
-    verify_readiness(data, expected, current)
+    data = read(ROOT / expected["inputs"][args.dataset]["path"])
+    verify_readiness(data, expected, current, args.dataset)
     baseline = (ROOT / next(e["path"] for e in expected["baseline"]["files"] if e["name"] == "model.safetensors")).parent
     import torch
     torch.set_num_threads(4)
@@ -111,6 +115,9 @@ def main() -> None:
     try:
         report, predictions = compare(data, expected, baseline, target)
         report.update(created_at=datetime.now(timezone.utc).isoformat(),
+                      dataset_role=args.dataset,
+                      purpose="reference_retraining_control" if args.dataset == "reference" else "reviewed_data_comparison",
+                      training_input=info(ROOT / expected["inputs"][args.dataset]["path"]),
                       git_commit=subprocess.check_output(["git", "rev-parse", "HEAD"], text=True).strip(),
                       working_tree_dirty=bool(subprocess.check_output(["git", "status", "--porcelain"], text=True).strip()),
                       inputs={"readiness": info(args.readiness), "runner": info(Path(__file__)),
