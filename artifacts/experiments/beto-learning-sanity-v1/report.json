@@ -1,0 +1,663 @@
+{
+  "protocol": {
+    "path": "artifacts/experiments/beto-learning-sanity-v1/protocol.json",
+    "sha256": "eba2dd6f570e79e6501a424ca43ef1562d5d2545f68e96f1d57f0ffe968cd38c"
+  },
+  "metrics": {
+    "rows": 28,
+    "correct": 28,
+    "accuracy": 1.0,
+    "f1_macro": 1.0,
+    "metric_labels": [
+      "campanias_conflictos_militares",
+      "contexto_colonial_antecedentes",
+      "crisis_ideas_emancipadoras",
+      "liderazgos_diplomacia_proyectos",
+      "no_relevante",
+      "organizacion_consecuencias_republicanas",
+      "participacion_social_regional"
+    ],
+    "labels": [
+      "campanias_conflictos_militares",
+      "contexto_colonial_antecedentes",
+      "crisis_ideas_emancipadoras",
+      "liderazgos_diplomacia_proyectos",
+      "no_relevante",
+      "organizacion_consecuencias_republicanas",
+      "participacion_social_regional"
+    ],
+    "confusion_matrix": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        4,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        4,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        4
+      ]
+    ],
+    "per_class": [
+      {
+        "label": "campanias_conflictos_militares",
+        "support": 4,
+        "predicted_count": 4,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "label": "contexto_colonial_antecedentes",
+        "support": 4,
+        "predicted_count": 4,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "label": "crisis_ideas_emancipadoras",
+        "support": 4,
+        "predicted_count": 4,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "label": "liderazgos_diplomacia_proyectos",
+        "support": 4,
+        "predicted_count": 4,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "label": "no_relevante",
+        "support": 4,
+        "predicted_count": 4,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "label": "organizacion_consecuencias_republicanas",
+        "support": 4,
+        "predicted_count": 4,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      {
+        "label": "participacion_social_regional",
+        "support": 4,
+        "predicted_count": 4,
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      }
+    ],
+    "predictions_to_unassessed_labels": {},
+    "f1_macro_all_seven": 1.0
+  },
+  "training_details": {
+    "checkpoint_selection": "all_predeclared_epochs_no_selection",
+    "checkpoint_epochs": [
+      50
+    ],
+    "saved_checkpoints": [
+      {
+        "epoch": 50,
+        "directory": "outputs/beto-learning-sanity-v1/epoch-50",
+        "optimizer_updates": 100,
+        "skipped_updates": 0,
+        "optimizer_update_attempts": 100,
+        "scheduler_steps": 100
+      }
+    ],
+    "class_counts": {
+      "campanias_conflictos_militares": 4,
+      "contexto_colonial_antecedentes": 4,
+      "crisis_ideas_emancipadoras": 4,
+      "liderazgos_diplomacia_proyectos": 4,
+      "no_relevante": 4,
+      "organizacion_consecuencias_republicanas": 4,
+      "participacion_social_regional": 4
+    },
+    "class_weights": {
+      "campanias_conflictos_militares": 1.0,
+      "contexto_colonial_antecedentes": 1.0,
+      "crisis_ideas_emancipadoras": 1.0,
+      "liderazgos_diplomacia_proyectos": 1.0,
+      "no_relevante": 1.0,
+      "organizacion_consecuencias_republicanas": 1.0,
+      "participacion_social_regional": 1.0
+    },
+    "checkpoint_epoch": 50,
+    "epochs_executed": 50,
+    "schedule_epochs": 50,
+    "steps_per_epoch": 2,
+    "schedule_total_steps": 100,
+    "warmup_steps": 10,
+    "optimizer_update_attempts": 100,
+    "optimizer_updates": 100,
+    "skipped_updates": 0,
+    "scheduler_steps": 100,
+    "history": [
+      {
+        "epoch": 1,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 1.9922223729746682,
+        "learning_rate_after_epoch": 6e-06
+      },
+      {
+        "epoch": 2,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 1.967599059854235,
+        "learning_rate_after_epoch": 1e-05
+      },
+      {
+        "epoch": 3,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 1.8820800823824746,
+        "learning_rate_after_epoch": 1.4e-05
+      },
+      {
+        "epoch": 4,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 1.7934918999671936,
+        "learning_rate_after_epoch": 1.8e-05
+      },
+      {
+        "epoch": 5,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 1.685930528811046,
+        "learning_rate_after_epoch": 2e-05
+      },
+      {
+        "epoch": 6,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 1.5230887340647834,
+        "learning_rate_after_epoch": 1.9555555555555557e-05
+      },
+      {
+        "epoch": 7,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 1.400687085730689,
+        "learning_rate_after_epoch": 1.9111111111111113e-05
+      },
+      {
+        "epoch": 8,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 1.2366071428571428,
+        "learning_rate_after_epoch": 1.866666666666667e-05
+      },
+      {
+        "epoch": 9,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 1.1117902568408422,
+        "learning_rate_after_epoch": 1.8222222222222224e-05
+      },
+      {
+        "epoch": 10,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.989205498780523,
+        "learning_rate_after_epoch": 1.7777777777777777e-05
+      },
+      {
+        "epoch": 11,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.8666033031685012,
+        "learning_rate_after_epoch": 1.7333333333333336e-05
+      },
+      {
+        "epoch": 12,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.8138166197708675,
+        "learning_rate_after_epoch": 1.688888888888889e-05
+      },
+      {
+        "epoch": 13,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.6697126094784055,
+        "learning_rate_after_epoch": 1.6444444444444444e-05
+      },
+      {
+        "epoch": 14,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.6094578344907079,
+        "learning_rate_after_epoch": 1.6000000000000003e-05
+      },
+      {
+        "epoch": 15,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.5195486864873341,
+        "learning_rate_after_epoch": 1.555555555555556e-05
+      },
+      {
+        "epoch": 16,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.4592590353318623,
+        "learning_rate_after_epoch": 1.5111111111111112e-05
+      },
+      {
+        "epoch": 17,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.39914376395089285,
+        "learning_rate_after_epoch": 1.4666666666666666e-05
+      },
+      {
+        "epoch": 18,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.3508344404399395,
+        "learning_rate_after_epoch": 1.4222222222222224e-05
+      },
+      {
+        "epoch": 19,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.3029000402561256,
+        "learning_rate_after_epoch": 1.377777777777778e-05
+      },
+      {
+        "epoch": 20,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.26738848058240755,
+        "learning_rate_after_epoch": 1.3333333333333333e-05
+      },
+      {
+        "epoch": 21,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.22389657103589602,
+        "learning_rate_after_epoch": 1.288888888888889e-05
+      },
+      {
+        "epoch": 22,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.2036111019551754,
+        "learning_rate_after_epoch": 1.2444444444444446e-05
+      },
+      {
+        "epoch": 23,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.17255292593368463,
+        "learning_rate_after_epoch": 1.2e-05
+      },
+      {
+        "epoch": 24,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.15751429993127072,
+        "learning_rate_after_epoch": 1.1555555555555556e-05
+      },
+      {
+        "epoch": 25,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.13893563433417253,
+        "learning_rate_after_epoch": 1.1111111111111113e-05
+      },
+      {
+        "epoch": 26,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.11960165788020406,
+        "learning_rate_after_epoch": 1.0666666666666667e-05
+      },
+      {
+        "epoch": 27,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.11505235944475446,
+        "learning_rate_after_epoch": 1.0222222222222223e-05
+      },
+      {
+        "epoch": 28,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.09680284732686621,
+        "learning_rate_after_epoch": 9.777777777777779e-06
+      },
+      {
+        "epoch": 29,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.08995274068521601,
+        "learning_rate_after_epoch": 9.333333333333334e-06
+      },
+      {
+        "epoch": 30,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.08570534882268735,
+        "learning_rate_after_epoch": 8.888888888888888e-06
+      },
+      {
+        "epoch": 31,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.07324000793908324,
+        "learning_rate_after_epoch": 8.444444444444446e-06
+      },
+      {
+        "epoch": 32,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.06803349112825734,
+        "learning_rate_after_epoch": 8.000000000000001e-06
+      },
+      {
+        "epoch": 33,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.06574031258268016,
+        "learning_rate_after_epoch": 7.555555555555556e-06
+      },
+      {
+        "epoch": 34,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.06076158822647163,
+        "learning_rate_after_epoch": 7.111111111111112e-06
+      },
+      {
+        "epoch": 35,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.05621337824101959,
+        "learning_rate_after_epoch": 6.666666666666667e-06
+      },
+      {
+        "epoch": 36,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.054024831990578344,
+        "learning_rate_after_epoch": 6.222222222222223e-06
+      },
+      {
+        "epoch": 37,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.05070441123098135,
+        "learning_rate_after_epoch": 5.777777777777778e-06
+      },
+      {
+        "epoch": 38,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.04889896937779018,
+        "learning_rate_after_epoch": 5.333333333333334e-06
+      },
+      {
+        "epoch": 39,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.04687772478376116,
+        "learning_rate_after_epoch": 4.888888888888889e-06
+      },
+      {
+        "epoch": 40,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.04754638698484216,
+        "learning_rate_after_epoch": 4.444444444444444e-06
+      },
+      {
+        "epoch": 41,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.046714782781366794,
+        "learning_rate_after_epoch": 4.000000000000001e-06
+      },
+      {
+        "epoch": 42,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.044113704069916694,
+        "learning_rate_after_epoch": 3.555555555555556e-06
+      },
+      {
+        "epoch": 43,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.04350008283342634,
+        "learning_rate_after_epoch": 3.1111111111111116e-06
+      },
+      {
+        "epoch": 44,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.04416275031066367,
+        "learning_rate_after_epoch": 2.666666666666667e-06
+      },
+      {
+        "epoch": 45,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.04070173017680645,
+        "learning_rate_after_epoch": 2.222222222222222e-06
+      },
+      {
+        "epoch": 46,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.04246902492429529,
+        "learning_rate_after_epoch": 1.777777777777778e-06
+      },
+      {
+        "epoch": 47,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.04130826697551778,
+        "learning_rate_after_epoch": 1.3333333333333334e-06
+      },
+      {
+        "epoch": 48,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.04181289699460779,
+        "learning_rate_after_epoch": 8.88888888888889e-07
+      },
+      {
+        "epoch": 49,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.04138946519898517,
+        "learning_rate_after_epoch": 4.444444444444445e-07
+      },
+      {
+        "epoch": 50,
+        "microbatches": 14,
+        "optimizer_updates": 2,
+        "skipped_updates": 0,
+        "diagnostic_mean_microbatch_weighted_ce": 0.039924621382462125,
+        "learning_rate_after_epoch": 0.0
+      }
+    ],
+    "loss_role": "diagnostic_only_mean_of_microbatch_weighted_CE_not_a_selection_metric",
+    "seconds": 82.17,
+    "base_model": "dccuchile/bert-base-spanish-wwm-cased",
+    "resolved_revision": "c4d86612f51b4f46759c8390d1798c2febe71b93",
+    "device": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "seed": 42,
+    "effective_batch_size": 16,
+    "max_len": 384,
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "class_weighting": "inverse_frequency",
+    "loss_normalization": "weighted_CE_sum_per_microbatch_divided_by_target_weight_sum_of_actual_accumulation_group",
+    "gradient_clipping_max_norm": 1.0,
+    "gradient_checkpointing": true,
+    "mixed_precision": true,
+    "offline": true,
+    "local_files_only": true,
+    "evaluation_rows_used": false,
+    "predictions_performed": false,
+    "checkpoint_path": "D:\\MASTER EN DESARROLLO CON IA\\PROYECTO FINAL\\outputs\\beto-learning-sanity-v1",
+    "checkpoint_saves": 1
+  },
+  "result": "small_set_memorization_passed_not_generalization",
+  "predictions_role": "training_same28_not_validation",
+  "selected_model": null,
+  "output_guards": [
+    {
+      "path": "outputs/beto-learning-sanity-v1/epoch-50/config.json",
+      "sha256": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc"
+    },
+    {
+      "path": "outputs/beto-learning-sanity-v1/epoch-50/labels.json",
+      "sha256": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19"
+    },
+    {
+      "path": "outputs/beto-learning-sanity-v1/epoch-50/model.safetensors",
+      "sha256": "923b891d1794363048d339c97bc91856590e317955a1c2e30119108ffcd6e46a"
+    },
+    {
+      "path": "outputs/beto-learning-sanity-v1/epoch-50/special_tokens_map.json",
+      "sha256": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140"
+    },
+    {
+      "path": "outputs/beto-learning-sanity-v1/epoch-50/tokenizer.json",
+      "sha256": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f"
+    },
+    {
+      "path": "outputs/beto-learning-sanity-v1/epoch-50/tokenizer_config.json",
+      "sha256": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673"
+    },
+    {
+      "path": "outputs/beto-learning-sanity-v1/epoch-50/vocab.txt",
+      "sha256": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+    },
+    {
+      "path": "outputs/beto-learning-sanity-v1/predictions.json",
+      "sha256": "a31ffaae3d0f7085f4bb894c74ad899ec4b73ab880f2b6990dd646c6cc9ac11c"
+    },
+    {
+      "path": "outputs/beto-learning-sanity-v1/training-details.json",
+      "sha256": "0781e7eed49d6a633ccdaf0188b6aabbe02cc392e12d594e246ee19e83a39186"
+    }
+  ]
+}

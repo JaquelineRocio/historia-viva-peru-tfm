@@ -1,0 +1,291 @@
+{
+  "review_method": "AI_first_proposal_blind_agent_then_adjudication_not_human_gold",
+  "items": [
+    {
+      "id": "E01",
+      "blind_id": "N21",
+      "first_label": "contexto_colonial_antecedentes",
+      "peer_label": "contexto_colonial_antecedentes",
+      "peer_usability": "usable",
+      "final_label": "contexto_colonial_antecedentes",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Coinciden la propuesta inicial y la revisión ciega; se conserva el tema dominante indicado por el agente.",
+      "peer_rationale": "Identifica la visita de 1786 y explica su propósito de intervenir administración, Hacienda y justicia para reafirmar a la Corona, vinculándola con cambios de las reformas borbónicas en la sociedad andina."
+    },
+    {
+      "id": "E02",
+      "blind_id": "N19",
+      "first_label": "contexto_colonial_antecedentes",
+      "peer_label": "contexto_colonial_antecedentes",
+      "peer_usability": "requires_context",
+      "final_label": null,
+      "status": "quarantine",
+      "rationale": "Párrafo completo pero dicha visita y el alcance temporal necesitan contexto; no se completa con una frase inventada.",
+      "peer_rationale": "Describe la visita como instrumento de conocimiento y reforma de la administración borbónica local. La producción de cuestionarios pertenece a una práctica histórica de gobierno, no a metodología moderna sin contenido histórico. Las páginas 16–18 la sitúan en etapas de la visita de finales del XVIII."
+    },
+    {
+      "id": "E03",
+      "blind_id": "N02",
+      "first_label": "contexto_colonial_antecedentes",
+      "peer_label": "contexto_colonial_antecedentes",
+      "peer_usability": "usable",
+      "final_label": "contexto_colonial_antecedentes",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Coinciden la propuesta inicial y la revisión ciega; se conserva el tema dominante indicado por el agente.",
+      "peer_rationale": "Interpreta la distribución y el crecimiento registrados de población tributaria como resultado de ampliaciones de categorías fiscales coloniales entre 1772 y 1793. Predominan administración, demografía y tributación colonial dentro de una comparación que alcanza el periodo."
+    },
+    {
+      "id": "E04",
+      "blind_id": "N18",
+      "first_label": "contexto_colonial_antecedentes",
+      "peer_label": "contexto_colonial_antecedentes",
+      "peer_usability": "requires_context",
+      "final_label": null,
+      "status": "quarantine",
+      "rationale": "Párrafo completo pero no identifica la visita ni su tiempo; queda como contexto de fuente, fuera de la puntuación del piloto.",
+      "peer_rationale": "Explica fiscalización colonial y relaciones de parentesco y protección que daban poder económico a oficiales reales y perjudicaban al erario. Las páginas 33–35 sitúan la discusión en las medidas de la visita de 1793 y fiscalidad de fines del XVIII; el contenido no es republicano."
+    },
+    {
+      "id": "E05",
+      "blind_id": "N11",
+      "first_label": "crisis_ideas_emancipadoras",
+      "peer_label": "crisis_ideas_emancipadoras",
+      "peer_usability": "usable",
+      "final_label": "crisis_ideas_emancipadoras",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Coinciden la propuesta inicial y la revisión ciega; se conserva el tema dominante indicado por el agente.",
+      "peer_rationale": "Explica el alcance político de la Constitución de Cádiz de 1812 y la redefinición de relaciones imperiales en el marco del liberalismo. Es contexto hispánico sustantivo para la emancipación, no una lista de historiadores o un balance metodológico vacío."
+    },
+    {
+      "id": "E06",
+      "blind_id": "N15",
+      "first_label": "crisis_ideas_emancipadoras",
+      "peer_label": "crisis_ideas_emancipadoras",
+      "peer_usability": "usable",
+      "final_label": "crisis_ideas_emancipadoras",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Coinciden la propuesta inicial y la revisión ciega; se conserva el tema dominante indicado por el agente.",
+      "peer_rationale": "Explica la crisis producida por la invasión napoleónica y la ausencia del rey mediante soberanía revertida, juntas y disputas de legitimidad entre América y la península. El mecanismo político e ideológico es explícito."
+    },
+    {
+      "id": "E07",
+      "blind_id": "N01",
+      "first_label": "crisis_ideas_emancipadoras",
+      "peer_label": "crisis_ideas_emancipadoras",
+      "peer_usability": "requires_context",
+      "final_label": null,
+      "status": "quarantine",
+      "rationale": "Constitución y ciudadanía sin identificación suficiente dentro de la unidad exacta; el cotejo confirma Cádiz, pero esa información no llega al clasificador.",
+      "peer_rationale": "Explica cómo una constitución de la monarquía española articula nación, vecindad y ciudadanía conservando intereses corporativos. El contexto de las páginas 9–11 confirma el marco gaditano; no describe ciudadanía de la República peruana."
+    },
+    {
+      "id": "E08",
+      "blind_id": "N04",
+      "first_label": "crisis_ideas_emancipadoras",
+      "peer_label": "participacion_social_regional",
+      "peer_usability": "usable",
+      "final_label": null,
+      "status": "quarantine",
+      "rationale": "Desacuerdo sustantivo ideas/participación: impacto constitucional y agencia indígena tienen peso comparable. No forzar una etiqueta para cumplir cupo.",
+      "peer_rationale": "La explicación culmina en la apropiación indígena de atribuciones jurisdiccionales para desafiar y subvertir el orden colonial. Cádiz proporciona las herramientas legales, pero el argumento dominante es el poder adquirido y ejercido por las comunidades peruanas."
+    },
+    {
+      "id": "E09",
+      "blind_id": "N06",
+      "first_label": "participacion_social_regional",
+      "peer_label": "participacion_social_regional",
+      "peer_usability": "usable",
+      "final_label": "participacion_social_regional",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Coinciden la propuesta inicial y la revisión ciega; se conserva el tema dominante indicado por el agente.",
+      "peer_rationale": "Explica la resistencia de comunidades entre 1815 y 1820 a perder cabildos y jurisdicción propia, mostrando los argumentos de Casma y el resultado favorable de su reclamo. El sujeto central es la comunidad que defiende autonomía local."
+    },
+    {
+      "id": "E10",
+      "blind_id": "N12",
+      "first_label": "participacion_social_regional",
+      "peer_label": "participacion_social_regional",
+      "peer_usability": "usable",
+      "final_label": "participacion_social_regional",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Coinciden la propuesta inicial y la revisión ciega; se conserva el tema dominante indicado por el agente.",
+      "peer_rationale": "Desarrolla el uso comunitario del lenguaje constitucional y de la vecindad para rechazar autoridades impuestas. El ejemplo de San Pablo en Cajamarca muestra actuación indígena y disputa local por representación."
+    },
+    {
+      "id": "E11",
+      "blind_id": "N23",
+      "first_label": "participacion_social_regional",
+      "peer_label": "participacion_social_regional",
+      "peer_usability": "usable",
+      "final_label": "participacion_social_regional",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Coinciden la propuesta inicial y la revisión ciega; se conserva el tema dominante indicado por el agente.",
+      "peer_rationale": "Explica la capacidad de las comunidades, particularmente Huacho, para negociar montos, condiciones y plazos de impuestos reintroducidos por Abascal. La política fiscal es el desencadenante; la agencia negociadora indígena es el desenlace y el foco."
+    },
+    {
+      "id": "E12",
+      "blind_id": "N22",
+      "first_label": "participacion_social_regional",
+      "peer_label": "crisis_ideas_emancipadoras",
+      "peer_usability": "usable",
+      "final_label": "crisis_ideas_emancipadoras",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Se acepta la lectura del agente: el argumento evalúa la penetración de principios de soberanía y representación, no una demanda colectiva concreta.",
+      "peer_rationale": "Analiza la recepción limitada de principios de soberanía nacional y real en el ayuntamiento indígena de Matucana, usando el cambio de denominación del alcalde en 1814 como evidencia. El argumento principal evalúa la penetración de ideas representativas y constitucionales."
+    },
+    {
+      "id": "E13",
+      "blind_id": "N14",
+      "first_label": "no_relevante",
+      "peer_label": "no_relevante",
+      "peer_usability": "usable",
+      "final_label": "no_relevante",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Coinciden la propuesta inicial y la revisión ciega; se conserva el tema dominante indicado por el agente.",
+      "peer_rationale": "Tras dos frases de antecedente posindependentista, el argumento sigue reconocimiento jurídico, titulación y políticas de tierras durante los siglos XX y XXI. Ese proceso contemporáneo domina la unidad, por lo que queda fuera del alcance hasta 1842."
+    },
+    {
+      "id": "E14",
+      "blind_id": "N13",
+      "first_label": "campanias_conflictos_militares",
+      "peer_label": "campanias_conflictos_militares",
+      "peer_usability": "usable",
+      "final_label": "campanias_conflictos_militares",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Coinciden la propuesta inicial y la revisión ciega; se conserva el tema dominante indicado por el agente.",
+      "peer_rationale": "Explica persistencia y aumento de deserciones como problema de estabilidad, disciplina y efectivos en ejércitos rivales, vinculándolo a combates, heridas y derrotas de 1812–1813. La propuesta entre comandantes aparece como respuesta al problema militar."
+    },
+    {
+      "id": "E15",
+      "blind_id": "N08",
+      "first_label": "campanias_conflictos_militares",
+      "peer_label": "campanias_conflictos_militares",
+      "peer_usability": "usable",
+      "final_label": "campanias_conflictos_militares",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Coinciden la propuesta inicial y la revisión ciega; se conserva el tema dominante indicado por el agente.",
+      "peer_rationale": "Cuantifica deserciones en cuerpos militares entre abril y julio de 1820 y menciona medidas de aprehensión. El eje es el mantenimiento de efectivos y la disciplina del ejército, sin explicación de identidades sociales o demandas populares."
+    },
+    {
+      "id": "E16",
+      "blind_id": "N24",
+      "first_label": "campanias_conflictos_militares",
+      "peer_label": "campanias_conflictos_militares",
+      "peer_usability": "usable",
+      "final_label": "campanias_conflictos_militares",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Coinciden la propuesta inicial y la revisión ciega; se conserva el tema dominante indicado por el agente.",
+      "peer_rationale": "Expone la formación del Ejército de Lima en 1820, su objetivo defensivo, mando, número y composición de fuerzas y las restricciones para incorporar refuerzos por movimientos enemigos. Es organización y estrategia militar."
+    },
+    {
+      "id": "E17",
+      "blind_id": "N20",
+      "first_label": "campanias_conflictos_militares",
+      "peer_label": "campanias_conflictos_militares",
+      "peer_usability": "usable",
+      "final_label": "campanias_conflictos_militares",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Coinciden la propuesta inicial y la revisión ciega; se conserva el tema dominante indicado por el agente.",
+      "peer_rationale": "Formula una explicación causal de cómo las deserciones limitaron el esfuerzo bélico revolucionario y contrarrevolucionario después de 1814, mediante pérdida de hombres, persecución, gastos logísticos y deterioro disciplinario."
+    },
+    {
+      "id": "E18",
+      "blind_id": "N26",
+      "first_label": "liderazgos_diplomacia_proyectos",
+      "peer_label": "liderazgos_diplomacia_proyectos",
+      "peer_usability": "usable",
+      "final_label": "liderazgos_diplomacia_proyectos",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Coinciden la propuesta inicial y la revisión ciega; se conserva el tema dominante indicado por el agente.",
+      "peer_rationale": "Reconstruye la trayectoria de José de la Mar entre 1815 y 1821 a través de distinciones, destino al Perú, responsabilidad como subinspector, participación en juntas y ascensos. La actividad de preparar tropas explica su promoción, que cierra y organiza la trayectoria individual narrada."
+    },
+    {
+      "id": "E19",
+      "blind_id": "N10",
+      "first_label": "liderazgos_diplomacia_proyectos",
+      "peer_label": "campanias_conflictos_militares",
+      "peer_usability": "usable",
+      "final_label": "campanias_conflictos_militares",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Se acepta la lectura militar: base, mando, capitulación y cautiverio. La aparición de Santa Cruz no basta para convertir la unidad en liderazgo político.",
+      "peer_rationale": "Sigue el establecimiento de una base realista en Tarija, su cadena de mando, capitulación en 1817 y consecuencias inmediatas para los jefes prisioneros. Santa Cruz articula la narración, pero no se expone una posición política o diplomática suya."
+    },
+    {
+      "id": "E20",
+      "blind_id": "N05",
+      "first_label": "liderazgos_diplomacia_proyectos",
+      "peer_label": "campanias_conflictos_militares",
+      "peer_usability": "usable",
+      "final_label": "campanias_conflictos_militares",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Se acepta la lectura militar: después de los ascensos predominan preparación de efectivos, movimiento de la División Peruana, toma de provincias y desacato de repliegue.",
+      "peer_rationale": "Reconstruye mandos, reclutamiento, preparación de voluntarios y marcha de la División Peruana en auxilio de Sucre, con toma de Loja y Cuenca y desacato a una orden de repliegue. La secuencia operacional domina sobre el reconocimiento personal de Santa Cruz."
+    },
+    {
+      "id": "E21",
+      "blind_id": "N07",
+      "first_label": "liderazgos_diplomacia_proyectos",
+      "peer_label": "liderazgos_diplomacia_proyectos",
+      "peer_usability": "usable",
+      "final_label": "liderazgos_diplomacia_proyectos",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Coinciden la propuesta inicial y la revisión ciega; se conserva el tema dominante indicado por el agente.",
+      "peer_rationale": "Discute la razón de un cambio de lealtad de Castilla, contraponiendo captura militar a una interpretación patriótica de su adhesión. Es una explicación sustantiva de la trayectoria y conducta de un dirigente, no una descripción de combate."
+    },
+    {
+      "id": "E22",
+      "blind_id": "N25",
+      "first_label": "organizacion_consecuencias_republicanas",
+      "peer_label": "organizacion_consecuencias_republicanas",
+      "peer_usability": "usable",
+      "final_label": "organizacion_consecuencias_republicanas",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Coinciden la propuesta inicial y la revisión ciega; se conserva el tema dominante indicado por el agente.",
+      "peer_rationale": "Examina reglamentos, estatuto, elecciones, justicia y continuidad constitucional entre 1821 y 1824, explicando cómo estructuran las localidades y aseguran recursos. El centro es la arquitectura institucional del territorio independizado y su persistencia."
+    },
+    {
+      "id": "E23",
+      "blind_id": "N09",
+      "first_label": "organizacion_consecuencias_republicanas",
+      "peer_label": "organizacion_consecuencias_republicanas",
+      "peer_usability": "usable",
+      "final_label": "organizacion_consecuencias_republicanas",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Coinciden la propuesta inicial y la revisión ciega; se conserva el tema dominante indicado por el agente.",
+      "peer_rationale": "Describe organización territorial, competencias y subordinación administrativa de departamentos, provincias y distritos entre 1821 y 1824. Explica continuidad de funciones coloniales bajo las nuevas autoridades del territorio independizado."
+    },
+    {
+      "id": "E24",
+      "blind_id": "N17",
+      "first_label": "no_relevante",
+      "peer_label": "no_relevante",
+      "peer_usability": "usable",
+      "final_label": "no_relevante",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Coinciden la propuesta inicial y la revisión ciega; se conserva el tema dominante indicado por el agente.",
+      "peer_rationale": "Lista de autores, obras, años y editoriales, incluyendo varios tomos. La función es bibliográfica en toda la unidad."
+    },
+    {
+      "id": "E25",
+      "blind_id": "N03",
+      "first_label": "no_relevante",
+      "peer_label": "no_relevante",
+      "peer_usability": "usable",
+      "final_label": "no_relevante",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Coinciden la propuesta inicial y la revisión ciega; se conserva el tema dominante indicado por el agente.",
+      "peer_rationale": "Es una lista bibliográfica de autores, fechas, títulos y datos editoriales. No desarrolla argumento histórico propio aunque los títulos sean pertinentes al periodo."
+    },
+    {
+      "id": "E26",
+      "blind_id": "N16",
+      "first_label": "no_relevante",
+      "peer_label": "no_relevante",
+      "peer_usability": "usable",
+      "final_label": "no_relevante",
+      "status": "accepted_ai_adjudicated",
+      "rationale": "Coinciden la propuesta inicial y la revisión ciega; se conserva el tema dominante indicado por el agente.",
+      "peer_rationale": "Secuencia de referencias bibliográficas. Ni los títulos de campañas ni las fechas de independencia aportan un argumento narrado en esta unidad."
+    }
+  ]
+}

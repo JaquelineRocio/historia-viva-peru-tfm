@@ -1,0 +1,325 @@
+{
+    "schema":  "historical_blind_review.v1",
+    "status":  "AI_assisted_blind_review_not_human_gold",
+    "scope":  {
+                  "period":  "Perú, 1780–1842, con contexto imperial y conexiones regionales pertinentes",
+                  "unit_count":  26,
+                  "primary_inputs":  [
+                                         "docs/guia-etiquetado-1780-1842.md",
+                                         "outputs/independent-review-v1/blind-evaluation.json"
+                                     ],
+                  "context_consulted":  {
+                                            "escanilla2023":  [
+                                                                  9,
+                                                                  10,
+                                                                  11
+                                                              ],
+                                            "choque2024":  [
+                                                               16,
+                                                               17,
+                                                               18,
+                                                               33,
+                                                               34,
+                                                               35
+                                                           ]
+                                        },
+                  "method":  "Lectura completa de las 26 unidades. Juicio por el argumento dominante del texto exacto, distinguiendo clasificación de integridad. Las páginas contiguas solo aclaran referentes y cronología; no se incorporan silenciosamente al segmento evaluado.",
+                  "usability_definition":  {
+                                               "usable":  "Texto interpretable y suficientemente delimitado para el juicio temático; no certifica autenticidad, verdad histórica ni procedencia.",
+                                               "requires_context":  "El segmento necesita conservar o recuperar contexto esencial antes de usarse tal como está, aunque las páginas contiguas permitan proponer una etiqueta.",
+                                               "quarantine":  "No hay base suficiente para recuperar o interpretar responsablemente la unidad."
+                                           }
+              },
+    "restrictions":  [
+                         "Es revisión asistida por IA, no evaluación humana independiente ni gold humano.",
+                         "No se consultaron selected-draft.json, evaluation-key.json, decisiones del otro revisor, predicciones ni modelos. No hubo entrenamiento, web ni modificación de corpus o guía.",
+                         "Incidencia de procedimiento: al inspeccionar la estructura de pages.json se mostró accidentalmente el inicio del archivo de choque2024 y el de escanilla2023, incluyendo las primeras páginas con título y resumen, fuera de las páginas indicadas o contiguas autorizadas. Se registra esta exposición; no se afirma una restricción de lectura perfecta. Después se filtraron únicamente las páginas de contexto enumeradas. No se usaron títulos como fundamento de etiqueta.",
+                         "Todas las unidades contienen entre 120 y 250 palabras según separación por espacios. La extensión por sí sola no determina ninguna etiqueta.",
+                         "Bibliografía es no_relevante aunque sus títulos mencionen el periodo. Historiografía con argumento histórico sustantivo puede recibir una clase positiva. Las fechas de citas modernas no constituyen el periodo del argumento.",
+                         "Los extractos y páginas permiten juzgar contenido y contexto textual, pero no verificar independientemente autenticidad de documentos, exactitud de cifras o atribuciones."
+                     ],
+    "items":  [
+                  {
+                      "id":  "N01",
+                      "label":  "crisis_ideas_emancipadoras",
+                      "usability":  "requires_context",
+                      "reason":  "Explica cómo una constitución de la monarquía española articula nación, vecindad y ciudadanía conservando intereses corporativos. El contexto de las páginas 9–11 confirma el marco gaditano; no describe ciudadanía de la República peruana.",
+                      "alternative":  "organizacion_consecuencias_republicanas sería tentadora por ciudadanía y constitución, pero falla el ámbito republicano; participacion_social_regional exigiría que predominara una acción de comunidades concretas.",
+                      "completeness_issues":  [
+                                                  "El segmento no nombra ni fecha la constitución. La identificación gaditana necesita contexto externo a la unidad exacta, aun cuando este ya se consultó."
+                                              ]
+                  },
+                  {
+                      "id":  "N02",
+                      "label":  "contexto_colonial_antecedentes",
+                      "usability":  "usable",
+                      "reason":  "Interpreta la distribución y el crecimiento registrados de población tributaria como resultado de ampliaciones de categorías fiscales coloniales entre 1772 y 1793. Predominan administración, demografía y tributación colonial dentro de una comparación que alcanza el periodo.",
+                      "alternative":  "participacion_social_regional: las protestas de caciques aparecen al final, sin desarrollar su organización o actuación como argumento dominante.",
+                      "completeness_issues":  [
+                                                  "La Figura 3 citada no está incluida; el texto sí formula de manera autónoma la interpretación de los datos.",
+                                                  "La frase sobre asignación de ayllus tiene sintaxis poco clara; no se reconstruye una jurisdicción distinta por conjetura."
+                                              ]
+                  },
+                  {
+                      "id":  "N03",
+                      "label":  "no_relevante",
+                      "usability":  "usable",
+                      "reason":  "Es una lista bibliográfica de autores, fechas, títulos y datos editoriales. No desarrolla argumento histórico propio aunque los títulos sean pertinentes al periodo.",
+                      "alternative":  "Ninguna clase positiva: los temas en títulos no cambian la función bibliográfica de la unidad.",
+                      "completeness_issues":  [
+                                                  "La entrada de 2003 omite repetir el autor; esto no impide reconocer el formato bibliográfico."
+                                              ]
+                  },
+                  {
+                      "id":  "N04",
+                      "label":  "participacion_social_regional",
+                      "usability":  "usable",
+                      "reason":  "La explicación culmina en la apropiación indígena de atribuciones jurisdiccionales para desafiar y subvertir el orden colonial. Cádiz proporciona las herramientas legales, pero el argumento dominante es el poder adquirido y ejercido por las comunidades peruanas.",
+                      "alternative":  "crisis_ideas_emancipadoras: la reforma constitucional es la causa institucional, pero el texto dedica su explicación principal a sus efectos sobre la acción indígena.",
+                      "completeness_issues":  [
+                                                  "\u0027Como se ha demostrado\u0027 remite a evidencia anterior; la tesis y su mecanismo causal están completos en el segmento."
+                                              ]
+                  },
+                  {
+                      "id":  "N05",
+                      "label":  "campanias_conflictos_militares",
+                      "usability":  "usable",
+                      "reason":  "Reconstruye mandos, reclutamiento, preparación de voluntarios y marcha de la División Peruana en auxilio de Sucre, con toma de Loja y Cuenca y desacato a una orden de repliegue. La secuencia operacional domina sobre el reconocimiento personal de Santa Cruz.",
+                      "alternative":  "liderazgos_diplomacia_proyectos: ascensos y decisiones del jefe son relevantes, pero aquí están al servicio de una campaña y su resultado militar.",
+                      "completeness_issues":  [
+                                                  "La incorporación previa de Santa Cruz se presupone en \u0027Ahora\u0027; su pertenencia al Ejército Libertador queda explícita.",
+                                                  "\u0027Conser var\u0027 es una separación gráfica residual."
+                                              ]
+                  },
+                  {
+                      "id":  "N06",
+                      "label":  "participacion_social_regional",
+                      "usability":  "usable",
+                      "reason":  "Explica la resistencia de comunidades entre 1815 y 1820 a perder cabildos y jurisdicción propia, mostrando los argumentos de Casma y el resultado favorable de su reclamo. El sujeto central es la comunidad que defiende autonomía local.",
+                      "alternative":  "crisis_ideas_emancipadoras: abolición de Cádiz y prerrogativas constitucionales enmarcan el conflicto; organizacion_consecuencias_republicanas no corresponde a estos cabildos virreinales.",
+                      "completeness_issues":  [
+
+                                              ]
+                  },
+                  {
+                      "id":  "N07",
+                      "label":  "liderazgos_diplomacia_proyectos",
+                      "usability":  "usable",
+                      "reason":  "Discute la razón de un cambio de lealtad de Castilla, contraponiendo captura militar a una interpretación patriótica de su adhesión. Es una explicación sustantiva de la trayectoria y conducta de un dirigente, no una descripción de combate.",
+                      "alternative":  "campanias_conflictos_militares: unidades y captura contextualizan el cambio de lealtad; no constituyen el argumento operativo principal.",
+                      "completeness_issues":  [
+                                                  "Se presupone un viaje anterior al \u0027retorno\u0027, pero la secuencia de adscripción y el argumento causal se entienden.",
+                                                  "Quedan separaciones gráficas y una referencia de páginas \u00272627\u0027 que requiere cotejo para corrección bibliográfica."
+                                              ]
+                  },
+                  {
+                      "id":  "N08",
+                      "label":  "campanias_conflictos_militares",
+                      "usability":  "usable",
+                      "reason":  "Cuantifica deserciones en cuerpos militares entre abril y julio de 1820 y menciona medidas de aprehensión. El eje es el mantenimiento de efectivos y la disciplina del ejército, sin explicación de identidades sociales o demandas populares.",
+                      "alternative":  "participacion_social_regional: la acción de soldados por sí sola no basta; faltan aquí motivos o relaciones sociales que desplacen el problema militar de los efectivos.",
+                      "completeness_issues":  [
+                                                  "La comparación inicial \u0027Si esto sucedía\u0027 remite al párrafo anterior, pero el fenómeno, los cuerpos y los meses están identificados en el texto.",
+                                                  "Una referencia presenta \u00276667\u0027 sin separación de páginas."
+                                              ]
+                  },
+                  {
+                      "id":  "N09",
+                      "label":  "organizacion_consecuencias_republicanas",
+                      "usability":  "usable",
+                      "reason":  "Describe organización territorial, competencias y subordinación administrativa de departamentos, provincias y distritos entre 1821 y 1824. Explica continuidad de funciones coloniales bajo las nuevas autoridades del territorio independizado.",
+                      "alternative":  "liderazgos_diplomacia_proyectos: San Martín y otras autoridades se mencionan dentro del arreglo administrativo, no como proyectos personales contrapuestos; el mando militar no transforma el texto en campaña.",
+                      "completeness_issues":  [
+                                                  "Hay llamadas de nota sin su desarrollo; no interrumpen las oraciones ni la explicación institucional."
+                                              ]
+                  },
+                  {
+                      "id":  "N10",
+                      "label":  "campanias_conflictos_militares",
+                      "usability":  "usable",
+                      "reason":  "Sigue el establecimiento de una base realista en Tarija, su cadena de mando, capitulación en 1817 y consecuencias inmediatas para los jefes prisioneros. Santa Cruz articula la narración, pero no se expone una posición política o diplomática suya.",
+                      "alternative":  "liderazgos_diplomacia_proyectos: el itinerario de cautiverio y fuga aporta biografía; la capitulación y sus consecuencias militares organizan el segmento.",
+                      "completeness_issues":  [
+                                                  "La expresión \u0027De último punto\u0027 presenta una omisión gramatical menor; Las Bruscas es el último lugar nombrado, sin necesidad de añadir un referente desconocido."
+                                              ]
+                  },
+                  {
+                      "id":  "N11",
+                      "label":  "crisis_ideas_emancipadoras",
+                      "usability":  "usable",
+                      "reason":  "Explica el alcance político de la Constitución de Cádiz de 1812 y la redefinición de relaciones imperiales en el marco del liberalismo. Es contexto hispánico sustantivo para la emancipación, no una lista de historiadores o un balance metodológico vacío.",
+                      "alternative":  "organizacion_consecuencias_republicanas: el texto trata una constitución monárquica imperial, no la organización de la República peruana.",
+                      "completeness_issues":  [
+                                                  "La exposición es de escala hispánica y no desarrolla un caso peruano específico; su tema contextual y fecha son explícitos."
+                                              ]
+                  },
+                  {
+                      "id":  "N12",
+                      "label":  "participacion_social_regional",
+                      "usability":  "usable",
+                      "reason":  "Desarrolla el uso comunitario del lenguaje constitucional y de la vecindad para rechazar autoridades impuestas. El ejemplo de San Pablo en Cajamarca muestra actuación indígena y disputa local por representación.",
+                      "alternative":  "crisis_ideas_emancipadoras: los conceptos gaditanos son instrumentos de la acción de las comunidades, que domina la explicación.",
+                      "completeness_issues":  [
+                                                  "\u0027De igual manera\u0027 conecta con otro ejemplo, pero el caso aquí narrado conserva actores, reclamo y fecha documental."
+                                              ]
+                  },
+                  {
+                      "id":  "N13",
+                      "label":  "campanias_conflictos_militares",
+                      "usability":  "usable",
+                      "reason":  "Explica persistencia y aumento de deserciones como problema de estabilidad, disciplina y efectivos en ejércitos rivales, vinculándolo a combates, heridas y derrotas de 1812–1813. La propuesta entre comandantes aparece como respuesta al problema militar.",
+                      "alternative":  "participacion_social_regional: las decisiones de soldados serían pertinentes si predominara una explicación social; liderazgos_diplomacia_proyectos por el armisticio es secundaria frente al problema reiterado de deserciones.",
+                      "completeness_issues":  [
+                                                  "La frase inicial enlaza con una exposición anterior, sin dejar indeterminado el fenómeno analizado."
+                                              ]
+                  },
+                  {
+                      "id":  "N14",
+                      "label":  "no_relevante",
+                      "usability":  "usable",
+                      "reason":  "Tras dos frases de antecedente posindependentista, el argumento sigue reconocimiento jurídico, titulación y políticas de tierras durante los siglos XX y XXI. Ese proceso contemporáneo domina la unidad, por lo que queda fuera del alcance hasta 1842.",
+                      "alternative":  "organizacion_consecuencias_republicanas o participacion_social_regional describen las frases iniciales, pero no la cronología ni el desarrollo dominante de este texto exacto.",
+                      "completeness_issues":  [
+                                                  "\u0027Hace un par de décadas\u0027 es una referencia relativa a la fecha de escritura; el propio texto identifica siglos XX y XXI y permite juzgar el predominio temporal sin fijar un año inventado."
+                                              ]
+                  },
+                  {
+                      "id":  "N15",
+                      "label":  "crisis_ideas_emancipadoras",
+                      "usability":  "usable",
+                      "reason":  "Explica la crisis producida por la invasión napoleónica y la ausencia del rey mediante soberanía revertida, juntas y disputas de legitimidad entre América y la península. El mecanismo político e ideológico es explícito.",
+                      "alternative":  "liderazgos_diplomacia_proyectos: los monarcas se mencionan como componentes de una crisis de soberanía; no se desarrolla su actuación individual como centro.",
+                      "completeness_issues":  [
+                                                  "No explicita el año de la invasión ni un caso peruano, pero identifica un episodio imperial y un mecanismo de la crisis monárquica inequívocos para esta clasificación; no se añade fecha al texto."
+                                              ]
+                  },
+                  {
+                      "id":  "N16",
+                      "label":  "no_relevante",
+                      "usability":  "usable",
+                      "reason":  "Secuencia de referencias bibliográficas. Ni los títulos de campañas ni las fechas de independencia aportan un argumento narrado en esta unidad.",
+                      "alternative":  "Ninguna etiqueta temática positiva procede por los títulos de las obras citadas.",
+                      "completeness_issues":  [
+                                                  "Fechas concatenadas como \u002718171822\u0027 y entradas que omiten repetir autor no impiden identificar la función bibliográfica."
+                                              ]
+                  },
+                  {
+                      "id":  "N17",
+                      "label":  "no_relevante",
+                      "usability":  "usable",
+                      "reason":  "Lista de autores, obras, años y editoriales, incluyendo varios tomos. La función es bibliográfica en toda la unidad.",
+                      "alternative":  "contexto_colonial_antecedentes aparece en títulos, pero no hay desarrollo histórico que justifique esa etiqueta.",
+                      "completeness_issues":  [
+                                                  "Separación \u0027Reser va\u0027 y \u0027TomoI\u0027 son ruido tipográfico menor que no modifica la decisión."
+                                              ]
+                  },
+                  {
+                      "id":  "N18",
+                      "label":  "contexto_colonial_antecedentes",
+                      "usability":  "requires_context",
+                      "reason":  "Explica fiscalización colonial y relaciones de parentesco y protección que daban poder económico a oficiales reales y perjudicaban al erario. Las páginas 33–35 sitúan la discusión en las medidas de la visita de 1793 y fiscalidad de fines del XVIII; el contenido no es republicano.",
+                      "alternative":  "participacion_social_regional: se describen redes de poder regional, pero su función es explicar administración y extracción fiscal colonial, no movilización popular.",
+                      "completeness_issues":  [
+                                                  "La unidad aislada no identifica la visita ni su fecha y emplea \u0027durante la época\u0027 sin antecedente temporal. El contexto consultado aclara estos datos, que siguen ausentes del texto exacto."
+                                              ]
+                  },
+                  {
+                      "id":  "N19",
+                      "label":  "contexto_colonial_antecedentes",
+                      "usability":  "requires_context",
+                      "reason":  "Describe la visita como instrumento de conocimiento y reforma de la administración borbónica local. La producción de cuestionarios pertenece a una práctica histórica de gobierno, no a metodología moderna sin contenido histórico. Las páginas 16–18 la sitúan en etapas de la visita de finales del XVIII.",
+                      "alternative":  "no_relevante sería inadecuada: la descripción documental sostiene una explicación sobre burocracia colonial y reformismo; no consiste solamente en instrucciones actuales de investigación.",
+                      "completeness_issues":  [
+                                                  "\u0027Dicha visita\u0027 carece de antecedente inicial y la unidad no conserva fecha; el nombre de Álvarez y Ximénez aparece después.",
+                                                  "\u0027Precedida de una reflexión\u0027 es una oración gramaticalmente suelta que también aparece en el texto de la página consultada; no se atribuye sin evidencia a una mala segmentación."
+                                              ]
+                  },
+                  {
+                      "id":  "N20",
+                      "label":  "campanias_conflictos_militares",
+                      "usability":  "usable",
+                      "reason":  "Formula una explicación causal de cómo las deserciones limitaron el esfuerzo bélico revolucionario y contrarrevolucionario después de 1814, mediante pérdida de hombres, persecución, gastos logísticos y deterioro disciplinario.",
+                      "alternative":  "participacion_social_regional: no examina demandas o condiciones sociales de soldados; organizacion_consecuencias_republicanas por el erario es secundaria y carece de enfoque institucional republicano.",
+                      "completeness_issues":  [
+
+                                              ]
+                  },
+                  {
+                      "id":  "N21",
+                      "label":  "contexto_colonial_antecedentes",
+                      "usability":  "usable",
+                      "reason":  "Identifica la visita de 1786 y explica su propósito de intervenir administración, Hacienda y justicia para reafirmar a la Corona, vinculándola con cambios de las reformas borbónicas en la sociedad andina.",
+                      "alternative":  "no_relevante: la valoración de planos y documentos no domina sobre los objetivos históricos y las consecuencias del reformismo explicados en el cierre.",
+                      "completeness_issues":  [
+                                                  "\u0027Posteriormente\u0027 presupone una secuencia anterior, pero el episodio, funcionario, territorio y fecha quedan identificados."
+                                              ]
+                  },
+                  {
+                      "id":  "N22",
+                      "label":  "crisis_ideas_emancipadoras",
+                      "usability":  "usable",
+                      "reason":  "Analiza la recepción limitada de principios de soberanía nacional y real en el ayuntamiento indígena de Matucana, usando el cambio de denominación del alcalde en 1814 como evidencia. El argumento principal evalúa la penetración de ideas representativas y constitucionales.",
+                      "alternative":  "participacion_social_regional es una frontera estrecha: el caso es indígena y local, pero la tesis no gira principalmente sobre una demanda o movilización comunitaria, sino sobre la comprensión y continuidad de conceptos políticos. organizacion_consecuencias_republicanas no corresponde al marco de 1814.",
+                      "completeness_issues":  [
+                                                  "La llamada 15 no está desarrollada, sin afectar la integridad del argumento sobre denominaciones y soberanía."
+                                              ]
+                  },
+                  {
+                      "id":  "N23",
+                      "label":  "participacion_social_regional",
+                      "usability":  "usable",
+                      "reason":  "Explica la capacidad de las comunidades, particularmente Huacho, para negociar montos, condiciones y plazos de impuestos reintroducidos por Abascal. La política fiscal es el desencadenante; la agencia negociadora indígena es el desenlace y el foco.",
+                      "alternative":  "contexto_colonial_antecedentes: presenta tributos virreinales, pero desarrolla la resistencia y capacidad decisoria de los sujetos locales; campanias_conflictos_militares solo aporta el motivo de recaudación.",
+                      "completeness_issues":  [
+                                                  "\u0027De forma similar\u0027 enlaza con otra modalidad de resistencia; aquí el caso, las fechas y el mecanismo negociador son autónomos."
+                                              ]
+                  },
+                  {
+                      "id":  "N24",
+                      "label":  "campanias_conflictos_militares",
+                      "usability":  "usable",
+                      "reason":  "Expone la formación del Ejército de Lima en 1820, su objetivo defensivo, mando, número y composición de fuerzas y las restricciones para incorporar refuerzos por movimientos enemigos. Es organización y estrategia militar.",
+                      "alternative":  "liderazgos_diplomacia_proyectos: nombres y cargos describen cadena de mando, sin convertir el texto en un proyecto político personal; organizacion_consecuencias_republicanas tampoco corresponde al ejército virreinal.",
+                      "completeness_issues":  [
+                                                  "El virrey no aparece nombrado en el cuerpo del segmento; la función del actor y la fecha bastan para clasificar sin inventar identidad.",
+                                                  "Hay una llamada de nota y separación gráfica \u0027Reser va\u0027."
+                                              ]
+                  },
+                  {
+                      "id":  "N25",
+                      "label":  "organizacion_consecuencias_republicanas",
+                      "usability":  "usable",
+                      "reason":  "Examina reglamentos, estatuto, elecciones, justicia y continuidad constitucional entre 1821 y 1824, explicando cómo estructuran las localidades y aseguran recursos. El centro es la arquitectura institucional del territorio independizado y su persistencia.",
+                      "alternative":  "liderazgos_diplomacia_proyectos: el Protectorado y la labor de San Martín hacen plausible esa lectura, pero los documentos, competencias y continuidad en la Constitución de 1823 dominan frente a la biografía o proyecto personal del dirigente.",
+                      "completeness_issues":  [
+                                                  "\u0027Sir vió\u0027 es ruido de separación gráfica menor."
+                                              ]
+                  },
+                  {
+                      "id":  "N26",
+                      "label":  "liderazgos_diplomacia_proyectos",
+                      "usability":  "usable",
+                      "reason":  "Reconstruye la trayectoria de José de la Mar entre 1815 y 1821 a través de distinciones, destino al Perú, responsabilidad como subinspector, participación en juntas y ascensos. La actividad de preparar tropas explica su promoción, que cierra y organiza la trayectoria individual narrada.",
+                      "alternative":  "campanias_conflictos_militares es una frontera estrecha porque arbitrar medios para aumentar tropas y defender Lima es actividad logística. Se prefiere liderazgo por el predominio de cargos y ascensos de un actor, sin una campaña o disposición operativa desarrollada.",
+                      "completeness_issues":  [
+                                                  "\u0027Como hemos visto anteriormente\u0027 remite a una explicación previa, pero el nombramiento, fecha y trayectoria quedan conservados."
+                                              ]
+                  }
+              ],
+    "counts":  {
+                   "labels":  {
+                                  "crisis_ideas_emancipadoras":  4,
+                                  "contexto_colonial_antecedentes":  4,
+                                  "no_relevante":  4,
+                                  "participacion_social_regional":  4,
+                                  "campanias_conflictos_militares":  6,
+                                  "liderazgos_diplomacia_proyectos":  2,
+                                  "organizacion_consecuencias_republicanas":  2
+                              },
+                   "usability":  {
+                                     "usable":  23,
+                                     "requires_context":  3,
+                                     "quarantine":  0
+                                 }
+               }
+}

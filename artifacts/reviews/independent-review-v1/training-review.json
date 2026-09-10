@@ -1,0 +1,180 @@
+{
+  "status": "proposals_only_current619_unchanged",
+  "items": [
+    {
+      "id": "R01",
+      "snapshot_index": 809,
+      "old_label": "organizacion_consecuencias_republicanas",
+      "text_sha256": "812ed5a35702fcb07412fa52b43590b594e5aba1b9b824e11140f770c72a755a",
+      "reviewer_label": "organizacion_consecuencias_republicanas",
+      "reviewer_usability": "usable",
+      "action": "proposal_only_no_dataset_change",
+      "reason": "El argumento compara abolición, restauración y modificación de tributos y aranceles entre 1821 y 1826 para explicar continuidades y cambios fiscales tras la independencia. Las referencias coloniales sustentan esa comparación; los nombres de los líderes no desplazan la fiscalidad como foco.",
+      "completeness_issues": [
+        "La expresión 'que vimos antes' remite a niveles arancelarios no incluidos; no impide reconocer el argumento principal."
+      ]
+    },
+    {
+      "id": "R02",
+      "snapshot_index": 643,
+      "old_label": "organizacion_consecuencias_republicanas",
+      "text_sha256": "037724b6b30ae3d8702261536423ee49cea1931d06a24cce76d8f6569d256733",
+      "reviewer_label": "organizacion_consecuencias_republicanas",
+      "reviewer_usability": "requires_context",
+      "action": "proposal_only_no_dataset_change",
+      "reason": "Relaciona gasto público, control del Estado por caudillos y orientación económica durante los primeros veinte años republicanos. La guerra aparece como prioridad del Estado, sin relato de operaciones militares.",
+      "completeness_issues": [
+        "Empieza 'En segundo lugar': falta la primera partida del gasto con la cual se fundamenta la comparación.",
+        "Los porcentajes aparecen dañados como '2696' y 'l596'; no se restauran sin original.",
+        "La afirmación del triunfo del libre comercio seguida por el éxito de fuerzas proteccionistas necesita el contexto de la periodización para aclarar la relación.",
+        "Persisten guiones de extracción, ruido OCR y una llamada bibliográfica sin nota."
+      ]
+    },
+    {
+      "id": "R03",
+      "snapshot_index": 49,
+      "old_label": "participacion_social_regional",
+      "text_sha256": "ae46a13846889b267236abd2bdf47ec90a7b340d9e14e9da73e5ad4e5068860a",
+      "reviewer_label": "no_relevante",
+      "reviewer_usability": "usable",
+      "action": "proposal_only_no_dataset_change",
+      "reason": "La unidad desarrolla una crítica metodológica a categorías y relatos historiográficos, seguida de una propuesta de investigación. No reconstruye una actuación popular concreta ni desarrolla una explicación histórica sustantiva de la independencia; anunciar que podrán reconstruirse hechos no equivale a presentar ese argumento. La decisión no depende de que el texto sea historiografía moderna.",
+      "completeness_issues": [
+        "Incluye encabezado de autor, título y página ajeno al cuerpo argumental.",
+        "'Esta historiografía' remite a una discusión previa; la naturaleza metodológica del argumento local sigue siendo identificable.",
+        "Las llamadas 27 y 28 carecen de notas en la unidad."
+      ]
+    },
+    {
+      "id": "R04",
+      "snapshot_index": 127,
+      "old_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "19888ce6caa20e06d2d32c4425e92a6747d58de27b7e8e56c8c1f5e346b76cfd",
+      "reviewer_label": "crisis_ideas_emancipadoras",
+      "reviewer_usability": "requires_context",
+      "action": "proposal_only_no_dataset_change",
+      "reason": "Explica el fracaso de movimientos de 1809–1814 mediante divisiones entre ruptura con España, fidelidad a Fernando VII y gobierno criollo. El faccionalismo y el regionalismo operan dentro de una discusión sobre opciones políticas de la crisis monárquica.",
+      "completeness_issues": [
+        "Inicio cortado en 'una radical', sin la presentación de las facciones.",
+        "La conclusión se interrumpe en 'no vislumbraron «la' y es sustituida por notas bibliográficas.",
+        "Ruido OCR y palabras partidas; falta el cierre del argumento y confirmar su relación explícita con el proceso peruano en el contexto inmediato."
+      ]
+    },
+    {
+      "id": "R05",
+      "snapshot_index": 577,
+      "old_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "147d73cc821356a251d67aeee1aee10682a44ccf08d9fb607747a2389d7532c2",
+      "reviewer_label": "ambiguo",
+      "reviewer_usability": "requires_context",
+      "action": "proposal_only_no_dataset_change",
+      "reason": "Contrapone una explicación de la independencia basada en precursores intelectuales con otra que la enraíza en un liderazgo indígena. No hay una dominancia segura entre ideas emancipadoras y participación indígena; además, el contexto ausente debe aclarar si el hablante desarrolla esas explicaciones históricas o describe solamente la construcción posterior del canon historiográfico.",
+      "completeness_issues": [
+        "Inicio 'entre entre' y referente 'ellos' sin antecedente.",
+        "Nombres y expresiones dañados en la transcripción; no se normalizan entidades por conjetura.",
+        "Las décadas del 40 y 50 no tienen siglo explícito y no se usan por sí solas para excluir el texto.",
+        "Faltan audio, contexto inmediato y marcas temporales para verificar integridad y duración."
+      ]
+    },
+    {
+      "id": "R06",
+      "snapshot_index": 820,
+      "old_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "6d61ce45abc8b51ebd30cb94b1b93047549b118235681886c923de32ddf07ce6",
+      "reviewer_label": "crisis_ideas_emancipadoras",
+      "reviewer_usability": "usable",
+      "action": "proposal_only_no_dataset_change",
+      "reason": "Explica el discurso disidente y la circulación de prensa política a partir de la crisis de 1808 y de las juntas de 1810, conectando Buenos Aires con Lima y el Alto Perú. Las acciones militares sitúan la confrontación propagandística, sin convertirse en el foco.",
+      "completeness_issues": []
+    },
+    {
+      "id": "R07",
+      "snapshot_index": 826,
+      "old_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "084be708f0aea05ed1c548aa8a5e62d3044102bbc39d6ad1c505df4e6ce0a944",
+      "reviewer_label": "crisis_ideas_emancipadoras",
+      "reviewer_usability": "usable",
+      "action": "proposal_only_no_dataset_change",
+      "reason": "El programa de circulación manuscrita de doctrinas y noticias contra el despotismo y a favor de la libertad de Lima y Perú constituye contenido político sustantivo. La referencia interna a 1811 sitúa la unidad; la clasificación no certifica que la atribución sea auténtica.",
+      "completeness_issues": [
+        "Hay omisiones señaladas con corchetes y puntos suspensivos; el programa político y la atribución se conservan legibles.",
+        "La lectura 'va que' podría ser un error de extracción; requiere original para corrección."
+      ]
+    },
+    {
+      "id": "R08",
+      "snapshot_index": 560,
+      "old_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "11505c81a59bb3f80afbe2ab48501164ffeaf74e46d1b7e499cdc64c45fc3b81",
+      "reviewer_label": "crisis_ideas_emancipadoras",
+      "reviewer_usability": "usable",
+      "action": "proposal_only_no_dataset_change",
+      "reason": "Desarrolla la relación del liberalismo peruano con regalismo y jansenismo y documenta su difusión impresa en 1825 y 1833. La guía incluye liberalismo y prensa en esta clase; el hecho de situarse en años republicanos no basta para clasificarlo como organización institucional.",
+      "completeness_issues": [
+        "'Estas ideas' remite al párrafo anterior, pero el texto identifica después regalismo y jansenismo y conserva ejemplos dentro del periodo.",
+        "La alusión a un capítulo posterior no impide interpretar el argumento local."
+      ]
+    },
+    {
+      "id": "R09",
+      "snapshot_index": 697,
+      "old_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "c7e118af7c3ca57dd59e56551f4e7f1be1b9f7ff8630e010f1170aa9f84e40a3",
+      "reviewer_label": "crisis_ideas_emancipadoras",
+      "reviewer_usability": "requires_context",
+      "action": "proposal_only_no_dataset_change",
+      "reason": "Aunque enmarcada en una conversación historiográfica, expone y problematiza una explicación sustantiva de la independencia americana: la transmisión de valores liberales desde Francia por España hacia América como impulso modernizador. Esa proposición histórica sobre difusión ideológica permite una etiqueta positiva; la pregunta final sobre autores no anula el desarrollo precedente.",
+      "completeness_issues": [
+        "Empieza como continuación de una oración y termina en una pregunta inconclusa: 'recogerían más esa'.",
+        "El referente 'guerra' no está identificado; no se atribuye a una persona específica.",
+        "Pasajes como 'y izamos' y 'han sido fluidos' indican problemas de transcripción.",
+        "No hay audio ni marcas de tiempo para comprobar las expresiones, los límites y la duración."
+      ]
+    },
+    {
+      "id": "R10",
+      "snapshot_index": 675,
+      "old_label": "liderazgos_diplomacia_proyectos",
+      "text_sha256": "877f4e808e36e0918185e1c7771dd15d1762f195c78a54f85409c7b1fca58394",
+      "reviewer_label": "liderazgos_diplomacia_proyectos",
+      "reviewer_usability": "requires_context",
+      "action": "proposal_only_no_dataset_change",
+      "reason": "El contraste historiográfico se sustenta en un argumento concreto sobre legitimidad política: el personaje transcrito con variantes de nombre se considera aliado al mismo nivel que San Martín y Bolívar y rechaza que gobiernen Perú como protector o dictador. Predominan relaciones y proyectos de autoridad entre dirigentes, no su mera mención.",
+      "completeness_issues": [
+        "Inicio dependiente de un ejemplo anterior; cierre truncado en 'durante el gobierno de', sin el referente que completa la atribución.",
+        "Variantes 'rivaguero', 'rib Agüero' y otras irregularidades exigen cotejo, sin inventar normalización o identidad verificada.",
+        "Faltan audio y marcas temporales para certificar transcripción, integridad y duración."
+      ]
+    },
+    {
+      "id": "R11",
+      "snapshot_index": 194,
+      "old_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "1a6219ebdfa2a7870378001b2e92321adbc6c0734485082bf40666c3fa9bb7b5",
+      "reviewer_label": "participacion_social_regional",
+      "reviewer_usability": "requires_context",
+      "action": "proposal_only_no_dataset_change",
+      "reason": "Analiza el contenido social desigual de medidas fiscales de las juntas: beneficio a comerciantes y hacendados criollos, preservación del ingreso eclesiástico y perjuicio indígena. Vincula protestas y levantamientos de varias regiones con intereses diferenciados, en lugar de describir únicamente la administración tributaria colonial.",
+      "completeness_issues": [
+        "Inicio cortado dentro de una palabra ('quines') y alusiones a 'este hecho' y 'nuestra hipótesis' sin antecedente.",
+        "La oración sobre el 20 de julio y los papeles de deuda carece de una acción verbal recuperable con seguridad; no se infiere qué se hizo con los documentos.",
+        "La fecha '(de 1781?)' ya es incierta en el texto; llamadas bibliográficas y ruido OCR pendientes de cotejo."
+      ]
+    },
+    {
+      "id": "R12",
+      "snapshot_index": 242,
+      "old_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "9e2f8863871c1db5e9b0798593281e0c5617356c2122ac189d3e2d5702b602b4",
+      "reviewer_label": "participacion_social_regional",
+      "reviewer_usability": "requires_context",
+      "action": "proposal_only_no_dataset_change",
+      "reason": "La tesis explícita vincula la adhesión de Tacna y Cuzco a juntas externas con la búsqueda de autonomía frente a Lima, y explica el alcance territorial proyectado de la movilización de 1809. La dinámica regional es el argumento dominante, aunque se apoye en proclamas y declaraciones de un dirigente.",
+      "completeness_issues": [
+        "'Consecuentemente' remite a una premisa anterior.",
+        "Cierre cortado en 'Con esta mira se había pro-', seguido de bibliografía intrusiva también incompleta.",
+        "Hay ruido OCR, palabras partidas y notas sin su contexto; recuperar el final del párrafo antes de admitir la unidad."
+      ]
+    }
+  ]
+}

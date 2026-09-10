@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "guarded_inputs": 131,
+  "accepted_rows_checked": 22,
+  "quarantined_rows_checked": 4,
+  "original_review_identities_checked": 38,
+  "seven_labels_supported": true,
+  "selected_texts_unique": true,
+  "accepted_length_range": [
+    125,
+    229
+  ],
+  "train619_and_evaluation218_unchanged": true,
+  "no_8_or_20_word_overlap_with_train": true,
+  "agreement_recomputed_with_sklearn": true,
+  "report_sha256": "85dcd33d972b7319a4a2761681a419e98505656c26a3986d0b773711ddfd91c7",
+  "dataset_sha256": "b127e120ec764d40d49e314be3f6d5985803948080c3181f3426f65d0ed96791"
+}

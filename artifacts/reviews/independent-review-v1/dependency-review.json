@@ -1,0 +1,200 @@
+{
+  "method": "Read selected excerpts and source citations; normalized TRAIN-only lexical screen.",
+  "compared_train_rows": 619,
+  "exact_source_ids_disjoint": true,
+  "full_source_independence": false,
+  "group_decisions": [
+    "Choque2024: Arica visit1793-1796; O’Phelan2012 is not TRAIN O’Phelan1985; Hugo Contreras is not Carlos Contreras. Shared surname is not identical work.",
+    "Escanilla2023: bibliography p125 explicitly cites Sala2011 El Trienio Liberal, already used in external development. Keep all new units out of train and do not claim final-test independence.",
+    "Escanilla2023 cites Guarisco2011 and both authors reuse their lines of inquiry. Guarisco2023 and Alvarado2023 are in the same dossier; conservatively one collection group.",
+    "Escanilla Huerta is not María Claudia Huerta Vera, author of TRAIN Huerta2020. Guarisco huertas and Alvarado salada/Salazar are lexical false positives for author queries.",
+    "Alvarado2023 uses Miller2009 elsewhere, a primary-work family present in TRAIN Fonseca/Hünefeldt. The selected body excerpts do not quote Miller. This does not certify absence of paraphrases or every shared primary document.",
+    "Common constitutions, institutions and secondary citations are not automatically duplicated passages; no8/20wordmatches found in any of26selected texts. This lexical check is not proof of semantic independence."
+  ],
+  "overlaps": [
+    {
+      "id": "E01",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E03",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E05",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E06",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E09",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E10",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E11",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E12",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E13",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E14",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E15",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E16",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E17",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E18",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E19",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E20",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E21",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E22",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E23",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E24",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E25",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E26",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E02",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E04",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E07",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    },
+    {
+      "id": "E08",
+      "shared_spans_with_train": {
+        "8": [],
+        "20": []
+      }
+    }
+  ],
+  "original_test_used_for_selection": false,
+  "external_texts_used_for_selection": false
+}

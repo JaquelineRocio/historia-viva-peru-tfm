@@ -1,0 +1,3733 @@
+{
+  "schema_version": 1,
+  "review_id": "boundary-resolution-v3",
+  "created_at_utc": "2026-09-08T13:39:43.539311+00:00",
+  "status": "adjudication_and_exact_change_proposal_not_applied",
+  "protected_inputs_before": {
+    "coursework/README.md": "949df26d275720f3719847d06aaf601bd0b28ce26a54c424031484b0b85d3dd4",
+    "scripts/compare_beto_validation.py": "bc8f02cd3b096ceea2a22f192b5e30205fcd067e2e45865152f406ca10e15037",
+    "artifacts/experiments/beto-reference-control-v1/report.json": "bfa40f2972885bda657174f62f7242030ef653f277c70717d3a58620a189b315",
+    "artifacts/datasets/gold-v1-source-aware.json": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a",
+    "outputs/corpus-snapshot-v2/reviewed-export.json": "5de9ea1a4be3c9d628da51cdf1d07108f43e0ac8ee580acb483013c6dc27c35c",
+    "artifacts/datasets/external-development-v1.json": "901f50f13a60642b316896abd9d4d68b945e699f7befc696b9e7506bc8fa4ceb",
+    "artifacts/reviews/external-development-v1.json": "33a10711ed13186406719b02ffe38892a7252e57a5ac060ac8f1b73475d5d004",
+    "artifacts/reviews/source-diversity-v1.json": "93474eca48f045f2a0b1e3c6f9ac7ac6f353b30f570f48a18bed4dff8a20c7e1",
+    "artifacts/reviews/corpus-closure-v2.json": "9f8bee3c7070fd7ec190abd51b8c843d426e6f64b5204d179a60259acab23875",
+    "docs/guia-etiquetado-1780-1842.md": "d53dea3532359afc851c2bdd59ae1ddb47a0673609d82d40372a6f62edc55179",
+    "artifacts/experiments/beto-length-v1/protocol.json": "ae32457e95bfdda3f03ba89e2525686d8351224bf098ce7e5bff8aea2a0dc1c0",
+    "artifacts/experiments/beto-length-v1/report.json": "899c3a99feba141c4532b36f5548fe2d1d384ed133b6d4eadf10dfcf9cb16426",
+    "artifacts/reviews/training-batch-v3.json": "b42860373a22f56490871b626a845b32d61f67108998fdc530e2883b57297692"
+  },
+  "scope": {
+    "period": [
+      1780,
+      1842
+    ],
+    "taxonomy_changed": false,
+    "target_rows": [
+      68,
+      69,
+      532,
+      548,
+      552,
+      556,
+      558,
+      559,
+      562,
+      564,
+      565,
+      765
+    ],
+    "strict_dependencies": [
+      298,
+      560,
+      561,
+      763
+    ],
+    "affected_if_applied": [
+      68,
+      69,
+      298,
+      532,
+      548,
+      552,
+      556,
+      558,
+      559,
+      560,
+      561,
+      562,
+      564,
+      565,
+      763,
+      765
+    ],
+    "human_expert_validation": false,
+    "new_model_results": false
+  },
+  "sources": {
+    "basadre": {
+      "author": "Jorge Basadre Grohmann",
+      "title": "Historia de la República del Perú [1822–1933], tomo1",
+      "local_pdf": "artifacts/demo/files/86cd8383-a0d1-40f6-a759-e2c5a2bf37a9.pdf",
+      "pdf_sha256": "e1fe8984e19e8485002e8c6458394d7f34b566dfb3fd64d95fe0e1e315646770",
+      "edition": "E-book, primera edición noviembre2014, Producciones Cantabria SAC; no confundir con la fecha2005 de la novena edición impresa citada en presentación.",
+      "isbn": "978-612-306-354-2",
+      "edition_and_rights_pdf_page": 28,
+      "rights": "Todos los derechos reservados; no licencia abierta comprobada. Los pasajes reconstruidos completos permanecen locales; el registro versionable contiene límites y huellas.",
+      "grouping": "El PDF es un recurso compuesto con actualizaciones y citas de terceros. Contar sus244filas como un recurso no demuestra244textos de autoría exclusiva de Basadre.",
+      "garcia_jordan_quote": {
+        "author": "Pilar García Jordán",
+        "year": 1993,
+        "title": "Iglesia y poder en el Perú contemporáneo",
+        "publisher": "Centro Bartolomé de las Casas, Cuzco",
+        "cited_pages": [
+          53,
+          54
+        ],
+        "reproduced_printed_page": 234,
+        "pdf_page": 236,
+        "underlying_edition_checked": false
+      }
+    },
+    "pereyra": {
+      "author": "Nelson Ernesto Pereyra Chávez",
+      "year": 2016,
+      "chapter": "Los campesinos de Huamanga y la rebelión de 1814",
+      "chapter_pages": [
+        339,
+        361
+      ],
+      "book": "1814: la junta de gobierno del Cuzco y el sur andino",
+      "editor": "Scarlett O'Phelan Godoy",
+      "edition": "Primera edición, diciembre2016",
+      "publishers": [
+        "Instituto Francés de Estudios Andinos",
+        "Fondo Editorial PUCP",
+        "Fundación M. J. Bustamante de la Fuente"
+      ],
+      "isbn": "978-612-4358-00-5",
+      "series": "Actes & Mémoires41",
+      "chapter_doi": "https://doi.org/10.18800/9786124358005.013",
+      "official_item": "https://repositorio.pucp.edu.pe/items/f2c23330-ffb6-453e-94d4-295186c63316/full",
+      "official_pdf": "https://repositorio.pucp.edu.pe/bitstreams/ce8274da-ef7e-4589-9049-9bdec8ac6332/download",
+      "publisher_book_record": "https://www.ifea.org.pe/libreria/actes-et-memoires/041/",
+      "pdf_sha256": "ae23fb808ca0669754a09e06a89a5c2485a4ed169c7496317ec9dfe7a6527d1e",
+      "official_pdf_md5_equals_local": true,
+      "official_md5": "7ddd9f39feadb7e0f6521246eaa20639",
+      "pdf_page_count": 25,
+      "page_mapping": "PDF1 cover, PDF2 edition/copyright, PDF3–25 printed339–361.",
+      "rights": {
+        "verified_license": "CC BY-NC-ND 2.5 PE",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/2.5/pe/",
+        "metadata_field": "dc.rights.uri, item-specific official API archived locally",
+        "access_status_distinct_from_license": "dc.rights is openAccess; full metadata supplies the specific restrictive license.",
+        "restriction": "Attribution and noncommercial use; modified/derived material must not be redistributed under the ND grant. Format change alone is not a derivative under the license deed.",
+        "proposal_reuse_status": "Local review prepared; no claim that normalized/resegmented public corpus or trained weights are cleared by this license.",
+        "public_distribution_cleared": false,
+        "license_changed_to_CC_BY4": false
+      },
+      "references_used_by_passages": [
+        {
+          "author": "Lorenzo Huertas Vallejos",
+          "year": 1982,
+          "title": "Diezmos en Huamanga",
+          "publication": "Allpanchis XVII(20):209–235",
+          "cited_page": 221,
+          "bibliography_printed_page": 360,
+          "primary_work_rechecked": false
+        },
+        {
+          "author": "T. Carrasco Cavero",
+          "year": 1990,
+          "title": "Padrón de Contribuyentes de la Provincia de Huamanga en1826",
+          "publication": "Tesis de licenciatura, Universidad Nacional San Cristóbal de Huamanga",
+          "bibliography_printed_page": 359,
+          "primary_work_rechecked": false
+        },
+        {
+          "author": "J. L. Igue",
+          "year": 2008,
+          "title": "Bandolerismo, patriotismo y etnicidad poscolonial: los morochucos de Cangallo, Ayacucho, en las guerras de la independencia",
+          "publication": "Tesis de licenciatura, PUCP",
+          "cited_pages": [
+            27,
+            30,
+            37
+          ],
+          "bibliography_printed_page": 360,
+          "primary_work_rechecked": false
+        }
+      ]
+    },
+    "constitutional_crosscheck": {
+      "institution": "Congreso de la República del Perú",
+      "url": "https://www3.congreso.gob.pe/Docs/sites/webs/constitucion/constituciones/Constitucion1828.pdf",
+      "pages": [
+        1,
+        24,
+        25
+      ],
+      "finding": "La portada y el preámbulo corresponden a1828; promulgación18/03/1828. No se cambia la fecha impresa en las dos citas del PDF sin registrar explícitamente la intervención.",
+      "use": "Contextual check only; not a new training source or contemporary legal advice."
+    },
+    "regulation_transmission": {
+      "schema_version": 1,
+      "checked_date": "2026-09-08",
+      "scope": "Identidad y contexto del reglamento mencionado por Hünefeldt 1979, p. 87. Revisión de fuentes asistida por IA; sin nuevas unidades de corpus, etiquetas, entrenamiento ni evaluación.",
+      "conclusion": {
+        "document_identity": "Reglamento Interior de las Haciendas de la Costa, fechado en Lima el14 de octubre de 1825, emitido por el Consejo de Gobierno según la transcripción de Sales 1970.",
+        "identity_basis": "Coinciden fecha, haciendas, restricciones de armas y movilidad. La transcripción permite identificar una disposición del gobierno republicano preparada mediante una junta de hacendados; no únicamente un acuerdo privado entre propietarios.",
+        "safe_formulation": "Hünefeldt relaciona la restauración del control de los propietarios con el reglamento de1825. Sales reproduce un texto del Consejo de Gobierno fechado14 de octubre, preparado por una junta de hacendados presidida por el prefecto y referido a las bases de un decreto del20 de abril. Sales cita su publicación en la Gaceta del16 de octubre. Se conserva la discrepancia con Basadre, que lo llama publicado el14.",
+        "not_claimed": [
+          "No se verificó una reunión de la Junta de Hacendados celebrada el14 de octubre; la fecha comprobada corresponde al cierre del texto gubernativo transcrito.",
+          "No se cotejaron el ejemplar original de la Gaceta, el decreto del20 de abril ni la página120 de la edición de Sales 1974.",
+          "El contenido normativo no demuestra su cumplimiento efectivo en todas las haciendas.",
+          "Este contexto no decide por sí solo la etiqueta dominante del fragmento de Hünefeldt."
+        ]
+      },
+      "citation_chain": [
+        {
+          "id": "hunefeldt1979",
+          "author": "Christine Hünefeldt",
+          "title": "Cimarrones, bandoleros y milicianos:1821",
+          "publication": "Histórica3(2),1979, pp. 71–88",
+          "url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/7858",
+          "doi": "10.18800/historica.197902.004",
+          "local_file": "outputs/source-diversity-v1/hunefeldt-1979.pdf",
+          "sha256": "aa49530a2481d4172b1131042cbcee532093dac2c261443a3204a58825ffd1bb",
+          "locators": [
+            "p. 87/PDF 17, nota 51: Nuria Sales, op.cit., p. 120",
+            "p. 73/PDF 3, nota 8: identificación de la obra de Sales 1974"
+          ],
+          "observation": "La autora dice ratificación de un reglamento y añade entre paréntesis Junta de Hacendados y14 de octubre de 1825. Su referencia es secundaria, no una signatura directa del reglamento. No se alteró esa formulación."
+        },
+        {
+          "id": "sales1974",
+          "author": "Núria Sales de Bohigas",
+          "title": "Sobre esclavos, reclutas y mercaderes de quintos",
+          "edition": "Barcelona: Editorial Ariel,1974,277páginas",
+          "chapter_as_cited_by_hunefeldt": "Esclavos y reclutas de Sudamérica,1816–1826",
+          "page_requested_by_hunefeldt": 120,
+          "catalog_url": "https://biblioteca.anh.org.ar/cgi-bin/koha/opac-detail.pl?biblionumber=54579&shelfbrowse_itemnumber=53824",
+          "catalog_authority": "Biblioteca de la Academia Nacional de la Historia, Argentina; ficha indexada consultada.",
+          "status": "Identificación bibliográfica corroborada; contenido de p. 120 no consultado. No se equipara silenciosamente con la paginación de1970."
+        },
+        {
+          "id": "sales1970",
+          "author": "Nuria Sales de Bohigas",
+          "title": "Esclavos y reclutas en Sudamérica,1816–1826",
+          "publication": "Revista de Historia de América70, julio–diciembre1970, pp. 279–337",
+          "host": "Biblioteca Digital del Instituto Nacional de Antropología e Historia, colección del Instituto Panamericano de Geografía e Historia",
+          "url": "https://bibliotecadigital.inah.gob.mx/janium/Documentos/IPGH/REHIAM_00_0070_1970_P279.pdf",
+          "sha256_downloaded_bytes": "4e3f0634859a3f0a13e6f78759df291d00512590b64c0ba444cee8f4c10c78c9",
+          "download_bytes": 5356591,
+          "pdf_pages": 58,
+          "pagination_note": "El fichero consultado comienza en la página impresa280, aunque la referencia del artículo empieza en279. Para los pasajes verificados: PDF 47=326, PDF 48=327, PDF 49=328, PDF 50=329, PDF 51=330, PDF 52=331.",
+          "regulation_locator": "pp. 328–331/PDF 49–52;nota 72enp.331",
+          "source_reference_in_note72": [
+            "Colección de Leyes, Decretos y Órdenes publicados en el Perú…(14-10-1825)",
+            "Gaceta del Gobierno de Lima(16-10-1825, t. III, p. 133)"
+          ],
+          "collection_identification_in_article": "p. 314/PDF 35: Colección de Leyes, Decretos y Órdenes publicadas en el Perú desde su Independencia en el año de1821 hasta el 31 de diciembre de 1830.T. I, Lima, I.deJ.Matías,1831. La nota 72 abrevia el título; no especifica allí página/tomo del reglamento dentro de la Colección.",
+          "transmission_limit": "Se leyó una transcripción académica del documento primario con omisiones indicadas por la propia editora. No es inspección del impreso de1825. El artículo lleva Derechos Reservados; se usa como evidencia de investigación, sin incorporarlo al corpus."
+        }
+      ],
+      "dates_and_authority": [
+        {
+          "date": "1825-04-20",
+          "type": "Antecedente citado por el preámbulo",
+          "evidence": "Sales 1970, p. 328: el Consejo mandó organizar una junta de hacendados presidida por el prefecto del departamento para formar el reglamento conforme a las bases de un decreto de esta fecha.",
+          "limit": "Fecha y función verificadas en el preámbulo transcrito; no se leyó el decreto antecedente íntegro."
+        },
+        {
+          "date": "1825-10-14",
+          "type": "Fecha del documento gubernativo",
+          "evidence": "Sales 1970, p. 331: cierre fechado en el Palacio del Gobierno en Lima, con orden de imprimir, publicar y circular.",
+          "signatures_as_transcribed": [
+            "Hipólito Unanue",
+            "Juan Salazar",
+            "José de Larrea y Loredo",
+            "Manuel Lino Ruiz de Pancorbo"
+          ],
+          "signature_caution": "El último nombre sigue a la fórmula De orden de S.E.y por el Señor Ministro de Gobierno. No se asigna aquí a Pancorbo el cargo de ministro por esa fórmula ni se afirma firma autógrafa de Bolívar."
+        },
+        {
+          "date": "1825-10-16",
+          "type": "Fecha de Gaceta citada por Sales",
+          "evidence": "Sales 1970, p. 331, nota 72: Gaceta del Gobierno de Lima,16-10-1825, t. III, p. 133.",
+          "limit": "Localizador secundario comprobado; ejemplar de la Gaceta no inspeccionado. No afirmar con ello que fuera la primera o única forma de publicación."
+        }
+      ],
+      "content_checked": {
+        "regulation": [
+          "Preámbulo: reconstrucción de la agricultura tras la guerra y regulación del trato a los esclavos.",
+          "Artículos13,14y18, p. 330: licencias escritas de salida, restricciones al porte de armas y boletos para entrar en poblaciones.",
+          "Artículos15y16, p. 330: comisarios y participación de intendente, gobernador y juez competente; evidencia de autoridades públicas en la ejecución."
+        ],
+        "manumission_caution": "La afirmación interpretativa de que el antiguo/nuevo amo decidía si una manumisión previa a la leva era efectiva aparece en la prosa de Sales, p. 326, antes de transcribir disposiciones diferentes del19 de septiembre, p. 327, y19 de noviembre, p. 328, además del reglamento de octubre. No se verificó un artículo del reglamento que diga literalmente eso. La síntesis de Hünefeldt puede condensar este conjunto normativo: no atribuir automáticamente todas sus cláusulas al único reglamento ni declararla falsa por esa condensación.",
+        "separate_november_rule": "La disposición del19 de noviembre transcrita enp.328 distingue alistamiento anterior al5 de noviembre de 1824y permanencia en el ejército, invalidación o libertad por autoridad competente, y devolución a los amos fuera de esas condiciones. Es un documento distinto del reglamento del14 de octubre."
+      },
+      "basadre_comparison": {
+        "author": "Jorge Basadre",
+        "work": "Historia de la República del Perú; ejemplar local señalado por el agente principal",
+        "local_file": "artifacts/demo/files/86cd8383-a0d1-40f6-a759-e2c5a2bf37a9.pdf",
+        "sha256": "e1fe8984e19e8485002e8c6458394d7f34b566dfb3fd64d95fe0e1e315646770",
+        "locator": "p. 217/PDF 219",
+        "edition_limit": "Sólo se leyó esta página puntual; no se reabrió portada o registro de edición.",
+        "reading": "Basadre dice publicado el14 de octubre de 1825 y describe trabajo, castigos, alimentos, ropa, movilidad y comisarios.",
+        "discrepancy": "Coincide sustancialmente en la identidad y contenido, pero usa publicado para la fecha14; Salesfecha el documento el14y cita Gaceta del 16. Conservar ambas lecturas y explicar la diferencia entre fecha del acto y fecha del periódico citado; no corregir ninguno de los corpus originales."
+      },
+      "verification": {
+        "local_hunefeldt_reused": true,
+        "sales_primary_transcription_read": "pp. 328–331; cotejo visual de pp. 328 y 331 para preámbulo, fecha, firmas y nota 72",
+        "in_memory_only": "PDF de Sales consultado en memoria mediante descarga HTTPS con validación del sistema Windows; no se guardó PDF completo ni imágenes nuevas.",
+        "access_incidents": "web.open agotó tiempo para INAH; requests no validó su cadena de certificados. Invoke-WebRequest accedió correctamente con validación TLS del sistema, sin desactivarla. El visor del documento CDIP XIV/1 en BNP respondió502 y no se utilizó como texto primario consultado.",
+        "unchanged": "PDFs locales y candidatos conservados; sólo se crea este JSON. Sin lecturas de evaluación, entrenamiento, Git o producción.",
+        "historical_status": "Identidad y carácter gubernativo fundamentados mediante transcripción académica. Persisten los límites de edición1974, ejemplar original, fecha exacta de reunión de la Junta y atribución de la frase sobre manumisión."
+      }
+    }
+  },
+  "decisions": [
+    {
+      "index": 68,
+      "original_sha256": "8c89f57ee2a65f8ec178884f503075588043c5c93829dbfcf62e5179cdb13f1a",
+      "current_label": "contexto_colonial_antecedentes",
+      "first_assessment": "ambiguo",
+      "blind_second_assessment": "participacion_social_regional",
+      "adjudicated_theme": "participacion_social_regional",
+      "theme_status": "resolved_for_proposal",
+      "first_reason": "El padrón de 1826 documenta una estructura agraria regional descrita para comienzos del XIX; no basta la fecha del padrón para convertirla en consecuencia republicana. El argumento empieza en 69 y la nota 18 invade el final de 68.",
+      "second_reasons": [
+        "El cuerpo trata la diferenciación entre propietarios y espacios regionales; el nombre de Arenales aparece solo en una nota y no convierte el tema en campaña militar.",
+        "La llamada de nota y el pie 18 se mezclaron con el cuerpo; la referencia final a Igue quedó abierta."
+      ],
+      "alternatives_preserved": [
+        {
+          "label": "contexto_colonial_antecedentes",
+          "reason": "La estructura rural puede funcionar como antecedente colonial en un segmento anclado en la intendencia, pero el texto actual abre con 1826 y no presenta como centro una reforma u orden virreinal."
+        },
+        {
+          "label": "organizacion_consecuencias_republicanas",
+          "reason": "El padrón republicano aporta evidencia; no se describe una reforma republicana de la propiedad que domine el pasaje."
+        }
+      ],
+      "action_index": 0
+    },
+    {
+      "index": 69,
+      "original_sha256": "8b02cbba5306e1cf03bc36ff338c4103717c9227237142931f2ecdb16ec61c04",
+      "current_label": "contexto_colonial_antecedentes",
+      "first_assessment": "organizacion_consecuencias_republicanas",
+      "blind_second_assessment": "organizacion_consecuencias_republicanas",
+      "adjudicated_theme": "organizacion_consecuencias_republicanas",
+      "theme_status": "resolved_for_proposal",
+      "first_reason": "La primera unidad explica caída y recuperación de producción y desigual efecto de guerras y rebelión; necesita el inicio que ya aparece en 298. La caracterización de propiedad al final pertenece a otra unidad.",
+      "second_reasons": [
+        "El núcleo causal aborda el descenso desde 1822 y sus consecuencias económicas regionalmente desiguales.",
+        "La apertura perdió el sujeto de tasa decimal y arrastra folio y nombre del autor. El final introduce la propiedad rural, argumento distinto que continúa en B01."
+      ],
+      "alternatives_preserved": [
+        {
+          "label": "participacion_social_regional",
+          "reason": "Es defendible priorizando diferencias regionales y la sublevación huantina, pero se estudia su efecto agrario, no las acciones de los campesinos."
+        },
+        {
+          "label": "contexto_colonial_antecedentes",
+          "reason": "La serie arranca en 1780, pero no domina un antecedente: la explicación insiste en guerras, descenso posterior a 1822 y recuperación en los años treinta."
+        }
+      ],
+      "action_index": 1
+    },
+    {
+      "index": 532,
+      "original_sha256": "c4a963d8d412bbd4c9c5e487166ce904ed55d09fa5949cc6489d6c6cd0d0bece",
+      "current_label": "contexto_colonial_antecedentes",
+      "first_assessment": "organizacion_consecuencias_republicanas",
+      "blind_second_assessment": "organizacion_consecuencias_republicanas",
+      "adjudicated_theme": "organizacion_consecuencias_republicanas",
+      "theme_status": "resolved_for_proposal",
+      "first_reason": "Predominan continuidad religiosa y disposiciones constitucionales del Estado independiente, no un antecedente sin consecuencia republicana. Un pie de imagen distinto inicia la fila.",
+      "second_reasons": [
+        "La tesis y los ejemplos centrales son normas y rituales de la naciente República.",
+        "El folio y la leyenda de imagen incorporan orígenes medievales y descripción de una pintura; el cierre actual corta la serie constitucional antes de la frase sobre 1827."
+      ],
+      "alternatives_preserved": [
+        {
+          "label": "crisis_ideas_emancipadoras",
+          "reason": "La religión influye en ideas y legitimación, pero aquí predominan decisiones constitucionales y congresales concretas."
+        },
+        {
+          "label": "contexto_colonial_antecedentes",
+          "reason": "La continuidad española es una comparación explicativa; el objeto principal es republicano."
+        }
+      ],
+      "action_index": 3
+    },
+    {
+      "index": 548,
+      "original_sha256": "12542503d58aa8d1367dbc9a23c4bbbf1c00a02e7cf81cd53c19332f9c0e8c5f",
+      "current_label": "contexto_colonial_antecedentes",
+      "first_assessment": "organizacion_consecuencias_republicanas",
+      "blind_second_assessment": "organizacion_consecuencias_republicanas",
+      "adjudicated_theme": null,
+      "theme_status": "mixed_or_uncertain_original_unit",
+      "first_reason": "Estimaciones de población en 1826; la tabla duplica datos y el correo inicia una oración que continúa en otra página. No es colonial por describir categorías étnicas heredadas.",
+      "second_reasons": [
+        "Se presentan dimensiones de la nueva República a partir del periódico oficial; las menciones a grupos son categorías demográficas, sin acción política propia.",
+        "El final mezcla una oración incompleta de correos con una tabla que repite datos de población.",
+        "Al retirar esos elementos, el bloque de El Peruano queda en 119 palabras; no es una de las dos excepciones documentadas."
+      ],
+      "alternatives_preserved": [
+        {
+          "label": "participacion_social_regional",
+          "reason": "Puede defenderse por distribución de grupos y regiones; la guía no asigna de manera explícita los inventarios demográficos, por lo que la frontera requiere cautela."
+        },
+        {
+          "label": "ambiguo",
+          "reason": "Si se exige encaje literal en los ejemplos de clase, debe registrarse duda entre organización nacional y dinámica regional, en lugar de inferir una movilización inexistente."
+        }
+      ],
+      "action_index": 4
+    },
+    {
+      "index": 552,
+      "original_sha256": "df74c847171cc10d356a740d6ea1f4d1d3079f7871e438bfada1f0c97c2d3f2d",
+      "current_label": "contexto_colonial_antecedentes",
+      "first_assessment": "organizacion_consecuencias_republicanas",
+      "blind_second_assessment": "organizacion_consecuencias_republicanas",
+      "adjudicated_theme": "organizacion_consecuencias_republicanas",
+      "theme_status": "resolved_for_proposal",
+      "first_reason": "Organización territorial y administrativa republicana en 1828; diplomáticos listados como estructura, no negociación o actuación de un líder.",
+      "second_reasons": [
+        "Las provincias, departamentos, ministerios y empleados describen directamente la organización republicana.",
+        "El texto comienza dentro de una oración sobre nombres departamentales y pasa de demarcación a una sección administrativa distinta; los nombres diplomáticos no cambian la idea principal."
+      ],
+      "alternatives_preserved": [
+        {
+          "label": "liderazgos_diplomacia_proyectos",
+          "reason": "Las representaciones exteriores son un dato burocrático y no una negociación o proyecto personal dominante."
+        }
+      ],
+      "action_index": 5
+    },
+    {
+      "index": 556,
+      "original_sha256": "46bc644ad134060a9be20c7892917461490da9e25e2c2b1bc7b934a5e87af673",
+      "current_label": "contexto_colonial_antecedentes",
+      "first_assessment": "ambiguo",
+      "blind_second_assessment": "organizacion_consecuencias_republicanas",
+      "adjudicated_theme": null,
+      "theme_status": "mixed_or_uncertain_original_unit",
+      "first_reason": "Inventario de fuerzas navales y estadística demográfica con crítica a cifras de 1795 tienen focos distintos. La crítica a usar cifras antiguas es esencial; no clasificar todo como colonial por 1795.",
+      "second_reasons": [
+        "La organización de fuerzas y la estadística nacional describen el Estado; no hay operación ni estrategia militar.",
+        "La apertura Aparte de estas fuerzas depende del párrafo del ejército y el cambio explícito a Población y comunicaciones junta unidades distintas.",
+        "La tabla demográfica sí es evidencia de la discusión de Piérola, y debe conservarse en su unidad propia."
+      ],
+      "alternatives_preserved": [
+        {
+          "label": "participacion_social_regional",
+          "reason": "El bloque demográfico puede entenderse como contexto regional, pero aquí no explica participación o conflicto de grupos."
+        },
+        {
+          "label": "campanias_conflictos_militares",
+          "reason": "Solo sería fuerte en otra unidad centrada en logística de una campaña; la simple lista de buques y mandos no basta."
+        }
+      ],
+      "action_index": 6
+    },
+    {
+      "index": 558,
+      "original_sha256": "ac8c5e666bea01b8bf8dfad6247b6ca6fdca949cb1d233711f7b2948baff20a3",
+      "current_label": "contexto_colonial_antecedentes",
+      "first_assessment": "ambiguo",
+      "blind_second_assessment": "participacion_social_regional",
+      "adjudicated_theme": null,
+      "theme_status": "mixed_or_uncertain_original_unit",
+      "first_reason": "Mezcla cierre del reclutamiento, estructura ocupacional y comienzo de discusión sobre ciudadanía y tutela indígena; no es una única idea dominante autónoma.",
+      "second_reasons": [
+        "El mayor desarrollo conservado corresponde a mestizaje, empleos, artes y oficios y pérdida de subsistencia.",
+        "La primera oración carece de referente suficiente y el cierre corta la explicación jurídica en un punto y coma. Las disposiciones de 1821 abren un argumento que requiere su continuación."
+      ],
+      "alternatives_preserved": [
+        {
+          "label": "organizacion_consecuencias_republicanas",
+          "reason": "Es defendible para la unidad que comienza En 1821 San Martín y termina relaciones privadas, en la misma página: decretos, ciudadanía y potestad estatal."
+        },
+        {
+          "label": "campanias_conflictos_militares",
+          "reason": "La tropa es un ámbito de incorporación social; no se describen tácticas o batallas."
+        }
+      ],
+      "action_index": 7
+    },
+    {
+      "index": 559,
+      "original_sha256": "c054cd528de5f4bf38b6422c646a206e6e76cb67e5fa0005c24855d7162b547c",
+      "current_label": "contexto_colonial_antecedentes",
+      "first_assessment": "organizacion_consecuencias_republicanas",
+      "blind_second_assessment": "organizacion_consecuencias_republicanas",
+      "adjudicated_theme": "organizacion_consecuencias_republicanas",
+      "theme_status": "resolved_for_proposal",
+      "first_reason": "Decretos y reglamento sobre esclavitud republicana. El inicio cortado pertenece a una memoria de 1846, fuera de alcance, identificable en PDF219/impresa217.",
+      "second_reasons": [
+        "Los decretos y el reglamento ocupan la mayor parte del texto; la mención a campos de batalla explica un supuesto legal de libertad.",
+        "La apertura pertenece a una memoria de José Gregorio Paz Soldán remitida en 1846: además de perder atribución y comienzo de oración, sale del límite temporal de 1842.",
+        "El reglamento continúa en la página tras el corte actual; puede construirse una secuencia normativa cerrada sin arrastrar la cita de 1846."
+      ],
+      "alternatives_preserved": [
+        {
+          "label": "participacion_social_regional",
+          "reason": "Las condiciones de trabajo y la situación afroperuana constituyen una lectura secundaria defendible, pero el texto está organizado por disposiciones estatales."
+        },
+        {
+          "label": "campanias_conflictos_militares",
+          "reason": "La actuación militar es requisito de una manumisión y no el objeto de una narración bélica."
+        }
+      ],
+      "action_index": 8
+    },
+    {
+      "index": 562,
+      "original_sha256": "5262c43c87ff50b924aad275d71fb4dcc4fef23f4b95878a52f76b7a47ba0acb",
+      "current_label": "contexto_colonial_antecedentes",
+      "first_assessment": "organizacion_consecuencias_republicanas",
+      "blind_second_assessment": "organizacion_consecuencias_republicanas",
+      "adjudicated_theme": "organizacion_consecuencias_republicanas",
+      "theme_status": "resolved_for_proposal",
+      "first_reason": "El eje es integración jurídica y económica de extranjeros en la nueva República y las medidas sobre su comercio. Las relaciones exteriores son un ejemplo final subordinado; colonias significa comunidades extranjeras, no régimen virreinal.",
+      "second_reasons": [
+        "La tesis sobre disposiciones de integración y su resultado económico organiza los tres párrafos.",
+        "Las fechas de 1822 y 1825 son internas, las oraciones están completas y hay 181 palabras. El contexto confirma la continuidad argumental."
+      ],
+      "alternatives_preserved": [
+        {
+          "label": "liderazgos_diplomacia_proyectos",
+          "reason": "El cierre alude a gestiones comerciales internacionales, pero es un ejemplo subordinado a la posición de extranjeros en la República."
+        },
+        {
+          "label": "participacion_social_regional",
+          "reason": "La formación de colonias mercantiles importa socialmente; el tratamiento explícito de normas de integración y fiscalidad inclina la decisión a organización republicana."
+        }
+      ],
+      "action_index": 11
+    },
+    {
+      "index": 564,
+      "original_sha256": "bbd414f14b7cb2368d518fa78b64ff682e05ab54ec91e85483c95a99ba0de92f",
+      "current_label": "contexto_colonial_antecedentes",
+      "first_assessment": "organizacion_consecuencias_republicanas",
+      "blind_second_assessment": "organizacion_consecuencias_republicanas",
+      "adjudicated_theme": "organizacion_consecuencias_republicanas",
+      "theme_status": "resolved_for_proposal",
+      "first_reason": "Continúa el reglamento de 1825 y agrega decretos favorables a los hacendados de 1822–1826. El referente inicial y la unidad del reglamento están en 559/561; el final inicia otro argumento.",
+      "second_reasons": [
+        "Las obligaciones, prohibiciones y decretos constituyen el argumento central.",
+        "La apertura Se les prohibía quedó separada del reglamento de 1825 y su sujeto, mientras el cierre interrumpe un párrafo explicativo que sigue con inmigración y oferta de trabajo."
+      ],
+      "alternatives_preserved": [
+        {
+          "label": "participacion_social_regional",
+          "reason": "La subordinación de personas esclavizadas es central en términos sociales; aquí se expone principalmente mediante medidas legales y su justificación."
+        }
+      ],
+      "action_index": 12
+    },
+    {
+      "index": 565,
+      "original_sha256": "dc41346881bd5b7201f577152a62aefc120b343c0914e0b6ba7ee947903aa945",
+      "current_label": "contexto_colonial_antecedentes",
+      "first_assessment": "crisis_ideas_emancipadoras",
+      "blind_second_assessment": "crisis_ideas_emancipadoras",
+      "adjudicated_theme": "crisis_ideas_emancipadoras",
+      "theme_status": "resolved_for_proposal",
+      "first_reason": "Liberalismo, regalismo, jansenismo y circulación de impresos en 1825/1833; el inicio mutila una cita de Menéndez Pelayo.",
+      "second_reasons": [
+        "La influencia de autores, traducciones y prensa liberal es el tema dominante; no se relatan medidas administrativas concretas.",
+        "El texto comienza en mitad de una cita de Menéndez Pelayo, omitiendo su atribución y el sujeto de la caracterización."
+      ],
+      "alternatives_preserved": [
+        {
+          "label": "organizacion_consecuencias_republicanas",
+          "reason": "Los vínculos entre Iglesia y Estado proporcionan contexto; el pasaje seleccionado trata doctrinas y difusión intelectual."
+        },
+        {
+          "label": "liderazgos_diplomacia_proyectos",
+          "reason": "Los nombres enumerados identifican portadores de ideas, no una biografía o actuación diplomática dominante."
+        }
+      ],
+      "action_index": 13
+    },
+    {
+      "index": 765,
+      "original_sha256": "a1958a5a3abc1ded9f35efc07cd2d595ae139ef76f376ce1e15a79a4c4cbb362",
+      "current_label": "contexto_colonial_antecedentes",
+      "first_assessment": "organizacion_consecuencias_republicanas",
+      "blind_second_assessment": "organizacion_consecuencias_republicanas",
+      "adjudicated_theme": "organizacion_consecuencias_republicanas",
+      "theme_status": "resolved_for_proposal",
+      "first_reason": "Vínculo institucional Iglesia/Estado y Congreso republicano. Es una cita editorial de Pilar García Jordán, Iglesia y poder en el Perú contemporáneo, 1993, pp.53–54, no prosa de Basadre aunque comparta el PDF.",
+      "second_reasons": [
+        "El pasaje expone la relación Iglesia–Estado mediante juramento de un estatuto y rogativas ordenadas para la elaboración constitucional.",
+        "La página 236 confirma que el cierre actual es el final del extracto publicado, seguido por su referencia, y que las elipsis son editoriales. La limpieza de guiones no requiere cambiar los límites."
+      ],
+      "alternatives_preserved": [
+        {
+          "label": "crisis_ideas_emancipadoras",
+          "reason": "La legitimación religiosa incorpora un lenguaje de ideas, pero el eje es su uso por estatuto, ministros y Congreso en la República."
+        }
+      ],
+      "action_index": 15
+    }
+  ],
+  "adjudication_notes": [
+    "68: adopto social/regional tras considerar los dos párrafos completos y las lecturas separadas. Describe propiedad, grupos y producción regional; no se decide por la sola fecha1826. La alternativa colonial y mi reserva inicial permanecen registradas.",
+    "556 y558: no fuerzo una sola etiqueta a sus mezclas. La propuesta separa demografía de Armada y norma indígena de estructura/participación social.",
+    "La guía incluye ejércitos y logística: no adopto la restricción del segundo revisor según la cual militares requiere siempre una operación de campaña. El inventario militar residual permanece separado, sin nueva etiqueta automática.",
+    "565: selecciono los dos párrafos de autores/difusión de133palabras; conservan Benito Laso1825 y Pereira1833. La alternativa del segundo revisor sobre Menéndez Pelayo179palabras se conserva, pero requeriría recuperar material de764 y perdería el párrafo de difusión; no se acumulan ambas variantes.",
+    "765: retiro mi sospecha inicial de una continuación perdida. El cierre con dos puntos y elipsis está en el extracto editorial; la reserva final es de atribución y cronología, no de truncamiento."
+  ],
+  "nonblind_followup_on_final_limits": {
+    "reviewer": "fronteras_ciegas",
+    "original_blind_review_preserved": true,
+    "human_validation": false,
+    "scope": [
+      "BAS-552",
+      "BAS-565"
+    ],
+    "finding": "El segundo revisor examinó los dos límites finales después de conocer la propuesta de root y los consideró defendibles. BAS-552 identifica Perú y1828 y describe estructura estatal. BAS-565 resuelve dentro del propio texto la referencia inicial a estas ideas mediante regalismo/jansenismo y su difusión en1825/1833.",
+    "blind": false,
+    "first_review_changed_to_force_agreement": false
+  },
+  "boundary_criteria": [
+    "Orden colonial como objeto dominante: antecedentes. Una continuidad examinada mediante constituciones o disposiciones de la República puede ser republicana.",
+    "Normas sobre personas esclavizadas no equivalen automáticamente a agencia afrodescendiente. Separar régimen jurídico de acciones y estrategias de los grupos.",
+    "Dinámica regional y estructura de grupos: participación social/regional cuando son el argumento central. La fecha de un padrón por sí sola no determina la etiqueta.",
+    "Ideas, circulación intelectual y prensa: crisis e ideas. Una lista de ministros y oficinas de1828 describe organización, no una biografía ni una negociación.",
+    "Ambigüedad no es no_relevante. Partes cortadas o temporalmente irresueltas se archivan fuera de la copia propuesta hasta resolverlas."
+  ],
+  "proposed_actions": [
+    {
+      "index": 68,
+      "before_sha256": "8c89f57ee2a65f8ec178884f503075588043c5c93829dbfcf62e5179cdb13f1a",
+      "before_label": "contexto_colonial_antecedentes",
+      "resource_id": "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+      "source_type": "pdf",
+      "before_words": 230,
+      "reference_train_indices_with_identical_text": [
+        76
+      ],
+      "action": "replace_or_relabel_in_future_copy",
+      "candidate_id": "PER-R68-RURAL",
+      "after_sha256": "07b0b8facff4a3971138e2f97af0ded6fe929e7474195254d68514060d4c3e2f",
+      "after_label": "participacion_social_regional",
+      "after_words": 225,
+      "text_changes": true,
+      "label_changes": true
+    },
+    {
+      "index": 69,
+      "before_sha256": "8b02cbba5306e1cf03bc36ff338c4103717c9227237142931f2ecdb16ec61c04",
+      "before_label": "contexto_colonial_antecedentes",
+      "resource_id": "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+      "source_type": "pdf",
+      "before_words": 190,
+      "reference_train_indices_with_identical_text": [
+        77
+      ],
+      "action": "replace_or_relabel_in_future_copy",
+      "candidate_id": "PER-R69-DEC",
+      "after_sha256": "c413251dd413ec5f310f0fe15ea980b2411b64480acd7a90b705903a65b32869",
+      "after_label": "organizacion_consecuencias_republicanas",
+      "after_words": 159,
+      "text_changes": true,
+      "label_changes": true
+    },
+    {
+      "index": 298,
+      "before_sha256": "83063807615e515f378162cc08e448a7c594ab0519fd203475d51557f20cb5d9",
+      "before_label": "contexto_colonial_antecedentes",
+      "resource_id": "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+      "source_type": "pdf",
+      "before_words": 225,
+      "reference_train_indices_with_identical_text": [
+        307
+      ],
+      "action": "quarantine_from_future_training_copy",
+      "reason": "El párrafo reconstruido enumera 1814/1822 bajo los diez primeros años del XIX; conservar como ambiguo, no como negativo. Su final ya se recupera en PER-R69-DEC.",
+      "converted_to_no_relevante": false
+    },
+    {
+      "index": 532,
+      "before_sha256": "c4a963d8d412bbd4c9c5e487166ce904ed55d09fa5949cc6489d6c6cd0d0bece",
+      "before_label": "contexto_colonial_antecedentes",
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "before_words": 188,
+      "reference_train_indices_with_identical_text": [
+        541
+      ],
+      "action": "quarantine_from_future_training_copy",
+      "reason": "Cuerpo republicano resuelto; completar la serie constitucional introduce la denominación impresa de 1827, frente a la Constitución de 1828. Recortar antes deja 117 palabras. Retener la unidad completa sin cambiar la fecha silenciosamente.",
+      "converted_to_no_relevante": false
+    },
+    {
+      "index": 548,
+      "before_sha256": "12542503d58aa8d1367dbc9a23c4bbbf1c00a02e7cf81cd53c19332f9c0e8c5f",
+      "before_label": "contexto_colonial_antecedentes",
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "before_words": 173,
+      "reference_train_indices_with_identical_text": [
+        557
+      ],
+      "action": "quarantine_from_future_training_copy",
+      "reason": "Tras retirar tabla repetida y correo cortado quedan 119 palabras; cifras impresas requieren cotejo. No aplicar excepción ni añadir relleno.",
+      "converted_to_no_relevante": false
+    },
+    {
+      "index": 552,
+      "before_sha256": "df74c847171cc10d356a740d6ea1f4d1d3079f7871e438bfada1f0c97c2d3f2d",
+      "before_label": "contexto_colonial_antecedentes",
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "before_words": 197,
+      "reference_train_indices_with_identical_text": [
+        561
+      ],
+      "action": "replace_or_relabel_in_future_copy",
+      "candidate_id": "BAS-552",
+      "after_sha256": "fb99f21e50fe1b43b8594a866b0352f8982b8c61c56e7dd0e16dcf47b771fed8",
+      "after_label": "organizacion_consecuencias_republicanas",
+      "after_words": 134,
+      "text_changes": true,
+      "label_changes": true
+    },
+    {
+      "index": 556,
+      "before_sha256": "46bc644ad134060a9be20c7892917461490da9e25e2c2b1bc7b934a5e87af673",
+      "before_label": "contexto_colonial_antecedentes",
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "before_words": 246,
+      "reference_train_indices_with_identical_text": [
+        565
+      ],
+      "action": "replace_or_relabel_in_future_copy",
+      "candidate_id": "BAS-556",
+      "after_sha256": "a884ce9f4feb522d5e4ea2b7c5e4e8c8989159eebf71a9efeec860c011153f5d",
+      "after_label": "organizacion_consecuencias_republicanas",
+      "after_words": 138,
+      "text_changes": true,
+      "label_changes": true
+    },
+    {
+      "index": 558,
+      "before_sha256": "ac8c5e666bea01b8bf8dfad6247b6ca6fdca949cb1d233711f7b2948baff20a3",
+      "before_label": "contexto_colonial_antecedentes",
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "before_words": 203,
+      "reference_train_indices_with_identical_text": [
+        567
+      ],
+      "action": "replace_or_relabel_in_future_copy",
+      "candidate_id": "BAS-558-social",
+      "after_sha256": "a24486236b17352cf055c9ffde5c482b4507dadfba0814c346c312b96b148f49",
+      "after_label": "participacion_social_regional",
+      "after_words": 208,
+      "text_changes": true,
+      "label_changes": true
+    },
+    {
+      "index": 559,
+      "before_sha256": "c054cd528de5f4bf38b6422c646a206e6e76cb67e5fa0005c24855d7162b547c",
+      "before_label": "contexto_colonial_antecedentes",
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "before_words": 218,
+      "reference_train_indices_with_identical_text": [
+        568
+      ],
+      "action": "quarantine_from_future_training_copy",
+      "reason": "Incluye final de memoria de 1846 y normas de 1822–1826. Se conserva el recorte del reglamento, pero su fecha de publicación discrepa de Sales. No reutilizar la fila actual cortada.",
+      "converted_to_no_relevante": false
+    },
+    {
+      "index": 560,
+      "before_sha256": "4b4bacfa916ca6c23799f5ac72d897148fdac8aaea9fc80c845759a2d811bf89",
+      "before_label": "contexto_colonial_antecedentes",
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "before_words": 194,
+      "reference_train_indices_with_identical_text": [
+        569
+      ],
+      "action": "replace_or_relabel_in_future_copy",
+      "candidate_id": "BAS-558-norma",
+      "after_sha256": "5af1368c3489961da3fa041ba7a0239e168c5d0cec4f71c5c15b55037e3b574e",
+      "after_label": "organizacion_consecuencias_republicanas",
+      "after_words": 126,
+      "text_changes": true,
+      "label_changes": true
+    },
+    {
+      "index": 561,
+      "before_sha256": "7d48a771113fdc4ebfd979bf86a38aada3ef080fcf0cae433d08c1a1152412e9",
+      "before_label": "contexto_colonial_antecedentes",
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "before_words": 190,
+      "reference_train_indices_with_identical_text": [
+        570
+      ],
+      "action": "quarantine_from_future_training_copy",
+      "reason": "Tramo central del reglamento, dependiente de 559/564; no dejarlo como ejemplo colonial autónomo al retirar sus extremos.",
+      "converted_to_no_relevante": false
+    },
+    {
+      "index": 562,
+      "before_sha256": "5262c43c87ff50b924aad275d71fb4dcc4fef23f4b95878a52f76b7a47ba0acb",
+      "before_label": "contexto_colonial_antecedentes",
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "before_words": 181,
+      "reference_train_indices_with_identical_text": [
+        571
+      ],
+      "action": "replace_or_relabel_in_future_copy",
+      "candidate_id": "BAS-562",
+      "after_sha256": "5262c43c87ff50b924aad275d71fb4dcc4fef23f4b95878a52f76b7a47ba0acb",
+      "after_label": "organizacion_consecuencias_republicanas",
+      "after_words": 181,
+      "text_changes": false,
+      "label_changes": true
+    },
+    {
+      "index": 564,
+      "before_sha256": "bbd414f14b7cb2368d518fa78b64ff682e05ab54ec91e85483c95a99ba0de92f",
+      "before_label": "contexto_colonial_antecedentes",
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "before_words": 190,
+      "reference_train_indices_with_identical_text": [
+        573
+      ],
+      "action": "replace_or_relabel_in_future_copy",
+      "candidate_id": "BAS-564",
+      "after_sha256": "1c9b08177cefe1eaffc51424246b91fc4b0127736d2027890db06366bff9b237",
+      "after_label": "organizacion_consecuencias_republicanas",
+      "after_words": 185,
+      "text_changes": true,
+      "label_changes": true
+    },
+    {
+      "index": 565,
+      "before_sha256": "dc41346881bd5b7201f577152a62aefc120b343c0914e0b6ba7ee947903aa945",
+      "before_label": "contexto_colonial_antecedentes",
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "before_words": 183,
+      "reference_train_indices_with_identical_text": [
+        574
+      ],
+      "action": "replace_or_relabel_in_future_copy",
+      "candidate_id": "BAS-565",
+      "after_sha256": "11505c81a59bb3f80afbe2ab48501164ffeaf74e46d1b7e499cdc64c45fc3b81",
+      "after_label": "crisis_ideas_emancipadoras",
+      "after_words": 133,
+      "text_changes": true,
+      "label_changes": true
+    },
+    {
+      "index": 763,
+      "before_sha256": "d5d9a2203c5e8ece766c9a49fed178b2a81148501ed24b9f58cf4edafa4833f9",
+      "before_label": "participacion_social_regional",
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "before_words": 207,
+      "reference_train_indices_with_identical_text": [
+        774
+      ],
+      "action": "quarantine_from_future_training_copy",
+      "reason": "La parte social se recupera en BAS-558-social; conservar biografía naval y cierre de Marina como contexto fuera de la copia propuesta, para no duplicar el reclutamiento.",
+      "converted_to_no_relevante": false
+    },
+    {
+      "index": 765,
+      "before_sha256": "a1958a5a3abc1ded9f35efc07cd2d595ae139ef76f376ce1e15a79a4c4cbb362",
+      "before_label": "contexto_colonial_antecedentes",
+      "resource_id": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "before_words": 216,
+      "reference_train_indices_with_identical_text": [
+        776
+      ],
+      "action": "quarantine_from_future_training_copy",
+      "reason": "Tema republicano y cierre editorial confirmados. Conservar atribución a Pilar García Jordán y la denominación Constitución de 1827 pendiente de nota/cotejo de su edición; no inventar continuación ni corregir cita silenciosamente.",
+      "converted_to_no_relevante": false
+    }
+  ],
+  "candidate_inventory": [
+    {
+      "id": "BAS-532",
+      "target_index": 532,
+      "proposed_label": "organizacion_consecuencias_republicanas",
+      "original_sha256": "c4a963d8d412bbd4c9c5e487166ce904ed55d09fa5949cc6489d6c6cd0d0bece",
+      "sha256": "bbf808950c329e8aad967502fccf1d83c76470593bfd94e992fdf9a786632cf9",
+      "words": 234,
+      "ordinary_length_pass": true,
+      "source_pdf_page": 238,
+      "printed_page": 236,
+      "source_span": {
+        "start": 452,
+        "end": 1906,
+        "raw_sha256": "fdfa31e754aecbf0c02b4a385294e2d5da71e5a4b20e90c3d7265597f25d3667"
+      },
+      "transformations": [
+        "join_word_hyphen_at_line_end",
+        "collapse_whitespace"
+      ],
+      "status": "local_boundary_proposal_not_applied",
+      "train_dependencies": [
+        {
+          "index": 532,
+          "existing_label": "contexto_colonial_antecedentes",
+          "text_sha256": "c4a963d8d412bbd4c9c5e487166ce904ed55d09fa5949cc6489d6c6cd0d0bece",
+          "shared_5grams": 113,
+          "smaller_containment": 0.6108108108108108,
+          "same_resource": true
+        }
+      ],
+      "final_status": "held",
+      "hold_reason": "Thematic decision clear; source calls the constitution 1827. The official constitution carrying the quoted opening is dated 1828. Hold verbatim unit pending explicitly documented handling."
+    },
+    {
+      "id": "BAS-548",
+      "target_index": 548,
+      "proposed_label": "organizacion_consecuencias_republicanas",
+      "original_sha256": "12542503d58aa8d1367dbc9a23c4bbbf1c00a02e7cf81cd53c19332f9c0e8c5f",
+      "sha256": "ed2079b8c7081cd2ff40f537f915b8cff712132ea489fa70058c5525f200f56e",
+      "words": 119,
+      "ordinary_length_pass": false,
+      "source_pdf_page": 192,
+      "printed_page": 190,
+      "source_span": {
+        "start": 3107,
+        "end": 3848,
+        "raw_sha256": "decf718de59680d77f157c3147e09958e899ded452791faff3d072628172857a"
+      },
+      "transformations": [
+        "join_word_hyphen_at_line_end",
+        "collapse_whitespace"
+      ],
+      "status": "local_boundary_proposal_not_applied",
+      "train_dependencies": [
+        {
+          "index": 548,
+          "existing_label": "contexto_colonial_antecedentes",
+          "text_sha256": "12542503d58aa8d1367dbc9a23c4bbbf1c00a02e7cf81cd53c19332f9c0e8c5f",
+          "shared_5grams": 132,
+          "smaller_containment": 1.0,
+          "same_resource": true
+        }
+      ],
+      "final_status": "held",
+      "hold_reason": "119 words, no exception; numeric/source reservations and incomplete preceding contrast."
+    },
+    {
+      "id": "BAS-552",
+      "target_index": 552,
+      "proposed_label": "organizacion_consecuencias_republicanas",
+      "original_sha256": "df74c847171cc10d356a740d6ea1f4d1d3079f7871e438bfada1f0c97c2d3f2d",
+      "sha256": "fb99f21e50fe1b43b8594a866b0352f8982b8c61c56e7dd0e16dcf47b771fed8",
+      "words": 134,
+      "ordinary_length_pass": true,
+      "source_pdf_page": 191,
+      "printed_page": 189,
+      "source_span": {
+        "start": 1985,
+        "end": 2843,
+        "raw_sha256": "bbd2814708a91ba891d3fc857e97413db55d06c7dd175a6610b5bc239bb1a15c"
+      },
+      "transformations": [
+        "join_word_hyphen_at_line_end",
+        "collapse_whitespace"
+      ],
+      "status": "local_boundary_proposal_not_applied",
+      "train_dependencies": [
+        {
+          "index": 552,
+          "existing_label": "contexto_colonial_antecedentes",
+          "text_sha256": "df74c847171cc10d356a740d6ea1f4d1d3079f7871e438bfada1f0c97c2d3f2d",
+          "shared_5grams": 83,
+          "smaller_containment": 0.6335877862595419,
+          "same_resource": true
+        }
+      ],
+      "placement_index_in_future_copy": 552,
+      "final_status": "proposed_for_authorized_local_copy",
+      "hold_reason": null
+    },
+    {
+      "id": "BAS-556",
+      "target_index": 556,
+      "proposed_label": "organizacion_consecuencias_republicanas",
+      "original_sha256": "46bc644ad134060a9be20c7892917461490da9e25e2c2b1bc7b934a5e87af673",
+      "sha256": "a884ce9f4feb522d5e4ea2b7c5e4e8c8989159eebf71a9efeec860c011153f5d",
+      "words": 138,
+      "ordinary_length_pass": true,
+      "source_pdf_page": 192,
+      "printed_page": 190,
+      "source_span": {
+        "start": 1997,
+        "end": 3106,
+        "raw_sha256": "264d1f728a4e472b46731d5f4e2ce2d95be1a53e6b696e9c75c1f3e07008f6ba"
+      },
+      "transformations": [
+        "join_word_hyphen_at_line_end",
+        "collapse_whitespace",
+        "remove_table_bullets_U+F038",
+        "remove_table_dot_leaders"
+      ],
+      "status": "local_boundary_proposal_not_applied",
+      "train_dependencies": [
+        {
+          "index": 556,
+          "existing_label": "contexto_colonial_antecedentes",
+          "text_sha256": "46bc644ad134060a9be20c7892917461490da9e25e2c2b1bc7b934a5e87af673",
+          "shared_5grams": 142,
+          "smaller_containment": 1.0,
+          "same_resource": true
+        }
+      ],
+      "placement_index_in_future_copy": 556,
+      "final_status": "proposed_for_authorized_local_copy",
+      "hold_reason": null
+    },
+    {
+      "id": "BAS-558-social",
+      "target_index": 558,
+      "proposed_label": "participacion_social_regional",
+      "original_sha256": "ac8c5e666bea01b8bf8dfad6247b6ca6fdca949cb1d233711f7b2948baff20a3",
+      "sha256": "a24486236b17352cf055c9ffde5c482b4507dadfba0814c346c312b96b148f49",
+      "words": 208,
+      "ordinary_length_pass": true,
+      "source_pdf_page": 217,
+      "printed_page": 215,
+      "source_span": {
+        "start": 766,
+        "end": 2004,
+        "raw_sha256": "985db290ca550a0b60a78f0f9c01a36ff5ab007c5485e1f2ec98f464d0a1e073"
+      },
+      "transformations": [
+        "join_word_hyphen_at_line_end",
+        "collapse_whitespace"
+      ],
+      "status": "local_boundary_proposal_not_applied",
+      "train_dependencies": [
+        {
+          "index": 558,
+          "existing_label": "contexto_colonial_antecedentes",
+          "text_sha256": "ac8c5e666bea01b8bf8dfad6247b6ca6fdca949cb1d233711f7b2948baff20a3",
+          "shared_5grams": 114,
+          "smaller_containment": 0.5728643216080402,
+          "same_resource": true
+        },
+        {
+          "index": 763,
+          "existing_label": "participacion_social_regional",
+          "text_sha256": "d5d9a2203c5e8ece766c9a49fed178b2a81148501ed24b9f58cf4edafa4833f9",
+          "shared_5grams": 86,
+          "smaller_containment": 0.4236453201970443,
+          "same_resource": true
+        }
+      ],
+      "placement_index_in_future_copy": 558,
+      "final_status": "proposed_for_authorized_local_copy",
+      "hold_reason": null
+    },
+    {
+      "id": "BAS-558-norma",
+      "target_index": 558,
+      "proposed_label": "organizacion_consecuencias_republicanas",
+      "original_sha256": "ac8c5e666bea01b8bf8dfad6247b6ca6fdca949cb1d233711f7b2948baff20a3",
+      "sha256": "5af1368c3489961da3fa041ba7a0239e168c5d0cec4f71c5c15b55037e3b574e",
+      "words": 126,
+      "ordinary_length_pass": true,
+      "source_pdf_page": 217,
+      "printed_page": 215,
+      "source_span": {
+        "start": 2006,
+        "end": 2764,
+        "raw_sha256": "d022b2a68b918ee41bea074d121d9ed9454e4236637ec2270b860886980e7a6f"
+      },
+      "transformations": [
+        "join_word_hyphen_at_line_end",
+        "collapse_whitespace"
+      ],
+      "status": "local_boundary_proposal_not_applied",
+      "train_dependencies": [
+        {
+          "index": 558,
+          "existing_label": "contexto_colonial_antecedentes",
+          "text_sha256": "ac8c5e666bea01b8bf8dfad6247b6ca6fdca949cb1d233711f7b2948baff20a3",
+          "shared_5grams": 81,
+          "smaller_containment": 0.6639344262295082,
+          "same_resource": true
+        },
+        {
+          "index": 560,
+          "existing_label": "contexto_colonial_antecedentes",
+          "text_sha256": "4b4bacfa916ca6c23799f5ac72d897148fdac8aaea9fc80c845759a2d811bf89",
+          "shared_5grams": 37,
+          "smaller_containment": 0.30327868852459017,
+          "same_resource": true
+        }
+      ],
+      "placement_index_in_future_copy": 560,
+      "placement_note": "La unidad se origina en el problema de558 y su continuación560; se ubica en560 para mantener el orden relativo y no duplicar el texto recuperado.",
+      "final_status": "proposed_for_authorized_local_copy",
+      "hold_reason": null
+    },
+    {
+      "id": "BAS-559",
+      "target_index": 559,
+      "proposed_label": "organizacion_consecuencias_republicanas",
+      "original_sha256": "c054cd528de5f4bf38b6422c646a206e6e76cb67e5fa0005c24855d7162b547c",
+      "sha256": "aa4e2538ed5f4045173dbb29628192633377ef1eccb22ded84ffced383a3a87f",
+      "words": 193,
+      "ordinary_length_pass": true,
+      "source_pdf_page": 219,
+      "printed_page": 217,
+      "source_span": {
+        "start": 2004,
+        "end": 3086,
+        "raw_sha256": "b404b9c22b33903d44479445fbbe8680b1f355cbdeceee6fa3da857fc38427b2"
+      },
+      "transformations": [
+        "join_word_hyphen_at_line_end",
+        "collapse_whitespace"
+      ],
+      "status": "local_boundary_proposal_not_applied",
+      "train_dependencies": [
+        {
+          "index": 561,
+          "existing_label": "contexto_colonial_antecedentes",
+          "text_sha256": "7d48a771113fdc4ebfd979bf86a38aada3ef080fcf0cae433d08c1a1152412e9",
+          "shared_5grams": 115,
+          "smaller_containment": 0.6182795698924731,
+          "same_resource": true
+        },
+        {
+          "index": 559,
+          "existing_label": "contexto_colonial_antecedentes",
+          "text_sha256": "c054cd528de5f4bf38b6422c646a206e6e76cb67e5fa0005c24855d7162b547c",
+          "shared_5grams": 70,
+          "smaller_containment": 0.37037037037037035,
+          "same_resource": true
+        }
+      ],
+      "final_status": "held",
+      "hold_reason": "Source says published14/10/1825; Sales transcription dates the regulation14/10 and cites Gaceta16/10. Preserve the difference, do not silently correct the excerpt."
+    },
+    {
+      "id": "BAS-564",
+      "target_index": 564,
+      "proposed_label": "organizacion_consecuencias_republicanas",
+      "original_sha256": "bbd414f14b7cb2368d518fa78b64ff682e05ab54ec91e85483c95a99ba0de92f",
+      "sha256": "1c9b08177cefe1eaffc51424246b91fc4b0127736d2027890db06366bff9b237",
+      "words": 185,
+      "ordinary_length_pass": true,
+      "source_pdf_page": 219,
+      "printed_page": 217,
+      "source_span": {
+        "start": 3864,
+        "end": 4925,
+        "raw_sha256": "c43c1b28d4044d554faaa28b01dbec5bdbba9467dec4172b628d84ef30ea7137"
+      },
+      "transformations": [
+        "join_word_hyphen_at_line_end",
+        "collapse_whitespace"
+      ],
+      "status": "local_boundary_proposal_not_applied",
+      "train_dependencies": [
+        {
+          "index": 564,
+          "existing_label": "contexto_colonial_antecedentes",
+          "text_sha256": "bbd414f14b7cb2368d518fa78b64ff682e05ab54ec91e85483c95a99ba0de92f",
+          "shared_5grams": 120,
+          "smaller_containment": 0.6629834254143646,
+          "same_resource": true
+        }
+      ],
+      "placement_index_in_future_copy": 564,
+      "final_status": "proposed_for_authorized_local_copy",
+      "hold_reason": null
+    },
+    {
+      "id": "BAS-565",
+      "target_index": 565,
+      "proposed_label": "crisis_ideas_emancipadoras",
+      "original_sha256": "dc41346881bd5b7201f577152a62aefc120b343c0914e0b6ba7ee947903aa945",
+      "sha256": "11505c81a59bb3f80afbe2ab48501164ffeaf74e46d1b7e499cdc64c45fc3b81",
+      "words": 133,
+      "ordinary_length_pass": true,
+      "source_pdf_page": 237,
+      "printed_page": 235,
+      "source_span": {
+        "start": 1460,
+        "end": 2287,
+        "raw_sha256": "5f22f0c4eecd6143d09e6b685b6b332162a31d933047140963723c6fc6c385fa"
+      },
+      "transformations": [
+        "join_word_hyphen_at_line_end",
+        "collapse_whitespace"
+      ],
+      "status": "local_boundary_proposal_not_applied",
+      "train_dependencies": [
+        {
+          "index": 565,
+          "existing_label": "contexto_colonial_antecedentes",
+          "text_sha256": "dc41346881bd5b7201f577152a62aefc120b343c0914e0b6ba7ee947903aa945",
+          "shared_5grams": 129,
+          "smaller_containment": 1.0,
+          "same_resource": true
+        }
+      ],
+      "placement_index_in_future_copy": 565,
+      "final_status": "proposed_for_authorized_local_copy",
+      "hold_reason": null
+    },
+    {
+      "id": "GAR-765",
+      "target_index": 765,
+      "proposed_label": "organizacion_consecuencias_republicanas",
+      "original_sha256": "a1958a5a3abc1ded9f35efc07cd2d595ae139ef76f376ce1e15a79a4c4cbb362",
+      "sha256": "c2b95d1fd19077de50b87726dcd4e1466a480f66f6fcc3787f8eb25004ac1ede",
+      "words": 214,
+      "ordinary_length_pass": true,
+      "source_pdf_page": 236,
+      "printed_page": 234,
+      "source_span": {
+        "start": 1084,
+        "end": 2459,
+        "raw_sha256": "61008db98d0286aa5ed227d52e7b2242dd5664a7caf30cd7ad8f8bd216917ed0"
+      },
+      "transformations": [
+        "join_word_hyphen_at_line_end",
+        "collapse_whitespace"
+      ],
+      "status": "local_boundary_proposal_not_applied",
+      "train_dependencies": [
+        {
+          "index": 765,
+          "existing_label": "contexto_colonial_antecedentes",
+          "text_sha256": "a1958a5a3abc1ded9f35efc07cd2d595ae139ef76f376ce1e15a79a4c4cbb362",
+          "shared_5grams": 199,
+          "smaller_containment": 0.9521531100478469,
+          "same_resource": true
+        }
+      ],
+      "final_status": "held",
+      "hold_reason": "The printed quotation belongs to García Jordán1993, not Basadre. Its designation Constitution1827 needs explicit contextual note; underlying1993 pages not rechecked."
+    },
+    {
+      "id": "BAS-562",
+      "target_index": 562,
+      "proposed_label": "organizacion_consecuencias_republicanas",
+      "original_sha256": "5262c43c87ff50b924aad275d71fb4dcc4fef23f4b95878a52f76b7a47ba0acb",
+      "sha256": "5262c43c87ff50b924aad275d71fb4dcc4fef23f4b95878a52f76b7a47ba0acb",
+      "words": 181,
+      "ordinary_length_pass": true,
+      "source_pdf_page": 215,
+      "printed_page": 213,
+      "transformations": [],
+      "status": "label_only_proposal_not_applied",
+      "train_dependencies": [
+        {
+          "index": 562,
+          "existing_label": "contexto_colonial_antecedentes",
+          "text_sha256": "5262c43c87ff50b924aad275d71fb4dcc4fef23f4b95878a52f76b7a47ba0acb",
+          "shared_5grams": 177,
+          "smaller_containment": 1.0,
+          "same_resource": true
+        }
+      ],
+      "placement_index_in_future_copy": 562,
+      "final_status": "proposed_for_authorized_local_copy",
+      "hold_reason": null
+    },
+    {
+      "id": "PER-R68-RURAL",
+      "sha256": "07b0b8facff4a3971138e2f97af0ded6fe929e7474195254d68514060d4c3e2f",
+      "words": 225,
+      "proposed_label": "participacion_social_regional",
+      "target_index": 68,
+      "ordinary_length_pass": true,
+      "source_metadata": {
+        "id": "PER-R68-RURAL",
+        "replace_row_index": 68,
+        "text_sha256": "07b0b8facff4a3971138e2f97af0ded6fe929e7474195254d68514060d4c3e2f",
+        "word_count": 225,
+        "printed_pages": [
+          350
+        ],
+        "pdf_pages_1based": [
+          14
+        ],
+        "source_paragraph_count": 2,
+        "raw_parts": [
+          {
+            "pdf_page_1based": 14,
+            "printed_page": 350,
+            "start": 924,
+            "end": 1815,
+            "text_sha256": "fa5fa6486a4a943016b6808837cfd6a6991fd17c887ad9602556f1d730dc619c",
+            "raw_page_text_sha256": "627fb8dba88be3d3bbaceeb697af29945da2cd691f4542785840b4a5b3184591"
+          },
+          {
+            "pdf_page_1based": 14,
+            "printed_page": 350,
+            "start": 1815,
+            "end": 2512,
+            "text_sha256": "480effefbd17cfc6429ac3ed241c4b871a5fa5fae129532e61425693e264c7c8",
+            "raw_page_text_sha256": "627fb8dba88be3d3bbaceeb697af29945da2cd691f4542785840b4a5b3184591"
+          }
+        ],
+        "raw_concat_sha256": "be25cf092f3073261e44def1a94be5511f8c7da932147c7e12c2d29bdd938d28",
+        "normalization_operations": [
+          {
+            "action": "collapse_whitespace_inside_paragraph",
+            "new_paragraph_separator": "\n\n"
+          },
+          {
+            "before": "Pampa Cangalla",
+            "after": "Pampa Cangallo",
+            "reason": "OCR correction visually verified on printed350; no historical renaming."
+          },
+          {
+            "before": ")1s .",
+            "after": ").",
+            "reason": "Remove OCR of superscript18; complete note archived separately, retain sentence punctuation."
+          }
+        ],
+        "normalization_edits": [
+          {
+            "start": 78,
+            "end": 85,
+            "before": "\n      ",
+            "after": ""
+          },
+          {
+            "start": 160,
+            "end": 169,
+            "before": "\n        ",
+            "after": ""
+          },
+          {
+            "start": 244,
+            "end": 251,
+            "before": "\n      ",
+            "after": ""
+          },
+          {
+            "start": 325,
+            "end": 332,
+            "before": "\n      ",
+            "after": ""
+          },
+          {
+            "start": 410,
+            "end": 419,
+            "before": "\n        ",
+            "after": ""
+          },
+          {
+            "start": 492,
+            "end": 501,
+            "before": "\n        ",
+            "after": ""
+          },
+          {
+            "start": 577,
+            "end": 585,
+            "before": "\n       ",
+            "after": ""
+          },
+          {
+            "start": 661,
+            "end": 669,
+            "before": "\n       ",
+            "after": ""
+          },
+          {
+            "start": 746,
+            "end": 754,
+            "before": "\n       ",
+            "after": ""
+          },
+          {
+            "start": 834,
+            "end": 842,
+            "before": "\n       ",
+            "after": ""
+          },
+          {
+            "start": 885,
+            "end": 892,
+            "before": "      \n",
+            "after": ""
+          },
+          {
+            "start": 909,
+            "end": 910,
+            "before": "a",
+            "after": "o"
+          },
+          {
+            "start": 959,
+            "end": 967,
+            "before": "\n       ",
+            "after": ""
+          },
+          {
+            "start": 980,
+            "end": 981,
+            "before": " ",
+            "after": ""
+          },
+          {
+            "start": 989,
+            "end": 990,
+            "before": " ",
+            "after": ""
+          },
+          {
+            "start": 1003,
+            "end": 1004,
+            "before": " ",
+            "after": ""
+          },
+          {
+            "start": 1033,
+            "end": 1042,
+            "before": "\n        ",
+            "after": ""
+          },
+          {
+            "start": 1052,
+            "end": 1053,
+            "before": " ",
+            "after": ""
+          },
+          {
+            "start": 1075,
+            "end": 1076,
+            "before": " ",
+            "after": ""
+          },
+          {
+            "start": 1085,
+            "end": 1086,
+            "before": " ",
+            "after": ""
+          },
+          {
+            "start": 1092,
+            "end": 1093,
+            "before": " ",
+            "after": ""
+          },
+          {
+            "start": 1095,
+            "end": 1096,
+            "before": " ",
+            "after": ""
+          },
+          {
+            "start": 1103,
+            "end": 1104,
+            "before": " ",
+            "after": ""
+          },
+          {
+            "start": 1107,
+            "end": 1108,
+            "before": " ",
+            "after": ""
+          },
+          {
+            "start": 1119,
+            "end": 1126,
+            "before": "\n      ",
+            "after": ""
+          },
+          {
+            "start": 1200,
+            "end": 1209,
+            "before": "\n        ",
+            "after": ""
+          },
+          {
+            "start": 1281,
+            "end": 1291,
+            "before": "\n         ",
+            "after": ""
+          },
+          {
+            "start": 1360,
+            "end": 1368,
+            "before": "\n       ",
+            "after": ""
+          },
+          {
+            "start": 1445,
+            "end": 1452,
+            "before": "\n      ",
+            "after": ""
+          },
+          {
+            "start": 1528,
+            "end": 1535,
+            "before": "\n      ",
+            "after": ""
+          },
+          {
+            "start": 1582,
+            "end": 1585,
+            "before": "1s ",
+            "after": ""
+          },
+          {
+            "start": 1586,
+            "end": 1590,
+            "before": "\n   ",
+            "after": ""
+          }
+        ],
+        "existing_label": "contexto_colonial_antecedentes",
+        "proposed_label": "participacion_social_regional",
+        "alternative_label": "contexto_colonial_antecedentes",
+        "ready_for_dataset_application": false,
+        "review": {
+          "proposal": "resegmentar_y_reclasificar_para_segunda_lectura",
+          "dominant_argument": "Contraste regional de propiedad, grupos rurales y actividades ganaderas/comerciales de Huamanga y Pampa Cangallo.",
+          "reason": "La dinámica regional y social se desarrolla directamente. El padrón1826 es evidencia, no convierte por sí solo el texto en consecuencias republicanas; no hay aquí causalidad de cambio de régimen explícita.",
+          "alternative_reason": "Puede leerse como estructura socioeconómica que antecede a rebelión1814 dentro del capítulo. Conservar esa alternativa; el contexto posterior no autoriza llamar colonial a todo el fragmento.",
+          "paragraph_join_reason": "Dos párrafos contiguos contrastan formas de propiedad y economías rurales en la misma región. Se mantienen completos y separados por doble salto; no añadir relleno para alcanzar120.",
+          "period": "Inicio del sigloXIX y padrón1826; no ampliar más allá1842.",
+          "confidence": "media",
+          "not_a_final_adjudication": true,
+          "decision": "apto_tematicamente_como_propuesta",
+          "license_reservation_independent_of_label": true
+        }
+      },
+      "placement_index_in_future_copy": 68,
+      "final_status": "proposed_for_authorized_local_copy",
+      "hold_reason": null
+    },
+    {
+      "id": "PER-R69-DEC",
+      "sha256": "c413251dd413ec5f310f0fe15ea980b2411b64480acd7a90b705903a65b32869",
+      "words": 159,
+      "proposed_label": "organizacion_consecuencias_republicanas",
+      "target_index": 69,
+      "ordinary_length_pass": true,
+      "source_metadata": {
+        "id": "PER-R69-DEC",
+        "replace_row_index": 69,
+        "text_sha256": "c413251dd413ec5f310f0fe15ea980b2411b64480acd7a90b705903a65b32869",
+        "word_count": 159,
+        "printed_pages": [
+          349,
+          350
+        ],
+        "pdf_pages_1based": [
+          13,
+          14
+        ],
+        "source_paragraph_count": 2,
+        "raw_parts": [
+          {
+            "pdf_page_1based": 13,
+            "printed_page": 349,
+            "start": 2013,
+            "end": 2156,
+            "text_sha256": "cefc19f98efadc35f48d968dd01dab0fa914ebb9cf831bf4e8c399a95862bc09",
+            "raw_page_text_sha256": "2f058bd2f73bda6fd55806a26f084619c80cf57e79b71ccde4fb7e2b2509471a"
+          },
+          {
+            "pdf_page_1based": 14,
+            "printed_page": 350,
+            "start": 45,
+            "end": 415,
+            "text_sha256": "6e748163065ce87bfb55a9d8d1127db4fd16eaacc77f6ed2587a9ab21418d3a9",
+            "raw_page_text_sha256": "627fb8dba88be3d3bbaceeb697af29945da2cd691f4542785840b4a5b3184591"
+          },
+          {
+            "pdf_page_1based": 14,
+            "printed_page": 350,
+            "start": 415,
+            "end": 924,
+            "text_sha256": "73c6ba16f22a4cee6a20ff1c1e061288d2d6ec57b94d223527d40ad7f174e445",
+            "raw_page_text_sha256": "627fb8dba88be3d3bbaceeb697af29945da2cd691f4542785840b4a5b3184591"
+          }
+        ],
+        "raw_concat_sha256": "d471d73701eb58239b29fec7800f87f0ed1f1f9b8649b1953172db10883024a0",
+        "normalization_operations": [
+          {
+            "action": "collapse_whitespace_inside_paragraph",
+            "new_paragraph_separator": "\n\n"
+          },
+          {
+            "before": "7 4 340",
+            "after": "74 340",
+            "reason": "Visual verification printed349: digit4 belongs to74; no numerical reinterpretation."
+          }
+        ],
+        "normalization_edits": [
+          {
+            "start": 2,
+            "end": 3,
+            "before": " ",
+            "after": ""
+          },
+          {
+            "start": 27,
+            "end": 28,
+            "before": " ",
+            "after": ""
+          },
+          {
+            "start": 70,
+            "end": 71,
+            "before": "\n",
+            "after": " "
+          },
+          {
+            "start": 81,
+            "end": 82,
+            "before": " ",
+            "after": ""
+          },
+          {
+            "start": 142,
+            "end": 143,
+            "before": "\n",
+            "after": ""
+          },
+          {
+            "start": 220,
+            "end": 227,
+            "before": "\n      ",
+            "after": ""
+          },
+          {
+            "start": 300,
+            "end": 308,
+            "before": "\n       ",
+            "after": ""
+          },
+          {
+            "start": 383,
+            "end": 393,
+            "before": "\n         ",
+            "after": ""
+          },
+          {
+            "start": 467,
+            "end": 474,
+            "before": "\n      ",
+            "after": ""
+          },
+          {
+            "start": 505,
+            "end": 514,
+            "before": "\n        ",
+            "after": ""
+          },
+          {
+            "start": 596,
+            "end": 605,
+            "before": "\n        ",
+            "after": ""
+          },
+          {
+            "start": 687,
+            "end": 694,
+            "before": "\n      ",
+            "after": ""
+          },
+          {
+            "start": 764,
+            "end": 772,
+            "before": "\n       ",
+            "after": ""
+          },
+          {
+            "start": 854,
+            "end": 864,
+            "before": "\n         ",
+            "after": ""
+          },
+          {
+            "start": 942,
+            "end": 950,
+            "before": "\n       ",
+            "after": ""
+          },
+          {
+            "start": 1017,
+            "end": 1025,
+            "before": "\n       ",
+            "after": ""
+          }
+        ],
+        "existing_label": "contexto_colonial_antecedentes",
+        "proposed_label": "organizacion_consecuencias_republicanas",
+        "alternative_label": "participacion_social_regional",
+        "ready_for_dataset_application": false,
+        "review": {
+          "proposal": "resegmentar_y_reclasificar_para_segunda_lectura",
+          "dominant_argument": "Evolución del indicador agrario y efectos desiguales de guerra/sublevación desde1822, con recuperación parcial en1830s.",
+          "reason": "La relación causal con la guerra y el periodo republicano es explícita. Conservar Huertas sugiere y parece, y su rechazo a una crisis agraria general.",
+          "alternative_reason": "Dinámicas regionales es alternativa real por la distribución espacial; F se propone por el énfasis en consecuencias y recuperación, no solo por fechas.",
+          "paragraph_join_reason": "Serie histórica y matización contigua forman un único argumento: el descenso no acredita crisis de toda la región. Separarlas pierde el alcance de la conclusión.",
+          "period": "1780–1830s; el comienzo recuperado está en298, que debe participar en cualquier aplicación.",
+          "confidence": "media_alta",
+          "not_a_final_adjudication": true,
+          "decision": "apto_tematicamente_como_propuesta",
+          "license_reservation_independent_of_label": true
+        }
+      },
+      "placement_index_in_future_copy": 69,
+      "final_status": "proposed_for_authorized_local_copy",
+      "hold_reason": null
+    },
+    {
+      "id": "PER-R298-REG",
+      "sha256": "f9afeb4d807427c444fedb91f12ff77a2ec6b46b86e098e1b62b202829e81c36",
+      "words": 150,
+      "proposed_label": "participacion_social_regional",
+      "target_index": 298,
+      "ordinary_length_pass": true,
+      "source_metadata": {
+        "id": "PER-R298-REG",
+        "replace_row_index": 298,
+        "text_sha256": "f9afeb4d807427c444fedb91f12ff77a2ec6b46b86e098e1b62b202829e81c36",
+        "word_count": 150,
+        "printed_pages": [
+          349
+        ],
+        "pdf_pages_1based": [
+          13
+        ],
+        "source_paragraph_count": 1,
+        "raw_parts": [
+          {
+            "pdf_page_1based": 13,
+            "printed_page": 349,
+            "start": 1111,
+            "end": 2013,
+            "text_sha256": "5cdc5bf341840b4d15537bdc5ed700ca639b8d8f75cbd64c180f1327d86b3454",
+            "raw_page_text_sha256": "2f058bd2f73bda6fd55806a26f084619c80cf57e79b71ccde4fb7e2b2509471a"
+          }
+        ],
+        "raw_concat_sha256": "5cdc5bf341840b4d15537bdc5ed700ca639b8d8f75cbd64c180f1327d86b3454",
+        "normalization_operations": [
+          {
+            "action": "collapse_whitespace_inside_paragraph",
+            "new_paragraph_separator": "\n\n"
+          },
+          {
+            "before": "1O %",
+            "after": "10 %",
+            "reason": "Visual verification printed349: digit0, not capital letterO."
+          }
+        ],
+        "normalization_edits": [
+          {
+            "start": 41,
+            "end": 42,
+            "before": "O",
+            "after": "0"
+          },
+          {
+            "start": 73,
+            "end": 74,
+            "before": "\n",
+            "after": " "
+          },
+          {
+            "start": 151,
+            "end": 152,
+            "before": "\n",
+            "after": " "
+          },
+          {
+            "start": 223,
+            "end": 224,
+            "before": "\n",
+            "after": " "
+          },
+          {
+            "start": 293,
+            "end": 294,
+            "before": "\n",
+            "after": " "
+          },
+          {
+            "start": 365,
+            "end": 366,
+            "before": "\n",
+            "after": " "
+          },
+          {
+            "start": 436,
+            "end": 437,
+            "before": "\n",
+            "after": " "
+          },
+          {
+            "start": 514,
+            "end": 515,
+            "before": "\n",
+            "after": " "
+          },
+          {
+            "start": 589,
+            "end": 590,
+            "before": "\n",
+            "after": " "
+          },
+          {
+            "start": 658,
+            "end": 659,
+            "before": "\n",
+            "after": " "
+          },
+          {
+            "start": 738,
+            "end": 739,
+            "before": "\n",
+            "after": " "
+          },
+          {
+            "start": 815,
+            "end": 816,
+            "before": "\n",
+            "after": " "
+          },
+          {
+            "start": 887,
+            "end": 888,
+            "before": "\n",
+            "after": " "
+          },
+          {
+            "start": 901,
+            "end": 902,
+            "before": "\n",
+            "after": ""
+          }
+        ],
+        "existing_label": "contexto_colonial_antecedentes",
+        "proposed_label": "participacion_social_regional",
+        "alternative_label": "contexto_colonial_antecedentes",
+        "ready_for_dataset_application": false,
+        "review": {
+          "proposal": "resegmentar_conservar_como_pendiente_de_consistencia_temporal",
+          "dominant_argument": "Diferencias regionales de producción/cultivos inferidas del diezmo y condiciones geográficas.",
+          "reason": "El foco regional hace plausible C; A permanece alternativa porque se presenta una estructura de la intendencia. No hay consecuencias republicanas explícitas para elegir F automáticamente.",
+          "internal_source_issue": "El impreso dice diez primeros años del sigloXIX y enumera bienios1814–1815 y1822–1823. Se conserva literalmente: no es error OCR que pueda corregirse con esta página.",
+          "resolution": "La reconstrucción textual está cerrada, pero este párrafo no queda históricamente aprobado. Requiere cotejo puntual de la referencia de Huertas antes de una corrección factual; no se busca otra fuente en este bloque.",
+          "confidence": "pendiente",
+          "not_a_final_adjudication": true,
+          "decision": "ambiguo_por_consistencia_temporal",
+          "license_reservation_independent_of_label": true
+        }
+      },
+      "final_status": "held",
+      "hold_reason": "Printed temporal inconsistency; not historically approved. Source preserved, not a negative class."
+    }
+  ],
+  "proposed_groups": [
+    {
+      "originals": [
+        68,
+        69,
+        298
+      ],
+      "replacements": [
+        "PER-R68-RURAL",
+        "PER-R69-DEC"
+      ],
+      "residuals": "Párrafo regional150palabras, notas17/18 y originales completos archivados; el párrafo con contradicción temporal no se incorpora."
+    },
+    {
+      "originals": [
+        532
+      ],
+      "replacements": [],
+      "residuals": "Pie de imagen y cuerpo234palabras conservados; no convertir todo en negativo."
+    },
+    {
+      "originals": [
+        548
+      ],
+      "replacements": [],
+      "residuals": "Estimación119palabras, tabla repetida y comienzo del correo conservados; no afirmar ausencia de demografía en el corpus."
+    },
+    {
+      "originals": [
+        552
+      ],
+      "replacements": [
+        "BAS-552"
+      ],
+      "residuals": "La enumeración territorial original queda como contexto; no se corrigen topónimos por conjetura."
+    },
+    {
+      "originals": [
+        556
+      ],
+      "replacements": [
+        "BAS-556"
+      ],
+      "residuals": "Inventario naval original queda como contexto; reconocer el coste de cobertura militar, no etiquetarlo como ruido."
+    },
+    {
+      "originals": [
+        558,
+        560,
+        763
+      ],
+      "replacements": [
+        "BAS-558-social",
+        "BAS-558-norma"
+      ],
+      "residuals": "Biografía y cierre de Marina de763, discusión posterior de guerra/situación indígena de560 y originales completos conservados. No se incorpora solo558 dejando su continuación560 y reclutamiento763 duplicados."
+    },
+    {
+      "originals": [
+        559,
+        561,
+        564
+      ],
+      "replacements": [
+        "BAS-564"
+      ],
+      "residuals": "Memoria1846 fuera de periodo, párrafo breve de manumisión y reglamento completo conservados. BAS-559 queda retenido por fecha; alimentación, vestido y movilidad no se declaran históricamente irrelevantes."
+    },
+    {
+      "originals": [
+        562
+      ],
+      "replacements": [
+        "BAS-562"
+      ],
+      "residuals": "Texto exactamente idéntico; cambia solo etiqueta propuesta."
+    },
+    {
+      "originals": [
+        565
+      ],
+      "replacements": [
+        "BAS-565"
+      ],
+      "residuals": "Cola de la cita de Menéndez Pelayo conservada, con contexto y atribución. No añadir reacción1846."
+    },
+    {
+      "originals": [
+        765
+      ],
+      "replacements": [],
+      "residuals": "Extracto de García Jordán completo conservado; no se inventa una continuación."
+    }
+  ],
+  "earlier_batch_gate": {
+    "input": "artifacts/reviews/training-batch-v3.json",
+    "original_proposals": 31,
+    "retained_pending": [
+      "HUN-03B"
+    ],
+    "remaining_proposed": 30,
+    "thematic_decision_for_HUN_03B": "organizacion_consecuencias_republicanas",
+    "reason": "Tema republicano confirmado, pero la atribución de ratificación a una Junta el14/10 y la condensación sobre manumisión no quedan demostradas por la transcripción cotejada. No se altera el registro previo ni se corrige su cita silenciosamente.",
+    "earlier_manifest_changed": false,
+    "all_other_proposals_unchanged": true
+  },
+  "simulation_only": {
+    "train_before": 596,
+    "train_after_repairs_only": 589,
+    "affected_original_rows": 16,
+    "replacements_or_relabels": 9,
+    "text_replacements": 8,
+    "label_changes": 9,
+    "quarantined_original_rows": 7,
+    "unaffected_original_rows_identical_and_order_preserved": 798,
+    "validation_rows_unchanged": 81,
+    "test_rows_unchanged": 137,
+    "external_development_rows_unchanged": 31,
+    "classes_before": {
+      "campanias_conflictos_militares": 87,
+      "participacion_social_regional": 83,
+      "no_relevante": 101,
+      "organizacion_consecuencias_republicanas": 100,
+      "liderazgos_diplomacia_proyectos": 94,
+      "contexto_colonial_antecedentes": 71,
+      "crisis_ideas_emancipadoras": 60
+    },
+    "classes_after_repairs": {
+      "campanias_conflictos_militares": 87,
+      "participacion_social_regional": 84,
+      "no_relevante": 101,
+      "organizacion_consecuencias_republicanas": 106,
+      "liderazgos_diplomacia_proyectos": 94,
+      "contexto_colonial_antecedentes": 56,
+      "crisis_ideas_emancipadoras": 61
+    },
+    "original_words_in_affected_rows": 3231,
+    "words_in_selected_units": 1489,
+    "word_count_limit": "Diferencia de palabras entre filas, no estimación de hechos o temas perdidos.",
+    "train_if_later_combined_with_30_additions": 619,
+    "classes_if_combined": {
+      "campanias_conflictos_militares": 87,
+      "participacion_social_regional": 89,
+      "no_relevante": 101,
+      "organizacion_consecuencias_republicanas": 109,
+      "liderazgos_diplomacia_proyectos": 101,
+      "contexto_colonial_antecedentes": 57,
+      "crisis_ideas_emancipadoras": 75
+    },
+    "dataset_export_written": false
+  },
+  "checks": {
+    "overlap": {
+      "comparison_pool": 859,
+      "comparisons": 7731,
+      "internal_pairs": 36,
+      "alerts": [],
+      "internal_alerts": [],
+      "thresholds": {
+        "jaccard_5gram": 0.25,
+        "smaller_containment_5gram": 0.8,
+        "normalized_exact_or_whole_word_substring": true
+      },
+      "exclusions": "The 16 originals proposed for replacement/quarantine; retained in archive. The 30 earlier additions are checked, not appended to a dataset.",
+      "evaluation_handling": "Mechanical comparison only; no labels/texts printed or interpreted.",
+      "limitation": "No lexical alert does not prove independence between cited primary documents or editions."
+    },
+    "source_visual_pages_basadre": [
+      28,
+      191,
+      192,
+      217,
+      219,
+      236,
+      237,
+      238
+    ],
+    "pereyra_checks": {
+      "original_3_partitions_complete": true,
+      "unit_lengths120_250": true,
+      "raw_offsets_and_edits_replay": true,
+      "source_pdf_hash_verified": true,
+      "official_bitstream_md5_verified": true,
+      "dataset_unchanged": true,
+      "independent_final_replay_passed": true
+    },
+    "original_16_traceable_to_frozen_reference_train": true,
+    "protected_inputs_unchanged_before_plan_edit": true
+  },
+  "reviews": {
+    "first": {
+      "reviewer": "root",
+      "method": "Lectura de originales y contexto antes de consultar el segundo dictamen. Etiquetas actuales y diagnóstico previo visibles; revisión asistida por IA, no humana.",
+      "scope": "Doce filas señaladas; ninguna etiqueta ni dataset modificados.",
+      "cases": [
+        {
+          "index": 68,
+          "label_assessment": "ambiguo",
+          "alternatives": [
+            "contexto_colonial_antecedentes",
+            "participacion_social_regional"
+          ],
+          "reason": "El padrón de 1826 documenta una estructura agraria regional descrita para comienzos del XIX; no basta la fecha del padrón para convertirla en consecuencia republicana. El argumento empieza en 69 y la nota 18 invade el final de 68.",
+          "action": "Restituir unidad de propiedad y estancias con su inicio; mantener el desacuerdo sobre antecedentes/dinámica regional si el contexto no permite resolverlo."
+        },
+        {
+          "index": 69,
+          "label_assessment": "organizacion_consecuencias_republicanas",
+          "alternatives": [
+            "participacion_social_regional"
+          ],
+          "reason": "La primera unidad explica caída y recuperación de producción y desigual efecto de guerras y rebelión; necesita el inicio que ya aparece en 298. La caracterización de propiedad al final pertenece a otra unidad.",
+          "action": "Cerrar 68/69/298 conjuntamente conservando residuales, no duplicar el inicio como alta."
+        },
+        {
+          "index": 532,
+          "label_assessment": "organizacion_consecuencias_republicanas",
+          "alternatives": [
+            "crisis_ideas_emancipadoras"
+          ],
+          "reason": "Predominan continuidad religiosa y disposiciones constitucionales del Estado independiente, no un antecedente sin consecuencia republicana. Un pie de imagen distinto inicia la fila.",
+          "action": "Separar pie. El cuerpo hasta 1826 mide 117 palabras sin título; no admitir excepción tácita. Completar el párrafo introduce la denominación impresa Constitución de 1827, que debe cotejarse y anotarse antes de proponer una versión apta."
+        },
+        {
+          "index": 548,
+          "label_assessment": "organizacion_consecuencias_republicanas",
+          "alternatives": [
+            "participacion_social_regional"
+          ],
+          "reason": "Estimaciones de población en 1826; la tabla duplica datos y el correo inicia una oración que continúa en otra página. No es colonial por describir categorías étnicas heredadas.",
+          "action": "Conservar como pendiente de reparación de unidad y cotejo de cifras; no corregir por suma ni por conjetura los números impresos."
+        },
+        {
+          "index": 552,
+          "label_assessment": "organizacion_consecuencias_republicanas",
+          "alternatives": [
+            "liderazgos_diplomacia_proyectos"
+          ],
+          "reason": "Organización territorial y administrativa republicana en 1828; diplomáticos listados como estructura, no negociación o actuación de un líder.",
+          "action": "Proponer dos párrafos continuos de estructura administrativa, 134 palabras, y archivar la enumeración territorial residual. Antes de aplicar, localizar si la continuación recuperada ya está en train."
+        },
+        {
+          "index": 556,
+          "label_assessment": "ambiguo",
+          "alternatives": [
+            "campanias_conflictos_militares",
+            "organizacion_consecuencias_republicanas"
+          ],
+          "reason": "Inventario de fuerzas navales y estadística demográfica con crítica a cifras de 1795 tienen focos distintos. La crítica a usar cifras antiguas es esencial; no clasificar todo como colonial por 1795.",
+          "action": "No adjudicar una sola etiqueta al texto mixto. Conservar el caso para segmentación; un inventario naval breve no recibe excepción automática."
+        },
+        {
+          "index": 558,
+          "label_assessment": "ambiguo",
+          "alternatives": [
+            "participacion_social_regional",
+            "organizacion_consecuencias_republicanas"
+          ],
+          "reason": "Mezcla cierre del reclutamiento, estructura ocupacional y comienzo de discusión sobre ciudadanía y tutela indígena; no es una única idea dominante autónoma.",
+          "action": "Unidad normativa propuesta desde En 1821 San Martín hasta las relaciones privadas, 126 palabras, con continuación ya en 560. Resolver ambas filas y conservar todo residual antes de aplicar."
+        },
+        {
+          "index": 559,
+          "label_assessment": "organizacion_consecuencias_republicanas",
+          "alternatives": [
+            "participacion_social_regional"
+          ],
+          "reason": "Decretos y reglamento sobre esclavitud republicana. El inicio cortado pertenece a una memoria de 1846, fuera de alcance, identificable en PDF219/impresa217.",
+          "action": "Separar memoria de 1846. Recuperar unidad del reglamento con el centro ya presente en 561; no concatenar 559/564 omitiendo 561. Conservar la diferencia entre fecha del reglamento y fecha de publicación documentada por Sales."
+        },
+        {
+          "index": 562,
+          "label_assessment": "organizacion_consecuencias_republicanas",
+          "alternatives": [
+            "liderazgos_diplomacia_proyectos"
+          ],
+          "reason": "El eje es integración jurídica y económica de extranjeros en la nueva República y las medidas sobre su comercio. Las relaciones exteriores son un ejemplo final subordinado; colonias significa comunidades extranjeras, no régimen virreinal.",
+          "action": "Proponer cambio de etiqueta con texto idéntico de 181 palabras; argumento legible en oraciones completas. Preservar alternativa diplomática y referencia al contexto de constituciones de 1823/1826."
+        },
+        {
+          "index": 564,
+          "label_assessment": "organizacion_consecuencias_republicanas",
+          "alternatives": [
+            "participacion_social_regional"
+          ],
+          "reason": "Continúa el reglamento de 1825 y agrega decretos favorables a los hacendados de 1822–1826. El referente inicial y la unidad del reglamento están en 559/561; el final inicia otro argumento.",
+          "action": "Tratar 559/561/564 como grupo. Normas sobre un grupo social no equivalen por sí mismas a agencia de ese grupo. No tomar el tramo cortado como un ejemplo nuevo autónomo."
+        },
+        {
+          "index": 565,
+          "label_assessment": "crisis_ideas_emancipadoras",
+          "alternatives": [
+            "contexto_colonial_antecedentes"
+          ],
+          "reason": "Liberalismo, regalismo, jansenismo y circulación de impresos en 1825/1833; el inicio mutila una cita de Menéndez Pelayo.",
+          "action": "Proponer reemplazo por los dos párrafos continuos sobre autores y difusión, 133 palabras. Retirar solo el resto de la cita inicial, conservado como contexto con atribución; no extender hasta la reacción de 1846."
+        },
+        {
+          "index": 765,
+          "label_assessment": "organizacion_consecuencias_republicanas",
+          "alternatives": [
+            "crisis_ideas_emancipadoras"
+          ],
+          "reason": "Vínculo institucional Iglesia/Estado y Congreso republicano. Es una cita editorial de Pilar García Jordán, Iglesia y poder en el Perú contemporáneo, 1993, pp.53–54, no prosa de Basadre aunque comparta el PDF.",
+          "action": "Proponer adjudicación temática republicana pero retener aptitud definitiva hasta registrar autoría y denominación Constitución de 1827; cotejar con Constitución de 1828 del Congreso sin alterar silenciosamente a la autora."
+        }
+      ],
+      "causal_limit": "Este dictamen no demuestra que los errores explican por sí solos el bajo F1 ni que corregirlos aumentará la métrica."
+    },
+    "blind_second": {
+      "review_id": "boundary-resolution-v3-independent-second-review",
+      "reviewer_type": "AI-assisted independent blind review",
+      "language": "es",
+      "scope": "12 textos TRAIN incluidos en el paquete ciego; no se consultaron etiquetas originales, primera propuesta, evaluaciones, predicciones ni materiales ajenos a las fuentes autorizadas.",
+      "original_labels_hidden": true,
+      "first_proposal_hidden": true,
+      "human_validation": false,
+      "decision_coordination_before_delivery": false,
+      "inputs_read": [
+        "docs/guia-etiquetado-1780-1842.md",
+        "outputs/boundary-resolution-v3/context-blind.json"
+      ],
+      "guide_sha256": "d53dea3532359afc851c2bdd59ae1ddb47a0673609d82d40372a6f62edc55179",
+      "context_package_sha256": "08c6f1b3f46c96d7ad142366a2e05b92621b5eb3d02a0471b07dd55993089c44",
+      "sources": {
+        "basadre": {
+          "local_pdf": "artifacts/demo/files/86cd8383-a0d1-40f6-a759-e2c5a2bf37a9.pdf",
+          "sha256": "e1fe8984e19e8485002e8c6458394d7f34b566dfb3fd64d95fe0e1e315646770",
+          "page_count": 305,
+          "recomputed_sha256": "e1fe8984e19e8485002e8c6458394d7f34b566dfb3fd64d95fe0e1e315646770",
+          "hash_matches_package": true
+        },
+        "pereyra": {
+          "local_pdf": "artifacts/demo/files/a181d154-666b-4ca9-b2e3-dcd45d16b3f6.pdf",
+          "sha256": "ae23fb808ca0669754a09e06a89a5c2485a4ed169c7496317ec9dfe7a6527d1e",
+          "page_count": 25,
+          "recomputed_sha256": "ae23fb808ca0669754a09e06a89a5c2485a4ed169c7496317ec9dfe7a6527d1e",
+          "hash_matches_package": true
+        }
+      },
+      "source_review_method": "Lectura del texto de páginas originales proporcionado en context-blind.json y comprobación criptográfica de los dos PDF autorizados. No se hizo inspección visual del PDF; las reservas de OCR y entidades permanecen abiertas.",
+      "counting_rule": "Palabras separadas por espacios después de las operaciones documentadas; no contar puntos de guía ni viñetas como palabras.",
+      "global_reservations": [
+        "Los dictámenes son asistidos por IA y no constituyen segunda validación humana independiente.",
+        "Las etiquetas del texto actual se distinguen de las etiquetas de unidades nuevas: una propuesta de límites no es una modificación del dataset.",
+        "Ninguna excepción de longitud se ha aplicado: las dos excepciones de la guía corresponden a otros textos exactos.",
+        "B04 queda con un recorte limpio de 119 palabras y no se admite por la pauta ordinaria.",
+        "Las propuestas que amplían límites deben someterse a control posterior de solapamientos y duplicación con unidades vecinas antes de incorporarse."
+      ],
+      "case_count": 12,
+      "reviews": [
+        {
+          "case_id": "B01",
+          "dominant_historical_idea": "Distribución social y territorial de las propiedades y actividades agropecuarias de Huamanga y Pampa Cangalla, documentada también en 1826.",
+          "current_defensible_label": "participacion_social_regional",
+          "confidence": "media",
+          "requires_resegmentation": true,
+          "requires_cleanup": true,
+          "current_text_usable": false,
+          "reasons": [
+            "El cuerpo trata la diferenciación entre propietarios y espacios regionales; el nombre de Arenales aparece solo en una nota y no convierte el tema en campaña militar.",
+            "La llamada de nota y el pie 18 se mezclaron con el cuerpo; la referencia final a Igue quedó abierta."
+          ],
+          "alternatives": [
+            {
+              "label": "contexto_colonial_antecedentes",
+              "reason": "La estructura rural puede funcionar como antecedente colonial en un segmento anclado en la intendencia, pero el texto actual abre con 1826 y no presenta como centro una reforma u orden virreinal."
+            },
+            {
+              "label": "organizacion_consecuencias_republicanas",
+              "reason": "El padrón republicano aporta evidencia; no se describe una reforma republicana de la propiedad que domine el pasaje."
+            }
+          ],
+          "reservations": [
+            "Participación se defiende por las dinámicas regionales admitidas en la guía; aquí no se narra movilización política.",
+            "Conservar las variantes Cangalla/Cangallo y los nombres propios hasta cotejo específico de entidades."
+          ],
+          "snapshot_index": 68,
+          "original_sha256": "8c89f57ee2a65f8ec178884f503075588043c5c93829dbfcf62e5179cdb13f1a",
+          "original_word_count_whitespace": 230,
+          "source_key": "pereyra",
+          "source_sha256": "ae23fb808ca0669754a09e06a89a5c2485a4ed169c7496317ec9dfe7a6527d1e",
+          "source_pdf_page_1_based": 14,
+          "primary_boundary_proposal": {
+            "source_key": "pereyra",
+            "pdf_pages_1_based": [
+              14
+            ],
+            "opening": "La producción agrícola estuvo a cargo de haciendas, estancias y hatos",
+            "closing": "con la costa (Igue, 2008: 27-30).",
+            "sha256_utf8": "31934facee65c5e3be43e27ac2f15e2b71ab48435393dad2ab614a6a60bbc49c",
+            "word_count_whitespace": 225,
+            "ordinary_length_pass": true,
+            "length_exception_applied": false,
+            "proposed_label": "participacion_social_regional",
+            "boundary_reason": "Restituir el comienzo del párrafo sobre propiedad rural y conservar su contraste con Pampa Cangalla. Ambos párrafos explican la misma estructura productiva regional. Terminar antes de la nota 18.",
+            "editorial_operations": [
+              "Unir saltos de línea.",
+              "Eliminar la llamada de nota extraída como 1s y la nota 18, que en el original actual está cortada.",
+              "Recuperar el inicio del párrafo por coherencia de la unidad territorial, no para alcanzar una cuota."
+            ],
+            "incorporation_authorized": false
+          },
+          "original_labels_hidden": true,
+          "first_proposal_hidden": true,
+          "human_validation": false,
+          "adjudication_status": "independent_ai_assisted_review_only",
+          "candidate_length_status": "passes_ordinary_120_250"
+        },
+        {
+          "case_id": "B02",
+          "dominant_historical_idea": "Efecto desigual de la guerra y la sublevación sobre el diezmo y la producción agraria, con recuperación parcial durante la década de 1830.",
+          "current_defensible_label": "organizacion_consecuencias_republicanas",
+          "confidence": "media",
+          "requires_resegmentation": true,
+          "requires_cleanup": true,
+          "current_text_usable": false,
+          "reasons": [
+            "El núcleo causal aborda el descenso desde 1822 y sus consecuencias económicas regionalmente desiguales.",
+            "La apertura perdió el sujeto de tasa decimal y arrastra folio y nombre del autor. El final introduce la propiedad rural, argumento distinto que continúa en B01."
+          ],
+          "alternatives": [
+            {
+              "label": "participacion_social_regional",
+              "reason": "Es defendible priorizando diferencias regionales y la sublevación huantina, pero se estudia su efecto agrario, no las acciones de los campesinos."
+            },
+            {
+              "label": "contexto_colonial_antecedentes",
+              "reason": "La serie arranca en 1780, pero no domina un antecedente: la explicación insiste en guerras, descenso posterior a 1822 y recuperación en los años treinta."
+            }
+          ],
+          "reservations": [
+            "La guía no enumera toda consecuencia económica; esta adjudicación usa el alcance general de consecuencias republicanas y la dimensión fiscal del diezmo.",
+            "No atribuir toda disminución del diezmo a crisis productiva general: el texto la discute expresamente."
+          ],
+          "snapshot_index": 69,
+          "original_sha256": "8b02cbba5306e1cf03bc36ff338c4103717c9227237142931f2ecdb16ec61c04",
+          "original_word_count_whitespace": 190,
+          "source_key": "pereyra",
+          "source_sha256": "ae23fb808ca0669754a09e06a89a5c2485a4ed169c7496317ec9dfe7a6527d1e",
+          "source_pdf_page_1_based": 14,
+          "primary_boundary_proposal": {
+            "source_key": "pereyra",
+            "pdf_pages_1_based": [
+              13,
+              14
+            ],
+            "opening": "En el quinquenio 1780-1785 la producción de la tasa decimal subió",
+            "closing": "normalmente (Huertas, 1982: 221).",
+            "sha256_utf8": "3978c8b0c65f9d54943c74911e512572876d46fbdd2b4bb2bb58284a0ade54d0",
+            "word_count_whitespace": 160,
+            "ordinary_length_pass": true,
+            "length_exception_applied": false,
+            "proposed_label": "organizacion_consecuencias_republicanas",
+            "boundary_reason": "Recuperar la oración iniciada en la página 13 y conservar la explicación causal y sus límites regionales en la 14. Terminar antes del nuevo tema de propiedad agrícola.",
+            "editorial_operations": [
+              "Unir el cuerpo de las páginas 13 y 14; excluir cabecera, folio y nota 17.",
+              "Conservar la grafía extraída de las cantidades, incluida 7 4 340, pendiente de cotejo visual."
+            ],
+            "incorporation_authorized": false
+          },
+          "original_labels_hidden": true,
+          "first_proposal_hidden": true,
+          "human_validation": false,
+          "adjudication_status": "independent_ai_assisted_review_only",
+          "candidate_length_status": "passes_ordinary_120_250"
+        },
+        {
+          "case_id": "B03",
+          "dominant_historical_idea": "Continuidad institucional del catolicismo en las constituciones y actuaciones del Congreso tras la independencia.",
+          "current_defensible_label": "organizacion_consecuencias_republicanas",
+          "confidence": "alta",
+          "requires_resegmentation": true,
+          "requires_cleanup": true,
+          "current_text_usable": false,
+          "reasons": [
+            "La tesis y los ejemplos centrales son normas y rituales de la naciente República.",
+            "El folio y la leyenda de imagen incorporan orígenes medievales y descripción de una pintura; el cierre actual corta la serie constitucional antes de la frase sobre 1827."
+          ],
+          "alternatives": [
+            {
+              "label": "crisis_ideas_emancipadoras",
+              "reason": "La religión influye en ideas y legitimación, pero aquí predominan decisiones constitucionales y congresales concretas."
+            },
+            {
+              "label": "contexto_colonial_antecedentes",
+              "reason": "La continuidad española es una comparación explicativa; el objeto principal es republicano."
+            }
+          ],
+          "reservations": [
+            "No convertir todo el pasaje en no_relevante por contener un pie de imagen: el cuerpo histórico es interpretable.",
+            "Mantener 1827 tal como está en la fuente; cualquier revisión de la fecha pertenece al control separado de entidades."
+          ],
+          "snapshot_index": 532,
+          "original_sha256": "c4a963d8d412bbd4c9c5e487166ce904ed55d09fa5949cc6489d6c6cd0d0bece",
+          "original_word_count_whitespace": 188,
+          "source_key": "basadre",
+          "source_sha256": "e1fe8984e19e8485002e8c6458394d7f34b566dfb3fd64d95fe0e1e315646770",
+          "source_pdf_page_1_based": 238,
+          "primary_boundary_proposal": {
+            "source_key": "basadre",
+            "pdf_pages_1_based": [
+              238
+            ],
+            "opening": "A pesar de todo, se mantuvo, al declararse la independencia del Perú, la devoción religiosa.",
+            "closing": "eligió y tomó por patrono de la República a San José.",
+            "sha256_utf8": "bbf808950c329e8aad967502fccf1d83c76470593bfd94e992fdf9a786632cf9",
+            "word_count_whitespace": 234,
+            "ordinary_length_pass": true,
+            "length_exception_applied": false,
+            "proposed_label": "organizacion_consecuencias_republicanas",
+            "boundary_reason": "Conservar íntegro el apartado sobre continuidad de la devoción, con sus actos constitucionales y congresales de 1823–1828. Excluir la leyenda de imagen y el apartado siguiente sobre reducción del clero.",
+            "editorial_operations": [
+              "Unir saltos de línea y deshacer guiones de final de línea; conservar redacción y datos de la fuente."
+            ],
+            "incorporation_authorized": false
+          },
+          "original_labels_hidden": true,
+          "first_proposal_hidden": true,
+          "human_validation": false,
+          "adjudication_status": "independent_ai_assisted_review_only",
+          "candidate_length_status": "passes_ordinary_120_250"
+        },
+        {
+          "case_id": "B04",
+          "dominant_historical_idea": "Representación estadística de la población del Perú en 1826 y su distribución geográfica y social.",
+          "current_defensible_label": "organizacion_consecuencias_republicanas",
+          "confidence": "media-baja",
+          "requires_resegmentation": true,
+          "requires_cleanup": true,
+          "current_text_usable": false,
+          "reasons": [
+            "Se presentan dimensiones de la nueva República a partir del periódico oficial; las menciones a grupos son categorías demográficas, sin acción política propia.",
+            "El final mezcla una oración incompleta de correos con una tabla que repite datos de población.",
+            "Al retirar esos elementos, el bloque de El Peruano queda en 119 palabras; no es una de las dos excepciones documentadas."
+          ],
+          "alternatives": [
+            {
+              "label": "participacion_social_regional",
+              "reason": "Puede defenderse por distribución de grupos y regiones; la guía no asigna de manera explícita los inventarios demográficos, por lo que la frontera requiere cautela."
+            },
+            {
+              "label": "ambiguo",
+              "reason": "Si se exige encaje literal en los ejemplos de clase, debe registrarse duda entre organización nacional y dinámica regional, en lugar de inferir una movilización inexistente."
+            }
+          ],
+          "reservations": [
+            "El límite propuesto identifica texto limpio pero no admisible bajo longitud ordinaria; no recomendar incorporación sin otra unidad temáticamente justificada o una decisión documentada nueva.",
+            "No añadir el comienzo de comunicaciones ni conservar la tabla repetida para superar 120.",
+            "El sin embargo remite a estimaciones anteriores; recuperar ese contraste exigiría valorar una unidad más amplia y su posible solapamiento con B06.",
+            "La frase un millón trescientas veinticinco almas se conserva: no corregir la cifra por inferencia."
+          ],
+          "snapshot_index": 548,
+          "original_sha256": "12542503d58aa8d1367dbc9a23c4bbbf1c00a02e7cf81cd53c19332f9c0e8c5f",
+          "original_word_count_whitespace": 173,
+          "source_key": "basadre",
+          "source_sha256": "e1fe8984e19e8485002e8c6458394d7f34b566dfb3fd64d95fe0e1e315646770",
+          "source_pdf_page_1_based": 192,
+          "primary_boundary_proposal": {
+            "source_key": "basadre",
+            "pdf_pages_1_based": [
+              192
+            ],
+            "opening": "El Peruano de 1826, estimaba, sin embargo, la población del Perú",
+            "closing": "252.000 mestizos, 5.890 pardos libres y 1.000 esclavos.",
+            "sha256_utf8": "ed2079b8c7081cd2ff40f537f915b8cff712132ea489fa70058c5525f200f56e",
+            "word_count_whitespace": 119,
+            "ordinary_length_pass": false,
+            "length_exception_applied": false,
+            "proposed_label": "organizacion_consecuencias_republicanas",
+            "boundary_reason": "El bloque interpretativo de El Peruano termina aquí. La tabla repite cifras de ese bloque y la oración de comunicaciones inaugura otro tema. El recorte limpio tiene 119 palabras: sirve como límite diagnóstico, pero no queda admitido por la pauta vigente.",
+            "editorial_operations": [
+              "Excluir tabla lateral repetida y comienzo incompleto de comunicaciones.",
+              "Deshacer guiones de final de línea sin corregir cifras históricas.",
+              "No añadir títulos, conectores ni frases previas para fabricar la palabra que falta."
+            ],
+            "incorporation_authorized": false
+          },
+          "original_labels_hidden": true,
+          "first_proposal_hidden": true,
+          "human_validation": false,
+          "adjudication_status": "independent_ai_assisted_review_only",
+          "candidate_length_status": "not_admissible_119_words_no_documented_exception"
+        },
+        {
+          "case_id": "B05",
+          "dominant_historical_idea": "Demarcación territorial y organización burocrática de la primera República.",
+          "current_defensible_label": "organizacion_consecuencias_republicanas",
+          "confidence": "alta",
+          "requires_resegmentation": true,
+          "requires_cleanup": true,
+          "current_text_usable": false,
+          "reasons": [
+            "Las provincias, departamentos, ministerios y empleados describen directamente la organización republicana.",
+            "El texto comienza dentro de una oración sobre nombres departamentales y pasa de demarcación a una sección administrativa distinta; los nombres diplomáticos no cambian la idea principal."
+          ],
+          "alternatives": [
+            {
+              "label": "liderazgos_diplomacia_proyectos",
+              "reason": "Las representaciones exteriores son un dato burocrático y no una negociación o proyecto personal dominante."
+            }
+          ],
+          "reservations": [
+            "La resegmentación principal recupera una unidad completa de demarcación; no transforma las denominaciones de la extracción como Cangayo, lea o Chuchito.",
+            "La fecha del discurso de Luna Pizarro solo se registra desde el contexto inmediato de la página PDF 190."
+          ],
+          "snapshot_index": 552,
+          "original_sha256": "df74c847171cc10d356a740d6ea1f4d1d3079f7871e438bfada1f0c97c2d3f2d",
+          "original_word_count_whitespace": 197,
+          "source_key": "basadre",
+          "source_sha256": "e1fe8984e19e8485002e8c6458394d7f34b566dfb3fd64d95fe0e1e315646770",
+          "source_pdf_page_1_based": 191,
+          "primary_boundary_proposal": {
+            "source_key": "basadre",
+            "pdf_pages_1_based": [
+              191
+            ],
+            "opening": "El territorio del Perú estaba dividido en la época en que Luna Pizarro",
+            "closing": "Puno, cinco: Azángaro, Carabaya, Chuchito, Huancané y Lampa.",
+            "sha256_utf8": "4b7dac675b3a606e52f61801cbf906b4047a518549b6e1a9711eacb26fa4050d",
+            "word_count_whitespace": 156,
+            "ordinary_length_pass": true,
+            "length_exception_applied": false,
+            "proposed_label": "organizacion_consecuencias_republicanas",
+            "boundary_reason": "Recuperar el inicio y conservar la sección completa de demarcación interior; terminar antes de estructura administrativa. La alusión a Luna Pizarro remite al discurso del 30 de julio de 1827 en la página PDF 190, dato que debe quedar en procedencia y no añadirse al texto.",
+            "editorial_operations": [
+              "Unir saltos de línea y deshacer guiones de final de línea; conservar redacción y datos de la fuente."
+            ],
+            "incorporation_authorized": false
+          },
+          "original_labels_hidden": true,
+          "first_proposal_hidden": true,
+          "human_validation": false,
+          "adjudication_status": "independent_ai_assisted_review_only",
+          "candidate_length_status": "passes_ordinary_120_250"
+        },
+        {
+          "case_id": "B06",
+          "dominant_historical_idea": "Inventario de recursos de la República: estructura naval y, con mayor desarrollo, estadísticas departamentales y discusión de su antigüedad.",
+          "current_defensible_label": "organizacion_consecuencias_republicanas",
+          "confidence": "media",
+          "requires_resegmentation": true,
+          "requires_cleanup": true,
+          "current_text_usable": false,
+          "reasons": [
+            "La organización de fuerzas y la estadística nacional describen el Estado; no hay operación ni estrategia militar.",
+            "La apertura Aparte de estas fuerzas depende del párrafo del ejército y el cambio explícito a Población y comunicaciones junta unidades distintas.",
+            "La tabla demográfica sí es evidencia de la discusión de Piérola, y debe conservarse en su unidad propia."
+          ],
+          "alternatives": [
+            {
+              "label": "participacion_social_regional",
+              "reason": "El bloque demográfico puede entenderse como contexto regional, pero aquí no explica participación o conflicto de grupos."
+            },
+            {
+              "label": "campanias_conflictos_militares",
+              "reason": "Solo sería fuerte en otra unidad centrada en logística de una campaña; la simple lista de buques y mandos no basta."
+            }
+          ],
+          "reservations": [
+            "El párrafo militar puede recuperarse por separado desde Dentro del escalafón militar hasta 200 plazas, página PDF 192; no debe anexarse al demográfico por longitud.",
+            "No omitir la aclaración de que las cifras usadas por la guía proceden del censo de 1795.",
+            "No incorporar por separado bloques que se solapen tras la resolución de B04."
+          ],
+          "snapshot_index": 556,
+          "original_sha256": "46bc644ad134060a9be20c7892917461490da9e25e2c2b1bc7b934a5e87af673",
+          "original_word_count_whitespace": 246,
+          "source_key": "basadre",
+          "source_sha256": "e1fe8984e19e8485002e8c6458394d7f34b566dfb3fd64d95fe0e1e315646770",
+          "source_pdf_page_1_based": 192,
+          "primary_boundary_proposal": {
+            "source_key": "basadre",
+            "pdf_pages_1_based": [
+              192
+            ],
+            "opening": "La siguiente población tenían los siete departamentos y las cincuenta y ocho provincias",
+            "closing": "y otros que favorecen el incremento de la población”.",
+            "sha256_utf8": "a884ce9f4feb522d5e4ea2b7c5e4e8c8989159eebf71a9efeec860c011153f5d",
+            "word_count_whitespace": 138,
+            "ordinary_length_pass": true,
+            "length_exception_applied": false,
+            "proposed_label": "organizacion_consecuencias_republicanas",
+            "boundary_reason": "Separar el bloque demográfico de la Armada. Mantener la tabla a la que remite esas cifras y la crítica de su antigüedad, hasta cerrar la cita de Piérola; el contraste posterior de El Peruano pertenece a B04.",
+            "editorial_operations": [
+              "Unir líneas y guiones de fin de línea.",
+              "Retirar viñetas y puntos de guía tipográfica de la tabla; conservar todos los nombres y cifras en su orden.",
+              "No convertir signos de maquetación en palabras para el recuento."
+            ],
+            "incorporation_authorized": false
+          },
+          "original_labels_hidden": true,
+          "first_proposal_hidden": true,
+          "human_validation": false,
+          "adjudication_status": "independent_ai_assisted_review_only",
+          "candidate_length_status": "passes_ordinary_120_250",
+          "alternative_boundary_proposal": {
+            "source_key": "basadre",
+            "pdf_pages_1_based": [
+              192
+            ],
+            "opening": "Dentro del escalafón",
+            "closing": "200 plazas.",
+            "sha256_utf8": "5a7ba39285975a4bce050028dedfb422217afe1880812f05a1194b57cb82b0bf",
+            "word_count_whitespace": 196,
+            "ordinary_length_pass": true,
+            "length_exception_applied": false,
+            "proposed_label": "organizacion_consecuencias_republicanas",
+            "boundary_reason": "Alternativa al bloque demográfico: estructura de ejército y Armada, sin operación de guerra.",
+            "editorial_operations": [
+              "Unir saltos de línea y deshacer guiones de final de línea; conservar redacción y datos de la fuente."
+            ],
+            "incorporation_authorized": false
+          }
+        },
+        {
+          "case_id": "B07",
+          "dominant_historical_idea": "Posición social y ocupacional de mestizos e indígenas, junto con el comienzo de una discusión sobre su estatuto jurídico.",
+          "current_defensible_label": "participacion_social_regional",
+          "confidence": "media",
+          "requires_resegmentation": true,
+          "requires_cleanup": true,
+          "current_text_usable": false,
+          "reasons": [
+            "El mayor desarrollo conservado corresponde a mestizaje, empleos, artes y oficios y pérdida de subsistencia.",
+            "La primera oración carece de referente suficiente y el cierre corta la explicación jurídica en un punto y coma. Las disposiciones de 1821 abren un argumento que requiere su continuación."
+          ],
+          "alternatives": [
+            {
+              "label": "organizacion_consecuencias_republicanas",
+              "reason": "Es defendible para la unidad que comienza En 1821 San Martín y termina relaciones privadas, en la misma página: decretos, ciudadanía y potestad estatal."
+            },
+            {
+              "label": "campanias_conflictos_militares",
+              "reason": "La tropa es un ámbito de incorporación social; no se describen tácticas o batallas."
+            }
+          ],
+          "reservations": [
+            "La propuesta principal elige la unidad social; la alternativa jurídica necesita su propia decisión y no reemplaza automáticamente la etiqueta actual.",
+            "La interpretación racial y social del autor es objeto de análisis; no se asume como descripción neutral de esos grupos."
+          ],
+          "snapshot_index": 558,
+          "original_sha256": "ac8c5e666bea01b8bf8dfad6247b6ca6fdca949cb1d233711f7b2948baff20a3",
+          "original_word_count_whitespace": 203,
+          "source_key": "basadre",
+          "source_sha256": "e1fe8984e19e8485002e8c6458394d7f34b566dfb3fd64d95fe0e1e315646770",
+          "source_pdf_page_1_based": 217,
+          "primary_boundary_proposal": {
+            "source_key": "basadre",
+            "pdf_pages_1_based": [
+              217
+            ],
+            "opening": "Entre los jefes y altos oficiales hubo algunos de origen provinciano o de raza mestiza.",
+            "closing": "producía más de dos millones de pesos anuales.",
+            "sha256_utf8": "a24486236b17352cf055c9ffde5c482b4507dadfba0814c346c312b96b148f49",
+            "word_count_whitespace": 208,
+            "ordinary_length_pass": true,
+            "length_exception_applied": false,
+            "proposed_label": "participacion_social_regional",
+            "boundary_reason": "Restituir el referente de soldados de la misma raza y conservar los dos párrafos sobre incorporación forzada y ocupaciones de grupos sociales; cerrar antes del giro hacia decretos y filosofía jurídica.",
+            "editorial_operations": [
+              "Unir saltos de línea y deshacer guiones de final de línea; conservar redacción y datos de la fuente."
+            ],
+            "incorporation_authorized": false
+          },
+          "original_labels_hidden": true,
+          "first_proposal_hidden": true,
+          "human_validation": false,
+          "adjudication_status": "independent_ai_assisted_review_only",
+          "candidate_length_status": "passes_ordinary_120_250",
+          "alternative_boundary_proposal": {
+            "source_key": "basadre",
+            "pdf_pages_1_based": [
+              217
+            ],
+            "opening": "En 1821 San Martín",
+            "closing": "relaciones privadas.",
+            "sha256_utf8": "5af1368c3489961da3fa041ba7a0239e168c5d0cec4f71c5c15b55037e3b574e",
+            "word_count_whitespace": 126,
+            "ordinary_length_pass": true,
+            "length_exception_applied": false,
+            "proposed_label": "organizacion_consecuencias_republicanas",
+            "boundary_reason": "Alternativa jurídica completa: abolición de servicios y explicación de la concepción individualista de ciudadanía.",
+            "editorial_operations": [
+              "Unir saltos de línea y deshacer guiones de final de línea; conservar redacción y datos de la fuente."
+            ],
+            "incorporation_authorized": false
+          }
+        },
+        {
+          "case_id": "B08",
+          "dominant_historical_idea": "Alcance y límites de normas emancipadoras: manumisión por servicio militar y reglamentación del trabajo esclavizado en haciendas.",
+          "current_defensible_label": "organizacion_consecuencias_republicanas",
+          "confidence": "alta",
+          "requires_resegmentation": true,
+          "requires_cleanup": true,
+          "current_text_usable": false,
+          "reasons": [
+            "Los decretos y el reglamento ocupan la mayor parte del texto; la mención a campos de batalla explica un supuesto legal de libertad.",
+            "La apertura pertenece a una memoria de José Gregorio Paz Soldán remitida en 1846: además de perder atribución y comienzo de oración, sale del límite temporal de 1842.",
+            "El reglamento continúa en la página tras el corte actual; puede construirse una secuencia normativa cerrada sin arrastrar la cita de 1846."
+          ],
+          "alternatives": [
+            {
+              "label": "participacion_social_regional",
+              "reason": "Las condiciones de trabajo y la situación afroperuana constituyen una lectura secundaria defendible, pero el texto está organizado por disposiciones estatales."
+            },
+            {
+              "label": "campanias_conflictos_militares",
+              "reason": "La actuación militar es requisito de una manumisión y no el objeto de una narración bélica."
+            }
+          ],
+          "reservations": [
+            "Excluir el fragmento de 1846 aunque sus intereses se refieran a problemas de décadas anteriores.",
+            "El párrafo de manumisión militar por sí solo es breve; no se admite por analogía con las dos excepciones.",
+            "No equiparar reglamentación esclavista con abolición general."
+          ],
+          "snapshot_index": 559,
+          "original_sha256": "c054cd528de5f4bf38b6422c646a206e6e76cb67e5fa0005c24855d7162b547c",
+          "original_word_count_whitespace": 218,
+          "source_key": "basadre",
+          "source_sha256": "e1fe8984e19e8485002e8c6458394d7f34b566dfb3fd64d95fe0e1e315646770",
+          "source_pdf_page_1_based": 219,
+          "primary_boundary_proposal": {
+            "source_key": "basadre",
+            "pdf_pages_1_based": [
+              219
+            ],
+            "opening": "El reglamento interior de las haciendas de la costa, publicado el 14 de octubre de 1825",
+            "closing": "conforme a las leyes comunes por el juez del lugar.",
+            "sha256_utf8": "aa4e2538ed5f4045173dbb29628192633377ef1eccb22ded84ffced383a3a87f",
+            "word_count_whitespace": 193,
+            "ordinary_length_pass": true,
+            "length_exception_applied": false,
+            "proposed_label": "organizacion_consecuencias_republicanas",
+            "boundary_reason": "Delimitar dentro del párrafo largo una secuencia completa del reglamento: horarios, días festivos y disciplina/jurisdicción. El cierre precede al paso a alimento y vestido. Excluir la opinión de 1846 y el párrafo breve autónomo de manumisión militar; no agregarlos por cuota.",
+            "editorial_operations": [
+              "Unir saltos de línea y deshacer guiones de final de línea; conservar redacción y datos de la fuente."
+            ],
+            "incorporation_authorized": false
+          },
+          "original_labels_hidden": true,
+          "first_proposal_hidden": true,
+          "human_validation": false,
+          "adjudication_status": "independent_ai_assisted_review_only",
+          "candidate_length_status": "passes_ordinary_120_250"
+        },
+        {
+          "case_id": "B09",
+          "dominant_historical_idea": "Desajuste entre integración jurídica de extranjeros y formación de grupos mercantiles separados, con efectos fiscales y vínculos comerciales exteriores.",
+          "current_defensible_label": "organizacion_consecuencias_republicanas",
+          "confidence": "alta",
+          "requires_resegmentation": false,
+          "requires_cleanup": false,
+          "current_text_usable": true,
+          "reasons": [
+            "La tesis sobre disposiciones de integración y su resultado económico organiza los tres párrafos.",
+            "Las fechas de 1822 y 1825 son internas, las oraciones están completas y hay 181 palabras. El contexto confirma la continuidad argumental."
+          ],
+          "alternatives": [
+            {
+              "label": "liderazgos_diplomacia_proyectos",
+              "reason": "El cierre alude a gestiones comerciales internacionales, pero es un ejemplo subordinado a la posición de extranjeros en la República."
+            },
+            {
+              "label": "participacion_social_regional",
+              "reason": "La formación de colonias mercantiles importa socialmente; el tratamiento explícito de normas de integración y fiscalidad inclina la decisión a organización republicana."
+            }
+          ],
+          "reservations": [
+            "Usable se refiere a adecuación temática y de límites para revisión; no autoriza cambios en el dataset ni equivale a validación humana."
+          ],
+          "snapshot_index": 562,
+          "original_sha256": "5262c43c87ff50b924aad275d71fb4dcc4fef23f4b95878a52f76b7a47ba0acb",
+          "original_word_count_whitespace": 181,
+          "source_key": "basadre",
+          "source_sha256": "e1fe8984e19e8485002e8c6458394d7f34b566dfb3fd64d95fe0e1e315646770",
+          "source_pdf_page_1_based": 215,
+          "primary_boundary_proposal": {
+            "source_key": "basadre",
+            "pdf_pages_1_based": [
+              215
+            ],
+            "opening": "Las reiteradas disposiciones constitucionales, legales y administrativas",
+            "closing": "hecho similar sucedió en Francia en 1825.",
+            "sha256_utf8": "5262c43c87ff50b924aad275d71fb4dcc4fef23f4b95878a52f76b7a47ba0acb",
+            "word_count_whitespace": 181,
+            "ordinary_length_pass": true,
+            "length_exception_applied": false,
+            "proposed_label": "organizacion_consecuencias_republicanas",
+            "boundary_reason": "Conservar el texto actual: comienza con la tesis de integración frustrada y termina tras el ejemplo comercial franco-británico, con fechas internas y oraciones cerradas.",
+            "editorial_operations": [
+              "Ninguna modificación del texto actual."
+            ],
+            "incorporation_authorized": false
+          },
+          "original_labels_hidden": true,
+          "first_proposal_hidden": true,
+          "human_validation": false,
+          "adjudication_status": "independent_ai_assisted_review_only",
+          "candidate_length_status": "passes_ordinary_120_250"
+        },
+        {
+          "case_id": "B10",
+          "dominant_historical_idea": "Persistencia y protección legal de la esclavitud mediante reglamentos y decretos favorables a hacendados durante 1822–1826.",
+          "current_defensible_label": "organizacion_consecuencias_republicanas",
+          "confidence": "alta",
+          "requires_resegmentation": true,
+          "requires_cleanup": true,
+          "current_text_usable": false,
+          "reasons": [
+            "Las obligaciones, prohibiciones y decretos constituyen el argumento central.",
+            "La apertura Se les prohibía quedó separada del reglamento de 1825 y su sujeto, mientras el cierre interrumpe un párrafo explicativo que sigue con inmigración y oferta de trabajo."
+          ],
+          "alternatives": [
+            {
+              "label": "participacion_social_regional",
+              "reason": "La subordinación de personas esclavizadas es central en términos sociales; aquí se expone principalmente mediante medidas legales y su justificación."
+            }
+          ],
+          "reservations": [
+            "Preservar la atribución El punto de vista favorable para no convertir argumentos proesclavistas en afirmaciones del revisor.",
+            "El contraste con indios, inmigrantes y jornales pertenece a esa explicación económica y no es un párrafo añadido para alcanzar longitud."
+          ],
+          "snapshot_index": 564,
+          "original_sha256": "bbd414f14b7cb2368d518fa78b64ff682e05ab54ec91e85483c95a99ba0de92f",
+          "original_word_count_whitespace": 190,
+          "source_key": "basadre",
+          "source_sha256": "e1fe8984e19e8485002e8c6458394d7f34b566dfb3fd64d95fe0e1e315646770",
+          "source_pdf_page_1_based": 219,
+          "primary_boundary_proposal": {
+            "source_key": "basadre",
+            "pdf_pages_1_based": [
+              219
+            ],
+            "opening": "A favor de los hacendados se dieron los decretos de 10 de octubre de 1822",
+            "closing": "Jornales libres de los habitantes de ella no obtenían sino a precio alto y en pequeña proporción.",
+            "sha256_utf8": "1c9b08177cefe1eaffc51424246b91fc4b0127736d2027890db06366bff9b237",
+            "word_count_whitespace": 185,
+            "ordinary_length_pass": true,
+            "length_exception_applied": false,
+            "proposed_label": "organizacion_consecuencias_republicanas",
+            "boundary_reason": "Separar la cola anafórica del reglamento y preservar los dos párrafos completos que vinculan protección legal de hacendados con su justificación económica; atribuir la explicación a ese punto de vista, sin asumirla como voz del revisor.",
+            "editorial_operations": [
+              "Unir saltos de línea y deshacer guiones de final de línea; conservar redacción y datos de la fuente."
+            ],
+            "incorporation_authorized": false
+          },
+          "original_labels_hidden": true,
+          "first_proposal_hidden": true,
+          "human_validation": false,
+          "adjudication_status": "independent_ai_assisted_review_only",
+          "candidate_length_status": "passes_ordinary_120_250"
+        },
+        {
+          "case_id": "B11",
+          "dominant_historical_idea": "Circulación e influencia del regalismo y jansenismo en el liberalismo peruano de la primera mitad del siglo XIX.",
+          "current_defensible_label": "crisis_ideas_emancipadoras",
+          "confidence": "alta",
+          "requires_resegmentation": true,
+          "requires_cleanup": true,
+          "current_text_usable": false,
+          "reasons": [
+            "La influencia de autores, traducciones y prensa liberal es el tema dominante; no se relatan medidas administrativas concretas.",
+            "El texto comienza en mitad de una cita de Menéndez Pelayo, omitiendo su atribución y el sujeto de la caracterización."
+          ],
+          "alternatives": [
+            {
+              "label": "organizacion_consecuencias_republicanas",
+              "reason": "Los vínculos entre Iglesia y Estado proporcionan contexto; el pasaje seleccionado trata doctrinas y difusión intelectual."
+            },
+            {
+              "label": "liderazgos_diplomacia_proyectos",
+              "reason": "Los nombres enumerados identifican portadores de ideas, no una biografía o actuación diplomática dominante."
+            }
+          ],
+          "reservations": [
+            "La definición citada es de Menéndez Pelayo y debe mantener esa atribución.",
+            "Conservar provisionalmente la extracción conde naciones hasta cotejo tipográfico: no corregir silenciosamente texto sin visualización del PDF.",
+            "La fecha 1833 proporciona anclaje temporal a la unidad propuesta; la reacción de 1846 queda fuera."
+          ],
+          "snapshot_index": 565,
+          "original_sha256": "dc41346881bd5b7201f577152a62aefc120b343c0914e0b6ba7ee947903aa945",
+          "original_word_count_whitespace": 183,
+          "source_key": "basadre",
+          "source_sha256": "e1fe8984e19e8485002e8c6458394d7f34b566dfb3fd64d95fe0e1e315646770",
+          "source_pdf_page_1_based": 237,
+          "primary_boundary_proposal": {
+            "source_key": "basadre",
+            "pdf_pages_1_based": [
+              237
+            ],
+            "opening": "Los jansenistas, o sea los que defendían las doctrinas condenadas de Jansenio y de Quesnal",
+            "closing": "de la obra La tentativa teológica, de este último.",
+            "sha256_utf8": "338ffcbfa52938d28ab2b00fddd335e38d65bf0d9d7bdaa97d83fbaf9c9d0bb2",
+            "word_count_whitespace": 179,
+            "ordinary_length_pass": true,
+            "length_exception_applied": false,
+            "proposed_label": "crisis_ideas_emancipadoras",
+            "boundary_reason": "Recuperar sujeto, atribución y comienzo de la cita; conservar completo el párrafo sobre circulación intelectual que llega a Lima en 1833. La secuencia completa hasta Benito Laso tendría 257 palabras en esta extracción, por lo que ese párrafo no se suma. Excluir la reacción de alrededor de 1846.",
+            "editorial_operations": [
+              "Unir saltos de línea y deshacer guiones de final de línea; conservar redacción y datos de la fuente."
+            ],
+            "incorporation_authorized": false
+          },
+          "original_labels_hidden": true,
+          "first_proposal_hidden": true,
+          "human_validation": false,
+          "adjudication_status": "independent_ai_assisted_review_only",
+          "candidate_length_status": "passes_ordinary_120_250"
+        },
+        {
+          "case_id": "B12",
+          "dominant_historical_idea": "Religión como legitimación y práctica institucional del Estado independiente, con ejemplos de 1821 y del Congreso constituyente.",
+          "current_defensible_label": "organizacion_consecuencias_republicanas",
+          "confidence": "alta",
+          "requires_resegmentation": false,
+          "requires_cleanup": true,
+          "current_text_usable": true,
+          "reasons": [
+            "El pasaje expone la relación Iglesia–Estado mediante juramento de un estatuto y rogativas ordenadas para la elaboración constitucional.",
+            "La página 236 confirma que el cierre actual es el final del extracto publicado, seguido por su referencia, y que las elipsis son editoriales. La limpieza de guiones no requiere cambiar los límites."
+          ],
+          "alternatives": [
+            {
+              "label": "crisis_ideas_emancipadoras",
+              "reason": "La legitimación religiosa incorpora un lenguaje de ideas, pero el eje es su uso por estatuto, ministros y Congreso en la República."
+            }
+          ],
+          "reservations": [
+            "Autor del extracto: Pilar García Jordán, Iglesia y poder en el Perú contemporáneo, Cuzco: Centro Bartolomé de las Casas, 1993, pp. 53–54; está reproducido en el PDF de Basadre, página 236, impresa 234. No atribuir automáticamente este texto a Basadre.",
+            "Conservar 1827 y los dos puntos finales tal como aparecen; no inventar una continuación ni corregir la cronología por conjetura."
+          ],
+          "snapshot_index": 765,
+          "original_sha256": "a1958a5a3abc1ded9f35efc07cd2d595ae139ef76f376ce1e15a79a4c4cbb362",
+          "original_word_count_whitespace": 216,
+          "source_key": "basadre",
+          "source_sha256": "e1fe8984e19e8485002e8c6458394d7f34b566dfb3fd64d95fe0e1e315646770",
+          "source_pdf_page_1_based": 236,
+          "primary_boundary_proposal": {
+            "source_key": "basadre",
+            "pdf_pages_1_based": [
+              236
+            ],
+            "opening": "La imbricación de Iglesia y Estado, de religión y política, fue clara",
+            "closing": "principalmente la de conservar para siempre la Santa Religión”:",
+            "sha256_utf8": "c2b95d1fd19077de50b87726dcd4e1466a480f66f6fcc3787f8eb25004ac1ede",
+            "word_count_whitespace": 214,
+            "ordinary_length_pass": true,
+            "length_exception_applied": false,
+            "proposed_label": "organizacion_consecuencias_republicanas",
+            "boundary_reason": "Conservar los límites actuales: la página reproduce así el final del extracto, seguido por la referencia bibliográfica. Los dos puntos finales y las elipsis provienen de esa reproducción; no prueban pérdida accidental de una continuación.",
+            "editorial_operations": [
+              "Deshacer pro-/nunciada y elabo-/rar al unir líneas.",
+              "Mantener elipsis, dos puntos finales y fechas de la fuente.",
+              "Registrar fuera del texto la atribución a Pilar García Jordán."
+            ],
+            "incorporation_authorized": false
+          },
+          "original_labels_hidden": true,
+          "first_proposal_hidden": true,
+          "human_validation": false,
+          "adjudication_status": "independent_ai_assisted_review_only",
+          "candidate_length_status": "passes_ordinary_120_250"
+        }
+      ]
+    },
+    "pereyra": {
+      "schema_version": 1,
+      "id": "boundary-resolution-v3-pereyra",
+      "created_at_utc": "2026-09-08T13:28:32.769070+00:00",
+      "status": "concrete_resegmentation_proposal_pending_adjudication_and_reuse_scope",
+      "scope": {
+        "requested_rows": [
+          68,
+          69
+        ],
+        "strict_dependency_rows": [
+          298
+        ],
+        "reason_for_dependency": "The missing beginning of69 is already contained in298; restoring69 alone duplicates it.",
+        "source_train_rows_mechanically_screened": 58,
+        "semantic_review": "Rows68/69/298 plus sourcePDF13–15, metadata/edition and references only; incidental source-train search matches do not enlarge replacement group.",
+        "dataset": "outputs/corpus-snapshot-v2/reviewed-export.json",
+        "dataset_sha256": "5de9ea1a4be3c9d628da51cdf1d07108f43e0ac8ee580acb483013c6dc27c35c",
+        "source_id": "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+        "period_years": [
+          1780,
+          1842
+        ]
+      },
+      "guide": {
+        "path": "docs/guia-etiquetado-1780-1842.md",
+        "sha256": "d53dea3532359afc851c2bdd59ae1ddb47a0673609d82d40372a6f62edc55179",
+        "unit_rule": "Segments120–250words; two adjacent complete paragraphs may form one common argument. No new length exception proposed."
+      },
+      "source": {
+        "author": "Nelson Ernesto Pereyra Chávez",
+        "year": 2016,
+        "chapter": "Los campesinos de Huamanga y la rebelión de 1814",
+        "chapter_pages": [
+          339,
+          361
+        ],
+        "book": "1814: la junta de gobierno del Cuzco y el sur andino",
+        "editor": "Scarlett O'Phelan Godoy",
+        "edition": "Primera edición, diciembre2016",
+        "publishers": [
+          "Instituto Francés de Estudios Andinos",
+          "Fondo Editorial PUCP",
+          "Fundación M. J. Bustamante de la Fuente"
+        ],
+        "isbn": "978-612-4358-00-5",
+        "series": "Actes & Mémoires41",
+        "chapter_doi": "https://doi.org/10.18800/9786124358005.013",
+        "official_item": "https://repositorio.pucp.edu.pe/items/f2c23330-ffb6-453e-94d4-295186c63316/full",
+        "official_pdf": "https://repositorio.pucp.edu.pe/bitstreams/ce8274da-ef7e-4589-9049-9bdec8ac6332/download",
+        "publisher_book_record": "https://www.ifea.org.pe/libreria/actes-et-memoires/041/",
+        "pdf_sha256": "ae23fb808ca0669754a09e06a89a5c2485a4ed169c7496317ec9dfe7a6527d1e",
+        "official_pdf_md5_equals_local": true,
+        "official_md5": "7ddd9f39feadb7e0f6521246eaa20639",
+        "pdf_page_count": 25,
+        "page_mapping": "PDF1 cover, PDF2 edition/copyright, PDF3–25 printed339–361.",
+        "rights": {
+          "verified_license": "CC BY-NC-ND 2.5 PE",
+          "license_url": "https://creativecommons.org/licenses/by-nc-nd/2.5/pe/",
+          "metadata_field": "dc.rights.uri, item-specific official API archived locally",
+          "access_status_distinct_from_license": "dc.rights is openAccess; full metadata supplies the specific restrictive license.",
+          "restriction": "Attribution and noncommercial use; modified/derived material must not be redistributed under the ND grant. Format change alone is not a derivative under the license deed.",
+          "proposal_reuse_status": "Local review prepared; no claim that normalized/resegmented public corpus or trained weights are cleared by this license.",
+          "public_distribution_cleared": false,
+          "license_changed_to_CC_BY4": false
+        },
+        "references_used_by_passages": [
+          {
+            "author": "Lorenzo Huertas Vallejos",
+            "year": 1982,
+            "title": "Diezmos en Huamanga",
+            "publication": "Allpanchis XVII(20):209–235",
+            "cited_page": 221,
+            "bibliography_printed_page": 360,
+            "primary_work_rechecked": false
+          },
+          {
+            "author": "T. Carrasco Cavero",
+            "year": 1990,
+            "title": "Padrón de Contribuyentes de la Provincia de Huamanga en1826",
+            "publication": "Tesis de licenciatura, Universidad Nacional San Cristóbal de Huamanga",
+            "bibliography_printed_page": 359,
+            "primary_work_rechecked": false
+          },
+          {
+            "author": "J. L. Igue",
+            "year": 2008,
+            "title": "Bandolerismo, patriotismo y etnicidad poscolonial: los morochucos de Cangallo, Ayacucho, en las guerras de la independencia",
+            "publication": "Tesis de licenciatura, PUCP",
+            "cited_pages": [
+              27,
+              30,
+              37
+            ],
+            "bibliography_printed_page": 360,
+            "primary_work_rechecked": false
+          }
+        ]
+      },
+      "diagnosis": [
+        {
+          "row": 68,
+          "issue": "Starts inside property paragraph whose first part is in69; includes whole Pampa paragraph plus truncated note18. Relabel-only leaves extraction broken."
+        },
+        {
+          "row": 69,
+          "issue": "Header and incomplete start of tithe trend from298; includes regional caveat and only beginning of property paragraph completed in68."
+        },
+        {
+          "row": 298,
+          "issue": "Carries previous citation tail, one whole regional paragraph, beginning needed by69 and only part of note17. Strictly necessary dependency, not a new audit batch."
+        }
+      ],
+      "selected_units_proposed_not_applied": [
+        {
+          "id": "PER-R68-RURAL",
+          "replace_row_index": 68,
+          "text_sha256": "07b0b8facff4a3971138e2f97af0ded6fe929e7474195254d68514060d4c3e2f",
+          "word_count": 225,
+          "printed_pages": [
+            350
+          ],
+          "pdf_pages_1based": [
+            14
+          ],
+          "source_paragraph_count": 2,
+          "raw_parts": [
+            {
+              "pdf_page_1based": 14,
+              "printed_page": 350,
+              "start": 924,
+              "end": 1815,
+              "text_sha256": "fa5fa6486a4a943016b6808837cfd6a6991fd17c887ad9602556f1d730dc619c",
+              "raw_page_text_sha256": "627fb8dba88be3d3bbaceeb697af29945da2cd691f4542785840b4a5b3184591"
+            },
+            {
+              "pdf_page_1based": 14,
+              "printed_page": 350,
+              "start": 1815,
+              "end": 2512,
+              "text_sha256": "480effefbd17cfc6429ac3ed241c4b871a5fa5fae129532e61425693e264c7c8",
+              "raw_page_text_sha256": "627fb8dba88be3d3bbaceeb697af29945da2cd691f4542785840b4a5b3184591"
+            }
+          ],
+          "raw_concat_sha256": "be25cf092f3073261e44def1a94be5511f8c7da932147c7e12c2d29bdd938d28",
+          "normalization_operations": [
+            {
+              "action": "collapse_whitespace_inside_paragraph",
+              "new_paragraph_separator": "\n\n"
+            },
+            {
+              "before": "Pampa Cangalla",
+              "after": "Pampa Cangallo",
+              "reason": "OCR correction visually verified on printed350; no historical renaming."
+            },
+            {
+              "before": ")1s .",
+              "after": ").",
+              "reason": "Remove OCR of superscript18; complete note archived separately, retain sentence punctuation."
+            }
+          ],
+          "normalization_edits": [
+            {
+              "start": 78,
+              "end": 85,
+              "before": "\n      ",
+              "after": ""
+            },
+            {
+              "start": 160,
+              "end": 169,
+              "before": "\n        ",
+              "after": ""
+            },
+            {
+              "start": 244,
+              "end": 251,
+              "before": "\n      ",
+              "after": ""
+            },
+            {
+              "start": 325,
+              "end": 332,
+              "before": "\n      ",
+              "after": ""
+            },
+            {
+              "start": 410,
+              "end": 419,
+              "before": "\n        ",
+              "after": ""
+            },
+            {
+              "start": 492,
+              "end": 501,
+              "before": "\n        ",
+              "after": ""
+            },
+            {
+              "start": 577,
+              "end": 585,
+              "before": "\n       ",
+              "after": ""
+            },
+            {
+              "start": 661,
+              "end": 669,
+              "before": "\n       ",
+              "after": ""
+            },
+            {
+              "start": 746,
+              "end": 754,
+              "before": "\n       ",
+              "after": ""
+            },
+            {
+              "start": 834,
+              "end": 842,
+              "before": "\n       ",
+              "after": ""
+            },
+            {
+              "start": 885,
+              "end": 892,
+              "before": "      \n",
+              "after": ""
+            },
+            {
+              "start": 909,
+              "end": 910,
+              "before": "a",
+              "after": "o"
+            },
+            {
+              "start": 959,
+              "end": 967,
+              "before": "\n       ",
+              "after": ""
+            },
+            {
+              "start": 980,
+              "end": 981,
+              "before": " ",
+              "after": ""
+            },
+            {
+              "start": 989,
+              "end": 990,
+              "before": " ",
+              "after": ""
+            },
+            {
+              "start": 1003,
+              "end": 1004,
+              "before": " ",
+              "after": ""
+            },
+            {
+              "start": 1033,
+              "end": 1042,
+              "before": "\n        ",
+              "after": ""
+            },
+            {
+              "start": 1052,
+              "end": 1053,
+              "before": " ",
+              "after": ""
+            },
+            {
+              "start": 1075,
+              "end": 1076,
+              "before": " ",
+              "after": ""
+            },
+            {
+              "start": 1085,
+              "end": 1086,
+              "before": " ",
+              "after": ""
+            },
+            {
+              "start": 1092,
+              "end": 1093,
+              "before": " ",
+              "after": ""
+            },
+            {
+              "start": 1095,
+              "end": 1096,
+              "before": " ",
+              "after": ""
+            },
+            {
+              "start": 1103,
+              "end": 1104,
+              "before": " ",
+              "after": ""
+            },
+            {
+              "start": 1107,
+              "end": 1108,
+              "before": " ",
+              "after": ""
+            },
+            {
+              "start": 1119,
+              "end": 1126,
+              "before": "\n      ",
+              "after": ""
+            },
+            {
+              "start": 1200,
+              "end": 1209,
+              "before": "\n        ",
+              "after": ""
+            },
+            {
+              "start": 1281,
+              "end": 1291,
+              "before": "\n         ",
+              "after": ""
+            },
+            {
+              "start": 1360,
+              "end": 1368,
+              "before": "\n       ",
+              "after": ""
+            },
+            {
+              "start": 1445,
+              "end": 1452,
+              "before": "\n      ",
+              "after": ""
+            },
+            {
+              "start": 1528,
+              "end": 1535,
+              "before": "\n      ",
+              "after": ""
+            },
+            {
+              "start": 1582,
+              "end": 1585,
+              "before": "1s ",
+              "after": ""
+            },
+            {
+              "start": 1586,
+              "end": 1590,
+              "before": "\n   ",
+              "after": ""
+            }
+          ],
+          "existing_label": "contexto_colonial_antecedentes",
+          "proposed_label": "participacion_social_regional",
+          "alternative_label": "contexto_colonial_antecedentes",
+          "ready_for_dataset_application": false,
+          "review": {
+            "proposal": "resegmentar_y_reclasificar_para_segunda_lectura",
+            "dominant_argument": "Contraste regional de propiedad, grupos rurales y actividades ganaderas/comerciales de Huamanga y Pampa Cangallo.",
+            "reason": "La dinámica regional y social se desarrolla directamente. El padrón1826 es evidencia, no convierte por sí solo el texto en consecuencias republicanas; no hay aquí causalidad de cambio de régimen explícita.",
+            "alternative_reason": "Puede leerse como estructura socioeconómica que antecede a rebelión1814 dentro del capítulo. Conservar esa alternativa; el contexto posterior no autoriza llamar colonial a todo el fragmento.",
+            "paragraph_join_reason": "Dos párrafos contiguos contrastan formas de propiedad y economías rurales en la misma región. Se mantienen completos y separados por doble salto; no añadir relleno para alcanzar120.",
+            "period": "Inicio del sigloXIX y padrón1826; no ampliar más allá1842.",
+            "confidence": "media",
+            "not_a_final_adjudication": true,
+            "decision": "apto_tematicamente_como_propuesta",
+            "license_reservation_independent_of_label": true
+          }
+        },
+        {
+          "id": "PER-R69-DEC",
+          "replace_row_index": 69,
+          "text_sha256": "c413251dd413ec5f310f0fe15ea980b2411b64480acd7a90b705903a65b32869",
+          "word_count": 159,
+          "printed_pages": [
+            349,
+            350
+          ],
+          "pdf_pages_1based": [
+            13,
+            14
+          ],
+          "source_paragraph_count": 2,
+          "raw_parts": [
+            {
+              "pdf_page_1based": 13,
+              "printed_page": 349,
+              "start": 2013,
+              "end": 2156,
+              "text_sha256": "cefc19f98efadc35f48d968dd01dab0fa914ebb9cf831bf4e8c399a95862bc09",
+              "raw_page_text_sha256": "2f058bd2f73bda6fd55806a26f084619c80cf57e79b71ccde4fb7e2b2509471a"
+            },
+            {
+              "pdf_page_1based": 14,
+              "printed_page": 350,
+              "start": 45,
+              "end": 415,
+              "text_sha256": "6e748163065ce87bfb55a9d8d1127db4fd16eaacc77f6ed2587a9ab21418d3a9",
+              "raw_page_text_sha256": "627fb8dba88be3d3bbaceeb697af29945da2cd691f4542785840b4a5b3184591"
+            },
+            {
+              "pdf_page_1based": 14,
+              "printed_page": 350,
+              "start": 415,
+              "end": 924,
+              "text_sha256": "73c6ba16f22a4cee6a20ff1c1e061288d2d6ec57b94d223527d40ad7f174e445",
+              "raw_page_text_sha256": "627fb8dba88be3d3bbaceeb697af29945da2cd691f4542785840b4a5b3184591"
+            }
+          ],
+          "raw_concat_sha256": "d471d73701eb58239b29fec7800f87f0ed1f1f9b8649b1953172db10883024a0",
+          "normalization_operations": [
+            {
+              "action": "collapse_whitespace_inside_paragraph",
+              "new_paragraph_separator": "\n\n"
+            },
+            {
+              "before": "7 4 340",
+              "after": "74 340",
+              "reason": "Visual verification printed349: digit4 belongs to74; no numerical reinterpretation."
+            }
+          ],
+          "normalization_edits": [
+            {
+              "start": 2,
+              "end": 3,
+              "before": " ",
+              "after": ""
+            },
+            {
+              "start": 27,
+              "end": 28,
+              "before": " ",
+              "after": ""
+            },
+            {
+              "start": 70,
+              "end": 71,
+              "before": "\n",
+              "after": " "
+            },
+            {
+              "start": 81,
+              "end": 82,
+              "before": " ",
+              "after": ""
+            },
+            {
+              "start": 142,
+              "end": 143,
+              "before": "\n",
+              "after": ""
+            },
+            {
+              "start": 220,
+              "end": 227,
+              "before": "\n      ",
+              "after": ""
+            },
+            {
+              "start": 300,
+              "end": 308,
+              "before": "\n       ",
+              "after": ""
+            },
+            {
+              "start": 383,
+              "end": 393,
+              "before": "\n         ",
+              "after": ""
+            },
+            {
+              "start": 467,
+              "end": 474,
+              "before": "\n      ",
+              "after": ""
+            },
+            {
+              "start": 505,
+              "end": 514,
+              "before": "\n        ",
+              "after": ""
+            },
+            {
+              "start": 596,
+              "end": 605,
+              "before": "\n        ",
+              "after": ""
+            },
+            {
+              "start": 687,
+              "end": 694,
+              "before": "\n      ",
+              "after": ""
+            },
+            {
+              "start": 764,
+              "end": 772,
+              "before": "\n       ",
+              "after": ""
+            },
+            {
+              "start": 854,
+              "end": 864,
+              "before": "\n         ",
+              "after": ""
+            },
+            {
+              "start": 942,
+              "end": 950,
+              "before": "\n       ",
+              "after": ""
+            },
+            {
+              "start": 1017,
+              "end": 1025,
+              "before": "\n       ",
+              "after": ""
+            }
+          ],
+          "existing_label": "contexto_colonial_antecedentes",
+          "proposed_label": "organizacion_consecuencias_republicanas",
+          "alternative_label": "participacion_social_regional",
+          "ready_for_dataset_application": false,
+          "review": {
+            "proposal": "resegmentar_y_reclasificar_para_segunda_lectura",
+            "dominant_argument": "Evolución del indicador agrario y efectos desiguales de guerra/sublevación desde1822, con recuperación parcial en1830s.",
+            "reason": "La relación causal con la guerra y el periodo republicano es explícita. Conservar Huertas sugiere y parece, y su rechazo a una crisis agraria general.",
+            "alternative_reason": "Dinámicas regionales es alternativa real por la distribución espacial; F se propone por el énfasis en consecuencias y recuperación, no solo por fechas.",
+            "paragraph_join_reason": "Serie histórica y matización contigua forman un único argumento: el descenso no acredita crisis de toda la región. Separarlas pierde el alcance de la conclusión.",
+            "period": "1780–1830s; el comienzo recuperado está en298, que debe participar en cualquier aplicación.",
+            "confidence": "media_alta",
+            "not_a_final_adjudication": true,
+            "decision": "apto_tematicamente_como_propuesta",
+            "license_reservation_independent_of_label": true
+          }
+        },
+        {
+          "id": "PER-R298-REG",
+          "replace_row_index": 298,
+          "text_sha256": "f9afeb4d807427c444fedb91f12ff77a2ec6b46b86e098e1b62b202829e81c36",
+          "word_count": 150,
+          "printed_pages": [
+            349
+          ],
+          "pdf_pages_1based": [
+            13
+          ],
+          "source_paragraph_count": 1,
+          "raw_parts": [
+            {
+              "pdf_page_1based": 13,
+              "printed_page": 349,
+              "start": 1111,
+              "end": 2013,
+              "text_sha256": "5cdc5bf341840b4d15537bdc5ed700ca639b8d8f75cbd64c180f1327d86b3454",
+              "raw_page_text_sha256": "2f058bd2f73bda6fd55806a26f084619c80cf57e79b71ccde4fb7e2b2509471a"
+            }
+          ],
+          "raw_concat_sha256": "5cdc5bf341840b4d15537bdc5ed700ca639b8d8f75cbd64c180f1327d86b3454",
+          "normalization_operations": [
+            {
+              "action": "collapse_whitespace_inside_paragraph",
+              "new_paragraph_separator": "\n\n"
+            },
+            {
+              "before": "1O %",
+              "after": "10 %",
+              "reason": "Visual verification printed349: digit0, not capital letterO."
+            }
+          ],
+          "normalization_edits": [
+            {
+              "start": 41,
+              "end": 42,
+              "before": "O",
+              "after": "0"
+            },
+            {
+              "start": 73,
+              "end": 74,
+              "before": "\n",
+              "after": " "
+            },
+            {
+              "start": 151,
+              "end": 152,
+              "before": "\n",
+              "after": " "
+            },
+            {
+              "start": 223,
+              "end": 224,
+              "before": "\n",
+              "after": " "
+            },
+            {
+              "start": 293,
+              "end": 294,
+              "before": "\n",
+              "after": " "
+            },
+            {
+              "start": 365,
+              "end": 366,
+              "before": "\n",
+              "after": " "
+            },
+            {
+              "start": 436,
+              "end": 437,
+              "before": "\n",
+              "after": " "
+            },
+            {
+              "start": 514,
+              "end": 515,
+              "before": "\n",
+              "after": " "
+            },
+            {
+              "start": 589,
+              "end": 590,
+              "before": "\n",
+              "after": " "
+            },
+            {
+              "start": 658,
+              "end": 659,
+              "before": "\n",
+              "after": " "
+            },
+            {
+              "start": 738,
+              "end": 739,
+              "before": "\n",
+              "after": " "
+            },
+            {
+              "start": 815,
+              "end": 816,
+              "before": "\n",
+              "after": " "
+            },
+            {
+              "start": 887,
+              "end": 888,
+              "before": "\n",
+              "after": " "
+            },
+            {
+              "start": 901,
+              "end": 902,
+              "before": "\n",
+              "after": ""
+            }
+          ],
+          "existing_label": "contexto_colonial_antecedentes",
+          "proposed_label": "participacion_social_regional",
+          "alternative_label": "contexto_colonial_antecedentes",
+          "ready_for_dataset_application": false,
+          "review": {
+            "proposal": "resegmentar_conservar_como_pendiente_de_consistencia_temporal",
+            "dominant_argument": "Diferencias regionales de producción/cultivos inferidas del diezmo y condiciones geográficas.",
+            "reason": "El foco regional hace plausible C; A permanece alternativa porque se presenta una estructura de la intendencia. No hay consecuencias republicanas explícitas para elegir F automáticamente.",
+            "internal_source_issue": "El impreso dice diez primeros años del sigloXIX y enumera bienios1814–1815 y1822–1823. Se conserva literalmente: no es error OCR que pueda corregirse con esta página.",
+            "resolution": "La reconstrucción textual está cerrada, pero este párrafo no queda históricamente aprobado. Requiere cotejo puntual de la referencia de Huertas antes de una corrección factual; no se busca otra fuente en este bloque.",
+            "confidence": "pendiente",
+            "not_a_final_adjudication": true,
+            "decision": "ambiguo_por_consistencia_temporal",
+            "license_reservation_independent_of_label": true
+          }
+        }
+      ],
+      "originals_archive": "outputs/boundary-resolution-v3/pereyra/originals-train.json",
+      "partition_archive": "outputs/boundary-resolution-v3/pereyra/original-partitions.json",
+      "context_archive": "outputs/boundary-resolution-v3/pereyra/context-and-notes.json",
+      "overlap_archive": "outputs/boundary-resolution-v3/pereyra/train-source-overlap.json",
+      "official_verification": "outputs/boundary-resolution-v3/pereyra/official-source-verification.json",
+      "effects_if_adjudicated_and_applied": {
+        "rows_before": 3,
+        "rows_after": 3,
+        "row_count_delta": 0,
+        "replacement_positions": {
+          "68": "PER-R68-RURAL",
+          "69": "PER-R69-DEC",
+          "298": "PER-R298-REG"
+        },
+        "unchanged_relative_order": "All other rows remain byte-equivalent and in order; not executed here.",
+        "body_preservation": "All body content from68/69/298 is retained in proposed source-complete units; header, previous citation tail and footnotes archived separately.",
+        "training_coverage_removed_if_applied": "Notes17/18 and preceding coca-citation tail leave train. Note18 contains morochuco identity/1820context; its documentary content remains in context archive. No silent documentary deletion.",
+        "label_status": "All three original A labels preserved in archive. C/F/C are proposals only; R298 remains held for internal chronological inconsistency."
+      },
+      "review_type": {
+        "assisted_by_AI": true,
+        "human_independent_validation": false,
+        "second_review_pending": true
+      },
+      "limits": [
+        "No primary-check of Huertas/Carrasco/Igue assertions; quotations and cautious language retained.",
+        "R298 has a contradiction printed in the source, not fixed as OCR. Do not claim historical correction complete.",
+        "ND and NC license scope is documented; no permission request, redistribution or model-license conclusion made.",
+        "Within-resource checks do not prove absence of cross-work dependence or duplicates.",
+        "Textual repair and label proposals do not demonstrate improved classification."
+      ],
+      "dataset_mutated": false,
+      "labels_applied": false,
+      "training_performed": false,
+      "predictions_performed": false,
+      "evaluation_texts_read": false,
+      "production_changed": false,
+      "verification": {
+        "original_3_partitions_complete": true,
+        "unit_lengths120_250": true,
+        "raw_offsets_and_edits_replay": true,
+        "source_pdf_hash_verified": true,
+        "official_bitstream_md5_verified": true,
+        "dataset_unchanged": true,
+        "independent_final_replay_passed": true
+      },
+      "post_analysis_peer_message": {
+        "recorded_at_utc": "2026-09-08T13:29:50.939049+00:00",
+        "received_after_initial_report_was_saved": true,
+        "initial_report_sha256": "088e01e65e5126607916abc432cf6cc3e35446126bd2c963cb98c36a8c8e573c",
+        "prior_proposed_labels": [
+          {
+            "id": "PER-R68-RURAL",
+            "label": "participacion_social_regional"
+          },
+          {
+            "id": "PER-R69-DEC",
+            "label": "organizacion_consecuencias_republicanas"
+          },
+          {
+            "id": "PER-R298-REG",
+            "label": "participacion_social_regional"
+          }
+        ],
+        "message_summary": "Root relayed an AI second reading proposing social/regional for property and republican for1780–1830trajectory after my source analysis, reconstruction and initial report were completed.",
+        "labels_changed_after_message": false,
+        "human_independent_validation": false
+      },
+      "group_application_gate": "La propuesta3→3 queda pendiente:68 y69 son aptas temáticamente para segunda adjudicación;298 permanece ambiguo por consistencia temporal y la reutilización pública requiere respetar NC/ND. Aplicar69 conservando298 intacta duplicaría28palabras originales de inicio; no se autoriza aplicación parcial automática."
+    }
+  },
+  "limitations": [
+    "Revisiones asistidas por IA, con una segunda lectura ciega de los doce casos; no validación humana experta ni estimación de error del corpus entero.",
+    "El contexto original confirma problemas concretos; no demuestra que estos expliquen por sí solos el bajo F1.",
+    "Se propone retirar temporalmente contenido además de reparar límites y etiquetas. Es un cambio conjunto; un resultado futuro no aislará automáticamente la contribución de cada decisión.",
+    "Basadre2014 tiene derechos reservados; Pereyra2016 declara CC BY-NC-ND2.5PE. No se declara autorizada la redistribución del corpus adaptado ni se emite conclusión jurídica sobre pesos. Los textos nuevos de estas obras permanecen locales.",
+    "La validación original81 y el desarrollo externo31 ya fueron usados; ninguna nueva métrica ni selección con test. Mantener pendiente una prueba final independiente.",
+    "La propuesta reduce cobertura de algunos pasajes para no entrenar con unidades irresueltas; los originales y alternativas se conservan y no se convierten en negativos."
+  ],
+  "next_block_proposal": {
+    "task": "Si la autora confirma este mapa, crear una copia local con las nueve unidades y las siete cuarentenas; incorporar separadamente las30altas trazables; fijar antes de ejecutar una sola comparación local BETO con referencia y receta constantes.",
+    "new_question": "¿Mejora el paquete de coherencia de etiquetas, unidades completas y diversidad de fuentes frente a la referencia, bajo el mismo protocolo?",
+    "scope": "Una comparación exploratoria del paquete, sin buscar nuevas semillas/longitudes/pérdidas sobre el mismo desarrollo; sin test ni sustitución en producción.",
+    "requires_user_confirmation": true
+  },
+  "training_performed": false,
+  "predictions_performed": false,
+  "dataset_changed": false,
+  "labels_applied": false,
+  "production_changed": false,
+  "taxonomy_changed": false,
+  "portability": "El registro contiene índices, hashes, dictámenes y límites. Los16originales ya existen en la referencia congelada. Textos reconstruidos, PDFs, páginas y auxiliares se conservan enoutputs; recuperarlos para repetir el cotejo en otro equipo. Los pasajes reconstruidos íntegros de estas dos obras no se incluyen en Git.",
+  "local_evidence": [
+    {
+      "path": "outputs/boundary-resolution-v3/context-blind.json",
+      "sha256": "08c6f1b3f46c96d7ad142366a2e05b92621b5eb3d02a0471b07dd55993089c44"
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/first-review.json",
+      "sha256": "d50c49ec69b8f2b87479cfd1ba1823d49881f0e9f329dab78c32f90137fcefa2"
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/second-review.json",
+      "sha256": "7dfb7ac45ad6423c8a9fced80c21f6f5fd88cb8a96934f440c1bf5ee638f7605"
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/pereyra-review.json",
+      "sha256": "73c1bd216c7e662357922a91529b598e4fd68e618d730e721af435d7c899c665"
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/regulation-context.json",
+      "sha256": "043f7a1a34069d54502acf2a16402b3ebf55cc792faf749ee2d99c90a8fb3179"
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/basadre-proposals.json",
+      "sha256": "fcb3e327a2aacf1c8880ef137867bebb40f4b0cce1784022b3b6687ede4abed6"
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/prepare-proposals.py",
+      "sha256": "64df0fc009dba01c4fbe246541cba72ee1d1cb55d60b978875d5f63b7040675f"
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/proposed-replacements.json",
+      "sha256": "8b0f6b6a9b49d16f6615e66ad92ef28a740f8e6de3a1fd498ecc6c7916d37ed9"
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/originals-preserved.json",
+      "sha256": "39993e2a2aafbde0a17c6a5d1591cd51d9037e1f78e70e26088aeaef4479bb95"
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/overlap-check.json",
+      "sha256": "b8eea0854943bc3d33a6d75d902fadc06e4939c36cf925c80c24778546e5429f"
+    }
+  ],
+  "content_sha256": "6cfab18bfdb4236cd28acee688ee79194b98e9b7ca9498582ba2f74796045f6a"
+}

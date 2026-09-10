@@ -1,0 +1,1292 @@
+{
+  "schema": "ideas_thematic_coverage_review.v1",
+  "status": "AI_assisted_inventory_not_relabeling_not_human_gold",
+  "human_review": false,
+  "inputs": [
+    {
+      "path": "outputs/corpus-snapshot-v4/reviewed-export.json",
+      "sha256": "d00c83713de6d2b7263f3aa09da583801b3f358b4d46563ce9957e7578fde8a9"
+    },
+    {
+      "path": "docs/guia-etiquetado-1780-1842.md",
+      "sha256": "d53dea3532359afc851c2bdd59ae1ddb47a0673609d82d40372a6f62edc55179"
+    }
+  ],
+  "method": [
+    "Se seleccionaron y leyeron completas las70 filas TRAIN con etiqueta crisis_ideas_emancipadoras de v4.",
+    "Inventario descriptivo de un subtema dominante por fila; no son clases nuevas y no se modifican etiquetas. Menciones aisladas, listas de títulos y puntos enumerados no cuentan como desarrollos de todos esos temas.",
+    "Argumento sustantivo moderno sobre1780–1842 sí cuenta; discusión predominantemente posterior sobre escuelas o agendas se distingue.",
+    "Comparabilidad exige problema o mecanismo histórico desarrollado, no solo palabras compartidas. Ausencia significa ausencia en estas70 filas, no en el resto de TRAIN.",
+    "Agrupación por resourceId. Nombres de los grupos solicitados proceden del contexto previo; los otros tres se describen sin inventar bibliografía."
+  ],
+  "evidence_type_definitions": {
+    "substantive": "Desarrolla proposición histórica suficiente para inventariar subtema; no garantiza integridad perfecta.",
+    "fragmentary": "Tema reconocible, pero cortes/remisiones/notas impiden tratarlo como unidad comparable autónoma sin revisar límites.",
+    "mixed": "Tema junto a paratextos, notas o introducciones; no sumar cobertura por menciones.",
+    "metahistorical": "Predomina historia de debates o agenda historiográfica posterior sin mecanismo histórico suficiente en esta unidad.",
+    "outside_period": "Texto argumenta fuera de1780–1842 sin conexión sustantiva explícita."
+  },
+  "items": [
+    {
+      "v4_index": 74,
+      "resourceId": "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "de68133fa9729fad17f9ec670f33bbb74da00bd659b75c8187970a8e8e6fc19e",
+      "dominant_subtopic": "cadiz_local",
+      "coverage_evidence_type": "mixed",
+      "reason": "Programa constitucional de rebelión1814, entre presentación geográfica y notas.",
+      "excerpt": "El trabajo se centra en la Intendencia de Huamanga, un espacio de aproximadamente 47 842 23 kilómetros cuadrados, dividido en",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 75,
+      "resourceId": "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "afd796a27cf2ee212f50e3d0f2e3d7fc7ce5367fce966f9a07bd82fd585fb937",
+      "dominant_subtopic": "cadiz_local",
+      "coverage_evidence_type": "substantive",
+      "reason": "Alcaldes indígenas recurren a Cádiz para defender tierras; frontera de agencia social.",
+      "excerpt": "nstitución a fin de retener la posesión de la tierra. Al contrario, españoles y mestizos valoraban la antigüedad de sus títulos y la herencia ind",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 113,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "8ef7d10621f2e097bb6be4c0dbe2fca4ba7ea14c7360dabc5ebbe76cdba9426d",
+      "dominant_subtopic": "interpretacion_independencia",
+      "coverage_evidence_type": "fragmentary",
+      "reason": "Refuta concesión por falta de iniciativa mediante programas anticoloniales; cortes al inicio/final.",
+      "excerpt": "apoyándonos en los documentos que se confiscaron a los cómplices de las mismas, y en sus posteriores con­ fesiones. ha sido p",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 125,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "de0e373fb2743991ded9735b87accfeb8dcfcd9c68d115260893356e21d634a6",
+      "dominant_subtopic": "juntas_regionales",
+      "coverage_evidence_type": "fragmentary",
+      "reason": "Fases regionalista y continental; termina antes de desarrollar facciones.",
+      "excerpt": "cedido al nombramiento de comisionados, para enviarlos a las mencio­ nadas provincias, en busca de reconocimiento y apoyo37 •",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 126,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "14990fffbe055419f8e2b49cd86abc6074c0ea4e22bdbcfc9751dd00b3ef050a",
+      "dominant_subtopic": "legitimidad_inca",
+      "coverage_evidence_type": "substantive",
+      "reason": "Contrasta coronación y legitimidad real en1780 y vacancia de FernandoVII.",
+      "excerpt": "eamiento durante el vacío de poder de­ jado por Fernando VII. Así al menos lo entendieron quienes en 1780 sostuvieron que el alzamiento «se podía",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 128,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "afe384c6e97a09849aa13a624c36d06f1df701f634724705312f4e673fcaf3d5",
+      "dominant_subtopic": "legitimidad_inca",
+      "coverage_evidence_type": "fragmentary",
+      "reason": "Pasquín contrapone coronas usurpadas; ejemplo conspirativo final cortado.",
+      "excerpt": "ía referencia a una conversación imaginaria mantenida entre el rey prisionero Fer­ nando VII y el Inca Atahualpa. En ella Fernando VII se lamenta",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 130,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "9b2bf6253b5fdebad56b075432569d699d0938e443581e96b7c4e95fd07c2fd2",
+      "dominant_subtopic": "legitimidad_inca",
+      "coverage_evidence_type": "mixed",
+      "reason": "Lista de programas seguida de argumento sobre legitimidad de rey nativo; la lista no demuestra cobertura de todos sus puntos.",
+      "excerpt": "uesta recurrente de coronar un rey. b) La necesidad de una alianza (¿temporal?) con la élite indígena. e) La posición privilegiada de la Iglesia ",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 131,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "b9553d080345f400cddaa7506028975cfeef6010cb43ad66bc1afcd8e5842d12",
+      "dominant_subtopic": "juntas_regionales",
+      "coverage_evidence_type": "substantive",
+      "reason": "Vacancia real y adopción de juntas en1809–1814 frente a nominación de rey.",
+      "excerpt": "Es decir, el proceso de ruptura frente a España se había ya puesto en marcha en el espacio hispanoamericano. Finalmente, no h",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 137,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "7b940708a0da1c8b552c60d2d5f27bfb9af0a9c4808be02553979472aceee15b",
+      "dominant_subtopic": "legitimidad_inca",
+      "coverage_evidence_type": "substantive",
+      "reason": "Identificación de Túpac Amaru como Inca y restitución de corona; pasquines son evidencia ideológica.",
+      "excerpt": "cho al nombrarse un rey nativo, se basaba en el razonamiento de que la corona de los Incas había sido «usurpada» por el monarca es­ pañol, y que ",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 160,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "f0424a85645f19e61eded34e810055dd1076ff89453e1834523dafe7558ed81d",
+      "dominant_subtopic": "juntas_regionales",
+      "coverage_evidence_type": "mixed",
+      "reason": "Programas surandinos llegan a Lima; mezcla1750 y1810 con notas finales.",
+      "excerpt": "En Lima, por lo general las conspiraciones o bien fueron abor­ tadas antes de estallar, o en todo caso constituyeron un refle",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 168,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "a6cea9f608c8ef29d133fe10567fde9d242e8981b6c22814e1f33eecc0ad4221",
+      "dominant_subtopic": "legitimidad_inca",
+      "coverage_evidence_type": "fragmentary",
+      "reason": "Resistencia al título inca de Angulo; fragmento muy cortado con nota intrusiva.",
+      "excerpt": " sus títulos el de «Apoderado de los Antiguos Incas del 61) C.D.I.P. t. III, vol. 7 (Lima, 1974). Al margen se cita «hasta cuando su­ friremos la",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 180,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "7717b19d7b2410f4962d0284b4aff9189e8babfe68d483b46d8c51c18f0ad113",
+      "dominant_subtopic": "antipeninsularismo",
+      "coverage_evidence_type": "fragmentary",
+      "reason": "Exclusión gubernativa criolla y hostilidad a europeos; cita final cortada.",
+      "excerpt": "Dentro de este contexto encajan las protestas de Farfán de los Godos en términos de que <<como no había hermandad, todos habí",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 181,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "928deac62ad748614ae59b08dbe4c8d0045fb263ef34ad0b7628535e521215bf",
+      "dominant_subtopic": "antipeninsularismo",
+      "coverage_evidence_type": "mixed",
+      "reason": "Resentimiento y sustitución de autoridades sin cambio estructural; notas al final.",
+      "excerpt": "Ambos fueron condenados a muerte127• El común denominador entre Figueroa, Cisneros y Castro, estuvo en que no se trataba de p",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 182,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "0fdd09a88684f855b699426902f9c242a8e232e9630dfaf79f91049f70994180",
+      "dominant_subtopic": "antipeninsularismo",
+      "coverage_evidence_type": "substantive",
+      "reason": "Distingue residentes peninsulares de europeos de paso; frontera fuerte con participación social.",
+      "excerpt": "la dominación europea... » 124• La revolución cuzqueña de 1814 coin­ cidió igualmente con este planteamiento puntualizando en",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 209,
+      "resourceId": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "source_type": "youtube",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "8bbfe40c7b80c8a97a0693ca88c42024e0d7bf98544b4b1d2d57b772aa2b28d6",
+      "dominant_subtopic": "historiografia_posterior",
+      "coverage_evidence_type": "metahistorical",
+      "reason": "Paradigma nacional y su crisis en sigloXX, sin mecanismo histórico desarrollado aquí.",
+      "excerpt": "sido la más influyente en ese momento este en el siglo XX por el contrario más bien lo nuevo lo renovador era la interpretaci",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 237,
+      "resourceId": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "source_type": "youtube",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "062e3a1d0c832645397a0309cb187bf2d86a05a9890d74f8ceb367e474120510",
+      "dominant_subtopic": "modernidad_sociabilidad",
+      "coverage_evidence_type": "fragmentary",
+      "reason": "Independencia como onda política occidental; explicación causal cortada.",
+      "excerpt": "la conciencia nacional no miren desde varios desde varios posiciones este paradigma es es Eh Eh Eh criticado puesto e en en c",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 273,
+      "resourceId": "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "6ee34efe2f7ddbb59c84790493d01062c1354e35d443a412e053aa33806d6a6d",
+      "dominant_subtopic": "programas_fiscales",
+      "coverage_evidence_type": "fragmentary",
+      "reason": "Continuidad del tributo en rebelión cuzqueña; afirmación breve rodeada de notas.",
+      "excerpt": "nte la rebelión, la recolección de tributos siguió funcionando (O'Phelan, 1985: 189). 23 aray, Intendencia, Leg. 22, Causas Criminales, 1816, f. ",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 274,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "69eaea88ec451485d431bfcaff38035426128058b389104b03e69e53893176f4",
+      "dominant_subtopic": "interpretacion_independencia",
+      "coverage_evidence_type": "substantive",
+      "reason": "Iniciativa anticolonial surandina hasta1814 frente a Lima y tesis de concesión.",
+      "excerpt": "gramas que sustentaron las rebeliones de los siglos XVIII y temprano XIX, y que dieron una coherencia interna a dichos movimi",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 346,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "dcf8a99fee42add47057d08beef8be82a91faa511d250393a81de9954a25e367",
+      "dominant_subtopic": "programas_sociales",
+      "coverage_evidence_type": "fragmentary",
+      "reason": "Composición social determina reivindicaciones; diferencia rebelión programática y revuelta; límites cortados.",
+      "excerpt": "ctpto con la presencia de elementos indígenas, en las rebeliones del XIX. sólo en un segundo momento los dirigentes criollos ",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 379,
+      "resourceId": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "source_type": "youtube",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "05a9deccfd0fd28f3d03b593d0a70b7d328578d0ebe8c71a70ec5a8569ef095a",
+      "dominant_subtopic": "historiografia_posterior",
+      "coverage_evidence_type": "metahistorical",
+      "reason": "Relato de Paz Soldán y nacionalización de memoria en centenario; las campañas son referencias.",
+      "excerpt": "en el libro de Mariano Enrique pas soldán no historia del Perú independiente eh dos volúmenes y en su relato en la reconstruc",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 391,
+      "resourceId": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "source_type": "youtube",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "f967357d2f1a114e34c3e185aab4a7d950a5e0a3ff24077cec1eb7a909b96dcd",
+      "dominant_subtopic": "interpretacion_independencia",
+      "coverage_evidence_type": "fragmentary",
+      "reason": "Tesis de conciencia criolla como causa; exposición incompleta.",
+      "excerpt": "siguiente este uno puede decir que durante muchos años O sea casi en realidad casi casi en en los 200 años de vida republican",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 392,
+      "resourceId": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "source_type": "youtube",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "e73c13b93ad6c530b2bc7a091d80c25baa7b1d8eb9da84e9029abab99c39f482",
+      "dominant_subtopic": "interpretacion_independencia",
+      "coverage_evidence_type": "substantive",
+      "reason": "Conciencia criolla, ruptura y autogobierno como explicación debatida por actores.",
+      "excerpt": "grupo específico diferenciado de los españoles peninsulares de la metrópoli desarrollan un cuerpo de de ideas un conjunto de ",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 393,
+      "resourceId": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "source_type": "youtube",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "5a3c096b34ec13c4e2f2ae5a83c47b7399a034e6682138fdaa86674266345d66",
+      "dominant_subtopic": "historiografia_posterior",
+      "coverage_evidence_type": "metahistorical",
+      "reason": "Recepción de tesis de Bonilla/Spalding en sesquicentenario sin mecanismo causal desarrollado.",
+      "excerpt": "orillados a a esa interpretación que se parecería a lo que llamaríamos la independencia ideal o la independencia oficial pero",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 394,
+      "resourceId": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "source_type": "youtube",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "f28abb2f6163a45d5e9cfe5e1fb5e514976c0585e2093ca9f1e58fc94054433a",
+      "dominant_subtopic": "interpretacion_independencia",
+      "coverage_evidence_type": "substantive",
+      "reason": "Monteagudo: fuerzas externas y conciencia criolla débil; debate de1820.",
+      "excerpt": "sentido que eh la independencia de acuerdo a monteagudo y a su entorno no era resultado de ninguna maduración de la concienci",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 395,
+      "resourceId": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "source_type": "youtube",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "350014b4a522703a6c360c06893278828f56036e5643e9f8c2091b2e9a0ced0b",
+      "dominant_subtopic": "interpretacion_independencia",
+      "coverage_evidence_type": "substantive",
+      "reason": "Convocatoria de1822 sobre demora limeña y confrontación conciencia/concesión.",
+      "excerpt": "convocatoria a presentar ensayos en [Música] 1822 para responder la siguiente pregunta no Por qué había tardado eh el proceso",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 399,
+      "resourceId": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "source_type": "youtube",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "cd07f9417f4fa59a997db7562098cb7da42035ce4a16b0bb7ee9aa92fc908665",
+      "dominant_subtopic": "historiografia_posterior",
+      "coverage_evidence_type": "metahistorical",
+      "reason": "Agenda de investigar grupo peruano omitido; no desarrolla su identidad o actuación.",
+      "excerpt": "seguir reflexionando sobre sobre temas tan importantes y creo que fundamentales en lo que vendría a ser la historiografía no ",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 413,
+      "resourceId": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "source_type": "youtube",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "ce038c55b9f6f57069dcc2ed649e1dcf554b8137ff46e887e708a7df25507eb5",
+      "dominant_subtopic": "cadiz_representacion",
+      "coverage_evidence_type": "substantive",
+      "reason": "Representantes americanos pasan de mandato corporativo a nación abstracta en Cortes.",
+      "excerpt": "en rápida ente como representantes de la nación como representantes este de una nación abstracta Bueno este y pienso",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 414,
+      "resourceId": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "source_type": "youtube",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "41bd2fee3f14acd3993ef78e9012ea4ef5ba63d1f92258c2683aa5cfb5a23aee",
+      "dominant_subtopic": "historiografia_posterior",
+      "coverage_evidence_type": "metahistorical",
+      "reason": "Gestión de preguntas y anuncio de explicación de Guerra; corta antes del argumento.",
+      "excerpt": "para trasladar a los expositores por redes no hay preguntas profesor bueno entonces de momento nos quedamos con estas interro",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 415,
+      "resourceId": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "source_type": "youtube",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "df227b96dfb821bb53155db73ff4d5a9e285e95b98380e6b6ea29483777eb2cc",
+      "dominant_subtopic": "historiografia_posterior",
+      "coverage_evidence_type": "metahistorical",
+      "reason": "Valoraciones de escuelas y anuncio de literatura de guerras/Estado, sin caso desarrollado.",
+      "excerpt": "términos muy generales Yo diría que sí que la tesis de la de la independencia concedida Me parece que se alinea con estas pos",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 455,
+      "resourceId": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "773f4eab39fdd221edbe4470777e8085cbad94aade99ebc4f81572b4b9c17d91",
+      "dominant_subtopic": "patria_identidad",
+      "coverage_evidence_type": "substantive",
+      "reason": "Patria y progreso; relación país-hombre-Estado-sociedad; cronología interna poco delimitada.",
+      "excerpt": "2). La idea de Patria, se une, a la vez a una visión optimista del futuro. Las trabas que la legislación colonial puso al com",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 467,
+      "resourceId": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "23a98773e035fbcbe88bfe77b9745c54738d563cf3fdaa3ebe7ea11b7e58b54e",
+      "dominant_subtopic": "patria_identidad",
+      "coverage_evidence_type": "substantive",
+      "reason": "Patria y compatriotas en crisis napoleónica y prensa de1811–1814.",
+      "excerpt": " de la felicidad”. “Compatriotas” son, por esos años, los españoles y los americanos en lucha contra Napoleón y unidos, en el nombre, por un régi",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 557,
+      "resourceId": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "11505c81a59bb3f80afbe2ab48501164ffeaf74e46d1b7e499cdc64c45fc3b81",
+      "dominant_subtopic": "liberalismo_religioso",
+      "coverage_evidence_type": "substantive",
+      "reason": "Regalismo/jansenismo y difusión intelectual en1825/1833.",
+      "excerpt": "IX sin referirse al regalismo y al jansenismo. Vidaurre, Vigil y Francisco Javier Miarátegui lo encarnaron; pero no fueron los únicos. Benito Las",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 560,
+      "resourceId": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "2c823c888db197a27d56b344d5d122cc19c0f1e7913b2a9f6ee369c23bd1cf79",
+      "dominant_subtopic": "patria_identidad",
+      "coverage_evidence_type": "mixed",
+      "reason": "Vocabulario de patria y orgullo criollo; cabecera y texto marginal intercalados.",
+      "excerpt": "241 CAPÍTULO 12 PERÍODO 1 DESDE EL PUNTO DE VISTA POLÍTICO, EN ESPAÑA, LA ACEPTACIÓN DE LAS IDEAS REFORMISTAS, ALGUNAS DE LAS",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 583,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "864496c59b4925d87ea2da44e116842bef2bc959edfae2cb26ddf44baf989948",
+      "dominant_subtopic": "programas_sociales",
+      "coverage_evidence_type": "outside_period",
+      "reason": "Cargos políticos en programas de1730/1739 sin conexión explícita con1780–1842 en el texto.",
+      "excerpt": " Alejo Calatayud en 1730, con el manifiesto de Oruro de 1739; éste sería indudablemente la propuesta de que individuos alternativos a los nombrad",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 588,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "49177764bc4c6cf23625eb96092b6091c7b67b6e247b4b707b1b39a450239eb7",
+      "dominant_subtopic": "programas_fiscales",
+      "coverage_evidence_type": "fragmentary",
+      "reason": "Antialcabalas y antimonopolios como intereses criollos1809/1814; final cortado.",
+      "excerpt": "unciaron contra los monopolios. La primera suprimió los monopolios del carbón. sal y jer!}a, reponiendo a Don Tomás Orrantia en el cargo de admin",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 589,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "6c3ead13289a874cfaec38f4922b4bc4fb2ebd999364cd60dd58d4f935cbf92d",
+      "dominant_subtopic": "interpretacion_independencia",
+      "coverage_evidence_type": "substantive",
+      "reason": "Fracaso de autonomía surandina por límites regionales del programa, no falta de iniciativa.",
+      "excerpt": "se de su consolidad óptica regionalista y de los fracasos de 1809 y 1814 para encarar la segunda y definitiva fa­ se. La independencia le fue «co",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 590,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "ba5b64b88e30cff3a70d5922675dc4feff8616cb64e7daede3d09c5a5ff5d0de",
+      "dominant_subtopic": "religion_legitimacion",
+      "coverage_evidence_type": "fragmentary",
+      "reason": "Respeto de insurrectos al clero, generalización breve con inicio dependiente.",
+      "excerpt": "Túpac Amaru, a quien Moscoso había excomulgado. Posiblemente el obispo arequipeño, en su condición de criollo, se viera conmi",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 596,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "95ead65a0a09d8be82607a316da0a8279e021411dd08233592f7e79bfb2bc2ba",
+      "dominant_subtopic": "antipeninsularismo",
+      "coverage_evidence_type": "fragmentary",
+      "reason": "Agresiones a europeos vinculadas a intereses comerciales; oración rota y frontera social/militar.",
+      "excerpt": "catalán Don Joseph Camperos 110• En 1781 los criollos orureños circu· laron un edicto en el cual se enfatizaba que el objetiv",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 598,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "ad36193c6a5ac90c0fe7cdb26f1c2763ae83bf0f7bcb4ab01e218ae0eb9af959",
+      "dominant_subtopic": "antipeninsularismo",
+      "coverage_evidence_type": "fragmentary",
+      "reason": "Acciones selectivas contra realistas y reducción del poder criollo por Gálvez; cierre cortado.",
+      "excerpt": "No es del todo casual entonces que en la revolución del Cuzco de 1814, Gaspar Herguinio fuera tomado prisionero por los solda",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 600,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "25d2b18cb4aff7bfa24a1a6661af24b79573184b4d27b2ec870761bf508d4701",
+      "dominant_subtopic": "programas_sociales",
+      "coverage_evidence_type": "substantive",
+      "reason": "Juntas cambian gobernantes sin régimen nuevo y excluyen sectores indígenas/mestizos.",
+      "excerpt": "imen, sino tan solo un cambio de gobernantes en vista del abuso que hacían de su autoridad los existentes»149 • Efectivamente, en la revolución d",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 603,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "34967114eb410ff34178a3799fc8ed24c8f121337d4142e2e4cb3e7ca0e5d035",
+      "dominant_subtopic": "juntas_regionales",
+      "coverage_evidence_type": "fragmentary",
+      "reason": "Sustitución/conservación de subdelegados y nueva proclama; final intrapalabra y notas.",
+      "excerpt": "ierno se procedió a destituir a los subdelegados de Larecaja, Omasuyos, Sicasica, Chulumani y Parajes, nominándoo;e nuevos representantes145, en ",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 607,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "4683ddbffbf0d16794a1c747387715f297e3bd86c8a32d06e31cd4c9a1d72601",
+      "dominant_subtopic": "programas_sociales",
+      "coverage_evidence_type": "substantive",
+      "reason": "Aprendizaje criollo sobre movilización y límites al liderazgo indígena.",
+      "excerpt": "los caciques tenían capacidad de liderar a las masas indígenas. Comprendieron también que los caciques no podían ganar un peso decisivo en la dir",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 609,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "57a3e3d83e3e5c16d55a785b6da3488efb00081a4606c2f1f814a7733cd20383",
+      "dominant_subtopic": "antipeninsularismo",
+      "coverage_evidence_type": "fragmentary",
+      "reason": "Relegación criolla/mestiza ante peninsulares;1739 y mención truncada de1780.",
+      "excerpt": "Inclusive muchos sacerdotes en su calidad de criollos. debieron sentirse doblemente marginados, frente al corregidor por un l",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 610,
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "b5fbbdb32d1bab049feb8008b88db65497480db9d3a8d874d77e40bf998a7d69",
+      "dominant_subtopic": "programas_fiscales",
+      "coverage_evidence_type": "mixed",
+      "reason": "Promesas de abolición frente a continuidad de mita/tributo; introduce conclusiones generales.",
+      "excerpt": " los repat­ tos, la mita siguió operando y la recolección de tributos funcionando. Conclusiones. Con el presente tr.abajo he intentado demostrar ",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 667,
+      "resourceId": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "source_type": "youtube",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "2ef457617b4e1e753d972a27f0ac0470762bc19509b6360ec9e6563fe1ec1d11",
+      "dominant_subtopic": "modernidad_sociabilidad",
+      "coverage_evidence_type": "substantive",
+      "reason": "Nuevas sociabilidades y crisis imperial como mecanismo occidental de emancipación.",
+      "excerpt": "as eh sociedades de nuevas sociabilidades nuevas sociedades ilustrados sociedades este tipo Amantes del país no nuevos sujetos sociales nuevas so",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 678,
+      "resourceId": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "source_type": "youtube",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "5076619bd0cab769f63cca46249d0c653d1488d2654e80b5455b3585db126c8d",
+      "dominant_subtopic": "historiografia_posterior",
+      "coverage_evidence_type": "metahistorical",
+      "reason": "Predomina cambio de enfoques desde los noventa; primera oración depende de explicación previa.",
+      "excerpt": "este o los reacomodos que ocurren en América en América Española y en en la propia España son este consecuencia de este proce",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 681,
+      "resourceId": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "source_type": "youtube",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "58dd5b429f0449ea1561c7a5c02cab0b04b04061b3601f4432bc25af6b58fd18",
+      "dominant_subtopic": "modernidad_sociabilidad",
+      "coverage_evidence_type": "substantive",
+      "reason": "Asociaciones voluntarias rompen vasallaje y patrones corporativos; argumento reconocible pese a límites.",
+      "excerpt": " son individuos que libremente se asocian que que que han roto con los patrones tradicionales de de lo corporativo de la sociedad pues antigo rég",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 684,
+      "resourceId": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "source_type": "youtube",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "73a3291234a22d764eaa59691733014ca92ede3fbebe9801aa65847e35938110",
+      "dominant_subtopic": "modernidad_sociabilidad",
+      "coverage_evidence_type": "substantive",
+      "reason": "Contexto global modifica cálculos locales; comparación Lima/Buenos Aires.",
+      "excerpt": "colores a una historia que es general no Entonces desde ese punto de vista Yo diría que cuando no piensa en la independencia ",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 692,
+      "resourceId": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "source_type": "youtube",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "05ff40609aa9c6e5713c2efa4d3ccbc1f203ed4f7bc9dedd1296eddf3b703400",
+      "dominant_subtopic": "interpretacion_independencia",
+      "coverage_evidence_type": "substantive",
+      "reason": "Declaración limeña explicada por cerco y miedo al desorden; no normaliza atribución dañada.",
+      "excerpt": "que sí que que hay que guerra influye mucho en la historiografía sobre todo este en quienes hacen la historia eh de la ciudad",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 699,
+      "resourceId": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "a090b333c55d2c69742296c90e7c492fa09812cecb61b7592d43fd0911f596a0",
+      "dominant_subtopic": "paratexto_simbolos",
+      "coverage_evidence_type": "mixed",
+      "reason": "Cita de opinión pública y explicación material de bandera; no cobertura sólida de prensa.",
+      "excerpt": "La opinión pública es un nuevo resorte introducido en los asuntos de estos países: los españoles, incapaces de dirigirla, la ",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 738,
+      "resourceId": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "126f6220bdb906a40e2d009cd83dbad2ede0c758ebd02a4ba97163f58eeac7bb",
+      "dominant_subtopic": "limites_sociales_liberalismo",
+      "coverage_evidence_type": "substantive",
+      "reason": "Riqueza/esclavitud y preferencias de régimen como límites a libertad en Lima.",
+      "excerpt": "en justo y liberal: oro y esclavos. El primero lo corrompe todo; el segundo está corrompido por sí mismo. El alma de un siervo rara vez alcanza a",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 756,
+      "resourceId": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "f63597952a40d379e967f96a9f6d969ffbc80816f7026845a10f942570c2b58c",
+      "dominant_subtopic": "patria_identidad",
+      "coverage_evidence_type": "substantive",
+      "reason": "Componente hispánico e indigenista de patria; no desarrolla legitimidad dinástica inca.",
+      "excerpt": "as y negaciones, un elemento hispánico en la idea de patria. EL elemento INDIGENISTA.- Pero en ella hay también, durante esta época, una afirmaci",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 793,
+      "resourceId": "48262fb6-dee2-531e-b001-536c5928a9ca",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "674972b0ac958812c62dc12735b3e663ca6019a21467cd0e682c0d3856e134f7",
+      "dominant_subtopic": "religion_legitimacion",
+      "coverage_evidence_type": "substantive",
+      "reason": "Metáforas bíblicas legitiman Protectorado/liberación, no programa insurrecto de respeto al clero.",
+      "excerpt": " fenómeno, pues las metáforas bíblicas también están presentes en las proclamas de algunos sacerdotes peruanos. No faltó un cura que se refirió a",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 794,
+      "resourceId": "48262fb6-dee2-531e-b001-536c5928a9ca",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "8b9d6b3f148cdd7916984ea7f4202d12db8d81c4baf18b750d7b2ffd8b3389fe",
+      "dominant_subtopic": "prensa_circulacion",
+      "coverage_evidence_type": "substantive",
+      "reason": "Propaganda impresa para difusión oral a público no letrado; proclama sanmartiniana.",
+      "excerpt": "aberse escrito para difundirse oralmente. Su objetivo, después de todo, era llegar a la mayor cantidad de personas posible: no estaban dirigidas ",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 795,
+      "resourceId": "48262fb6-dee2-531e-b001-536c5928a9ca",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "016fe2fcf8f5b1085df06331cfef5242a0ab3c5a8c2465d71777831d8bc3d7af",
+      "dominant_subtopic": "prensa_circulacion",
+      "coverage_evidence_type": "substantive",
+      "reason": "Carta1821 evidencia demanda regional de literatura política y derechos en Catacaos.",
+      "excerpt": "o de la doctrina de Catacaos, en la que le pide encargar a Lima dos «obritas» que se podían conseguir ahí. Se trataba de «El Clamor de la Justici",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 796,
+      "resourceId": "48262fb6-dee2-531e-b001-536c5928a9ca",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "059e61847e9fc5d7d9ed63facf83a8685e0e18c3b95cdda66c0451313ab32a22",
+      "dominant_subtopic": "prensa_censura",
+      "coverage_evidence_type": "substantive",
+      "reason": "Polos fidelista/patriota y lectura de impresos incluso prohibidos.",
+      "excerpt": ", se encontraba la «prensa fidelista», cuyos ejemplos más notables lo constituían El Triunfo de la Nación y El Depositario. Y, por otro, se encon",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 813,
+      "resourceId": "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "824a718c434c3c85c352bdb4358f2740b8818f9fb854a21eb4f3fd197e7a5780",
+      "dominant_subtopic": "prensa_circulacion",
+      "coverage_evidence_type": "substantive",
+      "reason": "Diario busca ilustrar clases populares e imprime en Buenos Aires para sortear censura.",
+      "excerpt": " ilustración de las clases más ínfimas, explotadas y numerosas de la sociedad colonial. El objetivo era destruir la ignorancia y el despotismo de",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 814,
+      "resourceId": "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "6d61ce45abc8b51ebd30cb94b1b93047549b118235681886c923de32ddf07ce6",
+      "dominant_subtopic": "crisis_monarquia_juntas",
+      "coverage_evidence_type": "substantive",
+      "reason": "Crisis1808 y juntas1810 explican conflicto discursivo rioplatense-limeño.",
+      "excerpt": " del contexto de la crisis de 1808, el influjo de aquella crisis en las colonias americanas durante el denominado bienio trascendental (1808-1810",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 815,
+      "resourceId": "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "74497a6f88c65e65d3f6570390dd20fdfe89ccc0786732eeaadb68a096c599f6",
+      "dominant_subtopic": "prensa_controversia_juntas",
+      "coverage_evidence_type": "substantive",
+      "reason": "Argumentos realistas niegan necesidad y legitimidad de juntas americanas.",
+      "excerpt": "política colonial: “Buscad la necesidad de esas juntas y no la encontrareis. Si en España han sido precisas en América han faltado enteramente lo",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 816,
+      "resourceId": "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "c7b5b5911966c2a964db092977cbb6f329bb12a83768e231b509585a138b6362",
+      "dominant_subtopic": "prensa_controversia_juntas",
+      "coverage_evidence_type": "substantive",
+      "reason": "Gaceta denuncia dependencia del Alto Perú respecto de Buenos Aires tras victoria revolucionaria.",
+      "excerpt": "se convierta en una humilde y servil dependencia de Buenos Aires” (La Gaceta del Gobierno de Lima. N° 30, del miércoles 20 de febrero de 1811). L",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 817,
+      "resourceId": "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "c59a4eeb0b8d1189dcf43f667a5fa5cf07dbb63b6f674dcc9b48e4de3760744b",
+      "dominant_subtopic": "prensa_censura",
+      "coverage_evidence_type": "substantive",
+      "reason": "Monopolio realista de comunicaciones y emergencia de oposición clandestina.",
+      "excerpt": " del Alto Perú y el monopolio realista de las comunicaciones y la libertad de prensa, a pesar de los debates de corte liberal en Cádiz, hacían ca",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 818,
+      "resourceId": "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "f2a4801d53f0d35df883dfd024c22019e5af98d03fbf4102a3b071c3f279ec42",
+      "dominant_subtopic": "prensa_censura",
+      "coverage_evidence_type": "substantive",
+      "reason": "Censura, paso manuscrito/impreso y politización en1811.",
+      "excerpt": "rmar parte de estas publicaciones clandestinas e insurgentes que estuvieron siempre en la mira del régimen español. Pero la crisis hispana y los ",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 819,
+      "resourceId": "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "049d1bb56bfa7a109f589eb016d2c339a4db87162c40bd227c2feaaa35110821",
+      "dominant_subtopic": "prensa_sociabilidad",
+      "coverage_evidence_type": "substantive",
+      "reason": "Tertulias y lectura relacionadas con conspiraciones1809/1810 mediante expedientes.",
+      "excerpt": "bierno califico de “tertulias sediciosas” a las establecidas por Francisco Pérez Canosa y José Mateo Silva en 1809 y del presbítero Juan Eduardo ",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 820,
+      "resourceId": "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "084be708f0aea05ed1c548aa8a5e62d3044102bbc39d6ad1c505df4e6ce0a944",
+      "dominant_subtopic": "prensa_circulacion",
+      "coverage_evidence_type": "substantive",
+      "reason": "Programa de copia entre lectores para circulación de doctrina emancipadora1811.",
+      "excerpt": " sujeto que lo lea, lo copie, y lo haga circular con brevedad por entre sus amigos […]. El plan de este diario no es otro que hacer circular con ",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 821,
+      "resourceId": "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "555631e5e60e0c5a1a4ebc6f67ba81c5dc61f54e9269e745b260b0e983169574",
+      "dominant_subtopic": "prensa_sociabilidad",
+      "coverage_evidence_type": "substantive",
+      "reason": "Red clandestina y oralidad contestataria frente a represión de tertulias.",
+      "excerpt": " consideró que esa “oralidad contestataria” de las tertulias no podía ser erradicada y combatida cuando eran en estos espacios de sociabilidad do",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 822,
+      "resourceId": "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "b41c850e47baeca6369790b25fc8fd39da324739ade0b3ffbed4f59d3887587a",
+      "dominant_subtopic": "prensa_circulacion",
+      "coverage_evidence_type": "substantive",
+      "reason": "Lectura de gacetas de varias ciudades y resúmenes para formar opinión americana.",
+      "excerpt": "d todos los días el catecismo político”, incluso, advertía que los limeños y los patriotas del virreinato debían suscribirse al Diario Secreto y ",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 823,
+      "resourceId": "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "10b676be2b5742a2941c4612ebdd511f5ddaaaec54772a1da6d8efe53b5816b4",
+      "dominant_subtopic": "prensa_circulacion",
+      "coverage_evidence_type": "substantive",
+      "reason": "Recepción documentada del Diario en Trujillo y Cuzco.",
+      "excerpt": "008: 373-374). Esta circulación regional del manuscrito supone repensar los efectos que pudiera haber ocasionado su discurso político contestatar",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 824,
+      "resourceId": "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "123891232f2863693d9df070b38bd30ed067a95f5c969fe68887db547d1b4bec",
+      "dominant_subtopic": "prensa_circulacion",
+      "coverage_evidence_type": "substantive",
+      "reason": "Paso manuscrito/impreso y circulación porteña como respuesta propagandística a Guaqui.",
+      "excerpt": " impresa adquiriría relevancia continental y evidenciaría la importancia política de la circulación de la información y los discursos políticos d",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 826,
+      "resourceId": "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "ef0336fe9a3362631c1ee493085674c8bba3654c96c4ca51e170f6732157f217",
+      "dominant_subtopic": "crisis_monarquia_juntas",
+      "coverage_evidence_type": "substantive",
+      "reason": "Discurso apoya junta porteña y pide auxilio desde Lima; circulación editorial no es foco de esta cita.",
+      "excerpt": "a instalación de la Junta de Buenos Aires, se notó en el semblante del mayor número de sus moradores una extraordinaria alegría, anuncio precurso",
+      "label_change_proposed": false
+    },
+    {
+      "v4_index": 830,
+      "resourceId": "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+      "source_type": "pdf",
+      "existing_label": "crisis_ideas_emancipadoras",
+      "text_sha256": "ed859dcd66fd8a182826ce70a340b529c8a1c50f904f5a3624412722aebd5111",
+      "dominant_subtopic": "prensa_legitimidad",
+      "coverage_evidence_type": "substantive",
+      "reason": "Reescritura y circulación clandestina erosionan legitimidad monárquica.",
+      "excerpt": "cos ocultos) fueron socavando la legitimidad política de la monarquía española en el Perú y además en América con lo cual la irrupción del libera",
+      "label_change_proposed": false
+    }
+  ],
+  "source_summary": [
+    {
+      "resourceId": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "working_name": "O’Phelan",
+      "count": 25,
+      "v4_indices": [
+        113,
+        125,
+        126,
+        128,
+        130,
+        131,
+        137,
+        160,
+        168,
+        180,
+        181,
+        182,
+        274,
+        346,
+        583,
+        588,
+        589,
+        590,
+        596,
+        598,
+        600,
+        603,
+        607,
+        609,
+        610
+      ],
+      "subtopics": {
+        "interpretacion_independencia": 3,
+        "juntas_regionales": 4,
+        "legitimidad_inca": 5,
+        "antipeninsularismo": 6,
+        "programas_sociales": 4,
+        "programas_fiscales": 2,
+        "religion_legitimacion": 1
+      },
+      "evidence_types": {
+        "fragmentary": 12,
+        "substantive": 8,
+        "mixed": 4,
+        "outside_period": 1
+      }
+    },
+    {
+      "resourceId": "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+      "working_name": "Huamanga",
+      "count": 3,
+      "v4_indices": [
+        74,
+        75,
+        273
+      ],
+      "subtopics": {
+        "cadiz_local": 2,
+        "programas_fiscales": 1
+      },
+      "evidence_types": {
+        "mixed": 1,
+        "substantive": 1,
+        "fragmentary": 1
+      }
+    },
+    {
+      "resourceId": "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+      "working_name": "Morán: Diario Secreto",
+      "count": 14,
+      "v4_indices": [
+        813,
+        814,
+        815,
+        816,
+        817,
+        818,
+        819,
+        820,
+        821,
+        822,
+        823,
+        824,
+        826,
+        830
+      ],
+      "subtopics": {
+        "prensa_circulacion": 5,
+        "crisis_monarquia_juntas": 2,
+        "prensa_controversia_juntas": 2,
+        "prensa_censura": 2,
+        "prensa_sociabilidad": 2,
+        "prensa_legitimidad": 1
+      },
+      "evidence_types": {
+        "substantive": 14
+      }
+    },
+    {
+      "resourceId": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "working_name": "Fuente oral514f190e, identidad bibliográfica no comprobada aquí",
+      "count": 17,
+      "v4_indices": [
+        209,
+        237,
+        379,
+        391,
+        392,
+        393,
+        394,
+        395,
+        399,
+        413,
+        414,
+        415,
+        667,
+        678,
+        681,
+        684,
+        692
+      ],
+      "subtopics": {
+        "historiografia_posterior": 7,
+        "modernidad_sociabilidad": 4,
+        "interpretacion_independencia": 5,
+        "cadiz_representacion": 1
+      },
+      "evidence_types": {
+        "metahistorical": 7,
+        "fragmentary": 2,
+        "substantive": 8
+      }
+    },
+    {
+      "resourceId": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "working_name": "PDF de síntesis747ca90f, identidad bibliográfica no comprobada aquí",
+      "count": 7,
+      "v4_indices": [
+        455,
+        467,
+        557,
+        560,
+        699,
+        738,
+        756
+      ],
+      "subtopics": {
+        "patria_identidad": 4,
+        "liberalismo_religioso": 1,
+        "paratexto_simbolos": 1,
+        "limites_sociales_liberalismo": 1
+      },
+      "evidence_types": {
+        "substantive": 5,
+        "mixed": 2
+      }
+    },
+    {
+      "resourceId": "48262fb6-dee2-531e-b001-536c5928a9ca",
+      "working_name": "PDF48262fb6 sobre proclamas/literatura, identidad bibliográfica no comprobada aquí",
+      "count": 4,
+      "v4_indices": [
+        793,
+        794,
+        795,
+        796
+      ],
+      "subtopics": {
+        "religion_legitimacion": 1,
+        "prensa_circulacion": 2,
+        "prensa_censura": 1
+      },
+      "evidence_types": {
+        "substantive": 4
+      }
+    }
+  ],
+  "dominant_subtopic_counts": {
+    "cadiz_local": 2,
+    "interpretacion_independencia": 8,
+    "juntas_regionales": 4,
+    "legitimidad_inca": 5,
+    "antipeninsularismo": 6,
+    "historiografia_posterior": 7,
+    "modernidad_sociabilidad": 4,
+    "programas_fiscales": 3,
+    "programas_sociales": 4,
+    "cadiz_representacion": 1,
+    "patria_identidad": 4,
+    "liberalismo_religioso": 1,
+    "religion_legitimacion": 2,
+    "paratexto_simbolos": 1,
+    "limites_sociales_liberalismo": 1,
+    "prensa_circulacion": 7,
+    "prensa_censura": 3,
+    "crisis_monarquia_juntas": 2,
+    "prensa_controversia_juntas": 2,
+    "prensa_sociabilidad": 2,
+    "prensa_legitimidad": 1
+  },
+  "coverage_evidence_counts": {
+    "mixed": 7,
+    "substantive": 40,
+    "fragmentary": 15,
+    "metahistorical": 7,
+    "outside_period": 1
+  },
+  "source_removal_scenarios": [
+    {
+      "name": "remove_ophelan_huamanga",
+      "removed_count": 28,
+      "remaining_count": 42,
+      "excluded_resource_ids": [
+        "0ea45102-057d-4bff-b527-f36326f66d33",
+        "9fecbe5a-9fb2-4002-a088-8a2810db938e"
+      ],
+      "specific_gaps": [
+        {
+          "topic": "Legitimidad dinástica inca y su relación con vacancia real",
+          "lost_examples": [
+            126,
+            128,
+            130,
+            137,
+            168
+          ],
+          "nearest_remaining": [
+            756,
+            738
+          ],
+          "finding": "756 menciona componente indigenista de patria y738 condiciones sociales del régimen; ninguno desarrolla restitución de corona ni legitimidad dinástica."
+        },
+        {
+          "topic": "Cádiz empleado en litigio indígena de tierras",
+          "lost_examples": [
+            75
+          ],
+          "nearest_remaining": [
+            413,
+            467
+          ],
+          "finding": "413 desarrolla representación nacional y467 vocabulario de patria, sin caso jurídico-local comparable."
+        },
+        {
+          "topic": "Programas de juntas del sur andino: cargos, coaliciones y tributos",
+          "lost_examples": [
+            125,
+            131,
+            273,
+            588,
+            600,
+            603,
+            607,
+            610
+          ],
+          "nearest_remaining": [
+            814,
+            815,
+            816,
+            826
+          ],
+          "finding": "Las juntas subsisten como coyuntura y objeto polémico en prensa; no quedan casos comparables de programa de cargos/tributos y coaliciones de La Paz/Cuzco."
+        }
+      ],
+      "broad_topics_retained": {
+        "crisis_juntas": [
+          467,
+          667,
+          814,
+          815,
+          826
+        ],
+        "prensa": [
+          794,
+          795,
+          796,
+          820,
+          824
+        ],
+        "liberalismo_cadiz": [
+          413,
+          557
+        ],
+        "interpretacion_independencia": [
+          392,
+          394,
+          395,
+          692
+        ]
+      },
+      "caution": "Se retiran simultáneamente fuentes y subtemas; no es prueba pura de estilo. Algunos ejemplos perdidos son fragmentarios y no equivalen a unidades listas para entrenar."
+    },
+    {
+      "name": "remove_moran",
+      "removed_count": 14,
+      "remaining_count": 56,
+      "excluded_resource_ids": [
+        "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a"
+      ],
+      "specific_gaps": [
+        {
+          "topic": "Circuito manuscrito clandestino1811 y reescritura colectiva con paso a Gaceta porteña",
+          "lost_examples": [
+            813,
+            817,
+            818,
+            819,
+            820,
+            821,
+            822,
+            823,
+            824,
+            830
+          ],
+          "nearest_remaining": [
+            794,
+            795,
+            796,
+            160
+          ],
+          "finding": "Quedan oralidad, demanda de lectura, censura y mención de conspiración. No se desarrolla el mismo circuito manuscrito, de tertulias y reescritura del Diario."
+        },
+        {
+          "topic": "Argumentos fidelistas contra legitimidad de juntas americanas",
+          "lost_examples": [
+            815,
+            816
+          ],
+          "nearest_remaining": [
+            131,
+            467,
+            796
+          ],
+          "finding": "Quedan adopción de juntas y polos de prensa, pero no argumentos contrarrevolucionarios comparables desarrollados en citas."
+        }
+      ],
+      "broad_topics_retained": {
+        "prensa_circulacion": [
+          794,
+          795,
+          796
+        ],
+        "patria_prensa": [
+          467
+        ],
+        "juntas_vacancia": [
+          125,
+          126,
+          131
+        ]
+      },
+      "caution": "Prensa no desaparece. Catorce filas de una obra/circuito documental no son catorce fuentes independientes."
+    }
+  ],
+  "boundary_observations": [
+    {
+      "issue": "Programa político frente a participación social",
+      "indices": [
+        75,
+        181,
+        182,
+        596,
+        600,
+        607,
+        610
+      ],
+      "detail": "Desarrollan intereses, composición y agencia. Necesitan criterios consistentes de dominancia; no se propone relabel en esta tarea."
+    },
+    {
+      "issue": "Historiografía posterior no equivale a casos de crisis o liberalismo",
+      "indices": [
+        209,
+        379,
+        393,
+        399,
+        414,
+        415,
+        678
+      ],
+      "detail": "Se conservan en inventario, pero no se cuentan como siete argumentos históricos sustantivos equivalentes."
+    },
+    {
+      "issue": "Persisten unidades con cortes y notas",
+      "indices": [
+        168,
+        273,
+        588,
+        598,
+        603
+      ],
+      "detail": "La limpieza previa fue puntual; no certifica integridad del conjunto."
+    },
+    {
+      "issue": "Alcance temporal",
+      "indices": [
+        583
+      ],
+      "detail": "Programa de1730/1739 sin conexión interna con1780–1842; no cuenta como ejemplo comparable del periodo."
+    },
+    {
+      "issue": "Mezcla de material",
+      "indices": [
+        699
+      ],
+      "detail": "Cita breve de opinión y especificaciones de bandera no aportan desarrollo de prensa suficiente."
+    }
+  ],
+  "limited_conclusions": [
+    "Hay asociación visible entre fuente y subtema: retirar grupos cambia simultáneamente autores, casos y argumentos. Esto no identifica por sí solo causa de rendimiento.",
+    "La amplitud de la clase está prevista en la guía. El inventario no demuestra necesidad de fusionar/eliminar categorías, pero sí necesidad de ejemplos y fronteras consistentes frente a participación y proyectos políticos.",
+    "Conviene estabilizar unidades y criterios y ampliar cobertura de los mismos problemas históricos en obras diferentes antes de interpretar todo déficit como entrenamiento insuficiente. No se recomiendan ni adquieren fuentes concretas aquí.",
+    "Prensa conserva ejemplos sin Morán. Legitimidad dinástica inca y uso de Cádiz en litigio indígena carecen de equivalentes sustantivos claros fuera de O’Phelan/Huamanga entre estas70.",
+    "Hay predominio visible de1780–1814 y prensa1811/1821. Liberalismo religioso posterior tiene un caso explícito1825/1833(557); observación cualitativa, no recuento cronológico exhaustivo."
+  ],
+  "restrictions": [
+    "No se leyeron métricas, predicciones ni nuevos pilotos.",
+    "No se modificaron corpus, guía o etiquetas; no se entrenó modelo.",
+    "No certifica toda la calidad del corpus ni representatividad o generalización.",
+    "Revisión asistida por IA; no gold humano."
+  ]
+}

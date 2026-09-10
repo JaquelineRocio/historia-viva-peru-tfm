@@ -1,0 +1,310 @@
+{
+  "schema": "blind_correction_check.v1",
+  "status": "AI_assisted_blind_review_not_human_gold",
+  "inputs": [
+    {
+      "path": "outputs/independent-review-v1/blind-evaluation.json",
+      "sha256": "5fedd0ffdb631798cd89ccdd7e1ff2a383b42b628d02e660c22c7222356fe964"
+    },
+    {
+      "path": "outputs/independent-review-v1/blind-evaluation-corrected.json",
+      "sha256": "c45250bba3ab5f8318257bbfee0b1884e19b8fc6e0605207fbd12873d9d6a912"
+    }
+  ],
+  "scope": "Comparación exclusiva de ambos JSON y lectura de los siete textos modificados. No se consultaron claves, candidatos, adjudicación, modelos ni fuentes adicionales.",
+  "item_count": 26,
+  "modified_ids": [
+    "N05",
+    "N07",
+    "N08",
+    "N16",
+    "N17",
+    "N24",
+    "N25"
+  ],
+  "modified_text_count": 7,
+  "unchanged_text_count": 19,
+  "replacement_occurrence_count": 12,
+  "distinct_replacement_pairs_count": 10,
+  "character_diff_operation_count": 12,
+  "count_note": "El diff real tiene 12 ocurrencias en 7 textos y 10 pares antes/después distintos. No se verifica la cantidad de reglas de un proceso externo de reemplazo: no se leyó ese proceso y sus reglas no equivalen necesariamente a ocurrencias.",
+  "item_ids_order_and_nontext_metadata_unchanged": true,
+  "top_level_nonitem_fields_unchanged": true,
+  "changes": [
+    {
+      "id": "N05",
+      "replacements": [
+        {
+          "before": "conser var",
+          "after": "conservar",
+          "occurrences": 1
+        }
+      ],
+      "character_diff": [
+        {
+          "operation": "delete",
+          "before_start": 65,
+          "before_end": 66,
+          "after_start": 65,
+          "after_end": 65,
+          "before": " ",
+          "after": "",
+          "before_context": "anta Cruz logró conser var su graduación de t",
+          "after_context": "anta Cruz logró conservar su graduación de t"
+        }
+      ],
+      "all_differences_explained": true,
+      "thematic_judgment_changed": false,
+      "original_label_retained": "campanias_conflictos_militares",
+      "original_usability_retained": "usable",
+      "reason": "Correcciones mecánicas de separación de palabras, numeración de tomos o rangos en referencias; conservan el argumento, actores, ámbito temporal sustantivo y función del segmento. Las observaciones originales sobre estos errores quedan documentadas históricamente, aunque el defecto puntual esté corregido."
+    },
+    {
+      "id": "N07",
+      "replacements": [
+        {
+          "before": "ser vicio",
+          "after": "servicio",
+          "occurrences": 1
+        },
+        {
+          "before": "2627",
+          "after": "26-27",
+          "occurrences": 1
+        }
+      ],
+      "character_diff": [
+        {
+          "operation": "delete",
+          "before_start": 75,
+          "before_end": 76,
+          "after_start": 75,
+          "after_end": 75,
+          "before": " ",
+          "after": "",
+          "before_context": "Castilla estuvo al ser vicio de las armas del",
+          "after_context": "Castilla estuvo al servicio de las armas del"
+        },
+        {
+          "operation": "insert",
+          "before_start": 659,
+          "before_end": 659,
+          "after_start": 658,
+          "after_end": 659,
+          "before": "",
+          "after": "-",
+          "before_context": "u pecho» (1962, pp. 2627), sino más bien por",
+          "after_context": "u pecho» (1962, pp. 26-27), sino más bien por"
+        }
+      ],
+      "all_differences_explained": true,
+      "thematic_judgment_changed": false,
+      "original_label_retained": "liderazgos_diplomacia_proyectos",
+      "original_usability_retained": "usable",
+      "reason": "Correcciones mecánicas de separación de palabras, numeración de tomos o rangos en referencias; conservan el argumento, actores, ámbito temporal sustantivo y función del segmento. Las observaciones originales sobre estos errores quedan documentadas históricamente, aunque el defecto puntual esté corregido."
+    },
+    {
+      "id": "N08",
+      "replacements": [
+        {
+          "before": "6667",
+          "after": "66-67",
+          "occurrences": 1
+        }
+      ],
+      "character_diff": [
+        {
+          "operation": "insert",
+          "before_start": 421,
+          "before_end": 421,
+          "after_start": 421,
+          "after_end": 422,
+          "before": "",
+          "after": "-",
+          "before_context": ", vol. 2, 1971, pp. 6667). Otros nueve lo hi",
+          "after_context": ", vol. 2, 1971, pp. 66-67). Otros nueve lo hi"
+        }
+      ],
+      "all_differences_explained": true,
+      "thematic_judgment_changed": false,
+      "original_label_retained": "campanias_conflictos_militares",
+      "original_usability_retained": "usable",
+      "reason": "Correcciones mecánicas de separación de palabras, numeración de tomos o rangos en referencias; conservan el argumento, actores, ámbito temporal sustantivo y función del segmento. Las observaciones originales sobre estos errores quedan documentadas históricamente, aunque el defecto puntual esté corregido."
+    },
+    {
+      "id": "N16",
+      "replacements": [
+        {
+          "before": "18171822",
+          "after": "1817-1822",
+          "occurrences": 1
+        }
+      ],
+      "character_diff": [
+        {
+          "operation": "insert",
+          "before_start": 911,
+          "before_end": 911,
+          "after_start": 911,
+          "after_end": 912,
+          "before": "",
+          "after": "-",
+          "before_context": "rtadora del Perú (18171822). Tomo I. Rafael ",
+          "after_context": "rtadora del Perú (1817-1822). Tomo I. Rafael "
+        }
+      ],
+      "all_differences_explained": true,
+      "thematic_judgment_changed": false,
+      "original_label_retained": "no_relevante",
+      "original_usability_retained": "usable",
+      "reason": "Correcciones mecánicas de separación de palabras, numeración de tomos o rangos en referencias; conservan el argumento, actores, ámbito temporal sustantivo y función del segmento. Las observaciones originales sobre estos errores quedan documentadas históricamente, aunque el defecto puntual esté corregido."
+    },
+    {
+      "id": "N17",
+      "replacements": [
+        {
+          "before": "Reser va",
+          "after": "Reserva",
+          "occurrences": 1
+        },
+        {
+          "before": "TomoIII",
+          "after": "Tomo III",
+          "occurrences": 1
+        },
+        {
+          "before": "TomoII",
+          "after": "Tomo II",
+          "occurrences": 1
+        },
+        {
+          "before": "TomoI",
+          "after": "Tomo I",
+          "occurrences": 1
+        }
+      ],
+      "character_diff": [
+        {
+          "operation": "delete",
+          "before_start": 116,
+          "before_end": 117,
+          "after_start": 116,
+          "after_end": 116,
+          "before": " ",
+          "after": "",
+          "before_context": "Banco Central de Reser va del Perú, Instituto",
+          "after_context": "Banco Central de Reserva del Perú, Instituto"
+        },
+        {
+          "operation": "insert",
+          "before_start": 705,
+          "before_end": 705,
+          "after_start": 704,
+          "after_end": 705,
+          "before": "",
+          "after": " ",
+          "before_context": "lvarez y Jiménez. TomoI. Arequipa: La Colmen",
+          "after_context": "lvarez y Jiménez. Tomo I. Arequipa: La Colmen"
+        },
+        {
+          "operation": "insert",
+          "before_start": 904,
+          "before_end": 904,
+          "after_start": 904,
+          "after_end": 905,
+          "before": "",
+          "after": " ",
+          "before_context": "lvarez y Jiménez. TomoII. Arequipa: La Colme",
+          "after_context": "lvarez y Jiménez. Tomo II. Arequipa: La Colme"
+        },
+        {
+          "operation": "insert",
+          "before_start": 1104,
+          "before_end": 1104,
+          "after_start": 1105,
+          "after_end": 1106,
+          "before": "",
+          "after": " ",
+          "before_context": "lvarez y Jiménez. TomoIII. Arequipa: La Colm",
+          "after_context": "lvarez y Jiménez. Tomo III. Arequipa: La Colm"
+        }
+      ],
+      "all_differences_explained": true,
+      "thematic_judgment_changed": false,
+      "original_label_retained": "no_relevante",
+      "original_usability_retained": "usable",
+      "reason": "Correcciones mecánicas de separación de palabras, numeración de tomos o rangos en referencias; conservan el argumento, actores, ámbito temporal sustantivo y función del segmento. Las observaciones originales sobre estos errores quedan documentadas históricamente, aunque el defecto puntual esté corregido."
+    },
+    {
+      "id": "N24",
+      "replacements": [
+        {
+          "before": "Reser va",
+          "after": "Reserva",
+          "occurrences": 2
+        }
+      ],
+      "character_diff": [
+        {
+          "operation": "delete",
+          "before_start": 595,
+          "before_end": 596,
+          "after_start": 595,
+          "after_end": 595,
+          "before": " ",
+          "after": "",
+          "before_context": "Granaderos de la Reser va y el escuadrón de D",
+          "after_context": "Granaderos de la Reserva y el escuadrón de D"
+        },
+        {
+          "operation": "delete",
+          "before_start": 739,
+          "before_end": 740,
+          "after_start": 738,
+          "after_end": 738,
+          "before": " ",
+          "after": "",
+          "before_context": "Granaderos de la Reser va se quedarían en Gua",
+          "after_context": "Granaderos de la Reserva se quedarían en Gua"
+        }
+      ],
+      "all_differences_explained": true,
+      "thematic_judgment_changed": false,
+      "original_label_retained": "campanias_conflictos_militares",
+      "original_usability_retained": "usable",
+      "reason": "Correcciones mecánicas de separación de palabras, numeración de tomos o rangos en referencias; conservan el argumento, actores, ámbito temporal sustantivo y función del segmento. Las observaciones originales sobre estos errores quedan documentadas históricamente, aunque el defecto puntual esté corregido."
+    },
+    {
+      "id": "N25",
+      "replacements": [
+        {
+          "before": "sir vió",
+          "after": "sirvió",
+          "occurrences": 1
+        }
+      ],
+      "character_diff": [
+        {
+          "operation": "delete",
+          "before_start": 247,
+          "before_end": 248,
+          "after_start": 247,
+          "after_end": 247,
+          "before": " ",
+          "after": "",
+          "before_context": "tubre de 1821, que sir vió de complemento al ",
+          "after_context": "tubre de 1821, que sirvió de complemento al "
+        }
+      ],
+      "all_differences_explained": true,
+      "thematic_judgment_changed": false,
+      "original_label_retained": "organizacion_consecuencias_republicanas",
+      "original_usability_retained": "usable",
+      "reason": "Correcciones mecánicas de separación de palabras, numeración de tomos o rangos en referencias; conservan el argumento, actores, ámbito temporal sustantivo y función del segmento. Las observaciones originales sobre estos errores quedan documentadas históricamente, aunque el defecto puntual esté corregido."
+    }
+  ],
+  "thematic_judgment_changed": false,
+  "usability_judgment_changed": false,
+  "original_review_file_modified": false,
+  "conclusion": "Ninguna corrección altera las etiquetas o la usabilidad dictaminadas. La revisión original permanece intacta. Los tres requires_context originales (N01, N18, N19) no están entre las unidades modificadas."
+}

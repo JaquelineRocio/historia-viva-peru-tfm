@@ -1,0 +1,295 @@
+{
+  "schema_version": 1,
+  "id": "beto-data-v3",
+  "status": "frozen_before_training_and_candidate_predictions",
+  "declared_at_utc": "2026-09-08T14:19:03.475468+00:00",
+  "hypothesis": "El paquete de reparaciones v2 y v3, cuarentenas y 30 aportes de cinco obras puede mejorar la clasificación con una receta fija. Es una comparación del paquete completo; no separa sus componentes.",
+  "changes": "Referencia original596 frente a copia v2 reparada596, luego nueve sustituciones/reclasificaciones y siete cuarentenas (589), más30 altas (619). Orden conservado entre supervivientes; altas anexadas en el orden aprobado.",
+  "training_dataset": "outputs/corpus-snapshot-v3/reviewed-export.json",
+  "training_rows": 619,
+  "training_rows_sha256": "58ed525fa1f7c3b445a6ab6baf38b96f531de8ab860223b54e560ed55a892838",
+  "class_counts": {
+    "campanias_conflictos_militares": 87,
+    "participacion_social_regional": 89,
+    "no_relevante": 101,
+    "organizacion_consecuencias_republicanas": 109,
+    "liderazgos_diplomacia_proyectos": 101,
+    "contexto_colonial_antecedentes": 57,
+    "crisis_ideas_emancipadoras": 75
+  },
+  "original_class_counts": {
+    "campanias_conflictos_militares": 89,
+    "participacion_social_regional": 83,
+    "no_relevante": 101,
+    "organizacion_consecuencias_republicanas": 101,
+    "crisis_ideas_emancipadoras": 59,
+    "liderazgos_diplomacia_proyectos": 93,
+    "contexto_colonial_antecedentes": 70
+  },
+  "compared_with_original_train": {
+    "identity": "Multiset of resourceId, exact text and label; ignores metadata and order.",
+    "unchanged": 560,
+    "original_not_kept_exactly": 36,
+    "candidate_new_or_changed": 59
+  },
+  "external_dataset": "artifacts/datasets/external-development-v1.json",
+  "external_content_sha256": "0a12b4d4ac4b8ef58e561ed7c8632c73558454ec37edd8d269b9184fe49b6c82",
+  "labels": [
+    "campanias_conflictos_militares",
+    "contexto_colonial_antecedentes",
+    "crisis_ideas_emancipadoras",
+    "liderazgos_diplomacia_proyectos",
+    "no_relevante",
+    "organizacion_consecuencias_republicanas",
+    "participacion_social_regional"
+  ],
+  "metric_labels": [
+    "campanias_conflictos_militares",
+    "crisis_ideas_emancipadoras",
+    "liderazgos_diplomacia_proyectos",
+    "organizacion_consecuencias_republicanas",
+    "participacion_social_regional"
+  ],
+  "per_source_metric_labels": {
+    "doi:10.3989/revindias.2011.023": [
+      "campanias_conflictos_militares",
+      "crisis_ideas_emancipadoras",
+      "organizacion_consecuencias_republicanas",
+      "participacion_social_regional"
+    ],
+    "sobrevilla-2021-intermedios": [
+      "campanias_conflictos_militares",
+      "liderazgos_diplomacia_proyectos",
+      "organizacion_consecuencias_republicanas"
+    ]
+  },
+  "baseline_report": "artifacts/experiments/beto-length-v1/report.json",
+  "baseline_prediction_field": "per_item[].after",
+  "baseline_directory": "outputs/beto-length-v1/run/candidate",
+  "baseline_rows": 596,
+  "baseline_params": {
+    "lr": 2e-05,
+    "epochs": 3,
+    "batch_size": 2,
+    "gradient_accumulation_steps": 8,
+    "max_len": 384
+  },
+  "candidate_params": {
+    "lr": 2e-05,
+    "epochs": 3,
+    "batch_size": 2,
+    "gradient_accumulation_steps": 8,
+    "max_len": 384
+  },
+  "checkpoint_epoch": 2,
+  "training_config": {
+    "base_model": "dccuchile/bert-base-spanish-wwm-cased",
+    "revision": "c4d86612f51b4f46759c8390d1798c2febe71b93",
+    "seed": 42
+  },
+  "fixed_recipe": {
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "gradient_clipping_max_norm": 1.0,
+    "inverse_frequency_class_weights": true,
+    "weighted_loss_normalization": "Keep original weighted mean inside each microbatch, divided by actual accumulation group size; not equivalent to one weighted batch16.",
+    "mixed_precision": "float16 CUDA autocast and GradScaler, skip scheduler on overflow as in original",
+    "gradient_checkpointing": true,
+    "schedule_epochs": 3,
+    "schedule_total_steps": 117,
+    "warmup_steps": 11,
+    "microbatches_per_epoch": 310,
+    "last_accumulation_group_microbatches": 6,
+    "fixed_epochs_executed": 2,
+    "optimizer_update_attempts": 78,
+    "why_not_epochs_2": "Se ejecutan dos épocas manteniendo el horizonte de tres:117 pasos y11 warmup. Cambiar params.epochs a2 acortaría el horizonte a78 y warmup a7.",
+    "dataset_dependent_effects": "619 filas:310 microbatches,39 intentos/época,78 intentos totales, horizonte117; referencia596:298,38,76,114. Pesos de clase recalculados por la misma fórmula; no igualdad de actualizaciones efectivas garantizada por AMP."
+  },
+  "decision_rule": {
+    "primary": "macro F1 over the same five predeclared labels, unrounded comparison",
+    "favorable_exploratory_signal": "delta_macro >0 AND total_correct_after >= before AND correct_after >= before in each work",
+    "mixed_signal": "delta_macro >0 but a correct-count guard fails",
+    "no_positive_signal": "delta_macro <=0",
+    "class_regressions": "Always report precision/recall/F1/support and changes, even if aggregate rule passes.",
+    "secondary": [
+      "seven-label confusion matrix",
+      "per-work macro over fixed labels present in that work",
+      "correct/error counts per work",
+      "predictions to truth-absent labels",
+      "paired row outcomes"
+    ],
+    "production_promotion": false,
+    "statistical_significance_claim": false
+  },
+  "evaluation_schedule": "Reutilizar31 predicciones guardadas del modelo384; entrenar una sola configuración desde BETO base, guardar época2 y predecir una vez sobre esas mismas31 filas. No ajustar después.",
+  "resource_policy": {
+    "local_only": true,
+    "offline": true,
+    "modal": false,
+    "paid_services": false,
+    "cuda_device": "NVIDIA GeForce RTX 3050 Laptop GPU",
+    "cuda_free_bytes": 3459986228,
+    "cuda_total_bytes": 4294443008,
+    "on_failure": "Record failure and stop; no automatic retry, CPU fallback or recipe change."
+  },
+  "packages": {
+    "torch": "2.7.1+cu126",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "safetensors": "0.8.0",
+    "huggingface-hub": "0.36.2",
+    "numpy": "2.2.6",
+    "scikit-learn": "1.7.2"
+  },
+  "base_cache_files": [
+    {
+      "name": "config.json",
+      "bytes": 648,
+      "file_sha256": "3694a761b0ba882c24baab95df01cf7e7e1424797af557272e944ec2452f9f31"
+    },
+    {
+      "name": "pytorch_model.bin",
+      "bytes": 439621341,
+      "file_sha256": "e131a95091c777bbd45250fb647fec415010cb8cd1ad6e1d59babeb82a0be360"
+    },
+    {
+      "name": "special_tokens_map.json",
+      "bytes": 134,
+      "file_sha256": "bd6ed009009f8264d0ef87d5b50798cb57c5219a0bbb7c8973372855241aa05f"
+    },
+    {
+      "name": "tokenizer.json",
+      "bytes": 480199,
+      "file_sha256": "ea7a58026720ba45a8a401d9f86bbe8337f2725d3b02d3a1011305c46cbbd9cd"
+    },
+    {
+      "name": "tokenizer_config.json",
+      "bytes": 364,
+      "file_sha256": "2f5cde6bbb9959fccd280e9e9c08d41d05e96743fac1a3b5b67e0e5691ae7d10"
+    },
+    {
+      "name": "vocab.txt",
+      "bytes": 241796,
+      "file_sha256": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+    }
+  ],
+  "input_guards": [
+    {
+      "path": "outputs/corpus-snapshot-v3/reviewed-export.json",
+      "sha256": "687a16c894eae549f9e29e48076a687ce6a96b5cd195f18b21629e8b7e7078e5"
+    },
+    {
+      "path": "artifacts/experiments/beto-length-v1/report.json",
+      "sha256": "899c3a99feba141c4532b36f5548fe2d1d384ed133b6d4eadf10dfcf9cb16426"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/report.json",
+      "sha256": "e502e0dbe37a2e5e45f39f4447f66c8e1f04159eff007bfab5ded85aa72eb862"
+    },
+    {
+      "path": "outputs/corpus-snapshot-v3/build-report.json",
+      "sha256": "e69c395133a732a09e5d2b66d0bea35967dc309dc092ca7d9a96d19a44b70f4a"
+    },
+    {
+      "path": "outputs/corpus-snapshot-v3/replacement-archive.json",
+      "sha256": "926f240cb59fe19ce9501e02462e09dd293b426b61b77b7fc691e749de092ada"
+    },
+    {
+      "path": "artifacts/experiments/beto-length-v1/protocol.json",
+      "sha256": "ae32457e95bfdda3f03ba89e2525686d8351224bf098ce7e5bff8aea2a0dc1c0"
+    },
+    {
+      "path": "artifacts/datasets/external-development-v1.json",
+      "sha256": "901f50f13a60642b316896abd9d4d68b945e699f7befc696b9e7506bc8fa4ceb"
+    },
+    {
+      "path": "artifacts/datasets/gold-v1-source-aware.json",
+      "sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a"
+    },
+    {
+      "path": "outputs/corpus-snapshot-v2/reviewed-export.json",
+      "sha256": "5de9ea1a4be3c9d628da51cdf1d07108f43e0ac8ee580acb483013c6dc27c35c"
+    },
+    {
+      "path": "artifacts/reviews/boundary-resolution-v3.json",
+      "sha256": "1e0f7c55df5a4863b8b263a72fae88da6de541851bd7843192a4d1d1fb679be8"
+    },
+    {
+      "path": "artifacts/reviews/training-batch-v3.json",
+      "sha256": "b42860373a22f56490871b626a845b32d61f67108998fdc530e2883b57297692"
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/proposed-replacements.json",
+      "sha256": "8b0f6b6a9b49d16f6615e66ad92ef28a740f8e6de3a1fd498ecc6c7916d37ed9"
+    },
+    {
+      "path": "scripts/build_training_batch_v3.py",
+      "sha256": "768face195990b7c15578a01d8d29dde5b12226532312240764395ed6925b652"
+    },
+    {
+      "path": "scripts/compare_beto_data_v3.py",
+      "sha256": "82f7d944a1f031cf5b891444bc433d89e24de5783886c63f72a2130207d78a93"
+    },
+    {
+      "path": "scripts/compare_beto_length.py",
+      "sha256": "54798f66319133edd5b3456786cdcb3a0e5e4e92dcc5c72893fd99fcaa15dcbb"
+    },
+    {
+      "path": "scripts/beto_fixed_epoch.py",
+      "sha256": "5e162abde50fe3c7cf4d47fcc322565a60cea7f388df24df1fa83df6ea4dd100"
+    },
+    {
+      "path": "scripts/verify_external_development.py",
+      "sha256": "ae84592b9258cf7db6198f9a76adac86647b126906f6a01d56de80166052c4da"
+    },
+    {
+      "path": "apps/ml/app/ml/beto_experiment.py",
+      "sha256": "7a55c204f569cc891c8dbdffd4668a3f20abcf13139d901e9db298e3525a121d"
+    },
+    {
+      "path": "scripts/compare_beto_validation.py",
+      "sha256": "bc8f02cd3b096ceea2a22f192b5e30205fcd067e2e45865152f406ca10e15037"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/config.json",
+      "sha256": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/labels.json",
+      "sha256": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/model.safetensors",
+      "sha256": "96c67fc6dad153c6aafafe160dbd7d9bd5ea4d4c0016bceda815e10cdb34cd29"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/special_tokens_map.json",
+      "sha256": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/tokenizer.json",
+      "sha256": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/tokenizer_config.json",
+      "sha256": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/vocab.txt",
+      "sha256": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+    }
+  ],
+  "limits": [
+    "Desarrollo externo reutilizado:31 párrafos revisados con IA,26 de Sala y5 de Sobrevilla; dos obras relacionadas y cinco clases. No es validación humana independiente ni test nuevo.",
+    "Antecedentes coloniales y no_relevante no tienen soporte en este desarrollo; no se certifica el rendimiento de siete clases.",
+    "La validación original81 procede de una fuente y ya se reutilizó. Aquí no se predice ni puntúa, ni tampoco test137.",
+    "Una semilla y época fija; no prueba significación estadística ni identifica una causa única de éxito o fracaso.",
+    "El paquete cambia textos, etiquetas, cantidad, orden efectivo, composición por fuente, pesos de clase y horizonte de pasos derivado. La corrección histórica no depende del signo de la métrica.",
+    "Revisión de fuentes y duplicados reduce riesgos; no demuestra independencia completa entre obras, ediciones y documentos citados.",
+    "No ejecutar otro ensayo ni sustituir producción automáticamente. Hace falta evaluación final independiente y cubrir todas las clases.",
+    "Corpus completo y pesos permanecen locales; no se presupone permiso para redistribuir todas las fuentes."
+  ],
+  "training_started": false,
+  "candidate_predictions_started": false,
+  "content_sha256": "1d3f4e5f32bce45c71a926b09df4054a5e6731d3605523db721772a2e32f2be7"
+}

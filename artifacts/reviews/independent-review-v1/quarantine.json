@@ -1,0 +1,101 @@
+{
+  "status": "not_for_training_or_scoring",
+  "items": [
+    {
+      "id": "E02",
+      "text": "La planificación de dicha visita requería de la elaboración de pautas y preguntas que debían evitar la distorsión de datos, es decir, debían contar con todo lo necesario para informar sobre la administración y el estado general del territorio. Los cuestionarios fueron necesarios para conocer el número de doctrinas, parcialidades de indios, demografía, lenguas, cabildos, costumbres, comercio y oficios, entre otros. Al respecto, Juan Marchena señala que el intendente evidenció la intrincada burocracia del sistema colonial a nivel local, que obstaculizaba el progreso y desarrollo de la provincia.65 La visita de Álvarez y Ximénez generó numerosos documentos con una exposición «clara y sencilla».66 Precedida de una reflexión sobre la naturaleza política del reformismo borbónico y la relación de la metrópoli con el reino del Perú.67 Así, el informe del intendente de Arequipa se compuso de tres mil doscientas fojas de información, tablas y mapas anexos, referentes a los partidos, pueblos, doctrinas y poblaciones de la jurisdicción.",
+      "label": null,
+      "source_id": "choque2024",
+      "resourceId": "f012593d-76c3-53ee-8285-4318e201f261",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/31098",
+      "source_author": "Carlos Choque Mariño",
+      "source_title": "«A los vasallos de este yndico continente»: Visita general, población y reformismo borbónico en el partido de Arica, 1793-1796",
+      "pdf_pages": [
+        17
+      ],
+      "printed_pages": [
+        195
+      ],
+      "document_group": "arica_visit_1793_1796",
+      "text_sha256": "1fcdb9323a839258c1dc7fe25c253e830f4379b4cbe9139fcfdd08765bdf5f38",
+      "words": 156,
+      "review_status": "quarantine",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E04",
+      "text": "La administración de la Real Hacienda colonial fue jerárquica y diferenciada, poseyendo como objetivo la generación de ingresos o beneficios para la Corona.127 En este sentido, los aspectos positivos de la visita fueron la generación de instrumentos idóneos de fiscalización y la recopilación de una información fiable, que permitieron las posteriores reformas administrativas e institucionales. Lo anterior, considerando que, durante la época, los oficiales reales tuvieron un poder concreto sobre la economía regional128, que se sustentó en la extensión de sus relaciones de parentesco y círculos de allegados, alcanzando un marcado prestigio social y político. Por consiguiente, los oficiales contaron con muchas oportunidades comerciales, favoreciendo también los intereses de sus poderosos protectores y parientes en Charcas o la Ciudad de los Reyes, y afectando de esta manera, al Patrimonio Regio.",
+      "label": null,
+      "source_id": "choque2024",
+      "resourceId": "f012593d-76c3-53ee-8285-4318e201f261",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/31098",
+      "source_author": "Carlos Choque Mariño",
+      "source_title": "«A los vasallos de este yndico continente»: Visita general, población y reformismo borbónico en el partido de Arica, 1793-1796",
+      "pdf_pages": [
+        34
+      ],
+      "printed_pages": [
+        212
+      ],
+      "document_group": "arica_visit_1793_1796",
+      "text_sha256": "c1960acef442ebb51bd5fc2d26cf302180842a4d6cfc8a9afb13bb7a10dd38d1",
+      "words": 130,
+      "review_status": "quarantine",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E07",
+      "text": "La naturaleza corporativa del imperio quedó aún más acentuada con la forma en que la constitución definió la ciudadanía. La constitución estableció que la nación española era “la suma de todos los españoles en ambos hemisferios” (artículo 1), pero definió la ciudadanía siguiendo la antigua tradición ibérica de la adscripción de la población a una comunidad local de acuerdo con el principio de vecindad (Herzog, 2011, p. 144). Debido a que la constitución no especificó cómo se adquiría la vecindad, aquellos que eran reconocidos como vecinos por sus comunidades podían regular el acceso a la vecindad y, por lo tanto, a la ciudadanía, lo que permitiría que sobrevivieran y prosperaran dentro de la nueva estructura legal los antiguos intereses corporativos.",
+      "label": null,
+      "source_id": "escanilla2023",
+      "resourceId": "1eac0299-06c0-51ad-aba3-176fab08905e",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26980",
+      "source_author": "Silvia Escanilla Huerta",
+      "source_title": "Una revolución silenciosa. El impacto de la Constitución de Cádiz en el virreinato del Perú, 1812-1823",
+      "pdf_pages": [
+        10
+      ],
+      "printed_pages": [
+        88
+      ],
+      "document_group": "rira2023_cadiz_sanmartin",
+      "text_sha256": "14ea72f263651c182812ab340690131a977ba393383a7fb25f723b93f6486928",
+      "words": 120,
+      "review_status": "quarantine",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E08",
+      "text": "No se puede subestimar el impacto político de los cambios introducidos por la Constitución de Cádiz. Al transferir las atribuciones de tierras y justicia desde el centro a la periferia, y al expandir el gobierno representativo a nivel local, la constitución en realidad impulsó un fenómeno que el historiador Tulio Halperín Donghi denominó ruralización de la política (1969, p. 147). En el virreinato del Perú, donde las comunidades indígenas habían desafiado la autoridad de la Corona española durante décadas, la implementación de la constitución fue un importante punto de inflexión en esta lucha. Por fin, las comunidades adquirieron poder jurisdiccional sobre sus propios asuntos y no dudaron en usarlo. La Constitución de Cádiz, al redefinir la relación entre soberanía y territorio, finalmente les otorgó a los sectores indígenas las herramientas legales para subvertir el orden colonial y, como se ha demostrado, eso es lo que hicieron.",
+      "label": null,
+      "source_id": "escanilla2023",
+      "resourceId": "1eac0299-06c0-51ad-aba3-176fab08905e",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26980",
+      "source_author": "Silvia Escanilla Huerta",
+      "source_title": "Una revolución silenciosa. El impacto de la Constitución de Cádiz en el virreinato del Perú, 1812-1823",
+      "pdf_pages": [
+        35
+      ],
+      "printed_pages": [
+        113
+      ],
+      "document_group": "rira2023_cadiz_sanmartin",
+      "text_sha256": "950b4b5506a87cf5f27b77f626132d113ab9e7d1e196037c0b09c9fec100f2c5",
+      "words": 146,
+      "review_status": "quarantine",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    }
+  ]
+}

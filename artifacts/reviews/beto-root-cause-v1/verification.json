@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "ideas_rows_aligned": 70,
+  "excerpt_and_text_hashes_checked": 70,
+  "source_summaries_recomputed": 6,
+  "class_source_tables_recomputed": 7,
+  "review_queue": 30,
+  "historical_judgments_independently_validated": false,
+  "quantitative_report_sha256": "07f606df908d3a9e3f7542b64da5c8bccfd5c2db8b314d6a3dca1ac37b862448",
+  "agent_report_sha256": "050cc56cee63a4bcbbc7207408d7bfa159cddff40d1985e9790581e07534970d",
+  "queue_sha256": "ab39bd7672bcde176b496159303326b492d022e7513e9186f3e39ea010717dc1"
+}

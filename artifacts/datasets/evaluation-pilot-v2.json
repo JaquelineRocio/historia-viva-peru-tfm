@@ -1,0 +1,560 @@
+{
+  "schema_version": 1,
+  "dataset": "evaluation-pilot-v2",
+  "labels": [
+    "campanias_conflictos_militares",
+    "contexto_colonial_antecedentes",
+    "crisis_ideas_emancipadoras",
+    "liderazgos_diplomacia_proyectos",
+    "no_relevante",
+    "organizacion_consecuencias_republicanas",
+    "participacion_social_regional"
+  ],
+  "policy": {
+    "status": "frozen_ai_adjudicated_additional_pilot_not_final_independent_test",
+    "model_predictions_performed": false,
+    "human_review": false,
+    "purpose": "Seven-class pilot of new complete units; reference labels from first AI proposal, blind AI agent review and explicit adjudication.",
+    "independence": "New selected texts and works not present in current TRAIN; no 8/20-word overlaps detected. Full documentary independence is not certified. Escanilla cites previously reused Sala2011; the three RIRA2023 articles share a dossier and Escanilla cites Guarisco2011.",
+    "use": "Never train on these sources or their reproduced documents. If scored later, report as additional development, not an untouched final test. Any further selection based on these scores makes reuse explicit.",
+    "metrics": "Report all seven classes, per-class support/precision/recall/F1, confusion matrix and per-source results. Corpus is purposive and small; no population accuracy or automatic-use readiness claim.",
+    "stop": "No model training or prediction in this block. Four quarantined texts must not enter scored metrics.",
+    "coverage_limits": "Only PDF academic prose; two collection groups, four works; three negatives are bibliography, one predominantly twentieth/twenty-first century. No broad representativeness; missing variety and sparse 1830-1842 coverage."
+  },
+  "items": [
+    {
+      "id": "E01",
+      "text": "Posteriormente, en 1786, el intendente Antonio Álvarez y Ximénez inició su visita a la provincia de Arequipa y sus partidos. En este recorrido, elaboró una minuciosa síntesis sobre el estado de la situación política, económica y social del territorio que constituye un valioso testimonio geográfico, cultural e histórico, pues contiene extensas y amenas descripciones de los diversos pueblos, valles, ríos, etc., de la provincia. Además, el documento está enriquecido con valiosos planos, cartografías y cuadros estadísticos de suma utilidad para su estudio.18 En tal sentido, la visita general de Antonio Álvarez y Ximénez buscó investigar y resolver los problemas vinculados a la administración colonial, la Real Hacienda y la aplicación de justicia, reafirmando, de esta forma, la presencia de la Corona en el mundo andino; de lo que se concluye que las reformas borbónicas transformaron la sociedad colonial y el espacio andino, iniciando cambios sociales, económicos y políticos que no pasaron inadvertidos para nadie en el virreinato.19",
+      "label": "contexto_colonial_antecedentes",
+      "source_id": "choque2024",
+      "resourceId": "f012593d-76c3-53ee-8285-4318e201f261",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/31098",
+      "source_author": "Carlos Choque Mariño",
+      "source_title": "«A los vasallos de este yndico continente»: Visita general, población y reformismo borbónico en el partido de Arica, 1793-1796",
+      "pdf_pages": [
+        6
+      ],
+      "printed_pages": [
+        184
+      ],
+      "document_group": "arica_visit_1793_1796",
+      "text_sha256": "30c0bad1e51b019e1bb363a109abb222396eee6da5ffdabf71bee9fbdc89b08a",
+      "words": 157,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E03",
+      "text": "La visita al partido de Arica identificó un total de 2954 indios tributarios de los cacicazgos de Tacna, Codpa, Tarata, Candarave e Hilabaya.74 Las doctrinas de Sama e Ilo no poseían población nativa. La mayoría de los pueblos de indios se confinaron en el área meridional del partido, concentrando el 71 % del total censado. Es preciso hacer hincapié en que los ayllus orientales de Tacna —como Cosapilla y Tacora— no fueron considerados por las autoridades hispanas como pueblos de indios propiamente tal y como fueron asignados a Tacna. El incremento de la población indígena entre 1772 y 1793, representado en la Figura 3, se explica por la modificación y ampliación de las categorías tributarias aplicadas a la población indígena, que previamente estaba exenta de los tributos reales. Esto, a pesar de las protestas de los caciques de la jurisdicción ariqueña.",
+      "label": "contexto_colonial_antecedentes",
+      "source_id": "choque2024",
+      "resourceId": "f012593d-76c3-53ee-8285-4318e201f261",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/31098",
+      "source_author": "Carlos Choque Mariño",
+      "source_title": "«A los vasallos de este yndico continente»: Visita general, población y reformismo borbónico en el partido de Arica, 1793-1796",
+      "pdf_pages": [
+        21
+      ],
+      "printed_pages": [
+        199
+      ],
+      "document_group": "arica_visit_1793_1796",
+      "text_sha256": "2e327b7bc9232f04439ea1f653f4d745314e48fc0421fc444b0425cc692feee9",
+      "words": 141,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E05",
+      "text": "La Constitución Política de la Monarquía Española, publicada en Cádiz en marzo de 1812, generó una auténtica revolución política en todo el mundo hispánico (Guerra, 1993). En un momento en que Europa estaba enfrascada en la guerra, y el republicanismo y el liberalismo eran ideas aún muy cuestionadas (Adelman, 2006; Annino, 2003; Breña, 2006), los representantes de ciudades y pueblos a lo largo y a lo ancho del mundo hispánico se congregaron en la ciudad de Cádiz para redactar una ley fundamental que terminaría redefiniendo la relación entre las diferentes partes del imperio español (Rodríguez, 1998). De hecho, los historiadores concuerdan en afirmar que el impacto de la constitución fue importante en toda la América española, incluso en áreas donde nunca llegó a ser implementada ( Ternavasio, 2012).",
+      "label": "crisis_ideas_emancipadoras",
+      "source_id": "escanilla2023",
+      "resourceId": "1eac0299-06c0-51ad-aba3-176fab08905e",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26980",
+      "source_author": "Silvia Escanilla Huerta",
+      "source_title": "Una revolución silenciosa. El impacto de la Constitución de Cádiz en el virreinato del Perú, 1812-1823",
+      "pdf_pages": [
+        4
+      ],
+      "printed_pages": [
+        82
+      ],
+      "document_group": "rira2023_cadiz_sanmartin",
+      "text_sha256": "eb73b5a40ef1aa402cf0b62872d0fcbce2c164b2c3219bd944ae386747bed9d2",
+      "words": 128,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E06",
+      "text": "La invasión de la península ibérica por Napoleón desencadenó una crisis política en el imperio español (Adelman, 2006, p. 187). La vacatio regis por la abdicación y prisión de Fernando VII desencadenó la implementación de leyes que abordaron el problema de la legitimidad y representatividad de las autoridades a través del principio de reversión de la soberanía (Chiaramonte, 2004). Bajo este principio, la soberanía regresaba a los poderes locales (juntas o ayuntamientos), que gobernarían en nombre del rey ausente y, de esta forma, rechazarían la autoridad (y legitimidad) del hermano de Napoleón, José, que había sido nombrado rey de España. Las juntas aparecieron tanto en España como en la América hispana, pero las juntas americanas no se subordinaron a las de la península, porque argumentaron que la monarquía española estaba constituida por una multiplicidad de entidades corporativas unidas únicamente por su lealtad al rey (Hamnett, 2015).",
+      "label": "crisis_ideas_emancipadoras",
+      "source_id": "escanilla2023",
+      "resourceId": "1eac0299-06c0-51ad-aba3-176fab08905e",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26980",
+      "source_author": "Silvia Escanilla Huerta",
+      "source_title": "Una revolución silenciosa. El impacto de la Constitución de Cádiz en el virreinato del Perú, 1812-1823",
+      "pdf_pages": [
+        6
+      ],
+      "printed_pages": [
+        84
+      ],
+      "document_group": "rira2023_cadiz_sanmartin",
+      "text_sha256": "2332c33f70370aa256f6f9dca3ca08da16616d10d92450b1fc065dfd64122406",
+      "words": 146,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E09",
+      "text": "Entre 1815 y 1820, muchas comunidades indígenas del virreinato se resistieron a abdicar las prerrogativas que habían adquirido con la aplicación de la Constitución de Cádiz. Cuando se abolió la constitución, el virrey Abascal decidió reducir la cantidad de ayuntamientos (ahora denominados cabildos) que habían surgido durante los años constitucionales. Sin embargo, comunidades como Casma adujeron que era peligroso eliminar su cabildo, porque era la corte de justicia principal y funcionaba como único garante de la ley y el orden en su pueblo (AGNP, GO BI 1 L.55 c.1019, 1816). La comunidad de Casma rechazó la nueva jurisdicción en la que compartirían el cabildo y un alcalde con los pueblos de Nepeña, Moro y Yaután, y, además, se resistieron al nombramiento de un alcalde elegido por el virrey. Asimismo, advirtieron a los funcionarios de la Corona que la decisión de eliminar el cabildo los forzaría a vivir sin la protección de las leyes, porque la nueva jurisdicción cubría un territorio excesivamente grande y el nuevo alcalde no residiría en Casma. Más aún, les recordaron a las autoridades que tenían derecho como corporación a mantener “su lugar entre otras jurisdicciones del distrito”, de acuerdo con las “primitivas [naturales] leyes y costumbres de los pueblos” (AGNP, GO BI 1 L.55 c.1019, 1816). Casma tuvo éxito en su reclamo y retuvo a su alcalde. Lo mismo ocurrió en Santa, Pativilca y Huarochirí.",
+      "label": "participacion_social_regional",
+      "source_id": "escanilla2023",
+      "resourceId": "1eac0299-06c0-51ad-aba3-176fab08905e",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26980",
+      "source_author": "Silvia Escanilla Huerta",
+      "source_title": "Una revolución silenciosa. El impacto de la Constitución de Cádiz en el virreinato del Perú, 1812-1823",
+      "pdf_pages": [
+        22
+      ],
+      "printed_pages": [
+        100
+      ],
+      "document_group": "rira2023_cadiz_sanmartin",
+      "text_sha256": "994b6bfb45b57d897972ff4ea53fd9e378cb7a98f72b59065955ca9e7c71f124",
+      "words": 229,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E10",
+      "text": "De igual manera, las comunidades utilizaron el lenguaje de la Constitución de Cádiz para rechazar la imposición de alcaldes no indígenas nombrados por funcionarios de la Corona. Las comunidades ya habían resistido antes la imposición de alcaldes que no fueran indígenas, pero sus argumentos siempre se habían centrado en el respeto legal a la tradición y costumbre “de tiempo inmemorial” (O’Phelan Godoy, 1997, p. 20). Esta vez, las comunidades presentaron petitorios en los que adujeron que, al igual que los españoles, también tenían derecho a ser vecinos y, por lo tanto, tenían el derecho de elegir autoridades. Los “pobres y miserables” del pueblo de San Pablo en Cajamarca (intendencia de Trujillo) usaron este argumento para rechazar el nombramiento de un nuevo alcalde elegido por los “poderosos” españoles del pueblo. En su pedido, sostenían que “por ley natural cualquiera puede ser un vecino” y, por lo tanto, “tenían el derecho de hablar en nombre de su pueblo” y, como vecinos, su voz “no podía ser desestimada” (AGNP, GO BI1 L.62, C.1786, 1817).",
+      "label": "participacion_social_regional",
+      "source_id": "escanilla2023",
+      "resourceId": "1eac0299-06c0-51ad-aba3-176fab08905e",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26980",
+      "source_author": "Silvia Escanilla Huerta",
+      "source_title": "Una revolución silenciosa. El impacto de la Constitución de Cádiz en el virreinato del Perú, 1812-1823",
+      "pdf_pages": [
+        23
+      ],
+      "printed_pages": [
+        101
+      ],
+      "document_group": "rira2023_cadiz_sanmartin",
+      "text_sha256": "bceea56d2e2fb1763760a867800600d4144dfe80691b63c9c6b768440f211693",
+      "words": 171,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E11",
+      "text": "De forma similar, las comunidades se resistieron a pagar impuestos, especialmente el reinstalado tributo indígena. En 1815, el virrey Abascal decretó una reforma fiscal que reintrodujo este tributo y, también, aumentó otros impuestos en un intento por recolectar más recursos para pagar los crecientes gastos generados por el mantenimiento de los ejércitos contrarrevolucionarios en el Alto Perú y Chile (Contreras, 2002, p. 136). Estos impuestos crearon una situación particularmente difícil para las comunidades indígenas como Huacho, que tenían una gran participación en el comercio intercolonial (Flores Galindo, 1991, pp. 149-153). En una asamblea, convocada por el subdelegado y comandante militar José del Ribero y Bargas en junio de 1817, los alcaldes y principales del pueblo de Huacho se reunieron para decidir cuál era la mejor forma de pagar sus impuestos (BNP 20000019168). El subdelegado tuvo que negociar con los indios, y fueron ellos los que decidieron cuánto pagarían, en qué condiciones y cuándo lo harían (BNP 20000013352; AGNP GO BI 2 L.89 C.676, 1819).",
+      "label": "participacion_social_regional",
+      "source_id": "escanilla2023",
+      "resourceId": "1eac0299-06c0-51ad-aba3-176fab08905e",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26980",
+      "source_author": "Silvia Escanilla Huerta",
+      "source_title": "Una revolución silenciosa. El impacto de la Constitución de Cádiz en el virreinato del Perú, 1812-1823",
+      "pdf_pages": [
+        24
+      ],
+      "printed_pages": [
+        102
+      ],
+      "document_group": "rira2023_cadiz_sanmartin",
+      "text_sha256": "6e8c2633e693c76a0b1da8139c981ffe9a448f82298d19ab1e09fbe6c70d12a3",
+      "words": 164,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E12",
+      "text": "La emergencia del ayuntamiento indígena comportó un cambio terminológico de “cabildo de indios” a “ayuntamiento”, sin que ello supusiera que las nuevas instituciones representativas hubieran calado en los estratos más profundos del horizonte político de sus miembros. Eso es lo que sugiere el hecho de que, a finales de 1814, cuando Fernando VII regresó al trono y derogó la Constitución, el alcalde de Matucana (Huarochirí), Juan de Carlos Mata, dejara de autodenominarse y ser denominado “alcalde constitucional de la banda de arriba” para ser, automática y nuevamente, el “alcalde de la banda de arriba por su Majestad”15. El alcalde Mata, junto con sus ministros y común, no otorgaba demasiada importancia a las diferencias existentes entre una autoridad constituida a partir del principio de la soberanía nacional y otra desde el de la soberanía real. Además, la teoría escolástica de la reversión de la soberanía, que animó en parte la actuación política de las élites peninsulares y americanas de la época, no fue algo que sus actos sugirieran.",
+      "label": "crisis_ideas_emancipadoras",
+      "source_id": "guarisco2023",
+      "resourceId": "e3e1b029-9c72-5e9e-b9e1-33006cdb7e78",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26981",
+      "source_author": "Claudia Guarisco",
+      "source_title": "José de San Martín y el espacio político indígena. Departamento de Lima, 1821-1822",
+      "pdf_pages": [
+        14
+      ],
+      "printed_pages": [
+        142
+      ],
+      "document_group": "rira2023_cadiz_sanmartin",
+      "text_sha256": "0d7c34a56dac91eb92cde8bebbb9a4734084d7ade97650c82c49c3afd0ea0fd5",
+      "words": 167,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E13",
+      "text": "Tras las luchas por la Independencia, los viejos pueblos de indios fueron despojados del reconocimiento jurídico del que habían gozado durante el período virreinal. Ignorados por el estado-nación emergente, sobrevivieron, sobre todo, en los pueblos, aldeas y caseríos de los distritos republicanos erigidos sobre las antiguas parroquias indígenas del ámbito rural. No sería sino hasta el gobierno de Augusto B. Leguía que se dio inicio al proceso de reconocimiento de estos colectivos y a la titulación de las tierras, al menos declarativamente. Por alguna razón, y en proporciones mínimas, esas tierras habían sobrevivido al avance de las haciendas. Las titulaciones, sin embargo, no se pudieron llevar a cabo sino hasta hace un par de décadas debido, en parte, a que no existían los mecanismos legales para lograrlo. Los primeros años del siglo XX inauguraron, también, una tendencia proteccionista respecto de las tierras de los viejos pueblos de indios convertidos entonces en comunidades indígenas. Esta tendencia culmina a principios del siglo XXI con la implantación de leyes favorable a su parcelación y venta.",
+      "label": "no_relevante",
+      "source_id": "guarisco2023",
+      "resourceId": "e3e1b029-9c72-5e9e-b9e1-33006cdb7e78",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26981",
+      "source_author": "Claudia Guarisco",
+      "source_title": "José de San Martín y el espacio político indígena. Departamento de Lima, 1821-1822",
+      "pdf_pages": [
+        38
+      ],
+      "printed_pages": [
+        166
+      ],
+      "document_group": "rira2023_cadiz_sanmartin",
+      "text_sha256": "e49114d07b3dc7b8488b31240797315c4d31e00ab862a3ad0ceb903737975662",
+      "words": 172,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E14",
+      "text": "Y es que la deserción no era algo reciente ni característico de los últimos años del proceso de independencia hispanoamericano. En los primeros años del gobierno del virrey Abascal, por ejemplo, las noticias que se tenían en el virreinato sobre la Expedición Auxiliadora del Alto Perú demuestran la situación de inestabilidad dentro del ejército, al punto que muchos, tras algunos combates y tras resultar heridos, optaban por desertar (Alvarado Luna, 2020, p. 124). Estas deserciones terminaban afectando al ejército realista en el Alto Perú como al bonaerense. Incluso, en el contexto del armisticio entre Castelli y Goyeneche, el primero le propuso al segundo la posibilidad de que los desertores de una y otra facción sean admitidos en sus respectivos ejércitos (Díaz Venteo, 1948, pp. 177-180). Sin embargo, pese a los esfuerzos, las derrotas militares de Goyeneche entre 1812 y 1813, así como el avance de las tropas bonaerenses en la región altoperuana, ocasionaron una vez más el aumento de los desertores –hasta el punto de sobrepasar los 2.000 soldados– y la falta de confianza por parte de las tropas frente a sus superiores (Albi de la Cuesta, 2009, p. 73; Alvarado Luna, 2020, p. 138).",
+      "label": "campanias_conflictos_militares",
+      "source_id": "alvarado2023",
+      "resourceId": "6d0443e1-fcdc-5373-b22a-4ca1914397d4",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26983",
+      "source_author": "Patricio A. Alvarado Luna",
+      "source_title": "No todos «por la Patria». Deserciones y problemas logísticos en el ejército durante la independencia peruana, 1820-1822",
+      "pdf_pages": [
+        3
+      ],
+      "printed_pages": [
+        215
+      ],
+      "document_group": "rira2023_cadiz_sanmartin",
+      "text_sha256": "d9a38bc798c8bb4cedfb8241b8fa8f0da744cc61b42412b518a0385e12c02ef0",
+      "words": 195,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E15",
+      "text": "Si esto sucedía dentro del Ejército de los Andes, la situación dentro de los recientemente incorporados soldados del Ejército Libertador no era del todo diferente. Entre fines de abril e inicios de mayo 1820, De las Heras comunicó que, por lo menos, una treintena de hombres había desertado del Ejército, por lo que era necesario tomar las medidas correspondientes para su aprehensión (CDIP, tomo VI, vol. 2, 1971, pp. 66-67). Otros nueve lo hicieron de los cuerpos n° 8, Granaderos y Cazadores a caballo a fines de mayo, veintitrés más a inicios de junio, así como cincuenta correspondientes a la compañía de obreros de la maestranza y otros 48 del regimiento n° 9 en julio (CDIP, tomo VI, vol. 2, 1971, pp. 76, 79, 96).",
+      "label": "campanias_conflictos_militares",
+      "source_id": "alvarado2023",
+      "resourceId": "6d0443e1-fcdc-5373-b22a-4ca1914397d4",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26983",
+      "source_author": "Patricio A. Alvarado Luna",
+      "source_title": "No todos «por la Patria». Deserciones y problemas logísticos en el ejército durante la independencia peruana, 1820-1822",
+      "pdf_pages": [
+        7
+      ],
+      "printed_pages": [
+        219
+      ],
+      "document_group": "rira2023_cadiz_sanmartin",
+      "text_sha256": "51b786ac9fef01f209c9c9a342bc8562b2769f6d0dacc2329676e390633f02b7",
+      "words": 125,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E16",
+      "text": "El 1 de marzo de 1820, el virrey decretó la formación del Ejército de Lima, afianzando su idea de proteger a la capital por sobre todos los demás territorios.3 Este nuevo cuerpo tendría al mismo virrey como su comandante en jefe; a José de la Serna, como su segundo; y a José de la Mar, subinspector general, como el jefe del Estado Mayor (Pezuela, 1947, pp. 661-668). Pese a contar con un total de 5.308 efectivos pertenecientes a los batallones I y II del Infante, Arequipa, Cantabria, Numancia, Granaderos y Cazadores de Burgos, el virrey solicitó dos unidades más: los Granaderos de la Reserva y el escuadrón de Dragones de la Unión; sin embargo, producto de los avances del ejército de Bolívar en el norte, los Granaderos de la Reserva se quedarían en Guayaquil (Albi de la Cuesta, 2009, p. 251).",
+      "label": "campanias_conflictos_militares",
+      "source_id": "alvarado2023",
+      "resourceId": "6d0443e1-fcdc-5373-b22a-4ca1914397d4",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26983",
+      "source_author": "Patricio A. Alvarado Luna",
+      "source_title": "No todos «por la Patria». Deserciones y problemas logísticos en el ejército durante la independencia peruana, 1820-1822",
+      "pdf_pages": [
+        14
+      ],
+      "printed_pages": [
+        226
+      ],
+      "document_group": "rira2023_cadiz_sanmartin",
+      "text_sha256": "26b2a6792257ec799259a43358c774f9d51b607d72140132cc3aed05b6584bdd",
+      "words": 141,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E17",
+      "text": "Las constantes deserciones ocasionaron, por momentos, la imposibilidad de llevar a cabo con éxito los esfuerzos de la guerra al punto que, al presentarse la oportunidad, muchos de los soldados no vacilaban en desertar. De esta manera, la deserción, en su conjunto, jugó un rol fundamental como limitante tanto de la propagación de la revolución como de la contrarrevolución virreinal, especialmente luego de 1814. Y es que la persecución, apresamiento y posterior castigo constituían los principales objetivos del ejército y, a su vez, un gasto económico y logístico que, en tiempos de carestía económica, representaba un duro golpe para el erario debido a que con cada desertor no solo se perdía un hombre, sino que se generaba un ambiente de desconfianza y desobediencia dentro del ejército.",
+      "label": "campanias_conflictos_militares",
+      "source_id": "alvarado2023",
+      "resourceId": "6d0443e1-fcdc-5373-b22a-4ca1914397d4",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26983",
+      "source_author": "Patricio A. Alvarado Luna",
+      "source_title": "No todos «por la Patria». Deserciones y problemas logísticos en el ejército durante la independencia peruana, 1820-1822",
+      "pdf_pages": [
+        28
+      ],
+      "printed_pages": [
+        240
+      ],
+      "document_group": "rira2023_cadiz_sanmartin",
+      "text_sha256": "aaefe9fce910c8e9a0b2de36aafa26c4fbda360b16043d286aa9c12f6eba9f3e",
+      "words": 126,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E18",
+      "text": "Culminada la lucha en España, en 1815 José de la Mar fue premiado con el grado de brigadier y la Militar Orden de San Hermenegildo, y fue destinado al virreinato peruano para tomar el puesto de subinspector general de artillería, a donde llegó en 1816 (Hamann, 1965, p. 8). La importancia del ramo de artillería será tal que, entre 1818 e inicios de 1821, La Mar se encontró en todas las juntas de guerra convocadas por Pezuela con el encargo de arbitrar los medios para el aumento de las tropas con miras a la defensa de Lima. Esto, como hemos visto anteriormente, le valió el nombramiento del Mayor General del Ejército de Lima en marzo de 1820 para luego ser ascendido a Mariscal de Campo.",
+      "label": "liderazgos_diplomacia_proyectos",
+      "source_id": "alvarado2023",
+      "resourceId": "6d0443e1-fcdc-5373-b22a-4ca1914397d4",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26983",
+      "source_author": "Patricio A. Alvarado Luna",
+      "source_title": "No todos «por la Patria». Deserciones y problemas logísticos en el ejército durante la independencia peruana, 1820-1822",
+      "pdf_pages": [
+        20
+      ],
+      "printed_pages": [
+        232
+      ],
+      "document_group": "rira2023_cadiz_sanmartin",
+      "text_sha256": "6177d4345e1a4c054fda40c5cfddb229157caee879bd8de426bade9a517a19fb",
+      "words": 125,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E19",
+      "text": "Con el arribo de La Serna al Alto Perú en reemplazo de Pezuela, ahora nuevo virrey del Perú, se optó por situar la base de operaciones del ejército en Tarija. Para esto, se nombró al coronel Mateo Ramírez y como subcomandante a Andrés de Santa Cruz (Albi de la Cuesta, 2019, p. 158). La situación no fue la más favorable, pues para el 15 de abril de 1817 las fuerzas realistas capitularon entregando las armas en el morro de San Juan. Tras la capitulación, Santa Cruz, junto con los demás jefes realistas, fue puesto prisionero y trasladado, primero, al cuartel de Martín Güemes en Salta, al cuartel general de Belgrano en Tucumán y, finalmente, a Las Bruscas. De último punto logró escapar y dirigirse a Río de Janeiro para proseguir a Lima (Urquizo Sossa, 1976: I, p. 72).",
+      "label": "campanias_conflictos_militares",
+      "source_id": "alvarado2023",
+      "resourceId": "6d0443e1-fcdc-5373-b22a-4ca1914397d4",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26983",
+      "source_author": "Patricio A. Alvarado Luna",
+      "source_title": "No todos «por la Patria». Deserciones y problemas logísticos en el ejército durante la independencia peruana, 1820-1822",
+      "pdf_pages": [
+        24
+      ],
+      "printed_pages": [
+        236
+      ],
+      "document_group": "rira2023_cadiz_sanmartin",
+      "text_sha256": "14e1e5059de13f4349ae126aa7ae105092513861bcb1a1723a1a1974d8806b15",
+      "words": 138,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E20",
+      "text": "Ahora como parte del Ejército Libertador, Santa Cruz logró conservar su graduación de teniente coronel. Tal fue la confianza que se le tuvo que se le destinó en calidad de jefe de Batallón a la unidad del general Antonio Álvarez de Arenales, aquel que poco tiempo atrás lo había derrotado en batalla (Urquizo Sossa, 1976: I, p. 73). Su accionar fue recompensado, al poco tiempo, con la Orden del Sol del Perú y con el ascenso al grado de coronel, otorgado este último por Torre Tagle el 6 de julio de 1821. Como coronel, Santa Cruz fue destinado a la guarnición de Cajamarca en calidad de jefe para ser luego transferido a la jefatura de Piura, donde tuvo la misión de reclutar y preparar a los cuerpos de voluntarios para el Ejército Libertador. En 1822, conoció a Sucre ante la negativa de Álvarez de Arenales de combatir bajo las órdenes de Bolívar, se responsabilizó del mando de la División Peruana –formada por las milicias y reclutas que había entrenado– y marchó en ayuda de Sucre. Así, el 9 de febrero de 1822 logró apoderarse de las provincias de Loja y Cuenca. Ahora bien, estas victorias fueron posibles gracias al desacato de Santa Cruz a las órdenes de San Martín de replegarse nuevamente en dirección a Piura.",
+      "label": "campanias_conflictos_militares",
+      "source_id": "alvarado2023",
+      "resourceId": "6d0443e1-fcdc-5373-b22a-4ca1914397d4",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26983",
+      "source_author": "Patricio A. Alvarado Luna",
+      "source_title": "No todos «por la Patria». Deserciones y problemas logísticos en el ejército durante la independencia peruana, 1820-1822",
+      "pdf_pages": [
+        25
+      ],
+      "printed_pages": [
+        237
+      ],
+      "document_group": "rira2023_cadiz_sanmartin",
+      "text_sha256": "4d10509cbb4b36a7f772cf5c085d6be26bc9ff6b5f8aec455188ba44cbe29f81",
+      "words": 216,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E21",
+      "text": "Desde su retorno al Perú, no fue mucho el tiempo que Castilla estuvo al servicio de las armas del rey. Tras una breve estancia en Lima, se le destinó, bajo las órdenes del brigadier Ricafort, a Arequipa y al Regimiento Dragones de la Unión. No fue sino hasta el arribo de la Expedición Libertadora y de las expediciones de Álvarez de Arenales a la sierra que la lealtad de Castilla cambió. Este cambio, consideramos, no fue por una convicción o, como sostiene Vargas Ugarte, un «despertar del entusiasmo […] cayendo en la cuenta de la justicia que asistía a los patriotas y de la nobleza de su causa [cuando] el patriotismo prendió en su pecho» (1962, pp. 26-27), sino más bien porque había caído prisionero, igual que Santa Cruz, por las fuerzas independentistas. Bajo la bandera independentista, Ramón Castilla formó parte de los Húsares de la Legión Peruana bajo las órdenes del sargento mayor Aramburú.",
+      "label": "liderazgos_diplomacia_proyectos",
+      "source_id": "alvarado2023",
+      "resourceId": "6d0443e1-fcdc-5373-b22a-4ca1914397d4",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26983",
+      "source_author": "Patricio A. Alvarado Luna",
+      "source_title": "No todos «por la Patria». Deserciones y problemas logísticos en el ejército durante la independencia peruana, 1820-1822",
+      "pdf_pages": [
+        27,
+        28
+      ],
+      "printed_pages": [
+        239,
+        240
+      ],
+      "document_group": "rira2023_cadiz_sanmartin",
+      "text_sha256": "c1c680d9a696e523e5701beaa2d2744cd7f256e991b804d7b03a7b5ba9616af2",
+      "words": 155,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E22",
+      "text": "Bajo el Protectorado de San Martín, se emitieron tres documentos que organizaban políticamente el territorio liberado del poder español: el Reglamento Provisional del 12 de febrero de 1821; el Estatuto Provisional del 8 de octubre de 1821, que sirvió de complemento al anterior; y el Reglamento Provisional de Elecciones Municipales del 27 de noviembre de 1821. Estos textos recogieron buena parte de las instituciones que habían dado forma a las intendencias, así como las sancionadas por la Constitución de Cádiz y otras por la costumbre. A través de su síntesis y aplicación, San Martín logró introducir la estabilidad necesaria en las localidades de la región, a fin de conseguir el flujo de recursos desde la población nativa hacia las tropas encargadas de llevar adelante las luchas de independencia. En 1822, se emitió el Reglamento Provisional de Tribunales, que llenó el vacío en torno a la administración de justicia que habían dejado los documentos emitidos por el general un año antes. La Constitución de 1823 no haría sino recoger todas estas disposiciones. La labor sanmartiniana permanecería constante, incluso en su ausencia, a pesar de las disputas por el poder central en ciernes desplegadas entre 1821 y 1824, que tuvieron como protagonistas al mismo San Martín, José Bernardo Torre Tagle, José de la Riva Agüero, el primer Congreso peruano y Simón Bolívar.",
+      "label": "organizacion_consecuencias_republicanas",
+      "source_id": "guarisco2023",
+      "resourceId": "e3e1b029-9c72-5e9e-b9e1-33006cdb7e78",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26981",
+      "source_author": "Claudia Guarisco",
+      "source_title": "José de San Martín y el espacio político indígena. Departamento de Lima, 1821-1822",
+      "pdf_pages": [
+        25,
+        26
+      ],
+      "printed_pages": [
+        153,
+        154
+      ],
+      "document_group": "rira2023_cadiz_sanmartin",
+      "text_sha256": "899f0886461681a5bbcf0b2aba23e4e847b4e18ca30e97e218fbf59755814658",
+      "words": 220,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E23",
+      "text": "Los territorios ocupados por el Ejército Libertador del Sur se dividieron en departamentos. En el caso de Lima, la vieja Intendencia se separó en los departamentos de Lima y la Costa. La vida del departamento de la Costa, compuesto por los partidos de Santa, Chancay y Canta, fue efímera, pues en 1823 se anexó a Lima. Hasta entonces, cada departamento se mantuvo bajo el mando de un presidente que podía desempeñarse, al mismo tiempo, como comandante general del Ejército Libertador. Los presidentes quedaron subordinados al nuevo Ministerio de Guerra y Marina y, entre 1821 y 1824, asumieron las antiguas funciones de los intendentes. Para el ejercicio de sus funciones, contaron con los llamados gobernadores y tenientes gobernadores. Estas autoridades fueron construidas a imagen y semejanza de los antiguos subdelegados, con un radio de autoridad que se restringía al partido en el primer caso; y a la parroquia, en el segundo28. Con la llegada de San Martín, los viejos partidos pasaron a ser denominados provincias; y las parroquias, distritos. La provincia de Chancay, por ejemplo, tenía tenientes gobernadores en las parroquias de Chancay, Sayán, Checras, Paccho e Iguari. En la provincia de Cañete, los había en Chilca y Lunahuaná. Tenientes gobernadores también existían por entonces en Nasca (Ica), así como Huarmey (Santa)29. Mientras tanto, en 1822, Tadeo Téllez era gobernador y comandante general en Yauyos30.",
+      "label": "organizacion_consecuencias_republicanas",
+      "source_id": "guarisco2023",
+      "resourceId": "e3e1b029-9c72-5e9e-b9e1-33006cdb7e78",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26981",
+      "source_author": "Claudia Guarisco",
+      "source_title": "José de San Martín y el espacio político indígena. Departamento de Lima, 1821-1822",
+      "pdf_pages": [
+        26,
+        27
+      ],
+      "printed_pages": [
+        154,
+        155
+      ],
+      "document_group": "rira2023_cadiz_sanmartin",
+      "text_sha256": "2d39d776dd3a1c4c22365a49d30ed32b1652b90cc086b1b5f06b5994fcf08933",
+      "words": 224,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E24",
+      "text": "Andrien, Kenneth J. 2020. Crisis y decadencia. El virreinato del Perú en el siglo XVII. Lima: Banco Central de Reserva del Perú, Instituto de Estudios Peruanos. Aravena, Gonzalo. 2014. Huellas de Chiloé. En Lima 1808-1824. Santiago: Editorial del Centro de Estudios del Bicentenario. Araya, Manuel. 2003. «Fiscalidad y economía regional: Arica 1759-1799». Chungará 35 (1): 141-157. Assadourian, Carlos. 1982. El sistema de la economía colonial. Mercado interno, regiones y espacio económico. Lima: Instituto de Estudios Peruanos. Barriga, Víctor. 1941. Memorias para la historia de Arequipa. Relaciones de la visita al partido de Arequipa por el gobernador-intendente, don Antonio Álvarez y Jiménez. Tomo I. Arequipa: La Colmena. Barriga, Víctor. 1946. Memorias para la historia de Arequipa. Relaciones de la visita al partido de Arequipa por el gobernador-intendente, don Antonio Álvarez y Jiménez. Tomo II. Arequipa: La Colmena. Barriga, Víctor. 1948. Memorias para la historia de Arequipa. Relaciones de la visita al partido de Arequipa por el gobernador-intendente, don Antonio Álvarez y Jiménez. Tomo III. Arequipa: La Colmena.",
+      "label": "no_relevante",
+      "source_id": "choque2024",
+      "resourceId": "f012593d-76c3-53ee-8285-4318e201f261",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/31098",
+      "source_author": "Carlos Choque Mariño",
+      "source_title": "«A los vasallos de este yndico continente»: Visita general, población y reformismo borbónico en el partido de Arica, 1793-1796",
+      "pdf_pages": [
+        40
+      ],
+      "printed_pages": [
+        218
+      ],
+      "document_group": "arica_visit_1793_1796",
+      "text_sha256": "dbaf1742b7e5b6ca010bf23d6cb439369e7e8eedaf6fbbb23cccb4cd90dca843",
+      "words": 166,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E25",
+      "text": "Andrews, N. (2016) Calidad, Genealogy, and Disputed Free-colored Tributary Status in New Spain. The Americas, 73(2), 139-170. Annino, A. (1995) Cádiz y la revolución territorial de los pueblos mexicanos, 1812-1821. En A. Annino (Ed.) Historia de las elecciones en Iberoamérica, siglo XIX (177-226). Buenos Aires: Fondo de Cultura Económica. (2003) Pueblos, liberalismo y nación en México. En A. Annino y F. X. Guerra (Eds.), Inventando la Nación. Iberoamérica siglo XIX (399-432). Madrid: Fondo de Cultura Económica. Bazán Díaz, M. (2017) La participación de los sectores populares en la rebelión de Huánuco, 1812: saqueadores, seductores e incanistas (Tesis para optar por el grado de magíster en Historia, Unidad de Posgrado, Facultad de Ciencias Sociales). Lima: Universidad Nacional Mayor de San Marcos. Breña, R. (2006) El primer liberalismo español y los procesos de emancipación de América, 1808-1824. Ciudad de México: El Colegio de México.",
+      "label": "no_relevante",
+      "source_id": "escanilla2023",
+      "resourceId": "1eac0299-06c0-51ad-aba3-176fab08905e",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26980",
+      "source_author": "Silvia Escanilla Huerta",
+      "source_title": "Una revolución silenciosa. El impacto de la Constitución de Cádiz en el virreinato del Perú, 1812-1823",
+      "pdf_pages": [
+        40
+      ],
+      "printed_pages": [
+        118
+      ],
+      "document_group": "rira2023_cadiz_sanmartin",
+      "text_sha256": "89c7a70ef82153305f111cb764569eb587078c5b0e9590bf2229d9cd1cb29764",
+      "words": 142,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    },
+    {
+      "id": "E26",
+      "text": "Anna, T. (2003) La caída del gobierno español en el Perú. Instituto de Estudios Peruanos. Alvarado Luna, P. (2020) Virreyes en armas. Abascal, Pezuela y La Serna: la lucha contrarrevolucionaria desde el virreinato del Perú (1808-1826). Instituto Riva-Agüero. (2021a) La amenaza fantasma: el virrey Pezuela frente a la Expedición Libertadora (1818-1820). Revista del Instituto Riva-Agüero, 6(1), pp. 131-178. (2021b) El Imperio contraataca: incursiones del ejército Realista español en la Lima Independiente, 1821-1824. Estudios de Historia Moderna y Contemporánea de México, n.º 1e (noviembre), pp. 157-192. Blanchard, P. (2008) Under the flags of freedom. Slave Soldiers & the Wars of Independence in Spanish South America. University of Pittsburgh Press. Bragoni, B. (2019) San Martín. Una biografía política del Libertador. Edhasa. Bulnes, G. (1887-1888). Historia de la Expedición Libertadora del Perú (1817-1822). Tomo I. Rafael Jover Editor.",
+      "label": "no_relevante",
+      "source_id": "alvarado2023",
+      "resourceId": "6d0443e1-fcdc-5373-b22a-4ca1914397d4",
+      "sourceType": "pdf",
+      "role": "additional_evaluation_pilot_never_train",
+      "source_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26983",
+      "source_author": "Patricio A. Alvarado Luna",
+      "source_title": "No todos «por la Patria». Deserciones y problemas logísticos en el ejército durante la independencia peruana, 1820-1822",
+      "pdf_pages": [
+        30
+      ],
+      "printed_pages": [
+        242
+      ],
+      "document_group": "rira2023_cadiz_sanmartin",
+      "text_sha256": "e64bf9d96b4bb9682d987d2a3973413c33668faf54af7bb33971d3eccd296cd7",
+      "words": 135,
+      "review_status": "accepted_ai_adjudicated",
+      "license": "CC BY 4.0; publisher declaration; attribution retained",
+      "extraction_changes": "Whitespace and line-break normalization; see archived extraction-corrections.json for the seven corrected texts."
+    }
+  ]
+}

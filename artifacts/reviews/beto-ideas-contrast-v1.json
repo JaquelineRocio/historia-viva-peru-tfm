@@ -1,0 +1,580 @@
+{
+  "schema_version": 1,
+  "id": "beto-ideas-contrast-v1",
+  "status": "completed_no_changes_applied",
+  "created_at_utc": "2026-09-08T16:53:01.540572+00:00",
+  "selection": {
+    "path": "artifacts/reviews/beto-ideas-contrast-v1-selection.json",
+    "sha256": "67b446421d7a03c81f63dffd7a85d7da994f221d4695aea19e0f64f85e47d568"
+  },
+  "scope": {
+    "sample_rows": 12,
+    "retained_errors": 4,
+    "correct_ideas_fit": 4,
+    "correct_confused_class_fit": 4,
+    "period": [
+      1780,
+      1842
+    ],
+    "taxonomy_changed": false,
+    "blinded": false,
+    "human_independent": false
+  },
+  "rows": [
+    {
+      "id": "T1-error",
+      "triplet": "T1",
+      "fold": "ophelan_huamanga",
+      "role": "error",
+      "snapshot_index": 127,
+      "source": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "text_sha256": "19888ce6caa20e06d2d32c4425e92a6747d58de27b7e8e56c8c1f5e346b76cfd",
+      "stored_label": "crisis_ideas_emancipadoras",
+      "saved_prediction": "participacion_social_regional",
+      "tokens_with_special": 280,
+      "tokens_omitted": 0,
+      "review": {
+        "theme": "Ruptura o fidelidad a Fernando VII; facciones políticas y límites regionales de 1809–1814.",
+        "assessment": "ideas_compatible_boundary_with_participation",
+        "reason": "El contraste entre facción radical y moderada es explícito y favorece ideas. El último tramo explica fracaso y regionalismo, por lo que existe una frontera temática real con participación. No se resuelve contando palabras ni aceptando la predicción.",
+        "unit": "Comienza en una enumeración sin antecedente y termina en una cita abierta, mezclada con notas. PDF11/12 permite recuperar el marco de programas políticos; el corte ya está en el segmento guardado, no lo introduce max_len384.",
+        "context_pages": [
+          11,
+          12
+        ],
+        "next_action": "Proponer recuperación de unidad completa antes de adjudicar una modificación; no cambiar la etiqueta ahora."
+      },
+      "prior_review_refs": [
+        {
+          "path": "artifacts/reviews/training-batch-v3.json",
+          "pointer": "/diagnosis/ideas_colonial/findings/3/evidence/3",
+          "match": "exact_text_sha256"
+        },
+        {
+          "path": "artifacts/reviews/training-batch-v3.json",
+          "pointer": "/diagnosis/ideas_colonial/rows/16",
+          "match": "exact_text_sha256"
+        }
+      ],
+      "label_change_applied": false,
+      "proposed_new_gold_label": null,
+      "independent_human_review": false
+    },
+    {
+      "id": "T1-ideas_correct_fit",
+      "triplet": "T1",
+      "fold": "ophelan_huamanga",
+      "role": "ideas_correct_fit",
+      "snapshot_index": 697,
+      "source": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "text_sha256": "c7e118af7c3ca57dd59e56551f4e7f1be1b9f7ff8630e010f1170aa9f84e40a3",
+      "stored_label": "crisis_ideas_emancipadoras",
+      "saved_prediction": "crisis_ideas_emancipadoras",
+      "tokens_with_special": 167,
+      "tokens_omitted": 0,
+      "review": {
+        "theme": "Pregunta contemporánea sobre interpretaciones historiográficas de la independencia y la tesis de Guerra.",
+        "assessment": "scope_and_historiography_boundary_unresolved",
+        "reason": "Habla de liberalismo y orígenes de la independencia, pero domina una pregunta sobre autores e interpretaciones actuales. Coincidir con ideas no convierte este control en un ejemplo históricamente certificado. La revisión previa F03 ya señalaba este problema exacto.",
+        "unit": "Ventana oral con pregunta inconclusa; no se escuchó audio ni se recuperó atribución/minutaje.",
+        "next_action": "Resolver la distinción entre análisis histórico del periodo y moderación/discusión historiográfica. No convertir automáticamente en no_relevante."
+      },
+      "prior_review_refs": [
+        {
+          "path": "artifacts/reviews/training-batch-v3.json",
+          "pointer": "/diagnosis/ideas_colonial/findings/2/evidence/10",
+          "match": "exact_text_sha256"
+        },
+        {
+          "path": "artifacts/reviews/training-batch-v3.json",
+          "pointer": "/diagnosis/ideas_colonial/boundaries/5/examples/4",
+          "match": "exact_text_sha256"
+        },
+        {
+          "path": "artifacts/reviews/training-batch-v3.json",
+          "pointer": "/diagnosis/ideas_colonial/rows/101",
+          "match": "exact_text_sha256"
+        }
+      ],
+      "label_change_applied": false,
+      "proposed_new_gold_label": null,
+      "independent_human_review": false
+    },
+    {
+      "id": "T1-confused_class_correct_fit",
+      "triplet": "T1",
+      "fold": "ophelan_huamanga",
+      "role": "confused_class_correct_fit",
+      "snapshot_index": 49,
+      "source": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+      "text_sha256": "ae46a13846889b267236abd2bdf47ec90a7b340d9e14e9da73e5ad4e5068860a",
+      "stored_label": "participacion_social_regional",
+      "saved_prediction": "participacion_social_regional",
+      "tokens_with_special": 274,
+      "tokens_omitted": 0,
+      "review": {
+        "theme": "Crítica historiográfica de la representación de sujetos subalternos y dinámica popular en la independencia.",
+        "assessment": "participation_plausible_but_same_historiography_rule_needed",
+        "reason": "La agencia de los sujetos subalternos motiva participación, pero el desarrollo principal es metodológico e historiográfico. Debe recibir la misma regla sobre pertinencia aplicada a los controles orales; no excluir una fuente solo por formato.",
+        "unit": "Conserva cabecera y numeración; argumento interpretable, sin truncamiento del tokenizador.",
+        "next_action": "Usarlo como contraste al redactar una regla uniforme de pertinencia; sin adjudicar etiqueta nueva."
+      },
+      "prior_review_refs": [],
+      "label_change_applied": false,
+      "proposed_new_gold_label": null,
+      "independent_human_review": false
+    },
+    {
+      "id": "T2-error",
+      "triplet": "T2",
+      "fold": "ophelan_huamanga",
+      "role": "error",
+      "snapshot_index": 194,
+      "source": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "text_sha256": "1a6219ebdfa2a7870378001b2e92321adbc6c0734485082bf40666c3fa9bb7b5",
+      "stored_label": "crisis_ideas_emancipadoras",
+      "saved_prediction": "organizacion_consecuencias_republicanas",
+      "tokens_with_special": 266,
+      "tokens_omitted": 0,
+      "review": {
+        "theme": "Programa fiscal selectivo de la Junta de La Paz en 1809 y sus beneficiarios criollos e indígenas.",
+        "assessment": "ideas_compatible_with_social_and_fiscal_boundary",
+        "reason": "Es una demanda de junta y programa político, con efectos sociales explícitos. El parecido léxico con fiscalidad republicana no basta para ubicarlo en organización de la República peruana. No demuestra por sí solo que la etiqueta actual deba corregirse.",
+        "unit": "Comienza con la cola de pasquines; PDF33 termina en pas- y PDF34 empieza quines. El antecedente de la hipótesis falta. La anomalía se procedió...los papeles también aparece en la capa textual de la página; no se ha determinado si proviene del impreso o de extracción.",
+        "context_pages": [
+          33,
+          34
+        ],
+        "next_action": "Recuperar límites y cotejar la anomalía antes de proponer una unidad reparada; no completar palabras o verbos por conjetura."
+      },
+      "prior_review_refs": [
+        {
+          "path": "artifacts/reviews/training-batch-v3.json",
+          "pointer": "/diagnosis/ideas_colonial/represented_content/4/evidence/2",
+          "match": "exact_text_sha256"
+        },
+        {
+          "path": "artifacts/reviews/training-batch-v3.json",
+          "pointer": "/diagnosis/ideas_colonial/rows/27",
+          "match": "exact_text_sha256"
+        }
+      ],
+      "label_change_applied": false,
+      "proposed_new_gold_label": null,
+      "independent_human_review": false
+    },
+    {
+      "id": "T2-ideas_correct_fit",
+      "triplet": "T2",
+      "fold": "ophelan_huamanga",
+      "role": "ideas_correct_fit",
+      "snapshot_index": 560,
+      "source": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+      "text_sha256": "11505c81a59bb3f80afbe2ab48501164ffeaf74e46d1b7e499cdc64c45fc3b81",
+      "stored_label": "crisis_ideas_emancipadoras",
+      "saved_prediction": "crisis_ideas_emancipadoras",
+      "tokens_with_special": 195,
+      "tokens_omitted": 0,
+      "review": {
+        "theme": "Circulación de liberalismo, regalismo y jansenismo; autores, prensa y obras en 1825/1833.",
+        "assessment": "current_ideas_label_supported_by_prior_review",
+        "reason": "Hay discusión ideológica explícita dentro del periodo. Es el texto reparado BAS-565, cuya etiqueta ideas ya fue justificada; no se reabre esa adjudicación por la predicción.",
+        "unit": "El comienzo remite a estas ideas, pero el propio texto nombra las corrientes y anclajes temporales. Los133 términos caben completos.",
+        "next_action": "Conservar como contraste de circulación ideológica, sin asumir equivalencia con una demanda fiscal de 1809."
+      },
+      "prior_review_refs": [
+        {
+          "path": "artifacts/reviews/boundary-resolution-v3.json",
+          "pointer": "/proposed_actions/13",
+          "match": "exact_text_sha256"
+        },
+        {
+          "path": "artifacts/reviews/boundary-resolution-v3.json",
+          "pointer": "/candidate_inventory/8",
+          "match": "exact_text_sha256"
+        }
+      ],
+      "label_change_applied": false,
+      "proposed_new_gold_label": null,
+      "independent_human_review": false
+    },
+    {
+      "id": "T2-confused_class_correct_fit",
+      "triplet": "T2",
+      "fold": "ophelan_huamanga",
+      "role": "confused_class_correct_fit",
+      "snapshot_index": 809,
+      "source": "11b4365c-87f9-5b8d-802f-a0d2aafc478a",
+      "text_sha256": "812ed5a35702fcb07412fa52b43590b594e5aba1b9b824e11140f770c72a755a",
+      "stored_label": "organizacion_consecuencias_republicanas",
+      "saved_prediction": "organizacion_consecuencias_republicanas",
+      "tokens_with_special": 223,
+      "tokens_omitted": 0,
+      "review": {
+        "theme": "Abolición, restauración y excepciones de impuestos entre 1821 y 1826.",
+        "assessment": "current_republican_label_supported_by_prior_review",
+        "reason": "Predominan normas y consecuencias fiscales de la organización posterior a la independencia. La revisión de CON2011-P125 ya descartó liderazgo por mera aparición de San Martín/Bolívar y participación por mera mención a indígenas.",
+        "unit": "Unidad íntegra y anclada temporalmente; no se certifica aplicación uniforme de las normas en todo el territorio.",
+        "next_action": "Conservar el contraste entre fiscalidad republicana y programa de una junta; no relabelar por vocabulario compartido."
+      },
+      "prior_review_refs": [
+        {
+          "path": "artifacts/reviews/training-batch-v3.json",
+          "pointer": "/additions/2",
+          "match": "exact_text_sha256"
+        },
+        {
+          "path": "artifacts/reviews/source-diversity-v1.json",
+          "pointer": "/units/2",
+          "match": "exact_text_sha256"
+        }
+      ],
+      "label_change_applied": false,
+      "proposed_new_gold_label": null,
+      "independent_human_review": false
+    },
+    {
+      "id": "T3-error",
+      "triplet": "T3",
+      "fold": "moran",
+      "role": "error",
+      "snapshot_index": 826,
+      "source": "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+      "text_sha256": "084be708f0aea05ed1c548aa8a5e62d3044102bbc39d6ad1c505df4e6ce0a944",
+      "stored_label": "crisis_ideas_emancipadoras",
+      "saved_prediction": "liderazgos_diplomacia_proyectos",
+      "tokens_with_special": 247,
+      "tokens_omitted": 0,
+      "review": {
+        "theme": "Programa de copia y circulación clandestina de discursos antidespóticos, Diario Secreto nº1 de 1811.",
+        "assessment": "current_ideas_label_supported_by_prior_review",
+        "reason": "La finalidad y los medios de circulación de ideas aparecen completos. No domina biografía o negociación diplomática. Se reutiliza la resolución de MOR2019-P019: el cotejo previo conservó va que y las elipsis impresas; no es un documento primario íntegro autenticado.",
+        "unit": "Bloque citado tal como lo seleccionó la revisión previa, atribuido a través de Morán. No se altera la cita.",
+        "next_action": "Conservar etiqueta y texto; no hay evidencia aquí para ampliar ventana ni sustituir ideas por liderazgos."
+      },
+      "prior_review_refs": [
+        {
+          "path": "artifacts/reviews/training-batch-v3.json",
+          "pointer": "/additions/20",
+          "match": "exact_text_sha256"
+        },
+        {
+          "path": "artifacts/reviews/training-batch-v3.json",
+          "pointer": "/new_source_inventory/51",
+          "match": "exact_text_sha256"
+        },
+        {
+          "path": "artifacts/reviews/training-batch-v3.json",
+          "pointer": "/reviews/moran_first/decisions/13",
+          "match": "exact_text_sha256"
+        },
+        {
+          "path": "artifacts/reviews/training-batch-v3.json",
+          "pointer": "/reviews/moran_second/rows/13",
+          "match": "exact_text_sha256"
+        }
+      ],
+      "label_change_applied": false,
+      "proposed_new_gold_label": null,
+      "independent_human_review": false
+    },
+    {
+      "id": "T3-ideas_correct_fit",
+      "triplet": "T3",
+      "fold": "moran",
+      "role": "ideas_correct_fit",
+      "snapshot_index": 577,
+      "source": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "text_sha256": "147d73cc821356a251d67aeee1aee10682a44ccf08d9fb607747a2389d7532c2",
+      "stored_label": "crisis_ideas_emancipadoras",
+      "saved_prediction": "crisis_ideas_emancipadoras",
+      "tokens_with_special": 172,
+      "tokens_omitted": 0,
+      "review": {
+        "theme": "Construcción historiográfica de la figura de los precursores criollos e indígenas.",
+        "assessment": "scope_and_historiography_boundary_unresolved",
+        "reason": "La revisión previa identificó construcción historiográfica posterior al periodo. Nombrar a Viscardo o Túpac Amaru no resuelve qué domina: sus ideas históricas o cómo los historiadores construyen precursores. No es un control de ideas inequívoco por haber sido acertado.",
+        "unit": "Ventana oral con errores de transcripción y límites dependientes del discurso. Sin escucha ni atribución nueva.",
+        "next_action": "Reutilizar F03 y decidir la regla de pertinencia con el caso697; no excluir toda historiografía moderna."
+      },
+      "prior_review_refs": [
+        {
+          "path": "artifacts/reviews/training-batch-v3.json",
+          "pointer": "/diagnosis/ideas_colonial/findings/2/evidence/7",
+          "match": "exact_text_sha256"
+        },
+        {
+          "path": "artifacts/reviews/training-batch-v3.json",
+          "pointer": "/diagnosis/ideas_colonial/rows/82",
+          "match": "exact_text_sha256"
+        }
+      ],
+      "label_change_applied": false,
+      "proposed_new_gold_label": null,
+      "independent_human_review": false
+    },
+    {
+      "id": "T3-confused_class_correct_fit",
+      "triplet": "T3",
+      "fold": "moran",
+      "role": "confused_class_correct_fit",
+      "snapshot_index": 675,
+      "source": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+      "text_sha256": "877f4e808e36e0918185e1c7771dd15d1762f195c78a54f85409c7b1fca58394",
+      "stored_label": "liderazgos_diplomacia_proyectos",
+      "saved_prediction": "liderazgos_diplomacia_proyectos",
+      "tokens_with_special": 214,
+      "tokens_omitted": 0,
+      "review": {
+        "theme": "Posición de Riva Agüero ante San Martín y Bolívar y su representación en historias nacionales.",
+        "assessment": "leadership_plausible_with_unit_and_historiography_limits",
+        "reason": "Se desarrollan relaciones políticas, jerarquía y gobierno, lo que hace plausible liderazgos. Ese contenido es distinto de un programa de circulación clandestina. La similitud léxica baja no demuestra similitud semántica.",
+        "unit": "Transcripción de nombres inestable y cierre incompleto. No se normalizan nombres ni se reconstruye audio.",
+        "next_action": "Conservar como contraste provisional; la unidad y la frontera historiográfica siguen pendientes."
+      },
+      "prior_review_refs": [],
+      "label_change_applied": false,
+      "proposed_new_gold_label": null,
+      "independent_human_review": false
+    },
+    {
+      "id": "T4-error",
+      "triplet": "T4",
+      "fold": "moran",
+      "role": "error",
+      "snapshot_index": 820,
+      "source": "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+      "text_sha256": "6d61ce45abc8b51ebd30cb94b1b93047549b118235681886c923de32ddf07ce6",
+      "stored_label": "crisis_ideas_emancipadoras",
+      "saved_prediction": "organizacion_consecuencias_republicanas",
+      "tokens_with_special": 246,
+      "tokens_omitted": 0,
+      "review": {
+        "theme": "Crisis de 1808, juntas y conflicto de propaganda entre Buenos Aires y Lima en 1810.",
+        "assessment": "current_ideas_label_supported_by_prior_review",
+        "reason": "MOR2019-P011 fue revisado como argumento autónomo de ideas. Las juntas y la prensa política son explícitas; Córdoba/Suipacha contextualizan el conflicto discursivo. No se transforma en organización republicana por mencionar gobierno.",
+        "unit": "Párrafo autónomo conservado íntegro; fechas y conexión con Perú presentes.",
+        "next_action": "Conservar etiqueta; es un error de clasificación comprobado respecto de una etiqueta temáticamente defendible, sin causa técnica identificada."
+      },
+      "prior_review_refs": [
+        {
+          "path": "artifacts/reviews/training-batch-v3.json",
+          "pointer": "/additions/14",
+          "match": "exact_text_sha256"
+        },
+        {
+          "path": "artifacts/reviews/training-batch-v3.json",
+          "pointer": "/new_source_inventory/43",
+          "match": "exact_text_sha256"
+        },
+        {
+          "path": "artifacts/reviews/training-batch-v3.json",
+          "pointer": "/reviews/moran_first/decisions/5",
+          "match": "exact_text_sha256"
+        },
+        {
+          "path": "artifacts/reviews/training-batch-v3.json",
+          "pointer": "/reviews/moran_second/rows/5",
+          "match": "exact_text_sha256"
+        }
+      ],
+      "label_change_applied": false,
+      "proposed_new_gold_label": null,
+      "independent_human_review": false
+    },
+    {
+      "id": "T4-ideas_correct_fit",
+      "triplet": "T4",
+      "fold": "moran",
+      "role": "ideas_correct_fit",
+      "snapshot_index": 242,
+      "source": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "text_sha256": "9e2f8863871c1db5e9b0798593281e0c5617356c2122ac189d3e2d5702b602b4",
+      "stored_label": "crisis_ideas_emancipadoras",
+      "saved_prediction": "crisis_ideas_emancipadoras",
+      "tokens_with_special": 286,
+      "tokens_omitted": 0,
+      "review": {
+        "theme": "Autonomía regional y alcance de los programas y proclamas de la Junta de La Paz de1809.",
+        "assessment": "ideas_compatible_with_participation_boundary",
+        "reason": "Existe cobertura comparable de juntas y autonomía en fit de la ronda Morán. La dimensión regional introduce una frontera con participación, pero no prueba ausencia de ideas. Esta misma obra está retenida en la otra ronda: no trasladar la cobertura entre particiones.",
+        "unit": "Final en pro- seguido de notas; la página siguiente continúa el argumento. Capa textual de PDF10/11 consultada, sin reconstruir una fila nueva.",
+        "context_pages": [
+          10,
+          11
+        ],
+        "next_action": "Conservar como evidencia de cobertura parcial de juntas, con reserva sobre los límites de la unidad."
+      },
+      "prior_review_refs": [
+        {
+          "path": "artifacts/reviews/training-batch-v3.json",
+          "pointer": "/diagnosis/ideas_colonial/boundaries/3/examples/2",
+          "match": "exact_text_sha256"
+        },
+        {
+          "path": "artifacts/reviews/training-batch-v3.json",
+          "pointer": "/diagnosis/ideas_colonial/rows/30",
+          "match": "exact_text_sha256"
+        }
+      ],
+      "label_change_applied": false,
+      "proposed_new_gold_label": null,
+      "independent_human_review": false
+    },
+    {
+      "id": "T4-confused_class_correct_fit",
+      "triplet": "T4",
+      "fold": "moran",
+      "role": "confused_class_correct_fit",
+      "snapshot_index": 643,
+      "source": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+      "text_sha256": "037724b6b30ae3d8702261536423ee49cea1931d06a24cce76d8f6569d256733",
+      "stored_label": "organizacion_consecuencias_republicanas",
+      "saved_prediction": "organizacion_consecuencias_republicanas",
+      "tokens_with_special": 270,
+      "tokens_omitted": 0,
+      "review": {
+        "theme": "Gasto estatal, instituciones y política económica de la primera República; referencia explícita a1826.",
+        "assessment": "current_republican_label_thematically_compatible",
+        "reason": "Predomina organización y gasto del Estado; la revisión previa REP-v3-0648 ya lo registró como cobertura de gasto estatal sin adjudicar una etiqueta nueva. Esto difiere de la formación de juntas y propaganda de1808–1810.",
+        "unit": "Comienza en segundo lugar y contiene ruido en cifras y palabras. El argumento básico es interpretable; no se corrigen cifras ni se certifica la exactitud económica de la fuente.",
+        "next_action": "Conservar contraste temático; no asumir que sea unidad perfecta ni que comparta el mecanismo del error retenido."
+      },
+      "prior_review_refs": [
+        {
+          "path": "artifacts/reviews/training-batch-v3.json",
+          "pointer": "/diagnosis/republican/rows/72",
+          "match": "exact_text_sha256"
+        }
+      ],
+      "label_change_applied": false,
+      "proposed_new_gold_label": null,
+      "independent_human_review": false
+    }
+  ],
+  "existing_coverage": [
+    {
+      "id": "HUE02",
+      "snapshot_index": 800,
+      "text_sha256": "8b9d6b3f148cdd7916984ea7f4202d12db8d81c4baf18b750d7b2ffd8b3389fe",
+      "reused_rationale": "Predominan propaganda y persuasion politica mediante proclamas para lectores y oyentes; no biografia ni operaciones militares.",
+      "role": "existing_review_only_not_additional_sample_read",
+      "in_fit_both_folds": true
+    },
+    {
+      "id": "HUE03",
+      "snapshot_index": 801,
+      "text_sha256": "016fe2fcf8f5b1085df06331cfef5242a0ab3c5a8c2465d71777831d8bc3d7af",
+      "reused_rationale": "Demanda de literatura politica, derechos e independencia; la carta es vehiculo del argumento, no negociacion diplomatica.",
+      "role": "existing_review_only_not_additional_sample_read",
+      "in_fit_both_folds": true
+    },
+    {
+      "id": "HUE04",
+      "snapshot_index": 802,
+      "text_sha256": "059e61847e9fc5d7d9ed63facf83a8685e0e18c3b95cdda66c0451313ab32a22",
+      "reused_rationale": "Posiciones politicas de la prensa y restricciones de circulacion; referencia a Machado secundaria, argumento interpretable con contexto.",
+      "role": "existing_review_only_not_additional_sample_read",
+      "in_fit_both_folds": true
+    }
+  ],
+  "findings": [
+    {
+      "id": "window",
+      "status": "ruled_out_for_these_four_errors",
+      "finding": "All12 stored segments fit:167–286 tokens including special tokens; model input equals the common loader. Raising max_len cannot expose extra text for these12 inputs. Does not rule out truncation elsewhere."
+    },
+    {
+      "id": "segmentation",
+      "status": "observed_not_causal_proof",
+      "finding": "O’Phelan errors127/194 and control242 have boundaries inherited from extraction; source pages restore context. This is distinct from the token window and cannot explain the two intact Moran errors by itself."
+    },
+    {
+      "id": "annotation_boundary",
+      "status": "specific_issue_to_adjudicate",
+      "finding": "Correct-fit ideas697/577 predominantly discuss historiography or ask about interpretations; both had already been flagged. Control49 also concerns historiographic method and must receive a consistent rule. No automatic no_relevante assignment or estimated corpus error rate."
+    },
+    {
+      "id": "clear_errors",
+      "status": "supported_by_previous_AI_reviews_not_human_gold",
+      "finding": "Moran826/820 contain explicit clandestine circulation and1808/juntas/propaganda arguments. No evidence here to change their ideas labels to model predictions."
+    },
+    {
+      "id": "coverage",
+      "status": "partial_present_fine_grained_unknown",
+      "finding": "Juntas/autonomy appear in control242 of Moran fit; Huerta HUE02/03/04 were already reviewed for propaganda, political reading and press and remain fit in both folds. Broad thematic absence is not supported. Closest lexical controls are weak matches; finer coverage and learned representation remain unresolved."
+    }
+  ],
+  "next_step_proposal": "Before any new training, draft and adjudicate one operational boundary for historical analysis of1780–1842 versus historiographic discussion/moderation, using already reviewed697/577/49. Retain historical interpretations when the period argument is dominant; do not exclude modern authors or all oral material. Separately retain127/194 as unit-repair proposals, without applying a combined package. No new experiment or correction authorized by this report.",
+  "input_evidence": [
+    {
+      "path": "artifacts/reviews/training-batch-v3.json",
+      "sha256": "b42860373a22f56490871b626a845b32d61f67108998fdc530e2883b57297692"
+    },
+    {
+      "path": "artifacts/reviews/boundary-resolution-v3.json",
+      "sha256": "1e0f7c55df5a4863b8b263a72fae88da6de541851bd7843192a4d1d1fb679be8"
+    },
+    {
+      "path": "artifacts/reviews/source-diversity-v1.json",
+      "sha256": "93474eca48f045f2a0b1e3c6f9ac7ac6f353b30f570f48a18bed4dff8a20c7e1"
+    },
+    {
+      "path": "artifacts/reviews/huerta-batch-v1.json",
+      "sha256": "850f4b3d6870ee7586122e92cccc84c81ab5e3016fc0f1ab3081c7e1d90829fe"
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-adjudication.json",
+      "sha256": "ecea76b204d5564a72feebf5f111027062da0c68e0d3834d4be1cf07cac8f579"
+    },
+    {
+      "path": ".corpus-downloads/opheland_mito_independencia.pdf",
+      "sha256": "1acd9f242328d6901bd6b68f820540473793ca9c5434a600fdd407b95da7a909"
+    },
+    {
+      "path": "outputs/beto-ideas-contrast-v1/ophelan-context.json",
+      "sha256": "1d14dd8177a434072fd149de1bffa069f135c17627f8b515713f43de6b7a8bed"
+    },
+    {
+      "path": "outputs/beto-ideas-contrast-v1/passages.json",
+      "sha256": "87abfc533106620ed6c092903d7e2d640517d0e47b79b2589b4a51b9a46a5d53"
+    },
+    {
+      "path": "outputs/beto-ideas-contrast-v1/preparation-check.json",
+      "sha256": "96ba079537d488e77befd8e15f71a4c6d41c67bf08544253cc4dad3ddbb1799f"
+    },
+    {
+      "path": "outputs/beto-ideas-contrast-v1/assemble-review.py",
+      "sha256": "0be5e34bb37683ce93fa152ca952a01ab4252ab46b0c19f976a376cb0e40d288"
+    },
+    {
+      "path": "outputs/beto-ideas-contrast-v1/selection-initial.json",
+      "sha256": "a8237e2132dafc071c1b43015117cd76d7db5b7e01f9fd62c30b560ef365a395"
+    },
+    {
+      "path": "outputs/beto-ideas-contrast-v1/prepare-initial.py",
+      "sha256": "14dd3f5e19803f95484636ee7fc78af822e93c72d526bda26e5af1d8aa967b6b"
+    }
+  ],
+  "training_performed": false,
+  "new_model_predictions": false,
+  "dataset_changed": false,
+  "labels_changed": false,
+  "production_changed": false,
+  "limits": [
+    "Selected using stored labels/predictions, not blind or representative; no annotation error rate estimate.",
+    "AI review, not independent human historical adjudication. Prediction correctness means agreement with stored label only.",
+    "Nearest lexical controls do not establish semantic absence across all TRAIN. Distinguish examples found from unknown coverage.",
+    "Existing historical reviews are reused and may concern other snapshot text; exact hashes must match.",
+    "No data/label change, classifier fitting, model inference, external31/old validation/test analysis or paid services.",
+    "Review against local text layers and previous notes, no new audio listening or manuscript/visual authentication.",
+    "This focused sample cannot distinguish optimizer dynamics, source cues and subtopic coverage causally."
+  ],
+  "serialization_recovery": {
+    "initial_selection_sha256": "a8237e2132dafc071c1b43015117cd76d7db5b7e01f9fd62c30b560ef365a395",
+    "original_script_sha256": "14dd3f5e19803f95484636ee7fc78af822e93c72d526bda26e5af1d8aa967b6b",
+    "membership_and_roles_unchanged": true,
+    "reason": "BatchEncoding was not JSON serializable; convert to plain dict. No new sample, model load or prediction."
+  },
+  "content_sha256": "be6568457d783900dea785d331c37d106569048956d54469835bd79112eb528c"
+}

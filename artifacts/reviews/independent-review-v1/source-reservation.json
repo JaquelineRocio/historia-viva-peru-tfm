@@ -1,0 +1,68 @@
+{
+  "status": "reserved_before_download_and_segmentation",
+  "created_at_utc": "2026-09-08T17:42:49.568638+00:00",
+  "sources": [
+    {
+      "id": "choque2024",
+      "author": "Carlos Choque Mariño",
+      "title": "«A los vasallos de este yndico continente»: Visita general, población y reformismo borbónico en el partido de Arica, 1793-1796",
+      "journal": "historica",
+      "article": "31098",
+      "galley": "27477",
+      "first_page": 179,
+      "group": "arica_visit_1793_1796",
+      "landing_url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/31098",
+      "pdf_url": "https://revistas.pucp.edu.pe/index.php/historica/article/download/31098/27477",
+      "role": "evaluation_candidate_only_never_training",
+      "license": "CC BY 4.0 as declared on the publisher landing page; preserve attribution and do not infer rights over third-party quotations."
+    },
+    {
+      "id": "escanilla2023",
+      "author": "Silvia Escanilla Huerta",
+      "title": "Una revolución silenciosa. El impacto de la Constitución de Cádiz en el virreinato del Perú, 1812-1823",
+      "journal": "revistaira",
+      "article": "26980",
+      "galley": "25246",
+      "first_page": 79,
+      "group": "rira2023_cadiz_sanmartin",
+      "landing_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26980",
+      "pdf_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/download/26980/25246",
+      "role": "evaluation_candidate_only_never_training",
+      "license": "CC BY 4.0 as declared on the publisher landing page; preserve attribution and do not infer rights over third-party quotations."
+    },
+    {
+      "id": "guarisco2023",
+      "author": "Claudia Guarisco",
+      "title": "José de San Martín y el espacio político indígena. Departamento de Lima, 1821-1822",
+      "journal": "revistaira",
+      "article": "26981",
+      "galley": "25247",
+      "first_page": 129,
+      "group": "rira2023_cadiz_sanmartin",
+      "landing_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26981",
+      "pdf_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/download/26981/25247",
+      "role": "evaluation_candidate_only_never_training",
+      "license": "CC BY 4.0 as declared on the publisher landing page; preserve attribution and do not infer rights over third-party quotations."
+    },
+    {
+      "id": "alvarado2023",
+      "author": "Patricio A. Alvarado Luna",
+      "title": "No todos «por la Patria». Deserciones y problemas logísticos en el ejército durante la independencia peruana, 1820-1822",
+      "journal": "revistaira",
+      "article": "26983",
+      "galley": "25249",
+      "first_page": 213,
+      "group": "rira2023_cadiz_sanmartin",
+      "landing_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26983",
+      "pdf_url": "https://revistas.pucp.edu.pe/index.php/revistaira/article/download/26983/25249",
+      "role": "evaluation_candidate_only_never_training",
+      "license": "CC BY 4.0 as declared on the publisher landing page; preserve attribution and do not infer rights over third-party quotations."
+    }
+  ],
+  "target": "Pilot aiming at 4 complete paragraphs per existing class; retain ambiguity and report missing coverage instead of forcing quotas.",
+  "sampling": "Editorial paragraph units, 120-250 words, original Spanish body text. No model predictions. Candidate labels by first reviewer then blind agent review before adjudication. Negative controls may use intact bibliographic runs and outside-period paragraphs.",
+  "dependence": "Three articles share a dossier; conservatively one collection group, not three independent evaluation domains. Check quotations/citations and lexical overlap with existing TRAIN. Any uncertain derivative paragraph remains quarantined.",
+  "training": "Twelve existing TRAIN contrast passages separately reviewed blind; no new rows applied. Existing TRAIN works cannot supply evaluation.",
+  "human_review": false,
+  "model_evaluation_performed": false
+}

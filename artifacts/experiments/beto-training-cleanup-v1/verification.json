@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "metric_summaries_recomputed": 18,
+  "aligned_rows": 1238,
+  "actual_update_comparison": {
+    "ophelan_huamanga": {
+      "baseline_updates": 56,
+      "candidate_updates": 58,
+      "baseline_skips": 2,
+      "candidate_skips": 0
+    },
+    "moran": {
+      "baseline_updates": 76,
+      "candidate_updates": 76,
+      "baseline_skips": 0,
+      "candidate_skips": 0
+    }
+  },
+  "guarded_inputs": 182,
+  "output_files_checked": 18,
+  "full_primary_membership_unchanged": true,
+  "same_scoring_labels_for_both_models": true,
+  "held_source_exclusion_verified": true,
+  "report_sha256": "9100239d65a951f171d22ea29354a8aa32633cd9a023e1fee443bf88d99e4759",
+  "created_at_utc": "2026-09-08T19:41:57.819487+00:00"
+}

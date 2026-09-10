@@ -1,0 +1,154 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-09-08T15:55:46.592120+00:00",
+  "report_sha256": "4f2c4027f2df23faa1c994fb367000c9a69bd3421ee90cf71a785e89fc529895",
+  "verifier_sha256": "52f47263e67554119f767b5ac7a228c96be07637ccce1748935c1b13130a3268",
+  "guarded_files_verified": 114,
+  "metric_summaries_recomputed": 68,
+  "prediction_rows_verified": 2476,
+  "unchanged_original_evaluation_rows": 218,
+  "summaries": {
+    "ophelan_huamanga": {
+      "epochs": {
+        "2": {
+          "fit": {
+            "ideas_correct": 34,
+            "ideas_support": 44,
+            "correct": 346,
+            "rows": 459,
+            "f1_macro": 0.7509372394266652
+          },
+          "held": {
+            "ideas_correct": 0,
+            "ideas_support": 31,
+            "correct": 61,
+            "rows": 160,
+            "f1_macro": 0.29397389303455845
+          },
+          "primary": {
+            "ideas_correct": 0,
+            "ideas_support": 28,
+            "correct": 34,
+            "rows": 103,
+            "f1_macro": 0.21880404335647302
+          }
+        },
+        "3": {
+          "fit": {
+            "ideas_correct": 32,
+            "ideas_support": 44,
+            "correct": 356,
+            "rows": 459,
+            "f1_macro": 0.7736388755877142
+          },
+          "held": {
+            "ideas_correct": 0,
+            "ideas_support": 31,
+            "correct": 64,
+            "rows": 160,
+            "f1_macro": 0.3175272346700918
+          },
+          "primary": {
+            "ideas_correct": 0,
+            "ideas_support": 28,
+            "correct": 37,
+            "rows": 103,
+            "f1_macro": 0.2403612479474548
+          }
+        }
+      },
+      "paired": {
+        "fit": {
+          "corrected_errors": 16,
+          "introduced_errors": 6,
+          "changed_predictions": 28
+        },
+        "primary": {
+          "corrected_errors": 5,
+          "introduced_errors": 2,
+          "changed_predictions": 15
+        },
+        "held": {
+          "corrected_errors": 5,
+          "introduced_errors": 2,
+          "changed_predictions": 17
+        }
+      },
+      "updates": 86,
+      "skips": 1
+    },
+    "moran": {
+      "epochs": {
+        "2": {
+          "fit": {
+            "ideas_correct": 26,
+            "ideas_support": 61,
+            "correct": 448,
+            "rows": 601,
+            "f1_macro": 0.7271815244926143
+          },
+          "held": {
+            "ideas_correct": 0,
+            "ideas_support": 14,
+            "correct": 2,
+            "rows": 18,
+            "f1_macro": 0.18095238095238098
+          },
+          "primary": {
+            "ideas_correct": 0,
+            "ideas_support": 14,
+            "correct": 2,
+            "rows": 18,
+            "f1_macro": 0.18095238095238098
+          }
+        },
+        "3": {
+          "fit": {
+            "ideas_correct": 41,
+            "ideas_support": 61,
+            "correct": 482,
+            "rows": 601,
+            "f1_macro": 0.7950922159714288
+          },
+          "held": {
+            "ideas_correct": 0,
+            "ideas_support": 14,
+            "correct": 2,
+            "rows": 18,
+            "f1_macro": 0.18461538461538463
+          },
+          "primary": {
+            "ideas_correct": 0,
+            "ideas_support": 14,
+            "correct": 2,
+            "rows": 18,
+            "f1_macro": 0.18461538461538463
+          }
+        }
+      },
+      "paired": {
+        "fit": {
+          "corrected_errors": 39,
+          "introduced_errors": 5,
+          "changed_predictions": 56
+        },
+        "primary": {
+          "corrected_errors": 0,
+          "introduced_errors": 0,
+          "changed_predictions": 1
+        },
+        "held": {
+          "corrected_errors": 0,
+          "introduced_errors": 0,
+          "changed_predictions": 1
+        }
+      },
+      "updates": 114,
+      "skips": 0
+    }
+  },
+  "decision": "inconclusive_or_work_dependent",
+  "models_loaded": false,
+  "training_performed": false,
+  "limits": "Recalculation of saved predictions verifies metrics and integrity, not historical correctness or independent generalization."
+}
