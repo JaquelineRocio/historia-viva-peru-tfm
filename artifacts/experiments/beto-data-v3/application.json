@@ -1,0 +1,486 @@
+{
+  "schema_version": 1,
+  "purpose": "local_application_of_approved_training_batch_v3",
+  "created_at_utc": "2026-09-08T14:22:00.070832+00:00",
+  "status": "applied_and_verified_locally",
+  "builder": {
+    "path": "scripts/build_training_batch_v3.py",
+    "file_sha256": "768face195990b7c15578a01d8d29dde5b12226532312240764395ed6925b652"
+  },
+  "local_build_report": {
+    "path": "outputs/corpus-snapshot-v3/build-report.json",
+    "file_sha256": "e69c395133a732a09e5d2b66d0bea35967dc309dc092ca7d9a96d19a44b70f4a"
+  },
+  "outputs": [
+    {
+      "path": "outputs/corpus-snapshot-v3/reviewed-export.json",
+      "file_sha256": "687a16c894eae549f9e29e48076a687ce6a96b5cd195f18b21629e8b7e7078e5",
+      "bytes": 1309133
+    },
+    {
+      "path": "outputs/corpus-snapshot-v3/replacement-archive.json",
+      "file_sha256": "926f240cb59fe19ce9501e02462e09dd293b426b61b77b7fc691e749de092ada",
+      "bytes": 2708018
+    }
+  ],
+  "source_reviews": [
+    {
+      "path": "artifacts/reviews/boundary-resolution-v3.json",
+      "file_sha256": "1e0f7c55df5a4863b8b263a72fae88da6de541851bd7843192a4d1d1fb679be8"
+    },
+    {
+      "path": "artifacts/reviews/training-batch-v3.json",
+      "file_sha256": "b42860373a22f56490871b626a845b32d61f67108998fdc530e2883b57297692"
+    }
+  ],
+  "verified_input_files": 75,
+  "input_files": [
+    {
+      "path": "outputs/corpus-snapshot-v2/reviewed-export.json",
+      "file_sha256": "5de9ea1a4be3c9d628da51cdf1d07108f43e0ac8ee580acb483013c6dc27c35c",
+      "bytes": 1027471
+    },
+    {
+      "path": "artifacts/reviews/boundary-resolution-v3.json",
+      "file_sha256": "1e0f7c55df5a4863b8b263a72fae88da6de541851bd7843192a4d1d1fb679be8",
+      "bytes": 178519
+    },
+    {
+      "path": "artifacts/reviews/training-batch-v3.json",
+      "file_sha256": "b42860373a22f56490871b626a845b32d61f67108998fdc530e2883b57297692",
+      "bytes": 694572
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/proposed-replacements.json",
+      "file_sha256": "8b0f6b6a9b49d16f6615e66ad92ef28a740f8e6de3a1fd498ecc6c7916d37ed9",
+      "bytes": 35069
+    },
+    {
+      "path": "outputs/corpus-snapshot-v2/replacement-archive.json",
+      "file_sha256": "dac743647c4ca2715b4e915475dcae999a41f00264243ad64500eeaa5a173777",
+      "bytes": 304455
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/context-blind.json",
+      "file_sha256": "08c6f1b3f46c96d7ad142366a2e05b92621b5eb3d02a0471b07dd55993089c44",
+      "bytes": 146562
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/first-review.json",
+      "file_sha256": "d50c49ec69b8f2b87479cfd1ba1823d49881f0e9f329dab78c32f90137fcefa2",
+      "bytes": 6714
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/second-review.json",
+      "file_sha256": "7dfb7ac45ad6423c8a9fced80c21f6f5fd88cb8a96934f440c1bf5ee638f7605",
+      "bytes": 59770
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/pereyra-review.json",
+      "file_sha256": "73c1bd216c7e662357922a91529b598e4fd68e618d730e721af435d7c899c665",
+      "bytes": 35691
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/regulation-context.json",
+      "file_sha256": "043f7a1a34069d54502acf2a16402b3ebf55cc792faf749ee2d99c90a8fb3179",
+      "bytes": 10060
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/basadre-proposals.json",
+      "file_sha256": "fcb3e327a2aacf1c8880ef137867bebb40f4b0cce1784022b3b6687ede4abed6",
+      "bytes": 25217
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/prepare-proposals.py",
+      "file_sha256": "64df0fc009dba01c4fbe246541cba72ee1d1cb55d60b978875d5f63b7040675f",
+      "bytes": 5769
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/originals-preserved.json",
+      "file_sha256": "39993e2a2aafbde0a17c6a5d1591cd51d9037e1f78e70e26088aeaef4479bb95",
+      "bytes": 23796
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/overlap-check.json",
+      "file_sha256": "b8eea0854943bc3d33a6d75d902fadc06e4939c36cf925c80c24778546e5429f",
+      "bytes": 637
+    },
+    {
+      "path": "outputs/training-batch-v3/assemble-review.py",
+      "file_sha256": "179afa3afaa8f28963f8cde9cafa930797cfb3837dce5c561c011215c562b8fc",
+      "bytes": 17370
+    },
+    {
+      "path": "outputs/training-batch-v3/audit-ideas-colonial.json",
+      "file_sha256": "06b09f688632c1360041317145affd763efcc0abc4784b827c5b54590d9d0c02",
+      "bytes": 162501
+    },
+    {
+      "path": "outputs/training-batch-v3/audit-republican.json",
+      "file_sha256": "53f6faa34ddbfca5160f3518737b2f77d0bf4dd398729723abf80d5f4b7afbd5",
+      "bytes": 123805
+    },
+    {
+      "path": "outputs/training-batch-v3/check-pool.py",
+      "file_sha256": "d0e75e409f2703f44816fbc8d665deffb0695de024834cefed9b26ac6d14ef37",
+      "bytes": 3606
+    },
+    {
+      "path": "outputs/training-batch-v3/document-title-screen.json",
+      "file_sha256": "2681db3b9303e3338201bfec56c31cbc81801fa2b85d8b1a5f7d75eca1ef1e5a",
+      "bytes": 2198
+    },
+    {
+      "path": "outputs/training-batch-v3/hampe/adjudication.json",
+      "file_sha256": "80e317122d167b71997b17ffc0e618cf9928533cfa7908f8f1ec92929052cf2e",
+      "bytes": 3854
+    },
+    {
+      "path": "outputs/training-batch-v3/hampe/article.pdf",
+      "file_sha256": "9c930ca049b398cf7b70bc55e1d19c52e4ed6871de4134c26cf77e2637a2a827",
+      "bytes": 254901
+    },
+    {
+      "path": "outputs/training-batch-v3/hampe/editorial.html",
+      "file_sha256": "c2e66a5db4ca5ea21b16765121d2ac30d14b2ab3dbcd18f155e5b26a82f2570c",
+      "bytes": 10839
+    },
+    {
+      "path": "outputs/training-batch-v3/hampe/extract.py",
+      "file_sha256": "c6f2f2955c5b72cba8169334464c0aed89819bcbfc9992e36d070daf9649fd05",
+      "bytes": 5542
+    },
+    {
+      "path": "outputs/training-batch-v3/hampe/first-review.json",
+      "file_sha256": "eec823de7f46c33107affb23bcc329a27b5ae3fb58d6693f07ef6ed40af7824e",
+      "bytes": 4014
+    },
+    {
+      "path": "outputs/training-batch-v3/hampe/inventory-unlabelled.json",
+      "file_sha256": "4d27b0a25a67e3a7581fc760356568ad7557592beb57eb170d0208fc208bde4e",
+      "bytes": 97161
+    },
+    {
+      "path": "outputs/training-batch-v3/hampe/mechanical-visual-check.json",
+      "file_sha256": "8e70b314231d7e171cbda552eefab27d9dfc4b1c242d2aea035f15b4ddc9f43f",
+      "bytes": 16800
+    },
+    {
+      "path": "outputs/training-batch-v3/hampe/page-82.png",
+      "file_sha256": "ac6c5eabb9540c18ca7afff0d2c31610b23509c24c26d38a27b42c033f992fe0",
+      "bytes": 153319
+    },
+    {
+      "path": "outputs/training-batch-v3/hampe/page-83.png",
+      "file_sha256": "686e2e1a314b13743e2c8a02c4755945995c226b3767ba39c79012264d9ac7ce",
+      "bytes": 156429
+    },
+    {
+      "path": "outputs/training-batch-v3/hampe/page-85.png",
+      "file_sha256": "70d4adfb7227fc92dfe42f02cc75b717eec769d488207a6b3e1de49c4fa49805",
+      "bytes": 157069
+    },
+    {
+      "path": "outputs/training-batch-v3/hampe/page-87.png",
+      "file_sha256": "7bd005cf399a471445a72acc4867975369c763a0c408e6701eee6a70b8647156",
+      "bytes": 155108
+    },
+    {
+      "path": "outputs/training-batch-v3/hampe/page-88.png",
+      "file_sha256": "dace4ded1a7d5c0b87c85231e89529ee1f439afa51ca0e1420f9bdfdb26de919",
+      "bytes": 159264
+    },
+    {
+      "path": "outputs/training-batch-v3/hampe/raw-pages.json",
+      "file_sha256": "c3920d5841cfee33a27a9625af6a0d59a4581aa24944c252f50fc0fd935405a6",
+      "bytes": 71992
+    },
+    {
+      "path": "outputs/training-batch-v3/hampe/second-review.json",
+      "file_sha256": "611824ab7ef8fff0e52ac259d187c2e3e79c8d4fc0a4ed2f70f182e86e9edb5b",
+      "bytes": 14067
+    },
+    {
+      "path": "outputs/training-batch-v3/inputs-before.json",
+      "file_sha256": "2c15f683a29a31f7bc153884e577aa54ac2fd30cafa1be61dbe0979419e7db15",
+      "bytes": 1413
+    },
+    {
+      "path": "outputs/training-batch-v3/pool-check.json",
+      "file_sha256": "58771b40649f793e32ed1e03053ff6c943f4532dddc9d2e0484d027270b76041",
+      "bytes": 1387
+    },
+    {
+      "path": "outputs/training-batch-v3/pool.json",
+      "file_sha256": "8542e30a47def0323f675a31ab94ad1455d4e5f1f1f6b751091ca7e887067832",
+      "bytes": 58131
+    },
+    {
+      "path": "outputs/training-batch-v3/root-boundary-review.json",
+      "file_sha256": "b2da350ad32de9f007fa590ae6e8a34d8436cc26b29b81c7e4d62226167d2d83",
+      "bytes": 5009
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-2019.pdf",
+      "file_sha256": "04e79e35f4739fe5c8727b9647689cb4c3b04bf9fa4bc0e93de54f49edb225ce",
+      "bytes": 652449
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-adjudication.json",
+      "file_sha256": "ecea76b204d5564a72feebf5f111027062da0c68e0d3834d4be1cf07cac8f579",
+      "bytes": 5338
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-build.py",
+      "file_sha256": "818c8fa2ca2815581fe48a624fa14ee25907bb52a977989f4d42ea6f19217899",
+      "bytes": 5624
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-candidates-blind.json",
+      "file_sha256": "64aa899f613dc70a14bebcd10bcceb935eeb33e80305473ed06241709594f194",
+      "bytes": 258941
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-check.py",
+      "file_sha256": "d3745ecbca667ae0e271436ac2cf1199d5d1ad0e89b31c9644c4d98ff3a9a60b",
+      "bytes": 5751
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-editorial.html",
+      "file_sha256": "6a05c93df4682e6ed08cb8c648df614f319cd480e2e8135cdc5172a8c25d6732",
+      "bytes": 58397
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-finalize.py",
+      "file_sha256": "950e9f12dd99af97ba98c93f064d4e4c864c47617452e7e045566c49b32a596d",
+      "bytes": 14498
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-first-review.json",
+      "file_sha256": "00ce28bef3ea4356140360b309682e1d69efb820b4f4cebaebd5e1dfbf683bbf",
+      "bytes": 20173
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-inventory.json",
+      "file_sha256": "a5f77730231c05d6f0377d239305e522b7f136725a461149013ebe08adfb9ae7",
+      "bytes": 280454
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-layout-pages.json",
+      "file_sha256": "c2acd909d4b9b40f6e523b31deb4907119b87d4292f5c57a2b7922e1427567f1",
+      "bytes": 174037
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-mechanical-check.json",
+      "file_sha256": "b7a2f8845b43b725b7015078ff80662fbd690b27489f859bb83b2db8d21ed592",
+      "bytes": 751
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-page-02.png",
+      "file_sha256": "ee3902c10f065b136a860948c0760e6822937329f5b569c8f144fd7e4ecd0a94",
+      "bytes": 271699
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-page-03.png",
+      "file_sha256": "0ce83455f12aa73af7a44db5a694900e620df8327c513da61a738b3e2724019d",
+      "bytes": 270920
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-page-04.png",
+      "file_sha256": "50810e1e3b4f27be0271734e295c4e2974de3def81d24f52f69c2a8cb50d0006",
+      "bytes": 322015
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-page-05.png",
+      "file_sha256": "17f027eabb5592cb4a1214b592cc18526cc52d97ac1b8fbfbdd1f64f7a362c2e",
+      "bytes": 314608
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-page-06.png",
+      "file_sha256": "3079c4a55a26afd30570432c7dddd9c0b767f003c01ee02d68b8179d7d791d1d",
+      "bytes": 297298
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-page-07.png",
+      "file_sha256": "33c1b1a13adddaec8f845d0e974687cb028ce5544d7c5e955d342ac47a57c1d9",
+      "bytes": 325256
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-page-08.png",
+      "file_sha256": "fdeb345e484eecc0aa0a2166c38eb97f0586209c76660bc0ef65bd060be38a8c",
+      "bytes": 282349
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-page-09.png",
+      "file_sha256": "5ee25d54b4c063af909458d8055f128be2e1c9803b22fb10d1f583060f7db40c",
+      "bytes": 300043
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-page-10.png",
+      "file_sha256": "0c7d7dc70154fbfda215027d543ce230e328614f9dcc5cb0f52bd2dc1a64f925",
+      "bytes": 257313
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-page-11.png",
+      "file_sha256": "acc7a04f56120cb8d0f784c1e66a608f86432090686af2abcaac35bb23fdaa87",
+      "bytes": 288808
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-page-12.png",
+      "file_sha256": "75ea56283ef06683de7afc2221d660239c76caeb8f769764b9973fb3f90e527e",
+      "bytes": 292441
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-page-13.png",
+      "file_sha256": "0b40dea10548e2d9a0f39494e89aa3ce878f034ddd2d4dd03a1e541da9c2e02d",
+      "bytes": 265090
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-page-14.png",
+      "file_sha256": "bd76fbd65fb5534068e6a536901aa9f8d7d3de06970a6a9a88c50d9f546c57ec",
+      "bytes": 280428
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-page-15.png",
+      "file_sha256": "f0e74493bd1872a41d085b39839f4af6b6d461d0d344e27bc944637a8e005aa5",
+      "bytes": 256090
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-raw-pages.json",
+      "file_sha256": "28331541895ba194d3a1ecb1b27e801e166b2759b619bb355aa3505adfa26a1e",
+      "bytes": 62993
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-second-review.json",
+      "file_sha256": "f7987aa7c8be27c9dd9997e315f36a48b68d0ef58efb240896cd187f67b99b85",
+      "bytes": 40585
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-source.json",
+      "file_sha256": "0402c869dd5195d51416902491fa7dd81dd7732b6707d3bdd2c67848cd65fa1f",
+      "bytes": 5563
+    },
+    {
+      "path": "outputs/training-batch-v3/source-moran-visual-check.json",
+      "file_sha256": "e7b15f8eead74002ae7d7a43319388ae669bbe1bf3865d8f08d6ec542a6f1115",
+      "bytes": 5261
+    },
+    {
+      "path": "outputs/training-batch-v3/source-reuse-rights.json",
+      "file_sha256": "3004f6eaa4b25e1302f36251738208420a1c32973377263a9b4fe22266b9096d",
+      "bytes": 3305
+    },
+    {
+      "path": "outputs/training-batch-v3/token-lengths.json",
+      "file_sha256": "9e0322324e8f954cfe793f1ebd6593161795e929e6e229311e9b266df3ebd28c",
+      "bytes": 9036
+    },
+    {
+      "path": "outputs/source-diversity-v1/contreras-candidates-unlabelled.json",
+      "file_sha256": "d9f701af2a4202f431d28ce403739450ef17356999310ee517c572709cceb876",
+      "bytes": 32998
+    },
+    {
+      "path": "outputs/source-diversity-v1/hunefeldt-candidates-blind.json",
+      "file_sha256": "89d29972bcef0b8ccecc1de58f33c8d619cff371ca5ccc2c64fb64771f5aeee0",
+      "bytes": 55763
+    },
+    {
+      "path": "outputs/corpus-batch-v2/women/blind-author-candidate.json",
+      "file_sha256": "abe2b00e85863d2f4eef4a2d2be13cca89165b232d64dc90de1521889fb6ec53",
+      "bytes": 7551
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/pereyra/originals-train.json",
+      "file_sha256": "3c91c97d3aee13b20844708a840d87b2dad97c698429f7fb8863c94d6cee84f3",
+      "bytes": 5208
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/pereyra/original-partitions.json",
+      "file_sha256": "c3e304feb65bd2ebc287923aebc4ddab5ad3e906f5f49aea95eaa4e55a449693",
+      "bytes": 8092
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/pereyra/context-and-notes.json",
+      "file_sha256": "714d5121d9eb2ed451bc1db98174d99e38e3f215c33f2f32e84479c1cf4a782e",
+      "bytes": 4870
+    },
+    {
+      "path": "scripts/build_training_batch_v3.py",
+      "file_sha256": "768face195990b7c15578a01d8d29dde5b12226532312240764395ed6925b652",
+      "bytes": 22200
+    }
+  ],
+  "canonical_snapshot_sha256": "8c8a7b6c69d942aac951c5b4478c8f139e30a06131213232e8aaa70a82d5ace6",
+  "split_counts": {
+    "train": 619,
+    "val": 81,
+    "test": 137
+  },
+  "training_class_counts": {
+    "campanias_conflictos_militares": 87,
+    "participacion_social_regional": 89,
+    "no_relevante": 101,
+    "organizacion_consecuencias_republicanas": 109,
+    "liderazgos_diplomacia_proyectos": 101,
+    "contexto_colonial_antecedentes": 57,
+    "crisis_ideas_emancipadoras": 75
+  },
+  "training_sources_before": 9,
+  "training_sources_after": 14,
+  "new_source_ids": {
+    "contreras": "11b4365c-87f9-5b8d-802f-a0d2aafc478a",
+    "hunefeldt": "7ef1a1d4-97c6-55cf-990b-3a7b1fbb0f9d",
+    "arguedas": "776e9620-a23b-54e8-bf0e-d5a27ed2969a",
+    "hampe": "08fa49e1-abac-5645-a35e-2d7ec4a8f05d",
+    "moran": "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a"
+  },
+  "replaced_in_place": 9,
+  "text_replacements": 8,
+  "label_changes": 9,
+  "quarantined_rows": 7,
+  "added_rows": 30,
+  "withheld_additions": [
+    "HUN-03B"
+  ],
+  "unchanged_parent_rows": 798,
+  "unchanged_evaluation_rows": 218,
+  "evaluation_sha256": "593fe90d68bc282108eab983515598c7c3b5ebbf42e2f79dbdb275c12d8c02a2",
+  "compared_with_original_train": {
+    "identity": "Multiset of resourceId, exact text and label; ignores metadata and order.",
+    "unchanged": 560,
+    "original_not_kept_exactly": 36,
+    "candidate_new_or_changed": 59
+  },
+  "normalized_exact_overlap_alerts_for_changed_rows": 0,
+  "train_external_normalized_exact_overlaps": 0,
+  "preexisting_unchanged_duplicate_groups_in_new_indices": [
+    [
+      702,
+      730
+    ]
+  ],
+  "nominal_length_exception": {
+    "id": "arguedas-francisca-author-01",
+    "sha256": "cae127746c6d05daafebf45af2cb6e411c72ff2f0623f917b7ebc113e3c6178d",
+    "words": 114
+  },
+  "previous_metadata_preserved": true,
+  "originals_and_contexts_archived_locally": true,
+  "provenance_records_added": 39,
+  "taxonomy_changed": false,
+  "scope_years": [
+    1780,
+    1842
+  ],
+  "production_changed": false,
+  "portability": "Export completo, archivos de contexto, originales y pesos permanecen en outputs, fuera de Git. Este resumen contiene huellas y metadatos; reproducir requiere las entradas locales indicadas y no solo clonar el repositorio.",
+  "rights": "Se conservan licencias específicas y condiciones pendientes en el export y las revisiones. No se publica el corpus ni se afirma permiso general de redistribución.",
+  "limitations": [
+    "AI-assisted annotation, not independent human gold.",
+    "Works and quoted documents are not automatically independent sources.",
+    "Mixed changes to training do not isolate one cause of any later score difference.",
+    "Licenses and unresolved rights remain source-specific; local copy is not publication permission.",
+    "39 changed/added units against all retained items and each other; normalized exact equality only. This is not proof of semantic or documentary independence."
+  ]
+}

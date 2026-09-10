@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "id": "E15",
+      "before": "pp. 6667",
+      "after": "pp. 66-67",
+      "occurrences": 1,
+      "basis": "Cotejo visual de las 27 páginas renderizadas con PDFium5.13.0; reparar solo separación tipográfica o rango numérico, sin cambiar contenido histórico."
+    },
+    {
+      "id": "E16",
+      "before": "Reser va",
+      "after": "Reserva",
+      "occurrences": 2,
+      "basis": "Cotejo visual de las 27 páginas renderizadas con PDFium5.13.0; reparar solo separación tipográfica o rango numérico, sin cambiar contenido histórico."
+    },
+    {
+      "id": "E20",
+      "before": "conser var",
+      "after": "conservar",
+      "occurrences": 1,
+      "basis": "Cotejo visual de las 27 páginas renderizadas con PDFium5.13.0; reparar solo separación tipográfica o rango numérico, sin cambiar contenido histórico."
+    },
+    {
+      "id": "E21",
+      "before": "ser vicio",
+      "after": "servicio",
+      "occurrences": 1,
+      "basis": "Cotejo visual de las 27 páginas renderizadas con PDFium5.13.0; reparar solo separación tipográfica o rango numérico, sin cambiar contenido histórico."
+    },
+    {
+      "id": "E21",
+      "before": "pp. 2627",
+      "after": "pp. 26-27",
+      "occurrences": 1,
+      "basis": "Cotejo visual de las 27 páginas renderizadas con PDFium5.13.0; reparar solo separación tipográfica o rango numérico, sin cambiar contenido histórico."
+    },
+    {
+      "id": "E22",
+      "before": "sir vió",
+      "after": "sirvió",
+      "occurrences": 1,
+      "basis": "Cotejo visual de las 27 páginas renderizadas con PDFium5.13.0; reparar solo separación tipográfica o rango numérico, sin cambiar contenido histórico."
+    },
+    {
+      "id": "E24",
+      "before": "Reser va",
+      "after": "Reserva",
+      "occurrences": 1,
+      "basis": "Cotejo visual de las 27 páginas renderizadas con PDFium5.13.0; reparar solo separación tipográfica o rango numérico, sin cambiar contenido histórico."
+    },
+    {
+      "id": "E24",
+      "before": "TomoI.",
+      "after": "Tomo I.",
+      "occurrences": 1,
+      "basis": "Cotejo visual de las 27 páginas renderizadas con PDFium5.13.0; reparar solo separación tipográfica o rango numérico, sin cambiar contenido histórico."
+    },
+    {
+      "id": "E24",
+      "before": "TomoII.",
+      "after": "Tomo II.",
+      "occurrences": 1,
+      "basis": "Cotejo visual de las 27 páginas renderizadas con PDFium5.13.0; reparar solo separación tipográfica o rango numérico, sin cambiar contenido histórico."
+    },
+    {
+      "id": "E24",
+      "before": "TomoIII.",
+      "after": "Tomo III.",
+      "occurrences": 1,
+      "basis": "Cotejo visual de las 27 páginas renderizadas con PDFium5.13.0; reparar solo separación tipográfica o rango numérico, sin cambiar contenido histórico."
+    },
+    {
+      "id": "E26",
+      "before": "(18171822)",
+      "after": "(1817-1822)",
+      "occurrences": 1,
+      "basis": "Cotejo visual de las 27 páginas renderizadas con PDFium5.13.0; reparar solo separación tipográfica o rango numérico, sin cambiar contenido histórico."
+    }
+  ]
+}

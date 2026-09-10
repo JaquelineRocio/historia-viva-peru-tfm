@@ -1,0 +1,148 @@
+{
+  "schema": "training_cleanup_dataset_peer_check.v1",
+  "status": "passed",
+  "human_review": false,
+  "review_kind": "AI_assisted_independent_recomputation_of_data_application",
+  "checks": {
+    "expected_transformation_exact": true,
+    "mapping_exact_ordered_bijection": true,
+    "v3_837_v4_831": true,
+    "six_exact_exclusions": true,
+    "excluded_only_train": true,
+    "830_original_rows_identical": true,
+    "only_row49_relabel": true,
+    "zero_text_edits": true,
+    "row643_unchanged": true,
+    "archive_exact_seven_originals": true,
+    "adjudication_text_hashes_match": true,
+    "splits_619_to613_81_137": true,
+    "held_rows_and_order_identical": true,
+    "seven_training_classes_preserved": true,
+    "fourteen_training_sources_preserved": true,
+    "class_counts_match_report": true,
+    "four_context_decisions_faithful": true,
+    "original_context_archive_identical": true,
+    "document_file_hashes_match_reports": true,
+    "training_and_evaluation_canonical_hashes_match": true,
+    "build_verification_counts_match": true,
+    "report_transition_counts_match": true
+  },
+  "input_hashes": [
+    {
+      "id": "v3",
+      "path": "outputs/corpus-snapshot-v3/reviewed-export.json",
+      "sha256": "687a16c894eae549f9e29e48076a687ce6a96b5cd195f18b21629e8b7e7078e5"
+    },
+    {
+      "id": "v4",
+      "path": "outputs/corpus-snapshot-v4/reviewed-export.json",
+      "sha256": "d00c83713de6d2b7263f3aa09da583801b3f358b4d46563ce9957e7578fde8a9"
+    },
+    {
+      "id": "mapping",
+      "path": "outputs/corpus-snapshot-v4/row-mapping.json",
+      "sha256": "f42069ea31c8c3f5a005f2aaac82e1cdd130f1bee9851ec64b47a41056e953b8"
+    },
+    {
+      "id": "archive",
+      "path": "outputs/corpus-snapshot-v4/originals-and-decisions.json",
+      "sha256": "f0b483781e38ce54fc6e420159a17c7f34c6cb900f8e40219d0c85633e105d36"
+    },
+    {
+      "id": "adjudication",
+      "path": "artifacts/reviews/beto-training-cleanup-v1/adjudication.json",
+      "sha256": "f10cdbb04cfd9b7962329fa7d109b9b8d63286c1a527a9566e1475988119b2f1"
+    },
+    {
+      "id": "report",
+      "path": "artifacts/reviews/beto-training-cleanup-v1/build-report.json",
+      "sha256": "5e90f1f6410d2409ed535308029e28c202e5288e17da37cce8988afdadfb1fc7"
+    },
+    {
+      "id": "verification",
+      "path": "artifacts/reviews/beto-training-cleanup-v1/build-verification.json",
+      "sha256": "6f8c937ffb6b85dee77fac5eb431776a2cab98ac5bb19d18cb915934efe7eed8"
+    },
+    {
+      "id": "peer_context",
+      "path": "outputs/beto-training-cleanup-v1/context-review.json",
+      "sha256": "5bbe9e9202f4137ea31dae4251a8c7ba79c6788aba712b2f5a1e46672ebe4dda"
+    },
+    {
+      "id": "archived_context",
+      "path": "artifacts/reviews/beto-training-cleanup-v1/context-review.json",
+      "sha256": "5bbe9e9202f4137ea31dae4251a8c7ba79c6788aba712b2f5a1e46672ebe4dda"
+    }
+  ],
+  "counts": {
+    "v3_rows": 837,
+    "v4_rows": 831,
+    "unchanged_rows": 830,
+    "removed_rows": 6,
+    "relabeled_rows": 1,
+    "text_edits": 0,
+    "before_splits": {
+      "val": 81,
+      "train": 619,
+      "test": 137
+    },
+    "after_splits": {
+      "val": 81,
+      "train": 613,
+      "test": 137
+    },
+    "classes": 7,
+    "training_resource_ids": 14
+  },
+  "exact_exclusions_v3_indices": [
+    127,
+    194,
+    242,
+    577,
+    675,
+    697
+  ],
+  "relabeled_v3_indices": [
+    49
+  ],
+  "reviewed_pdf_application": [
+    {
+      "snapshot_index": 643,
+      "action": "keep",
+      "v4_index": 639,
+      "faithful": true
+    },
+    {
+      "snapshot_index": 127,
+      "action": "quarantine",
+      "v4_index": null,
+      "faithful": true
+    },
+    {
+      "snapshot_index": 194,
+      "action": "quarantine",
+      "v4_index": null,
+      "faithful": true
+    },
+    {
+      "snapshot_index": 242,
+      "action": "quarantine",
+      "v4_index": null,
+      "faithful": true
+    }
+  ],
+  "hash_method_for_subsets": "SHA256 of UTF-8 JSON with ensure_ascii=False, sort_keys=True, separators=(comma,colon), allow_nan=False. Compared to build-report declared hashes.",
+  "scope": [
+    "Se compararon directamente las 837 filas de v3 con la transformación esperada y las 831 filas de v4, sin depender del verificador original.",
+    "Se cotejó el mapeo completo de índices, las siete filas archivadas y las decisiones e identidades de texto.",
+    "Se verificaron los cuatro dictámenes PDF: excluir 127/194/242 y conservar 643 sin modificar texto ni etiqueta.",
+    "Se comprobaron 81 validación y 137 test íntegros, orden incluido, y 14 resourceId en TRAIN."
+  ],
+  "limits": [
+    "No se leyó ningún archivo de predicciones, resultados de comparación o métricas del clasificador.",
+    "La lista de input_guards en el informe contiene rutas y hashes de otros artefactos, pero no se abrieron ni auditaron esos archivos.",
+    "No se certifica calidad histórica de todo el corpus ni ausencia de errores en las 830 filas conservadas.",
+    "La fidelidad de aplicación no demuestra mejora del modelo; no hay gold humano ni validación de rendimiento en este control.",
+    "No se modificaron los datos ni los informes previos."
+  ]
+}

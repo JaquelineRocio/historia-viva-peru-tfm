@@ -1,0 +1,118 @@
+{
+  "status": "measured_no_model_loaded_no_predictions",
+  "tokenizer_json_sha256": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f",
+  "dataset_sha256": "b127e120ec764d40d49e314be3f6d5985803948080c3181f3426f65d0ed96791",
+  "items": [
+    {
+      "id": "E01",
+      "tokens_with_special": 214,
+      "fits_384": true
+    },
+    {
+      "id": "E03",
+      "tokens_with_special": 204,
+      "fits_384": true
+    },
+    {
+      "id": "E05",
+      "tokens_with_special": 177,
+      "fits_384": true
+    },
+    {
+      "id": "E06",
+      "tokens_with_special": 200,
+      "fits_384": true
+    },
+    {
+      "id": "E09",
+      "tokens_with_special": 331,
+      "fits_384": true
+    },
+    {
+      "id": "E10",
+      "tokens_with_special": 244,
+      "fits_384": true
+    },
+    {
+      "id": "E11",
+      "tokens_with_special": 252,
+      "fits_384": true
+    },
+    {
+      "id": "E12",
+      "tokens_with_special": 225,
+      "fits_384": true
+    },
+    {
+      "id": "E13",
+      "tokens_with_special": 222,
+      "fits_384": true
+    },
+    {
+      "id": "E14",
+      "tokens_with_special": 279,
+      "fits_384": true
+    },
+    {
+      "id": "E15",
+      "tokens_with_special": 186,
+      "fits_384": true
+    },
+    {
+      "id": "E16",
+      "tokens_with_special": 206,
+      "fits_384": true
+    },
+    {
+      "id": "E17",
+      "tokens_with_special": 168,
+      "fits_384": true
+    },
+    {
+      "id": "E18",
+      "tokens_with_special": 166,
+      "fits_384": true
+    },
+    {
+      "id": "E19",
+      "tokens_with_special": 193,
+      "fits_384": true
+    },
+    {
+      "id": "E20",
+      "tokens_with_special": 278,
+      "fits_384": true
+    },
+    {
+      "id": "E21",
+      "tokens_with_special": 216,
+      "fits_384": true
+    },
+    {
+      "id": "E22",
+      "tokens_with_special": 271,
+      "fits_384": true
+    },
+    {
+      "id": "E23",
+      "tokens_with_special": 321,
+      "fits_384": true
+    },
+    {
+      "id": "E24",
+      "tokens_with_special": 315,
+      "fits_384": true
+    },
+    {
+      "id": "E25",
+      "tokens_with_special": 278,
+      "fits_384": true
+    },
+    {
+      "id": "E26",
+      "tokens_with_special": 289,
+      "fits_384": true
+    }
+  ],
+  "over_384": []
+}

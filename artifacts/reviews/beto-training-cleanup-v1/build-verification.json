@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "exact_rows_checked": 831,
+  "original_rows_archived": 7,
+  "held_evaluation_identical": 218,
+  "all_seven_classes": true,
+  "sources_unchanged": 14,
+  "text_edits": 0,
+  "guarded_inputs": 171,
+  "dataset_sha256": "d00c83713de6d2b7263f3aa09da583801b3f358b4d46563ce9957e7578fde8a9"
+}

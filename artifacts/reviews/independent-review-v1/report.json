@@ -1,0 +1,660 @@
+{
+  "status": "frozen_ai_adjudicated_additional_pilot_not_final_independent_test",
+  "created_at_utc": "2026-09-08T17:50:55.508814+00:00",
+  "dataset": {
+    "path": "artifacts/datasets/evaluation-pilot-v2.json",
+    "sha256": "b127e120ec764d40d49e314be3f6d5985803948080c3181f3426f65d0ed96791"
+  },
+  "evaluation_candidates": 26,
+  "accepted": 22,
+  "quarantined": 4,
+  "class_counts": {
+    "contexto_colonial_antecedentes": 2,
+    "crisis_ideas_emancipadoras": 3,
+    "participacion_social_regional": 3,
+    "no_relevante": 4,
+    "campanias_conflictos_militares": 6,
+    "liderazgos_diplomacia_proyectos": 2,
+    "organizacion_consecuencias_republicanas": 2
+  },
+  "sources": 4,
+  "collection_groups": 2,
+  "blind_review_coverage": "100% of26newcandidates and12selectedTRAINpassages, not 100% ofTRAIN",
+  "pre_adjudication_agreement": {
+    "agree": 22,
+    "total": 26,
+    "cohen_kappa": 0.8194444444444444,
+    "labels": [
+      "campanias_conflictos_militares",
+      "contexto_colonial_antecedentes",
+      "crisis_ideas_emancipadoras",
+      "liderazgos_diplomacia_proyectos",
+      "no_relevante",
+      "organizacion_consecuencias_republicanas",
+      "participacion_social_regional"
+    ],
+    "confusion_matrix": [
+      [
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        1
+      ],
+      [
+        2,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        4,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        3
+      ]
+    ],
+    "interpretation": "Descriptive AI-to-AI agreement; small purposive sample, not human reliability, no per-class reliability claim."
+  },
+  "training_review": {
+    "rows": 12,
+    "label_agreement_with_existing": 8,
+    "usable": 5,
+    "requires_context": 7,
+    "changes_applied": 0
+  },
+  "reviewer_exposure": "Agent did not read first labels, keys or predictions. Agent disclosed accidental first-page/title/abstract exposure in two new sources while inspecting page JSON; full source-metadata blindness is not claimed.",
+  "source_pages_visually_checked": 27,
+  "visual_renderer": "PDFium/pypdfium2 5.13.0 installed only in local outputs vendor directory",
+  "extraction_corrections": {
+    "texts": 7,
+    "replacement_rules": 11,
+    "original_versions_retained": true
+  },
+  "no_model_inference": true,
+  "no_training": true,
+  "old_corpus_unchanged": true,
+  "human_review": false,
+  "full_documentary_independence": false,
+  "policy": {
+    "status": "frozen_ai_adjudicated_additional_pilot_not_final_independent_test",
+    "model_predictions_performed": false,
+    "human_review": false,
+    "purpose": "Seven-class pilot of new complete units; reference labels from first AI proposal, blind AI agent review and explicit adjudication.",
+    "independence": "New selected texts and works not present in current TRAIN; no 8/20-word overlaps detected. Full documentary independence is not certified. Escanilla cites previously reused Sala2011; the three RIRA2023 articles share a dossier and Escanilla cites Guarisco2011.",
+    "use": "Never train on these sources or their reproduced documents. If scored later, report as additional development, not an untouched final test. Any further selection based on these scores makes reuse explicit.",
+    "metrics": "Report all seven classes, per-class support/precision/recall/F1, confusion matrix and per-source results. Corpus is purposive and small; no population accuracy or automatic-use readiness claim.",
+    "stop": "No model training or prediction in this block. Four quarantined texts must not enter scored metrics.",
+    "coverage_limits": "Only PDF academic prose; two collection groups, four works; three negatives are bibliography, one predominantly twentieth/twenty-first century. No broad representativeness; missing variety and sparse 1830-1842 coverage."
+  },
+  "input_guards": [
+    {
+      "path": "apps/ml/app/ml/beto_experiment.py",
+      "sha256": "7a55c204f569cc891c8dbdffd4668a3f20abcf13139d901e9db298e3525a121d"
+    },
+    {
+      "path": "scripts/compare_beto_validation.py",
+      "sha256": "bc8f02cd3b096ceea2a22f192b5e30205fcd067e2e45865152f406ca10e15037"
+    },
+    {
+      "path": "configs/experiments/beto.json",
+      "sha256": "0752b044c39cbe403fbe2e8a8a074cf095f6475502e6b074505558fefdcc1ab9"
+    },
+    {
+      "path": "artifacts/datasets/gold-v1-source-aware.json",
+      "sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a"
+    },
+    {
+      "path": "artifacts/datasets/external-development-v1.json",
+      "sha256": "901f50f13a60642b316896abd9d4d68b945e699f7befc696b9e7506bc8fa4ceb"
+    },
+    {
+      "path": "artifacts/reviews/external-development-v1.json",
+      "sha256": "33a10711ed13186406719b02ffe38892a7252e57a5ac060ac8f1b73475d5d004"
+    },
+    {
+      "path": "outputs/corpus-snapshot-v2/reviewed-export.json",
+      "sha256": "5de9ea1a4be3c9d628da51cdf1d07108f43e0ac8ee580acb483013c6dc27c35c"
+    },
+    {
+      "path": "artifacts/reviews/source-diversity-v1.json",
+      "sha256": "93474eca48f045f2a0b1e3c6f9ac7ac6f353b30f570f48a18bed4dff8a20c7e1"
+    },
+    {
+      "path": "artifacts/experiments/beto-reference-control-v1/report.json",
+      "sha256": "bfa40f2972885bda657174f62f7242030ef653f277c70717d3a58620a189b315"
+    },
+    {
+      "path": "scripts/beto_fixed_epoch.py",
+      "sha256": "5e162abde50fe3c7cf4d47fcc322565a60cea7f388df24df1fa83df6ea4dd100"
+    },
+    {
+      "path": "scripts/compare_beto_length.py",
+      "sha256": "54798f66319133edd5b3456786cdcb3a0e5e4e92dcc5c72893fd99fcaa15dcbb"
+    },
+    {
+      "path": "scripts/verify_external_development.py",
+      "sha256": "ae84592b9258cf7db6198f9a76adac86647b126906f6a01d56de80166052c4da"
+    },
+    {
+      "path": "apps/ml/app/ml/baselines.py",
+      "sha256": "78d5f731290bfe1c703dbc3bb8061e75a8eb221fa89bb8ec1777fc6e32dbe609"
+    },
+    {
+      "path": "artifacts/reviews/beto-readiness-v1.json",
+      "sha256": "ddd8edc24c45e01a4301e717263dbfd29dc3d3b068f71f683b5a494016e95995"
+    },
+    {
+      "path": "outputs/beto-length-v1/readiness.json",
+      "sha256": "79b7cc3d9e2abb835e5fb4c8444b05052e032b77fb1e3ccddd001943f24d8e06"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/model.safetensors",
+      "sha256": "4fea08ebf3da420a8ef1b04b151822b32c7f4869408335ab0c5885eb7945ef1f"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/config.json",
+      "sha256": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/labels.json",
+      "sha256": "3e8d21fda1c3a8c0d83249dbf89a9d5fce0e89a6635e9e52a49dac04dd59b169"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/validation.json",
+      "sha256": "58460604ea3cd86f07f167f4714e6396083f705652269ff99c0a8ca9aae8780c"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/special_tokens_map.json",
+      "sha256": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/tokenizer.json",
+      "sha256": "f0ee18fc8f95db74ce5c5c3a4070e0eb32a4b31bcde4865af63b1308e924c0c4"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/tokenizer_config.json",
+      "sha256": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/vocab.txt",
+      "sha256": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/config.json",
+      "sha256": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/labels.json",
+      "sha256": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/model.safetensors",
+      "sha256": "96c67fc6dad153c6aafafe160dbd7d9bd5ea4d4c0016bceda815e10cdb34cd29"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/special_tokens_map.json",
+      "sha256": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/tokenizer.json",
+      "sha256": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/tokenizer_config.json",
+      "sha256": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/vocab.txt",
+      "sha256": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+    },
+    {
+      "path": "artifacts/experiments/beto-length-v1/protocol.json",
+      "sha256": "ae32457e95bfdda3f03ba89e2525686d8351224bf098ce7e5bff8aea2a0dc1c0"
+    },
+    {
+      "path": "artifacts/experiments/beto-length-v1/report.json",
+      "sha256": "899c3a99feba141c4532b36f5548fe2d1d384ed133b6d4eadf10dfcf9cb16426"
+    },
+    {
+      "path": "outputs/corpus-snapshot-v3/reviewed-export.json",
+      "sha256": "687a16c894eae549f9e29e48076a687ce6a96b5cd195f18b21629e8b7e7078e5"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/report.json",
+      "sha256": "e502e0dbe37a2e5e45f39f4447f66c8e1f04159eff007bfab5ded85aa72eb862"
+    },
+    {
+      "path": "outputs/corpus-snapshot-v3/build-report.json",
+      "sha256": "e69c395133a732a09e5d2b66d0bea35967dc309dc092ca7d9a96d19a44b70f4a"
+    },
+    {
+      "path": "outputs/corpus-snapshot-v3/replacement-archive.json",
+      "sha256": "926f240cb59fe19ce9501e02462e09dd293b426b61b77b7fc691e749de092ada"
+    },
+    {
+      "path": "artifacts/reviews/boundary-resolution-v3.json",
+      "sha256": "1e0f7c55df5a4863b8b263a72fae88da6de541851bd7843192a4d1d1fb679be8"
+    },
+    {
+      "path": "artifacts/reviews/training-batch-v3.json",
+      "sha256": "b42860373a22f56490871b626a845b32d61f67108998fdc530e2883b57297692"
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/proposed-replacements.json",
+      "sha256": "8b0f6b6a9b49d16f6615e66ad92ef28a740f8e6de3a1fd498ecc6c7916d37ed9"
+    },
+    {
+      "path": "scripts/build_training_batch_v3.py",
+      "sha256": "768face195990b7c15578a01d8d29dde5b12226532312240764395ed6925b652"
+    },
+    {
+      "path": "scripts/compare_beto_data_v3.py",
+      "sha256": "82f7d944a1f031cf5b891444bc433d89e24de5783886c63f72a2130207d78a93"
+    },
+    {
+      "path": "outputs/beto-data-v3/run/candidate/config.json",
+      "sha256": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc"
+    },
+    {
+      "path": "outputs/beto-data-v3/run/candidate/labels.json",
+      "sha256": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19"
+    },
+    {
+      "path": "outputs/beto-data-v3/run/candidate/model.safetensors",
+      "sha256": "bfb70c6701815f81c02f12170c0f9db32e03533b6bf27c2fae9e243eef13d45f"
+    },
+    {
+      "path": "outputs/beto-data-v3/run/candidate/special_tokens_map.json",
+      "sha256": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140"
+    },
+    {
+      "path": "outputs/beto-data-v3/run/candidate/tokenizer.json",
+      "sha256": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f"
+    },
+    {
+      "path": "outputs/beto-data-v3/run/candidate/tokenizer_config.json",
+      "sha256": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673"
+    },
+    {
+      "path": "outputs/beto-data-v3/run/candidate/vocab.txt",
+      "sha256": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+    },
+    {
+      "path": "artifacts/experiments/beto-data-v3/protocol.json",
+      "sha256": "d1e180810f941f8644be27d69b873950913d2728f508894821c6ae9eb13d5151"
+    },
+    {
+      "path": "artifacts/experiments/beto-data-v3/report.json",
+      "sha256": "e616ea31f461768e92821e782fbdfaee1c957eb948dbfc0dd81099eb65ffb422"
+    },
+    {
+      "path": "artifacts/experiments/beto-data-v3/application.json",
+      "sha256": "90ddb9aa6919cbb2f0c15ca88467250d45a4ba031236bc31d0e8e957a1dffced"
+    },
+    {
+      "path": "scripts/diagnose_beto_training_fit.py",
+      "sha256": "26060d476c269113d6b362b5ab8aebcab780b55e46b33ef917c0a4c74f84f633"
+    },
+    {
+      "path": "outputs/beto-training-fit-v1/reference-train-predictions.json",
+      "sha256": "7780712fbffecad6e41ab593b097da8509024acc5a77557ff9f2fdd59684a1b9"
+    },
+    {
+      "path": "outputs/beto-training-fit-v1/candidate-train-predictions.json",
+      "sha256": "fa8b3c75d9a40e7ddeefb74a8097f8494068b493eeab4232f7e97926d262f624"
+    },
+    {
+      "path": "artifacts/experiments/beto-training-fit-v1/protocol.json",
+      "sha256": "b8373b73232e8f35e0e4bdd875f965c640a09a7d79a201c6eec4ddc892bdd2cc"
+    },
+    {
+      "path": "artifacts/experiments/beto-training-fit-v1/report.json",
+      "sha256": "4e228e629034a43d47b7b841fe53248be888fe432179a940eb0a336b7a67bb5c"
+    },
+    {
+      "path": "docs/guia-etiquetado-1780-1842.md",
+      "sha256": "d53dea3532359afc851c2bdd59ae1ddb47a0673609d82d40372a6f62edc55179"
+    },
+    {
+      "path": "outputs/external-development-v1/sala-inventory.json",
+      "sha256": "41cce7277fe5dedf591039e6ea90952c961086eab5fa31202be41f9572e39461"
+    },
+    {
+      "path": "outputs/external-development-v1/sala-raw-pages.json",
+      "sha256": "8bd539365b26239a920c6bc74bf21ba1f328c2ab1096359e0dcae8ee59ac79e7"
+    },
+    {
+      "path": "outputs/external-development-v1/sala-source.json",
+      "sha256": "05840e91cc15c3effb94c7b71a94ff16eea641f4c9f4478df92207bfb6343967"
+    },
+    {
+      "path": "outputs/external-development-v1/sala-first-review.json",
+      "sha256": "d61bcb08fd5645f79d1b7399c2761891a3af65364c42e4dc55da43a656e7ba0d"
+    },
+    {
+      "path": "outputs/external-development-v1/sala-second-review.json",
+      "sha256": "07a85f89cbd186745df0be165a7de4e68c7f6da68810fdb1ec62ed4a362d3c4b"
+    },
+    {
+      "path": "outputs/external-development-v1/sala-candidates-blind.json",
+      "sha256": "e584ada04a40095271c8042011afbbf888c8aaf1c111158176670432f8635905"
+    },
+    {
+      "path": "outputs/external-development-v1/sobrevilla-inventory.json",
+      "sha256": "40d398575c3ae30458635dcf0a313a05e1a63c242f0d09bf80b98ee1feb3fa33"
+    },
+    {
+      "path": "outputs/external-development-v1/sobrevilla-raw-pages.json",
+      "sha256": "f48bc3e410217ffeaa1905d764929982d6432d5a206c012680edea1f833745b4"
+    },
+    {
+      "path": "outputs/external-development-v1/sobrevilla-source.json",
+      "sha256": "77d18de53e9d2f5d41ff7971197af89b6ce8b270ff99730eba591fd741b77ecf"
+    },
+    {
+      "path": "outputs/external-development-v1/sobrevilla-first-review.json",
+      "sha256": "02eff49433acb64d48e3bab37ef22d3ba937bd99a33c3fd04bd2ce73e9e0d0a9"
+    },
+    {
+      "path": "outputs/external-development-v1/sobrevilla-second-review.json",
+      "sha256": "9689174ed5ec6dd06d2516d9e13550ad7b09821dea21c28cc261848ac4ca786d"
+    },
+    {
+      "path": "outputs/external-development-v1/sobrevilla-candidates-blind.json",
+      "sha256": "279b7ffca0c80428643bf46d89daec7755ea05248135ba242a6942369c10a179"
+    },
+    {
+      "path": "outputs/external-development-v1/protocol-before-selection.json",
+      "sha256": "13723f3d147819d9cff0bfcf21a76f882893ba9bd6daa2a0a61bdba752f9438c"
+    },
+    {
+      "path": "outputs/external-development-v1/root-adjudications.json",
+      "sha256": "dd0df858fbe4380a9af74a616b352b984a837b3e5e67dcfb80c68bf388307457"
+    },
+    {
+      "path": "outputs/external-development-v1/dependency-screen.json",
+      "sha256": "cc9251128f477e150b44a1c8e3c980eb84859dea991a21b0ba296cb6f5b59240"
+    },
+    {
+      "path": "outputs/external-development-v1/root-overlap.json",
+      "sha256": "ae70dfb308e2f5c66814897bce62f85c3212bb5d20f5b956aadf1e1a5a5bd20c"
+    },
+    {
+      "path": "outputs/external-development-v1/root-quote-screen.json",
+      "sha256": "c4f158de08ffbebbdbe841b847656b1a62afd7df18aea2bcdda4c5ffc879ddb2"
+    },
+    {
+      "path": "outputs/external-development-v1/sala-2011.pdf",
+      "sha256": "561569be58d1ca8853e2ef3c5621064c11a22bfbac72968a607ac926d8be9a5c"
+    },
+    {
+      "path": "outputs/external-development-v1/sobrevilla-2021.pdf",
+      "sha256": "425a22547db1ad4c73033d952ba14c1b0f2f1eb573eba55d3f49e293aab0ed19"
+    },
+    {
+      "path": "scripts/beto_epoch_trajectory.py",
+      "sha256": "21825600b0010d6ebc9ea27579d54ff76465e51756cc43a85be45092bf102a4e"
+    },
+    {
+      "path": "scripts/compare_beto_source_epochs.py",
+      "sha256": "9d78bd6d60890ec1de3f56c4e0bdd5cb8d178f0bac7e234cd5c08b27d3be670a"
+    },
+    {
+      "path": "scripts/check_beto_source_epochs.py",
+      "sha256": "6459f1ce9a822fcc3d2df44a74f09727c03baf1ef4e93321f1a9380489983701"
+    },
+    {
+      "path": "scripts/verify_beto_source_epochs.py",
+      "sha256": "52f47263e67554119f767b5ac7a228c96be07637ccce1748935c1b13130a3268"
+    },
+    {
+      "path": "artifacts/experiments/source-generalization-v1/report.json",
+      "sha256": "7a801849f0d4f9fec4b2db211b3f3d3945313d0a7dc399cfadac5b9ff0bccdb6"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1-preflight.json",
+      "sha256": "4ec75e79dd6f764cb51580ca534d8d14f854a1563cc08fb04df05a561ea21233"
+    },
+    {
+      "path": "artifacts/experiments/beto-source-epochs-v1/protocol.json",
+      "sha256": "008ae4cbeefa7ec31e79f8768ff112774d8dce1c5250b4519cdfaca419ba94c1"
+    },
+    {
+      "path": "configs/experiments/tfidf.json",
+      "sha256": "0273afefe732b4780af98f49bd87ec953a139967500004ca3897492f12edf018"
+    },
+    {
+      "path": "outputs/history-comparison-v1/reviewed/selection.json",
+      "sha256": "c29b73a56907bbc4bc45aa567b04ea16786401eaa4a82c2eb2e813b0b7623b69"
+    },
+    {
+      "path": "apps/ml/app/ml/experiments.py",
+      "sha256": "301f182cae16e106c7d2af807a4d4f754706211e7c970a0bb0f6178a0dafae9a"
+    },
+    {
+      "path": "scripts/compare_tfidf_beto_work_control.py",
+      "sha256": "e0685158b0450ed07e413e8d6974fa56120c31ee15f8facd953e44d47587eefe"
+    },
+    {
+      "path": "artifacts/reviews/beto-historiography-boundary-v1.json",
+      "sha256": "71d9a3ba8d627abf92f183e9165d45e926cd04d88e671394198b34233fc56dbb"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-2-predictions.json",
+      "sha256": "d0d231d25b7a828ab56af507371e4c8b2ff7603956e7f4c0b05628cd9e64fc7d"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-3-predictions.json",
+      "sha256": "0c7c94cc7641da60d632a31c1fd03d46de8ac965274eab0e726f2d8528907793"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/moran/epoch-2-predictions.json",
+      "sha256": "bcf52e8008afe7e92bc0c1219847044ebec66c27b50cbc6ba3465097c0afa945"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/moran/epoch-3-predictions.json",
+      "sha256": "005f44215bff64779af35d20ffab2e6add52628de9a6f8c0de12b233c9325a46"
+    },
+    {
+      "path": "scripts/compare_beto_learning_rate.py",
+      "sha256": "39c1c3aa7db91192c31b3d03690022b3e97f567f0565eb0a5ae841c89f856756"
+    },
+    {
+      "path": "artifacts/experiments/beto-source-epochs-v1/report.json",
+      "sha256": "4f2c4027f2df23faa1c994fb367000c9a69bd3421ee90cf71a785e89fc529895"
+    },
+    {
+      "path": "artifacts/experiments/tfidf-beto-work-control-v1/report.json",
+      "sha256": "0a5258c8e305d591d647242071b3415bb88aefb9556db2c1921ec678e4c50608"
+    },
+    {
+      "path": "artifacts/experiments/tfidf-beto-work-control-v1/protocol.json",
+      "sha256": "386440aa468223931a0b9b2e84d84fcd9d9a8f344de84108a229659c6c9bdfa5"
+    },
+    {
+      "path": "artifacts/experiments/tfidf-beto-work-control-v1/verification.json",
+      "sha256": "fa992f3140856a52b4e955c39dce2fbe18a6e9485aa503e6c48f71e2717f6ea3"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/ophelan_huamanga/training-details.json",
+      "sha256": "c3556fe5662bca40b6dc199f01517263e349344d6cf0fe03dc624fc67d8b6acf"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/moran/training-details.json",
+      "sha256": "2106af6da0f84223540210ead4c4d8b40759a3ed096fbc3a8602e9bdeb7dcb11"
+    },
+    {
+      "path": "scripts/prepare_independent_review_v1.py",
+      "sha256": "c28150a0d8970bc5ec75da9cb63b750c8e894ff57f692bbd6fb893a78f9591b8"
+    },
+    {
+      "path": "artifacts/reviews/independent-review-v1/source-reservation.json",
+      "sha256": "37c3cdc42667555933026595698722e5890f24826bf19e059c48fc6c08967a66"
+    },
+    {
+      "path": "outputs/independent-review-v1/selected-draft.json",
+      "sha256": "84a3f0df008906044f207cf7dfa6c28d8eb3b8e7f25e2890fc8c6f536b6eb65d"
+    },
+    {
+      "path": "outputs/independent-review-v1/corrected-candidates.json",
+      "sha256": "47d1f4bcc2bc3ac95f79bcbee5f2b4a957f9cea1d2fd8c440ee3512635c86a04"
+    },
+    {
+      "path": "outputs/independent-review-v1/blind-training.json",
+      "sha256": "d8aa67ff1b6ab7cfc364fd0cd5523901135ff1ae1125f90f11e9cfb61bfbae56"
+    },
+    {
+      "path": "outputs/independent-review-v1/blind-evaluation.json",
+      "sha256": "5fedd0ffdb631798cd89ccdd7e1ff2a383b42b628d02e660c22c7222356fe964"
+    },
+    {
+      "path": "outputs/independent-review-v1/blind-evaluation-corrected.json",
+      "sha256": "c45250bba3ab5f8318257bbfee0b1884e19b8fc6e0605207fbd12873d9d6a912"
+    },
+    {
+      "path": "outputs/independent-review-v1/blind-training-review.json",
+      "sha256": "9a6e752ba74f48b10a2ac976bb42a3f794622ed20c2cf9ea99753ee9a4c32c94"
+    },
+    {
+      "path": "outputs/independent-review-v1/blind-evaluation-review.json",
+      "sha256": "5e4680605aa03371a35d27adeeba9c0acf046d4c5388f97483d49d045e580e64"
+    },
+    {
+      "path": "outputs/independent-review-v1/blind-correction-check.json",
+      "sha256": "8dee9264046e21e677dc654d7f1b55b35194316333df1c26251a817a5031673a"
+    },
+    {
+      "path": "outputs/independent-review-v1/extraction-corrections.json",
+      "sha256": "3b8cae446949766b347d1a302cb7afc62da3909aee0abf4c0528ae968cc2b03c"
+    },
+    {
+      "path": "outputs/independent-review-v1/training-key.json",
+      "sha256": "13c51000a42f334aa60e3b2a99c39c7bbaee48341a1bafdf1ae50400d9aa73ae"
+    },
+    {
+      "path": "outputs/independent-review-v1/evaluation-key.json",
+      "sha256": "ac9fb13a72da4eb71f898beb218c1c4f0f04ffcb53099938838adf890d824011"
+    },
+    {
+      "path": "outputs/independent-review-v1/acquired.json",
+      "sha256": "eecfab1b8d3294c427034d1798103bbbe5ad6476401354db31ef902d558a01a9"
+    },
+    {
+      "path": "outputs/independent-review-v1/inventory.json",
+      "sha256": "02cda398a0979a8cc5358ecf6c7fd9e1bfddd3ead9eb9b6dfdc29653aa2ddc8a"
+    },
+    {
+      "path": "outputs/independent-review-v1/select.py",
+      "sha256": "277b9c8a0b12a129bc96718bc3b106c46bedfff38485bbd26ffd9278b1ee3644"
+    },
+    {
+      "path": "outputs/independent-review-v1/inventory.py",
+      "sha256": "bbce48309aa1496af2fe1dfb644b1c3c5e9a7f6e3202795aa2b5585ae3a1a88b"
+    },
+    {
+      "path": "outputs/independent-review-v1/acquire.py",
+      "sha256": "3de6f7a3370a683e889b8d13dd87b70b16c19adae1347dc3e5b10ab3d0b6bb77"
+    },
+    {
+      "path": "outputs/independent-review-v1/correct_extraction.py",
+      "sha256": "0d685d3532d29fb36ef280926faff7cf13ec4833623e335e3b145c949994432c"
+    },
+    {
+      "path": "outputs/independent-review-v1/overlap.json",
+      "sha256": "7f212bb19585bf426ea79ed67b6b6123dd243ee56cd05cb3db043ab22127e04f"
+    },
+    {
+      "path": "outputs/independent-review-v1/choque2024/article.pdf",
+      "sha256": "fa654997cdbcd2edae4f08e4837020eaff3f1c27d0d2bd1b355327a8fcd4961f"
+    },
+    {
+      "path": "outputs/independent-review-v1/choque2024/landing.html",
+      "sha256": "5118c38291fb4cc92fbf4312b58ce6a2290284057683829a93430147317faa7c"
+    },
+    {
+      "path": "outputs/independent-review-v1/choque2024/pages.json",
+      "sha256": "c9a19a00b0508441fb888188ed9f8b300a3dbaf05aea54e629fc17da40942056"
+    },
+    {
+      "path": "outputs/independent-review-v1/escanilla2023/article.pdf",
+      "sha256": "7ae929553ada28b0999051d4f44a659d0d9fb21c384498fe84b8c9a7627f5ca8"
+    },
+    {
+      "path": "outputs/independent-review-v1/escanilla2023/landing.html",
+      "sha256": "074adbaaa4f49251f59539eeb816fbe85251e9a6c54a1c390b50c51ab0a737f7"
+    },
+    {
+      "path": "outputs/independent-review-v1/escanilla2023/pages.json",
+      "sha256": "d55c1f140c0772945e9a0e392d70c51abfc4ed6240bc841716ee8cd0e0934a29"
+    },
+    {
+      "path": "outputs/independent-review-v1/guarisco2023/article.pdf",
+      "sha256": "487d7a137072be42168b48529279b04e349945b8867edcd31929d6766fe8567b"
+    },
+    {
+      "path": "outputs/independent-review-v1/guarisco2023/landing.html",
+      "sha256": "e2ed61ff579b7d199daec09376a37fc007a8960b7f3ea7d26a78d364af01b8a7"
+    },
+    {
+      "path": "outputs/independent-review-v1/guarisco2023/pages.json",
+      "sha256": "32f5b01fc039090b94dabb6bfc5c033f94987919f83afbf8d072a9172d410c4c"
+    },
+    {
+      "path": "outputs/independent-review-v1/alvarado2023/article.pdf",
+      "sha256": "bc8a962d302ab8f4959465b0811982214d901860c679d714ee7e83cdbba38769"
+    },
+    {
+      "path": "outputs/independent-review-v1/alvarado2023/landing.html",
+      "sha256": "040285b4564c68b844d042b130c85c92f4ffadc7b6b2e88cf438ebc9d007d011"
+    },
+    {
+      "path": "outputs/independent-review-v1/alvarado2023/pages.json",
+      "sha256": "f4f2e47f86e345431d7a78eced4178b1ece98408d19df4d3c9604adae120692f"
+    }
+  ]
+}

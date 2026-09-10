@@ -1,0 +1,692 @@
+{
+  "schema_version": 1,
+  "id": "beto-ideas-contrast-v1",
+  "status": "frozen_before_reading_selected_passages",
+  "created_at_utc": "2026-09-08T16:48:09.115666+00:00",
+  "epoch_used": 2,
+  "triplets": [
+    {
+      "id": "T1",
+      "fold": "ophelan_huamanga",
+      "error_strata": {
+        "participacion_social_regional": 16,
+        "organizacion_consecuencias_republicanas": 10,
+        "liderazgos_diplomacia_proyectos": 1,
+        "contexto_colonial_antecedentes": 1
+      },
+      "members": [
+        {
+          "id": "T1-error",
+          "role": "error",
+          "train_index": 103,
+          "snapshot_index": 127,
+          "source": "0ea45102-057d-4bff-b527-f36326f66d33",
+          "label": "crisis_ideas_emancipadoras",
+          "predicted": "participacion_social_regional",
+          "text_sha256": "19888ce6caa20e06d2d32c4425e92a6747d58de27b7e8e56c8c1f5e346b76cfd",
+          "eligible_pool": 16,
+          "lexical_jaccard_to_error": 1.0
+        },
+        {
+          "id": "T1-ideas_correct_fit",
+          "role": "ideas_correct_fit",
+          "train_index": 479,
+          "snapshot_index": 697,
+          "source": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+          "label": "crisis_ideas_emancipadoras",
+          "predicted": "crisis_ideas_emancipadoras",
+          "text_sha256": "c7e118af7c3ca57dd59e56551f4e7f1be1b9f7ff8630e010f1170aa9f84e40a3",
+          "eligible_pool": 32,
+          "lexical_jaccard_to_error": 0.05511811023622047
+        },
+        {
+          "id": "T1-confused_class_correct_fit",
+          "role": "confused_class_correct_fit",
+          "train_index": 45,
+          "snapshot_index": 49,
+          "source": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+          "label": "participacion_social_regional",
+          "predicted": "participacion_social_regional",
+          "text_sha256": "ae46a13846889b267236abd2bdf47ec90a7b340d9e14e9da73e5ad4e5068860a",
+          "eligible_pool": 35,
+          "lexical_jaccard_to_error": 0.03488372093023256
+        }
+      ]
+    },
+    {
+      "id": "T2",
+      "fold": "ophelan_huamanga",
+      "error_strata": {
+        "participacion_social_regional": 16,
+        "organizacion_consecuencias_republicanas": 10,
+        "liderazgos_diplomacia_proyectos": 1,
+        "contexto_colonial_antecedentes": 1
+      },
+      "members": [
+        {
+          "id": "T2-error",
+          "role": "error",
+          "train_index": 152,
+          "snapshot_index": 194,
+          "source": "0ea45102-057d-4bff-b527-f36326f66d33",
+          "label": "crisis_ideas_emancipadoras",
+          "predicted": "organizacion_consecuencias_republicanas",
+          "text_sha256": "1a6219ebdfa2a7870378001b2e92321adbc6c0734485082bf40666c3fa9bb7b5",
+          "eligible_pool": 10,
+          "lexical_jaccard_to_error": 1.0
+        },
+        {
+          "id": "T2-ideas_correct_fit",
+          "role": "ideas_correct_fit",
+          "train_index": 382,
+          "snapshot_index": 560,
+          "source": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+          "label": "crisis_ideas_emancipadoras",
+          "predicted": "crisis_ideas_emancipadoras",
+          "text_sha256": "11505c81a59bb3f80afbe2ab48501164ffeaf74e46d1b7e499cdc64c45fc3b81",
+          "eligible_pool": 31,
+          "lexical_jaccard_to_error": 0.02127659574468085
+        },
+        {
+          "id": "T2-confused_class_correct_fit",
+          "role": "confused_class_correct_fit",
+          "train_index": 591,
+          "snapshot_index": 809,
+          "source": "11b4365c-87f9-5b8d-802f-a0d2aafc478a",
+          "label": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas",
+          "text_sha256": "812ed5a35702fcb07412fa52b43590b594e5aba1b9b824e11140f770c72a755a",
+          "eligible_pool": 80,
+          "lexical_jaccard_to_error": 0.046357615894039736
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "fold": "moran",
+      "error_strata": {
+        "liderazgos_diplomacia_proyectos": 10,
+        "organizacion_consecuencias_republicanas": 2,
+        "contexto_colonial_antecedentes": 1,
+        "participacion_social_regional": 1
+      },
+      "members": [
+        {
+          "id": "T3-error",
+          "role": "error",
+          "train_index": 608,
+          "snapshot_index": 826,
+          "source": "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+          "label": "crisis_ideas_emancipadoras",
+          "predicted": "liderazgos_diplomacia_proyectos",
+          "text_sha256": "084be708f0aea05ed1c548aa8a5e62d3044102bbc39d6ad1c505df4e6ce0a944",
+          "eligible_pool": 10,
+          "lexical_jaccard_to_error": 1.0
+        },
+        {
+          "id": "T3-ideas_correct_fit",
+          "role": "ideas_correct_fit",
+          "train_index": 397,
+          "snapshot_index": 577,
+          "source": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+          "label": "crisis_ideas_emancipadoras",
+          "predicted": "crisis_ideas_emancipadoras",
+          "text_sha256": "147d73cc821356a251d67aeee1aee10682a44ccf08d9fb607747a2389d7532c2",
+          "eligible_pool": 23,
+          "lexical_jaccard_to_error": 0.017391304347826087
+        },
+        {
+          "id": "T3-confused_class_correct_fit",
+          "role": "confused_class_correct_fit",
+          "train_index": 457,
+          "snapshot_index": 675,
+          "source": "514f190e-5d01-497a-a6ef-648601cd8bdb",
+          "label": "liderazgos_diplomacia_proyectos",
+          "predicted": "liderazgos_diplomacia_proyectos",
+          "text_sha256": "877f4e808e36e0918185e1c7771dd15d1762f195c78a54f85409c7b1fca58394",
+          "eligible_pool": 56,
+          "lexical_jaccard_to_error": 0.03875968992248062
+        }
+      ]
+    },
+    {
+      "id": "T4",
+      "fold": "moran",
+      "error_strata": {
+        "liderazgos_diplomacia_proyectos": 10,
+        "organizacion_consecuencias_republicanas": 2,
+        "contexto_colonial_antecedentes": 1,
+        "participacion_social_regional": 1
+      },
+      "members": [
+        {
+          "id": "T4-error",
+          "role": "error",
+          "train_index": 602,
+          "snapshot_index": 820,
+          "source": "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+          "label": "crisis_ideas_emancipadoras",
+          "predicted": "organizacion_consecuencias_republicanas",
+          "text_sha256": "6d61ce45abc8b51ebd30cb94b1b93047549b118235681886c923de32ddf07ce6",
+          "eligible_pool": 2,
+          "lexical_jaccard_to_error": 1.0
+        },
+        {
+          "id": "T4-ideas_correct_fit",
+          "role": "ideas_correct_fit",
+          "train_index": 159,
+          "snapshot_index": 242,
+          "source": "0ea45102-057d-4bff-b527-f36326f66d33",
+          "label": "crisis_ideas_emancipadoras",
+          "predicted": "crisis_ideas_emancipadoras",
+          "text_sha256": "9e2f8863871c1db5e9b0798593281e0c5617356c2122ac189d3e2d5702b602b4",
+          "eligible_pool": 22,
+          "lexical_jaccard_to_error": 0.05228758169934641
+        },
+        {
+          "id": "T4-confused_class_correct_fit",
+          "role": "confused_class_correct_fit",
+          "train_index": 449,
+          "snapshot_index": 643,
+          "source": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+          "label": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas",
+          "text_sha256": "037724b6b30ae3d8702261536423ee49cea1931d06a24cce76d8f6569d256733",
+          "eligible_pool": 76,
+          "lexical_jaccard_to_error": 0.04945054945054945
+        }
+      ]
+    }
+  ],
+  "question": "For these twelve passages, are class boundaries consistent, does the384-token input contain the decisive argument, and what comparable fit examples exist?",
+  "selection_rule": "Per primary work: two most frequent epoch2 ideas error destinations; one error per destination by SHA256(42|source|text), tie train index. Then one correctly predicted fit ideas and one correctly predicted fit destination-class example per error: highest lexical Jaccard, tie same hash. Exclude all four errors and previously selected controls; twelve distinct rows.",
+  "lexical_rule": "NFKD casefold, remove accents/soft hyphen, word set length>=4 excluding STOP in guarded script. Mechanical retrieval only, not semantic equivalence or coverage proof.",
+  "limits": [
+    "Selected using stored labels/predictions, not blind or representative; no annotation error rate estimate.",
+    "AI review, not independent human historical adjudication. Prediction correctness means agreement with stored label only.",
+    "Nearest lexical controls do not establish semantic absence across all TRAIN. Distinguish examples found from unknown coverage.",
+    "Existing historical reviews are reused and may concern other snapshot text; exact hashes must match.",
+    "No data/label change, classifier fitting, model inference, external31/old validation/test analysis or paid services."
+  ],
+  "input_guards": [
+    {
+      "path": "apps/ml/app/ml/beto_experiment.py",
+      "sha256": "7a55c204f569cc891c8dbdffd4668a3f20abcf13139d901e9db298e3525a121d"
+    },
+    {
+      "path": "scripts/compare_beto_validation.py",
+      "sha256": "bc8f02cd3b096ceea2a22f192b5e30205fcd067e2e45865152f406ca10e15037"
+    },
+    {
+      "path": "configs/experiments/beto.json",
+      "sha256": "0752b044c39cbe403fbe2e8a8a074cf095f6475502e6b074505558fefdcc1ab9"
+    },
+    {
+      "path": "artifacts/datasets/gold-v1-source-aware.json",
+      "sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a"
+    },
+    {
+      "path": "artifacts/datasets/external-development-v1.json",
+      "sha256": "901f50f13a60642b316896abd9d4d68b945e699f7befc696b9e7506bc8fa4ceb"
+    },
+    {
+      "path": "artifacts/reviews/external-development-v1.json",
+      "sha256": "33a10711ed13186406719b02ffe38892a7252e57a5ac060ac8f1b73475d5d004"
+    },
+    {
+      "path": "outputs/corpus-snapshot-v2/reviewed-export.json",
+      "sha256": "5de9ea1a4be3c9d628da51cdf1d07108f43e0ac8ee580acb483013c6dc27c35c"
+    },
+    {
+      "path": "artifacts/reviews/source-diversity-v1.json",
+      "sha256": "93474eca48f045f2a0b1e3c6f9ac7ac6f353b30f570f48a18bed4dff8a20c7e1"
+    },
+    {
+      "path": "artifacts/experiments/beto-reference-control-v1/report.json",
+      "sha256": "bfa40f2972885bda657174f62f7242030ef653f277c70717d3a58620a189b315"
+    },
+    {
+      "path": "scripts/beto_fixed_epoch.py",
+      "sha256": "5e162abde50fe3c7cf4d47fcc322565a60cea7f388df24df1fa83df6ea4dd100"
+    },
+    {
+      "path": "scripts/compare_beto_length.py",
+      "sha256": "54798f66319133edd5b3456786cdcb3a0e5e4e92dcc5c72893fd99fcaa15dcbb"
+    },
+    {
+      "path": "scripts/verify_external_development.py",
+      "sha256": "ae84592b9258cf7db6198f9a76adac86647b126906f6a01d56de80166052c4da"
+    },
+    {
+      "path": "apps/ml/app/ml/baselines.py",
+      "sha256": "78d5f731290bfe1c703dbc3bb8061e75a8eb221fa89bb8ec1777fc6e32dbe609"
+    },
+    {
+      "path": "artifacts/reviews/beto-readiness-v1.json",
+      "sha256": "ddd8edc24c45e01a4301e717263dbfd29dc3d3b068f71f683b5a494016e95995"
+    },
+    {
+      "path": "outputs/beto-length-v1/readiness.json",
+      "sha256": "79b7cc3d9e2abb835e5fb4c8444b05052e032b77fb1e3ccddd001943f24d8e06"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/model.safetensors",
+      "sha256": "4fea08ebf3da420a8ef1b04b151822b32c7f4869408335ab0c5885eb7945ef1f"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/config.json",
+      "sha256": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/labels.json",
+      "sha256": "3e8d21fda1c3a8c0d83249dbf89a9d5fce0e89a6635e9e52a49dac04dd59b169"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/validation.json",
+      "sha256": "58460604ea3cd86f07f167f4714e6396083f705652269ff99c0a8ca9aae8780c"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/special_tokens_map.json",
+      "sha256": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/tokenizer.json",
+      "sha256": "f0ee18fc8f95db74ce5c5c3a4070e0eb32a4b31bcde4865af63b1308e924c0c4"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/tokenizer_config.json",
+      "sha256": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673"
+    },
+    {
+      "path": "outputs/experiments/beto-u1/beto-lr2e5/vocab.txt",
+      "sha256": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/config.json",
+      "sha256": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/labels.json",
+      "sha256": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/model.safetensors",
+      "sha256": "96c67fc6dad153c6aafafe160dbd7d9bd5ea4d4c0016bceda815e10cdb34cd29"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/special_tokens_map.json",
+      "sha256": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/tokenizer.json",
+      "sha256": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/tokenizer_config.json",
+      "sha256": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/vocab.txt",
+      "sha256": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+    },
+    {
+      "path": "artifacts/experiments/beto-length-v1/protocol.json",
+      "sha256": "ae32457e95bfdda3f03ba89e2525686d8351224bf098ce7e5bff8aea2a0dc1c0"
+    },
+    {
+      "path": "artifacts/experiments/beto-length-v1/report.json",
+      "sha256": "899c3a99feba141c4532b36f5548fe2d1d384ed133b6d4eadf10dfcf9cb16426"
+    },
+    {
+      "path": "outputs/corpus-snapshot-v3/reviewed-export.json",
+      "sha256": "687a16c894eae549f9e29e48076a687ce6a96b5cd195f18b21629e8b7e7078e5"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/report.json",
+      "sha256": "e502e0dbe37a2e5e45f39f4447f66c8e1f04159eff007bfab5ded85aa72eb862"
+    },
+    {
+      "path": "outputs/corpus-snapshot-v3/build-report.json",
+      "sha256": "e69c395133a732a09e5d2b66d0bea35967dc309dc092ca7d9a96d19a44b70f4a"
+    },
+    {
+      "path": "outputs/corpus-snapshot-v3/replacement-archive.json",
+      "sha256": "926f240cb59fe19ce9501e02462e09dd293b426b61b77b7fc691e749de092ada"
+    },
+    {
+      "path": "artifacts/reviews/boundary-resolution-v3.json",
+      "sha256": "1e0f7c55df5a4863b8b263a72fae88da6de541851bd7843192a4d1d1fb679be8"
+    },
+    {
+      "path": "artifacts/reviews/training-batch-v3.json",
+      "sha256": "b42860373a22f56490871b626a845b32d61f67108998fdc530e2883b57297692"
+    },
+    {
+      "path": "outputs/boundary-resolution-v3/proposed-replacements.json",
+      "sha256": "8b0f6b6a9b49d16f6615e66ad92ef28a740f8e6de3a1fd498ecc6c7916d37ed9"
+    },
+    {
+      "path": "scripts/build_training_batch_v3.py",
+      "sha256": "768face195990b7c15578a01d8d29dde5b12226532312240764395ed6925b652"
+    },
+    {
+      "path": "scripts/compare_beto_data_v3.py",
+      "sha256": "82f7d944a1f031cf5b891444bc433d89e24de5783886c63f72a2130207d78a93"
+    },
+    {
+      "path": "outputs/beto-data-v3/run/candidate/config.json",
+      "sha256": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc"
+    },
+    {
+      "path": "outputs/beto-data-v3/run/candidate/labels.json",
+      "sha256": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19"
+    },
+    {
+      "path": "outputs/beto-data-v3/run/candidate/model.safetensors",
+      "sha256": "bfb70c6701815f81c02f12170c0f9db32e03533b6bf27c2fae9e243eef13d45f"
+    },
+    {
+      "path": "outputs/beto-data-v3/run/candidate/special_tokens_map.json",
+      "sha256": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140"
+    },
+    {
+      "path": "outputs/beto-data-v3/run/candidate/tokenizer.json",
+      "sha256": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f"
+    },
+    {
+      "path": "outputs/beto-data-v3/run/candidate/tokenizer_config.json",
+      "sha256": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673"
+    },
+    {
+      "path": "outputs/beto-data-v3/run/candidate/vocab.txt",
+      "sha256": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+    },
+    {
+      "path": "artifacts/experiments/beto-data-v3/protocol.json",
+      "sha256": "d1e180810f941f8644be27d69b873950913d2728f508894821c6ae9eb13d5151"
+    },
+    {
+      "path": "artifacts/experiments/beto-data-v3/report.json",
+      "sha256": "e616ea31f461768e92821e782fbdfaee1c957eb948dbfc0dd81099eb65ffb422"
+    },
+    {
+      "path": "artifacts/experiments/beto-data-v3/application.json",
+      "sha256": "90ddb9aa6919cbb2f0c15ca88467250d45a4ba031236bc31d0e8e957a1dffced"
+    },
+    {
+      "path": "scripts/diagnose_beto_training_fit.py",
+      "sha256": "26060d476c269113d6b362b5ab8aebcab780b55e46b33ef917c0a4c74f84f633"
+    },
+    {
+      "path": "outputs/beto-training-fit-v1/reference-train-predictions.json",
+      "sha256": "7780712fbffecad6e41ab593b097da8509024acc5a77557ff9f2fdd59684a1b9"
+    },
+    {
+      "path": "outputs/beto-training-fit-v1/candidate-train-predictions.json",
+      "sha256": "fa8b3c75d9a40e7ddeefb74a8097f8494068b493eeab4232f7e97926d262f624"
+    },
+    {
+      "path": "artifacts/experiments/beto-training-fit-v1/protocol.json",
+      "sha256": "b8373b73232e8f35e0e4bdd875f965c640a09a7d79a201c6eec4ddc892bdd2cc"
+    },
+    {
+      "path": "artifacts/experiments/beto-training-fit-v1/report.json",
+      "sha256": "4e228e629034a43d47b7b841fe53248be888fe432179a940eb0a336b7a67bb5c"
+    },
+    {
+      "path": "docs/guia-etiquetado-1780-1842.md",
+      "sha256": "d53dea3532359afc851c2bdd59ae1ddb47a0673609d82d40372a6f62edc55179"
+    },
+    {
+      "path": "outputs/external-development-v1/sala-inventory.json",
+      "sha256": "41cce7277fe5dedf591039e6ea90952c961086eab5fa31202be41f9572e39461"
+    },
+    {
+      "path": "outputs/external-development-v1/sala-raw-pages.json",
+      "sha256": "8bd539365b26239a920c6bc74bf21ba1f328c2ab1096359e0dcae8ee59ac79e7"
+    },
+    {
+      "path": "outputs/external-development-v1/sala-source.json",
+      "sha256": "05840e91cc15c3effb94c7b71a94ff16eea641f4c9f4478df92207bfb6343967"
+    },
+    {
+      "path": "outputs/external-development-v1/sala-first-review.json",
+      "sha256": "d61bcb08fd5645f79d1b7399c2761891a3af65364c42e4dc55da43a656e7ba0d"
+    },
+    {
+      "path": "outputs/external-development-v1/sala-second-review.json",
+      "sha256": "07a85f89cbd186745df0be165a7de4e68c7f6da68810fdb1ec62ed4a362d3c4b"
+    },
+    {
+      "path": "outputs/external-development-v1/sala-candidates-blind.json",
+      "sha256": "e584ada04a40095271c8042011afbbf888c8aaf1c111158176670432f8635905"
+    },
+    {
+      "path": "outputs/external-development-v1/sobrevilla-inventory.json",
+      "sha256": "40d398575c3ae30458635dcf0a313a05e1a63c242f0d09bf80b98ee1feb3fa33"
+    },
+    {
+      "path": "outputs/external-development-v1/sobrevilla-raw-pages.json",
+      "sha256": "f48bc3e410217ffeaa1905d764929982d6432d5a206c012680edea1f833745b4"
+    },
+    {
+      "path": "outputs/external-development-v1/sobrevilla-source.json",
+      "sha256": "77d18de53e9d2f5d41ff7971197af89b6ce8b270ff99730eba591fd741b77ecf"
+    },
+    {
+      "path": "outputs/external-development-v1/sobrevilla-first-review.json",
+      "sha256": "02eff49433acb64d48e3bab37ef22d3ba937bd99a33c3fd04bd2ce73e9e0d0a9"
+    },
+    {
+      "path": "outputs/external-development-v1/sobrevilla-second-review.json",
+      "sha256": "9689174ed5ec6dd06d2516d9e13550ad7b09821dea21c28cc261848ac4ca786d"
+    },
+    {
+      "path": "outputs/external-development-v1/sobrevilla-candidates-blind.json",
+      "sha256": "279b7ffca0c80428643bf46d89daec7755ea05248135ba242a6942369c10a179"
+    },
+    {
+      "path": "outputs/external-development-v1/protocol-before-selection.json",
+      "sha256": "13723f3d147819d9cff0bfcf21a76f882893ba9bd6daa2a0a61bdba752f9438c"
+    },
+    {
+      "path": "outputs/external-development-v1/root-adjudications.json",
+      "sha256": "dd0df858fbe4380a9af74a616b352b984a837b3e5e67dcfb80c68bf388307457"
+    },
+    {
+      "path": "outputs/external-development-v1/dependency-screen.json",
+      "sha256": "cc9251128f477e150b44a1c8e3c980eb84859dea991a21b0ba296cb6f5b59240"
+    },
+    {
+      "path": "outputs/external-development-v1/root-overlap.json",
+      "sha256": "ae70dfb308e2f5c66814897bce62f85c3212bb5d20f5b956aadf1e1a5a5bd20c"
+    },
+    {
+      "path": "outputs/external-development-v1/root-quote-screen.json",
+      "sha256": "c4f158de08ffbebbdbe841b847656b1a62afd7df18aea2bcdda4c5ffc879ddb2"
+    },
+    {
+      "path": "outputs/external-development-v1/sala-2011.pdf",
+      "sha256": "561569be58d1ca8853e2ef3c5621064c11a22bfbac72968a607ac926d8be9a5c"
+    },
+    {
+      "path": "outputs/external-development-v1/sobrevilla-2021.pdf",
+      "sha256": "425a22547db1ad4c73033d952ba14c1b0f2f1eb573eba55d3f49e293aab0ed19"
+    },
+    {
+      "path": "scripts/beto_epoch_trajectory.py",
+      "sha256": "21825600b0010d6ebc9ea27579d54ff76465e51756cc43a85be45092bf102a4e"
+    },
+    {
+      "path": "scripts/compare_beto_source_epochs.py",
+      "sha256": "9d78bd6d60890ec1de3f56c4e0bdd5cb8d178f0bac7e234cd5c08b27d3be670a"
+    },
+    {
+      "path": "scripts/check_beto_source_epochs.py",
+      "sha256": "6459f1ce9a822fcc3d2df44a74f09727c03baf1ef4e93321f1a9380489983701"
+    },
+    {
+      "path": "scripts/verify_beto_source_epochs.py",
+      "sha256": "52f47263e67554119f767b5ac7a228c96be07637ccce1748935c1b13130a3268"
+    },
+    {
+      "path": "artifacts/experiments/source-generalization-v1/report.json",
+      "sha256": "7a801849f0d4f9fec4b2db211b3f3d3945313d0a7dc399cfadac5b9ff0bccdb6"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1-preflight.json",
+      "sha256": "4ec75e79dd6f764cb51580ca534d8d14f854a1563cc08fb04df05a561ea21233"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-2/config.json",
+      "sha256": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-2/labels.json",
+      "sha256": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-2/model.safetensors",
+      "sha256": "4ff4ce830db03315768922344893c0cac5e8ac5d477496e5528ae651f66f6569"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-2/special_tokens_map.json",
+      "sha256": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-2/tokenizer.json",
+      "sha256": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-2/tokenizer_config.json",
+      "sha256": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-2/vocab.txt",
+      "sha256": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-3/config.json",
+      "sha256": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-3/labels.json",
+      "sha256": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-3/model.safetensors",
+      "sha256": "2ea55144f778262b81faecf35e0dd119fb80156d873cde0e9711efe602aa6225"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-3/special_tokens_map.json",
+      "sha256": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-3/tokenizer.json",
+      "sha256": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-3/tokenizer_config.json",
+      "sha256": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-3/vocab.txt",
+      "sha256": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/moran/epoch-2/config.json",
+      "sha256": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/moran/epoch-2/labels.json",
+      "sha256": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/moran/epoch-2/model.safetensors",
+      "sha256": "c83124ac0197b711cd7c0adf745f6ea88a64f4732f8ebc920af6e6aebe8ab107"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/moran/epoch-2/special_tokens_map.json",
+      "sha256": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/moran/epoch-2/tokenizer.json",
+      "sha256": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/moran/epoch-2/tokenizer_config.json",
+      "sha256": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/moran/epoch-2/vocab.txt",
+      "sha256": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/moran/epoch-3/config.json",
+      "sha256": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/moran/epoch-3/labels.json",
+      "sha256": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/moran/epoch-3/model.safetensors",
+      "sha256": "4866b75cf75fc4bc7bca55930b68fb37e527526390a1541efbd2f2ce9b4809d1"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/moran/epoch-3/special_tokens_map.json",
+      "sha256": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/moran/epoch-3/tokenizer.json",
+      "sha256": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/moran/epoch-3/tokenizer_config.json",
+      "sha256": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/moran/epoch-3/vocab.txt",
+      "sha256": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-2-predictions.json",
+      "sha256": "d0d231d25b7a828ab56af507371e4c8b2ff7603956e7f4c0b05628cd9e64fc7d"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-3-predictions.json",
+      "sha256": "0c7c94cc7641da60d632a31c1fd03d46de8ac965274eab0e726f2d8528907793"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/moran/epoch-2-predictions.json",
+      "sha256": "bcf52e8008afe7e92bc0c1219847044ebec66c27b50cbc6ba3465097c0afa945"
+    },
+    {
+      "path": "outputs/beto-source-epochs-v1/moran/epoch-3-predictions.json",
+      "sha256": "005f44215bff64779af35d20ffab2e6add52628de9a6f8c0de12b233c9325a46"
+    },
+    {
+      "path": "scripts/prepare_beto_ideas_contrast.py",
+      "sha256": "00d8e3a5350160ac51aee6e4e4b64da2c6ba87a02d1ad644456f1da6c15f9c5b"
+    },
+    {
+      "path": "artifacts/experiments/beto-source-epochs-v1/protocol.json",
+      "sha256": "008ae4cbeefa7ec31e79f8768ff112774d8dce1c5250b4519cdfaca419ba94c1"
+    },
+    {
+      "path": "artifacts/experiments/beto-source-epochs-v1/report.json",
+      "sha256": "4f2c4027f2df23faa1c994fb367000c9a69bd3421ee90cf71a785e89fc529895"
+    },
+    {
+      "path": "artifacts/experiments/beto-source-epochs-v1/verification.json",
+      "sha256": "3df040e2260d50eed99db4e52da1a914c2a884f3c2e6db8c0c6c655d2b719af3"
+    }
+  ],
+  "serialization_recovery": {
+    "initial_selection_sha256": "a8237e2132dafc071c1b43015117cd76d7db5b7e01f9fd62c30b560ef365a395",
+    "original_script_sha256": "14dd3f5e19803f95484636ee7fc78af822e93c72d526bda26e5af1d8aa967b6b",
+    "membership_and_roles_unchanged": true,
+    "reason": "BatchEncoding was not JSON serializable; convert to plain dict. No new sample, model load or prediction."
+  },
+  "content_sha256": "a43eef1124371834afc0ebefb9e785b4b3c00224271d9ad171eb794056069200"
+}

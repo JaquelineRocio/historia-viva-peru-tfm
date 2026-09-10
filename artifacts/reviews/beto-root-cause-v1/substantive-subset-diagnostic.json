@@ -1,0 +1,52 @@
+{
+  "status": "posthoc_descriptive_existing_predictions_only",
+  "results": {
+    "ophelan_huamanga": {
+      "rows": 8,
+      "correct": 0,
+      "v4_indices": [
+        126,
+        131,
+        137,
+        182,
+        274,
+        589,
+        600,
+        607
+      ],
+      "predictions": {
+        "liderazgos_diplomacia_proyectos": 1,
+        "contexto_colonial_antecedentes": 4,
+        "participacion_social_regional": 1,
+        "organizacion_consecuencias_republicanas": 2
+      }
+    },
+    "moran": {
+      "rows": 14,
+      "correct": 2,
+      "v4_indices": [
+        813,
+        814,
+        815,
+        816,
+        817,
+        818,
+        819,
+        820,
+        821,
+        822,
+        823,
+        824,
+        826,
+        830
+      ],
+      "predictions": {
+        "liderazgos_diplomacia_proyectos": 7,
+        "contexto_colonial_antecedentes": 3,
+        "participacion_social_regional": 2,
+        "crisis_ideas_emancipadoras": 2
+      }
+    }
+  },
+  "limits": "Substantive is a thematic-inventory tag, not confirmed gold or independent evaluation. All original metrics unchanged. No new model inference."
+}

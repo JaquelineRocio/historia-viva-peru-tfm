@@ -1,0 +1,262 @@
+{
+  "schema": "historical_training_context_review.v1",
+  "status": "AI_assisted_context_review_not_human_gold",
+  "human_review": false,
+  "scope": "Dictamen de aptitud y etiqueta temática de cuatro textos exactos ya presentes en TRAIN; no propone segmentos nuevos ni modifica filas.",
+  "input_files": [
+    {
+      "path": "outputs/corpus-snapshot-v3/reviewed-export.json",
+      "sha256": "687a16c894eae549f9e29e48076a687ce6a96b5cd195f18b21629e8b7e7078e5"
+    },
+    {
+      "path": "artifacts/reviews/independent-review-v1/training-review.json",
+      "sha256": "14732b95d20b4f01c4fd1dd3cdb5d71bdbbd200b8696436c23fbd7792f09509c"
+    }
+  ],
+  "sources": [
+    {
+      "id": "orrego",
+      "pdf_path": ".corpus-downloads/orrego_primeros_anos_republicanos.pdf",
+      "pdf_sha256": "8d0c8819c800ed2289722a26af618c3d5917bdbec586dbb7c5c1309a2b274729"
+    },
+    {
+      "id": "ophelan",
+      "pdf_path": ".corpus-downloads/opheland_mito_independencia.pdf",
+      "pdf_sha256": "1acd9f242328d6901bd6b68f820540473793ca9c5434a600fdd407b95da7a909"
+    }
+  ],
+  "page_evidence": [
+    {
+      "source": "orrego",
+      "pdf_page": 16,
+      "printed_page": 194,
+      "text_path": "outputs/beto-training-cleanup-v1/orrego_primeros_anos_republicanos-p16-text.txt",
+      "text_sha256": "c737dbee10591424a96675c8dffc267792d578566f0382c6348ad51eb09fac3e",
+      "image_path": null,
+      "visually_inspected": false
+    },
+    {
+      "source": "orrego",
+      "pdf_page": 17,
+      "printed_page": 195,
+      "text_path": "outputs/beto-training-cleanup-v1/orrego_primeros_anos_republicanos-p17-text.txt",
+      "text_sha256": "a269935c3772b188a1ac46a805ab9e07fc00177fcb1c85d01b5594407be3e95e",
+      "image_path": "outputs/beto-training-cleanup-v1/orrego_primeros_anos_republicanos-p17.png",
+      "visually_inspected": true
+    },
+    {
+      "source": "orrego",
+      "pdf_page": 18,
+      "printed_page": 196,
+      "text_path": "outputs/beto-training-cleanup-v1/orrego_primeros_anos_republicanos-p18-text.txt",
+      "text_sha256": "0ececc12178df79b74e944ebeb81646effa336ff534dbff25b5a20e591128d39",
+      "image_path": "outputs/beto-training-cleanup-v1/orrego_primeros_anos_republicanos-p18.png",
+      "visually_inspected": true
+    },
+    {
+      "source": "ophelan",
+      "pdf_page": 10,
+      "printed_page": 164,
+      "text_path": "outputs/beto-training-cleanup-v1/opheland_mito_independencia-p10-text.txt",
+      "text_sha256": "7411cfca75795fb06e9a43293508d17f88120262c24257266f36d3e84ce5bd92",
+      "image_path": "outputs/beto-training-cleanup-v1/opheland_mito_independencia-p10.png",
+      "visually_inspected": true
+    },
+    {
+      "source": "ophelan",
+      "pdf_page": 11,
+      "printed_page": 165,
+      "text_path": "outputs/beto-training-cleanup-v1/opheland_mito_independencia-p11-text.txt",
+      "text_sha256": "5875f07b792c5ea7add5a50e4c9928f5d1d627ba82a5a98917f00a87acc7d378",
+      "image_path": "outputs/beto-training-cleanup-v1/opheland_mito_independencia-p11.png",
+      "visually_inspected": true
+    },
+    {
+      "source": "ophelan",
+      "pdf_page": 12,
+      "printed_page": 166,
+      "text_path": "outputs/beto-training-cleanup-v1/opheland_mito_independencia-p12-text.txt",
+      "text_sha256": "a93ab7b45ae10742aa8c104ecd1c75433cfdb6453106b0c1adc78156705d7f52",
+      "image_path": "outputs/beto-training-cleanup-v1/opheland_mito_independencia-p12.png",
+      "visually_inspected": true
+    },
+    {
+      "source": "ophelan",
+      "pdf_page": 33,
+      "printed_page": 187,
+      "text_path": "outputs/beto-training-cleanup-v1/opheland_mito_independencia-p33-text.txt",
+      "text_sha256": "6cc9eda9aeb69c57dbfa4b98a9f858d722c3c71994accdb4721e34d0a6674379",
+      "image_path": "outputs/beto-training-cleanup-v1/opheland_mito_independencia-p33.png",
+      "visually_inspected": true
+    },
+    {
+      "source": "ophelan",
+      "pdf_page": 34,
+      "printed_page": 188,
+      "text_path": "outputs/beto-training-cleanup-v1/opheland_mito_independencia-p34-text.txt",
+      "text_sha256": "c7e1c6a2aaf97bfdd0217767da9c2015105acad1704763fde24c4ee72785b021",
+      "image_path": "outputs/beto-training-cleanup-v1/opheland_mito_independencia-p34.png",
+      "visually_inspected": true
+    }
+  ],
+  "items": [
+    {
+      "review_id": "R02",
+      "snapshot_index": 643,
+      "action": "keep",
+      "decision": "usable",
+      "proposed_label": "organizacion_consecuencias_republicanas",
+      "reason": "El texto exacto conserva una explicación autónoma y fechada de gastos de Hacienda y Gobierno en 1826 y una cita completa que interpreta la prioridad estatal de la guerra y el control político. La primera partida omitida completa la enumeración, pero no es indispensable para reconocer ese argumento fiscal. La transición final a protección y libre comercio añade un segundo aspecto de política económica republicana, sin desplazar el tema. Es defendible conservar la etiqueta actual como clasificación temática; la aprobación no convierte sus cifras OCR en datos fiables.",
+      "context_resolution": "El impreso identifica antes del inicio la partida de guerra (58 % en 1826); la imagen permite leer 26 % y 15 % donde el texto actual dice 2696 y l596. El cierre del argumento comercial en p.196 sitúa el triunfo liberal en una evolución desde 1840 hacia 1850: no debe atribuirse ese triunfo a los primeros veinte años ni añadirse esa cronología al texto actual. La tensión de las dos frases finales es una periodización resumida, no una razón para cambiar la etiqueta dominante.",
+      "remaining_issues": [
+        "Inicio dentro de la enumeración de un párrafo; remisión menor porque las dos partidas conservadas y su interpretación son legibles.",
+        "Porcentajes, llamada 65 y palabras tienen errores OCR; este dictamen no los corrige.",
+        "El cierre del segundo párrafo original continúa fuera de la unidad, pero el fragmento termina en oración completa y el argumento fiscal anterior queda íntegro.",
+        "Usable para etiquetado temático no equivale a texto apto para citar sus porcentajes ni a certificación de fidelidad de extracción."
+      ],
+      "evidence": [
+        {
+          "source": "orrego",
+          "pdf_pages": [
+            17,
+            18
+          ],
+          "printed_pages": [
+            195,
+            196
+          ],
+          "observations": "Cotejo visual directo del párrafo de egresos, cita sobre caudillos y continuación del párrafo sobre proteccionismo; página 16 leída en capa textual como contexto fiscal precedente."
+        }
+      ],
+      "prior_review_delta": "Se resuelve requires_context como usable tras consultar el impreso. Se conserva la etiqueta y se mantienen explícitos los defectos; no se inserta contexto en el texto de entrenamiento.",
+      "text_sha256": "037724b6b30ae3d8702261536423ee49cea1931d06a24cce76d8f6569d256733",
+      "source_resource_id": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+      "current_label": "organizacion_consecuencias_republicanas",
+      "current_split": "train",
+      "exact_text_unchanged": true,
+      "words": 191
+    },
+    {
+      "review_id": "R04",
+      "snapshot_index": 127,
+      "action": "quarantine",
+      "decision": "quarantine",
+      "proposed_label": "crisis_ideas_emancipadoras",
+      "reason": "La temática de facciones, lealtad al rey y ruptura con España es defendible, pero el texto exacto comienza después de la presentación de las facciones y termina dentro de una cita que contiene la conclusión causal. En su lugar incluye notas bibliográficas truncadas. El contexto permite entenderlo al revisor, sin reparar la unidad que recibiría el clasificador.",
+      "context_resolution": "La página PDF11 presenta antes del inicio a los revolucionarios de 1809–1810 y sus dos tendencias. PDF12 completa la frase sobre no vislumbrar la continentalidad de la independencia y sus consecuencias programáticas. Se confirma la conexión con movimientos del sur andino descritos en PDF10–11.",
+      "remaining_issues": [
+        "Inicio dependiente y final de argumento cortado dentro de una cita.",
+        "Notas 37–38 invaden el cuerpo y la última referencia está incompleta.",
+        "Se requiere resegmentación desde el original, no una reclasificación silenciosa ni completar palabras por conjetura."
+      ],
+      "evidence": [
+        {
+          "source": "ophelan",
+          "pdf_pages": [
+            10,
+            11,
+            12
+          ],
+          "printed_pages": [
+            164,
+            165,
+            166
+          ],
+          "observations": "Cotejo visual confirma presentación de facciones en p.165 y continuidad de la conclusión en primera línea de p.166."
+        }
+      ],
+      "prior_review_delta": "requires_context pasa a quarantine para el texto actual hasta resegmentación; etiqueta temática propuesta conservada.",
+      "text_sha256": "19888ce6caa20e06d2d32c4425e92a6747d58de27b7e8e56c8c1f5e346b76cfd",
+      "source_resource_id": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "current_label": "crisis_ideas_emancipadoras",
+      "current_split": "train",
+      "exact_text_unchanged": true,
+      "words": 181
+    },
+    {
+      "review_id": "R11",
+      "snapshot_index": 194,
+      "action": "quarantine",
+      "decision": "quarantine",
+      "proposed_label": "participacion_social_regional",
+      "reason": "La incidencia desigual de medidas fiscales sobre criollos, clero e indígenas sostiene la propuesta social. Sin embargo, la unidad comienza dentro de la palabra pasquines y omite la hipótesis a la cual remite; también termina antes de la conclusión del párrafo sobre el carácter criollo del movimiento. La anomalía verbal de la medida sobre deudas impide reconstruir con precisión esa acción y no puede repararse por intuición.",
+      "context_resolution": "PDF33 termina en pas- después de exponer una brecha entre criollos y Corona; PDF34 continúa quines. El impreso de PDF34 también muestra la construcción se procedió en la plaza central seguida directamente de los papeles de deudas, sin una acción adicional recuperable en esa línea. No es correcto asegurar que un verbo fue omitido únicamente por el OCR. La continuación no seleccionada concluye que las medidas indican un movimiento fundamentalmente criollo.",
+      "remaining_issues": [
+        "Corte intrapalabra al inicio y referentes argumentales ausentes.",
+        "Falta la conclusión explícita del párrafo original, aunque el texto actual cierre una oración.",
+        "Anomalía sintáctica también presente en el impreso; no inventar quema, cancelación u otra acción sobre los documentos.",
+        "Cambiar crisis_ideas_emancipadoras por participación sin arreglar límites no convierte este texto exacto en usable."
+      ],
+      "evidence": [
+        {
+          "source": "ophelan",
+          "pdf_pages": [
+            33,
+            34
+          ],
+          "printed_pages": [
+            187,
+            188
+          ],
+          "observations": "Cotejo visual directo del empalme pas-/quines, la oración sobre deudas y la conclusión criolla posterior al final del segmento."
+        }
+      ],
+      "prior_review_delta": "Se mantiene la propuesta temática participación, distinta de la etiqueta actual crisis; requires_context se resuelve como quarantine hasta resegmentación. No aplicar cambio de etiqueta a una fila retenida, porque se propone retirarla de entrenamiento.",
+      "text_sha256": "1a6219ebdfa2a7870378001b2e92321adbc6c0734485082bf40666c3fa9bb7b5",
+      "source_resource_id": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "current_label": "crisis_ideas_emancipadoras",
+      "current_split": "train",
+      "exact_text_unchanged": true,
+      "words": 186
+    },
+    {
+      "review_id": "R12",
+      "snapshot_index": 242,
+      "action": "quarantine",
+      "decision": "quarantine",
+      "proposed_label": "participacion_social_regional",
+      "reason": "La búsqueda de autonomía regional de Tacna y Cuzco frente a Lima y su articulación con otras juntas justifican la propuesta temática regional. El texto exacto deja sin completar una acción de organización territorial y la sustituye por notas bibliográficas; la oración y el párrafo concluyen en la página siguiente.",
+      "context_resolution": "PDF10 contiene el argumento de articulación regional y acaba con pro-; PDF11 completa la palabra procedido y explica el nombramiento de comisionados para solicitar reconocimiento y apoyo. Esa continuación confirma el foco regional, pero está ausente en la unidad.",
+      "remaining_issues": [
+        "Inicio enlazado mediante Consecuentemente con la explicación anterior.",
+        "Final intrapalabra e intraoración: Con esta mira se había pro-.",
+        "Notas bibliográficas intrusivas e incompletas después del corte.",
+        "La existencia de contexto no autoriza incorporarlo silenciosamente; requiere resegmentación."
+      ],
+      "evidence": [
+        {
+          "source": "ophelan",
+          "pdf_pages": [
+            10,
+            11
+          ],
+          "printed_pages": [
+            164,
+            165
+          ],
+          "observations": "Cotejo visual directo del final de p.164 y las dos primeras líneas de p.165."
+        }
+      ],
+      "prior_review_delta": "Se mantiene propuesta participación frente a etiqueta actual crisis; requires_context se resuelve como quarantine hasta resegmentación.",
+      "text_sha256": "9e2f8863871c1db5e9b0798593281e0c5617356c2122ac189d3e2d5702b602b4",
+      "source_resource_id": "0ea45102-057d-4bff-b527-f36326f66d33",
+      "current_label": "crisis_ideas_emancipadoras",
+      "current_split": "train",
+      "exact_text_unchanged": true,
+      "words": 189
+    }
+  ],
+  "counts": {
+    "keep": 1,
+    "quarantine": 3
+  },
+  "restrictions": [
+    "Revisión asistida por IA; no gold ni validación humana.",
+    "No se consultaron predicciones, métricas o el piloto de 22 textos durante esta tarea. La búsqueda de nombres de archivos puede enumerar archivos de esos tipos, sin abrir sus contenidos.",
+    "Se localizaron los originales desde rutas conservadas en outputs; ambos PDF ya estaban descargados en .corpus-downloads. No hubo web ni descargas nuevas.",
+    "No se cotejaron manuscritos o fuentes primarias subyacentes; la evidencia visual es del impreso académico local.",
+    "Los contextos solo informan el dictamen; no se añadieron al corpus ni se aplicaron correcciones OCR.",
+    "La decisión keep en R02 permite una unidad con remisiones menores y ruido de extracción conocido porque preserva argumento temático autónomo; no declara que sea un párrafo original íntegro o una transcripción limpia.",
+    "No se entrenó ni ejecutó un clasificador. No se alteraron revisiones anteriores ni el corpus."
+  ]
+}

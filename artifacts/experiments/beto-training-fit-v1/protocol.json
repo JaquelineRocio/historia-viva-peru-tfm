@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "id": "beto-training-fit-v1",
+  "status": "frozen_before_training_predictions",
+  "declared_at_utc": "2026-09-08T14:33:38.910639+00:00",
+  "question": "¿Las categorías con cero aciertos externos también fallan en los ejemplos usados para aprender?",
+  "inference_params": {
+    "batch_size": 2,
+    "max_len": 384
+  },
+  "labels": [
+    "campanias_conflictos_militares",
+    "contexto_colonial_antecedentes",
+    "crisis_ideas_emancipadoras",
+    "liderazgos_diplomacia_proyectos",
+    "no_relevante",
+    "organizacion_consecuencias_republicanas",
+    "participacion_social_regional"
+  ],
+  "arms": {
+    "reference": {
+      "training_dataset": "artifacts/datasets/gold-v1-source-aware.json",
+      "training_rows_sha256": "bdf80e593c6ff9e23c05f160d9d1cdc01359e170783ff345cecbf401b8afc766",
+      "rows": 596,
+      "checkpoint_directory": "outputs/beto-length-v1/run/candidate",
+      "checkpoint_epoch": 2
+    },
+    "candidate": {
+      "training_dataset": "outputs/corpus-snapshot-v3/reviewed-export.json",
+      "training_rows_sha256": "58ed525fa1f7c3b445a6ab6baf38b96f531de8ab860223b54e560ed55a892838",
+      "rows": 619,
+      "checkpoint_directory": "outputs/beto-data-v3/run/candidate",
+      "checkpoint_epoch": 2
+    }
+  },
+  "paired_common_rows": 560,
+  "paired_common_unique_identities": 559,
+  "common_pair_indices_sha256": "43c713270b685b27ae4418a2fad12e5af2efd70c165da237c6fff924b0d30ebe",
+  "candidate_addition_indices": [
+    589,
+    590,
+    591,
+    592,
+    593,
+    594,
+    595,
+    596,
+    597,
+    598,
+    599,
+    600,
+    601,
+    602,
+    603,
+    604,
+    605,
+    606,
+    607,
+    608,
+    609,
+    610,
+    611,
+    612,
+    613,
+    614,
+    615,
+    616,
+    617,
+    618
+  ],
+  "candidate_changed_existing_source_indices": [
+    15,
+    20,
+    64,
+    65,
+    73,
+    127,
+    131,
+    205,
+    349,
+    371,
+    375,
+    377,
+    378,
+    379,
+    381,
+    382,
+    407,
+    417,
+    578,
+    579,
+    580,
+    581,
+    582,
+    583,
+    584,
+    585,
+    586,
+    587,
+    588
+  ],
+  "comparison": "Own-training metrics are in-sample and use different sets596/619. Compare both checkpoints only on the identical560-row multiset; retain duplicate occurrences and disclose them.",
+  "metrics": "Global and per-source confusion matrices and precision/recall/F1/support. Macro uses the exact truth-supported labels named in each report. No direct aggregate comparison to external five-label macro.",
+  "interpretation_rule": "Observe counts/recalls before proposing causes. Train successes with external failures establish a descriptive transfer gap; train failures establish incomplete fit too. Neither uniquely identifies a cause. No performance threshold, model selection or new fitting.",
+  "external_policy": "Reuse the two saved external reports without loading the external dataset or running new inference on it. Original val/test receive no inference or semantic analysis.",
+  "packages": {
+    "torch": "2.7.1+cu126",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "safetensors": "0.8.0",
+    "huggingface-hub": "0.36.2",
+    "numpy": "2.2.6",
+    "scikit-learn": "1.7.2"
+  },
+  "input_guards": [
+    {
+      "path": "outputs/beto-length-v1/run/candidate/config.json",
+      "sha256": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/labels.json",
+      "sha256": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/model.safetensors",
+      "sha256": "96c67fc6dad153c6aafafe160dbd7d9bd5ea4d4c0016bceda815e10cdb34cd29"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/special_tokens_map.json",
+      "sha256": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/tokenizer.json",
+      "sha256": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/tokenizer_config.json",
+      "sha256": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673"
+    },
+    {
+      "path": "outputs/beto-length-v1/run/candidate/vocab.txt",
+      "sha256": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+    },
+    {
+      "path": "artifacts/experiments/beto-length-v1/protocol.json",
+      "sha256": "ae32457e95bfdda3f03ba89e2525686d8351224bf098ce7e5bff8aea2a0dc1c0"
+    },
+    {
+      "path": "artifacts/experiments/beto-length-v1/report.json",
+      "sha256": "899c3a99feba141c4532b36f5548fe2d1d384ed133b6d4eadf10dfcf9cb16426"
+    },
+    {
+      "path": "artifacts/datasets/gold-v1-source-aware.json",
+      "sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a"
+    },
+    {
+      "path": "outputs/beto-data-v3/run/candidate/config.json",
+      "sha256": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc"
+    },
+    {
+      "path": "outputs/beto-data-v3/run/candidate/labels.json",
+      "sha256": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19"
+    },
+    {
+      "path": "outputs/beto-data-v3/run/candidate/model.safetensors",
+      "sha256": "bfb70c6701815f81c02f12170c0f9db32e03533b6bf27c2fae9e243eef13d45f"
+    },
+    {
+      "path": "outputs/beto-data-v3/run/candidate/special_tokens_map.json",
+      "sha256": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140"
+    },
+    {
+      "path": "outputs/beto-data-v3/run/candidate/tokenizer.json",
+      "sha256": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f"
+    },
+    {
+      "path": "outputs/beto-data-v3/run/candidate/tokenizer_config.json",
+      "sha256": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673"
+    },
+    {
+      "path": "outputs/beto-data-v3/run/candidate/vocab.txt",
+      "sha256": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+    },
+    {
+      "path": "artifacts/experiments/beto-data-v3/protocol.json",
+      "sha256": "d1e180810f941f8644be27d69b873950913d2728f508894821c6ae9eb13d5151"
+    },
+    {
+      "path": "artifacts/experiments/beto-data-v3/report.json",
+      "sha256": "e616ea31f461768e92821e782fbdfaee1c957eb948dbfc0dd81099eb65ffb422"
+    },
+    {
+      "path": "outputs/corpus-snapshot-v3/reviewed-export.json",
+      "sha256": "687a16c894eae549f9e29e48076a687ce6a96b5cd195f18b21629e8b7e7078e5"
+    },
+    {
+      "path": "artifacts/experiments/beto-data-v3/application.json",
+      "sha256": "90ddb9aa6919cbb2f0c15ca88467250d45a4ba031236bc31d0e8e957a1dffced"
+    },
+    {
+      "path": "scripts/diagnose_beto_training_fit.py",
+      "sha256": "26060d476c269113d6b362b5ab8aebcab780b55e46b33ef917c0a4c74f84f633"
+    },
+    {
+      "path": "scripts/compare_beto_length.py",
+      "sha256": "54798f66319133edd5b3456786cdcb3a0e5e4e92dcc5c72893fd99fcaa15dcbb"
+    },
+    {
+      "path": "scripts/verify_external_development.py",
+      "sha256": "ae84592b9258cf7db6198f9a76adac86647b126906f6a01d56de80166052c4da"
+    },
+    {
+      "path": "apps/ml/app/ml/beto_experiment.py",
+      "sha256": "7a55c204f569cc891c8dbdffd4668a3f20abcf13139d901e9db298e3525a121d"
+    },
+    {
+      "path": "apps/ml/app/ml/baselines.py",
+      "sha256": "78d5f731290bfe1c703dbc3bb8061e75a8eb221fa89bb8ec1777fc6e32dbe609"
+    }
+  ],
+  "limits": [
+    "Training accuracy can be optimistic from memorization/source cues; not a quality estimate for new sources.",
+    "Two fixed checkpoints, one seed and mixed historical data changes; no single causal conclusion.",
+    "Annotations include AI-assisted review, not independent human gold. Do not relabel from predictions.",
+    "Shared training has a preexisting duplicate; occurrences are paired one-to-one, not multiplied.",
+    "External31 was reused and covers five classes in two related works; independent final evaluation remains pending.",
+    "No training, checkpoint selection, source change, test prediction, paid service or production operation."
+  ],
+  "training_performed": false,
+  "production_changed": false,
+  "content_sha256": "401557d16eb693220c87c4e4938cd511a90ad6c23cd20e94f6362ea674ec5038"
+}

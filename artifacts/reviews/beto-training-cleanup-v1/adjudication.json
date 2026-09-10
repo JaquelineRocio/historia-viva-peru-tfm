@@ -1,0 +1,93 @@
+{
+  "status": "adjudicated_before_cleanup_training",
+  "human_gold": false,
+  "period": [
+    1780,
+    1842
+  ],
+  "items": [
+    {
+      "snapshot_index": 49,
+      "text_sha256": "ae46a13846889b267236abd2bdf47ec90a7b340d9e14e9da73e5ad4e5068860a",
+      "before_label": "participacion_social_regional",
+      "action": "relabel",
+      "after_label": "no_relevante",
+      "reason": "La unidad desarrolla una crítica metodológica a categorías y relatos historiográficos, seguida de una propuesta de investigación. No reconstruye una actuación popular concreta ni desarrolla una explicación histórica sustantiva de la independencia; anunciar que podrán reconstruirse hechos no equivale a presentar ese argumento. La decisión no depende de que el texto sea historiografía moderna.",
+      "evidence": "artifacts/reviews/independent-review-v1/training-review.json",
+      "original_text_edited": false
+    },
+    {
+      "snapshot_index": 127,
+      "text_sha256": "19888ce6caa20e06d2d32c4425e92a6747d58de27b7e8e56c8c1f5e346b76cfd",
+      "before_label": "crisis_ideas_emancipadoras",
+      "action": "quarantine",
+      "after_label": null,
+      "reason": "La temática de facciones, lealtad al rey y ruptura con España es defendible, pero el texto exacto comienza después de la presentación de las facciones y termina dentro de una cita que contiene la conclusión causal. En su lugar incluye notas bibliográficas truncadas. El contexto permite entenderlo al revisor, sin reparar la unidad que recibiría el clasificador.",
+      "evidence": "context-review.json",
+      "original_text_edited": false
+    },
+    {
+      "snapshot_index": 194,
+      "text_sha256": "1a6219ebdfa2a7870378001b2e92321adbc6c0734485082bf40666c3fa9bb7b5",
+      "before_label": "crisis_ideas_emancipadoras",
+      "action": "quarantine",
+      "after_label": null,
+      "reason": "La incidencia desigual de medidas fiscales sobre criollos, clero e indígenas sostiene la propuesta social. Sin embargo, la unidad comienza dentro de la palabra pasquines y omite la hipótesis a la cual remite; también termina antes de la conclusión del párrafo sobre el carácter criollo del movimiento. La anomalía verbal de la medida sobre deudas impide reconstruir con precisión esa acción y no puede repararse por intuición.",
+      "evidence": "context-review.json",
+      "original_text_edited": false
+    },
+    {
+      "snapshot_index": 242,
+      "text_sha256": "9e2f8863871c1db5e9b0798593281e0c5617356c2122ac189d3e2d5702b602b4",
+      "before_label": "crisis_ideas_emancipadoras",
+      "action": "quarantine",
+      "after_label": null,
+      "reason": "La búsqueda de autonomía regional de Tacna y Cuzco frente a Lima y su articulación con otras juntas justifican la propuesta temática regional. El texto exacto deja sin completar una acción de organización territorial y la sustituye por notas bibliográficas; la oración y el párrafo concluyen en la página siguiente.",
+      "evidence": "context-review.json",
+      "original_text_edited": false
+    },
+    {
+      "snapshot_index": 577,
+      "text_sha256": "147d73cc821356a251d67aeee1aee10682a44ccf08d9fb607747a2389d7532c2",
+      "before_label": "crisis_ideas_emancipadoras",
+      "action": "quarantine",
+      "after_label": null,
+      "reason": "Contrapone una explicación de la independencia basada en precursores intelectuales con otra que la enraíza en un liderazgo indígena. No hay una dominancia segura entre ideas emancipadoras y participación indígena; además, el contexto ausente debe aclarar si el hablante desarrolla esas explicaciones históricas o describe solamente la construcción posterior del canon historiográfico. Inicio 'entre entre' y referente 'ellos' sin antecedente. Nombres y expresiones dañados en la transcripción; no se normalizan entidades por conjetura. Las décadas del 40 y 50 no tienen siglo explícito y no se usan por sí solas para excluir el texto. Faltan audio, contexto inmediato y marcas temporales para verificar integridad y duración.",
+      "evidence": "artifacts/reviews/independent-review-v1/training-review.json",
+      "original_text_edited": false
+    },
+    {
+      "snapshot_index": 643,
+      "text_sha256": "037724b6b30ae3d8702261536423ee49cea1931d06a24cce76d8f6569d256733",
+      "before_label": "organizacion_consecuencias_republicanas",
+      "action": "keep",
+      "after_label": "organizacion_consecuencias_republicanas",
+      "reason": "El texto exacto conserva una explicación autónoma y fechada de gastos de Hacienda y Gobierno en 1826 y una cita completa que interpreta la prioridad estatal de la guerra y el control político. La primera partida omitida completa la enumeración, pero no es indispensable para reconocer ese argumento fiscal. La transición final a protección y libre comercio añade un segundo aspecto de política económica republicana, sin desplazar el tema. Es defendible conservar la etiqueta actual como clasificación temática; la aprobación no convierte sus cifras OCR en datos fiables.",
+      "evidence": "context-review.json",
+      "original_text_edited": false
+    },
+    {
+      "snapshot_index": 675,
+      "text_sha256": "877f4e808e36e0918185e1c7771dd15d1762f195c78a54f85409c7b1fca58394",
+      "before_label": "liderazgos_diplomacia_proyectos",
+      "action": "quarantine",
+      "after_label": null,
+      "reason": "El contraste historiográfico se sustenta en un argumento concreto sobre legitimidad política: el personaje transcrito con variantes de nombre se considera aliado al mismo nivel que San Martín y Bolívar y rechaza que gobiernen Perú como protector o dictador. Predominan relaciones y proyectos de autoridad entre dirigentes, no su mera mención. Inicio dependiente de un ejemplo anterior; cierre truncado en 'durante el gobierno de', sin el referente que completa la atribución. Variantes 'rivaguero', 'rib Agüero' y otras irregularidades exigen cotejo, sin inventar normalización o identidad verificada. Faltan audio y marcas temporales para certificar transcripción, integridad y duración.",
+      "evidence": "artifacts/reviews/independent-review-v1/training-review.json",
+      "original_text_edited": false
+    },
+    {
+      "snapshot_index": 697,
+      "text_sha256": "c7e118af7c3ca57dd59e56551f4e7f1be1b9f7ff8630e010f1170aa9f84e40a3",
+      "before_label": "crisis_ideas_emancipadoras",
+      "action": "quarantine",
+      "after_label": null,
+      "reason": "Aunque enmarcada en una conversación historiográfica, expone y problematiza una explicación sustantiva de la independencia americana: la transmisión de valores liberales desde Francia por España hacia América como impulso modernizador. Esa proposición histórica sobre difusión ideológica permite una etiqueta positiva; la pregunta final sobre autores no anula el desarrollo precedente. Empieza como continuación de una oración y termina en una pregunta inconclusa: 'recogerían más esa'. El referente 'guerra' no está identificado; no se atribuye a una persona específica. Pasajes como 'y izamos' y 'han sido fluidos' indican problemas de transcripción. No hay audio ni marcas de tiempo para comprobar las expresiones, los límites y la duración.",
+      "evidence": "artifacts/reviews/independent-review-v1/training-review.json",
+      "original_text_edited": false
+    }
+  ],
+  "scope": "Six exact incomplete units quarantined, one label corrected, one retained after context review. No blanket source exclusion.",
+  "decision_basis": "Historical context and exact-text usability; no model prediction used as a label.",
+  "evaluation_policy": "Only change separate TRAIN snapshot. Keep original held scoring population and labels for both models; additionally describe an identically filtered primary subset."
+}

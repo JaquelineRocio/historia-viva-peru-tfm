@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "metrics_recomputed_with_sklearn": 21,
+  "aligned_prediction_rows": 1238,
+  "inherited_beto_identities_checked": 2476,
+  "guarded_inputs": 92,
+  "output_files_checked": 4,
+  "evaluation_rows_unchanged": 218,
+  "exact_frozen_partitions": true,
+  "paired_errors_verified": true,
+  "report_sha256": "0a5258c8e305d591d647242071b3415bb88aefb9556db2c1921ec678e4c50608",
+  "created_at_utc": "2026-09-08T17:20:38.253512+00:00"
+}

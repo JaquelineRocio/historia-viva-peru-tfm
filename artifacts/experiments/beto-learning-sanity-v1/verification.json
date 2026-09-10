@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "prediction_rows": 28,
+  "all_seven_labels_checked": true,
+  "updates": 100,
+  "skipped": 0,
+  "guarded_inputs": 185,
+  "output_files_checked": 9,
+  "report_sha256": "0efafde7883d56d029e5e836d64043f62426d2cf7b78c8a1c712bd9ff6fb422a",
+  "limitation": "Verified training-set diagnostic, not a validation score."
+}
