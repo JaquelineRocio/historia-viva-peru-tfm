@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "old_blind_reviews_exact_ids_hashes_evidence": 69,
+  "old_adjudications_checked": 69,
+  "ASR_first_pass_checked": 110,
+  "ASR_second_review_checked": 110,
+  "ASR_adjudications_checked": 110,
+  "ASR_source_text_coverage": 1.0,
+  "S_closed": true,
+  "no_training_eligible_rows": true,
+  "parent_first_pass_snapshot": "5758fff38b97347211570c4646af912a0ab7c9a5c099b27eb71a64cfb925b078",
+  "all_development_units_sha256": "344eb020f2fc5b0c34ad1a15f5ce7ec0c48b7d5272220f1f39d65bd5fe44e0eb",
+  "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9"
+}

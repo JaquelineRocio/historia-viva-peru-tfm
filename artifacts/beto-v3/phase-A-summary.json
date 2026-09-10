@@ -1,0 +1,18 @@
+{
+  "H_rows": 591,
+  "H_class_counts": {
+    "campanias_conflictos_militares": 94,
+    "participacion_social_regional": 94,
+    "no_relevante": 80,
+    "organizacion_consecuencias_republicanas": 115,
+    "liderazgos_diplomacia_proyectos": 92,
+    "contexto_colonial_antecedentes": 61,
+    "crisis_ideas_emancipadoras": 55
+  },
+  "H_families": 14,
+  "old_runs": 27,
+  "old_curve_epochs": 108,
+  "phase07_complete_runs": 0,
+  "corrections": 0,
+  "status": "base_prepared; train inference and sample review pending; final H awaits V/S family freeze"
+}

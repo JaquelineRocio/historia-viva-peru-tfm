@@ -1,0 +1,18 @@
+{
+  "unique_new_units_with_proposal": 938,
+  "accepted_references": {
+    "T": 426,
+    "V": 421,
+    "auxiliary": 14
+  },
+  "accepted_for_training": 0,
+  "second_review_units": 807,
+  "same_model_family": true,
+  "pending": 69,
+  "V_references_frozen": false,
+  "S_references_frozen": false,
+  "provider_usage_tokens": null,
+  "remaining_annotation_ceiling": 262,
+  "selected444_first_pass": 444,
+  "selected444_second_review": 417
+}

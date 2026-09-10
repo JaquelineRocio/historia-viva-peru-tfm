@@ -1,0 +1,12 @@
+{
+  "unique_new_units_with_proposal": 12,
+  "first_pass_only_resolvable": 4,
+  "pending_boundary_or_adjudication": 8,
+  "accepted_for_training": 0,
+  "V_references_frozen": false,
+  "S_references_frozen": false,
+  "second_model_calls": 0,
+  "provider_usage_tokens": null,
+  "usage_note": "Not exposed; no invented estimate",
+  "remaining_annotation_ceiling": 1188
+}

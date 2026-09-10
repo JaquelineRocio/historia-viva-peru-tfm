@@ -1,0 +1,9 @@
+# Incidentes y observaciones de F
+
+- `Get-CimInstance Win32_LogicalDisk` no tuvo permiso de lectura WMI. Se obtuvo espacio real de C/D/E con `shutil.disk_usage`; no se necesitó cambiar permisos.
+- Git detectó propiedad distinta en el entorno aislado. Se consultó su estado con `-c safe.directory=<workspace>` específico de ese comando, sin cambiar configuración global. Había cambios previos en `coursework/README.md` y `scripts/compare_beto_validation.py`; se dejaron intactos.
+- PowerShell representó la advertencia estándar de Transformers sobre pesos nuevos del pooler/clasificador como `NativeCommandError`, y el envoltorio de la semilla 42 devolvió código 1. El proceso de entrenamiento completó 20 épocas: `result.json`, `resume-verification.json` y el recibo de cómputo registran finalización y recargas correctas. No es un ajuste fallido ni motivo para repetir la trayectoria. La inicialización desde BETO base es la misma del núcleo C–D. Se comprobarán los artefactos de cada semilla, sin inferir éxito únicamente del código del shell.
+- El ledger `budget-ledger-current.json` anterior era previo a C, mientras que `development-current.json` señalaba correctamente `budget-ledger-after-D.json`. Se preservaron ambos en `before/` y el ledger acumulado F usa únicamente el snapshot posterior a D más recibos nuevos F, sin sumar de nuevo C–D.
+
+- Las semillas 43 y 44 presentaron el mismo formato de advertencia stderr de PowerShell; ambas completaron 20 ?pocas y sus recargas. Ninguna trayectoria de F fall?.
+- El primer cierre de informe encontr? Matplotlib ausente en el entorno ML. Se separ? el gr?fico en plot_beto_phase_f_v3.py y se utiliz? Matplotlib existente en Python del sistema, como en D. No se instalaron dependencias, no se repiti? entrenamiento y el cierre se complet? reutilizando resultados y baseline ya guardados.

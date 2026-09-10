@@ -1,0 +1,12 @@
+{
+  "scope": "Development metadata and exact-text screening only; all reservations preserved",
+  "S_content_accessed": false,
+  "findings": [
+    {"sources": ["G07", "G14"], "finding": "Different MNAAHP talks: Frank Díaz Pretel on Trujillo (21 July 2021), Gustavo Montoya on 1821-1824 (14 July 2021). Nine shared 12-grams correspond only to the institutional greeting. No substantive exact overlap identified.", "roles": ["T", "V"], "admission": "provisional_pending_final_review"},
+    {"sources": ["G16", "G17"], "finding": "Both Charles Walker, separate events: IIHS Veracruz description dates its conference to 7 November 2018; G17 official UDP upload dated 11 September 2014 and ASR opening identifies Norbert Lechner lecture. No exact 12-gram overlap identified. Shared scholar/book does not automatically make the two recordings one work; conceptual reuse remains a limitation.", "roles": ["T", "T"], "admission": "provisional_pending_final_review"},
+    {"sources": ["G04", "G05", "G06"], "finding": "Three linked parts of the same IEP presentation, each under 30 minutes. Do not count as three independent long works or combine their durations to meet the source threshold.", "roles": ["T", "T", "T"], "admission": "not_primary_duration_eligible"},
+    {"sources": ["G01", "G02", "G03"], "finding": "All first-pass decisions remain proposals. G02 contains partisan interpretations and claims not fact-checked here; topic annotation is not endorsement or expert historical certification. G03 primarily addresses twentieth-century historiography and commemoration; its title does not justify republic-class labels.", "admission": "quarantined_pending_blind_review_and_adjudication"}
+  ],
+  "canonical_family_aliases": {"candidate-G03": "video-T6gALo8Ydgk", "candidate-G17": "video-aTC1jy2bloU"},
+  "limitations": ["No semantic, audio-fingerprint or full-video reproduction audit", "No reserved text used in comparisons", "Caption leading gaps: G18 128.429 s, G13 49.5 s, G16 30.75 s; do not claim absence of missing speech", "Downloaded media are full audio tracks; no video-frame integrity claim", "Inherited 29 unresolved references preserved without relabeling"]
+}

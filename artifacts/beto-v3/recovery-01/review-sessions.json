@@ -1,0 +1,40 @@
+{
+  "first": [
+    {
+      "agent": "/root/recovery_first",
+      "fork_turns": "none",
+      "input_paths": [
+        "outputs\\beto-v3\\recovery-01\\inputs\\batch-001.json",
+        "outputs\\beto-v3\\recovery-01\\inputs\\batch-002.json",
+        "outputs\\beto-v3\\recovery-01\\inputs\\batch-003.json",
+        "outputs\\beto-v3\\recovery-01\\inputs\\batch-004.json"
+      ],
+      "completed_units": 31,
+      "model_family": "GPT-6",
+      "model_weights": "unknown"
+    }
+  ],
+  "second": [
+    {
+      "agent": "/root/recovery_second",
+      "fork_turns": "none",
+      "input_paths": [
+        "outputs\\beto-v3\\recovery-01\\inputs\\batch-001.json",
+        "outputs\\beto-v3\\recovery-01\\inputs\\batch-002.json",
+        "outputs\\beto-v3\\recovery-01\\inputs\\batch-003.json",
+        "outputs\\beto-v3\\recovery-01\\inputs\\batch-004.json"
+      ],
+      "completed_units": 31,
+      "model_family": "GPT-6",
+      "model_weights": "unknown"
+    }
+  ],
+  "authorization": "User explicitly authorized isolated agents in current turn",
+  "prior_responses_exposed_to_reviewers": false,
+  "BETO_predictions_exposed": false,
+  "same_model_family": true,
+  "provider_invocations": null,
+  "provider_tokens": null,
+  "overlap_agent_is_annotation_reviewer": false,
+  "parent_adjudication_reads_both_passes": true
+}

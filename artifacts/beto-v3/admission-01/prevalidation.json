@@ -1,0 +1,135 @@
+{
+  "plan_sha256": "c508e1a96a4262bec83b34fbf61e26cbbf473696dc9e3835ac75f20d9831894c",
+  "source_windows": [
+    {
+      "source_id": "N01",
+      "window_index": 0,
+      "path": "outputs\\beto-v3\\admission-01\\N01\\asr\\window-0.json",
+      "sha256": "1474026239bb0893f14bc9ae867040a8a4d0a6ff3878953a2715b707134cc14c",
+      "offset_seconds": 0,
+      "audio_seconds": 375,
+      "cue_count": 59,
+      "units": [
+        "A01-N01-w0-u01",
+        "A01-N01-w0-u02",
+        "A01-N01-w0-u03",
+        "A01-N01-w0-u04",
+        "A01-N01-w0-u05"
+      ],
+      "all_cues_retained": true,
+      "segmentation_cost": 78.19000000000037
+    },
+    {
+      "source_id": "N01",
+      "window_index": 1,
+      "path": "outputs\\beto-v3\\admission-01\\N01\\asr\\window-1.json",
+      "sha256": "cad5a5b04cd6eca0fb785e0c2c5b12ef3c8395b26390b4f4a2cd363bda5819e4",
+      "offset_seconds": 1347.931111,
+      "audio_seconds": 375,
+      "cue_count": 61,
+      "units": [
+        "A01-N01-w1-u01",
+        "A01-N01-w1-u02",
+        "A01-N01-w1-u03",
+        "A01-N01-w1-u04",
+        "A01-N01-w1-u05"
+      ],
+      "all_cues_retained": true,
+      "segmentation_cost": 1109.9668000000004
+    },
+    {
+      "source_id": "N01",
+      "window_index": 2,
+      "path": "outputs\\beto-v3\\admission-01\\N01\\asr\\window-2.json",
+      "sha256": "31f8de3b13a296a8851752d476713c840f27c80e67bb55fe4d27992597938079",
+      "offset_seconds": 2695.862222,
+      "audio_seconds": 375,
+      "cue_count": 69,
+      "units": [
+        "A01-N01-w2-u01",
+        "A01-N01-w2-u02",
+        "A01-N01-w2-u03",
+        "A01-N01-w2-u04",
+        "A01-N01-w2-u05"
+      ],
+      "all_cues_retained": true,
+      "segmentation_cost": 547.3531999999993
+    },
+    {
+      "source_id": "-Ma1tt97eFg",
+      "window_index": 0,
+      "path": "outputs\\beto-v3\\admission-01\\-Ma1tt97eFg\\asr\\window-0.json",
+      "sha256": "497b362bd99fa7a7d7e6ac51441136b625ec8f4b01fb3b9c7fbdbed84ec0a7c5",
+      "offset_seconds": 0,
+      "audio_seconds": 375,
+      "cue_count": 53,
+      "units": [
+        "A01--Ma1tt97eFg-w0-u01",
+        "A01--Ma1tt97eFg-w0-u02",
+        "A01--Ma1tt97eFg-w0-u03",
+        "A01--Ma1tt97eFg-w0-u04",
+        "A01--Ma1tt97eFg-w0-u05"
+      ],
+      "all_cues_retained": true,
+      "segmentation_cost": 1213.6696000000004
+    },
+    {
+      "source_id": "-Ma1tt97eFg",
+      "window_index": 1,
+      "path": "outputs\\beto-v3\\admission-01\\-Ma1tt97eFg\\asr\\window-1.json",
+      "sha256": "bd782a37e1bd426c7319a436af8386609749301965e3922d9058e463a3b90500",
+      "offset_seconds": 1317.0601815,
+      "audio_seconds": 375,
+      "cue_count": 60,
+      "units": [
+        "A01--Ma1tt97eFg-w1-u01",
+        "A01--Ma1tt97eFg-w1-u02",
+        "A01--Ma1tt97eFg-w1-u03",
+        "A01--Ma1tt97eFg-w1-u04",
+        "A01--Ma1tt97eFg-w1-u05"
+      ],
+      "all_cues_retained": true,
+      "segmentation_cost": 163.58559999999954
+    },
+    {
+      "source_id": "-Ma1tt97eFg",
+      "window_index": 2,
+      "path": "outputs\\beto-v3\\admission-01\\-Ma1tt97eFg\\asr\\window-2.json",
+      "sha256": "c1517e7457218145ad090c14a2bb0e152c2d486c4b2d656a749bda1a2ae8a350",
+      "offset_seconds": 2634.120363,
+      "audio_seconds": 375,
+      "cue_count": 59,
+      "units": [
+        "A01--Ma1tt97eFg-w2-u01",
+        "A01--Ma1tt97eFg-w2-u02",
+        "A01--Ma1tt97eFg-w2-u03",
+        "A01--Ma1tt97eFg-w2-u04",
+        "A01--Ma1tt97eFg-w2-u05"
+      ],
+      "all_cues_retained": true,
+      "segmentation_cost": 82.48680000000101
+    }
+  ],
+  "missing_windows": [],
+  "complete_inventory": true,
+  "units": 30,
+  "max_tokens": 236,
+  "annotation_ceiling": 31,
+  "budget_pass": true,
+  "temporal_overlap_pairs": [],
+  "text_overlap_findings": [],
+  "prevalidation_pass": true,
+  "annotation_entries_spent": 0,
+  "S_content_accessed": false,
+  "prior_inputs": [
+    {
+      "path": "outputs\\beto-v3\\datasets\\H-reviewed.json",
+      "sha256": "418101fc2b2de59f38ff7df509189b858f403c85caeb7c83441c84962d09f7c7"
+    },
+    {
+      "path": "outputs\\beto-v3\\recovery-01\\all-development-units.json",
+      "sha256": "be69903698551507255888a3ccd5e3f46462ff843315db9a5962390be11acd3d"
+    }
+  ],
+  "method": "Fixed windows; 5 segments/window minimizing squared time-anchor displacement with sentence-end preference; additional segment only if token cap makes five infeasible. Every cue retained exactly once. Exact text hashes and normalized 12grams screened against H-reviewed + recovery development + earlier candidates. Matches require substantive review before annotation."
+}

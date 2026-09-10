@@ -1,0 +1,371 @@
+{
+  "scope": "Targeted outstanding admission; existing adjudications reused, no repeat annotation, no S content read by this script",
+  "effective_dataset_sha256": "be69903698551507255888a3ccd5e3f46462ff843315db9a5962390be11acd3d",
+  "annotation_entries_spent": 0,
+  "ASR_gpu_seconds_spent": 0,
+  "paid_USD": 0,
+  "source_decisions": [
+    {
+      "source_id": "G01",
+      "partition": "V",
+      "duration_seconds": 5025,
+      "primary_duration_eligible": true,
+      "accepted_references_preserved": 61,
+      "classes": {
+        "no_relevante": 23,
+        "organizacion_consecuencias_republicanas": 1,
+        "campanias_conflictos_militares": 26,
+        "participacion_social_regional": 10,
+        "crisis_ideas_emancipadoras": 1
+      },
+      "leading_uncaptioned_seconds": 13.48,
+      "trailing_uncaptioned_seconds": 5.239999999999782,
+      "accepted_intersecting_uncaptioned_edges": [],
+      "receipt_sha256": "7447a72d13edf6fb6aa906d0f78a25bf25c4a0d057214fdc861032c1274c8a76",
+      "transcript_quality_sha256": "175575806f9ba3c984bee3ecfcd885ca4a43b308eacf1f5bce57f9f10d08403a",
+      "literal_audio_fidelity_certified": false,
+      "admission": "unchanged_pending_final_source_fidelity_review"
+    },
+    {
+      "source_id": "G02",
+      "partition": "V",
+      "duration_seconds": 9888,
+      "primary_duration_eligible": true,
+      "accepted_references_preserved": 125,
+      "classes": {
+        "no_relevante": 58,
+        "organizacion_consecuencias_republicanas": 4,
+        "participacion_social_regional": 15,
+        "crisis_ideas_emancipadoras": 7,
+        "campanias_conflictos_militares": 31,
+        "contexto_colonial_antecedentes": 5,
+        "liderazgos_diplomacia_proyectos": 5
+      },
+      "leading_uncaptioned_seconds": 2.24,
+      "trailing_uncaptioned_seconds": 0,
+      "accepted_intersecting_uncaptioned_edges": [],
+      "receipt_sha256": "d3d3829247d7817309ea29506da8f61096e4908afb1890dc744ddb423d249293",
+      "transcript_quality_sha256": "f3854bfcecc31f53d058f34139d3dbf2dc28325394527921570e58f7448b87f4",
+      "literal_audio_fidelity_certified": false,
+      "admission": "unchanged_pending_final_source_fidelity_review"
+    },
+    {
+      "source_id": "G03",
+      "partition": "T",
+      "duration_seconds": 3855,
+      "primary_duration_eligible": true,
+      "accepted_references_preserved": 51,
+      "classes": {
+        "no_relevante": 47,
+        "liderazgos_diplomacia_proyectos": 1,
+        "participacion_social_regional": 3
+      },
+      "leading_uncaptioned_seconds": 0,
+      "trailing_uncaptioned_seconds": 16.800000000000182,
+      "accepted_intersecting_uncaptioned_edges": [],
+      "receipt_sha256": "60ddea073a442f6a44273c94ac78c30d51bd5c7f0aeeb77c959221ad3ee1edbf",
+      "transcript_quality_sha256": "aa17c20541c65fd371b2ea042386991cb4b24b93e8a2912a170b20f3e1c38a97",
+      "literal_audio_fidelity_certified": false,
+      "admission": "unchanged_pending_final_source_fidelity_review"
+    },
+    {
+      "source_id": "G07",
+      "partition": "T",
+      "duration_seconds": 4690,
+      "primary_duration_eligible": true,
+      "accepted_references_preserved": 24,
+      "classes": {
+        "no_relevante": 5,
+        "liderazgos_diplomacia_proyectos": 5,
+        "contexto_colonial_antecedentes": 10,
+        "participacion_social_regional": 2,
+        "campanias_conflictos_militares": 1,
+        "crisis_ideas_emancipadoras": 1
+      },
+      "leading_uncaptioned_seconds": 3.54,
+      "trailing_uncaptioned_seconds": 0,
+      "accepted_intersecting_uncaptioned_edges": [],
+      "receipt_sha256": "dea93fb85b632aec007caae43f2bbf91cae6e7c480e0226bad3e1aa7386b09e5",
+      "transcript_quality_sha256": "76e9dc9aee59f06b02af4cdce4e636b8e4aca998d382563bbeb38dd137885657",
+      "literal_audio_fidelity_certified": false,
+      "admission": "unchanged_pending_final_source_fidelity_review"
+    },
+    {
+      "source_id": "G08",
+      "partition": "T",
+      "duration_seconds": 3061,
+      "primary_duration_eligible": true,
+      "accepted_references_preserved": 30,
+      "classes": {
+        "crisis_ideas_emancipadoras": 15,
+        "participacion_social_regional": 5,
+        "liderazgos_diplomacia_proyectos": 5,
+        "campanias_conflictos_militares": 1,
+        "organizacion_consecuencias_republicanas": 4
+      },
+      "leading_uncaptioned_seconds": 0,
+      "trailing_uncaptioned_seconds": 0,
+      "accepted_intersecting_uncaptioned_edges": [],
+      "receipt_sha256": "fa3415bc5a2972d3377e57388f0cbe678e1b7cd258e82535e2437f7f48f63519",
+      "transcript_quality_sha256": "2b8b24f2c06b05560e40c9e16c86a38093ab4d6d12927759a54b2605b278d609",
+      "literal_audio_fidelity_certified": false,
+      "admission": "unchanged_pending_final_source_fidelity_review"
+    },
+    {
+      "source_id": "G09",
+      "partition": "V",
+      "duration_seconds": 5685,
+      "primary_duration_eligible": true,
+      "accepted_references_preserved": 76,
+      "classes": {
+        "no_relevante": 20,
+        "crisis_ideas_emancipadoras": 33,
+        "participacion_social_regional": 10,
+        "contexto_colonial_antecedentes": 6,
+        "liderazgos_diplomacia_proyectos": 2,
+        "campanias_conflictos_militares": 3,
+        "organizacion_consecuencias_republicanas": 2
+      },
+      "leading_uncaptioned_seconds": 4.14,
+      "trailing_uncaptioned_seconds": 1.780999999999949,
+      "accepted_intersecting_uncaptioned_edges": [],
+      "receipt_sha256": "e633f8091cbc031cdb6e9cafd5e0fad8ef91d0a100edaf0ea7e477787ed54547",
+      "transcript_quality_sha256": "e5253cb1a49cc3fcb727d9551c08c1d121007d0b78fbfe7897edd5701240bb72",
+      "literal_audio_fidelity_certified": false,
+      "admission": "unchanged_pending_final_source_fidelity_review"
+    },
+    {
+      "source_id": "G10",
+      "partition": "T",
+      "duration_seconds": 2236,
+      "primary_duration_eligible": true,
+      "accepted_references_preserved": 30,
+      "classes": {
+        "organizacion_consecuencias_republicanas": 3,
+        "liderazgos_diplomacia_proyectos": 1,
+        "no_relevante": 26
+      },
+      "leading_uncaptioned_seconds": 0,
+      "trailing_uncaptioned_seconds": 11.217000000000098,
+      "accepted_intersecting_uncaptioned_edges": [],
+      "receipt_sha256": "a4f891d806bb7229e120f66be6a1e51f5189779c3421ad881e1dbf5ed3043b86",
+      "transcript_quality_sha256": "102208a7ab6ce220ff419792aebd586620583c5b442ecea717dbf39f051ba23a",
+      "literal_audio_fidelity_certified": false,
+      "admission": "unchanged_pending_final_source_fidelity_review"
+    },
+    {
+      "source_id": "G11",
+      "partition": "T",
+      "duration_seconds": 5812,
+      "primary_duration_eligible": true,
+      "accepted_references_preserved": 30,
+      "classes": {
+        "no_relevante": 28,
+        "organizacion_consecuencias_republicanas": 1,
+        "participacion_social_regional": 1
+      },
+      "leading_uncaptioned_seconds": 3.85,
+      "trailing_uncaptioned_seconds": 1.269999999999527,
+      "accepted_intersecting_uncaptioned_edges": [],
+      "receipt_sha256": "304e33a1520c6b6fa5b55e53140f413ee89b6eadbca66c902f6db270b1825be7",
+      "transcript_quality_sha256": "63140643afce1871b4ba2a037e4161252437b269d638d8166d098411b9affd83",
+      "literal_audio_fidelity_certified": false,
+      "admission": "unchanged_pending_final_source_fidelity_review"
+    },
+    {
+      "source_id": "G12",
+      "partition": "T",
+      "duration_seconds": 3059,
+      "primary_duration_eligible": true,
+      "accepted_references_preserved": 30,
+      "classes": {
+        "no_relevante": 15,
+        "participacion_social_regional": 14,
+        "organizacion_consecuencias_republicanas": 1
+      },
+      "leading_uncaptioned_seconds": 17.539,
+      "trailing_uncaptioned_seconds": 7.989999999999782,
+      "accepted_intersecting_uncaptioned_edges": [],
+      "receipt_sha256": "e3c2993bdc633c8afaef4d00cc7954715b635eb0c62ece5cba358803d97a2cb7",
+      "transcript_quality_sha256": "837b7475249d40885ce154b32b408fe66381578871ba7eb1814b634028c0f06a",
+      "literal_audio_fidelity_certified": false,
+      "admission": "unchanged_pending_final_source_fidelity_review"
+    },
+    {
+      "source_id": "G13",
+      "partition": "T",
+      "duration_seconds": 6365,
+      "primary_duration_eligible": true,
+      "accepted_references_preserved": 29,
+      "classes": {
+        "no_relevante": 12,
+        "participacion_social_regional": 15,
+        "crisis_ideas_emancipadoras": 1,
+        "liderazgos_diplomacia_proyectos": 1
+      },
+      "leading_uncaptioned_seconds": 49.5,
+      "trailing_uncaptioned_seconds": 6.050000000000182,
+      "accepted_intersecting_uncaptioned_edges": [],
+      "receipt_sha256": "21c3b0b9a0b33ddb1484165453978d980a79b7eeda645d69bb34b7f95c61d3fb",
+      "transcript_quality_sha256": "dc5eba94d488f40327100106d28a17a0f22fb6dcaa217b9672182802be2c7016",
+      "literal_audio_fidelity_certified": false,
+      "admission": "audio_QA_blocked_HTTP403",
+      "audio_attempt_receipts": [
+        "artifacts\\beto-v3\\admission-01\\G13\\acquisition-network-approved.json",
+        "artifacts\\beto-v3\\admission-01\\G13\\acquisition.json"
+      ],
+      "edge_gap_decision": "Missing edge audio is outside accepted targets; no basis to infer silence, append text, change labels, or claim complete-video coverage."
+    },
+    {
+      "source_id": "G14",
+      "partition": "V",
+      "duration_seconds": 5035,
+      "primary_duration_eligible": true,
+      "accepted_references_preserved": 60,
+      "classes": {
+        "no_relevante": 13,
+        "crisis_ideas_emancipadoras": 21,
+        "liderazgos_diplomacia_proyectos": 7,
+        "campanias_conflictos_militares": 3,
+        "organizacion_consecuencias_republicanas": 8,
+        "participacion_social_regional": 8
+      },
+      "leading_uncaptioned_seconds": 0,
+      "trailing_uncaptioned_seconds": 0,
+      "accepted_intersecting_uncaptioned_edges": [],
+      "receipt_sha256": "accc0c0e81b36f3dfdb5a94a62aa032d0ed45938204bd8918103831fb998e347",
+      "transcript_quality_sha256": "04929f53dcba96ae9538b4d88fc5849edde70892bb58a23f225911faf072fe4b",
+      "literal_audio_fidelity_certified": false,
+      "admission": "unchanged_pending_final_source_fidelity_review"
+    },
+    {
+      "source_id": "G15",
+      "partition": "T",
+      "duration_seconds": 4508,
+      "primary_duration_eligible": true,
+      "accepted_references_preserved": 30,
+      "classes": {
+        "no_relevante": 30
+      },
+      "leading_uncaptioned_seconds": 0,
+      "trailing_uncaptioned_seconds": 11.260000000000218,
+      "accepted_intersecting_uncaptioned_edges": [],
+      "receipt_sha256": "e35b77fe402f2cf084a1005ccbe7c428006ebc754bed8f4cc928816adc0ec846",
+      "transcript_quality_sha256": "0af53fe3963cdbc2c629c946617220f29fab5f3ae18f266e7a35a40b8bf3321a",
+      "literal_audio_fidelity_certified": false,
+      "admission": "unchanged_pending_final_source_fidelity_review"
+    },
+    {
+      "source_id": "G16",
+      "partition": "T",
+      "duration_seconds": 5840,
+      "primary_duration_eligible": true,
+      "accepted_references_preserved": 29,
+      "classes": {
+        "no_relevante": 8,
+        "participacion_social_regional": 3,
+        "liderazgos_diplomacia_proyectos": 7,
+        "campanias_conflictos_militares": 6,
+        "contexto_colonial_antecedentes": 4,
+        "crisis_ideas_emancipadoras": 1
+      },
+      "leading_uncaptioned_seconds": 30.75,
+      "trailing_uncaptioned_seconds": 9.220999999999549,
+      "accepted_intersecting_uncaptioned_edges": [],
+      "receipt_sha256": "edd37abf402d0262e7250ca78e079de97c14fc894f07ce9ecba1d44ef6ece35c",
+      "transcript_quality_sha256": "8b7908ac4e9abd2dfda9f574032de078f91562918fb51975b474827b8a44d8bc",
+      "literal_audio_fidelity_certified": false,
+      "admission": "audio_QA_blocked_HTTP403",
+      "audio_attempt_receipts": [
+        "artifacts\\beto-v3\\admission-01\\G16\\acquisition-network-approved.json",
+        "artifacts\\beto-v3\\admission-01\\G16\\acquisition.json"
+      ],
+      "edge_gap_decision": "Missing edge audio is outside accepted targets; no basis to infer silence, append text, change labels, or claim complete-video coverage."
+    },
+    {
+      "source_id": "G17",
+      "partition": "T",
+      "duration_seconds": 5490,
+      "primary_duration_eligible": true,
+      "accepted_references_preserved": 29,
+      "classes": {
+        "no_relevante": 9,
+        "campanias_conflictos_militares": 8,
+        "participacion_social_regional": 3,
+        "contexto_colonial_antecedentes": 7,
+        "liderazgos_diplomacia_proyectos": 2
+      },
+      "leading_uncaptioned_seconds": 0,
+      "trailing_uncaptioned_seconds": 14.079999999999927,
+      "accepted_intersecting_uncaptioned_edges": [],
+      "receipt_sha256": "4859727706b54b19ebf12b0449a7be3e32644356ea634bed0fc3a95d99ec2633",
+      "transcript_quality_sha256": "fd346cc44e93452fe61f8a4d98f12dcd4ccc46fb9cdb5a147b300f8d00ff3f4b",
+      "literal_audio_fidelity_certified": false,
+      "admission": "event_independence_admitted_audio_ASR_receipts_preserved",
+      "audio_decode_receipt": "outputs\\beto-v3\\phase-b-gap-02\\G17\\download.json"
+    },
+    {
+      "source_id": "G18",
+      "partition": "T",
+      "duration_seconds": 5170,
+      "primary_duration_eligible": true,
+      "accepted_references_preserved": 21,
+      "classes": {
+        "organizacion_consecuencias_republicanas": 6,
+        "no_relevante": 12,
+        "liderazgos_diplomacia_proyectos": 1,
+        "participacion_social_regional": 2
+      },
+      "leading_uncaptioned_seconds": 128.429,
+      "trailing_uncaptioned_seconds": 15.460000000000036,
+      "accepted_intersecting_uncaptioned_edges": [],
+      "receipt_sha256": "52aa61a901ae414ef9b9e0df88be1fd983ff5b42ca137e943247625704f0588f",
+      "transcript_quality_sha256": "84340365cd107bf7f78985773feaa71040e6701492c6cdae4cd839f49d207fa7",
+      "literal_audio_fidelity_certified": false,
+      "admission": "audio_QA_blocked_HTTP403",
+      "audio_attempt_receipts": [
+        "artifacts\\beto-v3\\admission-01\\G18\\acquisition-network-approved.json",
+        "artifacts\\beto-v3\\admission-01\\G18\\acquisition.json"
+      ],
+      "edge_gap_decision": "Missing edge audio is outside accepted targets; no basis to infer silence, append text, change labels, or claim complete-video coverage."
+    }
+  ],
+  "relation_decisions": [
+    {
+      "sources": [
+        "G16",
+        "G17"
+      ],
+      "roles": [
+        "T",
+        "T"
+      ],
+      "decision": "admit_as_two_distinct_recorded_events_same_speaker",
+      "evidence": [
+        {
+          "path": "outputs/beto-v3/phase-b-gap-02/G16/video-details.json",
+          "fact": "Official IIHS description: Charles F. Walker, 7 November 2018, Auditorio Gonzalo Aguirre Beltran, Xalapa, Veracruz."
+        },
+        {
+          "path": "outputs/beto-v3/phase-b-gap-02/G17/source-aac.info.json",
+          "fact": "Official Universidad Diego Portales upload_date 20140911, Cathedra Norbert Lechner."
+        },
+        {
+          "path": "outputs/beto-v3/phase-b-gap-02/G17/asr/cues.json",
+          "fact": "Distinct introduction welcomes second annual lecture and describes local masters programme; G16 introduction announces comparative resistance/negotiation talk."
+        },
+        {
+          "path": "artifacts/beto-v3/phase-b-gap-02/development-overlap.json",
+          "fact": "Previously completed exact 12-gram screen found no G16/G17 overlap; reused, not rerun."
+        }
+      ],
+      "limitation": "Speaker, book and subject recur; thematic reuse is not independent historian evidence. Both recordings remain T; no split move. No audio fingerprint claim."
+    }
+  ],
+  "quota_decision": "No accepted reference removed or added by this targeted check. Existing 5 colonial, 3 leadership, 2 republican V shortfalls remain provisional. Whole phase B cannot be certified closed while source fidelity remains unresolved.",
+  "limitations": [
+    "Network-approved audio requests returned HTTP 403 for G13/G16/G18; no evasion or repeated download attempts.",
+    "No ASR ran because the requested audio was unavailable.",
+    "Edge nonintersection distinguishes missing coverage from proven corruption; it does not certify the fidelity of captioned speech."
+  ]
+}

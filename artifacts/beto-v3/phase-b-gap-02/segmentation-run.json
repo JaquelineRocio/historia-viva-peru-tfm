@@ -1,0 +1,66 @@
+{
+  "items": [
+    {
+      "source_id": "G14",
+      "units": 68,
+      "overlength": 0,
+      "full_returned_cue_coverage": true,
+      "duration_seconds": 5035,
+      "caption_start": 0.0,
+      "caption_end": 5036.989,
+      "gaps_over_15s": [
+        {
+          "after_cue": 1032,
+          "start": 3767.9,
+          "end": 3797.9
+        }
+      ],
+      "literal_fidelity_certified": false,
+      "missing_speech_not_inferred_from_caption_gaps": true
+    },
+    {
+      "source_id": "G15",
+      "units": 60,
+      "overlength": 0,
+      "full_returned_cue_coverage": true,
+      "duration_seconds": 4508,
+      "caption_start": 0.0,
+      "caption_end": 4496.74,
+      "gaps_over_15s": [
+        {
+          "after_cue": 2,
+          "start": 8.2,
+          "end": 27.46
+        }
+      ],
+      "literal_fidelity_certified": false,
+      "missing_speech_not_inferred_from_caption_gaps": true
+    },
+    {
+      "source_id": "G16",
+      "units": 78,
+      "overlength": 0,
+      "full_returned_cue_coverage": true,
+      "duration_seconds": 5840,
+      "caption_start": 30.75,
+      "caption_end": 5830.779,
+      "gaps_over_15s": [],
+      "literal_fidelity_certified": false,
+      "missing_speech_not_inferred_from_caption_gaps": true
+    },
+    {
+      "source_id": "G18",
+      "units": 68,
+      "overlength": 0,
+      "full_returned_cue_coverage": true,
+      "duration_seconds": 5170,
+      "caption_start": 128.429,
+      "caption_end": 5154.54,
+      "gaps_over_15s": [],
+      "literal_fidelity_certified": false,
+      "missing_speech_not_inferred_from_caption_gaps": true
+    }
+  ],
+  "new_annotation_inputs_consumed": 0,
+  "S_closed": true
+}

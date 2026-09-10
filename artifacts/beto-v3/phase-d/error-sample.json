@@ -1,0 +1,246 @@
+{
+  "selection": "Up to 12 R2 errors in all three seeds, round-robin mean-F1<.50 classes, family/ID order; diagnostic, no relabeling",
+  "persistent_count": 133,
+  "sample": [
+    {
+      "segment_id": "N07-asr-067",
+      "family_id": "candidate-N07",
+      "truth": "contexto_colonial_antecedentes",
+      "predictions": {
+        "R0/42": "organizacion_consecuencias_republicanas",
+        "R0/43": "organizacion_consecuencias_republicanas",
+        "R0/44": "organizacion_consecuencias_republicanas",
+        "R2/42": "organizacion_consecuencias_republicanas",
+        "R2/43": "organizacion_consecuencias_republicanas",
+        "R2/44": "organizacion_consecuencias_republicanas"
+      },
+      "text": "No podía, por ejemplo, entrar ninguna mujer a no ser que sea la madre o la hermana. Las exigencias intelectuales también eran aspectos con la asistencia a clase, esa clase, la educación al estudio, y también habían exigencias espirituales como oración, la escuela de espiritualidad, y la asistencia a sermones, después en la época de allá en la independencia hablan con... bueno, antes se enganeaba por el 16, del 16, o sea, en toda la... ya durante los despados de China y de Goyeneche hay conferencias morales. Las autoridades debían asegurarse que tuviese vocación la persona que pretendiese ser cléreo, porque es presbítero.",
+      "input_sha256": "1d8a2ad613323ed3b4ddbb1e0d39dc0a20a45d770e527fad33f4e102650855cd",
+      "source_id": "N07",
+      "source_char_span": [
+        62767,
+        63396
+      ]
+    },
+    {
+      "segment_id": "A01--Ma1tt97eFg-w0-u01",
+      "family_id": "video--Ma1tt97eFg",
+      "truth": "liderazgos_diplomacia_proyectos",
+      "predictions": {
+        "R0/42": "liderazgos_diplomacia_proyectos",
+        "R0/43": "liderazgos_diplomacia_proyectos",
+        "R0/44": "crisis_ideas_emancipadoras",
+        "R2/42": "no_relevante",
+        "R2/43": "no_relevante",
+        "R2/44": "no_relevante"
+      },
+      "text": "En menos de 10 años, en el 2021, celebraremos el bicentenario de la independencia de nuestro país. Y en este contexto resurge el debate de que si los peruanos hicimos mucho o no hicimos tanto por independizarlos, humildemente, desde el programa, creemos que hicimos bastante. Y no solamente desde el plano militar, con figuras como Francisco de Zela, Mateo Pumacawa o los hermanos Angulo, sino también desde la trinchera intelectual, desde las ideas. Y en este sentido se destacan dos figuras principales, Hipólito Unanui y José Faucino Sánchez Carrión. Raúl Porras Barrenechea se refirió a este último como el tribuno arrogante el verbo futuro de la revolución en el Perú. Sobre él, sobre Sánchez Carrión va nuestro programa del día de hoy. Fue un abogado brillante, un extraordinario orador y un político que defendió la República como el mejor sistema gobierno para nuestro país. Estoy en el patio trasero del congreso. Aquí encontramos este monumento a su figura y desde aquí comenzamos el ferorama. Soy Norma Martínez y esto sucede en el Perú.",
+      "input_sha256": "a36aefc486da413424bac2dbcf70cae841ab33e5d5a6c91a211ce65eadd1625c",
+      "source_id": "-Ma1tt97eFg",
+      "source_char_span": [
+        0,
+        1048
+      ]
+    },
+    {
+      "segment_id": "G02-u012",
+      "family_id": "video-Z0PTwkh7g98",
+      "truth": "organizacion_consecuencias_republicanas",
+      "predictions": {
+        "R0/42": "contexto_colonial_antecedentes",
+        "R0/43": "participacion_social_regional",
+        "R0/44": "participacion_social_regional",
+        "R2/42": "no_relevante",
+        "R2/43": "contexto_colonial_antecedentes",
+        "R2/44": "no_relevante"
+      },
+      "text": "del cavite dentro del cusco Lima Arequipa porque españolas fundadas tienen lo lo lo nativo también entonces eh yo creo que eso sería todo podríamos hablar mucho más pero Yo sé que hay varios exponentes dentro del día de hoy para que puedan también aportar muchas cosas señores eh la batalla de ayacucho se negoció descaradamente y no se consiguió mantener el poder económico que tenía el virrenato de Castilla y eso nos ha condenado a lo que estamos viviendo ahora una destrucción una destrucción económica realizada por ingleses por intereses económic como es el motivo de la la batalla pero también señores nos va a saquear todo el oro y la plata quea dentro de Luis reinato y esto produce un desencadenamiento de la caída económica la de la de todo un continente entonces hacer estos eventos de la hispanidad nos va a ayudar a a entender un poco más qué es lo que queremos sacar a la luz Muchas gracias ángel por estos",
+      "input_sha256": "f702935a5eb3e666735886111f36865f9287ba029960717fb6e05568a987535f",
+      "source_id": "G02",
+      "source_char_span": [
+        10158,
+        11079
+      ]
+    },
+    {
+      "segment_id": "N07-asr-022",
+      "family_id": "candidate-N07",
+      "truth": "participacion_social_regional",
+      "predictions": {
+        "R0/42": "contexto_colonial_antecedentes",
+        "R0/43": "contexto_colonial_antecedentes",
+        "R0/44": "contexto_colonial_antecedentes",
+        "R2/42": "contexto_colonial_antecedentes",
+        "R2/43": "organizacion_consecuencias_republicanas",
+        "R2/44": "organizacion_consecuencias_republicanas"
+      },
+      "text": "Y por eso es que yo creo que lo que nosotros tenemos que analizar en el caso caso de los cuatro vispos que yo he elegido, es el tema del conflicto, el conflicto de conciencia que tendría que haberse presentado al momento de optar por una u otra opción. Es evidente que desde Roma el pontífice no podía llegar a comprender el significado ético e histórico del proceso emancipador, es por ello que para el clero de estas latitudes en cualquier caso las consecuencias serían materiales y políticas incluyendo además la posibilidad de ser desposeídos o de esterlado. Vale señalar que para los inicios del proceso independista el arzobispado de Lima, del arzobispado de Lima dependían nada menos que 10 importantes y ricos arzobispados Ariquipa, Uamanga, Trujillo, Mainas, Quito, además de Lima y Santiago de Chile. la concepción, cuenca y panamá. Algunas de esas diócesis quedaron tempranamente vacantes y poco a poco se produjo la clausura de conventos y monasterios, lo que significó un lento pero contundente proceso de debilitamiento y sin duda, porque no, empobrecimiento de la iglesia que vivía también en el seno interno, las luchas y pugnas en las que se debatía la sociedad civil.",
+      "input_sha256": "067dc2a8871ca08fa9d409af2a2d490f73d154bc5b97aa3752acd7f1a7192526",
+      "source_id": "N07",
+      "source_char_span": [
+        20149,
+        21335
+      ]
+    },
+    {
+      "segment_id": "N07-asr-071",
+      "family_id": "candidate-N07",
+      "truth": "contexto_colonial_antecedentes",
+      "predictions": {
+        "R0/42": "crisis_ideas_emancipadoras",
+        "R0/43": "crisis_ideas_emancipadoras",
+        "R0/44": "crisis_ideas_emancipadoras",
+        "R2/42": "crisis_ideas_emancipadoras",
+        "R2/43": "crisis_ideas_emancipadoras",
+        "R2/44": "crisis_ideas_emancipadoras"
+      },
+      "text": "Aun más, tal parece que Chávez de la Rosa había copiado textualmente trechos del Plan de Estudios de Rodríguez del Mendoza. En esta época no hay esa conciencia de plagio. Por eso yo pongo no con intención de plagio, sino pienso más bien de garantizar la aprobación de sus constituciones ante las autoridades peniculares porque Rodríguez Mendoza había logrado la aprobación de la Corte Borbónica ilustrado y a esos mismos les estaba dirigiendo sus constituciones para que sean aprobadas creo que me parece a mí de que lo que ha hecho Chávez de la Rosa es intentar que de todas maneras aumentar las capacidades de que estas constituciones sean aprobadas, no era fácil esto, hay un proceso de 12 años para que desde la gestión de las constituciones hasta su publicación, aun más, tal parece que Chávez de la Rosa había copiado, ah, perdón, estoy repitiendo, disculpe, trechos de plan de estudios de Rodríguez de Mendoza, no con intenciones preciosas sino de garantizar la aprobación de su constitución, con la condición de la supresión del capítulo mencionado allá.",
+      "input_sha256": "e1dc928547f52d2d5e2b460a8ed532616dbba3233881d5a139c63bd29c42369e",
+      "source_id": "N07",
+      "source_char_span": [
+        66087,
+        67150
+      ]
+    },
+    {
+      "segment_id": "A01--Ma1tt97eFg-w1-u02",
+      "family_id": "video--Ma1tt97eFg",
+      "truth": "liderazgos_diplomacia_proyectos",
+      "predictions": {
+        "R0/42": "participacion_social_regional",
+        "R0/43": "participacion_social_regional",
+        "R0/44": "crisis_ideas_emancipadoras",
+        "R2/42": "organizacion_consecuencias_republicanas",
+        "R2/43": "participacion_social_regional",
+        "R2/44": "organizacion_consecuencias_republicanas"
+      },
+      "text": "En aquel intenso debate, Sanchez Carrión y Bernardo de Monti Agudo analizaron la compleja sociedad peruana. y Montaúdo también sostiene que el legado colonial es nefasto, que la división social en el Perú era terrible, digamos que Montaúdo tiene una visión sociológica del país, en la cual las diferencias son enormes, entonces Montaúdo hace una afirmación bastante interesante también, que es que la sociedad peruana está muy dividida, muy fragmentada. Según Cristóbal Aljovin, a pesar de su antagonismo, existieron puntos en común entre las posiciones de Sanchez Carrión y Montiagudo. Lo que plantea Montiagudo es que la sociedad peruana requiere de un gobierno fuerte, pero también de libertad. Y eso se lo da la monarquía constitucional. Entonces, la idea de Montiagudo es que este ejecutivo fuerte puede, a un modo, crear, digamos, las condiciones para ir reduciendo las diferencias sociales y el Perú puede encontrar puntos en común.",
+      "input_sha256": "bdea3ef400bef54f9ed4695e9c833499cbff15e2ba9f33ee618b5044586b87c5",
+      "source_id": "-Ma1tt97eFg",
+      "source_char_span": [
+        4478,
+        5417
+      ]
+    },
+    {
+      "segment_id": "G01-u007",
+      "family_id": "video-ppkyuQewxHc",
+      "truth": "organizacion_consecuencias_republicanas",
+      "predictions": {
+        "R0/42": "contexto_colonial_antecedentes",
+        "R0/43": "contexto_colonial_antecedentes",
+        "R0/44": "crisis_ideas_emancipadoras",
+        "R2/42": "no_relevante",
+        "R2/43": "no_relevante",
+        "R2/44": "no_relevante"
+      },
+      "text": "entendiendo que fue San Marcos la que instaura la República fue San Marcos la que instaura el primer Congreso Constituyente y tanto es así que los sanmarquinos cumpliendo el rol de responsabilidad social que hoy día estamos haciendo también este trabajo para repotenciar conocimientos fue un San marquino el que se dio la casa del congreso para que se inicie los primeros debates de la ley y fue un San marquino el que instaura el Ministerio de Hacienda porque se necesitaba ambas cosas alguien que dicte la leyes y alguien que maneje la economía y entonces si nosotros hacemos la historia San Marcos siempre tuvo que ver en todo el desarrollo del país por eso se dice que San Marcos es la historia lo que ocurre en San Marcos ocurre en el país pero reconociendo a los grandes a los grandes hombres que han pasado por San Marcos también que han ido dejando huellas en cada espacio en cada lugar en cada sitio Y eso es lo que nos llena de orgullo yo siempre les digo ustedes no tienen nada que envidiar a las privadas Por qué qué les sobra a ustedes que no",
+      "input_sha256": "79f0eac04ff50a0ace13959a4a84724e904c350fdd55b0d6e01ca75289c9e557",
+      "source_id": "G01",
+      "source_char_span": [
+        4433,
+        5488
+      ]
+    },
+    {
+      "segment_id": "N07-asr-024",
+      "family_id": "candidate-N07",
+      "truth": "participacion_social_regional",
+      "predictions": {
+        "R0/42": "liderazgos_diplomacia_proyectos",
+        "R0/43": "contexto_colonial_antecedentes",
+        "R0/44": "crisis_ideas_emancipadoras",
+        "R2/42": "contexto_colonial_antecedentes",
+        "R2/43": "contexto_colonial_antecedentes",
+        "R2/44": "contexto_colonial_antecedentes"
+      },
+      "text": "Por lo anterior, no cabe duda que el alaboreo angelizador a primigenia, apoyada en extraordinarias obras de arte que permitieron la difusión de los valores doctrina de la iglesia, se vio luego trastocada por la realidad de los cambios políticos y por la inevitable necesidad de optar por un bando, aún a pesar de lo que disponían las dos encíclicas ya citadas. En nuestro medio, los obispos en el territorio virreinal que van a tener diversas actitudes y conductas son varios, pero yo quiero referirme solamente a tres. Abartholomé de las Ceras, Obispo de Lima, a José Carrión, Obispo de Trujillo, y a Pedro Gutiérrez de Cos, Obispo de Huamanga. De las Ceras es un personaje muy representativo de la situación que debió vivir el clero en esos tiempos. Nacido en Sevilla, llega a Lima en 1806 para sustituir como 17º alfobispo de Lima, de la reguera. Desarrollando una labor muy intensa respecto a la formación del clero, llegando a realizar la visita pastoral a toda su jurisdicción. Por lo tanto, a conocer la realidad de los sacerdotes a su cargo y a él se le recuerda además por el respeto que expresó hacia la calidad academia del Real Con Victoria.",
+      "input_sha256": "102fb94835cae7eb7cd29dd0c576822d41578f03747c228a08ad22a24c806c82",
+      "source_id": "N07",
+      "source_char_span": [
+        22014,
+        23168
+      ]
+    },
+    {
+      "segment_id": "G09-u018",
+      "family_id": "video-4eTSESrqcLg",
+      "truth": "contexto_colonial_antecedentes",
+      "predictions": {
+        "R0/42": "crisis_ideas_emancipadoras",
+        "R0/43": "contexto_colonial_antecedentes",
+        "R0/44": "crisis_ideas_emancipadoras",
+        "R2/42": "no_relevante",
+        "R2/43": "participacion_social_regional",
+        "R2/44": "participacion_social_regional"
+      },
+      "text": "siguiente y aquí tenemos el lo que hablaba del expansionismo napoleónico tenemos a francia en 1801 y luego observemos la siguiente la línea azul convertida en el imperio napoleónico y la siguiente bien lo que decía es que una pose era hacer una ley para un lugar donde había como dije basadre una forma de técnica más o menos que para otro lugar donde la situación era mucho más compleja y ahí tenemos por ejemplo todo lo que las variedades lo que acabo de decir castas esclavos libertos blancos de todo pero es un cuadro que hay que analizar un poco más la siguiente me interesa es la siguiente solamente hechos un era tal la falta de comprensión de que lo que estaba pasando en la población americana que el rey manda a ser a méxico y al perú a los respectivos y reyes que le",
+      "input_sha256": "aab6f3db68aecc86084b4671e1df4af6ea0e6d5d7931440ab17011baa60292eb",
+      "source_id": "G09",
+      "source_char_span": [
+        17344,
+        18121
+      ]
+    },
+    {
+      "segment_id": "A01--Ma1tt97eFg-w2-u05",
+      "family_id": "video--Ma1tt97eFg",
+      "truth": "liderazgos_diplomacia_proyectos",
+      "predictions": {
+        "R0/42": "liderazgos_diplomacia_proyectos",
+        "R0/43": "no_relevante",
+        "R0/44": "no_relevante",
+        "R2/42": "no_relevante",
+        "R2/43": "no_relevante",
+        "R2/44": "no_relevante"
+      },
+      "text": "José Faustino Sánchez Carrión fue una figura representativa de la independencia de nuestro país. Fue además conocedor y crítico de los efectos nacionales y por ello postuló un programa político que podría ser una aspiración hasta nuestros días. Él decía que los peruanos debemos amar y respetar a nuestras instituciones y a nuestras leyes y ser austeros y moderados. Solo así seremos libres y desaparecerá el crimen y los vicios que corrompen la moral. Interesantes palabras, ¿no? Y muy oportunas, me parece, para los días en que vivimos. Nos vemos en la próxima. Más información en www.mesmerism.info Subtítulos por la comunidad de Amara.org",
+      "input_sha256": "f7355ed16ecf224a6a4d15617f3e4050795e0387deb03b30d705779d1c063380",
+      "source_id": "-Ma1tt97eFg",
+      "source_char_span": [
+        11025,
+        11667
+      ]
+    },
+    {
+      "segment_id": "rKbC4guGhRY-b01-017",
+      "family_id": "video-rKbC4guGhRY",
+      "truth": "organizacion_consecuencias_republicanas",
+      "predictions": {
+        "R0/42": "contexto_colonial_antecedentes",
+        "R0/43": "contexto_colonial_antecedentes",
+        "R0/44": "crisis_ideas_emancipadoras",
+        "R2/42": "participacion_social_regional",
+        "R2/43": "participacion_social_regional",
+        "R2/44": "participacion_social_regional"
+      },
+      "text": "toda revolución cambia los nombres de los lugares y las cosas cambia el nombre del tiempo como se va a llamar el tiempo lo hizo la revolución francesa también año primero año segundo de la república lima fue rebautizada como la ciudad de los libres y eso se ha olvidado acaso tensión en el colegio que lima fue la ciudad de los libres con la independencia entonces luego magdalena se rebautizó como el pueblo de los libres y luego volvió a su nombre magdalena pero quedó la parte que llamamos pueblo libre pero hubo una reticencia o sea la plaza de la de armas se llamó la plaza de la independencia porque la volvemos a llamar la plaza de armas o sea es otra que te está diciendo que los actores revolucionarios quisieron hacer ese cambio en la fortaleza del real felipe también se produjeron cambios de nombres la misma fortaleza se convirtió en el castillo de la independencia al baluarte del rey se le llamó manco cápac el de la reina se convirtió en baluarte de la patria y el fuerte san rafael pasó a llamarse castillo de santa rosa entre muchos otros cambios en hombres también en muchos renombre sí a veces nombres de pueblos y villas y ciudades el gran dato que se iban a ver yendo a la causa independentista entonces se rebautiza en ese sentido el virreinato para por un lado marcar más recordemos que la guerra continuaba contra los realistas entonces por un lado era una forma de marcar una identidad asociada a la causa independentista y enfrentada no a un al bando enemigo no a los realistas y por otro lado era una forma de imaginar un futuro nuevo para una nueva comunidad política",
+      "input_sha256": "96e39765c4f058378b0adff9ad865a22a1041c64b9227da09293b2caeb3cd296",
+      "source_id": "rKbC4guGhRY",
+      "source_char_span": [
+        12922,
+        14519
+      ]
+    },
+    {
+      "segment_id": "N07-asr-040",
+      "family_id": "candidate-N07",
+      "truth": "participacion_social_regional",
+      "predictions": {
+        "R0/42": "crisis_ideas_emancipadoras",
+        "R0/43": "crisis_ideas_emancipadoras",
+        "R0/44": "crisis_ideas_emancipadoras",
+        "R2/42": "liderazgos_diplomacia_proyectos",
+        "R2/43": "liderazgos_diplomacia_proyectos",
+        "R2/44": "crisis_ideas_emancipadoras"
+      },
+      "text": "Reinal, el doctor Torivio Rodríguez de Mendoza, escribió en 1813 un alegato en contra de la devoción del corazón de María, elegida por los júries consultos como patrona del Colegio de Abogados de Lima, que había aprendido fuertemente en la piedad de los limenios, cuyo culto, planteado por San Juan Eudes, aún no había sido formalmente aceptado por la iglesia. De hecho, Mendoza nunca se reclamó enemigo de la creencia en la madre del Redentor, como un medio para llegar a Cristo, pero estuvo en claro desacuerdo con la propagación de su sagrada viscera, pues la consideraba a todas luces una superstición. El sacerdote secular fundamentó su desacuerdo contra este mal uso de la religión, con las siguientes palabras, y cito literalmente. las supersticiones están tan universalmente extendidas en el mundo cristiano y han hallado tanta acogida entre los grandes, tanto curso entre las personas mediocres y tanta voga entre el simple pueblo que cada reino, cada provincia, cada dioses y cada ciudad y cada parroquia tienen las suyas propias. Cualquiera que considere atentamente estos desórdenes en las más altas prácticas de la iglesia a quien afligen tan sensiblemente, advertirá que tienen por origen las supersticiones a la malicia, a la ignorancia, a la simplicidad...",
+      "input_sha256": "4fc16062e59242652b372a7da0dcf30d7f45836592005d9cfd2df88f1a22f618",
+      "source_id": "N07",
+      "source_char_span": [
+        38737,
+        40010
+      ]
+    }
+  ]
+}

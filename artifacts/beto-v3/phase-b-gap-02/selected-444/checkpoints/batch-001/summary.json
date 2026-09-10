@@ -1,0 +1,69 @@
+{
+  "version": "selected-444-v1",
+  "first_pass_units": 444,
+  "second_review_units": 165,
+  "second_review_target": 417,
+  "adjudications": 15,
+  "selected444_complete": false,
+  "accepted_new_references": 12,
+  "accepted_new_by_partition": {
+    "T": 12
+  },
+  "accepted_references": {
+    "T": 156,
+    "V": 285,
+    "auxiliary": 14
+  },
+  "accepted_30min_references": {
+    "T": 131,
+    "V": 285
+  },
+  "pending_references": 475,
+  "pending_new_adjudicated": 3,
+  "coverage": {
+    "T": {
+      "accepted": 156,
+      "units": 456,
+      "fraction": 0.34210526315789475
+    },
+    "V": {
+      "accepted": 285,
+      "units": 459,
+      "fraction": 0.6209150326797386
+    }
+  },
+  "C_ready": false,
+  "blockers": [
+    "T/campanias_conflictos_militares: missing 7 references and 1 works from >=30-minute sources",
+    "T/contexto_colonial_antecedentes: missing 14 references and 0 works from >=30-minute sources",
+    "T/crisis_ideas_emancipadoras: missing 14 references and 1 works from >=30-minute sources",
+    "T/liderazgos_diplomacia_proyectos: missing 11 references and 0 works from >=30-minute sources",
+    "T/organizacion_consecuencias_republicanas: missing 14 references and 0 works from >=30-minute sources",
+    "T/participacion_social_regional: missing 2 references and 0 works from >=30-minute sources",
+    "V/contexto_colonial_antecedentes: missing 11 references and 0 works from >=30-minute sources",
+    "V/crisis_ideas_emancipadoras: missing 4 references and 0 works from >=30-minute sources",
+    "V/liderazgos_diplomacia_proyectos: missing 12 references and 0 works from >=30-minute sources",
+    "V/organizacion_consecuencias_republicanas: missing 12 references and 0 works from >=30-minute sources",
+    "T: 131/300 accepted long-source references; missing 169",
+    "T: resolvable reference coverage 156/456 below 0.90",
+    "V: resolvable reference coverage 285/459 below 0.90",
+    "Selected material: 429 final decisions outstanding",
+    "Final source independence/reproduction admission and frozen H/T/V/S manifests outstanding",
+    "Caption/audio fidelity and missing-cue intervals require final admission review; S remains closed"
+  ],
+  "S_content_opened": false,
+  "training_runs": 0,
+  "services_paid_USD": 0,
+  "annotation_unique": 938,
+  "annotation_remaining": 262,
+  "same_model_family_both_passes": true,
+  "model_weights": "unknown",
+  "reference_note": "AI-assisted references, not expert gold or training admission",
+  "source_admission_pending": true,
+  "provisional_acquired_30min_works": {
+    "T": 13,
+    "V": 6
+  },
+  "new_registered_S_works": 6,
+  "all_development_units_sha256": "8b9780e4f78bd2a66dddb0c08166f8f7411e1ad60b7d67031118d2d31e614407"
+}

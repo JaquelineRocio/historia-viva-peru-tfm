@@ -1,0 +1,22 @@
+[
+  {
+    "name": "integrity-C-gate",
+    "command": [
+      "scripts/check_beto_v3.py",
+      "--require-C"
+    ],
+    "exit_code": 2,
+    "expected_exit_code": 2,
+    "expected_gate_block": true
+  },
+  {
+    "name": "runner-preflight",
+    "command": [
+      "scripts/run_beto_phase_c_v3.py",
+      "preflight"
+    ],
+    "exit_code": 2,
+    "expected_exit_code": 2,
+    "expected_gate_block": true
+  }
+]

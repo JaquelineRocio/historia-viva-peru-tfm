@@ -1,0 +1,1957 @@
+[
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u001",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      0,
+      863
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-001"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u002",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      864,
+      1504
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-001",
+      "0Dgk3uh0ziE-b01-002"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u003",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      1505,
+      2423
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-003"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u004",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      2424,
+      3312
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-003",
+      "0Dgk3uh0ziE-b01-004",
+      "0Dgk3uh0ziE-b01-005"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u005",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      3313,
+      4152
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-005"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u006",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      4153,
+      5020
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-006"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u007",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      5021,
+      5929
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-006",
+      "0Dgk3uh0ziE-b01-007",
+      "0Dgk3uh0ziE-b01-008"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u008",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      5930,
+      6805
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-008"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u009",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      6806,
+      7713
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-008",
+      "0Dgk3uh0ziE-b01-009"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u010",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      7714,
+      8596
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-009",
+      "0Dgk3uh0ziE-b01-010",
+      "0Dgk3uh0ziE-b01-011"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u011",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      8597,
+      9482
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-011",
+      "0Dgk3uh0ziE-b01-012"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u012",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      9483,
+      10336
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-012",
+      "0Dgk3uh0ziE-b01-013"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u013",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      10337,
+      11448
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-013"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u014",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      11449,
+      12483
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-013",
+      "0Dgk3uh0ziE-b01-014"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u015",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      12484,
+      13570
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-014",
+      "0Dgk3uh0ziE-b01-015"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u016",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      13571,
+      14592
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-015",
+      "0Dgk3uh0ziE-b01-016"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u017",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      14593,
+      15656
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-016",
+      "0Dgk3uh0ziE-b01-017"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u018",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      15657,
+      16702
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-017",
+      "0Dgk3uh0ziE-b01-018"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u019",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      16703,
+      17697
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-018",
+      "0Dgk3uh0ziE-b01-019"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u020",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      17698,
+      18676
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-019",
+      "0Dgk3uh0ziE-b01-020"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u021",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      18677,
+      19749
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-020",
+      "0Dgk3uh0ziE-b01-021",
+      "0Dgk3uh0ziE-b01-022"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u022",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      19750,
+      20754
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-022"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u023",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      20755,
+      21635
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-023"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u024",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      21636,
+      22476
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-023",
+      "0Dgk3uh0ziE-b01-024",
+      "0Dgk3uh0ziE-b01-025"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u025",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      22477,
+      23379
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-025",
+      "0Dgk3uh0ziE-b01-026"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u026",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      23380,
+      24069
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-026"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u027",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      24070,
+      24924
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-026",
+      "0Dgk3uh0ziE-b01-027"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u028",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      24925,
+      25701
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-028",
+      "0Dgk3uh0ziE-b01-029"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u029",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      25702,
+      26612
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-029",
+      "0Dgk3uh0ziE-b01-030"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u030",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      26613,
+      27433
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-030"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u031",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      27434,
+      28379
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-030",
+      "0Dgk3uh0ziE-b01-031",
+      "0Dgk3uh0ziE-b01-032"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u032",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      28380,
+      29329
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-032",
+      "0Dgk3uh0ziE-b01-033"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u033",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      29330,
+      30175
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-033"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "0Dgk3uh0ziE-u034",
+    "source_id": "0Dgk3uh0ziE",
+    "source_char_span": [
+      30176,
+      30577
+    ],
+    "result_unit_ids": [
+      "0Dgk3uh0ziE-b01-033",
+      "0Dgk3uh0ziE-b01-034"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "HuT0aI_mDqM-u001",
+    "source_id": "HuT0aI_mDqM",
+    "source_char_span": [
+      0,
+      679
+    ],
+    "result_unit_ids": [
+      "HuT0aI_mDqM-b01-001",
+      "HuT0aI_mDqM-b01-002",
+      "HuT0aI_mDqM-b01-003"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "HuT0aI_mDqM-u002",
+    "source_id": "HuT0aI_mDqM",
+    "source_char_span": [
+      680,
+      1633
+    ],
+    "result_unit_ids": [
+      "HuT0aI_mDqM-b01-003",
+      "HuT0aI_mDqM-b01-004"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "HuT0aI_mDqM-u003",
+    "source_id": "HuT0aI_mDqM",
+    "source_char_span": [
+      1634,
+      2572
+    ],
+    "result_unit_ids": [
+      "HuT0aI_mDqM-b01-004",
+      "HuT0aI_mDqM-b01-005"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "HuT0aI_mDqM-u004",
+    "source_id": "HuT0aI_mDqM",
+    "source_char_span": [
+      2573,
+      3462
+    ],
+    "result_unit_ids": [
+      "HuT0aI_mDqM-b01-005",
+      "HuT0aI_mDqM-b01-006"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "HuT0aI_mDqM-u005",
+    "source_id": "HuT0aI_mDqM",
+    "source_char_span": [
+      3463,
+      4060
+    ],
+    "result_unit_ids": [
+      "HuT0aI_mDqM-b01-006"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u001",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      0,
+      694
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-001"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": false,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u002",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      695,
+      1300
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-002"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": false,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u003",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      1301,
+      1979
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-003"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u004",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      1980,
+      2733
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-003",
+      "bVrm2pJw4SA-b01-004"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u005",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      2734,
+      3687
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-004",
+      "bVrm2pJw4SA-b01-005"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u006",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      3688,
+      4536
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-005",
+      "bVrm2pJw4SA-b01-006"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u007",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      4537,
+      5438
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-006",
+      "bVrm2pJw4SA-b01-007"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u008",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      5439,
+      6085
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-007",
+      "bVrm2pJw4SA-b01-008",
+      "bVrm2pJw4SA-b01-009"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u009",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      6086,
+      6920
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-009"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u010",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      6921,
+      7769
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-009",
+      "bVrm2pJw4SA-b01-010"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u011",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      7770,
+      8614
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-010",
+      "bVrm2pJw4SA-b01-011"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u012",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      8615,
+      9506
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-011",
+      "bVrm2pJw4SA-b01-012"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u013",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      9507,
+      10337
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-012",
+      "bVrm2pJw4SA-b01-013"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u014",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      10338,
+      11337
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-014"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u015",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      11338,
+      12237
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-014",
+      "bVrm2pJw4SA-b01-015"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u016",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      12238,
+      13081
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-015",
+      "bVrm2pJw4SA-b01-016",
+      "bVrm2pJw4SA-b01-017"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u017",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      13082,
+      13882
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-017",
+      "bVrm2pJw4SA-b01-018"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u018",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      13883,
+      14621
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-018"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u019",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      14622,
+      15332
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-019",
+      "bVrm2pJw4SA-b01-020"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u020",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      15333,
+      16258
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-020"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u021",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      16259,
+      16986
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-020",
+      "bVrm2pJw4SA-b01-021"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u022",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      16987,
+      17771
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-021",
+      "bVrm2pJw4SA-b01-022",
+      "bVrm2pJw4SA-b01-023"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u023",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      17772,
+      18512
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-023"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u024",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      18513,
+      19331
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-024"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u025",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      19332,
+      20189
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-024",
+      "bVrm2pJw4SA-b01-025",
+      "bVrm2pJw4SA-b01-026"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u026",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      20190,
+      21085
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-026",
+      "bVrm2pJw4SA-b01-027"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u027",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      21086,
+      22209
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-027",
+      "bVrm2pJw4SA-b01-028"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u028",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      22210,
+      23159
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-028"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u029",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      23160,
+      24068
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-028",
+      "bVrm2pJw4SA-b01-029"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u030",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      24069,
+      24713
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-030",
+      "bVrm2pJw4SA-b01-031"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u031",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      24714,
+      25718
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-031",
+      "bVrm2pJw4SA-b01-032"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u032",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      25719,
+      26636
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-032",
+      "bVrm2pJw4SA-b01-033"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u033",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      26637,
+      27570
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-033",
+      "bVrm2pJw4SA-b01-034"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u034",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      27571,
+      28540
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-034",
+      "bVrm2pJw4SA-b01-035"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u035",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      28541,
+      29529
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-035",
+      "bVrm2pJw4SA-b01-036"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u036",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      29530,
+      30595
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-036"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u037",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      30596,
+      31430
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-036",
+      "bVrm2pJw4SA-b01-037",
+      "bVrm2pJw4SA-b01-038"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u038",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      31431,
+      32265
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-038",
+      "bVrm2pJw4SA-b01-039"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "bVrm2pJw4SA-u039",
+    "source_id": "bVrm2pJw4SA",
+    "source_char_span": [
+      32266,
+      32487
+    ],
+    "result_unit_ids": [
+      "bVrm2pJw4SA-b01-039"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "lrV0mu1iZCI-u001",
+    "source_id": "lrV0mu1iZCI",
+    "source_char_span": [
+      0,
+      813
+    ],
+    "result_unit_ids": [
+      "lrV0mu1iZCI-b01-001",
+      "lrV0mu1iZCI-b01-002"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "lrV0mu1iZCI-u002",
+    "source_id": "lrV0mu1iZCI",
+    "source_char_span": [
+      814,
+      1554
+    ],
+    "result_unit_ids": [
+      "lrV0mu1iZCI-b01-002",
+      "lrV0mu1iZCI-b01-003"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "lrV0mu1iZCI-u003",
+    "source_id": "lrV0mu1iZCI",
+    "source_char_span": [
+      1555,
+      2485
+    ],
+    "result_unit_ids": [
+      "lrV0mu1iZCI-b01-003",
+      "lrV0mu1iZCI-b01-004"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "lrV0mu1iZCI-u004",
+    "source_id": "lrV0mu1iZCI",
+    "source_char_span": [
+      2486,
+      3348
+    ],
+    "result_unit_ids": [
+      "lrV0mu1iZCI-b01-004",
+      "lrV0mu1iZCI-b01-005"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "lrV0mu1iZCI-u005",
+    "source_id": "lrV0mu1iZCI",
+    "source_char_span": [
+      3349,
+      4127
+    ],
+    "result_unit_ids": [
+      "lrV0mu1iZCI-b01-005",
+      "lrV0mu1iZCI-b01-006"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "lrV0mu1iZCI-u006",
+    "source_id": "lrV0mu1iZCI",
+    "source_char_span": [
+      4128,
+      4255
+    ],
+    "result_unit_ids": [
+      "lrV0mu1iZCI-b01-006"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u001",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      0,
+      1076
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-001"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u002",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      1077,
+      1239
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-001",
+      "rKbC4guGhRY-b01-002"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u003",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      1240,
+      2027
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-002",
+      "rKbC4guGhRY-b01-003"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u004",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      2028,
+      3021
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-003",
+      "rKbC4guGhRY-b01-004"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u005",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      3022,
+      3937
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-004",
+      "rKbC4guGhRY-b01-005"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u006",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      3938,
+      4853
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-005",
+      "rKbC4guGhRY-b01-006"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u007",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      4854,
+      5782
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-006",
+      "rKbC4guGhRY-b01-007"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u008",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      5783,
+      6719
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-007",
+      "rKbC4guGhRY-b01-008"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u009",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      6720,
+      7604
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-008",
+      "rKbC4guGhRY-b01-009"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u010",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      7605,
+      8576
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-009",
+      "rKbC4guGhRY-b01-010"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u011",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      8577,
+      9325
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-010",
+      "rKbC4guGhRY-b01-011",
+      "rKbC4guGhRY-b01-012"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u012",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      9326,
+      10267
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-012",
+      "rKbC4guGhRY-b01-013"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u013",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      10268,
+      11077
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-013",
+      "rKbC4guGhRY-b01-014"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u014",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      11078,
+      11850
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-014",
+      "rKbC4guGhRY-b01-015"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u015",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      11851,
+      12766
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-015",
+      "rKbC4guGhRY-b01-016"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u016",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      12767,
+      13771
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-016",
+      "rKbC4guGhRY-b01-017"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u017",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      13772,
+      14622
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-017",
+      "rKbC4guGhRY-b01-018"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u018",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      14623,
+      15457
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-018"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u019",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      15458,
+      16344
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-018",
+      "rKbC4guGhRY-b01-019",
+      "rKbC4guGhRY-b01-020"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u020",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      16345,
+      17290
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-020",
+      "rKbC4guGhRY-b01-021"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u021",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      17291,
+      18000
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-021",
+      "rKbC4guGhRY-b01-022"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u022",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      18001,
+      18814
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-022",
+      "rKbC4guGhRY-b01-023"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u023",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      18815,
+      19672
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-023",
+      "rKbC4guGhRY-b01-024"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u024",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      19673,
+      20592
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-024",
+      "rKbC4guGhRY-b01-025"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u025",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      20593,
+      21395
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-025",
+      "rKbC4guGhRY-b01-026"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u026",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      21396,
+      22208
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-026",
+      "rKbC4guGhRY-b01-027"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u027",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      22209,
+      23262
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-027",
+      "rKbC4guGhRY-b01-028"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u028",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      23263,
+      24108
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-028",
+      "rKbC4guGhRY-b01-029"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u029",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      24109,
+      25051
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-029",
+      "rKbC4guGhRY-b01-030"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u030",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      25052,
+      25803
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-030",
+      "rKbC4guGhRY-b01-031"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u031",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      25804,
+      26740
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-031",
+      "rKbC4guGhRY-b01-032"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u032",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      26741,
+      27594
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-032",
+      "rKbC4guGhRY-b01-033"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u033",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      27595,
+      28632
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-033",
+      "rKbC4guGhRY-b01-034"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u034",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      28633,
+      29410
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-034",
+      "rKbC4guGhRY-b01-035"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u035",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      29411,
+      30295
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-035",
+      "rKbC4guGhRY-b01-036"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u036",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      30296,
+      31258
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-036",
+      "rKbC4guGhRY-b01-037",
+      "rKbC4guGhRY-b01-038"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u037",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      31259,
+      32200
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-038",
+      "rKbC4guGhRY-b01-039"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u038",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      32201,
+      32922
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-039",
+      "rKbC4guGhRY-b01-040"
+    ],
+    "split_across_units": true,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  },
+  {
+    "parent_candidate_id": "rKbC4guGhRY-u039",
+    "source_id": "rKbC4guGhRY",
+    "source_char_span": [
+      32923,
+      32973
+    ],
+    "result_unit_ids": [
+      "rKbC4guGhRY-b01-040"
+    ],
+    "split_across_units": false,
+    "joined_with_neighbor": true,
+    "crop_or_transfer": "Boundary fragments transferred to adjacent unit, never discarded",
+    "text_coverage_fraction": 1.0
+  }
+]

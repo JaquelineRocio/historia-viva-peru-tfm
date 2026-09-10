@@ -1,0 +1,89 @@
+{
+  "sources": [
+    {
+      "source_id": "N01",
+      "proposed_role": "V",
+      "institution": "TVPerú",
+      "title": "Reformas Borbónicas (14/03/2016)",
+      "url": "https://www.youtube.com/watch?v=KHcAIKD38sI",
+      "gap": "contexto_colonial_antecedentes",
+      "video_id": "KHcAIKD38sI",
+      "known_block": null
+    },
+    {
+      "source_id": "N02",
+      "proposed_role": "V",
+      "institution": "TVPerú",
+      "title": "Batalla de Ayacucho (14/12/2024)",
+      "url": "https://www.tvperu.gob.pe/videos/sucedio-en-el-peru/sucedio-en-el-peru-batalla-de-ayacucho-14122024-tvperu",
+      "gap": "campanias_conflictos_militares",
+      "video_id": null,
+      "known_block": "HTTP 403 from web reader in this task; no alternate retrieval of blocked page"
+    },
+    {
+      "source_id": "N03",
+      "proposed_role": "V",
+      "institution": "PUCP / Instituto Riva-Agüero",
+      "title": "Francisco de Zela",
+      "url": "https://videos.pucp.edu.pe/videos/ver/1e45d7298d0bb0ef1abfa440eb322b6c",
+      "gap": "crisis_ideas_emancipadoras;liderazgos_diplomacia_proyectos",
+      "video_id": null,
+      "known_block": null
+    },
+    {
+      "source_id": "N04",
+      "proposed_role": "V",
+      "institution": "PUCP / Argos",
+      "title": "Consolidación de la Independencia del Perú",
+      "url": "https://estudios-generales-letras.pucp.edu.pe/vuelve-a-ver-el-documental-consolidacion-de-la-independencia-del-peru/",
+      "gap": "campanias_conflictos_militares",
+      "video_id": null,
+      "known_block": null
+    },
+    {
+      "source_id": "N05",
+      "proposed_role": "T",
+      "institution": "IRTP / TVPerú",
+      "title": "La mujer peruana en la independencia",
+      "url": "https://www.irtpplay.gob.pe/episodios/sucedio-en-el-peru/la-mujer-peruana-en-la-independencia",
+      "gap": "participacion_social_regional",
+      "video_id": null,
+      "known_block": null
+    },
+    {
+      "source_id": "N06",
+      "proposed_role": "T",
+      "institution": "IEP",
+      "title": "La independencia y la cultura política peruana (1808-1821)",
+      "url": "https://iep.org.pe/actividades/presentacion-del-libro-la-independencia-y-la-cultura-politica-peruana-1808-1821-de-victor-peralta-ruiz/",
+      "gap": "crisis_ideas_emancipadoras",
+      "video_id": null,
+      "known_block": null
+    },
+    {
+      "source_id": "N07",
+      "proposed_role": "V",
+      "institution": "PUCP",
+      "title": "Simposio: La iglesia ante el desafío de la independencia del Perú",
+      "url": "https://educast.pucp.edu.pe/video/12047/simposio_la_iglesia_ante_el_desafio_de_la_independencia_del_peru",
+      "gap": "contexto_colonial_antecedentes;participacion_social_regional",
+      "video_id": null,
+      "known_block": null
+    },
+    {
+      "source_id": "N08",
+      "proposed_role": "T",
+      "institution": "PUCP",
+      "title": "De Cádiz a Aznapuquio: militares españoles, 1813-1821",
+      "url": "https://educast.pucp.edu.pe/video/2647/xxii_coloquio_internacional_de_estudiantes_de_historia_mesa_12_la_independencia_hispanoamericana_las_diversas_trayectorias_de_sus_personajes2_de_4",
+      "gap": "crisis_ideas_emancipadoras;campanias_conflictos_militares",
+      "video_id": null,
+      "known_block": null
+    }
+  ],
+  "max_candidates": 8,
+  "based_on_sha256": "244daae55dcfcc30169e2399de7a47232cc004ae6d6114cb2eae6c9e70214275",
+  "selection_basis": "V has zero colonial/military proposals and only one work; T has one colonial proposal and fewer than 20/class",
+  "roles_fixed_before_content": true,
+  "content_labels_not_inferred_from_topic": true
+}

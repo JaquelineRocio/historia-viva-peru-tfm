@@ -1,0 +1,3591 @@
+{
+  "items": [
+    {
+      "segment_id": "G01-u001",
+      "key": {
+        "text_sha256": "4320d7fb78b81cf91177f1431e33137809f2668444c20d3b7785b5a8f8a3279a",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "86c8ebbc758a25fc56b395d6f12025d71d4802ebf3c893ad9521aaa1e044c640",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-001.json",
+      "response_file_sha256": "aa4099828e159bb169e8427e88b1e58d1fd3c6890d5136ed904e7bade9745fe3"
+    },
+    {
+      "segment_id": "G01-u002",
+      "key": {
+        "text_sha256": "003e358bdf4894ca7cb41cc92bb6c91c0761cf8fccde6bfed6a8155309df9f1b",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "73af96978ad9b58aa07793de8c311d0d10cc8ad7f4c04102450919bdc8171e6b",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-001.json",
+      "response_file_sha256": "aa4099828e159bb169e8427e88b1e58d1fd3c6890d5136ed904e7bade9745fe3"
+    },
+    {
+      "segment_id": "G01-u003",
+      "key": {
+        "text_sha256": "3b20100f0f85276075664a61a3db9b267b227635c48ca4466adaa8a2cfd4d21c",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "833c978e892e225136228092c4a8e0119bdfaf9dd176dd229fca0e1008af7856",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-001.json",
+      "response_file_sha256": "aa4099828e159bb169e8427e88b1e58d1fd3c6890d5136ed904e7bade9745fe3"
+    },
+    {
+      "segment_id": "G01-u004",
+      "key": {
+        "text_sha256": "530d3a1552a84ed2de2401bcefb2b9549c167760d1b519e856bfd61181c69f60",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "115208b08ea3e91d308f179ca7bd031abe627ff19c9e24d2d648830e1a03a6ae",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-001.json",
+      "response_file_sha256": "aa4099828e159bb169e8427e88b1e58d1fd3c6890d5136ed904e7bade9745fe3"
+    },
+    {
+      "segment_id": "G01-u005",
+      "key": {
+        "text_sha256": "ae04542bb07e9bde4f87269350d15f353142e4cd023d2ae7c3b1c8f55d5966fe",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "5fd1cefecd787ae922ebe5bf1f982a54d3a623eb1f3880458bb33411cc45705f",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-001.json",
+      "response_file_sha256": "aa4099828e159bb169e8427e88b1e58d1fd3c6890d5136ed904e7bade9745fe3"
+    },
+    {
+      "segment_id": "G01-u006",
+      "key": {
+        "text_sha256": "ce37fadffcf7b87c1e912a014b70276e7bce879e0a65c0312aa66fca6a87f8d6",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "72916b34f7c3c2422ddcf2c4342aab9b6c3e8645593e51b834717a153eb1687c",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-001.json",
+      "response_file_sha256": "aa4099828e159bb169e8427e88b1e58d1fd3c6890d5136ed904e7bade9745fe3"
+    },
+    {
+      "segment_id": "G01-u007",
+      "key": {
+        "text_sha256": "79f0eac04ff50a0ace13959a4a84724e904c350fdd55b0d6e01ca75289c9e557",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "947deb7366abd454aa1a065121c6960d8139b227aceacb8a4595a9c36fa906a6",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-001.json",
+      "response_file_sha256": "aa4099828e159bb169e8427e88b1e58d1fd3c6890d5136ed904e7bade9745fe3"
+    },
+    {
+      "segment_id": "G01-u008",
+      "key": {
+        "text_sha256": "6af2684caf97ca62f28c17a9ec1b80fa094de13549d2af26a2b326b0b79b7df1",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "d607664af787bc61631c4dbc320bebe38e1dd0c37e24708b034df656173450f7",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-001.json",
+      "response_file_sha256": "aa4099828e159bb169e8427e88b1e58d1fd3c6890d5136ed904e7bade9745fe3"
+    },
+    {
+      "segment_id": "G01-u009",
+      "key": {
+        "text_sha256": "28c12fe4f976952051ed4688bdb762453eac504320ea29bb85fb0fef6801e557",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "3512c8aeb07f5973522de8c006e1ffec80a0cb46826c95dcdb4426427b50d734",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-001.json",
+      "response_file_sha256": "aa4099828e159bb169e8427e88b1e58d1fd3c6890d5136ed904e7bade9745fe3"
+    },
+    {
+      "segment_id": "G01-u010",
+      "key": {
+        "text_sha256": "f78becadb76bef83f810d68110108b3c9475ff277da9c0600fe0032306b78aa7",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "40294d8fd066ce5818cf724a9019726c05d19bfefcc0bf19bcedeb352083bf05",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-001.json",
+      "response_file_sha256": "aa4099828e159bb169e8427e88b1e58d1fd3c6890d5136ed904e7bade9745fe3"
+    },
+    {
+      "segment_id": "G01-u011",
+      "key": {
+        "text_sha256": "33dd9481ef3c328afea40fe8f6d249c2f22b033c1d90651cce0f1c86929ae9c4",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "999d7178712172e68637db9430d0e2c40b115e224620315c4721867190cae5ca",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-001.json",
+      "response_file_sha256": "aa4099828e159bb169e8427e88b1e58d1fd3c6890d5136ed904e7bade9745fe3"
+    },
+    {
+      "segment_id": "G01-u012",
+      "key": {
+        "text_sha256": "43a276f5460a1951c7bc697a97c65dd3330de163b351ef1c654f394ffe229d9e",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "152daeb4297d355f6fe1e3ad277a206fd11676c4c1771a1a8166347bf1defb9d",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-001.json",
+      "response_file_sha256": "aa4099828e159bb169e8427e88b1e58d1fd3c6890d5136ed904e7bade9745fe3"
+    },
+    {
+      "segment_id": "G01-u013",
+      "key": {
+        "text_sha256": "18ff39a1888a73df6c95af223e6756391ff928ab78411ce695122450f4769f85",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "e0bf013874f4e6bce15432b7dfa9ffeb9363791d0084826ac3e812edb434f8a5",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-001.json",
+      "response_file_sha256": "aa4099828e159bb169e8427e88b1e58d1fd3c6890d5136ed904e7bade9745fe3"
+    },
+    {
+      "segment_id": "G01-u014",
+      "key": {
+        "text_sha256": "24eb3b3905fa8154b847fa01e311ac9d5544a873ad272aaf2f269d8b5a3afadf",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "5afc144f245d20354ebede6b1c63ea48252f7e75cbcdb4f484ef03727c8af88d",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-001.json",
+      "response_file_sha256": "aa4099828e159bb169e8427e88b1e58d1fd3c6890d5136ed904e7bade9745fe3"
+    },
+    {
+      "segment_id": "G01-u015",
+      "key": {
+        "text_sha256": "f5e3a270547ede230c42d15df79b89816d3f7cdbb08d9322d3714893deebcc26",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "507c2a12220add376bc69893aebb93449a9b6560cecb9b93ca4444d673727270",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-001.json",
+      "response_file_sha256": "aa4099828e159bb169e8427e88b1e58d1fd3c6890d5136ed904e7bade9745fe3"
+    },
+    {
+      "segment_id": "G01-u016",
+      "key": {
+        "text_sha256": "1a00f457ccd4c4cda08b9f6c0cc6aa8ff59da354d188c02e2d2cff9d4a1924e6",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "e2e45f2d54871ced55fb37b00ab449f0cf4d2e5802b099896113224a89f0dd99",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-002.json",
+      "response_file_sha256": "e8cef0b5c83b01ec74dc89b8c507a258933b6d60dfafa1e07fc2de56377d0989"
+    },
+    {
+      "segment_id": "G01-u017",
+      "key": {
+        "text_sha256": "6a3db07d890e354905d9467305ab459c28783db5030d85ef53f7d52d989ace87",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "c87efdb807efe989b48419231369cdc04bf12b51e9d595819a78768125ca1904",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-002.json",
+      "response_file_sha256": "e8cef0b5c83b01ec74dc89b8c507a258933b6d60dfafa1e07fc2de56377d0989"
+    },
+    {
+      "segment_id": "G01-u018",
+      "key": {
+        "text_sha256": "ab9e2ff6ca991fc2cd8db08b3a68c8fb3d575b73a2fdd4ed6a341656845b22c9",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "81a99720296107b5d180602c3db0da0a76bbf40162ab5b94c1cb31361739a50b",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-002.json",
+      "response_file_sha256": "e8cef0b5c83b01ec74dc89b8c507a258933b6d60dfafa1e07fc2de56377d0989"
+    },
+    {
+      "segment_id": "G01-u019",
+      "key": {
+        "text_sha256": "2cab50150c6aa320470754964dccd6778d1818e29556a5623fcc6d4f0cf4f379",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "3c071e5820d411796249318f17c5654b713c997a3e3ef7a3e7ed9cda4179ef79",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-002.json",
+      "response_file_sha256": "e8cef0b5c83b01ec74dc89b8c507a258933b6d60dfafa1e07fc2de56377d0989"
+    },
+    {
+      "segment_id": "G01-u020",
+      "key": {
+        "text_sha256": "1e0f370ff90f1f892cdb111a565e719b2c486a31e3a5d05276c6276e41aaa365",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "57e24834c5b3a81366cf21c45cf6a608f9dff980d7520a87ea6b853255b7bc06",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-002.json",
+      "response_file_sha256": "e8cef0b5c83b01ec74dc89b8c507a258933b6d60dfafa1e07fc2de56377d0989"
+    },
+    {
+      "segment_id": "G01-u021",
+      "key": {
+        "text_sha256": "1fb507691d076277dab91f8040a16b7635d8a76a0cd37a48e7bf3b8077d9472e",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "1263b93a08e04766fc90be7fff1a684621e7ff44d2e203c8d21e19016aaff6ae",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-002.json",
+      "response_file_sha256": "e8cef0b5c83b01ec74dc89b8c507a258933b6d60dfafa1e07fc2de56377d0989"
+    },
+    {
+      "segment_id": "G01-u022",
+      "key": {
+        "text_sha256": "778c7cf91cb27557b666cb03cdf935a2908dab2608f4d380ae8f653ad2b3b687",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "8e21acf7e7cf0e2a16229a5b67d3066a83ccf36ec0d8afb1783e8435d72d6ac4",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-002.json",
+      "response_file_sha256": "e8cef0b5c83b01ec74dc89b8c507a258933b6d60dfafa1e07fc2de56377d0989"
+    },
+    {
+      "segment_id": "G01-u023",
+      "key": {
+        "text_sha256": "00623835c652764e8eae87f2ab3aaad749fe5bb3119320d37c4f7e7db2c6da9a",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "219d5636da4cb9724d783d5d6c8508c7e4019869d7efe586c7538bd85a262024",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-002.json",
+      "response_file_sha256": "e8cef0b5c83b01ec74dc89b8c507a258933b6d60dfafa1e07fc2de56377d0989"
+    },
+    {
+      "segment_id": "G01-u024",
+      "key": {
+        "text_sha256": "4b854ae5268116ca899d46b788708006c4e200f32efad621ecb2b79272545365",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "6420c644cae8c2b7b3f12677110e69fea9752ca47083c029828bb185fbececc8",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-002.json",
+      "response_file_sha256": "e8cef0b5c83b01ec74dc89b8c507a258933b6d60dfafa1e07fc2de56377d0989"
+    },
+    {
+      "segment_id": "G01-u025",
+      "key": {
+        "text_sha256": "a188790f496768dfb981fc09ad223a7a6d1945e7ec91e0390981722fd3964fe7",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "1025594ca3aa57d0e8aceaeb3f4b6f77ed87ecc6eaac947f1ef6a7d05a957ffd",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-002.json",
+      "response_file_sha256": "e8cef0b5c83b01ec74dc89b8c507a258933b6d60dfafa1e07fc2de56377d0989"
+    },
+    {
+      "segment_id": "G01-u026",
+      "key": {
+        "text_sha256": "ce8c4ab5db8be40326e5fcd178e943c445977076cc86cceaf313092fde6af3e3",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "dad2e512f416c9d8b8abed2e225119ab60854918a0cb8347a401590d8c5a8134",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-002.json",
+      "response_file_sha256": "e8cef0b5c83b01ec74dc89b8c507a258933b6d60dfafa1e07fc2de56377d0989"
+    },
+    {
+      "segment_id": "G01-u027",
+      "key": {
+        "text_sha256": "8b889b5ea1c11eb1dbb2f6d3da2e041d6c47cacb50b950bf58b9408ae3b40bf7",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "d1ec13b90229138477b83201bdb155b6d5cfb014afb12279cee2028acf71c819",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-002.json",
+      "response_file_sha256": "e8cef0b5c83b01ec74dc89b8c507a258933b6d60dfafa1e07fc2de56377d0989"
+    },
+    {
+      "segment_id": "G01-u028",
+      "key": {
+        "text_sha256": "e16eebc18ea8a2cf2d9ae1c67f34d2100762b66267c878fcf3b010be9a958c9d",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "bcfc4998709f4239ccc0934b04458afe08210de4ad9b89f76d47cd23cf739f19",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-002.json",
+      "response_file_sha256": "e8cef0b5c83b01ec74dc89b8c507a258933b6d60dfafa1e07fc2de56377d0989"
+    },
+    {
+      "segment_id": "G01-u029",
+      "key": {
+        "text_sha256": "fe14d70f8f5d894d29d245058415eb6830d4f54882a374ce14e773a33c70578e",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "581b57d2c88f81c2b24fbed0269968ef4a77b5db41245f42d98e392b4ddd7e16",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-002.json",
+      "response_file_sha256": "e8cef0b5c83b01ec74dc89b8c507a258933b6d60dfafa1e07fc2de56377d0989"
+    },
+    {
+      "segment_id": "G01-u030",
+      "key": {
+        "text_sha256": "e9abc28c365427d39629d6679affe4effa355a8a3ebc2189952c41d03530e758",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "1019e6259458c605d252fcdffb951314ec673f948f7bfe9462d6e3684b75882d",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-002.json",
+      "response_file_sha256": "e8cef0b5c83b01ec74dc89b8c507a258933b6d60dfafa1e07fc2de56377d0989"
+    },
+    {
+      "segment_id": "G01-u031",
+      "key": {
+        "text_sha256": "7f4c5c12c454e13b43c624a4379064155b9aa8b842416a713dfa17ad14265c62",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "17f9d760b977cb899b50f2e3c4598f2a382f8cf8136d914950fdeea3c40fe7be",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-003.json",
+      "response_file_sha256": "b97b45558aa65b3b3f98339458748b57595fabf71a43c5b35efec863de962493"
+    },
+    {
+      "segment_id": "G01-u032",
+      "key": {
+        "text_sha256": "8c19882da47bd608090ca3e2f847dd9f8a8cc9fa6b067f7d3fa21f8a8940afcb",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "c1a907e51ce24da4c05b45676f48f87dc10884bcc7dbd3de4f240b7eb9be9c18",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-003.json",
+      "response_file_sha256": "b97b45558aa65b3b3f98339458748b57595fabf71a43c5b35efec863de962493"
+    },
+    {
+      "segment_id": "G01-u033",
+      "key": {
+        "text_sha256": "992bb90c21c33febefcd2a6a0fc433df784574a83287a00d2c395a7c813e4ec6",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "27a73c7cecd3d5f4daf77cb672588699c50887b9d8d90b55365c4201b8272fb3",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-003.json",
+      "response_file_sha256": "b97b45558aa65b3b3f98339458748b57595fabf71a43c5b35efec863de962493"
+    },
+    {
+      "segment_id": "G01-u034",
+      "key": {
+        "text_sha256": "dc3b0a02d59cf73a4209aa7515de1d6444e59171578b10f80f6a8dbfe5c9dbf0",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "cba868018f387a8a45d4700ebb234b0335112425ac77a332dbc9b8c3b8913371",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-003.json",
+      "response_file_sha256": "b97b45558aa65b3b3f98339458748b57595fabf71a43c5b35efec863de962493"
+    },
+    {
+      "segment_id": "G01-u035",
+      "key": {
+        "text_sha256": "1a88c39099817ccc8fa3ba41f8358affb3297f97be6d5b78f1cc88b8dec35b1b",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "4b4621cc4175ded79e60c0b9ada82240e9c805bc157e1ca9e8e5855f229eccf5",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-003.json",
+      "response_file_sha256": "b97b45558aa65b3b3f98339458748b57595fabf71a43c5b35efec863de962493"
+    },
+    {
+      "segment_id": "G01-u036",
+      "key": {
+        "text_sha256": "1a456df3429b8b930eb77aedbd48e112ea7ecf8eac71451fef0917d66bdcbd3b",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "e9615a734e52573f3eae4cacb2ae550ad72e7cb538222fd2ff69ecbdf780cde7",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-003.json",
+      "response_file_sha256": "b97b45558aa65b3b3f98339458748b57595fabf71a43c5b35efec863de962493"
+    },
+    {
+      "segment_id": "G01-u037",
+      "key": {
+        "text_sha256": "cbcee06bf5af546bd568548017be1ee6f7c731bcdefb699f03ea0da3ee86716a",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "b4a5462ce5134aecc8b7add34956ec883b7dbeeabdeb422b0ae9f77427ae9482",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-003.json",
+      "response_file_sha256": "b97b45558aa65b3b3f98339458748b57595fabf71a43c5b35efec863de962493"
+    },
+    {
+      "segment_id": "G01-u038",
+      "key": {
+        "text_sha256": "9f36fe83d830c84023a28d3d178dc36daca5172de2113964ee6ccab6215f7d1b",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "0c7018b28804edddec2cbb2c327cd52f6c48015651d26a65119110ce0635985f",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-003.json",
+      "response_file_sha256": "b97b45558aa65b3b3f98339458748b57595fabf71a43c5b35efec863de962493"
+    },
+    {
+      "segment_id": "G01-u039",
+      "key": {
+        "text_sha256": "594758664beb7856f0fbf1b92cb2cd048cfae9afc2568095da9023dd89df8ea5",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "d7f02af2d890d8fdf41b31bbe1bab07415a985fe52c75723dcbd3c5c6378b724",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-003.json",
+      "response_file_sha256": "b97b45558aa65b3b3f98339458748b57595fabf71a43c5b35efec863de962493"
+    },
+    {
+      "segment_id": "G01-u040",
+      "key": {
+        "text_sha256": "e95cc37a6082f1192fa83f6cfb15cc6b810c10423cad5b59ce160316dc356f52",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "d46ca5310725dedd2a10b21bbe355a8e774be4e676c9ecd5c9e99fb0987aa476",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-003.json",
+      "response_file_sha256": "b97b45558aa65b3b3f98339458748b57595fabf71a43c5b35efec863de962493"
+    },
+    {
+      "segment_id": "G01-u041",
+      "key": {
+        "text_sha256": "776ef5f8c89f98801b950beb5fce68ac77726761f1c9dbb5046cc34f2acb2f8d",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "e08b5206468e623fe9160a359544d7356ccfefe63819796bbe9db5185db391bd",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-003.json",
+      "response_file_sha256": "b97b45558aa65b3b3f98339458748b57595fabf71a43c5b35efec863de962493"
+    },
+    {
+      "segment_id": "G01-u042",
+      "key": {
+        "text_sha256": "0c1d5088917787fc79726b7eda37b9c6dc57e46e9ba71fe91c006bb130578102",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "2fadbc1a46dab9ee2b9c49bd75742c61e53e36772d8bcbbdc4d53a3c7002dade",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-003.json",
+      "response_file_sha256": "b97b45558aa65b3b3f98339458748b57595fabf71a43c5b35efec863de962493"
+    },
+    {
+      "segment_id": "G01-u043",
+      "key": {
+        "text_sha256": "96afc89add7e17642e5204a1d53c61b62b307eea05ca6dbbf966aa0c2821bf1a",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "1883d0d93ac3051b6387f1bf4d367f214bd97c3f00b95388bc3bab100dd32a20",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-003.json",
+      "response_file_sha256": "b97b45558aa65b3b3f98339458748b57595fabf71a43c5b35efec863de962493"
+    },
+    {
+      "segment_id": "G01-u044",
+      "key": {
+        "text_sha256": "9fc4d17b1be6832dbd6110a5579992087f03d6cea0f1e9c5ac16bcdf67bb23a1",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "38ea3f487602015b04473f62ac39b79c12fb17cdb6746fb14cfc43ece27d7900",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-003.json",
+      "response_file_sha256": "b97b45558aa65b3b3f98339458748b57595fabf71a43c5b35efec863de962493"
+    },
+    {
+      "segment_id": "G01-u045",
+      "key": {
+        "text_sha256": "92be75586ebd21fff0de6b7638e380e5d36296f30893c9d9394bf79f12970489",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "9538b46102e8760b6511741ed98a4dbbdc615f922e567ff6120e54bb327a347d",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-003.json",
+      "response_file_sha256": "b97b45558aa65b3b3f98339458748b57595fabf71a43c5b35efec863de962493"
+    },
+    {
+      "segment_id": "G01-u046",
+      "key": {
+        "text_sha256": "632602b8f9e6756fdbab84bd3c20088d3be629444006e078c205c1fcda75e34c",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "2b97b51f03eae48e4d7b18b5cf0826fc7d3628a063f3da4f11d7b69dc92ff8be",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-004.json",
+      "response_file_sha256": "c5ff506c51df830e347e09bf1d80d25d10d5e4c46273a76a3891afc3e7499314"
+    },
+    {
+      "segment_id": "G01-u047",
+      "key": {
+        "text_sha256": "b64451eb4a54596527cf1ff475169d9b6fa76966c598bc52753e3af117e1ec40",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "e59cbb35b43b52551d256d9d8376d25d3a7fbc092f38acd51f0e289568fbf171",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-004.json",
+      "response_file_sha256": "c5ff506c51df830e347e09bf1d80d25d10d5e4c46273a76a3891afc3e7499314"
+    },
+    {
+      "segment_id": "G01-u048",
+      "key": {
+        "text_sha256": "8971182a3999f5b2cbb340f16f62ec8553eed5cabb52b7ced26695eea4ca1493",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "ef30f73133e8c6ea01329fb40de49482783e9f8f2822631f7a922c3e1b3a6ade",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-004.json",
+      "response_file_sha256": "c5ff506c51df830e347e09bf1d80d25d10d5e4c46273a76a3891afc3e7499314"
+    },
+    {
+      "segment_id": "G01-u049",
+      "key": {
+        "text_sha256": "2a30a0fba47fb5fa828bc41a032db32034fd68f495731de2911efa23db9cbcc2",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "2938662ae37135802f0661462e4258ec976ca6aae4908fc7a8399aa5de58ee74",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-004.json",
+      "response_file_sha256": "c5ff506c51df830e347e09bf1d80d25d10d5e4c46273a76a3891afc3e7499314"
+    },
+    {
+      "segment_id": "G01-u050",
+      "key": {
+        "text_sha256": "670b5d01bb8e373b7dd571b3168ca124e747edbb884d34b4ce5117ca773e823f",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "0455a7be4f9487567094cada286667888302a4e93456a7bf299a61d23335aef2",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-004.json",
+      "response_file_sha256": "c5ff506c51df830e347e09bf1d80d25d10d5e4c46273a76a3891afc3e7499314"
+    },
+    {
+      "segment_id": "G01-u051",
+      "key": {
+        "text_sha256": "2030f7cba8af79e87a979a17dc8a496f1db7b2096de901a64bab0c3ada2585f1",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "82d85aacd1bc9a97386c1c1f45696a82c71e68dc37564e0a80405bbc77427717",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-004.json",
+      "response_file_sha256": "c5ff506c51df830e347e09bf1d80d25d10d5e4c46273a76a3891afc3e7499314"
+    },
+    {
+      "segment_id": "G01-u052",
+      "key": {
+        "text_sha256": "3774cce65fbf2d6619d15f7a3dea02619adee9d5621a7002fb7ef153e947ac93",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "d7da03524d4c202be38b1eb9477b40f6c78dc9f598228166c753f4f3764ed410",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-004.json",
+      "response_file_sha256": "c5ff506c51df830e347e09bf1d80d25d10d5e4c46273a76a3891afc3e7499314"
+    },
+    {
+      "segment_id": "G01-u053",
+      "key": {
+        "text_sha256": "e940384ad1b889280ad1a730a71fe326dda4bb9468596bb5444d6ab9533e60f6",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "a35aa4b238328a0e13ae3736ebfddac23278162ea7bb29ee5bdd4979f925be97",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-004.json",
+      "response_file_sha256": "c5ff506c51df830e347e09bf1d80d25d10d5e4c46273a76a3891afc3e7499314"
+    },
+    {
+      "segment_id": "G01-u054",
+      "key": {
+        "text_sha256": "49187c320c456612d62816c82bbe8f844a6a20d205367c15d3ed98b631b920f2",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "857a679bda05a3ac816bf869b6ed254136fea159ade93896c7beb41fa0574e69",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-004.json",
+      "response_file_sha256": "c5ff506c51df830e347e09bf1d80d25d10d5e4c46273a76a3891afc3e7499314"
+    },
+    {
+      "segment_id": "G01-u055",
+      "key": {
+        "text_sha256": "62bc404a96eeeb514f1795ba556e2855c8893a983e7259f6c416a2329a360a15",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "9acb5ca7a0a3561d028d3b14d4ca21257ae76602695f7d94a58c06d9889f51fb",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-004.json",
+      "response_file_sha256": "c5ff506c51df830e347e09bf1d80d25d10d5e4c46273a76a3891afc3e7499314"
+    },
+    {
+      "segment_id": "G01-u056",
+      "key": {
+        "text_sha256": "dd9934c164817f8af0b245f3aaaf7422aae81aa89f6f634ef9cb499c3b2a8b5e",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "2992a74a0695fc098a38eebda759893bd39758c4d133f08350523b3d3667a106",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-004.json",
+      "response_file_sha256": "c5ff506c51df830e347e09bf1d80d25d10d5e4c46273a76a3891afc3e7499314"
+    },
+    {
+      "segment_id": "G01-u057",
+      "key": {
+        "text_sha256": "3afa378681487c2ae041a6957c31a5bfc1813360bed6f6e6bbf6b876d14f45ef",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "ff96e543a0509b4044778e2e5321a6cbd79f2b64941690b49a31eb28d76eb63e",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-004.json",
+      "response_file_sha256": "c5ff506c51df830e347e09bf1d80d25d10d5e4c46273a76a3891afc3e7499314"
+    },
+    {
+      "segment_id": "G01-u058",
+      "key": {
+        "text_sha256": "ee2965933001ed119f3438422cafd67915818790b786c5616b91be396a4501dc",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "92eba92cb6d017d73e19415cd3c64b3b8d5f3e4b468f4c9258d8d12bc01a416e",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-004.json",
+      "response_file_sha256": "c5ff506c51df830e347e09bf1d80d25d10d5e4c46273a76a3891afc3e7499314"
+    },
+    {
+      "segment_id": "G01-u059",
+      "key": {
+        "text_sha256": "633b3212451a6959d9e22b8010bbb4bef3dda7b4329f4f02990fbe225165bad8",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "ed2579aabd2fb9a3d92d181b2c4a98271b8518fac56e3d68c59617d853775913",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-004.json",
+      "response_file_sha256": "c5ff506c51df830e347e09bf1d80d25d10d5e4c46273a76a3891afc3e7499314"
+    },
+    {
+      "segment_id": "G01-u060",
+      "key": {
+        "text_sha256": "932f800d3acb50cd815884fd0b7248aa3842332dfbc64efe0ef3eabc9c5e9281",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "39af24a306dceaf23e137878eb50d4f4f2d3c7ed54317b51684242bf0106c8c2",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-004.json",
+      "response_file_sha256": "c5ff506c51df830e347e09bf1d80d25d10d5e4c46273a76a3891afc3e7499314"
+    },
+    {
+      "segment_id": "G01-u061",
+      "key": {
+        "text_sha256": "92c9e1f079ab27850f1be91c673b054dcf16b1fca68af2002187b5816d729364",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "5355fac66164f858cd38d2a4d8fbdec1e3d98ce7209818b2539ebc0b3770ea40",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-005.json",
+      "response_file_sha256": "8ce96aa8b080b975200aa53bb725ee58dfe2aea220349a49669d43ab9d94398e"
+    },
+    {
+      "segment_id": "G01-u062",
+      "key": {
+        "text_sha256": "5e5a5429ea240c8bf760319cbc1b700fb4fc3a78481604c4ffa90180b5c55b75",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "b27f579b61ac04d8c64ad47b44f106c9412ad1474fd1bef14744a2bc317b2a60",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-005.json",
+      "response_file_sha256": "8ce96aa8b080b975200aa53bb725ee58dfe2aea220349a49669d43ab9d94398e"
+    },
+    {
+      "segment_id": "G01-u063",
+      "key": {
+        "text_sha256": "392bfff777baf61e6444cc5c4ab186a583c9551fbdaaf6025e1c547b77075888",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "2b4a22923d6ac277b97698cca4bd23eb75b26c15cfaf8e440416d815e981af7e",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-005.json",
+      "response_file_sha256": "8ce96aa8b080b975200aa53bb725ee58dfe2aea220349a49669d43ab9d94398e"
+    },
+    {
+      "segment_id": "G01-u064",
+      "key": {
+        "text_sha256": "8a0743c85ad99044b8d7cc175b4d66e2ffc92a9da0e9e98e4e59661a198f617c",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "4dba78292f3c722182e136f061fbc3dda55135c8f0ec25384619bb3196f7354a",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-005.json",
+      "response_file_sha256": "8ce96aa8b080b975200aa53bb725ee58dfe2aea220349a49669d43ab9d94398e"
+    },
+    {
+      "segment_id": "G01-u065",
+      "key": {
+        "text_sha256": "96b74066f6d48230e0af4e4c1ab388f832f0ca46a42ef8d378a8bc56babeba01",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "7b9cddc94a5478094bb7c50fcc769b5eb373a7b4ab50d254ec27269da85761af",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-005.json",
+      "response_file_sha256": "8ce96aa8b080b975200aa53bb725ee58dfe2aea220349a49669d43ab9d94398e"
+    },
+    {
+      "segment_id": "G01-u066",
+      "key": {
+        "text_sha256": "ac34947a82e79c0f347963400b46e1ddbe079d1261b5824f8a4a35c5c06bd3bc",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "7efac61178ff3db56b4a6dc87b9f2b2db48b7e57256c192fc3fb060dc77f5143",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-005.json",
+      "response_file_sha256": "8ce96aa8b080b975200aa53bb725ee58dfe2aea220349a49669d43ab9d94398e"
+    },
+    {
+      "segment_id": "G01-u067",
+      "key": {
+        "text_sha256": "05cf2946f037fde46ce749e390d1f6632a713ae0b98232cb5da17908ef967e7a",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "f5f9b9249ac01a3b13c4f71d51931b67c795d5d1c686f696cba0cc7cee1954db",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-005.json",
+      "response_file_sha256": "8ce96aa8b080b975200aa53bb725ee58dfe2aea220349a49669d43ab9d94398e"
+    },
+    {
+      "segment_id": "G02-u001",
+      "key": {
+        "text_sha256": "596d230186576ca3d47753d29e3efdc034d517e7347831c1d93a82e4f67d4c40",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "771f8ac923253d7bcd6abccac6c477e0f6fd0ced5a36a3fe6ce8f1bc1981ebc3",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-005.json",
+      "response_file_sha256": "8ce96aa8b080b975200aa53bb725ee58dfe2aea220349a49669d43ab9d94398e"
+    },
+    {
+      "segment_id": "G02-u002",
+      "key": {
+        "text_sha256": "f9c3984ba9065afec9fb1a120b41be8208510e627775693b4a845b9c101938f4",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "8838c19eb23df50c0f4643c75a03fecf04e18a5aaf73d78910b4f6061af57db0",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-005.json",
+      "response_file_sha256": "8ce96aa8b080b975200aa53bb725ee58dfe2aea220349a49669d43ab9d94398e"
+    },
+    {
+      "segment_id": "G02-u003",
+      "key": {
+        "text_sha256": "73c60dd6f43eab7fbbba413d6c97d6f344011efcf337a3cfbbe278c384cd2735",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "136b8b6b73d293ec78d15c0f4de0a66a2e1052b9e88734ca0d73533ecc939266",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-005.json",
+      "response_file_sha256": "8ce96aa8b080b975200aa53bb725ee58dfe2aea220349a49669d43ab9d94398e"
+    },
+    {
+      "segment_id": "G02-u004",
+      "key": {
+        "text_sha256": "21be52f2b26387d4b6cfc935337b039ac788a020b217ee2111caae9ccc62850d",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "4c80cf81e1008a5aa68695bd648bae17d6c4aa25c692bed172d37aa9ff0fb165",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-005.json",
+      "response_file_sha256": "8ce96aa8b080b975200aa53bb725ee58dfe2aea220349a49669d43ab9d94398e"
+    },
+    {
+      "segment_id": "G02-u005",
+      "key": {
+        "text_sha256": "7549d68df0bfdd47d5b3b8b18ea50befd66e94ff621500cee6f8aa80cec02b45",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "8c2fb6a92058b3b47ad4839c7b1c936874a049dd3e045503569f325cdf1d7163",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-005.json",
+      "response_file_sha256": "8ce96aa8b080b975200aa53bb725ee58dfe2aea220349a49669d43ab9d94398e"
+    },
+    {
+      "segment_id": "G02-u006",
+      "key": {
+        "text_sha256": "0937b65321ce6a04b03a5cc2d7cf745ff2d3650584bd4c99de97db92acfd89ce",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "ec4f4f5ce63ff4ef235c8e801dd2fcb9e82e895536ce267953b3394f703d547e",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-005.json",
+      "response_file_sha256": "8ce96aa8b080b975200aa53bb725ee58dfe2aea220349a49669d43ab9d94398e"
+    },
+    {
+      "segment_id": "G02-u007",
+      "key": {
+        "text_sha256": "61a0757ccb9612be902b9f80c6f632d51e79e55e0547281b9e148569bcc7725c",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "b1ba7deae2263d79043765b60d791e400f8b184e2dee69d0ee4a7de2603236b7",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-005.json",
+      "response_file_sha256": "8ce96aa8b080b975200aa53bb725ee58dfe2aea220349a49669d43ab9d94398e"
+    },
+    {
+      "segment_id": "G02-u008",
+      "key": {
+        "text_sha256": "1024e19d54edc0156f5178a01ee051c56b21f04674ce9ced089ec555d499c61d",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "0e2e95b3cace608acacb7e47561bf5d8f3db591177bb855201e36b80ea329bd6",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-005.json",
+      "response_file_sha256": "8ce96aa8b080b975200aa53bb725ee58dfe2aea220349a49669d43ab9d94398e"
+    },
+    {
+      "segment_id": "G02-u009",
+      "key": {
+        "text_sha256": "9ee80f6fbd2d3c46dfeff960963b6ba9a4e296247a4045a0481ec59c7deee7b7",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "39a9f305a39b1957fcc0ee1f863417daaa93523243b2cc3a9d1701be56a4b94c",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-006.json",
+      "response_file_sha256": "4c5c4272b1fd56ef985358bfff5a0aa72f0e15419d9f290cdf0646405cf0eec5"
+    },
+    {
+      "segment_id": "G02-u010",
+      "key": {
+        "text_sha256": "b3d1ca786f414d7fda14a67cf5af5553ef6f48347ad8e08c545d21f7a1da8a7d",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "2e9706ed641079b16427519119caccbf091a4cea114a416b4607f8c1c0aca08c",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-006.json",
+      "response_file_sha256": "4c5c4272b1fd56ef985358bfff5a0aa72f0e15419d9f290cdf0646405cf0eec5"
+    },
+    {
+      "segment_id": "G02-u011",
+      "key": {
+        "text_sha256": "4fecc7e86ec0d90d1dd83c54a28bc1018bc56191f5593e699c070755d6279538",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "6f80d4851b9ef03dd89af888ebe943f28b575d695821888602cf84f893ca1bc0",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-006.json",
+      "response_file_sha256": "4c5c4272b1fd56ef985358bfff5a0aa72f0e15419d9f290cdf0646405cf0eec5"
+    },
+    {
+      "segment_id": "G02-u012",
+      "key": {
+        "text_sha256": "f702935a5eb3e666735886111f36865f9287ba029960717fb6e05568a987535f",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "813ba88d1cd822037804b37f5b1540d46e5467cb5217d8147d8bb32bce408fc2",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-006.json",
+      "response_file_sha256": "4c5c4272b1fd56ef985358bfff5a0aa72f0e15419d9f290cdf0646405cf0eec5"
+    },
+    {
+      "segment_id": "G02-u013",
+      "key": {
+        "text_sha256": "72ccaf44b0904c0176f2864bf177fb6f9d76c58467105d853db24d69ab98de7d",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "13fb92ba44ee71c772422a8fc6dcd6c73130f18f743c0431ba4059593c37ba5d",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-006.json",
+      "response_file_sha256": "4c5c4272b1fd56ef985358bfff5a0aa72f0e15419d9f290cdf0646405cf0eec5"
+    },
+    {
+      "segment_id": "G02-u014",
+      "key": {
+        "text_sha256": "29200dd5f5ec1ce489d3d0bf8e5c8c4525bf70ffbfd565fed9ecbff75d4e8054",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "b3c94b7dc283b65541445ad3e96dce6941c58389e0eb2e31b72a29fe178afc18",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-006.json",
+      "response_file_sha256": "4c5c4272b1fd56ef985358bfff5a0aa72f0e15419d9f290cdf0646405cf0eec5"
+    },
+    {
+      "segment_id": "G02-u015",
+      "key": {
+        "text_sha256": "66fabd5dc05ce67b9b5f0ea5678379c6b1af9acea38cd6b2eaeee4cb300e505e",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "818b1b8b70a5c6fba5bca76008e76102df74b032e797399757f3df76448677a4",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-006.json",
+      "response_file_sha256": "4c5c4272b1fd56ef985358bfff5a0aa72f0e15419d9f290cdf0646405cf0eec5"
+    },
+    {
+      "segment_id": "G02-u016",
+      "key": {
+        "text_sha256": "d4bacf97acd9010afb35a2295b4dc4ea7713049d49c541fb4f1e0a1961a5c138",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "f97ba8f0279fba6a641684ac0834e766fe439b45e7f74fb81bf2d132d0faaca0",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-006.json",
+      "response_file_sha256": "4c5c4272b1fd56ef985358bfff5a0aa72f0e15419d9f290cdf0646405cf0eec5"
+    },
+    {
+      "segment_id": "G02-u017",
+      "key": {
+        "text_sha256": "c60b89bc4df6268c3cdd60a89430af205e3c6aa12a91fcd717071f5eeb0e4118",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "15de9f6151b3f47a42ae0159e05e077cd8885918daf0f3a770104bb942c3accc",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-006.json",
+      "response_file_sha256": "4c5c4272b1fd56ef985358bfff5a0aa72f0e15419d9f290cdf0646405cf0eec5"
+    },
+    {
+      "segment_id": "G02-u018",
+      "key": {
+        "text_sha256": "531c55086b68e1353be2962a582eb119a8c98c82ea9e8c4f50aca02dc1eee721",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "16379f61cdec140a33b319b2ab7bf6da4241acf857d328dd19786a6ff700741e",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-006.json",
+      "response_file_sha256": "4c5c4272b1fd56ef985358bfff5a0aa72f0e15419d9f290cdf0646405cf0eec5"
+    },
+    {
+      "segment_id": "G02-u019",
+      "key": {
+        "text_sha256": "3bf120a2a99a7a281641a7806af59778eef8d510bab475492730749a11392911",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "095c5e935fc4723b7b22585c4cf1cf3888488d430c53ec054752936164111d0d",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-006.json",
+      "response_file_sha256": "4c5c4272b1fd56ef985358bfff5a0aa72f0e15419d9f290cdf0646405cf0eec5"
+    },
+    {
+      "segment_id": "G02-u020",
+      "key": {
+        "text_sha256": "6c3d7400939b4d95ab9de6690b31baf577fc016c159232f81a6bcc6fa1d62a94",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "9cd30de5e966ecb483888ec10ea4ef39158346709d26ebd0b43a881ef7a8b5de",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-006.json",
+      "response_file_sha256": "4c5c4272b1fd56ef985358bfff5a0aa72f0e15419d9f290cdf0646405cf0eec5"
+    },
+    {
+      "segment_id": "G02-u021",
+      "key": {
+        "text_sha256": "7fb77f89d8b339278be93b078360be80592caa8eb18de394c343094464b62fe0",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "c1b85f10ffa58ef34f558ae742554cbd266c1f94429f3f9ecf2787393f6f0242",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-006.json",
+      "response_file_sha256": "4c5c4272b1fd56ef985358bfff5a0aa72f0e15419d9f290cdf0646405cf0eec5"
+    },
+    {
+      "segment_id": "G02-u022",
+      "key": {
+        "text_sha256": "19442c8524830fa2982947e6071f36eaacf9c4834df46cff6f3f3b8f0c2ff6eb",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "99cfa9710978575c146447007b2ebdf9aa6d6e577228d35f1e8a0174b2427a43",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-006.json",
+      "response_file_sha256": "4c5c4272b1fd56ef985358bfff5a0aa72f0e15419d9f290cdf0646405cf0eec5"
+    },
+    {
+      "segment_id": "G02-u023",
+      "key": {
+        "text_sha256": "520a3e84f943f8c108fcc5a7cf3e702104f17c790c73bb959a433de22c03fe8e",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "9beae059791ead446da775fe8377bec65918af8cee7ea511e51977ce94d2b32a",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-006.json",
+      "response_file_sha256": "4c5c4272b1fd56ef985358bfff5a0aa72f0e15419d9f290cdf0646405cf0eec5"
+    },
+    {
+      "segment_id": "G02-u024",
+      "key": {
+        "text_sha256": "93d17318f48d833f719e8b5b9a3d4d4725a4fb49794a7ad2921826e78198b9ef",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "f725f8495568e0fc1e92507d311a9ac84c80312b63efaceca4d1c9d06c70cea9",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-007.json",
+      "response_file_sha256": "a5a7a697fd586e41f9c1f242a46d2d29164630dc590e209622cac8b9e5e54fd3"
+    },
+    {
+      "segment_id": "G02-u025",
+      "key": {
+        "text_sha256": "79711cdc274f647ed683e7c71d36c44740367b65a346a5598d5d0afab048ffc8",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "76ecd470bb4f2d61f01684afb704aca59b5c5bcf4839f9a18a397aea30a11058",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-007.json",
+      "response_file_sha256": "a5a7a697fd586e41f9c1f242a46d2d29164630dc590e209622cac8b9e5e54fd3"
+    },
+    {
+      "segment_id": "G02-u026",
+      "key": {
+        "text_sha256": "0a137ef02937a6d8df37925b1068a40ed83ba10dbb03af7188210285fd54d4dd",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "7cbf26857635e070a9b445874950f11f0bcd9a7a9cf659ad113ab6d68b6c611a",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-007.json",
+      "response_file_sha256": "a5a7a697fd586e41f9c1f242a46d2d29164630dc590e209622cac8b9e5e54fd3"
+    },
+    {
+      "segment_id": "G02-u027",
+      "key": {
+        "text_sha256": "81f4b6dea67e782df629850bb021aaf409f3c022b6ccd9ef1446e5bf093d8de4",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "cba4a5c577795cc723ff1729250ae1d20d1d53293c365fcc887716e35cbae5d5",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-007.json",
+      "response_file_sha256": "a5a7a697fd586e41f9c1f242a46d2d29164630dc590e209622cac8b9e5e54fd3"
+    },
+    {
+      "segment_id": "G02-u028",
+      "key": {
+        "text_sha256": "9bd7d9b58523dd43e6de6ac027f1a61109069a2fb587886b2ca8f1a30ad14e4b",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "b80591b8d9b0362fd6746a78e9d27021ef60d814772e97226f1fa82d01463193",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-007.json",
+      "response_file_sha256": "a5a7a697fd586e41f9c1f242a46d2d29164630dc590e209622cac8b9e5e54fd3"
+    },
+    {
+      "segment_id": "G02-u029",
+      "key": {
+        "text_sha256": "5642a2e3c700edb7b1222347beb592680f2d12cb3b9354de51544c99597a7c23",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "bbaba68d582ab7308f848c3cc4b8c123057d851376cbeab6a359f01b1c6c54d1",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-007.json",
+      "response_file_sha256": "a5a7a697fd586e41f9c1f242a46d2d29164630dc590e209622cac8b9e5e54fd3"
+    },
+    {
+      "segment_id": "G02-u030",
+      "key": {
+        "text_sha256": "cfdb52d5ed46f2cf6de02fd11eda1b2d942ae372e0c3e864b84b5d07b1312bd7",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "35a4969ac427594f0d8baa7d6e79efeae11116a94e559561ef1b57f26e89fdfe",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-007.json",
+      "response_file_sha256": "a5a7a697fd586e41f9c1f242a46d2d29164630dc590e209622cac8b9e5e54fd3"
+    },
+    {
+      "segment_id": "G02-u031",
+      "key": {
+        "text_sha256": "8bbbf6da774ad20db615c3fdb7e38c649efe2fdbb7e42ea814f39500045be401",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "3ec7b6636c999956df0ad8b0e6e8d3f2f41970e3d16eec673150047f4ac2b3dd",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-007.json",
+      "response_file_sha256": "a5a7a697fd586e41f9c1f242a46d2d29164630dc590e209622cac8b9e5e54fd3"
+    },
+    {
+      "segment_id": "G02-u032",
+      "key": {
+        "text_sha256": "c20b90d1d3cef34e28d2abf19e5777f59f1dfac068d7ab352db4a15c2e6b65f3",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "7da64f6e87818cf982a9dcd6ed0876c699400355d3df45072afbd93c8e0a6854",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-007.json",
+      "response_file_sha256": "a5a7a697fd586e41f9c1f242a46d2d29164630dc590e209622cac8b9e5e54fd3"
+    },
+    {
+      "segment_id": "G02-u033",
+      "key": {
+        "text_sha256": "3e24b279cecd74f16f87ec194fcdb492ee66952336d33811d298789387dc7990",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "bc4627c586b46eceb571f83bf5afae92a694691e40828ade64d5bfa43a43c1e3",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-007.json",
+      "response_file_sha256": "a5a7a697fd586e41f9c1f242a46d2d29164630dc590e209622cac8b9e5e54fd3"
+    },
+    {
+      "segment_id": "G02-u034",
+      "key": {
+        "text_sha256": "144f6b5f7ea1e496736517c2ee1e5229428d72b22f14043eab71fcf7d65be81c",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "65ac32b4f1a410fe5b9d48ca74b4a0700f0d7642343bb127c017e24e87c53e95",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-007.json",
+      "response_file_sha256": "a5a7a697fd586e41f9c1f242a46d2d29164630dc590e209622cac8b9e5e54fd3"
+    },
+    {
+      "segment_id": "G02-u035",
+      "key": {
+        "text_sha256": "6b7e3fe28d5814f60451768cc5e88eccc31d78baab9ef7e44891a6bbccb40c7a",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "192bcc8bd1c862ae15cc123a4bf4d4878e592d41862f6b525e904070b48b40d8",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-007.json",
+      "response_file_sha256": "a5a7a697fd586e41f9c1f242a46d2d29164630dc590e209622cac8b9e5e54fd3"
+    },
+    {
+      "segment_id": "G02-u036",
+      "key": {
+        "text_sha256": "a8be7f2048dcc05785207c03b037699f8ac1ba542512de53c85ac9d499fb8cc8",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "1b20f858398a61d6041a3bd5fa7fc3dcf96a697df15e60908c7945e5924f1891",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-007.json",
+      "response_file_sha256": "a5a7a697fd586e41f9c1f242a46d2d29164630dc590e209622cac8b9e5e54fd3"
+    },
+    {
+      "segment_id": "G02-u037",
+      "key": {
+        "text_sha256": "952da7e44cce6aac75ae04351c56032a408e7cb516a41a35873b4650dde78118",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "85ced26d8ec893d6091841f5c61457d3d1e718b702fafeee68d96f49d3944e97",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-007.json",
+      "response_file_sha256": "a5a7a697fd586e41f9c1f242a46d2d29164630dc590e209622cac8b9e5e54fd3"
+    },
+    {
+      "segment_id": "G02-u038",
+      "key": {
+        "text_sha256": "c6d5c9e5bbc409b94963eec8375b24a5fadf24821882bbf3a4c4e7aeacbee7dd",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "44a3ed8bb69d7f7acb7ed75f2c3a3632fc41f450e6b432879c4e4bcdc3102a78",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-007.json",
+      "response_file_sha256": "a5a7a697fd586e41f9c1f242a46d2d29164630dc590e209622cac8b9e5e54fd3"
+    },
+    {
+      "segment_id": "G02-u039",
+      "key": {
+        "text_sha256": "4a457498c700c1ae92152e5631f7dd5c375661072acc50209cbbb797342efadc",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "a75ceae693cb3b53215ac78e56b2582907fb08d7aa5993a7f56122ceca5f0c86",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-008.json",
+      "response_file_sha256": "d5383763dbf687f3adbc16d35ebdc4250b19f133357b2bbb139ee532793714f8"
+    },
+    {
+      "segment_id": "G02-u040",
+      "key": {
+        "text_sha256": "1bfdd99044871920406152383af57c5101a451f65c63a37f3610fae3ca156ccc",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "490a9282e3de065c1ea951fd6041896f55ce8bcce2b49c40a14c5a59f0093206",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-008.json",
+      "response_file_sha256": "d5383763dbf687f3adbc16d35ebdc4250b19f133357b2bbb139ee532793714f8"
+    },
+    {
+      "segment_id": "G02-u041",
+      "key": {
+        "text_sha256": "cabdf019265e5cde3939a11450aeb726e2b1d970a96bf8db600d3488258a719f",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "53ec5dd3fa1903a84ce8d0d678cd49fdbcde5b8d1499e2b7c8b7f1d5e06a7df5",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-008.json",
+      "response_file_sha256": "d5383763dbf687f3adbc16d35ebdc4250b19f133357b2bbb139ee532793714f8"
+    },
+    {
+      "segment_id": "G02-u042",
+      "key": {
+        "text_sha256": "5a4ef578011af93cc3e73e3c4816d9b4f2977a7686fa52e2d5c24dbf2c8ffb3d",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "9ee8193f42f1a278530a351fde2e9bef4b4337708da1b2aab0f520bd291b7cd9",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-008.json",
+      "response_file_sha256": "d5383763dbf687f3adbc16d35ebdc4250b19f133357b2bbb139ee532793714f8"
+    },
+    {
+      "segment_id": "G02-u043",
+      "key": {
+        "text_sha256": "15f531cd67eada6c54d6b36d251b6ce4ac0fd5766b41eb807856aae8c9d49054",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "eb55e41584574207f0cf165eb167148955d244553dccb2d205b9140a4d799881",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-008.json",
+      "response_file_sha256": "d5383763dbf687f3adbc16d35ebdc4250b19f133357b2bbb139ee532793714f8"
+    },
+    {
+      "segment_id": "G02-u044",
+      "key": {
+        "text_sha256": "d2b6d9bce9b2f4c98ee40984323482b59d80a0152e27064c9cbff4e4bc1dbc07",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "540fd6d4669dc72e4d1e8a5e8e30313e8cd3d4eb2a0bb90fa0480d64db8b48a8",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-008.json",
+      "response_file_sha256": "d5383763dbf687f3adbc16d35ebdc4250b19f133357b2bbb139ee532793714f8"
+    },
+    {
+      "segment_id": "G02-u045",
+      "key": {
+        "text_sha256": "cb798abaabae787f1cb82f1f34d254cbd7ea4927a01ecd45ecb7630009976a13",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "a3243217438e63c13a170862d907a41481384e31a6b99364eedf2c43ba4e7842",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-008.json",
+      "response_file_sha256": "d5383763dbf687f3adbc16d35ebdc4250b19f133357b2bbb139ee532793714f8"
+    },
+    {
+      "segment_id": "G02-u046",
+      "key": {
+        "text_sha256": "5d82a1f8a01abab751bfd35513575180a1594d038e36d42dc300efcd07302be3",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "aa33b0d8140433baef0f3561cdbd3a93893804df7d917f8aab969ab975f599ed",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-008.json",
+      "response_file_sha256": "d5383763dbf687f3adbc16d35ebdc4250b19f133357b2bbb139ee532793714f8"
+    },
+    {
+      "segment_id": "G02-u047",
+      "key": {
+        "text_sha256": "3d0d17f58379d6e798958e7d3644a7afd916444e5a663b384d475632c86db35c",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "c4571a589b760c41b8c2cf22382e5d93525826fbff77b9946053525833af712b",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-008.json",
+      "response_file_sha256": "d5383763dbf687f3adbc16d35ebdc4250b19f133357b2bbb139ee532793714f8"
+    },
+    {
+      "segment_id": "G02-u048",
+      "key": {
+        "text_sha256": "df9dc84cdb9ee920ebaa975036c158b40ffd7392a9da781148cabcdda72f1a04",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "8d3255aaf8dde47e2360e7df6beeacc1097c1e4e0fcca17e3cb80c7c0718e4e0",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-008.json",
+      "response_file_sha256": "d5383763dbf687f3adbc16d35ebdc4250b19f133357b2bbb139ee532793714f8"
+    },
+    {
+      "segment_id": "G02-u049",
+      "key": {
+        "text_sha256": "e334ee7bd6025912e7b9435f4dab807e6df93963fa6cc8110c7d51cd6246241a",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "fec2f35c1216383ec1a15db9fdb7b84fe2f3e70154acd859cd2da239f6229e78",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-008.json",
+      "response_file_sha256": "d5383763dbf687f3adbc16d35ebdc4250b19f133357b2bbb139ee532793714f8"
+    },
+    {
+      "segment_id": "G02-u050",
+      "key": {
+        "text_sha256": "92c4cbf23750302f08b46f5d2cf2b20029ab38f11cdd636f1c2930bf75d60358",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "4f3d5b57f9589cae5d04d801e956d174f09014c82f327b5e692b6806f4380704",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-008.json",
+      "response_file_sha256": "d5383763dbf687f3adbc16d35ebdc4250b19f133357b2bbb139ee532793714f8"
+    },
+    {
+      "segment_id": "G02-u051",
+      "key": {
+        "text_sha256": "70adcd7fcceffc07f9dc1d8596d4efe3ebcd1df71f1f855b9624ecfe3ef5dc99",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "987eacf96da5d941138dbfdff8b081198bcd69647f8a5b4334070c583f898bce",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-008.json",
+      "response_file_sha256": "d5383763dbf687f3adbc16d35ebdc4250b19f133357b2bbb139ee532793714f8"
+    },
+    {
+      "segment_id": "G02-u052",
+      "key": {
+        "text_sha256": "de557a207df7ff30ebceafb9f01c2603d8a66380c0ea39f95570e936e4b433fd",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "e6e704a1f8ed76b247c6eabd191791036a6ee190c9d6937a0f5d4bf9d14920a5",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-008.json",
+      "response_file_sha256": "d5383763dbf687f3adbc16d35ebdc4250b19f133357b2bbb139ee532793714f8"
+    },
+    {
+      "segment_id": "G02-u053",
+      "key": {
+        "text_sha256": "b4ce4cdafd28ea1a5cbeb438e409a074cda5d8f3c904afc6f4dad9a9cb518889",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "75381048935a9bec729a32cb84dd8a5963314eddef2056e51148c12520f5298d",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-008.json",
+      "response_file_sha256": "d5383763dbf687f3adbc16d35ebdc4250b19f133357b2bbb139ee532793714f8"
+    },
+    {
+      "segment_id": "G02-u054",
+      "key": {
+        "text_sha256": "49ec4f13bdf863fa0e156e8763f17b5a964dc44fb9be7a619a33fbe677040ae7",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "f74c24bbdf49ff4f5ab4c9673969f898c13b9ad3d75c0c9a91e427efbe280231",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-009.json",
+      "response_file_sha256": "d3a14ab4b2068a7ee06075e1b200580b9fca2e1d72c19635b80ef5e234f2c487"
+    },
+    {
+      "segment_id": "G02-u055",
+      "key": {
+        "text_sha256": "39d7a1539aa6e170e85d2af469d92381219ea639f19aab1713a8075841d531fb",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "fde8886ef8642ea4a6cd265deb11f5c9541dcdb91be7d2736a40d10aa13dc345",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-009.json",
+      "response_file_sha256": "d3a14ab4b2068a7ee06075e1b200580b9fca2e1d72c19635b80ef5e234f2c487"
+    },
+    {
+      "segment_id": "G02-u056",
+      "key": {
+        "text_sha256": "6b15467c6215aa6138b48b0082fa5da727e086a35c8ffdc6dc26615f3ade8120",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "9476532b228d5dfc8817c4a3f7ef9ec220fe6ab9f72791841ba118c6abab3711",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-009.json",
+      "response_file_sha256": "d3a14ab4b2068a7ee06075e1b200580b9fca2e1d72c19635b80ef5e234f2c487"
+    },
+    {
+      "segment_id": "G02-u057",
+      "key": {
+        "text_sha256": "b1d3113b021987befe3c8c1d71bb9d70ac5da0f830cbff97399e878aa8db0b14",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "0a654814308cec707db2579f570adc8c60180370071b69554d4cdce13dffd2e5",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-009.json",
+      "response_file_sha256": "d3a14ab4b2068a7ee06075e1b200580b9fca2e1d72c19635b80ef5e234f2c487"
+    },
+    {
+      "segment_id": "G02-u058",
+      "key": {
+        "text_sha256": "e32b7a6fc75a68bfcc0471305dccf217bf1bab6c1b3c32783161bc5b81db5460",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "4700c45cdf76e8bd82362f469ff527cac420a49b348acb7f2ca20ed2ced5395a",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-009.json",
+      "response_file_sha256": "d3a14ab4b2068a7ee06075e1b200580b9fca2e1d72c19635b80ef5e234f2c487"
+    },
+    {
+      "segment_id": "G02-u059",
+      "key": {
+        "text_sha256": "ec4958306c3f107a909309c6f8b9526290910c6861b4435705e646d0a6a94607",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "e5fa7218df07db8b57e0f3a7d9b88d2649f351cfdba0fa6b1ee505c7b2f73fe1",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-009.json",
+      "response_file_sha256": "d3a14ab4b2068a7ee06075e1b200580b9fca2e1d72c19635b80ef5e234f2c487"
+    },
+    {
+      "segment_id": "G02-u060",
+      "key": {
+        "text_sha256": "2f2c3b971fdcb74e195362b6256cad16293f5619d1fcf4e81a1c3600ae9fadb0",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "deea30176d79afffc6e41a97c9ebdabf1b19f097d545bfe179eb671e8c160675",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-009.json",
+      "response_file_sha256": "d3a14ab4b2068a7ee06075e1b200580b9fca2e1d72c19635b80ef5e234f2c487"
+    },
+    {
+      "segment_id": "G02-u061",
+      "key": {
+        "text_sha256": "23ffc3437420108648770d198540f2ba774d96c022f0e618470ffdc57a6d6e90",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "1100c69ac77ffc8829189cda04d434e25259ae33f0b3dd3e8973a4447a942997",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-009.json",
+      "response_file_sha256": "d3a14ab4b2068a7ee06075e1b200580b9fca2e1d72c19635b80ef5e234f2c487"
+    },
+    {
+      "segment_id": "G02-u062",
+      "key": {
+        "text_sha256": "5a36d831157217c9122e16f1138158d2e7a0891d56d367cffff3c7af72b284dc",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "714706258d3db0bf8302abe007087c52ab7d55529db99ecca992aa177a40c787",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-009.json",
+      "response_file_sha256": "d3a14ab4b2068a7ee06075e1b200580b9fca2e1d72c19635b80ef5e234f2c487"
+    },
+    {
+      "segment_id": "G02-u063",
+      "key": {
+        "text_sha256": "e41021e5b2f05e643cbd182fd1d7609e305cfcda4c7968386cac50d6be561811",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "c300101447bb595d6cabd3c7ab9af07265b054fde4b171236393c3315de32e04",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-009.json",
+      "response_file_sha256": "d3a14ab4b2068a7ee06075e1b200580b9fca2e1d72c19635b80ef5e234f2c487"
+    },
+    {
+      "segment_id": "G02-u064",
+      "key": {
+        "text_sha256": "2a6a295ab6891fd095971ef2e0a76c3402c4022d9490a13a8b32486397601920",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "fd3b3fbee97f51912f4d3797593b211be5e70d435192d27a32495f38be4e3404",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-009.json",
+      "response_file_sha256": "d3a14ab4b2068a7ee06075e1b200580b9fca2e1d72c19635b80ef5e234f2c487"
+    },
+    {
+      "segment_id": "G02-u065",
+      "key": {
+        "text_sha256": "9147596e80334549bb7e378dfcdcf84aff636d1cc7fb56111199c547a43a6f80",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "9a9059d8854e942eb3146972b78083d3cd38fe28e8cb9135b92bf896e095d3ae",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-009.json",
+      "response_file_sha256": "d3a14ab4b2068a7ee06075e1b200580b9fca2e1d72c19635b80ef5e234f2c487"
+    },
+    {
+      "segment_id": "G02-u066",
+      "key": {
+        "text_sha256": "20c35b08d901dd235b61858dea1c5853a6e24d8afc2f4fc09fd1943947644dae",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "e8ad54e8041d0a04fe996148bc52f9b82e523e15fd64d32fa8a99713dd48de0b",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-009.json",
+      "response_file_sha256": "d3a14ab4b2068a7ee06075e1b200580b9fca2e1d72c19635b80ef5e234f2c487"
+    },
+    {
+      "segment_id": "G02-u067",
+      "key": {
+        "text_sha256": "7a89ea70cb5172b720f9fcd3eb2c75e7b30b171bcbd47ebed7b91a978354c3db",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "7aa1ad96f50f1975cde2eaf4a775b556cf35b2fba0c5553ebc66f5908d80bce1",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-009.json",
+      "response_file_sha256": "d3a14ab4b2068a7ee06075e1b200580b9fca2e1d72c19635b80ef5e234f2c487"
+    },
+    {
+      "segment_id": "G02-u068",
+      "key": {
+        "text_sha256": "04e8c99b2e798d2020a8fa7ab75ec7b6a3dd93518d655d7a70bee9c7fec405fa",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "62d0e0e1feaa6fcf4cbbc5ddf8cba224d08aef481940be575e5d8f5ef9ecb01c",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-009.json",
+      "response_file_sha256": "d3a14ab4b2068a7ee06075e1b200580b9fca2e1d72c19635b80ef5e234f2c487"
+    },
+    {
+      "segment_id": "G02-u069",
+      "key": {
+        "text_sha256": "f947d17182e802ecadcea12106db1487a89a88c712b245f1cc8f3de888297001",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "22e88a47f47011bf5c1bda3b4dd1940757aa6a9604e71014c3f154c30159614f",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-010.json",
+      "response_file_sha256": "01a5377d092ff7a4572159cd02b06a8a2c3f1e3214baa3e2c9baeb2e0d8c41c9"
+    },
+    {
+      "segment_id": "G02-u070",
+      "key": {
+        "text_sha256": "1a496aba19f5f8a198d934a2788b5b135f248ba191738cede8c10fdc7455c0a6",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "a1e36bc8e722c2613901b1f8b3b7fffecbd022d04d8910ab9fcec98fbb4a8064",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-010.json",
+      "response_file_sha256": "01a5377d092ff7a4572159cd02b06a8a2c3f1e3214baa3e2c9baeb2e0d8c41c9"
+    },
+    {
+      "segment_id": "G02-u071",
+      "key": {
+        "text_sha256": "926773f7f5a5da99f683c5539f89da52336debaeb1776ff8dedfe59a34ae52fd",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "3f0be7b4e778ed05a28b3641b10bdd84e82194a78aa26f7ae3e8db78378b8d35",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-010.json",
+      "response_file_sha256": "01a5377d092ff7a4572159cd02b06a8a2c3f1e3214baa3e2c9baeb2e0d8c41c9"
+    },
+    {
+      "segment_id": "G02-u072",
+      "key": {
+        "text_sha256": "9ac8b3a608fa6135699396be56b17e8192cfb5348d6d92437e76c1b821072e23",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "50d0127e6e567ab589a26b740edc221c5a939bbfa0b779e8714430c6bf0a87e9",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-010.json",
+      "response_file_sha256": "01a5377d092ff7a4572159cd02b06a8a2c3f1e3214baa3e2c9baeb2e0d8c41c9"
+    },
+    {
+      "segment_id": "G02-u073",
+      "key": {
+        "text_sha256": "30586c42a5c1dd17a4ddd31983dc2bb68cda4a8b57bff9b8961c74a90387f357",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "c623ea3323ba9ac6484e7995b95a3f2f119c81f272b75f97a0abf8abdd353b17",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-010.json",
+      "response_file_sha256": "01a5377d092ff7a4572159cd02b06a8a2c3f1e3214baa3e2c9baeb2e0d8c41c9"
+    },
+    {
+      "segment_id": "G02-u074",
+      "key": {
+        "text_sha256": "dfcbfa8e11a399e70081f0e1234408339ffb099ce364d982fe484f60f8ae3cca",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "9c85e4e8bbd621b40b2afd9336b33ba00b569c6205e2724e072ed351491ef973",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-010.json",
+      "response_file_sha256": "01a5377d092ff7a4572159cd02b06a8a2c3f1e3214baa3e2c9baeb2e0d8c41c9"
+    },
+    {
+      "segment_id": "G02-u075",
+      "key": {
+        "text_sha256": "12ddd0fccca1848c9c702b75833b4b4e772c350e2abdc2a7ddf54d9eae767a9d",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "b241396675b074a24f03fc9d3739299b532eac2c08661f24da059248c06b5945",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-010.json",
+      "response_file_sha256": "01a5377d092ff7a4572159cd02b06a8a2c3f1e3214baa3e2c9baeb2e0d8c41c9"
+    },
+    {
+      "segment_id": "G02-u076",
+      "key": {
+        "text_sha256": "0e1f4415fec0a9d9935f05f3cdee44dc8614b0eb8d91c874aedf12ff98f11191",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "5ff21a559911a275bf9608eecf7bac1e1b0f173454fe7aeb4a0880ba8c536a75",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-010.json",
+      "response_file_sha256": "01a5377d092ff7a4572159cd02b06a8a2c3f1e3214baa3e2c9baeb2e0d8c41c9"
+    },
+    {
+      "segment_id": "G02-u077",
+      "key": {
+        "text_sha256": "ada8918dcc768347d6e5576ec69fa8480cd6d4e07d9d8efbcda043b05cacfcd0",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "3879959809c3412c13d08efe68b72bb872971345409b1c0806ecc929d61edd51",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-010.json",
+      "response_file_sha256": "01a5377d092ff7a4572159cd02b06a8a2c3f1e3214baa3e2c9baeb2e0d8c41c9"
+    },
+    {
+      "segment_id": "G02-u078",
+      "key": {
+        "text_sha256": "e243fe791c7dbb4b5426d0fc42117cb182d1efb5ae6071424c471f1244bcbaf7",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "ddcdd425bce09ebe539e40d4b6d85fbaecc35f99ccb8dff579e7046c60de6f54",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-010.json",
+      "response_file_sha256": "01a5377d092ff7a4572159cd02b06a8a2c3f1e3214baa3e2c9baeb2e0d8c41c9"
+    },
+    {
+      "segment_id": "G02-u079",
+      "key": {
+        "text_sha256": "270f47d7714fbe9e15fe60894702d67a15858303e548254f95111c05d7e96bfd",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "1fa4d770aa9e1275c4c4597dfebf2ee24f445a913a8457d6efded578d21a873b",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-010.json",
+      "response_file_sha256": "01a5377d092ff7a4572159cd02b06a8a2c3f1e3214baa3e2c9baeb2e0d8c41c9"
+    },
+    {
+      "segment_id": "G02-u080",
+      "key": {
+        "text_sha256": "84886bcf71668114f96b616f360086bbb2c80311c66f52aa2c070cff272e452a",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "bb34f5ff7bbc5259f40f2d36abcbc6be0328788a014d5681ab66a91d3953023c",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-010.json",
+      "response_file_sha256": "01a5377d092ff7a4572159cd02b06a8a2c3f1e3214baa3e2c9baeb2e0d8c41c9"
+    },
+    {
+      "segment_id": "G02-u081",
+      "key": {
+        "text_sha256": "248a679388f6d6ccd88045f25bd535093955c5e7d6baf72597d4b89fb89eb26a",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "8ab66bfcc3d4a01068b390fb9a523c1f88ba35c0763ee4e58d3752f2feed0fcc",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-010.json",
+      "response_file_sha256": "01a5377d092ff7a4572159cd02b06a8a2c3f1e3214baa3e2c9baeb2e0d8c41c9"
+    },
+    {
+      "segment_id": "G02-u082",
+      "key": {
+        "text_sha256": "692956b776d2cea86a7ae73f554c1390bfd747a837d035b6fcbb3e03b43d5486",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "538b0d2aba01448a527b345d665004df92020eb3a7ae4fe74df6dc1e12289326",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-010.json",
+      "response_file_sha256": "01a5377d092ff7a4572159cd02b06a8a2c3f1e3214baa3e2c9baeb2e0d8c41c9"
+    },
+    {
+      "segment_id": "G02-u083",
+      "key": {
+        "text_sha256": "d67ad5528764e05a5bde46fcea1169f0b71d0071ea21b506dba40ba55fcc9d49",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "9f18ee24493d46f248c0355ff6c98c050dba9aaa18b67780aa79a70b3cb37e8d",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-010.json",
+      "response_file_sha256": "01a5377d092ff7a4572159cd02b06a8a2c3f1e3214baa3e2c9baeb2e0d8c41c9"
+    },
+    {
+      "segment_id": "G02-u084",
+      "key": {
+        "text_sha256": "7d1f52a63dae80a11eca096ee50c6c2409d928564b93c9a17ac4d56e1f223fc2",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "086b6aef4a667ed30723a64619a47d4f3075e3551657cc808fee5a533e66261b",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-011.json",
+      "response_file_sha256": "f6e2d254147699185b19c50083400912de10a5b0149010c56c4e0db8aa61d331"
+    },
+    {
+      "segment_id": "G02-u085",
+      "key": {
+        "text_sha256": "7fe2f88240c8a83f6f65369c9471e065c14015592c5cea95edffab6e37700fb4",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "0a40c160a7216b7f24a45f0ef2d3d86c36461ec8574a01bc0ca4fb6067ec5d90",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-011.json",
+      "response_file_sha256": "f6e2d254147699185b19c50083400912de10a5b0149010c56c4e0db8aa61d331"
+    },
+    {
+      "segment_id": "G02-u086",
+      "key": {
+        "text_sha256": "8164d6b0c82ce9d8cbf09e6ae84f25bedede78c7bb5f93ef082406e6507d8f56",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "ea6d6c1a590cd0d60f8cfffc9dcffa6a06e55536d7c0b58ad633e2e6448916aa",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-011.json",
+      "response_file_sha256": "f6e2d254147699185b19c50083400912de10a5b0149010c56c4e0db8aa61d331"
+    },
+    {
+      "segment_id": "G02-u087",
+      "key": {
+        "text_sha256": "ec96bec0e8dae5595b8dfb2ecf8b89af712b193ce69f803d9f389f28d691ff30",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "5c13b61445e271690454426926a364c1fec07e0efaab65b6887cf199fc9a98ae",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-011.json",
+      "response_file_sha256": "f6e2d254147699185b19c50083400912de10a5b0149010c56c4e0db8aa61d331"
+    },
+    {
+      "segment_id": "G02-u088",
+      "key": {
+        "text_sha256": "92b625928740243dfd935bd5447f5d5cd9496055f8868349974ddcd5ff9cf554",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "6f710b1d38a7efd404701890567b1c9d073bc424b0245478eeadee47e9e0ff62",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-011.json",
+      "response_file_sha256": "f6e2d254147699185b19c50083400912de10a5b0149010c56c4e0db8aa61d331"
+    },
+    {
+      "segment_id": "G02-u089",
+      "key": {
+        "text_sha256": "9a23dc37dbb7745a73fb79d6c5ce874dbed016e6d6e564bd6be30917b5a478d8",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "a579ed8d095edfaceb35724cda94c5a14229927442fecade37eb257f736abf81",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-011.json",
+      "response_file_sha256": "f6e2d254147699185b19c50083400912de10a5b0149010c56c4e0db8aa61d331"
+    },
+    {
+      "segment_id": "G02-u090",
+      "key": {
+        "text_sha256": "5d9ba5de550a6690e85c3d16ec73c7e4f7243b700ec5a6297c7a9fa12faf0c5e",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "9c5e2feed3f47ca440f73827f72d02471189adb4e982f4089a8c33765886afe2",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-011.json",
+      "response_file_sha256": "f6e2d254147699185b19c50083400912de10a5b0149010c56c4e0db8aa61d331"
+    },
+    {
+      "segment_id": "G02-u091",
+      "key": {
+        "text_sha256": "8c59b9b4ca4ef3c3b7cae477aad7d4f6922e38f08c2422349c4575f75996f844",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "93130215805d0f972bd2624ea8063e8e0652a340cd2c32106978cd961c25339d",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-011.json",
+      "response_file_sha256": "f6e2d254147699185b19c50083400912de10a5b0149010c56c4e0db8aa61d331"
+    },
+    {
+      "segment_id": "G02-u092",
+      "key": {
+        "text_sha256": "a797fabf1b5e16ed60380a14ffce45bf7764eb39cb38a31e009d52cb24297ac4",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "57e38ff52a0ff758bd7ea3a946dcff078b2a1c857e7812b0c4f2c70905339624",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-011.json",
+      "response_file_sha256": "f6e2d254147699185b19c50083400912de10a5b0149010c56c4e0db8aa61d331"
+    },
+    {
+      "segment_id": "G02-u093",
+      "key": {
+        "text_sha256": "e55182597848ed0361e4f7ba57b220d938603ebb902176316830b45c963a1a6b",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "37310dbaac79f739dc03bcbc4b5e7448fc2a9af34e269e89949d66f5d2226e1f",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-011.json",
+      "response_file_sha256": "f6e2d254147699185b19c50083400912de10a5b0149010c56c4e0db8aa61d331"
+    },
+    {
+      "segment_id": "G02-u094",
+      "key": {
+        "text_sha256": "180eb84885df7d3659c9134b7f278d4626bcaee820da3235f99b6883c7060003",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "99ad664ee4f24b7d83667a68273f5fc545737506cd280fb85093dff3ae33d373",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-011.json",
+      "response_file_sha256": "f6e2d254147699185b19c50083400912de10a5b0149010c56c4e0db8aa61d331"
+    },
+    {
+      "segment_id": "G02-u095",
+      "key": {
+        "text_sha256": "d36f194b410cdcfe1a93b2b6e388743998d0dbed00a5177d89603a56dbe7bb20",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "0efd130f9fe487fe4f264ba1e69d34db19c9785f4c5dc4d3f1f0d2e1003e5873",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-011.json",
+      "response_file_sha256": "f6e2d254147699185b19c50083400912de10a5b0149010c56c4e0db8aa61d331"
+    },
+    {
+      "segment_id": "G02-u096",
+      "key": {
+        "text_sha256": "4e1b7db9df24728c12a062fb1bcfacccd43fc492fcc59fdcc87a8f2ebc443d3a",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "9cabb94e881fac75880042bc3c6e94b9f68fb6a29d26597045aaa27ccb8eecf3",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-011.json",
+      "response_file_sha256": "f6e2d254147699185b19c50083400912de10a5b0149010c56c4e0db8aa61d331"
+    },
+    {
+      "segment_id": "G02-u097",
+      "key": {
+        "text_sha256": "e8e4100c2d9d47407b22ed8ec4b7066a165e9aa1e29f6db1f53a8ea894312e04",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "76bb97fa4e2f7382ad4655d4ee491a04777621fcd98ceea0f6b33b4228da647a",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-011.json",
+      "response_file_sha256": "f6e2d254147699185b19c50083400912de10a5b0149010c56c4e0db8aa61d331"
+    },
+    {
+      "segment_id": "G02-u098",
+      "key": {
+        "text_sha256": "5daf559d899a6ad6cd2fadb997ae4e0039d23f1e39ae942b48a644e153c0b2fa",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "91b810186e366ab0d0b0d3722cce37e271f9fc8c7060656380df4caf85031822",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-011.json",
+      "response_file_sha256": "f6e2d254147699185b19c50083400912de10a5b0149010c56c4e0db8aa61d331"
+    },
+    {
+      "segment_id": "G02-u099",
+      "key": {
+        "text_sha256": "c11b6b3a4cc2e2718c243c72993dd1144cf32c6140f5535c140e576abe081e83",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "8995bcd9ceb81b9a09d2941864c89f3d29b180a51ae0cfae963765b1f20e452d",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-012.json",
+      "response_file_sha256": "351bbddcd615fc508b67d60efba58634d3db1761d196f7bb9a82981aabe8f8fc"
+    },
+    {
+      "segment_id": "G02-u100",
+      "key": {
+        "text_sha256": "029b84051b7dd2b43645063aae0b828bbb9c32e39facc47b2053b2a2f164a30e",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "e247e3c344b36aa55b7c34ae3dfc07249ffb58b4c43479ee33e20e7c56253e33",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-012.json",
+      "response_file_sha256": "351bbddcd615fc508b67d60efba58634d3db1761d196f7bb9a82981aabe8f8fc"
+    },
+    {
+      "segment_id": "G02-u101",
+      "key": {
+        "text_sha256": "f2c84e0680654953fd1be773f80f7bf8d07233259137dfb42769242f7c2f40e8",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "7d6e301e3f2f3536f40a2ee4bc9ecd62068826e0460f574dd8f62fe9221f0362",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-012.json",
+      "response_file_sha256": "351bbddcd615fc508b67d60efba58634d3db1761d196f7bb9a82981aabe8f8fc"
+    },
+    {
+      "segment_id": "G02-u102",
+      "key": {
+        "text_sha256": "ef99b88ebd84e90d22201b99d15fcbaefd9853f4d842fdc7e0138230a61ca292",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "4376185cd5b8808dd2469c822f49ef0581fdd0d652ef8f805e4b9ead594fe81f",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-012.json",
+      "response_file_sha256": "351bbddcd615fc508b67d60efba58634d3db1761d196f7bb9a82981aabe8f8fc"
+    },
+    {
+      "segment_id": "G02-u103",
+      "key": {
+        "text_sha256": "6f2c1ae9022066fe22ab9e66ba3b80a2a9547eb22daa52a6f43516dcc95dff60",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "ed70890b635ef272e5f5544c99e3cf1eea0049f3c67a333d0bfcf497a60328e9",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-012.json",
+      "response_file_sha256": "351bbddcd615fc508b67d60efba58634d3db1761d196f7bb9a82981aabe8f8fc"
+    },
+    {
+      "segment_id": "G02-u104",
+      "key": {
+        "text_sha256": "26fcb62db083113138651de783eed98216d77a0185b3a7b3341e22b8d0df5d07",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "9288ea8c8086965075413115d7404d8bb1add966651d19a0ba2efc1f5867ff49",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-012.json",
+      "response_file_sha256": "351bbddcd615fc508b67d60efba58634d3db1761d196f7bb9a82981aabe8f8fc"
+    },
+    {
+      "segment_id": "G02-u105",
+      "key": {
+        "text_sha256": "6d87fab6b3b350804d9b5cbaeb96fca00f7825f1da8af835ae1ad5ae785ecc42",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "1810718cd7adbacb65bbc3c8cb04368968373762cad4dabe856eb01caf073166",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-012.json",
+      "response_file_sha256": "351bbddcd615fc508b67d60efba58634d3db1761d196f7bb9a82981aabe8f8fc"
+    },
+    {
+      "segment_id": "G02-u106",
+      "key": {
+        "text_sha256": "5c783e1a49e3b0b6bf16e446cd57e94c12d859d77918dc42b59db1ae35ec60bb",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "ffd09bf13a3011c5b54b6e3f0348f203eec2ff37fa3011986e2d22be7f859927",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-012.json",
+      "response_file_sha256": "351bbddcd615fc508b67d60efba58634d3db1761d196f7bb9a82981aabe8f8fc"
+    },
+    {
+      "segment_id": "G02-u107",
+      "key": {
+        "text_sha256": "047d73ec079b24847800ff2909f00a0a97260e70662db5820f8428bec27963cd",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "b87864941ccd1534cb976fb372c47bbe2a3387eeb5ecd7e45b2ab29c24dce50a",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-012.json",
+      "response_file_sha256": "351bbddcd615fc508b67d60efba58634d3db1761d196f7bb9a82981aabe8f8fc"
+    },
+    {
+      "segment_id": "G02-u108",
+      "key": {
+        "text_sha256": "e658cbe84f12b1381b18159caacce02a7a7e11550f963746223f44b7173f966e",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "b75ab6ef2287b8aa1a0cf652a261c13942193856d536146808094b13d5d7202f",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-012.json",
+      "response_file_sha256": "351bbddcd615fc508b67d60efba58634d3db1761d196f7bb9a82981aabe8f8fc"
+    },
+    {
+      "segment_id": "G02-u109",
+      "key": {
+        "text_sha256": "43c8f849cf2b9ebf41b700e17ffa669ecfbaf2fb33259d11e54263fd5ccaabcb",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "39bcd88bc9f845f6b28f97893c1582e2684f89b739bf46ea323a4e591cc858da",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-012.json",
+      "response_file_sha256": "351bbddcd615fc508b67d60efba58634d3db1761d196f7bb9a82981aabe8f8fc"
+    },
+    {
+      "segment_id": "G02-u110",
+      "key": {
+        "text_sha256": "71518627f731fb4897e26bff3acac7ad4c1959bea05c0d73a2eec0c893bdb38c",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "02ef85b575ced8999ce2ad4b45ab4c25019aa7dd618b82316c8e21cbc008b3ab",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-012.json",
+      "response_file_sha256": "351bbddcd615fc508b67d60efba58634d3db1761d196f7bb9a82981aabe8f8fc"
+    },
+    {
+      "segment_id": "G02-u111",
+      "key": {
+        "text_sha256": "154f9809be1c6a17e26a9d605f0174d5865f03ad19008e96cbf9f395aad340db",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "6c5fbb11772314ef890c09d67ad188a70f84c54b0cfa68cabafc3cbf15339553",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-012.json",
+      "response_file_sha256": "351bbddcd615fc508b67d60efba58634d3db1761d196f7bb9a82981aabe8f8fc"
+    },
+    {
+      "segment_id": "G02-u112",
+      "key": {
+        "text_sha256": "68f271ede5028c6112c133a3ea4659d3aff61d48b29698ec2b65cd91379ef430",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "f9beaad89fb36462065c78e8fe4016d3ffd30b7c91768600805af7e8397df281",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-012.json",
+      "response_file_sha256": "351bbddcd615fc508b67d60efba58634d3db1761d196f7bb9a82981aabe8f8fc"
+    },
+    {
+      "segment_id": "G02-u113",
+      "key": {
+        "text_sha256": "da0bd4158b28f9ba94149b1101f0d5cb4af66ba1c492af13c39e965b7c8fec49",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "3e34d74c756f268ba472faf86096d71e9f407b4ccad390304200150ae16c9855",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-012.json",
+      "response_file_sha256": "351bbddcd615fc508b67d60efba58634d3db1761d196f7bb9a82981aabe8f8fc"
+    },
+    {
+      "segment_id": "G02-u114",
+      "key": {
+        "text_sha256": "5ad19ae377b1b44e34b0b2bed4f02f1a85413b06091e55f22e40fb83b2dfa4f8",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "e7ca3d3530d554fc041548c168e35d4de2e6da4e6215673644b3067fda0679c5",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-013.json",
+      "response_file_sha256": "f662673eb40008de7d995a91de27ce8bc4c6b65b9a359c40590b29811dcf7f5f"
+    },
+    {
+      "segment_id": "G02-u115",
+      "key": {
+        "text_sha256": "7dd946848bcff4b91b87e04b1959ebc8fb7080278c11e9f583056509a0328603",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "906766ac351e55f4143d953b68c0ce875b1b3418d297e9082942972744137741",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-013.json",
+      "response_file_sha256": "f662673eb40008de7d995a91de27ce8bc4c6b65b9a359c40590b29811dcf7f5f"
+    },
+    {
+      "segment_id": "G02-u116",
+      "key": {
+        "text_sha256": "4d05d418d4f27ced517bc01fe481cbb1adefc9b28432078c963af6778332c5ea",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "cfdc4418edbde9e8f42b0a9a75bb08d9cfc0767459499cf3a98034c70d5811d9",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-013.json",
+      "response_file_sha256": "f662673eb40008de7d995a91de27ce8bc4c6b65b9a359c40590b29811dcf7f5f"
+    },
+    {
+      "segment_id": "G02-u117",
+      "key": {
+        "text_sha256": "d6ed44e408ea20993d5a10f40fa98f2a4ac2bc3535a12e5a3c89630c98aadafe",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "dbb2d949372ccad6cf13e2794aa6b0ded3386999c6f3f8d109b268a7020f3f38",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-013.json",
+      "response_file_sha256": "f662673eb40008de7d995a91de27ce8bc4c6b65b9a359c40590b29811dcf7f5f"
+    },
+    {
+      "segment_id": "G02-u118",
+      "key": {
+        "text_sha256": "f5c8720539a929c6f54c62ad971a16ba50274b1499f59b6190d336dbb55d977d",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "6012fef5bf3afb66e7d38dd0404fe78dcfd26c796bf9fc23d306c2fb3f606c16",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-013.json",
+      "response_file_sha256": "f662673eb40008de7d995a91de27ce8bc4c6b65b9a359c40590b29811dcf7f5f"
+    },
+    {
+      "segment_id": "G02-u119",
+      "key": {
+        "text_sha256": "0b25cf4d9b9d24476f939ed7598d7a5b6581614ec298dbe4e881fcf912042f3d",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "5b7a9700385eff3dd1a5e002766ad70c34bc54620b18c6d7b2e5d63dd07424f8",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-013.json",
+      "response_file_sha256": "f662673eb40008de7d995a91de27ce8bc4c6b65b9a359c40590b29811dcf7f5f"
+    },
+    {
+      "segment_id": "G02-u120",
+      "key": {
+        "text_sha256": "0e0632f4bbfca170fda63618b240a4dde6b18f952bed5a75549766d2a8b17c41",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "6ee2fd6f657be6776997445721f9e108b784763e820ecb579675581be86b82c6",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-013.json",
+      "response_file_sha256": "f662673eb40008de7d995a91de27ce8bc4c6b65b9a359c40590b29811dcf7f5f"
+    },
+    {
+      "segment_id": "G02-u121",
+      "key": {
+        "text_sha256": "a87dd47014b3a326cec50a9a43b16a958003f4a3e19889b2f15e20d7d60da4eb",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "d17c0a24a208ec757e634dad00ab7e74a17f8c8fb3d91796ce717dcc48ffe8fd",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-013.json",
+      "response_file_sha256": "f662673eb40008de7d995a91de27ce8bc4c6b65b9a359c40590b29811dcf7f5f"
+    },
+    {
+      "segment_id": "G02-u122",
+      "key": {
+        "text_sha256": "fb2d3d540642c4c5a242d1323249774b2322ab4569cee3576a4d6a6a00e5ce06",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "0dad716f13aa62f6c2e5f1b5a0a1ee2de41641d9ed18984f7e7bd87081f884a5",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-013.json",
+      "response_file_sha256": "f662673eb40008de7d995a91de27ce8bc4c6b65b9a359c40590b29811dcf7f5f"
+    },
+    {
+      "segment_id": "G02-u123",
+      "key": {
+        "text_sha256": "e813c637aa27a71711b72b778379c7672dc701d86ab6ca7f60059cd7498a49bb",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "769c98bb428df4311a797ecd126952107b13154a78f98fd1a7c5600ada111b68",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-013.json",
+      "response_file_sha256": "f662673eb40008de7d995a91de27ce8bc4c6b65b9a359c40590b29811dcf7f5f"
+    },
+    {
+      "segment_id": "G02-u124",
+      "key": {
+        "text_sha256": "ee4fb502843364aa7e5ab6c22c51e3f069638fadfc35e7f56e4ef5b4254c186d",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "05027756bb31d52471193f167288fadf5202fdd2ebf23674ce0244d4ee5e2ea6",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-013.json",
+      "response_file_sha256": "f662673eb40008de7d995a91de27ce8bc4c6b65b9a359c40590b29811dcf7f5f"
+    },
+    {
+      "segment_id": "G02-u125",
+      "key": {
+        "text_sha256": "5574771e530ed31edea36ed16dcb5d16e1eadad16e90d15596a3089714b2cdf7",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "70d7d3a750fd02baa0c3d216ebd5a91d79329e02e0ec579a3ed42db7e22a8e42",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-013.json",
+      "response_file_sha256": "f662673eb40008de7d995a91de27ce8bc4c6b65b9a359c40590b29811dcf7f5f"
+    },
+    {
+      "segment_id": "G02-u126",
+      "key": {
+        "text_sha256": "8490fbb00e95e0a1d32454c6b501ee0f6aab13ca88486660ea5d96b015633211",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "da5d3a417ec8973034c4b5f589516db0fac9dde50550878bbb822cdecfa4f3c6",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-013.json",
+      "response_file_sha256": "f662673eb40008de7d995a91de27ce8bc4c6b65b9a359c40590b29811dcf7f5f"
+    },
+    {
+      "segment_id": "G02-u127",
+      "key": {
+        "text_sha256": "5cb58bac3127cf4fecf38b7d173a88d6784b75a0d267365aa152da58edd1e951",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "fbf13a6b52a1c0a68ff333a05b9d65b75d3fdfa205bd8977897292829efbbdc0",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-013.json",
+      "response_file_sha256": "f662673eb40008de7d995a91de27ce8bc4c6b65b9a359c40590b29811dcf7f5f"
+    },
+    {
+      "segment_id": "G02-u128",
+      "key": {
+        "text_sha256": "7623eb3098f71a154210f1f7c200f64e1016db0a88c771ed34a21f8063562b9f",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "d190dd3c7fea5abe0ebbebb33efb40a1c45aeae09145966db3363264976a4c58",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-013.json",
+      "response_file_sha256": "f662673eb40008de7d995a91de27ce8bc4c6b65b9a359c40590b29811dcf7f5f"
+    },
+    {
+      "segment_id": "G02-u129",
+      "key": {
+        "text_sha256": "f94bdb6c3c20358734aa7eadaaba5e6c1dfd1ea5a78af0fd91e68869bebe3017",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "94686a3071b314655d901b79016682d47e66e7f8be70b6b7c05a36c5f39f95be",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-014.json",
+      "response_file_sha256": "6ac513c3c0122e8c70a492a755d0d312ea075f5d5b56172191118bc3578ba448"
+    },
+    {
+      "segment_id": "G02-u130",
+      "key": {
+        "text_sha256": "99baa091c8349e066d30b1dedde800ee92d488685361c8e1739a56731909e086",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "7835460932b427ff24aae107e93575b280073936be89cde9ec1f32a8737caa77",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-014.json",
+      "response_file_sha256": "6ac513c3c0122e8c70a492a755d0d312ea075f5d5b56172191118bc3578ba448"
+    },
+    {
+      "segment_id": "G02-u131",
+      "key": {
+        "text_sha256": "67c21fd16e29b5194085f9738c5301c88d00f032568f44a9a5048421ec7b700b",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "e0fbe6a2979b7fd3f825c0881647b80c177adbc29b9eb311f2677c245295aa37",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-014.json",
+      "response_file_sha256": "6ac513c3c0122e8c70a492a755d0d312ea075f5d5b56172191118bc3578ba448"
+    },
+    {
+      "segment_id": "G02-u132",
+      "key": {
+        "text_sha256": "408bbd6e7cfad5e18a066dda3c50d8d052ea041edf9759c68e6e65ce15143b13",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "94328d3d83f27ce3f8bcd0e32ccd56f4115a2b8b354811ed49d525e67887ce17",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-014.json",
+      "response_file_sha256": "6ac513c3c0122e8c70a492a755d0d312ea075f5d5b56172191118bc3578ba448"
+    },
+    {
+      "segment_id": "G03-asr-002",
+      "key": {
+        "text_sha256": "21fb7d498967d2bf2ec984eb67b8cba11b6a6bed8df6d221694c6fef03359e6b",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "e66571a9c1dfb3c708a1c624c995a39579d42b9736a4b016d2c7a4824096e725",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-014.json",
+      "response_file_sha256": "6ac513c3c0122e8c70a492a755d0d312ea075f5d5b56172191118bc3578ba448"
+    },
+    {
+      "segment_id": "G03-asr-005",
+      "key": {
+        "text_sha256": "cec4b5393e6e7eb7ebfb51dd498e30ef2170157f6437caf2f9ced02d761b8c2b",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "76025dbeaf4dd948dfd4749c0f9747c6e0c9aa1bf26df5db999b85b6936a3b4f",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-014.json",
+      "response_file_sha256": "6ac513c3c0122e8c70a492a755d0d312ea075f5d5b56172191118bc3578ba448"
+    },
+    {
+      "segment_id": "G03-asr-007",
+      "key": {
+        "text_sha256": "492ca925b4f56d0deabb2cd035315585ab20ce2f2bd999776c2c9a4826b4988e",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "c435c4e95152f755e837051e743600f37f65941b971d8db10973d7ec9e147429",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-014.json",
+      "response_file_sha256": "6ac513c3c0122e8c70a492a755d0d312ea075f5d5b56172191118bc3578ba448"
+    },
+    {
+      "segment_id": "G03-asr-008",
+      "key": {
+        "text_sha256": "bee7359f307e57bb651d8a4f96ba09cc90d6dbd0654c426d8f41fac16f07d10f",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "8269e33813ccba451520fca29bc57b8b4fe3e14d52a26930b3ace9e586c3a0c0",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-014.json",
+      "response_file_sha256": "6ac513c3c0122e8c70a492a755d0d312ea075f5d5b56172191118bc3578ba448"
+    },
+    {
+      "segment_id": "G03-asr-009",
+      "key": {
+        "text_sha256": "da82ef9364a65fd3575f5b0800f024ad13c23c37750fc8e5b1eb875a65a5df22",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "9f22a712c83e490da6f7f676faf139d28090c0a5e7716ef1ccaeb4abc6530ae8",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-014.json",
+      "response_file_sha256": "6ac513c3c0122e8c70a492a755d0d312ea075f5d5b56172191118bc3578ba448"
+    },
+    {
+      "segment_id": "G03-asr-010",
+      "key": {
+        "text_sha256": "dedf68bfa60da0c96e3eb701ff0fa849598d908f9627a2c5b24a3bd2d9644153",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "5cf57a60abbe2206c9b8500b7afcdab4da2b96b8a870a5c47ad6513039cd743a",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-014.json",
+      "response_file_sha256": "6ac513c3c0122e8c70a492a755d0d312ea075f5d5b56172191118bc3578ba448"
+    },
+    {
+      "segment_id": "G03-asr-016",
+      "key": {
+        "text_sha256": "394493dffa8b402820cee8e96aa447106eca88ac257ed8a277059278be9b4bf6",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "d34b1b518236629c081f4601fa11f42668af92e4e32a311d824d9864c18bee5c",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-014.json",
+      "response_file_sha256": "6ac513c3c0122e8c70a492a755d0d312ea075f5d5b56172191118bc3578ba448"
+    },
+    {
+      "segment_id": "G03-asr-017",
+      "key": {
+        "text_sha256": "dd18e7d5e065a7014606635f24b0a0a2ed88a0e0378d8024593a02215fcde5f0",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "61a12df9ed6885bc2d2496fabbd342101ca7788f72523783285ea3c1435bed9e",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-014.json",
+      "response_file_sha256": "6ac513c3c0122e8c70a492a755d0d312ea075f5d5b56172191118bc3578ba448"
+    },
+    {
+      "segment_id": "G03-asr-019",
+      "key": {
+        "text_sha256": "9c742b678c5c832099ed58149fe8e57f61024b3899181dbc38307af6fcc06c20",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "665b7424d8cde0313a0d21441a035548c6abbd6ede2702a3d3bc9fd55d7e531b",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-014.json",
+      "response_file_sha256": "6ac513c3c0122e8c70a492a755d0d312ea075f5d5b56172191118bc3578ba448"
+    },
+    {
+      "segment_id": "G03-asr-023",
+      "key": {
+        "text_sha256": "9657a580fde2445f322b75cbd36d240c7e2406b949a94435f43e4a96b5c6c6c8",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "c13ab8c6a2af18947d21f9aa274fec3a195a75bad82fe26e5c044215d967a48b",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-014.json",
+      "response_file_sha256": "6ac513c3c0122e8c70a492a755d0d312ea075f5d5b56172191118bc3578ba448"
+    },
+    {
+      "segment_id": "G03-asr-037",
+      "key": {
+        "text_sha256": "a104da0a8e70af8c0c4c5e468ca1201d433d466cbf6875a7b862a6bca93899dd",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "5b69dc80385145b878e1b38ac03cd5808559bcbdfa6e1090bfb49d76ad2960b8",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-014.json",
+      "response_file_sha256": "6ac513c3c0122e8c70a492a755d0d312ea075f5d5b56172191118bc3578ba448"
+    },
+    {
+      "segment_id": "G03-asr-043",
+      "key": {
+        "text_sha256": "1a423c78ca87f22c78c83d4cd7e2aa8336721de65e0fe8659099882fee3a76eb",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        },
+        "prompt_version": "gap-blind-v3-1",
+        "model": "GPT-6"
+      },
+      "cache_key_sha256": "489d854d14dda0d94312b9c85e5ca967aa138f402b26ead45d8e513ea41847d9",
+      "response_file": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-015.json",
+      "response_file_sha256": "e2cf2abc37954e58f34546929c6327a5ebd9f5c6fe73b31182c94cb9cbad766b"
+    }
+  ]
+}

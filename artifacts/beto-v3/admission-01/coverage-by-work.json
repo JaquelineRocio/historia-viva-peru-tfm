@@ -1,0 +1,229 @@
+{
+  "items": [
+    {
+      "work": "-Ma1tt97eFg",
+      "partition": "V",
+      "duration_seconds": 3009,
+      "units": 15,
+      "accepted": 11,
+      "pending": 4,
+      "resolvable_reference_fraction": 0.7333333333333333
+    },
+    {
+      "work": "0Dgk3uh0ziE",
+      "partition": "T",
+      "duration_seconds": 2519,
+      "units": 34,
+      "accepted": 30,
+      "pending": 4,
+      "resolvable_reference_fraction": 0.8823529411764706
+    },
+    {
+      "work": "G01",
+      "partition": "V",
+      "duration_seconds": 5025,
+      "units": 67,
+      "accepted": 61,
+      "pending": 6,
+      "resolvable_reference_fraction": 0.9104477611940298
+    },
+    {
+      "work": "G02",
+      "partition": "V",
+      "duration_seconds": 9888,
+      "units": 132,
+      "accepted": 125,
+      "pending": 7,
+      "resolvable_reference_fraction": 0.946969696969697
+    },
+    {
+      "work": "G03",
+      "partition": "T",
+      "duration_seconds": 3855,
+      "units": 52,
+      "accepted": 51,
+      "pending": 1,
+      "resolvable_reference_fraction": 0.9807692307692307
+    },
+    {
+      "work": "G07",
+      "partition": "T",
+      "duration_seconds": 4690,
+      "units": 30,
+      "accepted": 24,
+      "pending": 6,
+      "resolvable_reference_fraction": 0.8
+    },
+    {
+      "work": "G08",
+      "partition": "T",
+      "duration_seconds": 3061,
+      "units": 30,
+      "accepted": 30,
+      "pending": 0,
+      "resolvable_reference_fraction": 1.0
+    },
+    {
+      "work": "G09",
+      "partition": "V",
+      "duration_seconds": 5685,
+      "units": 76,
+      "accepted": 76,
+      "pending": 0,
+      "resolvable_reference_fraction": 1.0
+    },
+    {
+      "work": "G10",
+      "partition": "T",
+      "duration_seconds": 2236,
+      "units": 30,
+      "accepted": 30,
+      "pending": 0,
+      "resolvable_reference_fraction": 1.0
+    },
+    {
+      "work": "G11",
+      "partition": "T",
+      "duration_seconds": 5812,
+      "units": 30,
+      "accepted": 30,
+      "pending": 0,
+      "resolvable_reference_fraction": 1.0
+    },
+    {
+      "work": "G12",
+      "partition": "T",
+      "duration_seconds": 3059,
+      "units": 30,
+      "accepted": 30,
+      "pending": 0,
+      "resolvable_reference_fraction": 1.0
+    },
+    {
+      "work": "G13",
+      "partition": "T",
+      "duration_seconds": 6365,
+      "units": 30,
+      "accepted": 29,
+      "pending": 1,
+      "resolvable_reference_fraction": 0.9666666666666667
+    },
+    {
+      "work": "G14",
+      "partition": "V",
+      "duration_seconds": 5035,
+      "units": 68,
+      "accepted": 60,
+      "pending": 8,
+      "resolvable_reference_fraction": 0.8823529411764706
+    },
+    {
+      "work": "G15",
+      "partition": "T",
+      "duration_seconds": 4508,
+      "units": 30,
+      "accepted": 30,
+      "pending": 0,
+      "resolvable_reference_fraction": 1.0
+    },
+    {
+      "work": "G16",
+      "partition": "T",
+      "duration_seconds": 5840,
+      "units": 30,
+      "accepted": 29,
+      "pending": 1,
+      "resolvable_reference_fraction": 0.9666666666666667
+    },
+    {
+      "work": "G17",
+      "partition": "T",
+      "duration_seconds": 5490,
+      "units": 30,
+      "accepted": 29,
+      "pending": 1,
+      "resolvable_reference_fraction": 0.9666666666666667
+    },
+    {
+      "work": "G18",
+      "partition": "T",
+      "duration_seconds": 5170,
+      "units": 30,
+      "accepted": 21,
+      "pending": 9,
+      "resolvable_reference_fraction": 0.7
+    },
+    {
+      "work": "HuT0aI_mDqM",
+      "partition": "T",
+      "duration_seconds": 370,
+      "units": 6,
+      "accepted": 6,
+      "pending": 0,
+      "resolvable_reference_fraction": 1.0
+    },
+    {
+      "work": "N01",
+      "partition": "V",
+      "duration_seconds": 3071,
+      "units": 15,
+      "accepted": 12,
+      "pending": 3,
+      "resolvable_reference_fraction": 0.8
+    },
+    {
+      "work": "N03",
+      "partition": "auxiliary",
+      "duration_seconds": 1080.744,
+      "units": 15,
+      "accepted": 14,
+      "pending": 1,
+      "resolvable_reference_fraction": 0.9333333333333333
+    },
+    {
+      "work": "N07",
+      "partition": "V",
+      "duration_seconds": 5637.1315,
+      "units": 76,
+      "accepted": 62,
+      "pending": 14,
+      "resolvable_reference_fraction": 0.8157894736842105
+    },
+    {
+      "work": "N08",
+      "partition": "T",
+      "duration_seconds": 1399.2,
+      "units": 19,
+      "accepted": 15,
+      "pending": 4,
+      "resolvable_reference_fraction": 0.7894736842105263
+    },
+    {
+      "work": "bVrm2pJw4SA",
+      "partition": "T",
+      "duration_seconds": 2907,
+      "units": 39,
+      "accepted": 38,
+      "pending": 1,
+      "resolvable_reference_fraction": 0.9743589743589743
+    },
+    {
+      "work": "lrV0mu1iZCI",
+      "partition": "T",
+      "duration_seconds": 390,
+      "units": 6,
+      "accepted": 4,
+      "pending": 2,
+      "resolvable_reference_fraction": 0.6666666666666666
+    },
+    {
+      "work": "rKbC4guGhRY",
+      "partition": "V",
+      "duration_seconds": 2878,
+      "units": 40,
+      "accepted": 37,
+      "pending": 3,
+      "resolvable_reference_fraction": 0.925
+    }
+  ]
+}

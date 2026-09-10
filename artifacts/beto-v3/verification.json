@@ -1,0 +1,268 @@
+{
+  "integrity": "passed",
+  "checks": [
+    "V2 parent bytes preserved",
+    "H changes linked to source evidence",
+    "inherited reserve manifest preserved",
+    "S has metadata only",
+    "annotation evidence and cue spans exact",
+    "24 actual prior train/validation epoch metrics available",
+    "69 saved blind second reviews and text-grounded adjudications",
+    "110 ASR second reviews and 110 adjudications verified",
+    "current development units hashes, labels and family-role separation",
+    "current phase-B coverage and blockers used, not obsolete pilot counts",
+    "Frozen previous 486 units and earlier response manifests preserved",
+    "Selected batch: 444 first passes, 417 blind responses, 444 adjudications checked",
+    "Recovery response hashes, exact evidence, cumulative spend, immutable checkpoints and conservative overlap exclusion verified",
+    "Admission originals, isolated response hashes, immutable cumulative ledger and source-window prevalidation verified",
+    "Scoped C-D exception, pinned admission, frozen references and all original source/quality/budget requirements verified"
+  ],
+  "C_ready": true,
+  "blockers": [],
+  "annotation_status": {
+    "unique_new_units_with_proposal": 999,
+    "accepted_references": {
+      "T": 426,
+      "V": 444,
+      "auxiliary": 14
+    },
+    "accepted_for_training": 0,
+    "second_review_units": 868,
+    "same_model_family": null,
+    "pending": 76,
+    "V_references_frozen": false,
+    "S_references_frozen": false,
+    "provider_usage_tokens": null,
+    "remaining_annotation_ceiling": 201,
+    "selected444_first_pass": 444,
+    "selected444_second_review": 417,
+    "recovery_first_pass": 31,
+    "recovery_second_review": 31,
+    "recovery_adjudications": 31,
+    "recovery_effective_gains": 0,
+    "model_identity_note": "Historical passes GPT-6 family; admission second CLI default model identifier not exposed. No claim of different model independence.",
+    "admission01_first_pass": 30,
+    "admission01_second_review": 30,
+    "admission01_adjudications": 30,
+    "current_state": "artifacts\\beto-v3\\admission-01\\current.json",
+    "historical_snapshot_note": "Admission-01 counters preserved; see frozen_dataset_status for current eligibility"
+  },
+  "goal_reached": false,
+  "V3_macro_f1": {
+    "R0": 0.3761147349382643,
+    "R1": 0.5103819417066577,
+    "R2": 0.5323920896572062,
+    "R3": 0.519328750785806
+  },
+  "final_S_opened": false,
+  "accepted_30min_references": {
+    "T": 401,
+    "V": 444
+  },
+  "selected444": {
+    "version": "selected-444-v1",
+    "first_pass_units": 444,
+    "second_review_units": 417,
+    "second_review_target": 417,
+    "adjudications": 444,
+    "selected444_complete": true,
+    "accepted_new_references": 418,
+    "accepted_new_by_partition": {
+      "T": 282,
+      "V": 136
+    },
+    "accepted_references": {
+      "T": 426,
+      "V": 421,
+      "auxiliary": 14
+    },
+    "accepted_30min_references": {
+      "T": 401,
+      "V": 421
+    },
+    "pending_references": 69,
+    "pending_new_adjudicated": 26,
+    "coverage": {
+      "T": {
+        "accepted": 426,
+        "units": 456,
+        "fraction": 0.9342105263157895
+      },
+      "V": {
+        "accepted": 421,
+        "units": 459,
+        "fraction": 0.9172113289760349
+      }
+    },
+    "C_ready": false,
+    "blockers": [
+      "V/contexto_colonial_antecedentes: missing 5 references and 0 works from >=30-minute sources",
+      "V/liderazgos_diplomacia_proyectos: missing 3 references and 0 works from >=30-minute sources",
+      "V/organizacion_consecuencias_republicanas: missing 2 references and 0 works from >=30-minute sources",
+      "Final source independence/reproduction admission and frozen H/T/V/S manifests outstanding",
+      "Caption/audio fidelity and missing-cue intervals require final admission review; S remains closed"
+    ],
+    "S_content_opened": false,
+    "training_runs": 0,
+    "services_paid_USD": 0,
+    "annotation_unique": 938,
+    "annotation_remaining": 262,
+    "same_model_family_both_passes": true,
+    "model_weights": "unknown",
+    "reference_note": "AI-assisted references, not expert gold or training admission",
+    "source_admission_pending": true,
+    "provisional_acquired_30min_works": {
+      "T": 13,
+      "V": 6
+    },
+    "new_registered_S_works": 6,
+    "all_development_units_sha256": "719dfc96884cb6a4fab0fb5056a254c87bef310fd2768ab88d5f7be1bc4d9363",
+    "source_registry_overlay": "artifacts\\beto-v3\\phase-b-gap-02\\selected-444\\source-registry-overlay.json",
+    "label_agreements": 368,
+    "label_disagreements": 49,
+    "T_unsampled_parent_checked": 27
+  },
+  "recovery01": {
+    "version": "recovery-01-v1",
+    "first_pass_units": 444,
+    "second_review_units": 417,
+    "second_review_target": 417,
+    "adjudications": 444,
+    "selected444_complete": true,
+    "accepted_new_references": 418,
+    "accepted_new_by_partition": {
+      "T": 282,
+      "V": 136
+    },
+    "accepted_references": {
+      "T": 426,
+      "V": 421,
+      "auxiliary": 14
+    },
+    "accepted_30min_references": {
+      "T": 401,
+      "V": 421
+    },
+    "pending_references": 69,
+    "pending_new_adjudicated": 26,
+    "coverage": {
+      "T": {
+        "accepted": 426,
+        "units": 456,
+        "fraction": 0.9342105263157895
+      },
+      "V": {
+        "accepted": 421,
+        "units": 459,
+        "fraction": 0.9172113289760349
+      }
+    },
+    "C_ready": false,
+    "blockers": [
+      "V/contexto_colonial_antecedentes: missing 5 references and 0 works from >=30-minute sources",
+      "V/liderazgos_diplomacia_proyectos: missing 3 references and 0 works from >=30-minute sources",
+      "V/organizacion_consecuencias_republicanas: missing 2 references and 0 works from >=30-minute sources",
+      "Final source independence/reproduction admission and frozen H/T/V/S manifests outstanding",
+      "Caption/audio fidelity and missing-cue intervals require final admission review; S remains closed"
+    ],
+    "S_content_opened": false,
+    "training_runs": 0,
+    "services_paid_USD": 0,
+    "annotation_unique": 969,
+    "annotation_remaining": 231,
+    "same_model_family_both_passes": true,
+    "model_weights": "unknown",
+    "reference_note": "AI-assisted judgments, not expert gold; same family in isolated sessions, provider weights unknown; only disjoint effective replacements count.",
+    "source_admission_pending": true,
+    "provisional_acquired_30min_works": {
+      "T": 13,
+      "V": 6
+    },
+    "new_registered_S_works": 6,
+    "all_development_units_sha256": "be69903698551507255888a3ccd5e3f46462ff843315db9a5962390be11acd3d",
+    "source_registry_overlay": "artifacts\\beto-v3\\phase-b-gap-02\\selected-444\\source-registry-overlay.json",
+    "label_agreements": 368,
+    "label_disagreements": 49,
+    "T_unsampled_parent_checked": 27,
+    "recovery_first_pass": 31,
+    "recovery_second_review": 31,
+    "recovery_adjudications": 31,
+    "recovery_complete": true,
+    "recovery_resolved_judgments": 18,
+    "recovery_pending_judgments": 13,
+    "recovery_overlap_excluded": 18,
+    "recovery_effective_gains": 0,
+    "replaced_pending_ids": [],
+    "second_review_units_cumulative": 838,
+    "recovery_label_agreements": 24,
+    "recovery_label_disagreements": 7,
+    "all_development_units": "outputs\\beto-v3\\recovery-01\\all-development-units.json",
+    "source_registry_overlay_note": "Inherited source admission metadata; current reference counts in recovery coverage files."
+  },
+  "admission01": {
+    "version": "admission-01-v1",
+    "parent": "artifacts\\beto-v3\\recovery-01\\current.json",
+    "first_pass_units": 30,
+    "second_review_units": 30,
+    "adjudications": 30,
+    "new_accepted_references": 23,
+    "accepted_references": {
+      "T": 426,
+      "V": 444,
+      "auxiliary": 14
+    },
+    "accepted_30min_references": {
+      "T": 401,
+      "V": 444
+    },
+    "coverage": {
+      "T": {
+        "accepted": 426,
+        "units": 456,
+        "fraction": 0.9342105263157895
+      },
+      "V": {
+        "accepted": 444,
+        "units": 489,
+        "fraction": 0.9079754601226994
+      }
+    },
+    "pending_references": 76,
+    "annotation_unique": 999,
+    "annotation_remaining": 201,
+    "development_remaining": 1,
+    "ASR_gpu_seconds": 932.9981357000124,
+    "training_runs": 0,
+    "C_ready": false,
+    "S_evaluated": false,
+    "S_content_opened": false,
+    "incidental_reserved_search_snippet_seen": true,
+    "reserved_search_snippet_used": false,
+    "services_paid_USD": 0,
+    "blockers": [
+      "V/contexto_colonial_antecedentes: missing 2 references and 0 works",
+      "V/organizacion_consecuencias_republicanas: missing 2 references and 0 works",
+      "Source caption/audio fidelity final admission remains incomplete (G13/G16/G18 QA audio HTTP403); H/T/V and S metadata manifest not frozen"
+    ],
+    "all_development_units": "outputs\\beto-v3\\admission-01\\all-development-units.json",
+    "sampling_scope": "3 fixed 375-second windows per newly acquired work; no complete-video coverage claim",
+    "all_development_units_sha256": "d4aeb17d1227c7d3b02d64d916bc6473d85eba270af12087ba796299e2dc04bc"
+  },
+  "incidental_reserved_search_snippet_seen": true,
+  "reserved_search_snippet_used": false,
+  "historical_admission_blockers": [
+    "V/contexto_colonial_antecedentes: missing 2 references and 0 works",
+    "V/organizacion_consecuencias_republicanas: missing 2 references and 0 works",
+    "Source caption/audio fidelity final admission remains incomplete (G13/G16/G18 QA audio HTTP403); H/T/V and S metadata manifest not frozen"
+  ],
+  "development_freeze_sha256": "6b7ae3358a31c8303387b15010a5ee57f4ed54c99c4e717b829afc84a733608f",
+  "frozen_dataset_status": {
+    "H": 590,
+    "T300": 426,
+    "V": 444,
+    "S_manifest_metadata_only": true
+  },
+  "phase_C_candidate": "R2",
+  "phase_C_status": "complete; final success not evaluated on S",
+  "current_training_ledger": "artifacts/beto-v3/budget-ledger-after-C.json"
+}

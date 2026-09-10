@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "ledger_unchanged": true,
+  "progress_unchanged": true,
+  "recovery_current_unchanged": true,
+  "ASR_seconds": 932.9981357000124,
+  "historical_integrator_checks": [
+    "recovery",
+    "selected444",
+    "gap batch"
+  ],
+  "admission_contract_sha256": "996ea48b462df30d6fef68e3b05925f3c53785cb46c1c0e949196d6aa0853f5e",
+  "annotation_events_present": false
+}

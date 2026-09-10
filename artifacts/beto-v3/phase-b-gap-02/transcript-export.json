@@ -1,0 +1,324 @@
+{
+  "sources": [
+    {
+      "source_id": "G01",
+      "role": "V",
+      "duration_seconds": 5025,
+      "cues": 1909,
+      "first_cue_seconds": 13.48,
+      "last_cue_end_seconds": 5019.76,
+      "leading_interval_without_captions": 13.48,
+      "trailing_interval_without_captions": 5.239999999999782,
+      "max_overrun_seconds": 0,
+      "gaps_over_15_seconds": [
+        {
+          "start": 172.92000000000002,
+          "end": 189.599
+        },
+        {
+          "start": 286.99,
+          "end": 310.28
+        },
+        {
+          "start": 1181.759,
+          "end": 1197.64
+        },
+        {
+          "start": 1200.64,
+          "end": 1227.64
+        },
+        {
+          "start": 1231.64,
+          "end": 1283.799
+        }
+      ],
+      "source_sha256": "dbd240e2ed4172c384a209cc48605a2c4dffb9579b3570d8e4012a6bf3983673",
+      "srt_sha256": "8045962994279bd70668c20bd0a6fee6a5d1ba108062b4bf604c73009c1124b5",
+      "text_modified": false,
+      "literal_fidelity_certified": false,
+      "coverage_statement": "All returned cues retained. Full audio processed only for G03/G17. Uncaptioned intervals not certified silent."
+    },
+    {
+      "source_id": "G02",
+      "role": "V",
+      "duration_seconds": 9888,
+      "cues": 3517,
+      "first_cue_seconds": 2.24,
+      "last_cue_end_seconds": 9890.0,
+      "leading_interval_without_captions": 2.24,
+      "trailing_interval_without_captions": 0,
+      "max_overrun_seconds": 2.0,
+      "gaps_over_15_seconds": [
+        {
+          "start": 8.89,
+          "end": 25.76
+        }
+      ],
+      "source_sha256": "d34316af5fd6964e29ae402d2b41a865dfc24147dbf89817ef608b21d008a238",
+      "srt_sha256": "80c950f2df696b692833851ba5247d47450bde7bf0004b0dbf163089c3926dab",
+      "text_modified": false,
+      "literal_fidelity_certified": false,
+      "coverage_statement": "All returned cues retained. Full audio processed only for G03/G17. Uncaptioned intervals not certified silent."
+    },
+    {
+      "source_id": "G03",
+      "role": "T",
+      "duration_seconds": 3855,
+      "cues": 628,
+      "first_cue_seconds": 0.0,
+      "last_cue_end_seconds": 3838.2,
+      "leading_interval_without_captions": 0,
+      "trailing_interval_without_captions": 16.800000000000182,
+      "max_overrun_seconds": 0,
+      "gaps_over_15_seconds": [],
+      "source_sha256": "6cc53627dd582955dd68a93430f0c42d0d666dae2235356eb3d90dacb848880c",
+      "srt_sha256": "d8aa5ccffcb2140574c568e05007a30fde6c49238e4bbe9f29f86938dc0e6f15",
+      "text_modified": false,
+      "literal_fidelity_certified": false,
+      "coverage_statement": "All returned cues retained. Full audio processed only for G03/G17. Uncaptioned intervals not certified silent."
+    },
+    {
+      "source_id": "G07",
+      "role": "T",
+      "duration_seconds": 4690,
+      "cues": 1383,
+      "first_cue_seconds": 3.54,
+      "last_cue_end_seconds": 4690.0599999999995,
+      "leading_interval_without_captions": 3.54,
+      "trailing_interval_without_captions": 0,
+      "max_overrun_seconds": 0.05999999999949068,
+      "gaps_over_15_seconds": [
+        {
+          "start": 3316.48,
+          "end": 3696.62
+        }
+      ],
+      "source_sha256": "0434aaf31cc8d3ea75365b2658548a8b55756c7ac6c3b8866d464b6749961eea",
+      "srt_sha256": "96ada0f8a7b0501ba3ef59c8d39b1e9e4b78c560b36ff1795f916e2146d0980c",
+      "text_modified": false,
+      "literal_fidelity_certified": false,
+      "coverage_statement": "All returned cues retained. Full audio processed only for G03/G17. Uncaptioned intervals not certified silent."
+    },
+    {
+      "source_id": "G08",
+      "role": "T",
+      "duration_seconds": 3061,
+      "cues": 1002,
+      "first_cue_seconds": 0.0,
+      "last_cue_end_seconds": 3062.309,
+      "leading_interval_without_captions": 0,
+      "trailing_interval_without_captions": 0,
+      "max_overrun_seconds": 1.3090000000001965,
+      "gaps_over_15_seconds": [],
+      "source_sha256": "77636c393ae368c3d0dbc6c9ba10b0e0b523eb9793d42c6676718860cd8791e4",
+      "srt_sha256": "8217d9c142aeca8bc50125b5b7f777e1b9171635063a69fc890ebed4791bae17",
+      "text_modified": false,
+      "literal_fidelity_certified": false,
+      "coverage_statement": "All returned cues retained. Full audio processed only for G03/G17. Uncaptioned intervals not certified silent."
+    },
+    {
+      "source_id": "G09",
+      "role": "V",
+      "duration_seconds": 5685,
+      "cues": 2154,
+      "first_cue_seconds": 4.14,
+      "last_cue_end_seconds": 5683.219,
+      "leading_interval_without_captions": 4.14,
+      "trailing_interval_without_captions": 1.780999999999949,
+      "max_overrun_seconds": 0,
+      "gaps_over_15_seconds": [],
+      "source_sha256": "bb400a35742f1482441340b05eceb3b74195ad80bdd5bd72f2fa4795446a10c2",
+      "srt_sha256": "abd9824e10e7fe18a39bf35d37d58e151b774f3396b9643c8a81726fcf0d2a1f",
+      "text_modified": false,
+      "literal_fidelity_certified": false,
+      "coverage_statement": "All returned cues retained. Full audio processed only for G03/G17. Uncaptioned intervals not certified silent."
+    },
+    {
+      "source_id": "G10",
+      "role": "T",
+      "duration_seconds": 2236,
+      "cues": 391,
+      "first_cue_seconds": 0.0,
+      "last_cue_end_seconds": 2224.783,
+      "leading_interval_without_captions": 0,
+      "trailing_interval_without_captions": 11.217000000000098,
+      "max_overrun_seconds": 0,
+      "gaps_over_15_seconds": [],
+      "source_sha256": "1ff08a98e92c21b86b394d516961dbf14edaa32ce3240bd96eaded5c5515e5d8",
+      "srt_sha256": "0fbd71f961f57daa26ec2d0296a68f91770046cd71f72bb41b1c846088fb583c",
+      "text_modified": false,
+      "literal_fidelity_certified": false,
+      "coverage_statement": "All returned cues retained. Full audio processed only for G03/G17. Uncaptioned intervals not certified silent."
+    },
+    {
+      "source_id": "G11",
+      "role": "T",
+      "duration_seconds": 5812,
+      "cues": 2219,
+      "first_cue_seconds": 3.85,
+      "last_cue_end_seconds": 5810.7300000000005,
+      "leading_interval_without_captions": 3.85,
+      "trailing_interval_without_captions": 1.269999999999527,
+      "max_overrun_seconds": 0,
+      "gaps_over_15_seconds": [],
+      "source_sha256": "08fd6d7cf65ce220bfad788a0ed291a770a531da7d0acfdd61c1c2d23676f9e2",
+      "srt_sha256": "7ada16f03f84d81f9f8c936628e6d93cff8725cb2aea2bf830b0e25a8e6f6f85",
+      "text_modified": false,
+      "literal_fidelity_certified": false,
+      "coverage_statement": "All returned cues retained. Full audio processed only for G03/G17. Uncaptioned intervals not certified silent."
+    },
+    {
+      "source_id": "G12",
+      "role": "T",
+      "duration_seconds": 3059,
+      "cues": 971,
+      "first_cue_seconds": 17.539,
+      "last_cue_end_seconds": 3051.01,
+      "leading_interval_without_captions": 17.539,
+      "trailing_interval_without_captions": 7.989999999999782,
+      "max_overrun_seconds": 0,
+      "gaps_over_15_seconds": [
+        {
+          "start": 2298.74,
+          "end": 2318.839
+        },
+        {
+          "start": 2420.42,
+          "end": 2436.5
+        }
+      ],
+      "source_sha256": "baaac53341c93855f752e2c268dae663303dbc6ee98394701f38f9dfd841530c",
+      "srt_sha256": "3eac644c5fa405f429bf4140bf618b03daa629f34a10df5ecdf8f1b9aae7a065",
+      "text_modified": false,
+      "literal_fidelity_certified": false,
+      "coverage_statement": "All returned cues retained. Full audio processed only for G03/G17. Uncaptioned intervals not certified silent."
+    },
+    {
+      "source_id": "G13",
+      "role": "T",
+      "duration_seconds": 6365,
+      "cues": 2222,
+      "first_cue_seconds": 49.5,
+      "last_cue_end_seconds": 6358.95,
+      "leading_interval_without_captions": 49.5,
+      "trailing_interval_without_captions": 6.050000000000182,
+      "max_overrun_seconds": 0,
+      "gaps_over_15_seconds": [
+        {
+          "start": 978.8100000000001,
+          "end": 1017.93
+        },
+        {
+          "start": 1020.68,
+          "end": 1070.19
+        },
+        {
+          "start": 4006.7,
+          "end": 4029.1
+        }
+      ],
+      "source_sha256": "45c058bf111464b9c08875b24e98f08367b76f07ea97f029b399661d6b072a0d",
+      "srt_sha256": "173349fd9fa3df53fe820ef84b30f110ab9f405e644652b4da04602dc86a3346",
+      "text_modified": false,
+      "literal_fidelity_certified": false,
+      "coverage_statement": "All returned cues retained. Full audio processed only for G03/G17. Uncaptioned intervals not certified silent."
+    },
+    {
+      "source_id": "G14",
+      "role": "V",
+      "duration_seconds": 5035,
+      "cues": 1345,
+      "first_cue_seconds": 0.0,
+      "last_cue_end_seconds": 5036.989,
+      "leading_interval_without_captions": 0,
+      "trailing_interval_without_captions": 0,
+      "max_overrun_seconds": 1.988999999999578,
+      "gaps_over_15_seconds": [
+        {
+          "start": 3767.9,
+          "end": 3797.9
+        }
+      ],
+      "source_sha256": "b2aa3b1d618069fae6eb5bdc72cf8dc861260b34bd14c0296c2b406ef29a677a",
+      "srt_sha256": "1ba8dad15fd82bd0e093784d8fa98174f717100a14bca1bfa5bd72d3e12c0ba5",
+      "text_modified": false,
+      "literal_fidelity_certified": false,
+      "coverage_statement": "All returned cues retained. Full audio processed only for G03/G17. Uncaptioned intervals not certified silent."
+    },
+    {
+      "source_id": "G15",
+      "role": "T",
+      "duration_seconds": 4508,
+      "cues": 1297,
+      "first_cue_seconds": 0.0,
+      "last_cue_end_seconds": 4496.74,
+      "leading_interval_without_captions": 0,
+      "trailing_interval_without_captions": 11.260000000000218,
+      "max_overrun_seconds": 0,
+      "gaps_over_15_seconds": [
+        {
+          "start": 8.2,
+          "end": 27.46
+        }
+      ],
+      "source_sha256": "f440d3078f9380b3e67eef7031acc10a149429ab81b69d4a35f6f3c28600246e",
+      "srt_sha256": "9290c64ae397fa9c495d24868a3c55623984353fbbb7c09557ecd7ff656ee863",
+      "text_modified": false,
+      "literal_fidelity_certified": false,
+      "coverage_statement": "All returned cues retained. Full audio processed only for G03/G17. Uncaptioned intervals not certified silent."
+    },
+    {
+      "source_id": "G16",
+      "role": "T",
+      "duration_seconds": 5840,
+      "cues": 2010,
+      "first_cue_seconds": 30.75,
+      "last_cue_end_seconds": 5830.779,
+      "leading_interval_without_captions": 30.75,
+      "trailing_interval_without_captions": 9.220999999999549,
+      "max_overrun_seconds": 0,
+      "gaps_over_15_seconds": [],
+      "source_sha256": "7c8cf0d0c9935cbe4d8b806bdba9fb1df0ff846cd398442d57cf8be75075217e",
+      "srt_sha256": "d9efedfb0f0308d892bc65da3b86b4af9b858e55c2e5e620b951bc820ddef64a",
+      "text_modified": false,
+      "literal_fidelity_certified": false,
+      "coverage_statement": "All returned cues retained. Full audio processed only for G03/G17. Uncaptioned intervals not certified silent."
+    },
+    {
+      "source_id": "G17",
+      "role": "T",
+      "duration_seconds": 5490,
+      "cues": 1113,
+      "first_cue_seconds": 0.0,
+      "last_cue_end_seconds": 5475.92,
+      "leading_interval_without_captions": 0,
+      "trailing_interval_without_captions": 14.079999999999927,
+      "max_overrun_seconds": 0,
+      "gaps_over_15_seconds": [],
+      "source_sha256": "64526717882772d9514607712777d31fdc4348fab66cb64547e6699101c243e4",
+      "srt_sha256": "8137955862f91eeef56dac873a3d604354b403fa79f5c588c1c2af86aa4a4c09",
+      "text_modified": false,
+      "literal_fidelity_certified": false,
+      "coverage_statement": "All returned cues retained. Full audio processed only for G03/G17. Uncaptioned intervals not certified silent."
+    },
+    {
+      "source_id": "G18",
+      "role": "T",
+      "duration_seconds": 5170,
+      "cues": 1842,
+      "first_cue_seconds": 128.429,
+      "last_cue_end_seconds": 5154.54,
+      "leading_interval_without_captions": 128.429,
+      "trailing_interval_without_captions": 15.460000000000036,
+      "max_overrun_seconds": 0,
+      "gaps_over_15_seconds": [],
+      "source_sha256": "0a84eaadedc1a94815c5e22b60a040f02956f06ed74d4cc2fc144e60f2365cac",
+      "srt_sha256": "4cd175a5367db32209b2770d6d304d03c6f12bc240e67b95f2c8cb7ec8ba0838",
+      "text_modified": false,
+      "literal_fidelity_certified": false,
+      "coverage_statement": "All returned cues retained. Full audio processed only for G03/G17. Uncaptioned intervals not certified silent."
+    }
+  ],
+  "S_content_accessed": false,
+  "paid_USD": 0
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "path": "artifacts/beto-v3/budget-ledger-current.json",
+    "snapshot": "artifacts\\beto-v3\\phase-b-gap-02\\review-run-01\\before\\budget-ledger-current.json",
+    "sha256": "339bfd503ff2eabf6cdab76ad416df53f60c42d5e587515d95f6bcfcc28d0c09"
+  },
+  {
+    "path": "artifacts/beto-v3/phase-B-summary.json",
+    "snapshot": "artifacts\\beto-v3\\phase-b-gap-02\\review-run-01\\before\\phase-B-summary.json",
+    "sha256": "5822c432c4dbef5ed0fc62d202442f233462564bb3496a3d2fde19b452cbacb8"
+  },
+  {
+    "path": "artifacts/beto-v3/annotation-progress.json",
+    "snapshot": "artifacts\\beto-v3\\phase-b-gap-02\\review-run-01\\before\\annotation-progress.json",
+    "sha256": "16660d5caeae04a03184796b85e446cec553e86e7d5bae05547dd438e47af49b"
+  },
+  {
+    "path": "artifacts/beto-v3/phase-b-gap-02/checkpoint.json",
+    "snapshot": "artifacts\\beto-v3\\phase-b-gap-02\\review-run-01\\before\\checkpoint.json",
+    "sha256": "19a60d2c32b55606cdf5879f772010630724c9e72bc054639b1017cd47290a03"
+  },
+  {
+    "path": "artifacts/beto-v3/phase-b-gap-02/blind-review-queue.json",
+    "snapshot": "artifacts\\beto-v3\\phase-b-gap-02\\review-run-01\\before\\blind-review-queue.json",
+    "sha256": "7176e440282745d44e6f5be9fddee05119b55fe13c421ba8429e85e1e0dff9b1"
+  },
+  {
+    "path": "docs/beto-v3/progress.md",
+    "snapshot": "artifacts\\beto-v3\\phase-b-gap-02\\review-run-01\\before\\progress.md",
+    "sha256": "393dc05b5305e3375145830b3ef7817cce37548fe158f419fcbbe2a8f6897708"
+  }
+]

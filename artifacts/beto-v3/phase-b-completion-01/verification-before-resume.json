@@ -1,0 +1,33 @@
+{
+  "integrity": "passed",
+  "checks": [
+    "V2 parent bytes preserved",
+    "H changes linked to source evidence",
+    "inherited reserve manifest preserved",
+    "S has metadata only",
+    "annotation evidence and cue spans exact",
+    "24 actual prior train/validation epoch metrics available"
+  ],
+  "C_ready": false,
+  "blockers": [
+    "Cádiz and Sánchez Carrión lack public captions",
+    "Cádiz audio acquisition HTTP 403; no ASR audio available",
+    "Only one validation video acquired; seven-class references not yet established",
+    "Discourse boundaries and annotation review pending"
+  ],
+  "annotation_status": {
+    "unique_new_units_with_proposal": 12,
+    "first_pass_only_resolvable": 4,
+    "pending_boundary_or_adjudication": 8,
+    "accepted_for_training": 0,
+    "V_references_frozen": false,
+    "S_references_frozen": false,
+    "second_model_calls": 0,
+    "provider_usage_tokens": null,
+    "usage_note": "Not exposed; no invented estimate",
+    "remaining_annotation_ceiling": 1188
+  },
+  "goal_reached": false,
+  "V3_macro_f1": null,
+  "final_S_opened": false
+}

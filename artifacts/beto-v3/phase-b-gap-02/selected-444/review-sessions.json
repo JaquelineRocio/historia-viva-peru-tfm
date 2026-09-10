@@ -1,0 +1,15 @@
+{
+  "first": [
+    "/root/first444_a",
+    "/root/first444_b",
+    "/root/first444_c"
+  ],
+  "second": [
+    "/root/second444_a",
+    "/root/second444_b",
+    "/root/second444_c"
+  ],
+  "fork_turns": "none",
+  "same_model_family": true,
+  "provider_tokens": null
+}

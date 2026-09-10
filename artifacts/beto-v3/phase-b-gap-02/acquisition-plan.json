@@ -1,0 +1,222 @@
+{
+  "sources": [
+    {
+      "source_id": "G01",
+      "role": "V",
+      "video_id": "ppkyuQewxHc",
+      "title": "Importancia de la Batalla de Junín y Ayacucho para el Perú y América Latina",
+      "institution": "RTV San Marcos",
+      "gap": "campanias_conflictos_militares",
+      "url": "https://www.youtube.com/watch?v=ppkyuQewxHc"
+    },
+    {
+      "source_id": "G02",
+      "role": "V",
+      "video_id": "Z0PTwkh7g98",
+      "title": "200 años de la batalla de Ayacucho. Conversatorio sobre el Virreinato de Perú",
+      "institution": "Asociación Cultural Héroes de Cavite",
+      "gap": "campanias_conflictos_militares;contexto_colonial_antecedentes",
+      "url": "https://www.youtube.com/watch?v=Z0PTwkh7g98"
+    },
+    {
+      "source_id": "G03",
+      "role": "T",
+      "video_id": "T6gALo8Ydgk",
+      "title": "La independencia peruana como representación",
+      "institution": "IEP",
+      "gap": "contexto_colonial_antecedentes;organizacion_consecuencias_republicanas;participacion_social_regional",
+      "url": "https://www.youtube.com/watch?v=T6gALo8Ydgk",
+      "relation_note": "G04-G06 conservatively one original presentation, not three independent works"
+    },
+    {
+      "source_id": "G04",
+      "role": "T",
+      "video_id": "iCcVFOm7b18",
+      "title": "Ilusiones de la transición - parte por verificar",
+      "institution": "IEP",
+      "gap": "contexto_colonial_antecedentes;organizacion_consecuencias_republicanas;participacion_social_regional",
+      "url": "https://www.youtube.com/watch?v=iCcVFOm7b18",
+      "relation_note": "G04-G06 conservatively one original presentation, not three independent works"
+    },
+    {
+      "source_id": "G05",
+      "role": "T",
+      "video_id": "uHYupQpLaWo",
+      "title": "Ilusiones de la transición - parte por verificar",
+      "institution": "IEP",
+      "gap": "contexto_colonial_antecedentes;organizacion_consecuencias_republicanas;participacion_social_regional",
+      "url": "https://www.youtube.com/watch?v=uHYupQpLaWo",
+      "relation_note": "G04-G06 conservatively one original presentation, not three independent works"
+    },
+    {
+      "source_id": "G06",
+      "role": "T",
+      "video_id": "77vOCZZOsVE",
+      "title": "Ilusiones de la transición - parte por verificar",
+      "institution": "IEP",
+      "gap": "contexto_colonial_antecedentes;organizacion_consecuencias_republicanas;participacion_social_regional",
+      "url": "https://www.youtube.com/watch?v=77vOCZZOsVE",
+      "relation_note": "G04-G06 conservatively one original presentation, not three independent works"
+    },
+    {
+      "source_id": "G07",
+      "role": "T",
+      "video_id": "5dS_YFeeROQ",
+      "title": "El fin del régimen Colonial en la ciudad de Trujillo, 1800-1820",
+      "institution": "MNAAHP",
+      "gap": "contexto_colonial_antecedentes;crisis_ideas_emancipadoras;participacion_social_regional",
+      "url": "https://www.youtube.com/watch?v=5dS_YFeeROQ",
+      "discovery_url": "https://mnaahp.cultura.pe/actividad/ciclo-de-conferencias-como-cuando-por-que-16"
+    },
+    {
+      "source_id": "G08",
+      "role": "T",
+      "video_id": "WI0PNN9G_-g",
+      "title": "Diputados suplentes del Perú en Cádiz",
+      "institution": "Bicentenario Perú - La Libertad",
+      "gap": "crisis_ideas_emancipadoras",
+      "url": "https://www.youtube.com/watch?v=WI0PNN9G_-g"
+    },
+    {
+      "source_id": "G09",
+      "role": "V",
+      "video_id": "4eTSESrqcLg",
+      "title": "El Perú en las Cortes de Cádiz",
+      "institution": "Comisión del Bicentenario",
+      "gap": "crisis_ideas_emancipadoras;liderazgos_diplomacia_proyectos",
+      "url": "https://www.youtube.com/watch?v=4eTSESrqcLg"
+    },
+    {
+      "source_id": "G10",
+      "role": "T",
+      "video_id": "tMI4UdRPE3M",
+      "title": "La República Inconclusa",
+      "institution": "PROYECTO PANACA",
+      "gap": "organizacion_consecuencias_republicanas",
+      "url": "https://www.youtube.com/watch?v=tMI4UdRPE3M"
+    },
+    {
+      "source_id": "G11",
+      "role": "T",
+      "video_id": "555Oelzd4kg",
+      "title": "Programa Historia del Perú - Juan Carlos La Serna",
+      "institution": "Biblioteca Nacional del Perú",
+      "gap": "organizacion_consecuencias_republicanas",
+      "url": "https://www.youtube.com/watch?v=555Oelzd4kg"
+    },
+    {
+      "source_id": "G12",
+      "role": "T",
+      "video_id": "dIISGb3b_WM",
+      "title": "Las Mujeres en la Independencia del Perú 1820-1824",
+      "institution": "Centro de Estudios Histórico Militares del Perú",
+      "gap": "participacion_social_regional",
+      "url": "https://www.youtube.com/watch?v=dIISGb3b_WM"
+    },
+    {
+      "source_id": "G13",
+      "role": "T",
+      "video_id": "P8S4UTFpRg0",
+      "title": "Cátedra del Bicentenario - Las Mujeres en la Independencia de Perú",
+      "institution": "CEPEG TV",
+      "gap": "participacion_social_regional",
+      "url": "https://www.youtube.com/watch?v=P8S4UTFpRg0"
+    },
+    {
+      "source_id": "G14",
+      "role": "V",
+      "video_id": "AhRbsKHsYac",
+      "title": "Independencia nacional de 1821 a 1824 - Ciclo de conferencias",
+      "institution": "MNAAHP",
+      "gap": "campanias_conflictos_militares",
+      "url": "https://www.youtube.com/watch?v=AhRbsKHsYac"
+    },
+    {
+      "source_id": "G15",
+      "role": "T",
+      "video_id": "9Hmi1MIKBWI",
+      "title": "Reformas borbónicas en el mundo atlántico español",
+      "institution": "Banrepcultural",
+      "gap": "contexto_colonial_antecedentes",
+      "url": "https://www.youtube.com/watch?v=9Hmi1MIKBWI"
+    },
+    {
+      "source_id": "G16",
+      "role": "T",
+      "video_id": "uZG4jJTbMaw",
+      "title": "La rebelión de Túpac Amaru, la resistencia",
+      "institution": "IIHS Universidad Veracruzana",
+      "gap": "campanias_conflictos_militares;participacion_social_regional",
+      "url": "https://www.youtube.com/watch?v=uZG4jJTbMaw"
+    },
+    {
+      "source_id": "G17",
+      "role": "T",
+      "video_id": "aTC1jy2bloU",
+      "title": "Cátedra Norbert Lechner - La rebelión de Túpac Amaru",
+      "institution": "Universidad Diego Portales",
+      "gap": "contexto_colonial_antecedentes;campanias_conflictos_militares",
+      "url": "https://www.youtube.com/watch?v=aTC1jy2bloU"
+    },
+    {
+      "source_id": "G18",
+      "role": "T",
+      "video_id": "wu6Zd6ZAXPU",
+      "title": "Caudillos y constituciones en la república temprana",
+      "institution": "KAS Perú",
+      "gap": "organizacion_consecuencias_republicanas;liderazgos_diplomacia_proyectos",
+      "url": "https://www.youtube.com/watch?v=wu6Zd6ZAXPU"
+    }
+  ],
+  "roles_fixed_before_content": true,
+  "minimum_duration_seconds": 1800,
+  "selection_basis": "exact-gaps-30min-works.csv; topics do not assign labels",
+  "S_closed": true,
+  "reserved_sources": [
+    {
+      "source_id": "GS01",
+      "video_id": "NxqcG7d6KRM",
+      "title": "Primera campaña a puertos intermedios",
+      "role": "S",
+      "url": "https://www.youtube.com/watch?v=NxqcG7d6KRM",
+      "family_id": "video-NxqcG7d6KRM",
+      "status": "reserved_before_content_access"
+    },
+    {
+      "source_id": "GS02",
+      "video_id": "KCa_vpTy_Io",
+      "title": "El rol del Congreso y la Independencia del Perú",
+      "role": "S",
+      "url": "https://www.youtube.com/watch?v=KCa_vpTy_Io",
+      "family_id": "video-KCa_vpTy_Io",
+      "status": "reserved_before_content_access"
+    },
+    {
+      "source_id": "GS03",
+      "video_id": "rR5VIF2yQVI",
+      "title": "La independencia en la sociedad de Huamanga",
+      "role": "S",
+      "url": "https://www.youtube.com/watch?v=rR5VIF2yQVI",
+      "family_id": "video-rR5VIF2yQVI",
+      "status": "reserved_before_content_access"
+    },
+    {
+      "source_id": "GS04",
+      "video_id": "pFsHwucOrMQ",
+      "title": "La rebelión de Huánuco de 1812",
+      "role": "S",
+      "url": "https://www.youtube.com/watch?v=pFsHwucOrMQ",
+      "family_id": "video-pFsHwucOrMQ",
+      "status": "reserved_before_content_access"
+    },
+    {
+      "source_id": "GS05",
+      "video_id": "aCsjx0B2e00",
+      "title": "Repensando el Bicentenario - Natalia Sobrevilla",
+      "role": "S",
+      "url": "https://www.youtube.com/watch?v=aCsjx0B2e00",
+      "family_id": "video-aCsjx0B2e00",
+      "status": "reserved_before_content_access"
+    }
+  ]
+}

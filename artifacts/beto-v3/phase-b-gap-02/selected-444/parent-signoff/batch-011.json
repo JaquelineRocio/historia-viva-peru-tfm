@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "segment_id": "G10-u015",
+      "method": "unsampled_T_full_target_read",
+      "first_sha256": "9c37eaa0d8ca819b004034cd288470ede91ced7f527625733fdd2cf98b685139"
+    },
+    {
+      "segment_id": "G10-u016",
+      "method": "unsampled_T_full_target_read",
+      "first_sha256": "5567210bf33bf93bafd48b98cc9f6971fd4cad9515285239a0cd7c7b6af10dd3"
+    },
+    {
+      "segment_id": "G10-u017",
+      "method": "unsampled_T_full_target_read",
+      "first_sha256": "767d54cfcd85a13874f61611283c4e9388b9abbbce9df836c7fdb561360e6bb3"
+    },
+    {
+      "segment_id": "G10-u018",
+      "method": "unsampled_T_full_target_read",
+      "first_sha256": "cf7d1751f0201b7d66c99d524bbea18eab94cfd9a1b9548c97a7c721de6b45ee"
+    },
+    {
+      "segment_id": "G10-u019",
+      "method": "unsampled_T_full_target_read",
+      "first_sha256": "366418e94502cd0fce15ef5d57f27bf56c2a0f6665cb64f0329bb98c6b164346"
+    },
+    {
+      "segment_id": "G10-u020",
+      "method": "unsampled_T_full_target_read",
+      "first_sha256": "f9279f237d5e12fb98e1a9d2735b0b370d63bb82eab1817f336d04473c88b9f0"
+    },
+    {
+      "segment_id": "G10-u021",
+      "method": "unsampled_T_full_target_read",
+      "first_sha256": "930ef47b0bee9f226ea6b3c1c6f02661a11f5ae4ebd9872ef7d1a30d59da0617"
+    },
+    {
+      "segment_id": "G10-u022",
+      "method": "agreement_evidence_rationale_boundary_check",
+      "first_sha256": "041e1433563ab5a735ad9b9c67ccae400aae98b11dacbfb4fac838299cb5aae1"
+    },
+    {
+      "segment_id": "G10-u023",
+      "method": "unsampled_T_full_target_read",
+      "first_sha256": "48905cbb3a21f0ed244980a4b54862c69ba4374eccc75d2794eff7bc8125ac65"
+    },
+    {
+      "segment_id": "G10-u024",
+      "method": "unsampled_T_full_target_read",
+      "first_sha256": "a0e685ab10453ff47ee3b3e2eb6209297c4b953ffd6edfc24b412698168728c7"
+    },
+    {
+      "segment_id": "G10-u025",
+      "method": "agreement_evidence_rationale_boundary_check",
+      "first_sha256": "ebdd1fd769db8dbfc1d9d5a8bf7fa1ce99d9fe71ddbe92a8e606d0d062e278d4"
+    },
+    {
+      "segment_id": "G10-u026",
+      "method": "unsampled_T_full_target_read",
+      "first_sha256": "2a30488bb3d51a2ffc62f1f4a26d292fae88ea05f801f1f5932e414f42ee329a"
+    },
+    {
+      "segment_id": "G10-u027",
+      "method": "unsampled_T_full_target_read",
+      "first_sha256": "553cf4fdaec5f30ee571df2793f3bd96b5081b45971e40a28cef786630551b86"
+    },
+    {
+      "segment_id": "G10-u028",
+      "method": "unsampled_T_full_target_read",
+      "first_sha256": "594dcb06db2856871217cd594904da40235a6bac8af8574e07ad4ae0da06d734"
+    },
+    {
+      "segment_id": "G10-u029",
+      "method": "unsampled_T_full_target_read",
+      "first_sha256": "799a788494d28b24e42b10bf2a97c7b5cea8579285f100704a819fdc21f7cbd4"
+    }
+  ],
+  "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+  "prior_predictions_consulted": false
+}

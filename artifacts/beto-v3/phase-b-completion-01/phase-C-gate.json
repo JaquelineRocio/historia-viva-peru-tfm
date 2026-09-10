@@ -1,0 +1,69 @@
+{
+  "command": [
+    "D:\\MASTER EN DESARROLLO CON IA\\PROYECTO FINAL\\outputs\\venv-ml\\Scripts\\python.exe",
+    "-X",
+    "utf8",
+    "scripts/check_beto_v3.py",
+    "--require-C"
+  ],
+  "exit_code": 2,
+  "stdout": {
+    "integrity": "passed",
+    "checks": [
+      "V2 parent bytes preserved",
+      "H changes linked to source evidence",
+      "inherited reserve manifest preserved",
+      "S has metadata only",
+      "annotation evidence and cue spans exact",
+      "24 actual prior train/validation epoch metrics available",
+      "69 saved blind second reviews and text-grounded adjudications",
+      "110 ASR second reviews and 110 adjudications verified",
+      "current development units hashes, labels and family-role separation",
+      "current phase-B coverage and blockers used, not obsolete pilot counts"
+    ],
+    "C_ready": false,
+    "blockers": [
+      "T/campanias_conflictos_militares: missing 2 references and 0 works",
+      "V/campanias_conflictos_militares: missing 25 references and 2 works",
+      "T/contexto_colonial_antecedentes: missing 19 references and 1 works",
+      "V/contexto_colonial_antecedentes: missing 16 references and 1 works",
+      "T/crisis_ideas_emancipadoras: missing 13 references and 0 works",
+      "V/crisis_ideas_emancipadoras: missing 12 references and 0 works",
+      "T/liderazgos_diplomacia_proyectos: missing 9 references and 0 works",
+      "V/liderazgos_diplomacia_proyectos: missing 17 references and 0 works",
+      "T/organizacion_consecuencias_republicanas: missing 13 references and 0 works",
+      "V/organizacion_consecuencias_republicanas: missing 17 references and 0 works",
+      "V/participacion_social_regional: missing 8 references and 0 works",
+      "T: 93/300; missing 207 accepted references",
+      "T: unique reference coverage 93/104 = 0.8942, below operational 0.90 target",
+      "V: 99/200; missing 101 accepted references",
+      "V: unique reference coverage 99/116 = 0.8534, below operational 0.90 target",
+      "T: 2/12 acquired/transcribed works >=30min; missing 10",
+      "V: 2/6 acquired/transcribed works >=30min; missing 4",
+      "Final H/T/V/S source-admission and dataset manifests not fully frozen",
+      "S remains metadata-only: 1/6 new video works registered; missing 5",
+      "29 units without a unique accepted reference; retain inventory"
+    ],
+    "annotation_status": {
+      "unique_new_units_with_proposal": 243,
+      "accepted_references": {
+        "T": 93,
+        "V": 99,
+        "auxiliary": 14
+      },
+      "accepted_for_training": 0,
+      "second_review_units": 179,
+      "same_model_family": true,
+      "pending": 29,
+      "V_references_frozen": false,
+      "S_references_frozen": false,
+      "provider_usage_tokens": null,
+      "remaining_annotation_ceiling": 957
+    },
+    "goal_reached": false,
+    "V3_macro_f1": null,
+    "final_S_opened": false
+  },
+  "stderr": "",
+  "training_runs_launched": 0
+}

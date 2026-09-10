@@ -1,0 +1,637 @@
+{
+  "A01-N01-w0-u01": {
+    "segment_id": "A01-N01-w0-u01",
+    "input_sha256": "973dfb3199fa7b4c9d70a8482668c822205ebdbabc5da2bf4f580e68726cb4d7",
+    "accepted_label": "no_relevante",
+    "evidence": "los borbones emprendieron una serie de reformas conocidas como las reformas borbónicas para tratar de recuperar poder y encumbrar a España nuevamente como potencia mundial.",
+    "evidence_span": [
+      340,
+      512
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "La presentación explica recuperación imperial del XVIII y anuncia efectos territoriales; no desarrolla en este objetivo el vínculo causal con la independencia. Se conserva la introducción y sus errores ASR, sin heredar el tema de otras ventanas.",
+    "training_eligible": false,
+    "first-pass_sha256": "919ece73b5af14e3d6b742f2112974362231aba7db51a40e8f759bbd340170e5",
+    "second-review_sha256": "2636072a9de3e900f09f6c0e80208a377a8389ade787f912203e66d06512e325",
+    "flags": [
+      "extraction_defect",
+      "paratext_mixed",
+      "scope_boundary"
+    ]
+  },
+  "A01-N01-w0-u02": {
+    "segment_id": "A01-N01-w0-u02",
+    "input_sha256": "81478ec20c77bed46faf0cec369c2e4ca4854d4f2c76edbe78e40c7050faa7b3",
+    "accepted_label": "no_relevante",
+    "evidence": "entra Felipe V a gobernar España.",
+    "evidence_span": [
+      108,
+      141
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "El objetivo breve trata de sucesión dinástica y Felipe V; el inicio cortado no oculta una explicación pertinente de la independencia en el texto disponible.",
+    "training_eligible": false,
+    "first-pass_sha256": "27ffd0f1e9d95cfc7e5a57a37c3584514f21f10f88cd615e57f29d9956bdd1e7",
+    "second-review_sha256": "4aa76b97a4c4175a05577e9f56d9e8b4850baf3a496ecffce3537a04c3d9aa84",
+    "flags": [
+      "boundary_issue",
+      "extraction_defect"
+    ]
+  },
+  "A01-N01-w0-u03": {
+    "segment_id": "A01-N01-w0-u03",
+    "input_sha256": "5c28cc68e642aa765d20c0bd8352537f2e0cd8640e37e8af3a09df7e055fb192",
+    "accepted_label": "no_relevante",
+    "evidence": "Su gobierno significó para España una marcada decadencia, caracterizada por derrotas militares y una grave crisis económica.",
+    "evidence_span": [
+      410,
+      534
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "Domina la decadencia española bajo Carlos II y la comparación europea, anteriores al alcance y sin conexión emancipadora desarrollada.",
+    "training_eligible": false,
+    "first-pass_sha256": "e745cbabb2f990a2d6ba726158df42dddf986293f224cde878be6a101d11940c",
+    "second-review_sha256": "d866357b939f3cd94b3ca89d2109be5829c9596af7d58df18fd5de1d6fafc032",
+    "flags": [
+      "extraction_defect",
+      "scope_boundary"
+    ]
+  },
+  "A01-N01-w0-u04": {
+    "segment_id": "A01-N01-w0-u04",
+    "input_sha256": "7ed210b6010163b826750e1ad8f5d3d6632f254ab889a5a2a90df3e0af8e61fc",
+    "accepted_label": "no_relevante",
+    "evidence": "Esto, debino en una confrontación bélica que duraría más de una década y se llamaría la Guerra de Sucesión Española.",
+    "evidence_span": [
+      252,
+      368
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "La guerra sucesoria europea por el trono no es una campaña del proceso peruano. No se incorpora contexto de la obra para volverla relevante.",
+    "training_eligible": false,
+    "first-pass_sha256": "cc8143ae49bd63d4929fe93fcf571008e9f4ecee112480d56d92cdeca2e8c29e",
+    "second-review_sha256": "6cafd0245f9b34491ef05374037b1483f990261d035dc1009972b2affe3cf0e9",
+    "flags": [
+      "extraction_defect",
+      "scope_boundary"
+    ]
+  },
+  "A01-N01-w0-u05": {
+    "segment_id": "A01-N01-w0-u05",
+    "input_sha256": "39a4f3eafded0d774dd4650424fa218cb4ae2a18c0ead4f401e4f97fb89faf74",
+    "accepted_label": "no_relevante",
+    "evidence": "La guerra concluyó en 1713 con la paz de Utrej.",
+    "evidence_span": [
+      0,
+      47
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "Las consecuencias comerciales y dinásticas de Utrecht se explican por sí mismas; la última cláusula incompleta no permite inventar su continuación emancipadora.",
+    "training_eligible": false,
+    "first-pass_sha256": "436749e4872f79a55800dc28cb1d945e9cf08c37aa4e41bf1a882291c33868d3",
+    "second-review_sha256": "a4be406e01597ae4d21ef75197bfb8b53db942b7819cc0f8cf6bf796425f8c6c",
+    "flags": [
+      "boundary_issue",
+      "extraction_defect",
+      "scope_boundary"
+    ]
+  },
+  "A01-N01-w1-u01": {
+    "segment_id": "A01-N01-w1-u01",
+    "input_sha256": "1ee7a576fe8c29d63d0e34b41d70475140b22aaa157507aad90f38f282d50b58",
+    "accepted_label": null,
+    "evidence": "de los rey Carlos III empezó a maquinar la expulsión de los jesuitas de sus dominios.",
+    "evidence_span": [
+      833,
+      918
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": true,
+    "rationale": "Persiste duda de alcance: se describen educación y poder jesuita y oposición de la corona, pero el objetivo no fija cuándo ocurre esa estructura ni desarrolla su nexo emancipador. La referencia a Carlos III no basta para resolver el objetivo completo; no se fuerza no_relevante.",
+    "training_eligible": false,
+    "first-pass_sha256": "84dacfb7fc368a6f98f7883a4af11104a58cf29062c99e3b693e965d66ff08f6",
+    "second-review_sha256": "97edfeaba12a4b602bcc904b07a1665d5aed6f5266362b606f2d22c00c62611d",
+    "flags": [
+      "ambiguous",
+      "blocking_scope_boundary",
+      "boundary_issue",
+      "extraction_defect"
+    ]
+  },
+  "A01-N01-w1-u02": {
+    "segment_id": "A01-N01-w1-u02",
+    "input_sha256": "e3469162801a3ca635cdd6c0d91e2ba4d9456d178b77fa3d84918f5fdd3a7947",
+    "accepted_label": "no_relevante",
+    "evidence": "los virreyes parece que vieron en los jesuitas como un poder paralelo que desafiaba el poder político que ellos tenían.",
+    "evidence_span": [
+      466,
+      585
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "El poder paralelo jesuita y los episodios de 1759–1766 no desarrollan consecuencias para el proceso definido. El mecanismo estatal anterior no hereda relevancia de otra ventana.",
+    "training_eligible": false,
+    "first-pass_sha256": "464871b83d91a597b7deb4a305b40c44214324aece75557eea594c5b199c2fe7",
+    "second-review_sha256": "bb0a59034b7d7ba76e1853b67d98902668a3476dc26d022311a134af5c98f85b",
+    "flags": [
+      "extraction_defect",
+      "scope_boundary"
+    ]
+  },
+  "A01-N01-w1-u03": {
+    "segment_id": "A01-N01-w1-u03",
+    "input_sha256": "c0342a1f719715419b40582725c244feb41aabeab150447cea15129ae4b73681",
+    "accepted_label": "no_relevante",
+    "evidence": "Finalmente, en 1767, Carlos III decretó la expulsión de los jesuitas de España y sus dominios.",
+    "evidence_span": [
+      431,
+      525
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "Se explica la expulsión de 1767 y su comunicación secreta. La enumeración de motines no constituye agencia emancipadora en este objetivo.",
+    "training_eligible": false,
+    "first-pass_sha256": "73c8e3e3ce25fd31e2435e6539624f13d5c047f9c2ac6c4e97ecb7439ccfa75c",
+    "second-review_sha256": "2906d37e9fb6e72b5fbaacf8dd4775fef3f50f73bfc6d4566b125eeed66c5f77",
+    "flags": [
+      "extraction_defect",
+      "scope_boundary"
+    ]
+  },
+  "A01-N01-w1-u04": {
+    "segment_id": "A01-N01-w1-u04",
+    "input_sha256": "bcc14d467c91fb5268dbff2483c20400c713e1b53e85b92df8c7113c38212d71",
+    "accepted_label": "no_relevante",
+    "evidence": "Para evitar desórdenes y oposiciones como los ocurridos en la colonia portuguesa de Brasil, la medida se mantuvo secreta hasta el último momento.",
+    "evidence_span": [
+      0,
+      145
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "El objetivo original explica el secreto de la expulsión de 1767 para evitar disturbios. El corte final se conserva; el tema anterior queda reconocible sin incorporar palabras del vecino.",
+    "training_eligible": false,
+    "first-pass_sha256": "d9ef8e122244d772c417ecffafcb2af09408b1bb19e890cc6bb9088c18939b6f",
+    "second-review_sha256": "4e1d153cb65ff13ecd846cafb10c6f6f80ea780ffead1b766b7fa5433810fab3",
+    "flags": [
+      "boundary_issue",
+      "extraction_defect",
+      "scope_boundary"
+    ]
+  },
+  "A01-N01-w1-u05": {
+    "segment_id": "A01-N01-w1-u05",
+    "input_sha256": "72e82b52c52a6af4d5920554ced5d5cb47d389acba70f4efbc48cd681cadf45e",
+    "accepted_label": "no_relevante",
+    "evidence": "en 1767 cumplió la orden real de desterrar de nuestro territorio a los jesuitas.",
+    "evidence_span": [
+      36,
+      116
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "El objetivo original describe confiscaciones y traslado de jesuitas; nombrar a Vizcardo no desarrolla aquí su papel en la independencia. No se traslada etiqueta desde su biografía externa.",
+    "training_eligible": false,
+    "first-pass_sha256": "ee3341d9ffa21949b6f1b11917098e9ed2112d247df25d793f1a2d3513438803",
+    "second-review_sha256": "e04374dd2f90f6224936c70cf6f07afaf6001581239ab2b4c2b6af8a0c687cc8",
+    "flags": [
+      "boundary_issue",
+      "extraction_defect",
+      "scope_boundary"
+    ]
+  },
+  "A01-N01-w2-u01": {
+    "segment_id": "A01-N01-w2-u01",
+    "input_sha256": "094ddc08b6765d29f43b561f7b298dd58a8e414e44c7cc788060d33ccc8b9248",
+    "accepted_label": null,
+    "evidence": "En el aspecto social, los borbones estuvieron interesados en ejercer el control, en controlar a la población y mantener el orden público.",
+    "evidence_span": [
+      592,
+      729
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": true,
+    "rationale": "Castas y control del ocio corresponden potencialmente a estructuras coloniales, pero el comienzo fiscal está deteriorado y falta nexo temporal/causal suficiente dentro del objetivo. La fecha de Amat no se añade desde conocimiento externo para decidir.",
+    "training_eligible": false,
+    "first-pass_sha256": "8d4017f234595dafb5e8127718b87d01bcc265bfb091b9d0342bfb5309e4691e",
+    "second-review_sha256": "8c6f582aa92002ecb0f4d7e0646eb59efc5a629bcb6c26f8f18d263c9b482d9c",
+    "flags": [
+      "ambiguous",
+      "blocking_scope_boundary",
+      "boundary_issue",
+      "extraction_defect"
+    ]
+  },
+  "A01-N01-w2-u02": {
+    "segment_id": "A01-N01-w2-u02",
+    "input_sha256": "8ac90ccfe244d8e3ed353f9840b85e01ae7cfd745ec1a4350ea8b2eedde73103",
+    "accepted_label": "contexto_colonial_antecedentes",
+    "evidence": "Las reformas burbónicas propiciaron la decadencia de la nobleza Criolla, además de la mutilación del territorio con la creación de nuevos birreinatos. A nivel continental provocaron el malestar de las élites criollas. Estos sectores sociales finalmente rompieron con la metrópoli y poco después lideraron el proceso emancipador.",
+    "evidence_span": [
+      577,
+      905
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "La explicación de control y reformas concluye explícitamente en malestar criollo y ruptura emancipadora. La agencia criolla es efecto de las estructuras descritas; por eso domina antecedentes.",
+    "training_eligible": false,
+    "first-pass_sha256": "687f0f9951e25cba1f94b0bb4f51cf3d1b9df75751d8d485d4ee4d25cc31cd8a",
+    "second-review_sha256": "a9d045517e54ba403fa561c965091004327aa92cf74d5bcfaae86284153e066d",
+    "flags": [
+      "extraction_defect"
+    ]
+  },
+  "A01-N01-w2-u03": {
+    "segment_id": "A01-N01-w2-u03",
+    "input_sha256": "a8695419eb870e63010caacda8a903bc9f7bc9cd81e3ed9812e72861cfde0878",
+    "accepted_label": null,
+    "evidence": "Pero por otro fue un acompañante o precipitante porque al promover cierta apertura que llegaran productos británicos, y tú sabes que con los productos también llegan ideas, modas políticas, entonces hicieron ver a los crioyos americanos que había otras formas de gobierno, que había países donde la economía se organizaba de forma más eficiente.",
+    "evidence_span": [
+      332,
+      677
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": true,
+    "rationale": "La apertura que transmite ideas y alternativas de gobierno convive con desplazamiento de criollos y carga fiscal como causas de separación. No hay dominancia suficientemente clara entre crisis/ideas y antecedentes; discrepancia preservada sin usar la cuota para decidir.",
+    "training_eligible": false,
+    "first-pass_sha256": "2fc645f24d1a0c6a0a8e7f4d7082ae80d6de89c7d23187df7c9406eacbf8bd99",
+    "second-review_sha256": "7fbeb3970a3a0b076149cabcbe4a8e9f5ce1f27e6b7fd9b0d4215ea3ee9e4a3e",
+    "flags": [
+      "ambiguous",
+      "extraction_defect"
+    ]
+  },
+  "A01-N01-w2-u04": {
+    "segment_id": "A01-N01-w2-u04",
+    "input_sha256": "06259d105a782383a8e4e33b724fc79d559479c0ee031e59a225886470d69512",
+    "accepted_label": "contexto_colonial_antecedentes",
+    "evidence": "La reforma borbónica del siglo XVIII fue un esfuerzo por modernizar España y sus colonias, pero desde la perspectiva de una monarquía absoluta.",
+    "evidence_span": [
+      665,
+      808
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "El balance del absolutismo y la debilidad imperial enlaza expresamente con la independencia de 1824. Inglaterra y Francia sirven al contraste del orden imperial, no a una apropiación de ideas desarrollada.",
+    "training_eligible": false,
+    "first-pass_sha256": "69497fb729d2c522c68e3fbc97f22b69ea551e5915cefd4113382c22cd975714",
+    "second-review_sha256": "a4861f8cee0aed46ba818ec124d8f62dbf1dbef10cc557a9dcfd6e2ac99764b0",
+    "flags": [
+      "extraction_defect"
+    ]
+  },
+  "A01-N01-w2-u05": {
+    "segment_id": "A01-N01-w2-u05",
+    "input_sha256": "ac4e3479ef227202f639925296f9a9e1956ad4b027150b5c7d983a0e889fad9c",
+    "accepted_label": "contexto_colonial_antecedentes",
+    "evidence": "Paradójicamente, las reformas borbónicas que buscaban recuperar el poder de España terminaron convirtiéndose en causas que motivaron nuestra independencia.",
+    "evidence_span": [
+      203,
+      358
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "La preferencia por peninsulares y perjuicio criollo se identifican expresamente como causas de independencia. El crédito final potencialmente espurio del ASR se conserva y se marca; no determina la clase.",
+    "training_eligible": false,
+    "first-pass_sha256": "e5652f5ddbc24fd2720c3c8ff4a37d599b5f7043d2b0fca3b95ca720ece9556e",
+    "second-review_sha256": "ba5469231908aa8928d8e735362c665ab6a1ac2397fedd3b43f94feec862a9ce",
+    "flags": [
+      "paratext_mixed"
+    ]
+  },
+  "A01--Ma1tt97eFg-w0-u01": {
+    "segment_id": "A01--Ma1tt97eFg-w0-u01",
+    "input_sha256": "a36aefc486da413424bac2dbcf70cae841ab33e5d5a6c91a211ce65eadd1625c",
+    "accepted_label": "liderazgos_diplomacia_proyectos",
+    "evidence": "Fue un abogado brillante, un extraordinario orador y un político que defendió la República como el mejor sistema gobierno para nuestro país.",
+    "evidence_span": [
+      742,
+      882
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "La introducción sí describe una opción política concreta de Sánchez Carrión, defender la república como régimen para el país. El paratexto contemporáneo no elimina esa contribución histórica explícita.",
+    "training_eligible": false,
+    "first-pass_sha256": "54f06521485d6719717d26196c6bb07e25919fbe60d94719de5ebc8f512f99b3",
+    "second-review_sha256": "80ac9c7aa4170627859aedf2411a74d39047fc16d4d53ba508fa6db9f79eb62f",
+    "flags": [
+      "extraction_defect",
+      "paratext_mixed"
+    ]
+  },
+  "A01--Ma1tt97eFg-w0-u02": {
+    "segment_id": "A01--Ma1tt97eFg-w0-u02",
+    "input_sha256": "0a1c7846a3cec4fd5abb647a0882ee1b9696e587ca291d70940a96d7ea3c63ec",
+    "accepted_label": null,
+    "evidence": "su pensamiento filosófico, político e ideológico, fue la base, el fundamento para que el Perú se constituya como república.",
+    "evidence_span": [
+      177,
+      300
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": true,
+    "rationale": "La valoración del pensamiento como fundamento de la república no desarrolla sus argumentos, actuación o diseño. Se conserva la discrepancia de suficiencia entre atribución general y proyecto político, sin aceptar sólo por el nombre.",
+    "training_eligible": false,
+    "first-pass_sha256": "ba92570f85151447f601627d107d1945c1ac942862e6fa7beb45a0b3fc1085a5",
+    "second-review_sha256": "4e218619c1f94add02cd39e11cff53a42c2fe48b4d775566c269bddfd01e7009",
+    "flags": [
+      "ambiguous",
+      "insufficient_specificity"
+    ]
+  },
+  "A01--Ma1tt97eFg-w0-u03": {
+    "segment_id": "A01--Ma1tt97eFg-w0-u03",
+    "input_sha256": "4f9246e46cd8b2964e495ba1cd682318f5d2196b36d4f13404b214119d2823e4",
+    "accepted_label": "liderazgos_diplomacia_proyectos",
+    "evidence": "mientras en las nacientes republicas ispanoamericanas se cuestionaba o se preguntaba en qué forma de gobierno iban a asumir estas, Sánchez Carrión en Arboló con un valor con una oratoria muy extraordinaria en las sesiones del primer Congreso Constituyente, la importancia de la defensa del sistema republicano.",
+    "evidence_span": [
+      56,
+      366
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "La actuación en el Congreso defiende la opción republicana cuando se disputa la forma de gobierno; no trata de funcionamiento institucional ya implantado.",
+    "training_eligible": false,
+    "first-pass_sha256": "cfa3aa12426e2afc52cd8460cca98830780ac670877cad3b1eeb907c15001abe",
+    "second-review_sha256": "9c0fe0238ce044a80f7b0ff2ba2bff98484c49dfc54b03b789c887d876ffb462",
+    "flags": [
+      "extraction_defect"
+    ]
+  },
+  "A01--Ma1tt97eFg-w0-u04": {
+    "segment_id": "A01--Ma1tt97eFg-w0-u04",
+    "input_sha256": "81029cb3dad77ab354a8bf1c4828771c4586a0c2271e992f92e20cfc080e9134",
+    "accepted_label": "no_relevante",
+    "evidence": "José Faustino Sánchez Carrión nació el 13 de febrero de 1787 en Guamachuco, un remoto pueblecito colonial ubicado en la entonces intendencia de Trujillo, actual provincia Sánchez Carrión, departamento de la libertad.",
+    "evidence_span": [
+      0,
+      216
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "Nacimiento, lugares, propiedad y cargos del padre son datos biográficos/locales sin explicar incidencia en la independencia o una estructura colonial general. Las fechas del alcance no bastan por sí solas.",
+    "training_eligible": false,
+    "first-pass_sha256": "e0d4f5e0b1b266ff5cfc7a0bf74f9acd5bdd900d5c5113839c777cb52cb80dc3",
+    "second-review_sha256": "db3b81eb3962ab1b1bc8fc6be3787f6451990f6d73c2e299be0c942cc2a0d8b2",
+    "flags": [
+      "extraction_defect"
+    ]
+  },
+  "A01--Ma1tt97eFg-w0-u05": {
+    "segment_id": "A01--Ma1tt97eFg-w0-u05",
+    "input_sha256": "52f4c90be277cc9ec407a52be341cc93da89027fa245fa21b9c6284133ea5f02",
+    "accepted_label": null,
+    "evidence": "Para ingresar al seminario de San Carlos y San Marcelo ya que tienen una serie de requisitos, por ejemplo, ser hijo de cristianos reconociados.",
+    "evidence_span": [
+      818,
+      961
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": true,
+    "rationale": "El único requisito de ingreso al seminario aparece al final de una secuencia familiar y patrimonial y queda abierto. No se desarrolla lo suficiente como mecanismo colonial dominante para resolver R1; se conserva pendiente por frontera/suficiencia.",
+    "training_eligible": false,
+    "first-pass_sha256": "f66778c006f85d407447cbf03d9526894d62d11890a7a999349e9ce983ae9d11",
+    "second-review_sha256": "4451ee18642e76fb07f8eaa54a06589b4f61bbeddaecd1637859d99b07430c67",
+    "flags": [
+      "ambiguous",
+      "blocking_boundary",
+      "extraction_defect",
+      "insufficient_specificity"
+    ]
+  },
+  "A01--Ma1tt97eFg-w1-u01": {
+    "segment_id": "A01--Ma1tt97eFg-w1-u01",
+    "input_sha256": "994f45a6a6ace55f661c7a3975bc821ede691bfdaa96f48b1f91a96e58e05353",
+    "accepted_label": "liderazgos_diplomacia_proyectos",
+    "evidence": "Sanchez Carrión niega la posibilidad de una monarquía constitucional no solamente porque le parezca mala, sino porque teme, ya que en el Perú hay una cultura servil, esa cultura servil conjugada con una monarquía constitucional lo que iba a pasar rápidamente es que la gente iba a terminar favoreciendo una monarquía absolutista.",
+    "evidence_span": [
+      245,
+      574
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "La cultura servil es argumento explícito contra la monarquía constitucional en una polémica entre proyectos, y no objeto autónomo de descripción colonial.",
+    "training_eligible": false,
+    "first-pass_sha256": "03f7b0e12b5e0c75440976b6e13bddb95daa10bc250840dfec98330a4b384fb0",
+    "second-review_sha256": "9901e74a196904b5a3ae52ecb7467b45dfba1e3cbd4c5f4e9b96cf6cf16f027d",
+    "flags": [
+      "boundary_issue",
+      "extraction_defect"
+    ]
+  },
+  "A01--Ma1tt97eFg-w1-u02": {
+    "segment_id": "A01--Ma1tt97eFg-w1-u02",
+    "input_sha256": "bdea3ef400bef54f9ed4695e9c833499cbff15e2ba9f33ee618b5044586b87c5",
+    "accepted_label": "liderazgos_diplomacia_proyectos",
+    "evidence": "Lo que plantea Montiagudo es que la sociedad peruana requiere de un gobierno fuerte, pero también de libertad. Y eso se lo da la monarquía constitucional.",
+    "evidence_span": [
+      587,
+      741
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "El diagnóstico de fragmentación social fundamenta la monarquía constitucional y el ejecutivo fuerte propuestos por Monteagudo. No describe implementación de una institución republicana.",
+    "training_eligible": false,
+    "first-pass_sha256": "45514efe9205b0d0b1d74f2a772d89fd598a2bdc11690de10ceb631aa9a910f3",
+    "second-review_sha256": "ca6ec8c8abbbac96940d6986bf5bffbbefac203da6b1d6e250303f2f99d1661f",
+    "flags": [
+      "extraction_defect"
+    ]
+  },
+  "A01--Ma1tt97eFg-w1-u03": {
+    "segment_id": "A01--Ma1tt97eFg-w1-u03",
+    "input_sha256": "6d8357a0e1a2208d68bbf0e8074949959c0b6a5088f2fd4ee8f4b7e31c11e7f2",
+    "accepted_label": "liderazgos_diplomacia_proyectos",
+    "evidence": "La clase dirigente local se dividió y la aristocracia peruana dudó en seguir respaldando el proyecto emancipador. El militar argentino pensó que era necesario solicitar el apoyo de Bolívar, el gran libertador del norte.",
+    "evidence_span": [
+      354,
+      573
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "La debilidad militar y las dudas dirigentes explican la decisión de San Martín de pedir apoyo a Bolívar; no hay una secuencia operacional de campaña. El crédito ASR intercalado se marca como defecto no determinante.",
+    "training_eligible": false,
+    "first-pass_sha256": "d6cf96a5765b3726aa147a566fed6643a131e5a5165d60e6191c00376ee75734",
+    "second-review_sha256": "5cc6498e8424bd5e06f100a077b6a88d63c37c315cd646deb758746f5eea2316",
+    "flags": [
+      "boundary_issue",
+      "extraction_defect",
+      "paratext_mixed"
+    ]
+  },
+  "A01--Ma1tt97eFg-w1-u04": {
+    "segment_id": "A01--Ma1tt97eFg-w1-u04",
+    "input_sha256": "cee899aed3a3faeab98bda5773073906ea8e0e90b7f7ec011b90353f3cd5d212",
+    "accepted_label": "liderazgos_diplomacia_proyectos",
+    "evidence": "Montiagudo, su controvertido ministro, había sido expulsado y los republicanos liberales habían bloqueado los ideales monárquicos. Era el triunfo de Sánchez Carrión.",
+    "evidence_span": [
+      553,
+      718
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "Encuentro, pérdida de apoyos y bloqueo del proyecto monárquico explican una disputa de conducción política. El periódico se menciona sin desarrollar aquí doctrina o funcionamiento institucional.",
+    "training_eligible": false,
+    "first-pass_sha256": "223d9e3527e823be735f44428d5e572ab20259c9b360259dc0959b65eb2c1ed3",
+    "second-review_sha256": "621b602a9c6d12b6970c862337a41adc89555b742c07f5365488de9a9fc4a968",
+    "flags": [
+      "extraction_defect"
+    ]
+  },
+  "A01--Ma1tt97eFg-w1-u05": {
+    "segment_id": "A01--Ma1tt97eFg-w1-u05",
+    "input_sha256": "c95763bb7383bbe10d84617fc98a75c19d564db6249a076b199302b6d150ed7e",
+    "accepted_label": "liderazgos_diplomacia_proyectos",
+    "evidence": "Utilizó este periódico de la Aveja Republicana para hacer la campaña mediática contra este protectorado",
+    "evidence_span": [
+      0,
+      103
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "La campaña periodística contra el Protectorado se explica como instrumento de oposición que contribuye a la salida de San Martín. La transferencia al Congreso cierra esa conducción disputada; no basta para organización republicana.",
+    "training_eligible": false,
+    "first-pass_sha256": "cd89c7791887fd4cbfd806c674a2a0fd02338bd6c6e1bfe2cb6bd6e0bf35048a",
+    "second-review_sha256": "e7d4068763e13aed01399e9ef5c45359ab9adfd588b143ede6b0c2cd783eee10",
+    "flags": [
+      "extraction_defect"
+    ]
+  },
+  "A01--Ma1tt97eFg-w2-u01": {
+    "segment_id": "A01--Ma1tt97eFg-w2-u01",
+    "input_sha256": "ee50946eb5b2f43556e4d6050cda146d011d2b7b09a7d5b210d3d6a3adbd50dc",
+    "accepted_label": null,
+    "evidence": "La circunstancia de la muerte de Sanchez Carrion realmente no está muy clara. La circunstancia de la muerte. Hay una serie de versiones que se tejen sobre un envenenamiento, sobre una...",
+    "evidence_span": [
+      702,
+      888
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": true,
+    "rationale": "Las muertes y sospechas de complot pertenecen al periodo, pero la secuencia no termina de explicar su función política y acaba en una hipótesis incompleta. El acuerdo en null se mantiene tras revisar la frontera real.",
+    "training_eligible": false,
+    "first-pass_sha256": "92b6f11cb23c2dd565f1f33b1220a4828febfcec9668e501fcca4ac16a9d1485",
+    "second-review_sha256": "4731a3d53520f37730b15d0a5585f81893160542df70840f8f29cf47f3629763",
+    "flags": [
+      "ambiguous",
+      "blocking_boundary",
+      "extraction_defect",
+      "insufficient_specificity"
+    ]
+  },
+  "A01--Ma1tt97eFg-w2-u02": {
+    "segment_id": "A01--Ma1tt97eFg-w2-u02",
+    "input_sha256": "8b153f93df5e0703e1fbecbb429a49f476afd9e70aa3faa3e272ec34e08680c2",
+    "accepted_label": "liderazgos_diplomacia_proyectos",
+    "evidence": "Entonces también en la política también es bastante importante tumbarte a tu enemigo a base de los rumores y es un rumor bastante potente el haber tratado, el haber asesinado a una persona cercana a Bolívar, ¿no?",
+    "evidence_span": [
+      813,
+      1025
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "El relato de autopsia refuta un rumor y el cierre explica su utilidad para desacreditar enemigos ligados a Bolívar. Esa función política explícita permite clasificarlo, sin certificar la exactitud médica o histórica del relato.",
+    "training_eligible": false,
+    "first-pass_sha256": "f54f58cfab90dfbb6bcdc671494f1ec05cec17a8c7b61ac3fd52eb115755feec",
+    "second-review_sha256": "43d2de42120dd704aacf59735e4ad160e222993f4c0b9d28060ee2c933bca356",
+    "flags": [
+      "boundary_issue",
+      "extraction_defect"
+    ]
+  },
+  "A01--Ma1tt97eFg-w2-u03": {
+    "segment_id": "A01--Ma1tt97eFg-w2-u03",
+    "input_sha256": "457dd1f8246fcfb7159cef16e3cd2310e89f6c8189113def378439b6a7512a19",
+    "accepted_label": "liderazgos_diplomacia_proyectos",
+    "evidence": "Es uno de los que pensó el futuro del Perú a partir de la independencia de cómo se tenía que construir el sistema político y estuvo a favor de la libertad.",
+    "evidence_span": [
+      405,
+      560
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "Dentro del homenaje se desarrolla la construcción de libertad mediante aprendizaje republicano frente a cultura servil: proyecto de sistema político, no funcionamiento o resultado institucional medido.",
+    "training_eligible": false,
+    "first-pass_sha256": "6be3fd6f15536ac521b7c8f840511229fecb87a659479b962fe74d94dac5b37d",
+    "second-review_sha256": "7160d96f7026d4f1bc9162afd8dafcebfd01566e8c69cc105c9a25a93762d863",
+    "flags": [
+      "paratext_mixed"
+    ]
+  },
+  "A01--Ma1tt97eFg-w2-u04": {
+    "segment_id": "A01--Ma1tt97eFg-w2-u04",
+    "input_sha256": "6d77a12f0ebd3e8fa222b3566829a2506557873d33a74138fe622afca9d9e26e",
+    "accepted_label": null,
+    "evidence": "La política y la postura de ambos no creo que entrara en acorde con la política que propiciaba no creo que haya tenido puntos en común, entonces a Sánchez Carrón siempre se le ve como una persona liberal, luchando por el republicanismo, muy aguda.",
+    "evidence_span": [
+      170,
+      417
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": true,
+    "rationale": "La oposición entre presidentes titulados y republicanismo liberal es muy general y su frase central está deteriorada. No se resuelve la suficiencia para distinguir proyecto explicado de evocación valorativa.",
+    "training_eligible": false,
+    "first-pass_sha256": "aad12bb5752f3a782545e91038be298bddcd5e07ca41a3847be08bd9e4f156f4",
+    "second-review_sha256": "9b82009f6e71ab96d488eaef50f4a2869ab2e2885816bc649f559b9bec2a2768",
+    "flags": [
+      "ambiguous",
+      "extraction_defect",
+      "insufficient_specificity"
+    ]
+  },
+  "A01--Ma1tt97eFg-w2-u05": {
+    "segment_id": "A01--Ma1tt97eFg-w2-u05",
+    "input_sha256": "f7355ed16ecf224a6a4d15617f3e4050795e0387deb03b30d705779d1c063380",
+    "accepted_label": "liderazgos_diplomacia_proyectos",
+    "evidence": "por ello postuló un programa político que podría ser una aspiración hasta nuestros días. Él decía que los peruanos debemos amar y respetar a nuestras instituciones y a nuestras leyes y ser austeros y moderados.",
+    "evidence_span": [
+      156,
+      366
+    ],
+    "evidence_checked": true,
+    "boundary_checked": true,
+    "boundary_blocking": false,
+    "rationale": "Se atribuye un programa normativo de leyes, austeridad y moderación como condiciones para ser libres. Es propuesta política y no efecto institucional; créditos y URL potencialmente espurios del ASR quedan marcados sin incorporarlos a la evidencia.",
+    "training_eligible": false,
+    "first-pass_sha256": "a8c31360a2fb32015bff7ae1a7c0819a0e0c7112119bd5896d8a8efcd2c9190c",
+    "second-review_sha256": "222853ed1fea1ecfecb13be96d531757eb3e9f1c11cb0bc29248e9e53809d939",
+    "flags": [
+      "extraction_defect",
+      "paratext_mixed"
+    ]
+  }
+}

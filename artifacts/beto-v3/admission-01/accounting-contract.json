@@ -1,0 +1,103 @@
+{
+  "version": "admission-accounting-01",
+  "recovery_ledger": {
+    "path": "artifacts\\beto-v3\\admission-01\\before\\recovery-ledger.json",
+    "sha256": "06b76260ed7859db83160386cb06e0effbe334a17e4a0855de8c0a8746dac6c6"
+  },
+  "admission_baseline": {
+    "path": "artifacts\\beto-v3\\admission-01\\before\\budget-ledger-current.json",
+    "sha256": "edeee75224cd106aa1b69b196aa717ef0f0f43ca0975168a125d79ca1fca07df"
+  },
+  "historical_reports": [
+    {
+      "path": "artifacts\\beto-v3\\admission-01\\before\\phase-B-summary.json",
+      "sha256": "f8c138b3ae7c21780adcf7a2200034e8b47a0b2571f0bfb449700ed8e6053494"
+    },
+    {
+      "path": "artifacts\\beto-v3\\admission-01\\before\\annotation-progress.json",
+      "sha256": "33c969c28c7808efa7448ea5175bd4156d175bd528be5749bf5de660020dec3a"
+    }
+  ],
+  "ASR_receipts": [
+    {
+      "path": "artifacts\\beto-v3\\admission-01\\asr-setup-samples--Ma1tt97eFg.json",
+      "sha256": "1a6de91240177c8d0cc3bbffa51cdee8ab9469129fa47add15a936a2cc6b96f3",
+      "kind": "model_load",
+      "seconds": 1.4278618000025745
+    },
+    {
+      "path": "artifacts\\beto-v3\\admission-01\\asr-setup-samples-N01.json",
+      "sha256": "f6b94a854c6f64587ff6413d8c0a83e2be15d0b109996998c6fb8b67012d460a",
+      "kind": "model_load",
+      "seconds": 1.7923411000010674
+    },
+    {
+      "path": "outputs\\beto-v3\\admission-01\\-Ma1tt97eFg\\asr\\window-0.json",
+      "sha256": "497b362bd99fa7a7d7e6ac51441136b625ec8f4b01fb3b9c7fbdbed84ec0a7c5",
+      "kind": "ASR_window",
+      "seconds": 16.655854600001476,
+      "acquisition": {
+        "path": "outputs\\beto-v3\\admission-01\\-Ma1tt97eFg\\download.json",
+        "sha256": "731602145604966368eff0a4a612b6314005b605dbe29d95ff94d366122606f8"
+      }
+    },
+    {
+      "path": "outputs\\beto-v3\\admission-01\\-Ma1tt97eFg\\asr\\window-1.json",
+      "sha256": "bd782a37e1bd426c7319a436af8386609749301965e3922d9058e463a3b90500",
+      "kind": "ASR_window",
+      "seconds": 13.114859900000738,
+      "acquisition": {
+        "path": "outputs\\beto-v3\\admission-01\\-Ma1tt97eFg\\download.json",
+        "sha256": "731602145604966368eff0a4a612b6314005b605dbe29d95ff94d366122606f8"
+      }
+    },
+    {
+      "path": "outputs\\beto-v3\\admission-01\\-Ma1tt97eFg\\asr\\window-2.json",
+      "sha256": "c1517e7457218145ad090c14a2bb0e152c2d486c4b2d656a749bda1a2ae8a350",
+      "kind": "ASR_window",
+      "seconds": 13.34497779999947,
+      "acquisition": {
+        "path": "outputs\\beto-v3\\admission-01\\-Ma1tt97eFg\\download.json",
+        "sha256": "731602145604966368eff0a4a612b6314005b605dbe29d95ff94d366122606f8"
+      }
+    },
+    {
+      "path": "outputs\\beto-v3\\admission-01\\N01\\asr\\window-0.json",
+      "sha256": "1474026239bb0893f14bc9ae867040a8a4d0a6ff3878953a2715b707134cc14c",
+      "kind": "ASR_window",
+      "seconds": 19.917168400002993,
+      "acquisition": {
+        "path": "outputs\\beto-v3\\admission-01\\N01\\download.json",
+        "sha256": "be41f429835a65d9f23f09b8073f0f8728eac025be888af9688e2a3d4384f09e"
+      }
+    },
+    {
+      "path": "outputs\\beto-v3\\admission-01\\N01\\asr\\window-1.json",
+      "sha256": "cad5a5b04cd6eca0fb785e0c2c5b12ef3c8395b26390b4f4a2cd363bda5819e4",
+      "kind": "ASR_window",
+      "seconds": 19.272516500001075,
+      "acquisition": {
+        "path": "outputs\\beto-v3\\admission-01\\N01\\download.json",
+        "sha256": "be41f429835a65d9f23f09b8073f0f8728eac025be888af9688e2a3d4384f09e"
+      }
+    },
+    {
+      "path": "outputs\\beto-v3\\admission-01\\N01\\asr\\window-2.json",
+      "sha256": "31f8de3b13a296a8851752d476713c840f27c80e67bb55fe4d27992597938079",
+      "kind": "ASR_window",
+      "seconds": 13.790026300001045,
+      "acquisition": {
+        "path": "outputs\\beto-v3\\admission-01\\N01\\download.json",
+        "sha256": "be41f429835a65d9f23f09b8073f0f8728eac025be888af9688e2a3d4384f09e"
+      }
+    }
+  ],
+  "measured_new_ASR_seconds": 99.31560640001044,
+  "float_roundoff_seconds": 0.0,
+  "excluded_alias": {
+    "path": "artifacts\\beto-v3\\admission-01\\asr-setup-samples.json",
+    "sha256": "f6b94a854c6f64587ff6413d8c0a83e2be15d0b109996998c6fb8b67012d460a"
+  },
+  "reserved_S_annotations": 200,
+  "maximum_new_development_annotations": 31
+}

@@ -1,0 +1,160 @@
+{
+  "integrity": "passed",
+  "sources": [
+    {
+      "source_id": "G01",
+      "role": "V",
+      "duration_seconds": 5025,
+      "method": "public_captions",
+      "units": 67,
+      "first_pass": 67,
+      "reviewed_accepted": 61
+    },
+    {
+      "source_id": "G02",
+      "role": "V",
+      "duration_seconds": 9888,
+      "method": "public_captions",
+      "units": 132,
+      "first_pass": 132,
+      "reviewed_accepted": 125
+    },
+    {
+      "source_id": "G03",
+      "role": "T",
+      "duration_seconds": 3855,
+      "method": "local_ASR",
+      "units": 52,
+      "first_pass": 52,
+      "reviewed_accepted": 51
+    },
+    {
+      "source_id": "G07",
+      "role": "T",
+      "duration_seconds": 4690,
+      "method": "public_captions",
+      "units": 59,
+      "first_pass": 30,
+      "reviewed_accepted": 24
+    },
+    {
+      "source_id": "G08",
+      "role": "T",
+      "duration_seconds": 3061,
+      "method": "public_captions",
+      "units": 41,
+      "first_pass": 30,
+      "reviewed_accepted": 30
+    },
+    {
+      "source_id": "G09",
+      "role": "V",
+      "duration_seconds": 5685,
+      "method": "public_captions",
+      "units": 76,
+      "first_pass": 76,
+      "reviewed_accepted": 76
+    },
+    {
+      "source_id": "G10",
+      "role": "T",
+      "duration_seconds": 2236,
+      "method": "public_captions",
+      "units": 30,
+      "first_pass": 30,
+      "reviewed_accepted": 30
+    },
+    {
+      "source_id": "G11",
+      "role": "T",
+      "duration_seconds": 5812,
+      "method": "public_captions",
+      "units": 78,
+      "first_pass": 30,
+      "reviewed_accepted": 30
+    },
+    {
+      "source_id": "G12",
+      "role": "T",
+      "duration_seconds": 3059,
+      "method": "public_captions",
+      "units": 41,
+      "first_pass": 30,
+      "reviewed_accepted": 30
+    },
+    {
+      "source_id": "G13",
+      "role": "T",
+      "duration_seconds": 6365,
+      "method": "public_captions",
+      "units": 85,
+      "first_pass": 30,
+      "reviewed_accepted": 29
+    },
+    {
+      "source_id": "G14",
+      "role": "V",
+      "duration_seconds": 5035,
+      "method": "public_captions",
+      "units": 68,
+      "first_pass": 68,
+      "reviewed_accepted": 60
+    },
+    {
+      "source_id": "G15",
+      "role": "T",
+      "duration_seconds": 4508,
+      "method": "public_captions",
+      "units": 60,
+      "first_pass": 30,
+      "reviewed_accepted": 30
+    },
+    {
+      "source_id": "G16",
+      "role": "T",
+      "duration_seconds": 5840,
+      "method": "public_captions",
+      "units": 78,
+      "first_pass": 30,
+      "reviewed_accepted": 29
+    },
+    {
+      "source_id": "G17",
+      "role": "T",
+      "duration_seconds": 5490,
+      "method": "local_ASR",
+      "units": 73,
+      "first_pass": 30,
+      "reviewed_accepted": 29
+    },
+    {
+      "source_id": "G18",
+      "role": "T",
+      "duration_seconds": 5170,
+      "method": "public_captions",
+      "units": 68,
+      "first_pass": 30,
+      "reviewed_accepted": 21
+    }
+  ],
+  "acquired_long_work_counts_provisional": {
+    "V": 4,
+    "T": 11
+  },
+  "first_pass_evidence_checks": 695,
+  "blind_inputs": 628,
+  "new_reserved_metadata_works": 5,
+  "new_reference_gains": 655,
+  "S_content_opened": false,
+  "C_ready": false,
+  "ledger_sha256": "edeee75224cd106aa1b69b196aa717ef0f0f43ca0975168a125d79ca1fca07df",
+  "limitations": [
+    "Final source admission, class quotas, coverage and freezing remain pending",
+    "Full caption inventory verified, literal audio fidelity not certified",
+    "Acquired work counts provisional until final source admission"
+  ],
+  "blind_second_reviews_checked": 628,
+  "inherited_gap_blind_inputs": 211,
+  "selected444_blind_inputs": 417,
+  "adjudications_checked": 695
+}

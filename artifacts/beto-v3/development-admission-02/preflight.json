@@ -1,0 +1,26 @@
+{
+  "protocol_and_environment": "passed",
+  "training_executed": false,
+  "S_opened": false,
+  "core_sha256": "155adbcbc16f0f7684047329137c00f4d46340a047eae6130b530cbb237846cf",
+  "legacy_runner_sha256": "158b2e74c544b3af9de0eac8086e2c736a7833e96e43d6d7819a692de61ec17a",
+  "tokenization": {
+    "H": {
+      "n": 590,
+      "truncated": 3,
+      "maximum": 443
+    },
+    "T300": {
+      "n": 426,
+      "truncated": 0,
+      "maximum": 375
+    },
+    "V": {
+      "n": 444,
+      "truncated": 0,
+      "maximum": 331
+    }
+  },
+  "freeze_sha256": "6b7ae3358a31c8303387b15010a5ee57f4ed54c99c4e717b829afc84a733608f",
+  "C_ready": true
+}

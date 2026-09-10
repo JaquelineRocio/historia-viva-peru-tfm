@@ -1,0 +1,81 @@
+{
+  "items": [
+    {
+      "segment_id": "G09-u001",
+      "method": "agreement_evidence_rationale_boundary_check",
+      "first_sha256": "4e6725cb6fb9cb1987e25c07495de31ea58493aab56d2b5a194e79a8a446a916"
+    },
+    {
+      "segment_id": "G09-u002",
+      "method": "agreement_evidence_rationale_boundary_check",
+      "first_sha256": "c96cf7ea28e2589964ab80a80a0a4334f80705a0cd4de7690e40c50c05fbd914"
+    },
+    {
+      "segment_id": "G09-u003",
+      "method": "agreement_evidence_rationale_boundary_check",
+      "first_sha256": "83fcaef822f58de6e960de086e4a888b229fe2042e7ea848e87a6132370950ca"
+    },
+    {
+      "segment_id": "G09-u004",
+      "method": "agreement_evidence_rationale_boundary_check",
+      "first_sha256": "6008b54003cdad02731b39e6002298a0fe3aba25d7491193cab3c89c97e3c063"
+    },
+    {
+      "segment_id": "G09-u005",
+      "method": "agreement_evidence_rationale_boundary_check",
+      "first_sha256": "feb84c77159b79fbdcb7e3ae26d4314969c45123ad3b2d270b9517189a49122f"
+    },
+    {
+      "segment_id": "G09-u006",
+      "method": "agreement_evidence_rationale_boundary_check",
+      "first_sha256": "207100a550da749628079779a28d36294ccbb9bb9d46f7e701732b7e1add0852"
+    },
+    {
+      "segment_id": "G09-u007",
+      "method": "agreement_evidence_rationale_boundary_check",
+      "first_sha256": "acc6172939e20ac1d85fa086389a94b47034b8df8c3005be097452d97744da0a"
+    },
+    {
+      "segment_id": "G09-u008",
+      "method": "agreement_evidence_rationale_boundary_check",
+      "first_sha256": "cf14d32f597759bc5343e9929e5b60af16bfdad229cf7f81177ccc41507e17b8"
+    },
+    {
+      "segment_id": "G09-u009",
+      "method": "agreement_evidence_rationale_boundary_check",
+      "first_sha256": "bdc00070dd645183aef1e73dba1a73e2bc758398ad560b933d28679d17464020"
+    },
+    {
+      "segment_id": "G09-u010",
+      "method": "agreement_evidence_rationale_boundary_check",
+      "first_sha256": "d380f5514efbe42c0deaa0e38eca7be3fdf249737c52c4b6b01dbd33f94221ef"
+    },
+    {
+      "segment_id": "G09-u011",
+      "method": "agreement_evidence_rationale_boundary_check",
+      "first_sha256": "2ae7a0fe7fc9330a0533d28796404fb5e488f6c17240e3247949cbf3008731dd"
+    },
+    {
+      "segment_id": "G09-u012",
+      "method": "full_target_manual_resolution",
+      "first_sha256": "956069303883a133e1d14cc924c4a182338cc31ce1b5e28df10038272182355b"
+    },
+    {
+      "segment_id": "G09-u013",
+      "method": "agreement_evidence_rationale_boundary_check",
+      "first_sha256": "0ba98a294931e8689c005e814e99eb0d5d9dfe1a8615d22193d19b7686b3c1d6"
+    },
+    {
+      "segment_id": "G09-u014",
+      "method": "agreement_evidence_rationale_boundary_check",
+      "first_sha256": "e696491e08e2e9c4384d093d13a2af91bde36e4d5ac975e0f616c6f80ad8e842"
+    },
+    {
+      "segment_id": "G09-u015",
+      "method": "agreement_evidence_rationale_boundary_check",
+      "first_sha256": "de75b03bcf5ff41b7dd2fbb6c58b5a098c2db2258fd0bc72a4846987732068c8"
+    }
+  ],
+  "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+  "prior_predictions_consulted": false
+}

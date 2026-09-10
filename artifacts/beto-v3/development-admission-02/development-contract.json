@@ -1,0 +1,73 @@
+{
+  "version": "development-CD-23-23-v1",
+  "authorized_by": "User instruction in current session, before observing any V3 F1",
+  "recorded_utc": "2026-09-09T06:26:06.917427+00:00",
+  "scope": [
+    "C",
+    "D"
+  ],
+  "partition": "V",
+  "original_operational_goal": 25,
+  "minimum_overrides": {
+    "contexto_colonial_antecedentes": 23,
+    "organizacion_consecuencias_republicanas": 23
+  },
+  "observed_counts": {
+    "contexto_colonial_antecedentes": 23,
+    "organizacion_consecuencias_republicanas": 23
+  },
+  "operational_goal_met": false,
+  "protocol": {
+    "path": "artifacts/beto-v3/protocol.json",
+    "sha256": "cf813bec65c2349b433aba598ccc22284fe0629daad85af1e565666953eb3039"
+  },
+  "plan_amendment": {
+    "path": "docs/beto-v3/development-amendment-23-23.md",
+    "sha256": "bd26f34893f53d0caa53b881d113aad5285692d01b651472a10a9b30205d5483"
+  },
+  "original_budget": {
+    "new_annotation_units": 1200,
+    "historical_review_units": 60,
+    "T_max": 600,
+    "new_trajectories": 18,
+    "supervised_fits": 17,
+    "MLM_trajectories": 1,
+    "CD_gpu_seconds": 14400,
+    "total_training_gpu_seconds": 28800,
+    "ASR_gpu_seconds": 28800,
+    "phase_fits": {
+      "C": 4,
+      "D": 4,
+      "E": 3,
+      "F": 4,
+      "G": 3
+    },
+    "failures_count": true,
+    "scope": "All new V3 phases cumulatively; V2 prior use recorded separately without claiming it is zero"
+  },
+  "original_success": {
+    "macro_f1": 0.7,
+    "minimum_class_f1": 0.5,
+    "beats_matched_tfidf": true,
+    "resolvable_reference_coverage": 0.9
+  },
+  "labels": [
+    "campanias_conflictos_militares",
+    "contexto_colonial_antecedentes",
+    "crisis_ideas_emancipadoras",
+    "liderazgos_diplomacia_proyectos",
+    "no_relevante",
+    "organizacion_consecuencias_republicanas",
+    "participacion_social_regional"
+  ],
+  "S_closed": true,
+  "admission": {
+    "path": "artifacts/beto-v3/development-admission-02/audit.json",
+    "sha256": "3dd1710a1325faff8f436508f076c2fff57560302bf72c09bb99269858caafb8"
+  },
+  "selection": "All 426 accepted T and all 444 accepted V, independent of predictions; T300 is the phase name. No balancing or oversampling. 76 pending and 14 auxiliary references excluded.",
+  "reference_coverage": {
+    "T": 0.9342105263157895,
+    "V": 0.9079754601226994
+  }
+}

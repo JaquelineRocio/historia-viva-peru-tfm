@@ -1,0 +1,26 @@
+[
+  {
+    "path": "outputs\\beto-v3\\admission-01\\annotation-inventory.json",
+    "sha256": "f50565fd498781a762fde2f31c3781afdc6e5151812af06a8c1e6c02b9432663"
+  },
+  {
+    "path": "artifacts\\beto-v3\\admission-01\\prevalidation.json",
+    "sha256": "3518dd6f8a65d6c084aed55b44d3ef0cd9db5014a2fb88536d52b9f82f5901de"
+  },
+  {
+    "path": "outputs\\beto-v3\\admission-01\\annotation-inputs\\batch-01.json",
+    "sha256": "3d567d75e771456922b92b2357c0ff685312d8ef5f3a618230fdb8511d87359f"
+  },
+  {
+    "path": "outputs\\beto-v3\\admission-01\\annotation-inputs\\batch-02.json",
+    "sha256": "d49a95ad1b4b8254ee3d7cab3b8ac61ff22a3c1beaf674179409488e778ffa80"
+  },
+  {
+    "path": "outputs\\beto-v3\\admission-01\\annotation-inputs\\batch-03.json",
+    "sha256": "be8eb846f6671fd4f9bec56ad83e971579ca420f1e24f3a88cfc871a719dfcbf"
+  },
+  {
+    "path": "outputs\\beto-v3\\admission-01\\annotation-inputs\\batch-04.json",
+    "sha256": "e3da9fbcb35d751b2c2713fa0113cfb781310808c8d3e8535f046d05f2b8df01"
+  }
+]
