@@ -1,0 +1,9 @@
+{
+  "source_id": "G16",
+  "url": "https://www.youtube.com/watch?v=uZG4jJTbMaw",
+  "gpu_seconds": 0,
+  "paid_USD": 0,
+  "status": "blocked",
+  "error": "DownloadError('ERROR: unable to download video data: HTTP Error 403: Forbidden')",
+  "wall_seconds": 0.9346597000003385
+}

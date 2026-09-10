@@ -1,0 +1,98 @@
+{
+  "version": "recovery-01",
+  "pending_V_examined": 38,
+  "prepared_candidates": 31,
+  "deferred": [
+    {
+      "segment_id": "G01-u017",
+      "reason": "Insufficient lexical content; requires audio review, not added caption context."
+    },
+    {
+      "segment_id": "G14-u001",
+      "reason": "Insufficient lexical content; requires audio review, not added caption context."
+    },
+    {
+      "segment_id": "G14-u002",
+      "reason": "Insufficient lexical content; requires audio review, not added caption context."
+    },
+    {
+      "segment_id": "G14-u003",
+      "reason": "Insufficient lexical content; requires audio review, not added caption context."
+    },
+    {
+      "segment_id": "G14-u066",
+      "reason": "Insufficient lexical content; requires audio review, not added caption context."
+    },
+    {
+      "segment_id": "G14-u067",
+      "reason": "Insufficient lexical content; requires audio review, not added caption context."
+    },
+    {
+      "segment_id": "G14-u068",
+      "reason": "Insufficient lexical content; requires audio review, not added caption context."
+    }
+  ],
+  "selection": "All pending V, no class/proposal/prediction filter. Original targets retained in full; only contiguous source text added.",
+  "parent_dataset": "outputs\\beto-v3\\phase-b-gap-02\\selected-444\\all-development-units.json",
+  "parent_sha256": "719dfc96884cb6a4fab0fb5056a254c87bef310fd2768ab88d5f7be1bc4d9363",
+  "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+  "source_manifest": [
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\G01\\cues.json",
+      "sha256": "dbd240e2ed4172c384a209cc48605a2c4dffb9579b3570d8e4012a6bf3983673"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\G02\\cues.json",
+      "sha256": "d34316af5fd6964e29ae402d2b41a865dfc24147dbf89817ef608b21d008a238"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\G14\\cues.json",
+      "sha256": "b2aa3b1d618069fae6eb5bdc72cf8dc861260b34bd14c0296c2b406ef29a677a"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N07\\asr\\cues.json",
+      "sha256": "9df3f3dad285c96b9d06bbb7fba89588ca1fd79f784517c46b764e645cd96a9a"
+    },
+    {
+      "path": "outputs\\beto-v3\\acquisition\\rKbC4guGhRY\\cues.json",
+      "sha256": "e5686567b48e5bf2a243a40e65a87226a12fbd09081c3f791c931dc8da19e65c"
+    }
+  ],
+  "packets": [
+    {
+      "path": "outputs\\beto-v3\\recovery-01\\inputs\\batch-001.json",
+      "sha256": "528caf86e77154cdb07aaa47c7235df511b9cfd9fbc4b222da424d2ece2161d3"
+    },
+    {
+      "path": "outputs\\beto-v3\\recovery-01\\inputs\\batch-002.json",
+      "sha256": "a3a54ba53d02e5e441b43ec3977063733f5ad6ef9ae4515fadf8f93f78d4e5a2"
+    },
+    {
+      "path": "outputs\\beto-v3\\recovery-01\\inputs\\batch-003.json",
+      "sha256": "7df7b5b4049128455f94c32c155742c678799315a3ce3b58c44d5728f1a1ace0"
+    },
+    {
+      "path": "outputs\\beto-v3\\recovery-01\\inputs\\batch-004.json",
+      "sha256": "2604b9482ab077f1b1c1acaae1deb26ef3134d9ebcf5b80490279d399f9c0ef7"
+    }
+  ],
+  "candidates_sha256": "904117cc1cd7547ce88f1e3f8ce9db923c62b142847b90662cf6bab9289e9776",
+  "annotation_unique_at_preparation": 938,
+  "new_annotation_inputs_consumed": 0,
+  "projected_unique_if_all_annotated": 969,
+  "remaining_if_all_annotated": 231,
+  "S_planning_allowance": 200,
+  "S_content_opened": false,
+  "accepted_reference_gains": 0,
+  "C_ready": false,
+  "first_pass_completed": 0,
+  "blind_review_completed": 0,
+  "integration_requirements": [
+    "Count new hashes when real first-pass responses are saved; keep prior consumption.",
+    "Require review in a context without prior responses; never simulate an isolated review.",
+    "Adjudicate discourse, scope and literal evidence; context recovery does not guarantee a unique label.",
+    "Resolve all overlapping candidate/old intervals before evaluation: no additive quota gains from duplicate text.",
+    "Use a new versioned integration and update accounting checks before any proposals; selected-444 accounting currently fixes total at 938.",
+    "Source admission and H/T/V/S freezing remain required before C."
+  ]
+}

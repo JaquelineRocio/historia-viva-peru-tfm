@@ -1,0 +1,96 @@
+{
+  "new_training_trajectories": 11,
+  "new_training_gpu_seconds": 9595.94472309999,
+  "CD_training_gpu_seconds": 7205.3944095999905,
+  "ASR_gpu_seconds": 932.9981357000124,
+  "prior_checkpoint_inference_seconds_measured": 131.14480390000608,
+  "new_unique_annotation_proposals": 999,
+  "new_historical_review_units": 10,
+  "historical_review_including_previous": 30,
+  "previous_successful_training_seconds": 2828.3538434999487,
+  "previous_failed_training_seconds": null,
+  "previous_failed_time_status": "unknown; not reported as zero",
+  "paid_services_used": false,
+  "provider_token_usage": null,
+  "annotation_budget_remaining": 201,
+  "services_paid_USD": 0,
+  "phase_B_second_review_calls": 15,
+  "annotation_count_note": "Preserved 938 historical inputs plus distinct recovery-01 hashes with actual saved proposals in either isolated pass; repeat passes add no unique input.",
+  "phase_B_second_review_batches": 65,
+  "phase_B_second_review_units": 868,
+  "ASR_accounting_note": "Conservative measured wall seconds of GPU transcription calls plus model loading; includes pilot. In-flight reservations settled after calls; CPU decoding/download time recorded separately",
+  "gap_02_unique_annotation_inputs": 695,
+  "gap_02_blind_review_sessions": 3,
+  "gap_02_second_review_units": 211,
+  "gap_02_second_review_batches": 15,
+  "gap_02_adjudicated_inputs": 251,
+  "review_call_count_note": "phase_B_second_review_calls counts isolated reviewer sessions; actual provider invocation/token counts unknown",
+  "selected444_first_pass_units": 444,
+  "selected444_second_review_units": 417,
+  "selected444_first_pass_batches": 30,
+  "selected444_second_review_batches": 28,
+  "selected444_first_review_sessions": 3,
+  "selected444_second_review_sessions": 3,
+  "recovery01_unique_annotation_inputs": 31,
+  "recovery01_first_pass_units": 31,
+  "recovery01_second_review_units": 31,
+  "admission01_unique_annotation_inputs": 30,
+  "admission01_first_pass_units": 30,
+  "admission01_second_review_units": 30,
+  "accounting_method": "Immutable after-D snapshot plus F receipts once each; wall includes loading/saving/reload; unsettled attempt reserves full allowance. CD unchanged.",
+  "prior_ledger": {
+    "path": "artifacts\\beto-v3\\phase-f\\before\\budget-ledger-after-D.json",
+    "sha256": "911e4ef44d9ff0d6bf7b02911844b45ddde4a444c9f43461ddaf8280b8017959"
+  },
+  "attempts": [
+    {
+      "path": "outputs\\beto-v3\\phase-c\\attempts\\44a1153a-3a0e-4508-8546-d4e8cb03598f.json",
+      "sha256": "3401bc172f02404c65545516d96430a40270d6bb1621782a2da7ec027b027416"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-c\\attempts\\47f3e239-bb4d-45c0-8347-00bba28bb484.json",
+      "sha256": "d604a1d604783cf7832a17fc39e2cdc89ae11ac67f56e311d99966832b92fd17"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-c\\attempts\\7b1a1b06-5bd6-48c6-80b6-aad555b0bb2e.json",
+      "sha256": "7060738f26a03d55ded4c5a6577cb2568221ffbe5217df2e6587f4315cb7b5b5"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-c\\attempts\\b8ed0a1d-a73c-443e-b7c5-23951f46d8a4.json",
+      "sha256": "69f31ea2102826e8d1e3d3ec5a9e47c8386369421d2374c8b16f29dd16fea0f9"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-c\\attempts\\016e879e-3ab0-4b78-8c06-3a5ab2b9826e.json",
+      "sha256": "980699b61003c30b0c3554669bf84e852aad8fa6073ddb5fd551f7b164a6855f"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-c\\attempts\\3a72238e-44e4-4fbb-a9fd-5690896876a9.json",
+      "sha256": "90dbd82a3766e5a411577a6210550c70ef1d1f74399eb5bca97e581b3e84354c"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-c\\attempts\\42554514-ebed-44ad-aa02-14a4058a8217.json",
+      "sha256": "bb3ac0b06eb1b174a6d23613a9847801851b4dded3935c36b28ef5e4998a2ed9"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-c\\attempts\\e86e2a6d-1881-4ca7-a18c-315842261a0a.json",
+      "sha256": "fa68f0c314b552e64eac91db396b2d832f745ed8cd0bec771b411152c0ecd600"
+    }
+  ],
+  "S_content_opened": false,
+  "phase_D_wall_seconds": 3559.114279999987,
+  "phase_F_wall_seconds": 2390.5503135,
+  "phase_F_attempts": [
+    {
+      "path": "outputs\\beto-v3\\phase-f\\attempts\\5dfe1681-8813-4b17-a291-9e1035831104.json",
+      "sha256": "58fb27bb34a81e325c20426108b5d9e8c8189fbe6d57da2e1eeb771373a31b41"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-f\\attempts\\9333ae2f-5d1b-4eba-91f9-1ba7c7e617f8.json",
+      "sha256": "3c53b2417ccfaa5a4c779cd8bcf84e9272edac1f2bec37f20c40bfb6b33ac582"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-f\\attempts\\d98e61f9-4c3e-49f4-a64e-529a32de3acc.json",
+      "sha256": "b6be677522ba4c121ca17df1a353edb5ae3c484e4cc807acf29f4bb535ff4488"
+    }
+  ]
+}

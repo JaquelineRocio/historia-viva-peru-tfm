@@ -1,0 +1,53 @@
+{
+  "phase": "B_full_existing_candidate_first_pass_complete_review_pending",
+  "A": "reviewed_base_and_diagnostics_complete; final H awaits video family exclusions",
+  "B": "125 units from all 123 candidates; 56 first-pass T references, 69 pending review; eight added source candidates",
+  "C_to_G": "not_started; independent review, coverage and final splits still pending",
+  "goal_reached": false,
+  "V3_macro_f1": null,
+  "usage": {
+    "new_training_trajectories": 0,
+    "new_training_gpu_seconds": 0,
+    "CD_training_gpu_seconds": 0,
+    "ASR_gpu_seconds": 0,
+    "prior_checkpoint_inference_seconds_measured": 131.14480390000608,
+    "new_unique_annotation_proposals": 133,
+    "new_historical_review_units": 10,
+    "historical_review_including_previous": 30,
+    "previous_successful_training_seconds": 2828.3538434999487,
+    "previous_failed_training_seconds": null,
+    "previous_failed_time_status": "unknown; not reported as zero",
+    "paid_services_used": false,
+    "provider_token_usage": null,
+    "annotation_budget_remaining": 1067,
+    "services_paid_USD": 0,
+    "phase_B_second_review_calls": 0,
+    "annotation_count_note": "Conservative distinct input-text hashes: 12 old + 121 newly annotated; four exact reuse cases"
+  },
+  "blockers": [
+    "69 reviews pending: separate review call not executed",
+    "V still has one annotated work and no colonial or military proposals",
+    "T has 85 units, only one colonial proposal and several classes below acquisition targets",
+    "Three newly located accessible videos require timed ASR pilot and full transcription QA"
+  ],
+  "completed_artifacts": {
+    "H_initial": 591,
+    "H_reviewed": 590,
+    "transcripts": 5,
+    "candidate_units": 123,
+    "first_pass_annotation_proposals": 12,
+    "accepted_new_references": 0,
+    "prior_epoch_inferences": 24,
+    "processed_parent_candidates": 123,
+    "corrected_units": 125,
+    "first_pass_annotation_proposals_current": 125,
+    "accepted_training_references": 56,
+    "pending_reviews": 69,
+    "additional_source_candidates": 8,
+    "accessible_new_video_files": 3
+  },
+  "resume_check": "outputs/venv-ml/Scripts/python.exe -X utf8 scripts/finalize_beto_v3_phase_b_completion.py",
+  "phase_B_completion_summary": "artifacts/beto-v3/phase-b-completion-01/summary.json",
+  "current_units": "outputs/beto-v3/phase-b-completion-01/units-and-annotations.json",
+  "current_sources": "artifacts/beto-v3/phase-b-completion-01/source-registry-final.json"
+}

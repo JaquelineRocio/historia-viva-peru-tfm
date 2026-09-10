@@ -1,0 +1,250 @@
+{
+  "runs": [
+    {
+      "path": "outputs\\beto-v2\\class-weights\\seed-42\\fold-1-B_weights_A\\result.json",
+      "sha256": "f3b8c58f5d6b87f9f73e1d9c1194b1d165b8d4b43ee6389f33c3423000a72946",
+      "seconds": 94.30418260000033,
+      "best_epoch": 3,
+      "f1_macro": 0.3521274563649575,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\class-weights\\seed-42\\fold-2-B_weights_A\\result.json",
+      "sha256": "649e35035e687dcd183e31fd93cb536f84dce9a843579d92fa4079c4b52a77b7",
+      "seconds": 116.01031749999993,
+      "best_epoch": 4,
+      "f1_macro": 0.403796534525683,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\class-weights\\seed-42\\fold-3-B_weights_A\\result.json",
+      "sha256": "02cdc82930d1ece3fe6acffa62739fd9dd796c5cb8b7dabdc265a5910a5808cf",
+      "seconds": 124.16646700000001,
+      "best_epoch": 3,
+      "f1_macro": 0.42881708238851096,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\class-weights\\seed-43\\fold-1-B_weights_A\\result.json",
+      "sha256": "70f086b09995c246ce25bad75f0d7e49127a1d3cbdaecdaa0ed48cf17721e2c7",
+      "seconds": 102.11922189999996,
+      "best_epoch": 4,
+      "f1_macro": 0.3496621962656193,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\class-weights\\seed-43\\fold-2-B_weights_A\\result.json",
+      "sha256": "20f9e88636038059d3237ce6fc416439456f50fadcd3c844121713a23a6ef156",
+      "seconds": 115.10083110000005,
+      "best_epoch": 4,
+      "f1_macro": 0.3584623543063257,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\class-weights\\seed-43\\fold-3-B_weights_A\\result.json",
+      "sha256": "daf22de706fb254c64bedccb867f4e55a297e315cb646f41238a3308141d487f",
+      "seconds": 126.97712580000007,
+      "best_epoch": 4,
+      "f1_macro": 0.43005160986088914,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\class-weights\\seed-44\\fold-1-B_weights_A\\result.json",
+      "sha256": "2907224ec7f6a59544a2e96cfeadf38ea993a4020db8c773c2814d34038d96e0",
+      "seconds": 92.1162545000002,
+      "best_epoch": 4,
+      "f1_macro": 0.3547857057437057,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\class-weights\\seed-44\\fold-2-B_weights_A\\result.json",
+      "sha256": "42a1f4ed42abd054ba7cf30e4f78df24488b10d5d18c9917ee36b8e67698f457",
+      "seconds": 115.95296090000011,
+      "best_epoch": 4,
+      "f1_macro": 0.3803383478844813,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\class-weights\\seed-44\\fold-3-B_weights_A\\result.json",
+      "sha256": "4aaafcd7fabe1bac98a6116115d21035da8875f4d7a348166c7e35a885f5dff7",
+      "seconds": 129.60892749999948,
+      "best_epoch": 4,
+      "f1_macro": 0.41861932880239516,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\first-training\\runs\\fold-1-A\\result.json",
+      "sha256": "4a19ff50b4c76357f1d4a01fd75c92c97c872b12d395a8c16583729e885e3b8d",
+      "seconds": 83.24392470001476,
+      "best_epoch": 4,
+      "f1_macro": 0.40366700977157105,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\first-training\\runs\\fold-1-B\\result.json",
+      "sha256": "c8c4411b30becc22d981dd5c0a33a419e3cffeb7f741900cfee9ecd718220a0c",
+      "seconds": 88.01617379998788,
+      "best_epoch": 3,
+      "f1_macro": 0.42168780668605005,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\first-training\\runs\\fold-2-A\\result.json",
+      "sha256": "ad464fe5678cd166ad4cb5fb0c19ca9a621f735e4018dca4b1f22be918770670",
+      "seconds": 104.39114209997933,
+      "best_epoch": 3,
+      "f1_macro": 0.44351982004777357,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\first-training\\runs\\fold-2-B\\result.json",
+      "sha256": "967839c1f98e33c7c830a3911fa748c2b30ea8cc310b49bdc0b3c43657e3d976",
+      "seconds": 111.2853001000476,
+      "best_epoch": 3,
+      "f1_macro": 0.4219402123251981,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\first-training\\runs\\fold-3-A\\result.json",
+      "sha256": "5d2f30a87400d988cc9e667c6ebef88938a5c371898db2d356f159ddfcba4f5a",
+      "seconds": 114.73477049998473,
+      "best_epoch": 4,
+      "f1_macro": 0.4017242116972575,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\first-training\\runs\\fold-3-B\\result.json",
+      "sha256": "6cc882ac2f6cc42d8fa4ed6d60233ecab1ab0a438cdba34031f7ac3811c6675f",
+      "seconds": 122.77631660003681,
+      "best_epoch": 3,
+      "f1_macro": 0.4293539638077453,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\stability\\seed-43\\fold-1-A\\result.json",
+      "sha256": "167592e1e582240c5fe7a13cbcf3f7032ebffd4bca1d835f224d20cffcaa7aa0",
+      "seconds": 74.91613329999382,
+      "best_epoch": 4,
+      "f1_macro": 0.3886281882967956,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\stability\\seed-43\\fold-1-B\\result.json",
+      "sha256": "4b464106a7b182338fd72584ca48018501e97e2ff20f0f29396060d4b3cbc52b",
+      "seconds": 81.62724619999062,
+      "best_epoch": 4,
+      "f1_macro": 0.36812793256732296,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\stability\\seed-43\\fold-2-A\\result.json",
+      "sha256": "efc6af9047ddefc50d3301f93820efcc24864ce0864edaa966366c6a3842f2e8",
+      "seconds": 111.02687990001868,
+      "best_epoch": 4,
+      "f1_macro": 0.35919909057991584,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\stability\\seed-43\\fold-2-B\\result.json",
+      "sha256": "25c30fa29b530183ab068325e7271a318e7f64052c76f8b68b13bc802e79990d",
+      "seconds": 104.53909579996252,
+      "best_epoch": 4,
+      "f1_macro": 0.3483334254071581,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\stability\\seed-43\\fold-3-A\\result.json",
+      "sha256": "f6fb8b2889640a4f7d91040eda5c6aaac80d2f6df101ded871665536c05cdd51",
+      "seconds": 110.36814360000426,
+      "best_epoch": 3,
+      "f1_macro": 0.4245862606029327,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\stability\\seed-43\\fold-3-B\\result.json",
+      "sha256": "37a8ef6ae68cd31f86e7f69aba7b43135c559d2cabc635e21f9c9ee690387be5",
+      "seconds": 114.58161330001894,
+      "best_epoch": 3,
+      "f1_macro": 0.42188959745350724,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\stability\\seed-44\\fold-1-A\\result.json",
+      "sha256": "08ddee05b41780a8835fda6cd51f9801ddbdf687490911aa22841f024895050b",
+      "seconds": 75.42119999998249,
+      "best_epoch": 4,
+      "f1_macro": 0.37576814411229986,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\stability\\seed-44\\fold-1-B\\result.json",
+      "sha256": "53dc2c002b8f8eac22bbbc10448ea567d295ebaeb352c22ebcaaee06128c0e09",
+      "seconds": 82.27563299995381,
+      "best_epoch": 4,
+      "f1_macro": 0.3558699952788798,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\stability\\seed-44\\fold-2-A\\result.json",
+      "sha256": "f0c62bb0657d6ed8e0dfe6990dbfd3a9fd6e18a38e0fd890fb852828be134f9f",
+      "seconds": 96.71543719997862,
+      "best_epoch": 3,
+      "f1_macro": 0.36848132965498126,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\stability\\seed-44\\fold-2-B\\result.json",
+      "sha256": "96bbe720dc66ba4c4621add33eeeffb77f5e336c81215e886040deb69fb8b5a9",
+      "seconds": 108.40677800000412,
+      "best_epoch": 4,
+      "f1_macro": 0.37608101846858766,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\stability\\seed-44\\fold-3-A\\result.json",
+      "sha256": "edb182ac1edc39eb2d3a7863b6aec6bfd454989d15c73b496bca906313c6d401",
+      "seconds": 109.06673780002166,
+      "best_epoch": 3,
+      "f1_macro": 0.4028266171985852,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    },
+    {
+      "path": "outputs\\beto-v2\\stability\\seed-44\\fold-3-B\\result.json",
+      "sha256": "29c5cf186359bd24cfed3074a7f0aa9fd0587cb5ac4448cd66da7a504f237416",
+      "seconds": 118.60502879996784,
+      "best_epoch": 3,
+      "f1_macro": 0.4421164380617781,
+      "v3_reuse": "diagnostic_only_different_data_and_validation"
+    }
+  ],
+  "phase07": {
+    "completed_runs": 0,
+    "events": [
+      {
+        "at_utc": "2026-09-09T00:00:18.686667+00:00",
+        "status": "failed",
+        "error_type": "OutOfMemoryError",
+        "error": "Allocation on device "
+      },
+      {
+        "at_utc": "2026-09-09T00:35:51.136609+00:00",
+        "status": "failed",
+        "error_type": "OutOfMemoryError",
+        "error": "Allocation on device "
+      },
+      {
+        "at_utc": "2026-09-09T00:36:49.452601+00:00",
+        "status": "failed",
+        "error_type": "RuntimeError",
+        "error": "CUDA error: out of memory\nCUDA kernel errors might be asynchronously reported at some other API call, so the stacktrace below might be incorrect.\nFor debugging consider passing CUDA_LAUNCH_BLOCKING=1\nCompile with `TORCH_USE_CUDA_DSA` to enable device-side assertions.\n"
+      }
+    ],
+    "manifest_sha256": "494e2cbfe64d21cf3cd17953e64c4f9bcf7a4c00be31f4a4ee237373994bf5da",
+    "decision": "preserve context extraction; do not restart isolated V2 experiment",
+    "failed_gpu_seconds": null,
+    "failed_time_note": "V2 events do not expose start/end durations; unknown, not zero"
+  },
+  "known_successful_training_seconds": 2828.3538434999487,
+  "complete_prior_gpu_total": null,
+  "limitation": "Failure time not fully recoverable from old event logs"
+}

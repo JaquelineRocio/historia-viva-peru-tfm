@@ -1,0 +1,230 @@
+{
+  "reviewer": "GPT-6 Codex; exact backend unknown",
+  "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+  "new_reviewed": 10,
+  "prior_reviewed_unique": 20,
+  "total_reviewed_unique": 30,
+  "decisions": [
+    {
+      "segment_id": "historical-v4-0043",
+      "action": "exclude_to_pending",
+      "before": {
+        "text": "Afirma que las contribuciones que los indígenas debían dar a los insurgentes son una muestra de su «característico desprendimiento y amor a la libertad». 14 Ambas son producciones discursivas realizadas para construir o reforzar los fundamentos ideológicos del nacionalismo criollo. nivel 3: el discurso crítico postnacionalista Este discurso busca superar explícitamente al de carácter nacionalista y trata de adoptar el punto de vista del insurgente. Para ello, en sus primeras épocas se sustentó en los paradigmas de la teoría de la dependencia. Como respuesta a la CNSIP y a la colección que publicó, Heraclio 11 Vergara, «En torno a la denominación de las montoneras», p. 198. 12 Roel, Virgilio. La Independencia. Historia general del Perú. Lima: Gráfica Labor, 1988, p. 13. 13 Vergara Arias, Gustavo. Montoneras y guerrillas en la etapa de la Emancipación del Perú. Lima: Imprenta Salesiana, 1973, p. 43. 14 Beltrán Gallardo, Ezequiel. Las guerrillas de Yauyos en la emancipación del Perú, 1820- 1824. Lima: Editorial T écnicos Asociados, 1981, p. 95.",
+        "label": "participacion_social_regional",
+        "sha256": "565ea50495b22972f7560803542e0ba34d0e52e80f6defdbd73fd38c384037c9"
+      },
+      "after": null,
+      "source": {
+        "path": ".corpus-downloads/fonseca_bandoleros_patrotas.pdf",
+        "sha256": "082ca707f2e2246faf43e7bcd3c620a06e287d6f1f2212b549c94d77e0e5306f",
+        "family_id": "historical-fonseca-hunefeldt",
+        "title": "¿Bandoleros o patriotas? Las guerrillas y la dinámica popular en la independencia del Perú"
+      },
+      "source_page": 6,
+      "reason": "Unit mixes conclusion of historiographic discussion, next incomplete section and bibliographic notes; no unique corrected target/reference frozen",
+      "model_predictions_used": false
+    },
+    {
+      "segment_id": "historical-v4-0120",
+      "action": "extract_contiguous_original_span",
+      "before": {
+        "text": "Durante los procesos judi­ ciales cuando se toca el punto relativo a la alianza con miembros de la élite indígena, indefectiblemente se hace alusión a la cantidad de contingentes indios que ello iba a significar. Así por ejemplo, el ca­ cique Tambohuacso calculaba poder movilizar alrededor de 3000 in­ dios a favor de la rebeLión de Farfán de los Godos 70 • Por otro lado Marco Dongo, uno de los involucrados en la conspiración de AguiJar y Ubalde, consideraba que contaban con 4000 indios de la parroquia cuzqueña de San Gerónimo y sus caciques71• Igualmente, al cuestio­ nársele a Pumacahua cuál había sido su rol en la revolución del Cuz­ co de 1814, éste respondió que haber «levantado en la indiada la ad­ hesión que le tienen a su persona» 72 • No en vano en 1811 el cacique 67) SO'Phclan Gody, <<La Rehelión de Túpac Amaru», op. cit., p. 97. Hipó­ lito Túpac aimru en sus declaraciones explicó que los caciques le habían ayudado ron todo (A.G.I.. AndiPncia del Cu7rO, 32). 68) Víctor AngiP.s, op. cit., p. 75. Declaración de José Gómez.",
+        "label": "participacion_social_regional",
+        "sha256": "b47e023a677d1a8b511add0e9d1ee189884f2053b3fbcea554ecd6f20bf5af06"
+      },
+      "after": {
+        "text": "Durante los procesos judi­ ciales cuando se toca el punto relativo a la alianza con miembros de la élite indígena, indefectiblemente se hace alusión a la cantidad de contingentes indios que ello iba a significar. Así por ejemplo, el ca­ cique Tambohuacso calculaba poder movilizar alrededor de 3000 in­ dios a favor de la rebeLión de Farfán de los Godos 70 • Por otro lado Marco Dongo, uno de los involucrados en la conspiración de AguiJar y Ubalde, consideraba que contaban con 4000 indios de la parroquia cuzqueña de San Gerónimo y sus caciques71• Igualmente, al cuestio­ nársele a Pumacahua cuál había sido su rol en la revolución del Cuz­ co de 1814, éste respondió que haber «levantado en la indiada la ad­ hesión que le tienen a su persona» 72 •",
+        "label": "participacion_social_regional",
+        "sha256": "8fe2433a0819342f588a0c56637b0f0146688ebe3643c1ff06afd43caee9a429"
+      },
+      "original_char_span": [
+        0,
+        752
+      ],
+      "source": {
+        "path": ".corpus-downloads/opheland_mito_independencia.pdf",
+        "sha256": "1acd9f242328d6901bd6b68f820540473793ca9c5434a600fdd407b95da7a909",
+        "family_id": "historical-ophelan-huamanga",
+        "title": "El mito de la independencia concedida"
+      },
+      "source_page": 18,
+      "reason": "Remove incomplete next sentence and appended page footnotes",
+      "model_predictions_used": false
+    },
+    {
+      "segment_id": "historical-v4-0125",
+      "action": "retain_inherited",
+      "source": {
+        "path": ".corpus-downloads/opheland_mito_independencia.pdf",
+        "sha256": "1acd9f242328d6901bd6b68f820540473793ca9c5434a600fdd407b95da7a909",
+        "family_id": "historical-ophelan-huamanga",
+        "title": "El mito de la independencia concedida"
+      },
+      "source_page": 11,
+      "reason": "Source collated. R2/R4 boundary remains open for 0130 and 0125; no automatic reference change. 0811 is coherent diplomacy.",
+      "model_predictions_used": false
+    },
+    {
+      "segment_id": "historical-v4-0130",
+      "action": "retain_inherited",
+      "source": {
+        "path": ".corpus-downloads/opheland_mito_independencia.pdf",
+        "sha256": "1acd9f242328d6901bd6b68f820540473793ca9c5434a600fdd407b95da7a909",
+        "family_id": "historical-ophelan-huamanga",
+        "title": "El mito de la independencia concedida"
+      },
+      "source_page": 12,
+      "reason": "Source collated. R2/R4 boundary remains open for 0130 and 0125; no automatic reference change. 0811 is coherent diplomacy.",
+      "model_predictions_used": false
+    },
+    {
+      "segment_id": "historical-v4-0189",
+      "action": "extract_contiguous_original_span",
+      "before": {
+        "text": "Tal es el caso de clérigo tucumano José Antonio Med;­ na quien, además de contribuir a la confección del plan de gobierno de la Junta Tuitiva de La Paz, expresaba que la lucha emprendida era «guerra justa por el Rey, Religión y Patria»94 • En el levanta­ miento de Cochabamba de 1810 correspondió al clérigo Oquendo «Orador diserto dotado de fogosa imaginación y manejando con sin­ gular maestría la lengua de los Incas»95, ser el encargado de encausar a las masas indígenas, a favor de la revolución criolla. Una de las particularidades de la revolución del Cuzco de 1814, fue la de haber contado en gran medida con el apoyo del bajo clero. La evidencia señala que los doctrineros de Andahuaylillas, Accha (Paruro), Pitahuasi. Huaracondo, Chelahuanca, Soraya, Huaquilca, Tapairihuas, Chinchaypuquio, Pantipanti, Yucay y Checacupi favo­ recieron abiertamente la revolución de los Angulo 96 • Sin embargo, dennuel de Luna, Jo~é Antonio Centeno, Antonio Váldez. Este último. junto con J10sé V ázquez de V:elazco, fueron acusados de haber redactado algunos edict~ a Túpae Amaru y. Pedro de la Cruz Condori. respectivamente.",
+        "label": "liderazgos_diplomacia_proyectos",
+        "sha256": "81ff72674f4582903496fb7fabe0415784b30176e5a823cfe92fb0a02dbef0cf"
+      },
+      "after": {
+        "text": "Tal es el caso de clérigo tucumano José Antonio Med;­ na quien, además de contribuir a la confección del plan de gobierno de la Junta Tuitiva de La Paz, expresaba que la lucha emprendida era «guerra justa por el Rey, Religión y Patria»94 • En el levanta­ miento de Cochabamba de 1810 correspondió al clérigo Oquendo «Orador diserto dotado de fogosa imaginación y manejando con sin­ gular maestría la lengua de los Incas»95, ser el encargado de encausar a las masas indígenas, a favor de la revolución criolla. Una de las particularidades de la revolución del Cuzco de 1814, fue la de haber contado en gran medida con el apoyo del bajo clero. La evidencia señala que los doctrineros de Andahuaylillas, Accha (Paruro), Pitahuasi. Huaracondo, Chelahuanca, Soraya, Huaquilca, Tapairihuas, Chinchaypuquio, Pantipanti, Yucay y Checacupi favo­ recieron abiertamente la revolución de los Angulo 96 •",
+        "label": "liderazgos_diplomacia_proyectos",
+        "sha256": "6360099942642458e50ff6b05331a14f1618663d0a05c186193b0f46a39a60e9"
+      },
+      "original_char_span": [
+        0,
+        892
+      ],
+      "source": {
+        "path": ".corpus-downloads/opheland_mito_independencia.pdf",
+        "sha256": "1acd9f242328d6901bd6b68f820540473793ca9c5434a600fdd407b95da7a909",
+        "family_id": "historical-ophelan-huamanga",
+        "title": "El mito de la independencia concedida"
+      },
+      "source_page": 22,
+      "reason": "Remove interrupted next sentence and unrelated footnote continuation",
+      "model_predictions_used": false
+    },
+    {
+      "segment_id": "historical-v4-0351",
+      "action": "extract_contiguous_original_span",
+      "before": {
+        "text": "Más aún, ya en la revolución de La Paz de 1809 hemos pedid() comprobar que la presencia de dirigentes vinculados de alguna ma­ nera al Cuzco, fue significativa. Ello demuestra que el movimiento no fue solamente instigado por doctores, estudiantes y juristas de la Universidad de Chuquisaca, como equivocadamente ha sido asumido24 • Entre los involucrados que fueron procesados y condenados a muer­ te en 1810, encontrarnos al Vista de Aduana Buenaventura Bueno, nacido en Arequipa; a Gregorio García Lanza, nacido en La Paz, abo­ gado graduado en la Universidad del Cuzco; a Juan Basilio Cataco­ ra Heredia, nacido en Chucuito, abogado graduado en el Cuzco; y a Pedro Domingo Murillo Zalazar, nacido en La Paz, forense que ejercía corno azoguero, con estudios en la Universidad del Cuzco 25 • 21) John Fisher, op. cit., p. 253. Para explicar la posición de Arequipa re­ sulta de gran utilidad la tesis de Mary Galleger, Imperial Reform 'lnd the struggle for regional selfdetArmination: Bishops, Intendente and Crcole Elites in Arequipa-Perú 11784-1816) (New York, Ph. D. 1978). 22) Rubén Vargas Ugarte, Historia dd Perú.",
+        "label": "liderazgos_diplomacia_proyectos",
+        "sha256": "ae5ad843f904568084a67982e461a90314180e48d990810a39fbd7ae90acd586"
+      },
+      "after": {
+        "text": "Más aún, ya en la revolución de La Paz de 1809 hemos pedid() comprobar que la presencia de dirigentes vinculados de alguna ma­ nera al Cuzco, fue significativa. Ello demuestra que el movimiento no fue solamente instigado por doctores, estudiantes y juristas de la Universidad de Chuquisaca, como equivocadamente ha sido asumido24 • Entre los involucrados que fueron procesados y condenados a muer­ te en 1810, encontrarnos al Vista de Aduana Buenaventura Bueno, nacido en Arequipa; a Gregorio García Lanza, nacido en La Paz, abo­ gado graduado en la Universidad del Cuzco; a Juan Basilio Cataco­ ra Heredia, nacido en Chucuito, abogado graduado en el Cuzco; y a Pedro Domingo Murillo Zalazar, nacido en La Paz, forense que ejercía corno azoguero, con estudios en la Universidad del Cuzco 25 •",
+        "label": "liderazgos_diplomacia_proyectos",
+        "sha256": "2ac2e16ed2236b4342996c81164d02f5d5aec96ce7c251b3e8d4351490f29f89"
+      },
+      "original_char_span": [
+        0,
+        793
+      ],
+      "source": {
+        "path": ".corpus-downloads/opheland_mito_independencia.pdf",
+        "sha256": "1acd9f242328d6901bd6b68f820540473793ca9c5434a600fdd407b95da7a909",
+        "family_id": "historical-ophelan-huamanga",
+        "title": "El mito de la independencia concedida"
+      },
+      "source_page": 7,
+      "reason": "Remove appended footnotes 21 and 22",
+      "model_predictions_used": false
+    },
+    {
+      "segment_id": "historical-v4-0507",
+      "action": "extract_contiguous_original_span",
+      "before": {
+        "text": "109 CAPÍTULO 3 PERÍODO 1 Como premio a los vencedores de las batallas de Junín y Ayacucho, el Congreso decidió otorgarles medallas como la que se aprecia en la imagen. Asimismo, se les dio el título de Beneméritos de la Patria a todos aquellos que lucharon por el Perú. A los soldados que participaron en Junín se les aumentó 1 peso en su sueldo y si lucharon en las dos batallas, 2 pesos. Los oficiales recibieron bonos y gratificaciones. ser vencido se afirmaría por muchos años el dominio español. En el dilema que presentaban los sucesos, el camino de estos indicaban a los hombres de bien que pertenecer a su patria era apoyar a Bolívar para entrar después en cuentas con el usurpador, o abstenerse de la política y retirarse”. Proseguir y ganar la guerra en un frente único con Bolívar, crear y preservar si era posible, una fuerza militar y política nacional útil para el futuro, apenas terminase la lucha con los españoles por la independencia, debió ser la consigna de los caudillos y de los dirigentes peruanos. No lo entendió así, por desgracia, Riva-Agüero.",
+        "label": "liderazgos_diplomacia_proyectos",
+        "sha256": "b400ee5a0f1428e5a00c88dcb88964224eb3e472c2aef623f3d3103127f3ff74"
+      },
+      "after": {
+        "text": "Proseguir y ganar la guerra en un frente único con Bolívar, crear y preservar si era posible, una fuerza militar y política nacional útil para el futuro, apenas terminase la lucha con los españoles por la independencia, debió ser la consigna de los caudillos y de los dirigentes peruanos. No lo entendió así, por desgracia, Riva-Agüero.",
+        "label": "liderazgos_diplomacia_proyectos",
+        "sha256": "7f3fd45f9eafc8416f2c528c9708db5b9e6dc7f0b17d476822bea869b0f6b152"
+      },
+      "original_char_span": [
+        733,
+        1069
+      ],
+      "source": {
+        "path": "artifacts/demo/files/86cd8383-a0d1-40f6-a759-e2c5a2bf37a9.pdf",
+        "sha256": "e1fe8984e19e8485002e8c6458394d7f34b566dfb3fd64d95fe0e1e315646770",
+        "family_id": "historical-basadre-hampe",
+        "title": "Historia de la Republica del Peru, tomo 1"
+      },
+      "source_page": 111,
+      "reason": "Remove image caption and incomplete preceding quotation",
+      "model_predictions_used": false
+    },
+    {
+      "segment_id": "historical-v4-0715",
+      "action": "extract_contiguous_original_span",
+      "before": {
+        "text": "Lo presidió Carlos Pedemonte. El día 7 de agosto Tagle puso el cúmplase a las resoluciones legislativas dadas en el Callao, que exoneraban del gobierno a Riva-Agüero, creaban el poder militar y lo entregaban a Sucre; y, a su vez, el Congreso ratificó la delegación de este mando hecho por Sucre a favor de Tagle, y le agregó el mando político. El 8 declaró el Congreso reo de alta traición a Riva-Agüero y otorgó el mismo calificativo a cuantos jefes y empleados le prestaran auxilio o reconocieran su autoridad. Los diputados que habían sido embarcados en la Veloz Trujillana fueron puestos en libertad en Chancay, donde este barco llegó para tomar lastre yagua. Recibidos en Chancay con repiques, cohetes, aclamaciones y una misa de gracias, se dirigieron luego a Lima adonde entraron por la calle de Malambo acompañados por personajes, gentío, banderas y música, josé bernardo dE TAGLE Y PORTOCARRERO (1779-1825)",
+        "label": "organizacion_consecuencias_republicanas",
+        "sha256": "e3ae491bad6f18137fb7b5f31c51316e80342a8da7a9c875ed9d8e2820acb70e"
+      },
+      "after": {
+        "text": "Lo presidió Carlos Pedemonte. El día 7 de agosto Tagle puso el cúmplase a las resoluciones legislativas dadas en el Callao, que exoneraban del gobierno a Riva-Agüero, creaban el poder militar y lo entregaban a Sucre; y, a su vez, el Congreso ratificó la delegación de este mando hecho por Sucre a favor de Tagle, y le agregó el mando político. El 8 declaró el Congreso reo de alta traición a Riva-Agüero y otorgó el mismo calificativo a cuantos jefes y empleados le prestaran auxilio o reconocieran su autoridad. Los diputados que habían sido embarcados en la Veloz Trujillana fueron puestos en libertad en Chancay, donde este barco llegó para tomar lastre yagua. Recibidos en Chancay con repiques, cohetes, aclamaciones y una misa de gracias, se dirigieron luego a Lima adonde entraron por la calle de Malambo acompañados por personajes, gentío, banderas y música,",
+        "label": "organizacion_consecuencias_republicanas",
+        "sha256": "dfa9315841edc86a1ddf7540345bf010f3481557b1431b4f25ca2a97a5a0932e"
+      },
+      "original_char_span": [
+        0,
+        866
+      ],
+      "source": {
+        "path": "artifacts/demo/files/86cd8383-a0d1-40f6-a759-e2c5a2bf37a9.pdf",
+        "sha256": "e1fe8984e19e8485002e8c6458394d7f34b566dfb3fd64d95fe0e1e315646770",
+        "family_id": "historical-basadre-hampe",
+        "title": "Historia de la Republica del Peru, tomo 1"
+      },
+      "source_page": 71,
+      "reason": "Remove portrait sidebar heading appended after narrative",
+      "model_predictions_used": false
+    },
+    {
+      "segment_id": "historical-v4-0768",
+      "action": "extract_contiguous_original_span",
+      "before": {
+        "text": "286 PERÍODO 1 CAPÍTULO 15 YA A LAS NUEVE DE LA NOCHE, LA ORDEN DE GUISSE FUE PARA QUE LOS BUQUES SE REPLEGARAN AL FONDEADERO DE CRUCES, PUES A GUAYAQUIL NO LE QUEDABA SINO RENDIRSE. PERO UNA MALA MANIOBRA DE LA FRAGATA PRESIDENTE HIZO QUE ENCALLARA EN UNO DE LOS TANTOS BAJOS DE LA RÍA. y destruido, los peruanos llevaron a bordo las cosas que pudieron ser aprovechadas. En la mañana del 23 de noviembre hubo un cañoneo entre el bergantín colombiano Adela, protegido por una batería situada en la aduana y la escuadra peruana. El bergantín fue echado a pique y la batería quedó silenciada. muerte DE GUISSE.- A las tres de la tarde del mismo día 23 avanzó Guisse y se batió con las tres baterías: la del muelle, la del cerro de la Pólvora (a cuyo amparo estaban la goleta Guayaquileña, otra goleta y dos lanchas) y la Planchada. La del muelle quedó deshecha, la Guayaquileña desmantelada (fue luego incorporada a la escuadra peruana), la otra goleta y las lanchas destrozadas. Guisse mandó suspender el fuego sobre la población para limitarlo únicamente a las baterías de la Pólvora y la Planchada cuyos fuegos quedaron apagados al anochecer.",
+        "label": "campanias_conflictos_militares",
+        "sha256": "f0d5dbb1949d521ded57945b84503eb47b8ef218c4abe37d623bebfd79721149"
+      },
+      "after": {
+        "text": "En la mañana del 23 de noviembre hubo un cañoneo entre el bergantín colombiano Adela, protegido por una batería situada en la aduana y la escuadra peruana. El bergantín fue echado a pique y la batería quedó silenciada. muerte DE GUISSE.- A las tres de la tarde del mismo día 23 avanzó Guisse y se batió con las tres baterías: la del muelle, la del cerro de la Pólvora (a cuyo amparo estaban la goleta Guayaquileña, otra goleta y dos lanchas) y la Planchada. La del muelle quedó deshecha, la Guayaquileña desmantelada (fue luego incorporada a la escuadra peruana), la otra goleta y las lanchas destrozadas. Guisse mandó suspender el fuego sobre la población para limitarlo únicamente a las baterías de la Pólvora y la Planchada cuyos fuegos quedaron apagados al anochecer.",
+        "label": "campanias_conflictos_militares",
+        "sha256": "f8495496bebf7bf8adad83af8024484446c420b97f932c60eefdcb8ccfb3e3e2"
+      },
+      "original_char_span": [
+        371,
+        1142
+      ],
+      "source": {
+        "path": "artifacts/demo/files/86cd8383-a0d1-40f6-a759-e2c5a2bf37a9.pdf",
+        "sha256": "e1fe8984e19e8485002e8c6458394d7f34b566dfb3fd64d95fe0e1e315646770",
+        "family_id": "historical-basadre-hampe",
+        "title": "Historia de la Republica del Peru, tomo 1"
+      },
+      "source_page": 288,
+      "reason": "Remove header, duplicated pull quote and incomplete preceding sentence",
+      "model_predictions_used": false
+    },
+    {
+      "segment_id": "historical-v4-0811",
+      "action": "retain_inherited",
+      "source": {
+        "path": "outputs/training-batch-v3/hampe/article.pdf",
+        "sha256": "9c930ca049b398cf7b70bc55e1d19c52e4ed6871de4134c26cf77e2637a2a827",
+        "family_id": "work-08fa49e1-abac-5645-a35e-2d7ec4a8f05d",
+        "title": "Bernardo Monteagudo y su intervención en el proyecto monárquico para el Perú"
+      },
+      "source_page": 16,
+      "reason": "Source collated. R2/R4 boundary remains open for 0130 and 0125; no automatic reference change. 0811 is coherent diplomacy.",
+      "model_predictions_used": false
+    }
+  ],
+  "no_estimated_corpus_error_rate": true
+}

@@ -1,0 +1,53 @@
+{
+  "baseline_sha256": "edeee75224cd106aa1b69b196aa717ef0f0f43ca0975168a125d79ca1fca07df",
+  "response_files": [
+    {
+      "path": "outputs\\beto-v3\\admission-01\\first-pass\\batch-01.json",
+      "sha256": "103e85bbfc987d62f8ea66ea44d00e41afc36618b1b8b76c8fc959c91f4b5105",
+      "stage": "first-pass",
+      "session": "admission_first"
+    },
+    {
+      "path": "outputs\\beto-v3\\admission-01\\first-pass\\batch-02.json",
+      "sha256": "e0b135a8ac19102eed33d96d18488880b1ea3d6bf538e8b02446d594150ecca5",
+      "stage": "first-pass",
+      "session": "admission_first"
+    },
+    {
+      "path": "outputs\\beto-v3\\admission-01\\first-pass\\batch-03.json",
+      "sha256": "3923f7900dd7638130ab85884c2e3302e3f3046f38ef6e781dd53c37b2f855d3",
+      "stage": "first-pass",
+      "session": "admission_first"
+    },
+    {
+      "path": "outputs\\beto-v3\\admission-01\\first-pass\\batch-04.json",
+      "sha256": "58427ac630f634fed71fee34660cb59f0397881c27c9d1bea45c0a42293cfbbe",
+      "stage": "first-pass",
+      "session": "admission_first"
+    },
+    {
+      "path": "outputs\\beto-v3\\admission-01\\second-review\\batch-01.json",
+      "sha256": "0a20808955a09f829b7c2be53a1d51a9afe27df84c47b92a5acc8027e371304d",
+      "stage": "second-review",
+      "session": "admission_second_cli_utf8"
+    },
+    {
+      "path": "outputs\\beto-v3\\admission-01\\second-review\\batch-02.json",
+      "sha256": "61b89728fdf44d16a1b7254e204ae19a34378bd5441f2b11588fff72ae8143d1",
+      "stage": "second-review",
+      "session": "admission_second_cli_utf8"
+    },
+    {
+      "path": "outputs\\beto-v3\\admission-01\\second-review\\batch-03.json",
+      "sha256": "7f1e4159752150d10393211a4f0c627c600487a4e0013caa52cea7a8065fd972",
+      "stage": "second-review",
+      "session": "admission_second_cli_utf8"
+    },
+    {
+      "path": "outputs\\beto-v3\\admission-01\\second-review\\batch-04.json",
+      "sha256": "150610a80ab949be9245ea5032ec72fc4f9032660ff498f0ea95c4a5af54b5d2",
+      "stage": "second-review",
+      "session": "admission_second_cli_utf8"
+    }
+  ]
+}

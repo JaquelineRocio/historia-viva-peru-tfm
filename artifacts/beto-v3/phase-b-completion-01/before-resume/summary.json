@@ -1,0 +1,51 @@
+{
+  "version": "phase-b-completion-01",
+  "old_candidates_processed": 123,
+  "result_units": 125,
+  "class_proposals": {
+    "no_relevante": 45,
+    "organizacion_consecuencias_republicanas": 15,
+    "participacion_social_regional": 22,
+    "liderazgos_diplomacia_proyectos": 7,
+    "crisis_ideas_emancipadoras": 20,
+    "campanias_conflictos_militares": 15,
+    "contexto_colonial_antecedentes": 1
+  },
+  "status_counts": {
+    "pending_review": 69,
+    "accepted_first_pass_unsampled_training": 56
+  },
+  "reused_first_pass": 4,
+  "new_distinct_annotated_inputs": 121,
+  "cumulative_distinct_annotated_inputs": 133,
+  "second_review_executed": 0,
+  "pending_review_export": 69,
+  "review_capability": "No callable independent text-model completion tool used; no isolated second pass executed. Current reading is a single pass, not blind review.",
+  "review_sampling": {
+    "seed": 20260909,
+    "eligible_unambiguous_T": 70,
+    "sample_size": 14,
+    "fraction": 0.2,
+    "ids": [
+      "0Dgk3uh0ziE-b01-003",
+      "0Dgk3uh0ziE-b01-005",
+      "0Dgk3uh0ziE-b01-012",
+      "0Dgk3uh0ziE-b01-015",
+      "0Dgk3uh0ziE-b01-022",
+      "0Dgk3uh0ziE-b01-027",
+      "bVrm2pJw4SA-b01-009",
+      "bVrm2pJw4SA-b01-015",
+      "bVrm2pJw4SA-b01-017",
+      "bVrm2pJw4SA-b01-019",
+      "bVrm2pJw4SA-b01-026",
+      "bVrm2pJw4SA-b01-033",
+      "bVrm2pJw4SA-b01-035",
+      "bVrm2pJw4SA-b01-039"
+    ]
+  },
+  "accepted_reference_meaning": "Unambiguous training first-pass references outside required 20% sample; not expert gold. All rows remain globally training-ineligible until phase-B gates pass.",
+  "services_paid_USD": 0,
+  "training_runs": 0,
+  "ASR_runs": 0,
+  "S_content_opened": false
+}

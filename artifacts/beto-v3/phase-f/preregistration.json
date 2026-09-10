@@ -1,0 +1,113 @@
+{
+  "phase": "F",
+  "option": "transcript_only",
+  "registered_utc": "2026-09-09T23:28:46.050380+00:00",
+  "authorization": "User explicitly extends C-D validation amendment to F before training",
+  "original_contract": {
+    "path": "artifacts/beto-v3/development-admission-02/development-contract.json",
+    "sha256": "db03ae89217e1682722b4d86c3c890a7cb7f2dabba2b17934a7dbb0b710cfeb4"
+  },
+  "freeze_sha256": "6b7ae3358a31c8303387b15010a5ee57f4ed54c99c4e717b829afc84a733608f",
+  "scope": [
+    "F"
+  ],
+  "V_minimum_overrides": {
+    "contexto_colonial_antecedentes": 23,
+    "organizacion_consecuencias_republicanas": 23
+  },
+  "original_operational_goal": 25,
+  "operational_goal_met": false,
+  "original_budget": {
+    "new_annotation_units": 1200,
+    "historical_review_units": 60,
+    "T_max": 600,
+    "new_trajectories": 18,
+    "supervised_fits": 17,
+    "MLM_trajectories": 1,
+    "CD_gpu_seconds": 14400,
+    "total_training_gpu_seconds": 28800,
+    "ASR_gpu_seconds": 28800,
+    "phase_fits": {
+      "C": 4,
+      "D": 4,
+      "E": 3,
+      "F": 4,
+      "G": 3
+    },
+    "failures_count": true,
+    "scope": "All new V3 phases cumulatively; V2 prior use recorded separately without claiming it is zero"
+  },
+  "original_success": {
+    "macro_f1": 0.7,
+    "minimum_class_f1": 0.5,
+    "beats_matched_tfidf": true,
+    "resolvable_reference_coverage": 0.9
+  },
+  "labels": [
+    "campanias_conflictos_militares",
+    "contexto_colonial_antecedentes",
+    "crisis_ideas_emancipadoras",
+    "liderazgos_diplomacia_proyectos",
+    "no_relevante",
+    "organizacion_consecuencias_republicanas",
+    "participacion_social_regional"
+  ],
+  "S_closed": true,
+  "controls": [
+    {
+      "seed": 42,
+      "path": "outputs\\beto-v3\\phase-c\\seed-42\\R2\\result.json",
+      "sha256": "a60fde0eb4a67231e420dcb0b361fa6c31b4b3cf76fc437bdd37ca52f4f2e223",
+      "config_sha256": "db30fa10b1b43482b02e20f18b221b4dd0657245d6fce52a182e4e0409613e99"
+    },
+    {
+      "seed": 43,
+      "path": "outputs\\beto-v3\\phase-c\\seed-43\\R2\\result.json",
+      "sha256": "2d6b75b1489d215083416364f2e05bb81ed748def0de0a0215af4c7e89854811",
+      "config_sha256": "c9a6068fc6d7fe3daf02feff2d237a66600b3e608b31d82fa33edc17fb36c81d"
+    },
+    {
+      "seed": 44,
+      "path": "outputs\\beto-v3\\phase-c\\seed-44\\R2\\result.json",
+      "sha256": "5c6c338a7a70688dc206b9f4f37b2b915944a8646dd855b6fdc2760f67695853",
+      "config_sha256": "d9bb45f51e93dd3eaf23354d1900bd1ac45776a65e74e70ddb8e5d40d0ad06e0"
+    }
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "epochs": 20,
+  "scheduler_horizon_epochs": 20,
+  "lr": 2e-05,
+  "train_n": 426,
+  "validation_n": 444,
+  "class_counts": {
+    "no_relevante": 219,
+    "participacion_social_regional": 70,
+    "liderazgos_diplomacia_proyectos": 34,
+    "organizacion_consecuencias_republicanas": 22,
+    "crisis_ideas_emancipadoras": 25,
+    "campanias_conflictos_militares": 34,
+    "contexto_colonial_antecedentes": 22
+  },
+  "class_weights": {
+    "campanias_conflictos_militares": 1.7899159663865547,
+    "contexto_colonial_antecedentes": 2.7662337662337664,
+    "crisis_ideas_emancipadoras": 2.434285714285714,
+    "liderazgos_diplomacia_proyectos": 1.7899159663865547,
+    "no_relevante": 0.27788649706457924,
+    "organizacion_consecuencias_republicanas": 2.7662337662337664,
+    "participacion_social_regional": 0.8693877551020408
+  },
+  "steps_per_epoch": 27,
+  "total_step_opportunities": 540,
+  "warmup_steps": 54,
+  "selection": "Mean pooled V macro F1 over all 3 best checkpoints; earliest epoch on checkpoint ties; if absolute mean difference <0.005 prefer lower cumulative measured trajectory wall cost; exact cost tie retains R2 H+T",
+  "uncertainty": "Sample SD n-1 and paired seed deltas; per-class/work gains and losses. Seeds are not source replicates. Development V reused; no final success claim.",
+  "limitations": "23+23 remains below 25; V 444/489 resolvable, AI-assisted not expert gold, sampled spans not full videos, 11 admitted subtitle gaps. No extension to S/final evaluation.",
+  "retention": "Keep all newly created epoch resumes and improved checkpoints; no deletion or moving existing files",
+  "global_remaining_seconds": 21594.60559040001,
+  "baseline": "Fit the frozen TF-IDF recipe on T only for matched context; reuse H+T baseline; no tuning"
+}

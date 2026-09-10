@@ -1,0 +1,15 @@
+﻿class,partition,accepted,target,missing_examples,accepted_works,target_works,missing_works
+campanias_conflictos_militares,T,18,20,2,2,2,0
+campanias_conflictos_militares,V,0,25,25,0,2,2
+contexto_colonial_antecedentes,T,1,20,19,1,2,1
+contexto_colonial_antecedentes,V,9,25,16,1,2,1
+crisis_ideas_emancipadoras,T,7,20,13,2,2,0
+crisis_ideas_emancipadoras,V,13,25,12,2,2,0
+liderazgos_diplomacia_proyectos,T,11,20,9,3,2,0
+liderazgos_diplomacia_proyectos,V,8,25,17,2,2,0
+no_relevante,T,27,20,0,4,2,0
+no_relevante,V,44,25,0,2,2,0
+organizacion_consecuencias_republicanas,T,7,20,13,3,2,0
+organizacion_consecuencias_republicanas,V,8,25,17,2,2,0
+participacion_social_regional,T,22,20,0,5,2,0
+participacion_social_regional,V,17,25,8,2,2,0

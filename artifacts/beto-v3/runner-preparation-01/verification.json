@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "checks": [
+    "AST core equals corrected V2 plus eight documented changes",
+    "Prediction helper equals V2 plus budget polling",
+    "Weighted accumulated gradients match full 16 + partial 3 batches to 1e-12",
+    "Hash corruption, unresolved labels and unadmitted references rejected; V remains nontraining",
+    "Missing freeze rejected without training"
+  ],
+  "environment": {
+    "protocol_and_environment": "passed",
+    "training_executed": false,
+    "S_opened": false,
+    "core_sha256": "155adbcbc16f0f7684047329137c00f4d46340a047eae6130b530cbb237846cf",
+    "legacy_runner_sha256": "158b2e74c544b3af9de0eac8086e2c736a7833e96e43d6d7819a692de61ec17a",
+    "C_ready": false,
+    "limitation": "Environment/core only; frozen references not admitted or loaded"
+  },
+  "model_loaded": false,
+  "GPU_training_executed": false,
+  "S_opened": false,
+  "limitations": [
+    "No frozen dataset supplied: data admission unverified",
+    "20-epoch CUDA trajectory and checkpoint resume not executed",
+    "Budget interruption checked structurally, not by GPU fault injection"
+  ],
+  "checked_files_sha256": {
+    "scripts\\beto_phase_c_core_v3.py": "155adbcbc16f0f7684047329137c00f4d46340a047eae6130b530cbb237846cf",
+    "scripts\\run_beto_phase_c_v3.py": "90cc566a78708b1259696382e82dab0d533c15d4760b29c2ac971738956cca47",
+    "scripts\\check_beto_phase_c_runner_v3.py": "45b459c2a93e64018cfb8bee5fff884a7ab5cfcb2299793f5bff7d0c752af5ec",
+    "docs\\beto-v3\\runner-phase-c.md": "19571a02a5854ebe7d772bab8d953fe3c2f0d87bf4b3696481fb6781fa6fb7ec"
+  }
+}

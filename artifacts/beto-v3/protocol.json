@@ -1,0 +1,153 @@
+{
+  "version": "beto-v3.1",
+  "status": "preregistered_data_not_ready",
+  "labels": [
+    "campanias_conflictos_militares",
+    "contexto_colonial_antecedentes",
+    "crisis_ideas_emancipadoras",
+    "liderazgos_diplomacia_proyectos",
+    "no_relevante",
+    "organizacion_consecuencias_republicanas",
+    "participacion_social_regional"
+  ],
+  "scope": [
+    1780,
+    1842
+  ],
+  "base_model": "dccuchile/bert-base-spanish-wwm-cased",
+  "revision": "c4d86612f51b4f46759c8390d1798c2febe71b93",
+  "base_hashes": {
+    "config.json": "3694a761b0ba882c24baab95df01cf7e7e1424797af557272e944ec2452f9f31",
+    "pytorch_model.bin": "e131a95091c777bbd45250fb647fec415010cb8cd1ad6e1d59babeb82a0be360",
+    "special_tokens_map.json": "bd6ed009009f8264d0ef87d5b50798cb57c5219a0bbb7c8973372855241aa05f",
+    "tokenizer.json": "ea7a58026720ba45a8a401d9f86bbe8337f2725d3b02d3a1011305c46cbbd9cd",
+    "tokenizer_config.json": "2f5cde6bbb9959fccd280e9e9c08d41d05e96743fac1a3b5b67e0e5691ae7d10",
+    "vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+  },
+  "versions": {
+    "torch": "2.7.1+cu126",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "numpy": "2.2.6",
+    "scikit-learn": "1.7.2",
+    "scipy": "1.15.3",
+    "safetensors": "0.8.0",
+    "huggingface-hub": "0.36.2"
+  },
+  "max_length": 384,
+  "representation": "normalized_authentic_target_only",
+  "recipe": {
+    "microbatch": 2,
+    "gradient_accumulation": 8,
+    "effective_batch": 16,
+    "optimizer": "AdamW",
+    "weight_decay": 0.01,
+    "clip_norm": 1.0,
+    "precision": "AMP float16",
+    "warmup_ratio": 0.1,
+    "scheduler": "linear; fresh horizon for each trajectory",
+    "class_weights": "inverse_frequency_train_only",
+    "loss_normalization": "sum_weighted_CE / sum_weights_effective_batch"
+  },
+  "recipes": {
+    "R0": {
+      "data": [
+        "H"
+      ],
+      "lr": 2e-05,
+      "epochs": 4
+    },
+    "R1": {
+      "data": [
+        "H",
+        "T300"
+      ],
+      "lr": 2e-05,
+      "epochs": 4
+    },
+    "R2": {
+      "data": [
+        "H",
+        "T300"
+      ],
+      "lr": 2e-05,
+      "epochs": 20
+    },
+    "R3": {
+      "data": [
+        "H",
+        "T300"
+      ],
+      "lr": 1e-05,
+      "epochs": 20
+    }
+  },
+  "selection": {
+    "initial_seed": 42,
+    "confirmation_seeds": [
+      43,
+      44
+    ],
+    "checkpoint": "maximum validation macro F1; earliest epoch breaks ties",
+    "candidate": "best R1-R3; within 0.005 prefer lower measured cost",
+    "E_gate": {
+      "paired_delta_mean_min": 0.02,
+      "positive_seeds_min": 2,
+      "coverage_errors_required": true
+    },
+    "F": "at most one: transcript_only (3 fits) OR TAPT (500 updates / 1 hour + 3 fits)",
+    "delivery_seed": 42,
+    "final_epochs": "median best development epochs",
+    "S": "one final phase after recipe/data/reference freeze; never seed selection"
+  },
+  "budget": {
+    "new_annotation_units": 1200,
+    "historical_review_units": 60,
+    "T_max": 600,
+    "new_trajectories": 18,
+    "supervised_fits": 17,
+    "MLM_trajectories": 1,
+    "CD_gpu_seconds": 14400,
+    "total_training_gpu_seconds": 28800,
+    "ASR_gpu_seconds": 28800,
+    "phase_fits": {
+      "C": 4,
+      "D": 4,
+      "E": 3,
+      "F": 4,
+      "G": 3
+    },
+    "failures_count": true,
+    "scope": "All new V3 phases cumulatively; V2 prior use recorded separately without claiming it is zero"
+  },
+  "evaluation": {
+    "labels_explicit": true,
+    "zero_division": 0,
+    "primary": "pooled macro F1 over V units",
+    "targets": {
+      "macro_f1": 0.7,
+      "minimum_class_f1": 0.5,
+      "beats_matched_tfidf": true,
+      "resolvable_reference_coverage": 0.9
+    },
+    "bootstrap_unit": "original video/work",
+    "coverage_goals": {
+      "T300_per_class": 20,
+      "T300_works_per_class": 2,
+      "V_S_per_class": 25,
+      "V_S_works_per_class": 2
+    }
+  },
+  "data_gate": [
+    "H/T/V/S family disjointness and reproduction checks",
+    "real timestamped transcripts with duration/integrity checks",
+    "seven class support on T and V, annotation review complete",
+    "references and representation hashed before predictions"
+  ],
+  "tfidf": {
+    "majority": "train most frequent, alphabetical tie",
+    "tfidf": "word1-2, min_df2, max_features50000, sublinear_tf, unicode accents; LogisticRegression C4 balanced lbfgs max_iter2000 seed42; both A/B"
+  },
+  "plan_sha256": "fb09534425aed5738214fcdf184e0044aa754a3357893394cc364841e10b2452",
+  "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "C_complete_D_not_executed",
+  "updated_utc": "2026-09-09T07:28:59.505082+00:00",
+  "C_ready": true,
+  "S_closed": true,
+  "freeze_sha256": "6b7ae3358a31c8303387b15010a5ee57f4ed54c99c4e717b829afc84a733608f",
+  "candidate": "R2",
+  "results": "outputs\\beto-v3\\phase-c\\comparison-seed42.json",
+  "budget_ledger": "artifacts/beto-v3/budget-ledger-after-C.json",
+  "final_success_evaluated": false
+}

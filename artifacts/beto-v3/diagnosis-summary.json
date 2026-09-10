@@ -1,0 +1,26 @@
+{
+  "seed": 42,
+  "epoch4": {
+    "A": {
+      "epoch": 4,
+      "folds": 3,
+      "train_macro_f1_mean": 0.817114596461196,
+      "validation_macro_f1_mean": 0.41355227064235917,
+      "train_loss_mean": 0.92857120985981
+    },
+    "B": {
+      "epoch": 4,
+      "folds": 3,
+      "train_macro_f1_mean": 0.8062462545183746,
+      "validation_macro_f1_mean": 0.4032297349186576,
+      "train_loss_mean": 0.9352964854092203
+    }
+  },
+  "scope": "Six V2 A/B trajectories; 24 epoch inferences, not V3 validation",
+  "interpretation": "Training performance rises well above held-out performance; generalization gap is supported. Longer fine-tuning benefit remains untested.",
+  "unknowns": [
+    "Effect of longer optimization",
+    "Performance on independent videos",
+    "Historical expert accuracy of references"
+  ]
+}

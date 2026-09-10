@@ -1,0 +1,350 @@
+{
+  "purpose": "Original-work relationships and reserve membership, not topic-based grouping",
+  "reserved_content_accessed": false,
+  "model_predictions_accessed": false,
+  "confirmed_reserved_membership_detected": false,
+  "reservation_metadata_compared": [
+    {
+      "source_id": "V03",
+      "title": "UNKNOWN",
+      "author": "UNKNOWN",
+      "url": "https://www.gob.pe/institucion/bnp/campa%C3%B1as/63781-la-noticia-hoy-hace-200-anos",
+      "role": "reserved_candidate",
+      "family_id": "family-V03"
+    },
+    {
+      "source_id": "V04",
+      "title": "UNKNOWN",
+      "author": "UNKNOWN",
+      "url": "https://www.bnp.gob.pe/bnp-inicia-ciclo-de-conversatorios-sobre-el-bicentenario-de-la-consolidacion-de-la-independencia-del-peru/",
+      "role": "reserved_candidate",
+      "family_id": "family-V04"
+    },
+    {
+      "source_id": "S04",
+      "title": "Líneas de investigación para el estudio de las relaciones entre los virreinatos del Perú y de la Nueva España hasta la independencia",
+      "author": "Hugo Pereyra Plasencia",
+      "url": "https://revista.agn.gob.pe/ojs/index.php/ragn/article/view/168",
+      "role": "reserved_candidate",
+      "family_id": "family-S04"
+    },
+    {
+      "source_id": "S09",
+      "title": "Cusco en el contexto de la independencia: 1780-1814",
+      "author": "Margareth Najarro Espinoza",
+      "url": "https://historiaregional.org/ojs/index.php/historiaregional/article/view/883",
+      "role": "reserved_candidate",
+      "family_id": "family-S09"
+    },
+    {
+      "source_id": "S16",
+      "title": "Una rebelión a la deriva : fisuras y represión realista en Tacna, 1811",
+      "author": "Seiner Lizárraga, Lizardo",
+      "url": "https://repositorio.pucp.edu.pe/items/ff0a73fa-dbae-452e-b613-3b5a9f73fc0b",
+      "role": "reserved_candidate",
+      "family_id": "family-S16"
+    },
+    {
+      "video_id": "zb5zntF2kAs",
+      "title": "Sucedió en el Perú (TV Perú) - Hipólito Unanue - 01/02/2016",
+      "url": "https://www.youtube.com/watch?v=zb5zntF2kAs",
+      "role": "S",
+      "family_id": "video-zb5zntF2kAs"
+    }
+  ],
+  "checks": [
+    {
+      "path": "artifacts/beto-v3/source-registry.json",
+      "sha256": "0c701be26fff927888a13f9280b90903d139b12a4d96a979d30c383392a7ad6c",
+      "access": "registry_metadata_only"
+    },
+    {
+      "path": "artifacts/beto-v3/phase-b-completion-01/source-registry-final.json",
+      "sha256": "bee17ff11d88c7ef3c8fe2cb30f1a12ee21f685e984c67f45b9ca61a0f1859b4",
+      "access": "registry_metadata_only"
+    },
+    {
+      "path": "artifacts/beto-v3/reserved-index.json",
+      "sha256": "a4afd2ac6b9ebda094cc21a34bd278b440f30b583d69b0f2eb52f20e360f7763",
+      "access": "registry_metadata_only"
+    },
+    {
+      "path": "artifacts/beto-v2/corpus/acquisition-plan.json",
+      "sha256": "29f6eaf1c6d15cc79d2eeaebd016fde4ff004d9060deb852a1daec08b664bad2",
+      "access": "registry_metadata_only"
+    },
+    {
+      "path": "artifacts/beto-v2/corpus/source-registry-v2.csv",
+      "sha256": "8ab105c25981cbc820065ce9685559662416e5ba8ff97a8e2c42be8572d23e24",
+      "access": "registry_metadata_only"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N03\\landing.html",
+      "sha256": "352540150a9604e2e863c9b2fc8e00ae239d77733dd7d16d63941437b036eeb7",
+      "access": "new_source_metadata"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N03\\receipt.json",
+      "sha256": "6c859bf2bcd79f3f38685f07b19462a1af62aaa39d9ae1c676a339066c3cb930",
+      "access": "new_source_metadata"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N03\\media-probe.json",
+      "sha256": "8b055593564ac2c4f056f8ac0e6a14b42ba2a33e6199b23d339f6feaa068ea44",
+      "access": "new_source_metadata"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N07\\landing.html",
+      "sha256": "3a48b60b578cf02261c41918852a9c768e7fdc065960b91f650bfc6daabeef27",
+      "access": "new_source_metadata"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N07\\receipt.json",
+      "sha256": "d13cb02937a55f2e328df62175211cd946d6219f31873200dc44fb7ac8628f3a",
+      "access": "new_source_metadata"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N07\\media-probe.json",
+      "sha256": "f73b8750e064e865fc6e65de55e699dc3b2b3d3758d1019ab967de0eec07947a",
+      "access": "new_source_metadata"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N08\\landing.html",
+      "sha256": "dfcd4aa84fe3022459fb31b3c3463a8413e77e20c504f89b0809ab8700d86c4b",
+      "access": "new_source_metadata"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N08\\receipt.json",
+      "sha256": "6678bacb18b871cd4a8623ca5df80e0ae44d57be78831bdfe72df2a3f052e038",
+      "access": "new_source_metadata"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N08\\media-probe.json",
+      "sha256": "937373c394f4b42b20cd5d64a87c912c92be86850cef4c7d522fcf5359c7dbfc",
+      "access": "new_source_metadata"
+    }
+  ],
+  "items": [
+    {
+      "source_id": "N03",
+      "original_work_title": "Francisco de Zela",
+      "subtitle": "Primer grito de libertad en el Perú",
+      "published_on_landing": "17/03/11",
+      "duration_on_landing": "18:00",
+      "producer": [
+        "Instituto Riva-Agüero de la PUCP",
+        "Organización de los Estados Iberoamericanos (OEI)"
+      ],
+      "participants": null,
+      "participant_limit": "La página identifica productores, no narrador ni entrevistados.",
+      "media_identity": "https://videos.pucp.edu.pe/new/e/ebb96fcba79873.mp4",
+      "evidence": [
+        {
+          "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N03\\landing.html",
+          "literal_visible_metadata": "Francisco de Zela"
+        },
+        {
+          "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N03\\landing.html",
+          "literal_visible_metadata": "Fecha de Ingreso: 17/03/11"
+        },
+        {
+          "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N03\\landing.html",
+          "literal_visible_metadata": "Este video documental es la primera iniciativa en conjunto realizada por el Instituto Riva-Agüero de la PUCP y la Organización de los Estados Iberoamericanos (OEI)"
+        }
+      ],
+      "relations": [
+        {
+          "target": "S16 / family-S16",
+          "type": "shared_historical_subject_only; adaptation_unresolved",
+          "evidence": "Reserva: Una rebelión a la deriva : fisuras y represión realista en Tacna, 1811; Lizardo Seiner; 2013. N03: documental de Zela de 2011.",
+          "assessment": "La proximidad Tacna/Zela 1811 no demuestra reproducción de la obra. La fecha anterior del documental descarta que su publicación original reproduzca una edición posterior como tal, pero no excluye material previo compartido o adaptación inversa. Se necesitan créditos o declaración de obra matriz."
+        },
+        {
+          "target": "existing T/V video families and other reserved works",
+          "type": "no_identity_established_from_metadata",
+          "assessment": "No coincide URL, título de obra ni identidad mediática con el registro. No se certifica ausencia de clips compartidos."
+        }
+      ],
+      "reservation_membership": "not_established; S16 thematic relation requires credit review",
+      "recommended_family": "candidate-N03",
+      "independence_status": "pending_participant_credits_and_excerpt_review"
+    },
+    {
+      "source_id": "N07",
+      "original_work_title": "Simposio: La iglesia ante el desafío de la independencia del Perú",
+      "published_on_landing": "02 de Octubre de 2019",
+      "duration_on_landing": "01h 33m",
+      "producer": [
+        "PUCP / Departamento de Humanidades"
+      ],
+      "participants": null,
+      "participant_limit": "La etiqueta sanchezconcha es una pista; no acredita nombre completo ni participación en la página.",
+      "media_identity": "https://educast.pucp.edu.pe/files/videos/f/fe3f4736e14db21/a7bb70c4b9.mp4",
+      "evidence": [
+        {
+          "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N07\\landing.html",
+          "literal_visible_metadata": "02 de Octubre de 2019"
+        },
+        {
+          "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N07\\landing.html",
+          "literal_visible_metadata": "01h 33m"
+        },
+        {
+          "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N07\\landing.html",
+          "literal_visible_metadata": "iglesia desafio independencia peru cristo sanchezconcha historia humanidades"
+        }
+      ],
+      "relations": [
+        {
+          "target": [
+            "educast:12047",
+            "educast:12048",
+            "educast:12049",
+            "educast:12050"
+          ],
+          "type": "explicit_same_event_parts",
+          "assessment": "La playlist enlaza la sesión y Partes 02–04 del mismo simposio. Mantener relación de evento; no declarar idénticas ponencias sin créditos y comparación."
+        },
+        {
+          "target": "V03,V04",
+          "type": "different_event_metadata",
+          "assessment": "Los reservados son iniciativas BNP de 1824/bicentenario 2024 según acquisition-plan; N07 es simposio PUCP de 2019. No hay señal de pertenencia al evento reservado; una eventual reutilización posterior no se puede descartar sin metadatos de episodios."
+        },
+        {
+          "target": "S18",
+          "type": "shared_subject_not_identity",
+          "assessment": "El registro describe clero y revolución del Cuzco 1814, con autor/título UNKNOWN. No existe evidencia de que sea la obra presentada ni una reserva."
+        }
+      ],
+      "reservation_membership": "not_established",
+      "recommended_family": "candidate-N07",
+      "independence_status": "distinct_event_metadata; pending_speaker_credits_and_excerpt_review",
+      "linked_media_aliases": [
+        "https://fms.pucp.edu.pe/vod/_definst_/mp4:educast/f/fe3f4736e14db21/a7bb70c4b9.mp4",
+        "https://educast.pucp.edu.pe/files/videos/f/fe3f4736e14db21/a7bb70c4b9.mp4",
+        "https://fms.pucp.edu.pe/vod/_definst_/mp4:intro.mp4",
+        "https://educast.pucp.edu.pe/img/intro.mp4"
+      ],
+      "alias_note": "FMS and direct MP4 point to the same relative educast asset; intro.mp4 is shared player bumper, not original-work identity. No cross-source alias inferred."
+    },
+    {
+      "source_id": "N08",
+      "original_work_title": "De Cádiz a Aznapuquio: Los militares españoles durante las guerras de independencia en el Perú, 1813-1821.",
+      "recording_title": "XXII Coloquio Internacional de Estudiantes de Historia Mesa 12: La Independencia hispanoamericana: Las diversas trayectorias de sus personajes(2 de 4)",
+      "published_on_landing": "26 de Octubre de 2012",
+      "duration_on_landing": "23m",
+      "participants": [
+        {
+          "name": "Christopher Cornelio",
+          "affiliation": "Pontificia Universidad Católica del Perú",
+          "role": "ponente",
+          "confirmation": "landing description; ASR opening introduces Cristopher Cornelio"
+        }
+      ],
+      "media_identity": "https://educast.pucp.edu.pe/files/videos/2/2f545225e23b935f346b38b3f/56mo444de314795.mp4",
+      "evidence": [
+        {
+          "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N08\\landing.html",
+          "literal_visible_metadata": "Christopher Cornelio (Pontificia Universidad Católica del Perú)"
+        },
+        {
+          "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N08\\landing.html",
+          "literal_visible_metadata": "De Cádiz a Aznapuquio: Los militares españoles durante las guerras de independencia en el Perú, 1813-1821."
+        },
+        {
+          "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N08\\landing.html",
+          "literal_visible_metadata": "26 de Octubre de 2012"
+        },
+        {
+          "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N08\\asr\\chunk-000.json",
+          "start_sec": 0,
+          "end_sec": 4,
+          "literal": "A continuación, continuaremos con el señor Cristopher Cornelio."
+        }
+      ],
+      "relations": [
+        {
+          "target": "video-KIZbI_9WDQA / alias 8C8yyQtbZ3E",
+          "type": "shared_Cadiz_topic_not_identity",
+          "assessment": "El registro nombra El Perú y las Cortes de Cádiz (1558 s). N08 tiene identidad de ponencia, autor y sesión explícitas (23m); no se ha establecido reproducción. La coincidencia PUCP/Cádiz no permite fusionar familias."
+        },
+        {
+          "target": [
+            "educast:2646",
+            "educast:2647",
+            "educast:2648",
+            "educast:2649"
+          ],
+          "type": "explicit_same_panel_parts",
+          "assessment": "Son cuatro partes de Mesa 12. No inferir que cuatro ponencias sean una misma obra; conservar vínculo de sesión y revisar solapamientos antes de separar partes entre particiones."
+        },
+        {
+          "target": "V03,V04,S04,S09,S16,video-zb5zntF2kAs",
+          "type": "no_reserved_work_identity_in_metadata",
+          "assessment": "Autor/título/evento de N08 no coinciden con obras reservadas identificadas; V03/V04 carecen de inventario de episodios, por lo que no se afirma independencia absoluta."
+        }
+      ],
+      "reservation_membership": "not_established",
+      "recommended_family": "work-christopher-cornelio-cadiz-aznapuquio-pucp-2012",
+      "independence_status": "identified_original_presentation; no_duplicate_established_in_checked_metadata",
+      "supplemental_overlap_check": {
+        "method": "longest contiguous exact token run, lowercase/accent normalized, SequenceMatcher autojunk=False",
+        "new_source_tokens": 3039,
+        "existing_units_checked": 125,
+        "allowed_partitions": [
+          "T",
+          "V",
+          "H"
+        ],
+        "comparisons": [
+          {
+            "source_id": "0Dgk3uh0ziE",
+            "longest_exact_normalized_token_run": 4,
+            "matching_run": "con el apoyo de",
+            "interpretation": "screening only; short or shared historical expressions do not prove common work"
+          },
+          {
+            "source_id": "bVrm2pJw4SA",
+            "longest_exact_normalized_token_run": 4,
+            "matching_run": "la guerra de independencia",
+            "interpretation": "screening only; short or shared historical expressions do not prove common work"
+          },
+          {
+            "source_id": "rKbC4guGhRY",
+            "longest_exact_normalized_token_run": 5,
+            "matching_run": "que eso no es cierto",
+            "interpretation": "screening only; short or shared historical expressions do not prove common work"
+          },
+          {
+            "source_id": "HuT0aI_mDqM",
+            "longest_exact_normalized_token_run": 4,
+            "matching_run": "de guerra de la",
+            "interpretation": "screening only; short or shared historical expressions do not prove common work"
+          },
+          {
+            "source_id": "lrV0mu1iZCI",
+            "longest_exact_normalized_token_run": 4,
+            "matching_run": "que en ese momento",
+            "interpretation": "screening only; short or shared historical expressions do not prove common work"
+          }
+        ],
+        "limitation": "Only existing segmented T/V/H material, not every original second of every available work; ASR differences can hide reproduction."
+      },
+      "linked_media_aliases": [
+        "https://fms.pucp.edu.pe/vod/_definst_/mp4:educast/2/2f545225e23b935f346b38b3f/56mo444de314795.mp4",
+        "https://educast.pucp.edu.pe/files/videos/2/2f545225e23b935f346b38b3f/56mo444de314795.mp4",
+        "https://fms.pucp.edu.pe/vod/_definst_/mp4:intro.mp4",
+        "https://educast.pucp.edu.pe/img/intro.mp4"
+      ],
+      "alias_note": "FMS and direct MP4 point to the same relative educast asset; intro.mp4 is shared player bumper, not original-work identity. No cross-source alias inferred."
+    }
+  ],
+  "limitations": [
+    "No reserved source texts, reserved documents, or S audiovisual content opened. Only registry metadata used for reservations.",
+    "No new internet access: conclusions use saved institutional landing pages and local metadata.",
+    "N03/N07 audiovisual credits and contents were not reviewed. Absence of identified identity is not proof of complete independence.",
+    "N08 screening is supplementary, not a substitute for visual/audio comparison or a declaration that all possible excerpts are absent.",
+    "Do not merge by channel, institution, subject, shared historical actors, or common bibliography. Group actual reproductions and overlapping recordings of the same work.",
+    "No confirmed new-source-to-reserve identity found; if credits reveal reproduction of a reserved work, stop acquisition/annotation and inherit the reserved family."
+  ]
+}

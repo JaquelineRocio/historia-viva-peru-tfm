@@ -1,0 +1,26 @@
+{
+  "items": [
+    {
+      "path": "artifacts\\beto-v3\\recovery-01\\before\\budget-ledger-current.json",
+      "sha256": "4f1ab985ef55c746e083d41ad5ca20b6aab28545ad7b4d4c3a024d5d18436b33"
+    },
+    {
+      "path": "artifacts\\beto-v3\\recovery-01\\before\\annotation-progress.json",
+      "sha256": "78aa8d3391c3d6dae832b0d5455692b7ef6401922dd0e4377b34fb0aa80e4ef0"
+    },
+    {
+      "path": "artifacts\\beto-v3\\recovery-01\\preparation.json",
+      "sha256": "1f474a21f1604f4da1ebb98da990108027448062598905c6471e346823a4f929"
+    },
+    {
+      "path": "artifacts\\beto-v3\\recovery-01\\authorization.json",
+      "sha256": "6f53cdfbf337841cb044f54387b4538308b7ff09b3551dd7b5c47a0e13508981"
+    },
+    {
+      "path": "artifacts\\beto-v3\\recovery-01\\overlap-audit.json",
+      "sha256": "37dcb8b17cf9687145be5bc67dc43a2f8588cf096ccdf7c48833460ed1cf11a1"
+    }
+  ],
+  "prior_accepted_references_take_precedence": true,
+  "S_closed": true
+}

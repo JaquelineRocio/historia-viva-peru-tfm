@@ -1,0 +1,244 @@
+{
+  "method": "Exact normalized eight-word overlap screening; absence does not prove independence; quotations require manual interpretation",
+  "reserved_content_accessed": false,
+  "H_and_current_T_V_compared": true,
+  "items": [
+    {
+      "source_id": "N08",
+      "new_source_8grams": 3030,
+      "top_matches": [
+        {
+          "other_work": "H:e32181bc-41d0-4400-a76d-eb11fc88bf71",
+          "shared_8grams": 1,
+          "fraction_of_new_source": 0.00033003300330033004,
+          "fraction_of_other_work": 0.00013956734124214934,
+          "examples": [
+            "a lo largo de la guerra en el"
+          ]
+        },
+        {
+          "other_work": "H:747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:9fecbe5a-9fb2-4002-a088-8a2810db938e",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:0ea45102-057d-4bff-b527-f36326f66d33",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:48262fb6-dee2-531e-b001-536c5928a9ca",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:11b4365c-87f9-5b8d-802f-a0d2aafc478a",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:7ef1a1d4-97c6-55cf-990b-3a7b1fbb0f9d",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        }
+      ],
+      "manual_review_candidates": []
+    },
+    {
+      "source_id": "N07",
+      "new_source_8grams": 11980,
+      "top_matches": [
+        {
+          "other_work": "H:747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:e32181bc-41d0-4400-a76d-eb11fc88bf71",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:9fecbe5a-9fb2-4002-a088-8a2810db938e",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:0ea45102-057d-4bff-b527-f36326f66d33",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:48262fb6-dee2-531e-b001-536c5928a9ca",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:11b4365c-87f9-5b8d-802f-a0d2aafc478a",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:7ef1a1d4-97c6-55cf-990b-3a7b1fbb0f9d",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        }
+      ],
+      "manual_review_candidates": []
+    },
+    {
+      "source_id": "N03",
+      "new_source_8grams": 2135,
+      "top_matches": [
+        {
+          "other_work": "H:747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+          "shared_8grams": 1,
+          "fraction_of_new_source": 0.000468384074941452,
+          "fraction_of_other_work": 2.40633346969223e-05,
+          "examples": [
+            "el cargo de jefe politico y militar de"
+          ]
+        },
+        {
+          "other_work": "T:bVrm2pJw4SA",
+          "shared_8grams": 1,
+          "fraction_of_new_source": 0.000468384074941452,
+          "fraction_of_other_work": 0.00017695983011856308,
+          "examples": [
+            "el primer grito de independencia en territorio peruano"
+          ]
+        },
+        {
+          "other_work": "H:9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:e32181bc-41d0-4400-a76d-eb11fc88bf71",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:9fecbe5a-9fb2-4002-a088-8a2810db938e",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:0ea45102-057d-4bff-b527-f36326f66d33",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:48262fb6-dee2-531e-b001-536c5928a9ca",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        },
+        {
+          "other_work": "H:11b4365c-87f9-5b8d-802f-a0d2aafc478a",
+          "shared_8grams": 0,
+          "fraction_of_new_source": 0.0,
+          "fraction_of_other_work": 0.0,
+          "examples": []
+        }
+      ],
+      "manual_review_candidates": []
+    }
+  ]
+}

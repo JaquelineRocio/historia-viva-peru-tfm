@@ -1,0 +1,47 @@
+[
+  {
+    "path": "artifacts/beto-v3/budget-ledger-current.json",
+    "snapshot": "artifacts\\beto-v3\\phase-b-gap-02\\selected-444\\before\\budget-ledger-current.json",
+    "sha256": "fffcd6a720e8f5b11cb5a87c510640c849d85bdeca9cb147c456ab8ec573c450"
+  },
+  {
+    "path": "artifacts/beto-v3/phase-B-summary.json",
+    "snapshot": "artifacts\\beto-v3\\phase-b-gap-02\\selected-444\\before\\phase-B-summary.json",
+    "sha256": "84c29937ab74b45e1d411b1e37b0120d1ef53968ab00b49208372e8e3394e826"
+  },
+  {
+    "path": "artifacts/beto-v3/annotation-progress.json",
+    "snapshot": "artifacts\\beto-v3\\phase-b-gap-02\\selected-444\\before\\annotation-progress.json",
+    "sha256": "995d0f46b44a75e49981ef75bfdcc6984ed2fbaf88c2d6e1ce79948dfa41566d"
+  },
+  {
+    "path": "artifacts/beto-v3/phase-b-gap-02/review-integration.json",
+    "snapshot": "artifacts\\beto-v3\\phase-b-gap-02\\selected-444\\before\\review-integration.json",
+    "sha256": "84c29937ab74b45e1d411b1e37b0120d1ef53968ab00b49208372e8e3394e826"
+  },
+  {
+    "path": "artifacts/beto-v3/phase-b-gap-02/checkpoint.json",
+    "snapshot": "artifacts\\beto-v3\\phase-b-gap-02\\selected-444\\before\\checkpoint.json",
+    "sha256": "91af3e830c81267693d44ff6351678e51785c139bc4468c9dd3dfa42ccbeee6a"
+  },
+  {
+    "path": "artifacts/beto-v3/phase-b-gap-02/source-registry-overlay.json",
+    "snapshot": "artifacts\\beto-v3\\phase-b-gap-02\\selected-444\\before\\source-registry-overlay.json",
+    "sha256": "7411fd10d2f44ebf6895b346abf560aa9d9ccb8b7916118cf2ef300c5343c1ea"
+  },
+  {
+    "path": "artifacts/beto-v3/phase-b-gap-02/next-annotation-selection.json",
+    "snapshot": "artifacts\\beto-v3\\phase-b-gap-02\\selected-444\\before\\next-annotation-selection.json",
+    "sha256": "7c9f64e3052d9bc1d166c3ff405dcf5301f1f76c84ea9dc93c274e2f7056c70f"
+  },
+  {
+    "path": "outputs/beto-v3/phase-b-gap-02/all-development-units.json",
+    "snapshot": "artifacts\\beto-v3\\phase-b-gap-02\\selected-444\\before\\all-development-units.json",
+    "sha256": "63b7043ce6a683a9b21ab5ec1f7b85d54a09c671ea8a3cf3d2326cd5edc744a6"
+  },
+  {
+    "path": "docs/beto-v3/progress.md",
+    "snapshot": "artifacts\\beto-v3\\phase-b-gap-02\\selected-444\\before\\progress.md",
+    "sha256": "052be37ac0ed1f15ecc344c1d4a17d4f14aecbd9b32d04f97627ababb12af497"
+  }
+]

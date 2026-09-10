@@ -1,0 +1,64 @@
+{
+  "new_training_trajectories": 4,
+  "new_training_gpu_seconds": 3646.2801296000034,
+  "CD_training_gpu_seconds": 3646.2801296000034,
+  "ASR_gpu_seconds": 932.9981357000124,
+  "prior_checkpoint_inference_seconds_measured": 131.14480390000608,
+  "new_unique_annotation_proposals": 999,
+  "new_historical_review_units": 10,
+  "historical_review_including_previous": 30,
+  "previous_successful_training_seconds": 2828.3538434999487,
+  "previous_failed_training_seconds": null,
+  "previous_failed_time_status": "unknown; not reported as zero",
+  "paid_services_used": false,
+  "provider_token_usage": null,
+  "annotation_budget_remaining": 201,
+  "services_paid_USD": 0,
+  "phase_B_second_review_calls": 15,
+  "annotation_count_note": "Preserved 938 historical inputs plus distinct recovery-01 hashes with actual saved proposals in either isolated pass; repeat passes add no unique input.",
+  "phase_B_second_review_batches": 65,
+  "phase_B_second_review_units": 868,
+  "ASR_accounting_note": "Conservative measured wall seconds of GPU transcription calls plus model loading; includes pilot. In-flight reservations settled after calls; CPU decoding/download time recorded separately",
+  "gap_02_unique_annotation_inputs": 695,
+  "gap_02_blind_review_sessions": 3,
+  "gap_02_second_review_units": 211,
+  "gap_02_second_review_batches": 15,
+  "gap_02_adjudicated_inputs": 251,
+  "review_call_count_note": "phase_B_second_review_calls counts isolated reviewer sessions; actual provider invocation/token counts unknown",
+  "selected444_first_pass_units": 444,
+  "selected444_second_review_units": 417,
+  "selected444_first_pass_batches": 30,
+  "selected444_second_review_batches": 28,
+  "selected444_first_review_sessions": 3,
+  "selected444_second_review_sessions": 3,
+  "recovery01_unique_annotation_inputs": 31,
+  "recovery01_first_pass_units": 31,
+  "recovery01_second_review_units": 31,
+  "admission01_unique_annotation_inputs": 30,
+  "admission01_first_pass_units": 30,
+  "admission01_second_review_units": 30,
+  "accounting_method": "Pre-C immutable snapshot plus each settled C attempt exactly once; conservative wall time includes loading, evaluation and reload.",
+  "prior_ledger": {
+    "path": "artifacts/beto-v3/development-admission-02/budget-before-C.json",
+    "sha256": "b2ff4b67ab033c59a28bf9fb85a1b207e6cd3ef7ecd751dff01f50de265019de"
+  },
+  "attempts": [
+    {
+      "path": "outputs\\beto-v3\\phase-c\\attempts\\44a1153a-3a0e-4508-8546-d4e8cb03598f.json",
+      "sha256": "3401bc172f02404c65545516d96430a40270d6bb1621782a2da7ec027b027416"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-c\\attempts\\47f3e239-bb4d-45c0-8347-00bba28bb484.json",
+      "sha256": "d604a1d604783cf7832a17fc39e2cdc89ae11ac67f56e311d99966832b92fd17"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-c\\attempts\\7b1a1b06-5bd6-48c6-80b6-aad555b0bb2e.json",
+      "sha256": "7060738f26a03d55ded4c5a6577cb2568221ffbe5217df2e6587f4315cb7b5b5"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-c\\attempts\\b8ed0a1d-a73c-443e-b7c5-23951f46d8a4.json",
+      "sha256": "69f31ea2102826e8d1e3d3ec5a9e47c8386369421d2374c8b16f29dd16fea0f9"
+    }
+  ],
+  "S_content_opened": false
+}

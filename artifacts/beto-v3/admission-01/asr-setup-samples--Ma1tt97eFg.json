@@ -1,0 +1,5 @@
+{
+  "model": "Systran/faster-whisper-small",
+  "load_wall_seconds": 1.4278618000025745,
+  "budget_accounted": true
+}

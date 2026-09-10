@@ -1,0 +1,562 @@
+{
+  "items": [
+    {
+      "segment_id": "G01-u023-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "d1f57793c292b8c1fb45021d3804a013430a3aa345cb469ebd2ec234ce2c74ce",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "422556385d87ac2ea2e6dbcb1ba972d4522b62ed2146be7c199ad099f4abc2a9",
+      "response_sha256": "0aa2b71f061379aca9e3c5744a13450719d1217d6b7c164d24df56968d4920e1"
+    },
+    {
+      "segment_id": "G01-u038-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "44088668d3d50aa172b100a7653303a82a15c315b1c014d84d556755fae49eac",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "de40844a18f4df6b14aa7d18419bcc72b96fb40d3e86ab807474cf836709fda6",
+      "response_sha256": "20f358e8ad722f5b58f731d603a9da41eea9cc5ccd3122c3c4d8b3b3cdd3c380"
+    },
+    {
+      "segment_id": "G01-u044-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "1f0ad7981fba395fec136e830060394392b33f78a5392254d3cbd56246ad87af",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "8b26355ff757e28e17845e9067d95730ba2570c4c08c20c2844d0a44fbeb4eef",
+      "response_sha256": "4019c04cbf8c4b104e3a926b07525243ed8fb38d4f0e0fcf8c90c2484db658e5"
+    },
+    {
+      "segment_id": "G01-u045-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "8afb89fde51052dc9365cb4ec7ab2bb5a542a8c1543ebcc1e9c24207ae3c9f35",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "b1bef61e0e85e4350233a1443c05837c466cb77ee4b11210d9319ea31ef6467b",
+      "response_sha256": "c8013ab87c58cc1da2e86a0a218d83da556a99936d68c000b7284e9a45a50db0"
+    },
+    {
+      "segment_id": "G01-u066-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "9d2a9b1b9ca732bb67d7375a8ecb0b35f671868347e800f41b1ecd686594017c",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "01a268b8f8e71d96fa7f917fb3f59165cc176029703d3330c07c899f59ac5dc4",
+      "response_sha256": "c106d09518a41c9dbb4c3cdeb36f873d7b75d3103507c79548cb951c84fa0b96"
+    },
+    {
+      "segment_id": "G02-u039-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "973f5fbc45ada1f318d80d8c043653159a8ad1e13755d3198dbb5e85033361b2",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "c81d852aee243623369e4edb2128601f10d7c28eea135f0f5c8c53172c083ea8",
+      "response_sha256": "889907e12abfb8d50c7b146a71cc221ee4356642dc18148bc3482b57b77fb6b4"
+    },
+    {
+      "segment_id": "G02-u064-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "9da1e5e132ba27c18c7216b8af07f585f233aa938440c6e407d85fbdd6eb5ea9",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "9ad2dc3c32da5e51eba5ab8742e437e4c78d53f47a850688b336d1ec4cab5bc9",
+      "response_sha256": "5d2697bf3fccf09238c5b41e5382d51f40f9f757e12b55098de2b27b749a32c8"
+    },
+    {
+      "segment_id": "G02-u082-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "f217bab92894bef1737b42823ff71efcef74444eb8001c42d837f383311d4c99",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "66867d1020dfc235ceb4d7e7eabdb6a65acfb6af60b9735a0e5ad5b194a30b66",
+      "response_sha256": "634b53414cdb08f588851d41a6d226b1e98c0c4d105e2744a3b1297e37ad2dc3"
+    },
+    {
+      "segment_id": "G02-u111-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "8f0f51dd0a1f89422087e5cebd8b87dabc3afc2cede09493a0c1f9e95b9180af",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "8b6ebcbff1f56e4991249bdde6dd5412a65f24b616b6ec32e2c6dd150af88131",
+      "response_sha256": "f2aff23ad7cf73aa59e30e060902c7aba9ca46432263f30fa70ed782d1b1406a"
+    },
+    {
+      "segment_id": "G02-u121-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "31eadbc6acd773a642fe3d845e0b75f2a42b65eb513d55b718f6393f7f2ca743",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "8dded5794b4ba67ede7ddcdf584edb525578685be3851d25107fcf1b61076afb",
+      "response_sha256": "5c2032346df8d02952b2e8eafd0350857a5eebf5b847344c802b3d0fb711a86c"
+    },
+    {
+      "segment_id": "G02-u128-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "59db131a43dd3eda79ed0b98dc2c63fc3468b257f872aefc8788189089bc6bc9",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "c580920026ae438700df937e313f28f629aa1076b23f803cf8922f087696fc30",
+      "response_sha256": "29fc53fa156c5e64bdfbbd0b5b19921d74baf0b1f5a42ce1f398114daeeb6191"
+    },
+    {
+      "segment_id": "G02-u129-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "49fbbd52c01152c5ff93819d907c30b722d4428dad9de1a8013d9904b3288984",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "ac39c9e588aaa0c01855a4cacd4a645a0061f953e86ba12a8c3b324a5078bc8a",
+      "response_sha256": "de6715eb721a142859aef3ce83ed427c5a9a140bfb58f859c1a9d32556a06b8f"
+    },
+    {
+      "segment_id": "G14-u004-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "06ef0e95533379f955859b35428d53a4c7dd997008a78f34e88c323b269d227d",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "2fd11204357cb6d98deef65ff4e6b1217171f60ebb5bbfdd026d7b4b2e7a3f73",
+      "response_sha256": "2cea9789ea312e1c2093ab422a5c8348ee7b7ca3930505aabff3db3ff0961003"
+    },
+    {
+      "segment_id": "G14-u063-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "c0028f4049764235eec985df7db99cf6665fb121afce6eaf0deabb5592440ca3",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "3b25b573422355721003e5b1a6a457525f338a2d30fda04b278561f8427dd980",
+      "response_sha256": "b414994b4dddafbd25f398db76a4d9a51e2581b771c2cba059b32fffb28ba624"
+    },
+    {
+      "segment_id": "N07-asr-031-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "a4dc765200b72670c3ec16c57128e9615b17a4c5a8facfae86183c006eaa5466",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "14615204840e8b0340b4ece930693473a152f83bf2c70aaac3e97cb79019e3b3",
+      "response_sha256": "7e1fd6d4e0f854891b7cf27f332802f82cee31f041d01b2cf5135f9cb253c1f2"
+    },
+    {
+      "segment_id": "N07-asr-035-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "b77ff3dc8d63c808c24522e46b1df40aaf7ddb104eafc4e04c94805b6c0e9a93",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "eb8313d0eb3d0bdeaea8c533976faeb9b3ce0c59ee6d20ef81fc8b4304486e6e",
+      "response_sha256": "1c8b4f6bcb270b4152cf9ccd85da512f0a24adcbea383d828821b425b0143284"
+    },
+    {
+      "segment_id": "N07-asr-038-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "ef78fdd314cf94bdc84163fc8ccb2d8fc3f905e08300cc938b5db13cf42cdd38",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "2f877e59678e1625f35d32f3fbcb5c1998567e3789587cf3fcbbcefc70ab22a2",
+      "response_sha256": "38f5cb0f30af4c9840d02b4f64fede32346a8efade6ce518089a66d3d03c5fc9"
+    },
+    {
+      "segment_id": "N07-asr-041-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "56b2f26a31842f86cb709837153029bd8449abd92f1137a8379f39e3e1111fe8",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "852abf57005792583b125a4a8b0448d1759e49659b6bd7550829ca7d6ebb6982",
+      "response_sha256": "f7a3521947a8002ba3f7ff1a96b99cb6162c7eeb311d8c4b7b140a578cb07605"
+    },
+    {
+      "segment_id": "N07-asr-042-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "09e6280d204e428242b8eb0b71b9185b0890e6ec053f7dc68e6819ef0b9a6616",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "2ed95db74e5ced9ac71ed15529d3b1bd392d656c10ffe9b056262bb6e59fc267",
+      "response_sha256": "2ec148b5c25e212f0a226092c1f7938298426a1cbb0e2351c5315ff9b887baab"
+    },
+    {
+      "segment_id": "N07-asr-049-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "9b997078ee941d9f391f6a9eccced19841c88612a2482a4175a082268340fb58",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "8450a1b654ec61d6f1909bf4861577b7d4fa0a2979db78227013e8b55d542cf7",
+      "response_sha256": "f47a630ad703a371f178592b68fe64bd63c5832511a3ec54d0d889089d4ebded"
+    },
+    {
+      "segment_id": "N07-asr-051-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "8fa53d740f319437e489bc6885ba29e0603c37a5a5749e2ec7a53ec19fd851b7",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "61c83abcc29247683e55c03facd351c9117282b845fa241aa69e9549c0887993",
+      "response_sha256": "aae82f0fb729d1f49208b487b827761e688c852d24859ec944a5c80342a2838a"
+    },
+    {
+      "segment_id": "N07-asr-053-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "b3ea624883860c0aba8b6604f653c50013a4234e0f7273307ddfced523380837",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "96f5c46578a7d3fcda19c42ed5915b8a11fe75de2052e63cd45e0c1bb4ca5bac",
+      "response_sha256": "1869597c468c756235b1cd37df695aaa5a005ba02e650d5d2ab4726b0d391e9f"
+    },
+    {
+      "segment_id": "N07-asr-054-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "e95cfcbef29f442c656f7871c092bd41a961e3505f72bebb0a7263f52c72c410",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "c9704017bd40cff58f8b744175da8401e38a40b4272255e93e44a264ce777930",
+      "response_sha256": "4de6d57969d6705884a3912a5beebcdcf07dd4106f28635bc98a08fd588e7116"
+    },
+    {
+      "segment_id": "N07-asr-058-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "56442255b20eb91302394a1a4aa1ac0f8bf1e87d156ef59c80da6adb1a97befa",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "3216184acb540e8ca9340e5284696d39f67c73876485b593917f2829fdcce4dc",
+      "response_sha256": "5755ccaa37c5b79cb7de0d0ffb262fde3564f963634cd5275f179b148db707c9"
+    },
+    {
+      "segment_id": "N07-asr-059-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "810eaebfea2448b143df73cd839ea3042381a01bddd7e11a4ed7db75228a728a",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "6d840f11ee3436f12ca612e7a3faba1094a919e4097dff547911372e8d1b7713",
+      "response_sha256": "6cfd53c9951d7cbeaa157e34405e108e8eeba5f2305c3d30c376c1c3a98df8e4"
+    },
+    {
+      "segment_id": "N07-asr-065-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "6d87584e65cbe71ae015f8416852ec0e4595ae0e5f54dfef7d2ad5a9d40a0ce3",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "4040a2592807b6ae98acdf121c3ddc3d510d33d189086282c5446da8d1206494",
+      "response_sha256": "713635b8914995ee9a848c6845a5277ecab7f3f467530fabde5ceab40ca36c22"
+    },
+    {
+      "segment_id": "N07-asr-066-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "ead4538caecb3fd87596d2569162539790216f4cbc86eda41acf21164dfd48a5",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "626411cead5337665515c358f494a66d3262fb47e30013890d8adb7d86656e27",
+      "response_sha256": "c2e8441b0f000608153d39ad697b9b663cd8b2dbec61595c1dbb465b19828098"
+    },
+    {
+      "segment_id": "N07-asr-069-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "c5c9c709ad42775e08e67c2d2fbc08cda880ddd9cc04d5aea12413d3133184b2",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "e4921978465c5cd036a807bad90d6169c3c988171e97a352c8366024e84040bd",
+      "response_sha256": "18241ea0b0b98db2995148d5f93f1a364cafb8d829701fa9bfaa3343f2740dda"
+    },
+    {
+      "segment_id": "rKbC4guGhRY-b01-025-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "919e1ff86e6ec662a2b5de6109a254ccb1728835b5d3635bf8f9ae44371e294f",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "0f577984d0f96e2cc1d59d998f5a47837d3c8e2c72bcf3eb568163cdb076d89e",
+      "response_sha256": "858ad16080e567cc28db09db531d8e3e0597b4849373fb7ed07fdcb6b6f21f8f"
+    },
+    {
+      "segment_id": "rKbC4guGhRY-b01-032-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "cb0c1f58bd2cd591784b05c66dab034cfc963a47b8ce53affcc671ce5b7d6fd1",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "9a172e4907f2261291311644275172017fa77f09f95096e12eaf35b853defbf7",
+      "response_sha256": "58700ae3ada77f784650333a6e4210168d03c564df8a275b42d1b909a3fe7e3a"
+    },
+    {
+      "segment_id": "rKbC4guGhRY-b01-033-recovery01",
+      "key": {
+        "stage": "first-pass",
+        "input_sha256": "f0bb12929d5594f9ff542dacda64d1cf484ad414dddd5239ca8d0b6ad996d9b7",
+        "context": null,
+        "guide_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+        "model": "GPT-6",
+        "model_weights": "unknown",
+        "prompt_version": "recovery-v1",
+        "configuration": {
+          "temperature": "unknown",
+          "seed": "unknown"
+        }
+      },
+      "cache_key_sha256": "36fabdaa9da1ad9d62cec850f0e9a9fc95f9be7ddfac38225dbf7a8f5b10228f",
+      "response_sha256": "492c98b2faf2b68e707dd00b6e8480d52b6dd1b5d9c239ec05d5357611489750"
+    }
+  ]
+}

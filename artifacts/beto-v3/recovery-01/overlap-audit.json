@@ -1,0 +1,4314 @@
+{
+  "schema_version": 1,
+  "audit_type": "geometry_only_no_label_acceptance",
+  "coordinate_system": "Unicode code points, half-open intervals, one ASCII space between stripped authentic cue texts; effective spans remove target exterior whitespace",
+  "reference_rule": "accepted_label non-null identifies preserved accepted reference; reference_status retained for audit; generic status is stale for some accepted rows",
+  "provenance": {
+    "candidates": {
+      "path": "outputs/beto-v3/recovery-01/candidates.json",
+      "sha256": "904117cc1cd7547ce88f1e3f8ce9db923c62b142847b90662cf6bab9289e9776"
+    },
+    "existing": {
+      "path": "outputs/beto-v3/phase-b-gap-02/selected-444/all-development-units.json",
+      "sha256": "719dfc96884cb6a4fab0fb5056a254c87bef310fd2768ab88d5f7be1bc4d9363"
+    },
+    "script": {
+      "path": "scripts/analyze_beto_v3_recovery_overlap.py",
+      "sha256": "a1d815289161a008897e52eb17b328dec23fb423d59b3adab43ad21f52716dd5"
+    },
+    "sources": [
+      {
+        "path": "outputs/beto-v3/phase-b-completion-01/new-sources/N07/asr/cues.json",
+        "sha256": "9df3f3dad285c96b9d06bbb7fba89588ca1fd79f784517c46b764e645cd96a9a"
+      },
+      {
+        "path": "outputs/beto-v3/phase-b-gap-02/G14/cues.json",
+        "sha256": "b2aa3b1d618069fae6eb5bdc72cf8dc861260b34bd14c0296c2b406ef29a677a"
+      },
+      {
+        "path": "outputs/beto-v3/phase-b-gap-02/G02/cues.json",
+        "sha256": "d34316af5fd6964e29ae402d2b41a865dfc24147dbf89817ef608b21d008a238"
+      },
+      {
+        "path": "outputs/beto-v3/phase-b-gap-02/G01/cues.json",
+        "sha256": "dbd240e2ed4172c384a209cc48605a2c4dffb9579b3570d8e4012a6bf3983673"
+      },
+      {
+        "path": "outputs/beto-v3/acquisition/rKbC4guGhRY/cues.json",
+        "sha256": "e5686567b48e5bf2a243a40e65a87226a12fbd09081c3f791c931dc8da19e65c"
+      }
+    ]
+  },
+  "summary": {
+    "existing_rows": 930,
+    "existing_accepted_rows": 861,
+    "existing_pending_rows": 69,
+    "candidate_count": 31,
+    "source_count": 5,
+    "source_rows_geometry_verified": 383,
+    "parents_accepted": 0,
+    "candidates_blocked_by_accepted_overlap": 30,
+    "candidates_eligible_geometry_only": 1,
+    "candidate_existing_overlap_pairs": 89,
+    "candidate_accepted_overlap_pairs": 43,
+    "candidate_pending_overlap_pairs": 46,
+    "unique_accepted_overlapping_rows": 42,
+    "unique_pending_overlapping_rows": 32,
+    "candidate_peer_overlap_pairs": 7,
+    "candidates_with_novel_non_whitespace_source_text": 0,
+    "candidates_with_declared_span_trailing_or_leading_whitespace": 14,
+    "integration_decision_counts": {
+      "blocked_by_accepted_reference_overlap": 30,
+      "eligible_geometry_only_requires_annotation_and_peer_conflict_resolution": 1
+    }
+  },
+  "policy": [
+    "Preserve every prior accepted reference and its original text/hash unchanged.",
+    "Do not append a full candidate whose effective target overlaps any accepted reference.",
+    "Pending rows may be explicitly superseded only after candidate annotation and adjudication; retain immutable originals and supersession lineage.",
+    "Candidates overlapping each other cannot both enter evaluation; resolve interval conflicts explicitly before integration.",
+    "Residual intervals are geometric opportunities only, not annotated targets: clipping requires new target hashes and new reviews; never transfer a whole-candidate label to a clipped interval.",
+    "A parent pending status never overrides an accepted neighbor. Preserve partition and source identity; source hashes define the authentic coordinate domain."
+  ],
+  "checks": {
+    "all_candidate_and_relevant_existing_texts_reconstructed": true,
+    "all_input_hashes_verified": true,
+    "all_source_file_hashes_verified": true,
+    "all_parent_hashes_and_spans_verified": true,
+    "declared_overlap_lists_match_recomputation": true
+  },
+  "items": [
+    {
+      "segment_id": "G01-u023-recovery01",
+      "parent_segment_id": "G01-u023",
+      "source_id": "G01",
+      "source_sha256": "dbd240e2ed4172c384a209cc48605a2c4dffb9579b3570d8e4012a6bf3983673",
+      "input_sha256": "d1f57793c292b8c1fb45021d3804a013430a3aa345cb469ebd2ec234ce2c74ce",
+      "partition": "V",
+      "source_char_span": [
+        19679,
+        20930
+      ],
+      "effective_text_span": [
+        19679,
+        20930
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "G01-u022",
+          "source_id": "G01",
+          "family_id": "video-ppkyuQewxHc",
+          "partition": "V",
+          "input_sha256": "778c7cf91cb27557b666cb03cdf935a2908dab2608f4d380ae8f653ad2b3b687",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            18569,
+            19777
+          ],
+          "effective_text_span": [
+            18569,
+            19777
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            19679,
+            19777
+          ],
+          "overlap_characters": 98,
+          "effective_text_overlap_span": [
+            19679,
+            19777
+          ],
+          "effective_text_overlap_characters": 98
+        },
+        {
+          "segment_id": "G01-u023",
+          "source_id": "G01",
+          "family_id": "video-ppkyuQewxHc",
+          "partition": "V",
+          "input_sha256": "00623835c652764e8eae87f2ab3aaad749fe5bb3119320d37c4f7e7db2c6da9a",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "pending_resolution",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            19778,
+            20815
+          ],
+          "effective_text_span": [
+            19778,
+            20815
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": true,
+          "overlap_span": [
+            19778,
+            20815
+          ],
+          "overlap_characters": 1037,
+          "effective_text_overlap_span": [
+            19778,
+            20815
+          ],
+          "effective_text_overlap_characters": 1037
+        },
+        {
+          "segment_id": "G01-u024",
+          "source_id": "G01",
+          "family_id": "video-ppkyuQewxHc",
+          "partition": "V",
+          "input_sha256": "4b854ae5268116ca899d46b788708006c4e200f32efad621ecb2b79272545365",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            20816,
+            21925
+          ],
+          "effective_text_span": [
+            20816,
+            21925
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            20816,
+            20930
+          ],
+          "overlap_characters": 114,
+          "effective_text_overlap_span": [
+            20816,
+            20930
+          ],
+          "effective_text_overlap_characters": 114
+        }
+      ],
+      "candidate_overlaps": [],
+      "accepted_overlap_ids": [
+        "G01-u022",
+        "G01-u024"
+      ],
+      "pending_overlap_ids": [
+        "G01-u023"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          19777,
+          20816
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          19777,
+          19778
+        ],
+        [
+          20815,
+          20816
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "G01-u038-recovery01",
+      "parent_segment_id": "G01-u038",
+      "source_id": "G01",
+      "source_sha256": "dbd240e2ed4172c384a209cc48605a2c4dffb9579b3570d8e4012a6bf3983673",
+      "input_sha256": "44088668d3d50aa172b100a7653303a82a15c315b1c014d84d556755fae49eac",
+      "partition": "V",
+      "source_char_span": [
+        36369,
+        37695
+      ],
+      "effective_text_span": [
+        36369,
+        37695
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "G01-u037",
+          "source_id": "G01",
+          "family_id": "video-ppkyuQewxHc",
+          "partition": "V",
+          "input_sha256": "cbcee06bf5af546bd568548017be1ee6f7c731bcdefb699f03ea0da3ee86716a",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            35274,
+            36483
+          ],
+          "effective_text_span": [
+            35274,
+            36483
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            36369,
+            36483
+          ],
+          "overlap_characters": 114,
+          "effective_text_overlap_span": [
+            36369,
+            36483
+          ],
+          "effective_text_overlap_characters": 114
+        },
+        {
+          "segment_id": "G01-u038",
+          "source_id": "G01",
+          "family_id": "video-ppkyuQewxHc",
+          "partition": "V",
+          "input_sha256": "9f36fe83d830c84023a28d3d178dc36daca5172de2113964ee6ccab6215f7d1b",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "pending_resolution",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            36484,
+            37585
+          ],
+          "effective_text_span": [
+            36484,
+            37585
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": true,
+          "overlap_span": [
+            36484,
+            37585
+          ],
+          "overlap_characters": 1101,
+          "effective_text_overlap_span": [
+            36484,
+            37585
+          ],
+          "effective_text_overlap_characters": 1101
+        },
+        {
+          "segment_id": "G01-u039",
+          "source_id": "G01",
+          "family_id": "video-ppkyuQewxHc",
+          "partition": "V",
+          "input_sha256": "594758664beb7856f0fbf1b92cb2cd048cfae9afc2568095da9023dd89df8ea5",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            37586,
+            38452
+          ],
+          "effective_text_span": [
+            37586,
+            38452
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            37586,
+            37695
+          ],
+          "overlap_characters": 109,
+          "effective_text_overlap_span": [
+            37586,
+            37695
+          ],
+          "effective_text_overlap_characters": 109
+        }
+      ],
+      "candidate_overlaps": [],
+      "accepted_overlap_ids": [
+        "G01-u037",
+        "G01-u039"
+      ],
+      "pending_overlap_ids": [
+        "G01-u038"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          36483,
+          37586
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          36483,
+          36484
+        ],
+        [
+          37585,
+          37586
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "G01-u044-recovery01",
+      "parent_segment_id": "G01-u044",
+      "source_id": "G01",
+      "source_sha256": "dbd240e2ed4172c384a209cc48605a2c4dffb9579b3570d8e4012a6bf3983673",
+      "input_sha256": "1f0ad7981fba395fec136e830060394392b33f78a5392254d3cbd56246ad87af",
+      "partition": "V",
+      "source_char_span": [
+        42919,
+        44203
+      ],
+      "effective_text_span": [
+        42919,
+        44203
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "G01-u043",
+          "source_id": "G01",
+          "family_id": "video-ppkyuQewxHc",
+          "partition": "V",
+          "input_sha256": "96afc89add7e17642e5204a1d53c61b62b307eea05ca6dbbf966aa0c2821bf1a",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            41811,
+            43020
+          ],
+          "effective_text_span": [
+            41811,
+            43020
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            42919,
+            43020
+          ],
+          "overlap_characters": 101,
+          "effective_text_overlap_span": [
+            42919,
+            43020
+          ],
+          "effective_text_overlap_characters": 101
+        },
+        {
+          "segment_id": "G01-u044",
+          "source_id": "G01",
+          "family_id": "video-ppkyuQewxHc",
+          "partition": "V",
+          "input_sha256": "9fc4d17b1be6832dbd6110a5579992087f03d6cea0f1e9c5ac16bcdf67bb23a1",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "pending_resolution",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            43021,
+            44086
+          ],
+          "effective_text_span": [
+            43021,
+            44086
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": true,
+          "overlap_span": [
+            43021,
+            44086
+          ],
+          "overlap_characters": 1065,
+          "effective_text_overlap_span": [
+            43021,
+            44086
+          ],
+          "effective_text_overlap_characters": 1065
+        },
+        {
+          "segment_id": "G01-u045",
+          "source_id": "G01",
+          "family_id": "video-ppkyuQewxHc",
+          "partition": "V",
+          "input_sha256": "92be75586ebd21fff0de6b7638e380e5d36296f30893c9d9394bf79f12970489",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "pending_resolution",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            44087,
+            45281
+          ],
+          "effective_text_span": [
+            44087,
+            45281
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            44087,
+            44203
+          ],
+          "overlap_characters": 116,
+          "effective_text_overlap_span": [
+            44087,
+            44203
+          ],
+          "effective_text_overlap_characters": 116
+        }
+      ],
+      "candidate_overlaps": [
+        {
+          "segment_id": "G01-u045-recovery01",
+          "effective_text_overlap_span": [
+            43976,
+            44203
+          ],
+          "characters": 227
+        }
+      ],
+      "accepted_overlap_ids": [
+        "G01-u043"
+      ],
+      "pending_overlap_ids": [
+        "G01-u044",
+        "G01-u045"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          43020,
+          44203
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          43020,
+          43021
+        ],
+        [
+          44086,
+          44087
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "G01-u045-recovery01",
+      "parent_segment_id": "G01-u045",
+      "source_id": "G01",
+      "source_sha256": "dbd240e2ed4172c384a209cc48605a2c4dffb9579b3570d8e4012a6bf3983673",
+      "input_sha256": "8afb89fde51052dc9365cb4ec7ab2bb5a542a8c1543ebcc1e9c24207ae3c9f35",
+      "partition": "V",
+      "source_char_span": [
+        43976,
+        45394
+      ],
+      "effective_text_span": [
+        43976,
+        45394
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "G01-u044",
+          "source_id": "G01",
+          "family_id": "video-ppkyuQewxHc",
+          "partition": "V",
+          "input_sha256": "9fc4d17b1be6832dbd6110a5579992087f03d6cea0f1e9c5ac16bcdf67bb23a1",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "pending_resolution",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            43021,
+            44086
+          ],
+          "effective_text_span": [
+            43021,
+            44086
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            43976,
+            44086
+          ],
+          "overlap_characters": 110,
+          "effective_text_overlap_span": [
+            43976,
+            44086
+          ],
+          "effective_text_overlap_characters": 110
+        },
+        {
+          "segment_id": "G01-u045",
+          "source_id": "G01",
+          "family_id": "video-ppkyuQewxHc",
+          "partition": "V",
+          "input_sha256": "92be75586ebd21fff0de6b7638e380e5d36296f30893c9d9394bf79f12970489",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "pending_resolution",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            44087,
+            45281
+          ],
+          "effective_text_span": [
+            44087,
+            45281
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": true,
+          "overlap_span": [
+            44087,
+            45281
+          ],
+          "overlap_characters": 1194,
+          "effective_text_overlap_span": [
+            44087,
+            45281
+          ],
+          "effective_text_overlap_characters": 1194
+        },
+        {
+          "segment_id": "G01-u046",
+          "source_id": "G01",
+          "family_id": "video-ppkyuQewxHc",
+          "partition": "V",
+          "input_sha256": "632602b8f9e6756fdbab84bd3c20088d3be629444006e078c205c1fcda75e34c",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            45282,
+            46429
+          ],
+          "effective_text_span": [
+            45282,
+            46429
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            45282,
+            45394
+          ],
+          "overlap_characters": 112,
+          "effective_text_overlap_span": [
+            45282,
+            45394
+          ],
+          "effective_text_overlap_characters": 112
+        }
+      ],
+      "candidate_overlaps": [
+        {
+          "segment_id": "G01-u044-recovery01",
+          "effective_text_overlap_span": [
+            43976,
+            44203
+          ],
+          "characters": 227
+        }
+      ],
+      "accepted_overlap_ids": [
+        "G01-u046"
+      ],
+      "pending_overlap_ids": [
+        "G01-u044",
+        "G01-u045"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          43976,
+          45282
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          44086,
+          44087
+        ],
+        [
+          45281,
+          45282
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "G01-u066-recovery01",
+      "parent_segment_id": "G01-u066",
+      "source_id": "G01",
+      "source_sha256": "dbd240e2ed4172c384a209cc48605a2c4dffb9579b3570d8e4012a6bf3983673",
+      "input_sha256": "9d2a9b1b9ca732bb67d7375a8ecb0b35f671868347e800f41b1ecd686594017c",
+      "partition": "V",
+      "source_char_span": [
+        66604,
+        67986
+      ],
+      "effective_text_span": [
+        66604,
+        67986
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "G01-u065",
+          "source_id": "G01",
+          "family_id": "video-ppkyuQewxHc",
+          "partition": "V",
+          "input_sha256": "96b74066f6d48230e0af4e4c1ab388f832f0ca46a42ef8d378a8bc56babeba01",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            65453,
+            66719
+          ],
+          "effective_text_span": [
+            65453,
+            66719
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            66604,
+            66719
+          ],
+          "overlap_characters": 115,
+          "effective_text_overlap_span": [
+            66604,
+            66719
+          ],
+          "effective_text_overlap_characters": 115
+        },
+        {
+          "segment_id": "G01-u066",
+          "source_id": "G01",
+          "family_id": "video-ppkyuQewxHc",
+          "partition": "V",
+          "input_sha256": "ac34947a82e79c0f347963400b46e1ddbe079d1261b5824f8a4a35c5c06bd3bc",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "pending_resolution",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            66720,
+            67879
+          ],
+          "effective_text_span": [
+            66720,
+            67879
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": true,
+          "overlap_span": [
+            66720,
+            67879
+          ],
+          "overlap_characters": 1159,
+          "effective_text_overlap_span": [
+            66720,
+            67879
+          ],
+          "effective_text_overlap_characters": 1159
+        },
+        {
+          "segment_id": "G01-u067",
+          "source_id": "G01",
+          "family_id": "video-ppkyuQewxHc",
+          "partition": "V",
+          "input_sha256": "05cf2946f037fde46ce749e390d1f6632a713ae0b98232cb5da17908ef967e7a",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            67880,
+            68817
+          ],
+          "effective_text_span": [
+            67880,
+            68817
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            67880,
+            67986
+          ],
+          "overlap_characters": 106,
+          "effective_text_overlap_span": [
+            67880,
+            67986
+          ],
+          "effective_text_overlap_characters": 106
+        }
+      ],
+      "candidate_overlaps": [],
+      "accepted_overlap_ids": [
+        "G01-u065",
+        "G01-u067"
+      ],
+      "pending_overlap_ids": [
+        "G01-u066"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          66719,
+          67880
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          66719,
+          66720
+        ],
+        [
+          67879,
+          67880
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "G02-u039-recovery01",
+      "parent_segment_id": "G02-u039",
+      "source_id": "G02",
+      "source_sha256": "d34316af5fd6964e29ae402d2b41a865dfc24147dbf89817ef608b21d008a238",
+      "input_sha256": "973f5fbc45ada1f318d80d8c043653159a8ad1e13755d3198dbb5e85033361b2",
+      "partition": "V",
+      "source_char_span": [
+        35804,
+        36817
+      ],
+      "effective_text_span": [
+        35804,
+        36817
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "G02-u038",
+          "source_id": "G02",
+          "family_id": "video-Z0PTwkh7g98",
+          "partition": "V",
+          "input_sha256": "c6d5c9e5bbc409b94963eec8375b24a5fadf24821882bbf3a4c4e7aeacbee7dd",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            35072,
+            35906
+          ],
+          "effective_text_span": [
+            35072,
+            35906
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            35804,
+            35906
+          ],
+          "overlap_characters": 102,
+          "effective_text_overlap_span": [
+            35804,
+            35906
+          ],
+          "effective_text_overlap_characters": 102
+        },
+        {
+          "segment_id": "G02-u039",
+          "source_id": "G02",
+          "family_id": "video-Z0PTwkh7g98",
+          "partition": "V",
+          "input_sha256": "4a457498c700c1ae92152e5631f7dd5c375661072acc50209cbbb797342efadc",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "pending_resolution",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            35907,
+            36706
+          ],
+          "effective_text_span": [
+            35907,
+            36706
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": true,
+          "overlap_span": [
+            35907,
+            36706
+          ],
+          "overlap_characters": 799,
+          "effective_text_overlap_span": [
+            35907,
+            36706
+          ],
+          "effective_text_overlap_characters": 799
+        },
+        {
+          "segment_id": "G02-u040",
+          "source_id": "G02",
+          "family_id": "video-Z0PTwkh7g98",
+          "partition": "V",
+          "input_sha256": "1bfdd99044871920406152383af57c5101a451f65c63a37f3610fae3ca156ccc",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            36707,
+            37511
+          ],
+          "effective_text_span": [
+            36707,
+            37511
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            36707,
+            36817
+          ],
+          "overlap_characters": 110,
+          "effective_text_overlap_span": [
+            36707,
+            36817
+          ],
+          "effective_text_overlap_characters": 110
+        }
+      ],
+      "candidate_overlaps": [],
+      "accepted_overlap_ids": [
+        "G02-u038",
+        "G02-u040"
+      ],
+      "pending_overlap_ids": [
+        "G02-u039"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          35906,
+          36707
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          35906,
+          35907
+        ],
+        [
+          36706,
+          36707
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "G02-u064-recovery01",
+      "parent_segment_id": "G02-u064",
+      "source_id": "G02",
+      "source_sha256": "d34316af5fd6964e29ae402d2b41a865dfc24147dbf89817ef608b21d008a238",
+      "input_sha256": "9da1e5e132ba27c18c7216b8af07f585f233aa938440c6e407d85fbdd6eb5ea9",
+      "partition": "V",
+      "source_char_span": [
+        56498,
+        57351
+      ],
+      "effective_text_span": [
+        56498,
+        57351
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "G02-u063",
+          "source_id": "G02",
+          "family_id": "video-Z0PTwkh7g98",
+          "partition": "V",
+          "input_sha256": "e41021e5b2f05e643cbd182fd1d7609e305cfcda4c7968386cac50d6be561811",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            55883,
+            56595
+          ],
+          "effective_text_span": [
+            55883,
+            56595
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            56498,
+            56595
+          ],
+          "overlap_characters": 97,
+          "effective_text_overlap_span": [
+            56498,
+            56595
+          ],
+          "effective_text_overlap_characters": 97
+        },
+        {
+          "segment_id": "G02-u064",
+          "source_id": "G02",
+          "family_id": "video-Z0PTwkh7g98",
+          "partition": "V",
+          "input_sha256": "2a6a295ab6891fd095971ef2e0a76c3402c4022d9490a13a8b32486397601920",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "pending_resolution",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            56596,
+            57239
+          ],
+          "effective_text_span": [
+            56596,
+            57239
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": true,
+          "overlap_span": [
+            56596,
+            57239
+          ],
+          "overlap_characters": 643,
+          "effective_text_overlap_span": [
+            56596,
+            57239
+          ],
+          "effective_text_overlap_characters": 643
+        },
+        {
+          "segment_id": "G02-u065",
+          "source_id": "G02",
+          "family_id": "video-Z0PTwkh7g98",
+          "partition": "V",
+          "input_sha256": "9147596e80334549bb7e378dfcdcf84aff636d1cc7fb56111199c547a43a6f80",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            57240,
+            58001
+          ],
+          "effective_text_span": [
+            57240,
+            58001
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            57240,
+            57351
+          ],
+          "overlap_characters": 111,
+          "effective_text_overlap_span": [
+            57240,
+            57351
+          ],
+          "effective_text_overlap_characters": 111
+        }
+      ],
+      "candidate_overlaps": [],
+      "accepted_overlap_ids": [
+        "G02-u063",
+        "G02-u065"
+      ],
+      "pending_overlap_ids": [
+        "G02-u064"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          56595,
+          57240
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          56595,
+          56596
+        ],
+        [
+          57239,
+          57240
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "G02-u082-recovery01",
+      "parent_segment_id": "G02-u082",
+      "source_id": "G02",
+      "source_sha256": "d34316af5fd6964e29ae402d2b41a865dfc24147dbf89817ef608b21d008a238",
+      "input_sha256": "f217bab92894bef1737b42823ff71efcef74444eb8001c42d837f383311d4c99",
+      "partition": "V",
+      "source_char_span": [
+        72952,
+        74165
+      ],
+      "effective_text_span": [
+        72952,
+        74165
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "G02-u081",
+          "source_id": "G02",
+          "family_id": "video-Z0PTwkh7g98",
+          "partition": "V",
+          "input_sha256": "248a679388f6d6ccd88045f25bd535093955c5e7d6baf72597d4b89fb89eb26a",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            72082,
+            73061
+          ],
+          "effective_text_span": [
+            72082,
+            73061
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            72952,
+            73061
+          ],
+          "overlap_characters": 109,
+          "effective_text_overlap_span": [
+            72952,
+            73061
+          ],
+          "effective_text_overlap_characters": 109
+        },
+        {
+          "segment_id": "G02-u082",
+          "source_id": "G02",
+          "family_id": "video-Z0PTwkh7g98",
+          "partition": "V",
+          "input_sha256": "692956b776d2cea86a7ae73f554c1390bfd747a837d035b6fcbb3e03b43d5486",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "pending_resolution",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            73062,
+            74087
+          ],
+          "effective_text_span": [
+            73062,
+            74087
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": true,
+          "overlap_span": [
+            73062,
+            74087
+          ],
+          "overlap_characters": 1025,
+          "effective_text_overlap_span": [
+            73062,
+            74087
+          ],
+          "effective_text_overlap_characters": 1025
+        },
+        {
+          "segment_id": "G02-u083",
+          "source_id": "G02",
+          "family_id": "video-Z0PTwkh7g98",
+          "partition": "V",
+          "input_sha256": "d67ad5528764e05a5bde46fcea1169f0b71d0071ea21b506dba40ba55fcc9d49",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            74088,
+            74801
+          ],
+          "effective_text_span": [
+            74088,
+            74801
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            74088,
+            74165
+          ],
+          "overlap_characters": 77,
+          "effective_text_overlap_span": [
+            74088,
+            74165
+          ],
+          "effective_text_overlap_characters": 77
+        }
+      ],
+      "candidate_overlaps": [],
+      "accepted_overlap_ids": [
+        "G02-u081",
+        "G02-u083"
+      ],
+      "pending_overlap_ids": [
+        "G02-u082"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          73061,
+          74088
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          73061,
+          73062
+        ],
+        [
+          74087,
+          74088
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "G02-u111-recovery01",
+      "parent_segment_id": "G02-u111",
+      "source_id": "G02",
+      "source_sha256": "d34316af5fd6964e29ae402d2b41a865dfc24147dbf89817ef608b21d008a238",
+      "input_sha256": "8f0f51dd0a1f89422087e5cebd8b87dabc3afc2cede09493a0c1f9e95b9180af",
+      "partition": "V",
+      "source_char_span": [
+        103009,
+        104121
+      ],
+      "effective_text_span": [
+        103009,
+        104121
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "G02-u110",
+          "source_id": "G02",
+          "family_id": "video-Z0PTwkh7g98",
+          "partition": "V",
+          "input_sha256": "71518627f731fb4897e26bff3acac7ad4c1959bea05c0d73a2eec0c893bdb38c",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            101987,
+            103121
+          ],
+          "effective_text_span": [
+            101987,
+            103121
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            103009,
+            103121
+          ],
+          "overlap_characters": 112,
+          "effective_text_overlap_span": [
+            103009,
+            103121
+          ],
+          "effective_text_overlap_characters": 112
+        },
+        {
+          "segment_id": "G02-u111",
+          "source_id": "G02",
+          "family_id": "video-Z0PTwkh7g98",
+          "partition": "V",
+          "input_sha256": "154f9809be1c6a17e26a9d605f0174d5865f03ad19008e96cbf9f395aad340db",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "pending_resolution",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            103122,
+            104003
+          ],
+          "effective_text_span": [
+            103122,
+            104003
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": true,
+          "overlap_span": [
+            103122,
+            104003
+          ],
+          "overlap_characters": 881,
+          "effective_text_overlap_span": [
+            103122,
+            104003
+          ],
+          "effective_text_overlap_characters": 881
+        },
+        {
+          "segment_id": "G02-u112",
+          "source_id": "G02",
+          "family_id": "video-Z0PTwkh7g98",
+          "partition": "V",
+          "input_sha256": "68f271ede5028c6112c133a3ea4659d3aff61d48b29698ec2b65cd91379ef430",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            104004,
+            105023
+          ],
+          "effective_text_span": [
+            104004,
+            105023
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            104004,
+            104121
+          ],
+          "overlap_characters": 117,
+          "effective_text_overlap_span": [
+            104004,
+            104121
+          ],
+          "effective_text_overlap_characters": 117
+        }
+      ],
+      "candidate_overlaps": [],
+      "accepted_overlap_ids": [
+        "G02-u110",
+        "G02-u112"
+      ],
+      "pending_overlap_ids": [
+        "G02-u111"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          103121,
+          104004
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          103121,
+          103122
+        ],
+        [
+          104003,
+          104004
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "G02-u121-recovery01",
+      "parent_segment_id": "G02-u121",
+      "source_id": "G02",
+      "source_sha256": "d34316af5fd6964e29ae402d2b41a865dfc24147dbf89817ef608b21d008a238",
+      "input_sha256": "31eadbc6acd773a642fe3d845e0b75f2a42b65eb513d55b718f6393f7f2ca743",
+      "partition": "V",
+      "source_char_span": [
+        112039,
+        113039
+      ],
+      "effective_text_span": [
+        112039,
+        113039
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "G02-u120",
+          "source_id": "G02",
+          "family_id": "video-Z0PTwkh7g98",
+          "partition": "V",
+          "input_sha256": "0e0632f4bbfca170fda63618b240a4dde6b18f952bed5a75549766d2a8b17c41",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            111291,
+            112093
+          ],
+          "effective_text_span": [
+            111291,
+            112093
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            112039,
+            112093
+          ],
+          "overlap_characters": 54,
+          "effective_text_overlap_span": [
+            112039,
+            112093
+          ],
+          "effective_text_overlap_characters": 54
+        },
+        {
+          "segment_id": "G02-u121",
+          "source_id": "G02",
+          "family_id": "video-Z0PTwkh7g98",
+          "partition": "V",
+          "input_sha256": "a87dd47014b3a326cec50a9a43b16a958003f4a3e19889b2f15e20d7d60da4eb",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "pending_resolution",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            112094,
+            112949
+          ],
+          "effective_text_span": [
+            112094,
+            112949
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": true,
+          "overlap_span": [
+            112094,
+            112949
+          ],
+          "overlap_characters": 855,
+          "effective_text_overlap_span": [
+            112094,
+            112949
+          ],
+          "effective_text_overlap_characters": 855
+        },
+        {
+          "segment_id": "G02-u122",
+          "source_id": "G02",
+          "family_id": "video-Z0PTwkh7g98",
+          "partition": "V",
+          "input_sha256": "fb2d3d540642c4c5a242d1323249774b2322ab4569cee3576a4d6a6a00e5ce06",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            112950,
+            113793
+          ],
+          "effective_text_span": [
+            112950,
+            113793
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            112950,
+            113039
+          ],
+          "overlap_characters": 89,
+          "effective_text_overlap_span": [
+            112950,
+            113039
+          ],
+          "effective_text_overlap_characters": 89
+        }
+      ],
+      "candidate_overlaps": [],
+      "accepted_overlap_ids": [
+        "G02-u120",
+        "G02-u122"
+      ],
+      "pending_overlap_ids": [
+        "G02-u121"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          112093,
+          112950
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          112093,
+          112094
+        ],
+        [
+          112949,
+          112950
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "G02-u128-recovery01",
+      "parent_segment_id": "G02-u128",
+      "source_id": "G02",
+      "source_sha256": "d34316af5fd6964e29ae402d2b41a865dfc24147dbf89817ef608b21d008a238",
+      "input_sha256": "59db131a43dd3eda79ed0b98dc2c63fc3468b257f872aefc8788189089bc6bc9",
+      "partition": "V",
+      "source_char_span": [
+        118036,
+        119068
+      ],
+      "effective_text_span": [
+        118036,
+        119068
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "G02-u127",
+          "source_id": "G02",
+          "family_id": "video-Z0PTwkh7g98",
+          "partition": "V",
+          "input_sha256": "5cb58bac3127cf4fecf38b7d173a88d6784b75a0d267365aa152da58edd1e951",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            117291,
+            118097
+          ],
+          "effective_text_span": [
+            117291,
+            118097
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            118036,
+            118097
+          ],
+          "overlap_characters": 61,
+          "effective_text_overlap_span": [
+            118036,
+            118097
+          ],
+          "effective_text_overlap_characters": 61
+        },
+        {
+          "segment_id": "G02-u128",
+          "source_id": "G02",
+          "family_id": "video-Z0PTwkh7g98",
+          "partition": "V",
+          "input_sha256": "7623eb3098f71a154210f1f7c200f64e1016db0a88c771ed34a21f8063562b9f",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "pending_resolution",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            118098,
+            118960
+          ],
+          "effective_text_span": [
+            118098,
+            118960
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": true,
+          "overlap_span": [
+            118098,
+            118960
+          ],
+          "overlap_characters": 862,
+          "effective_text_overlap_span": [
+            118098,
+            118960
+          ],
+          "effective_text_overlap_characters": 862
+        },
+        {
+          "segment_id": "G02-u129",
+          "source_id": "G02",
+          "family_id": "video-Z0PTwkh7g98",
+          "partition": "V",
+          "input_sha256": "f94bdb6c3c20358734aa7eadaaba5e6c1dfd1ea5a78af0fd91e68869bebe3017",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "pending_resolution",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            118961,
+            119626
+          ],
+          "effective_text_span": [
+            118961,
+            119626
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            118961,
+            119068
+          ],
+          "overlap_characters": 107,
+          "effective_text_overlap_span": [
+            118961,
+            119068
+          ],
+          "effective_text_overlap_characters": 107
+        }
+      ],
+      "candidate_overlaps": [
+        {
+          "segment_id": "G02-u129-recovery01",
+          "effective_text_overlap_span": [
+            118860,
+            119068
+          ],
+          "characters": 208
+        }
+      ],
+      "accepted_overlap_ids": [
+        "G02-u127"
+      ],
+      "pending_overlap_ids": [
+        "G02-u128",
+        "G02-u129"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          118097,
+          119068
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          118097,
+          118098
+        ],
+        [
+          118960,
+          118961
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "G02-u129-recovery01",
+      "parent_segment_id": "G02-u129",
+      "source_id": "G02",
+      "source_sha256": "d34316af5fd6964e29ae402d2b41a865dfc24147dbf89817ef608b21d008a238",
+      "input_sha256": "49fbbd52c01152c5ff93819d907c30b722d4428dad9de1a8013d9904b3288984",
+      "partition": "V",
+      "source_char_span": [
+        118860,
+        119728
+      ],
+      "effective_text_span": [
+        118860,
+        119728
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "G02-u128",
+          "source_id": "G02",
+          "family_id": "video-Z0PTwkh7g98",
+          "partition": "V",
+          "input_sha256": "7623eb3098f71a154210f1f7c200f64e1016db0a88c771ed34a21f8063562b9f",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "pending_resolution",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            118098,
+            118960
+          ],
+          "effective_text_span": [
+            118098,
+            118960
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            118860,
+            118960
+          ],
+          "overlap_characters": 100,
+          "effective_text_overlap_span": [
+            118860,
+            118960
+          ],
+          "effective_text_overlap_characters": 100
+        },
+        {
+          "segment_id": "G02-u129",
+          "source_id": "G02",
+          "family_id": "video-Z0PTwkh7g98",
+          "partition": "V",
+          "input_sha256": "f94bdb6c3c20358734aa7eadaaba5e6c1dfd1ea5a78af0fd91e68869bebe3017",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "pending_resolution",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            118961,
+            119626
+          ],
+          "effective_text_span": [
+            118961,
+            119626
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": true,
+          "overlap_span": [
+            118961,
+            119626
+          ],
+          "overlap_characters": 665,
+          "effective_text_overlap_span": [
+            118961,
+            119626
+          ],
+          "effective_text_overlap_characters": 665
+        },
+        {
+          "segment_id": "G02-u130",
+          "source_id": "G02",
+          "family_id": "video-Z0PTwkh7g98",
+          "partition": "V",
+          "input_sha256": "99baa091c8349e066d30b1dedde800ee92d488685361c8e1739a56731909e086",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            119627,
+            120451
+          ],
+          "effective_text_span": [
+            119627,
+            120451
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            119627,
+            119728
+          ],
+          "overlap_characters": 101,
+          "effective_text_overlap_span": [
+            119627,
+            119728
+          ],
+          "effective_text_overlap_characters": 101
+        }
+      ],
+      "candidate_overlaps": [
+        {
+          "segment_id": "G02-u128-recovery01",
+          "effective_text_overlap_span": [
+            118860,
+            119068
+          ],
+          "characters": 208
+        }
+      ],
+      "accepted_overlap_ids": [
+        "G02-u130"
+      ],
+      "pending_overlap_ids": [
+        "G02-u128",
+        "G02-u129"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          118860,
+          119627
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          118960,
+          118961
+        ],
+        [
+          119626,
+          119627
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "G14-u004-recovery01",
+      "parent_segment_id": "G14-u004",
+      "source_id": "G14",
+      "source_sha256": "b2aa3b1d618069fae6eb5bdc72cf8dc861260b34bd14c0296c2b406ef29a677a",
+      "input_sha256": "06ef0e95533379f955859b35428d53a4c7dd997008a78f34e88c323b269d227d",
+      "partition": "V",
+      "source_char_span": [
+        168,
+        395
+      ],
+      "effective_text_span": [
+        168,
+        395
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "G14-u003",
+          "source_id": "G14",
+          "family_id": "video-AhRbsKHsYac",
+          "partition": "V",
+          "input_sha256": "ead2eb7b3f46036cb15bbe64864227be67afeef0388770e305066c29edb251d0",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "pending_resolution",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            121,
+            196
+          ],
+          "effective_text_span": [
+            121,
+            196
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            168,
+            196
+          ],
+          "overlap_characters": 28,
+          "effective_text_overlap_span": [
+            168,
+            196
+          ],
+          "effective_text_overlap_characters": 28
+        },
+        {
+          "segment_id": "G14-u004",
+          "source_id": "G14",
+          "family_id": "video-AhRbsKHsYac",
+          "partition": "V",
+          "input_sha256": "c7f0be13d2cfcee5ea377c6dd9d70665cfefde60d57028586a9150debf81c896",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "pending_resolution",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            197,
+            280
+          ],
+          "effective_text_span": [
+            197,
+            280
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": true,
+          "overlap_span": [
+            197,
+            280
+          ],
+          "overlap_characters": 83,
+          "effective_text_overlap_span": [
+            197,
+            280
+          ],
+          "effective_text_overlap_characters": 83
+        },
+        {
+          "segment_id": "G14-u005",
+          "source_id": "G14",
+          "family_id": "video-AhRbsKHsYac",
+          "partition": "V",
+          "input_sha256": "59652a0f2556388ff115b180aea607306c9e9f8e1d84ca5fc908e0cdc4a76356",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            281,
+            676
+          ],
+          "effective_text_span": [
+            281,
+            676
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            281,
+            395
+          ],
+          "overlap_characters": 114,
+          "effective_text_overlap_span": [
+            281,
+            395
+          ],
+          "effective_text_overlap_characters": 114
+        }
+      ],
+      "candidate_overlaps": [],
+      "accepted_overlap_ids": [
+        "G14-u005"
+      ],
+      "pending_overlap_ids": [
+        "G14-u003",
+        "G14-u004"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          168,
+          281
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          196,
+          197
+        ],
+        [
+          280,
+          281
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "G14-u063-recovery01",
+      "parent_segment_id": "G14-u063",
+      "source_id": "G14",
+      "source_sha256": "b2aa3b1d618069fae6eb5bdc72cf8dc861260b34bd14c0296c2b406ef29a677a",
+      "input_sha256": "c0028f4049764235eec985df7db99cf6665fb121afce6eaf0deabb5592440ca3",
+      "partition": "V",
+      "source_char_span": [
+        42619,
+        43447
+      ],
+      "effective_text_span": [
+        42619,
+        43447
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "G14-u062",
+          "source_id": "G14",
+          "family_id": "video-AhRbsKHsYac",
+          "partition": "V",
+          "input_sha256": "3c3722992b1dfd4c9be06bed56251b099d2f2e335abb497b02929f13bd7589be",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            41897,
+            42721
+          ],
+          "effective_text_span": [
+            41897,
+            42721
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            42619,
+            42721
+          ],
+          "overlap_characters": 102,
+          "effective_text_overlap_span": [
+            42619,
+            42721
+          ],
+          "effective_text_overlap_characters": 102
+        },
+        {
+          "segment_id": "G14-u063",
+          "source_id": "G14",
+          "family_id": "video-AhRbsKHsYac",
+          "partition": "V",
+          "input_sha256": "cf0d8b54167cde0634baea14c9fb487d58c263cc796f1e8225ad91103a613c1c",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "pending_resolution",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            42722,
+            43324
+          ],
+          "effective_text_span": [
+            42722,
+            43324
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": true,
+          "overlap_span": [
+            42722,
+            43324
+          ],
+          "overlap_characters": 602,
+          "effective_text_overlap_span": [
+            42722,
+            43324
+          ],
+          "effective_text_overlap_characters": 602
+        },
+        {
+          "segment_id": "G14-u064",
+          "source_id": "G14",
+          "family_id": "video-AhRbsKHsYac",
+          "partition": "V",
+          "input_sha256": "fabc56d473b60df6c86cb50a52bdf65f6a867e16e30f823a752f09f7d9fad42a",
+          "status": "pending_discourse_and_annotation_review",
+          "reference_status": "accepted_reference",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            43325,
+            43883
+          ],
+          "effective_text_span": [
+            43325,
+            43883
+          ],
+          "span_basis": "derived_from_contiguous_cue_indices",
+          "is_parent": false,
+          "overlap_span": [
+            43325,
+            43447
+          ],
+          "overlap_characters": 122,
+          "effective_text_overlap_span": [
+            43325,
+            43447
+          ],
+          "effective_text_overlap_characters": 122
+        }
+      ],
+      "candidate_overlaps": [],
+      "accepted_overlap_ids": [
+        "G14-u062",
+        "G14-u064"
+      ],
+      "pending_overlap_ids": [
+        "G14-u063"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          42721,
+          43325
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          42721,
+          42722
+        ],
+        [
+          43324,
+          43325
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "N07-asr-031-recovery01",
+      "parent_segment_id": "N07-asr-031",
+      "source_id": "N07",
+      "source_sha256": "9df3f3dad285c96b9d06bbb7fba89588ca1fd79f784517c46b764e645cd96a9a",
+      "input_sha256": "a4dc765200b72670c3ec16c57128e9615b17a4c5a8facfae86183c006eaa5466",
+      "partition": "V",
+      "source_char_span": [
+        29291,
+        30370
+      ],
+      "effective_text_span": [
+        29291,
+        30369
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "N07-asr-030",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "c961158a07288310060054e450600a0afc7592f5fdf92718b2e4e5244f54b744",
+          "status": "accepted_adjudicated",
+          "reference_status": "accepted_adjudicated",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            28026,
+            29413
+          ],
+          "effective_text_span": [
+            28026,
+            29412
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            29291,
+            29413
+          ],
+          "overlap_characters": 122,
+          "effective_text_overlap_span": [
+            29291,
+            29412
+          ],
+          "effective_text_overlap_characters": 121
+        },
+        {
+          "segment_id": "N07-asr-031",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "ce0d87efcfdb4ca8124e61f764c260c6ef9049f1073484e2c1dcb4be85041c36",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            29413,
+            30353
+          ],
+          "effective_text_span": [
+            29413,
+            30352
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": true,
+          "overlap_span": [
+            29413,
+            30353
+          ],
+          "overlap_characters": 940,
+          "effective_text_overlap_span": [
+            29413,
+            30352
+          ],
+          "effective_text_overlap_characters": 939
+        },
+        {
+          "segment_id": "N07-asr-032",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "503e6e432f5a56278cb0387c0deada2f968e3e3c0d8969ab370533f49c697fe3",
+          "status": "accepted_adjudicated",
+          "reference_status": "accepted_adjudicated",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            30353,
+            31262
+          ],
+          "effective_text_span": [
+            30353,
+            31261
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            30353,
+            30370
+          ],
+          "overlap_characters": 17,
+          "effective_text_overlap_span": [
+            30353,
+            30369
+          ],
+          "effective_text_overlap_characters": 16
+        }
+      ],
+      "candidate_overlaps": [],
+      "accepted_overlap_ids": [
+        "N07-asr-030",
+        "N07-asr-032"
+      ],
+      "pending_overlap_ids": [
+        "N07-asr-031"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          29412,
+          30353
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          29412,
+          29413
+        ],
+        [
+          30352,
+          30353
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "N07-asr-035-recovery01",
+      "parent_segment_id": "N07-asr-035",
+      "source_id": "N07",
+      "source_sha256": "9df3f3dad285c96b9d06bbb7fba89588ca1fd79f784517c46b764e645cd96a9a",
+      "input_sha256": "b77ff3dc8d63c808c24522e46b1df40aaf7ddb104eafc4e04c94805b6c0e9a93",
+      "partition": "V",
+      "source_char_span": [
+        32529,
+        34294
+      ],
+      "effective_text_span": [
+        32529,
+        34293
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "N07-asr-034",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "34ec1dc9c9fccd499b5ce7f072f0f3da827ff815e454eccd50dbdeff15327927",
+          "status": "accepted_adjudicated",
+          "reference_status": "accepted_adjudicated",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            32128,
+            33594
+          ],
+          "effective_text_span": [
+            32128,
+            33593
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            32529,
+            33594
+          ],
+          "overlap_characters": 1065,
+          "effective_text_overlap_span": [
+            32529,
+            33593
+          ],
+          "effective_text_overlap_characters": 1064
+        },
+        {
+          "segment_id": "N07-asr-035",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "2a0841c383c084adb970db9cc8853911b7cada7dfff9d5e906866fd9506ba981",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            33594,
+            34294
+          ],
+          "effective_text_span": [
+            33594,
+            34293
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": true,
+          "overlap_span": [
+            33594,
+            34294
+          ],
+          "overlap_characters": 700,
+          "effective_text_overlap_span": [
+            33594,
+            34293
+          ],
+          "effective_text_overlap_characters": 699
+        }
+      ],
+      "candidate_overlaps": [],
+      "accepted_overlap_ids": [
+        "N07-asr-034"
+      ],
+      "pending_overlap_ids": [
+        "N07-asr-035"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          33593,
+          34293
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          33593,
+          33594
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "N07-asr-038-recovery01",
+      "parent_segment_id": "N07-asr-038",
+      "source_id": "N07",
+      "source_sha256": "9df3f3dad285c96b9d06bbb7fba89588ca1fd79f784517c46b764e645cd96a9a",
+      "input_sha256": "ef78fdd314cf94bdc84163fc8ccb2d8fc3f905e08300cc938b5db13cf42cdd38",
+      "partition": "V",
+      "source_char_span": [
+        36464,
+        37846
+      ],
+      "effective_text_span": [
+        36464,
+        37845
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "N07-asr-037",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "ca1943731456181cc6b1591e66653a691789cd41b196314de019814b7469444e",
+          "status": "accepted_adjudicated",
+          "reference_status": "accepted_adjudicated",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            35453,
+            36704
+          ],
+          "effective_text_span": [
+            35453,
+            36703
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            36464,
+            36704
+          ],
+          "overlap_characters": 240,
+          "effective_text_overlap_span": [
+            36464,
+            36703
+          ],
+          "effective_text_overlap_characters": 239
+        },
+        {
+          "segment_id": "N07-asr-038",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "26af463b20806d870d9cc1b05072312e577378444ba1ea093ced255facfa201e",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            36704,
+            37605
+          ],
+          "effective_text_span": [
+            36704,
+            37604
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": true,
+          "overlap_span": [
+            36704,
+            37605
+          ],
+          "overlap_characters": 901,
+          "effective_text_overlap_span": [
+            36704,
+            37604
+          ],
+          "effective_text_overlap_characters": 900
+        },
+        {
+          "segment_id": "N07-asr-039",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "a5749d2e0e420091ad422e9dabd8795a9f31917820298e0a524fa14dbd5f10b9",
+          "status": "accepted_adjudicated",
+          "reference_status": "accepted_adjudicated",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            37605,
+            38737
+          ],
+          "effective_text_span": [
+            37605,
+            38736
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            37605,
+            37846
+          ],
+          "overlap_characters": 241,
+          "effective_text_overlap_span": [
+            37605,
+            37845
+          ],
+          "effective_text_overlap_characters": 240
+        }
+      ],
+      "candidate_overlaps": [],
+      "accepted_overlap_ids": [
+        "N07-asr-037",
+        "N07-asr-039"
+      ],
+      "pending_overlap_ids": [
+        "N07-asr-038"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          36703,
+          37605
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          36703,
+          36704
+        ],
+        [
+          37604,
+          37605
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "N07-asr-041-recovery01",
+      "parent_segment_id": "N07-asr-041",
+      "source_id": "N07",
+      "source_sha256": "9df3f3dad285c96b9d06bbb7fba89588ca1fd79f784517c46b764e645cd96a9a",
+      "input_sha256": "56b2f26a31842f86cb709837153029bd8449abd92f1137a8379f39e3e1111fe8",
+      "partition": "V",
+      "source_char_span": [
+        39778,
+        41235
+      ],
+      "effective_text_span": [
+        39778,
+        41234
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "N07-asr-040",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "4fc16062e59242652b372a7da0dcf30d7f45836592005d9cfd2df88f1a22f618",
+          "status": "accepted_adjudicated",
+          "reference_status": "accepted_adjudicated",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            38737,
+            40010
+          ],
+          "effective_text_span": [
+            38737,
+            40009
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            39778,
+            40010
+          ],
+          "overlap_characters": 232,
+          "effective_text_overlap_span": [
+            39778,
+            40009
+          ],
+          "effective_text_overlap_characters": 231
+        },
+        {
+          "segment_id": "N07-asr-041",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "89121ee9c971a05d290446064aead4e658aa8c8db8f54e6079698ec5dedda315",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            40010,
+            41040
+          ],
+          "effective_text_span": [
+            40010,
+            41039
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": true,
+          "overlap_span": [
+            40010,
+            41040
+          ],
+          "overlap_characters": 1030,
+          "effective_text_overlap_span": [
+            40010,
+            41039
+          ],
+          "effective_text_overlap_characters": 1029
+        },
+        {
+          "segment_id": "N07-asr-042",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "da9c84367a91cc46b07a91fc8980225528d6f1f006a6ccf69b1f2de7d7df0293",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            41040,
+            42153
+          ],
+          "effective_text_span": [
+            41040,
+            42152
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            41040,
+            41235
+          ],
+          "overlap_characters": 195,
+          "effective_text_overlap_span": [
+            41040,
+            41234
+          ],
+          "effective_text_overlap_characters": 194
+        }
+      ],
+      "candidate_overlaps": [
+        {
+          "segment_id": "N07-asr-042-recovery01",
+          "effective_text_overlap_span": [
+            40970,
+            41234
+          ],
+          "characters": 264
+        }
+      ],
+      "accepted_overlap_ids": [
+        "N07-asr-040"
+      ],
+      "pending_overlap_ids": [
+        "N07-asr-041",
+        "N07-asr-042"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          40009,
+          41234
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          40009,
+          40010
+        ],
+        [
+          41039,
+          41040
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "N07-asr-042-recovery01",
+      "parent_segment_id": "N07-asr-042",
+      "source_id": "N07",
+      "source_sha256": "9df3f3dad285c96b9d06bbb7fba89588ca1fd79f784517c46b764e645cd96a9a",
+      "input_sha256": "09e6280d204e428242b8eb0b71b9185b0890e6ec053f7dc68e6819ef0b9a6616",
+      "partition": "V",
+      "source_char_span": [
+        40970,
+        42153
+      ],
+      "effective_text_span": [
+        40970,
+        42152
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "N07-asr-041",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "89121ee9c971a05d290446064aead4e658aa8c8db8f54e6079698ec5dedda315",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            40010,
+            41040
+          ],
+          "effective_text_span": [
+            40010,
+            41039
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            40970,
+            41040
+          ],
+          "overlap_characters": 70,
+          "effective_text_overlap_span": [
+            40970,
+            41039
+          ],
+          "effective_text_overlap_characters": 69
+        },
+        {
+          "segment_id": "N07-asr-042",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "da9c84367a91cc46b07a91fc8980225528d6f1f006a6ccf69b1f2de7d7df0293",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            41040,
+            42153
+          ],
+          "effective_text_span": [
+            41040,
+            42152
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": true,
+          "overlap_span": [
+            41040,
+            42153
+          ],
+          "overlap_characters": 1113,
+          "effective_text_overlap_span": [
+            41040,
+            42152
+          ],
+          "effective_text_overlap_characters": 1112
+        }
+      ],
+      "candidate_overlaps": [
+        {
+          "segment_id": "N07-asr-041-recovery01",
+          "effective_text_overlap_span": [
+            40970,
+            41234
+          ],
+          "characters": 264
+        }
+      ],
+      "accepted_overlap_ids": [],
+      "pending_overlap_ids": [
+        "N07-asr-041",
+        "N07-asr-042"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          40970,
+          42152
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          41039,
+          41040
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": true,
+      "integration_decision": "eligible_geometry_only_requires_annotation_and_peer_conflict_resolution"
+    },
+    {
+      "segment_id": "N07-asr-049-recovery01",
+      "parent_segment_id": "N07-asr-049",
+      "source_id": "N07",
+      "source_sha256": "9df3f3dad285c96b9d06bbb7fba89588ca1fd79f784517c46b764e645cd96a9a",
+      "input_sha256": "9b997078ee941d9f391f6a9eccced19841c88612a2482a4175a082268340fb58",
+      "partition": "V",
+      "source_char_span": [
+        48590,
+        49559
+      ],
+      "effective_text_span": [
+        48590,
+        49558
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "N07-asr-048",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "7a54d0d4fd504e00d84619edc8d9bc50d6276b6fc2cd79d35f09e704d4d9ec94",
+          "status": "accepted_adjudicated",
+          "reference_status": "accepted_adjudicated",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            48388,
+            49087
+          ],
+          "effective_text_span": [
+            48388,
+            49086
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            48590,
+            49087
+          ],
+          "overlap_characters": 497,
+          "effective_text_overlap_span": [
+            48590,
+            49086
+          ],
+          "effective_text_overlap_characters": 496
+        },
+        {
+          "segment_id": "N07-asr-049",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "b231ca4f56e748d25e69c3d395effb4799d25e86ebabb475c253e906c7a5c505",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            49087,
+            49559
+          ],
+          "effective_text_span": [
+            49087,
+            49558
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": true,
+          "overlap_span": [
+            49087,
+            49559
+          ],
+          "overlap_characters": 472,
+          "effective_text_overlap_span": [
+            49087,
+            49558
+          ],
+          "effective_text_overlap_characters": 471
+        }
+      ],
+      "candidate_overlaps": [],
+      "accepted_overlap_ids": [
+        "N07-asr-048"
+      ],
+      "pending_overlap_ids": [
+        "N07-asr-049"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          49086,
+          49558
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          49086,
+          49087
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "N07-asr-051-recovery01",
+      "parent_segment_id": "N07-asr-051",
+      "source_id": "N07",
+      "source_sha256": "9df3f3dad285c96b9d06bbb7fba89588ca1fd79f784517c46b764e645cd96a9a",
+      "input_sha256": "8fa53d740f319437e489bc6885ba29e0603c37a5a5749e2ec7a53ec19fd851b7",
+      "partition": "V",
+      "source_char_span": [
+        50790,
+        51704
+      ],
+      "effective_text_span": [
+        50790,
+        51703
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "N07-asr-051",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "70886ef5540fbbba8fdf1e137357ba6589deef2ceca4bbee942dee2a7de09da5",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            50790,
+            51410
+          ],
+          "effective_text_span": [
+            50790,
+            51409
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": true,
+          "overlap_span": [
+            50790,
+            51410
+          ],
+          "overlap_characters": 620,
+          "effective_text_overlap_span": [
+            50790,
+            51409
+          ],
+          "effective_text_overlap_characters": 619
+        },
+        {
+          "segment_id": "N07-asr-052",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "c7ab2468901f162ecac178baf05cbf47f1c8c804d00e98616f4859048abf93b4",
+          "status": "accepted_adjudicated",
+          "reference_status": "accepted_adjudicated",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            51410,
+            52868
+          ],
+          "effective_text_span": [
+            51410,
+            52867
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            51410,
+            51704
+          ],
+          "overlap_characters": 294,
+          "effective_text_overlap_span": [
+            51410,
+            51703
+          ],
+          "effective_text_overlap_characters": 293
+        }
+      ],
+      "candidate_overlaps": [],
+      "accepted_overlap_ids": [
+        "N07-asr-052"
+      ],
+      "pending_overlap_ids": [
+        "N07-asr-051"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          50790,
+          51410
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          51409,
+          51410
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "N07-asr-053-recovery01",
+      "parent_segment_id": "N07-asr-053",
+      "source_id": "N07",
+      "source_sha256": "9df3f3dad285c96b9d06bbb7fba89588ca1fd79f784517c46b764e645cd96a9a",
+      "input_sha256": "b3ea624883860c0aba8b6604f653c50013a4234e0f7273307ddfced523380837",
+      "partition": "V",
+      "source_char_span": [
+        52286,
+        53856
+      ],
+      "effective_text_span": [
+        52286,
+        53855
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "N07-asr-052",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "c7ab2468901f162ecac178baf05cbf47f1c8c804d00e98616f4859048abf93b4",
+          "status": "accepted_adjudicated",
+          "reference_status": "accepted_adjudicated",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            51410,
+            52868
+          ],
+          "effective_text_span": [
+            51410,
+            52867
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            52286,
+            52868
+          ],
+          "overlap_characters": 582,
+          "effective_text_overlap_span": [
+            52286,
+            52867
+          ],
+          "effective_text_overlap_characters": 581
+        },
+        {
+          "segment_id": "N07-asr-053",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "ff07bb571da0197bff8cf9f6f4772174d6a0e7fba52ddca379838599047811d9",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            52868,
+            53840
+          ],
+          "effective_text_span": [
+            52868,
+            53839
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": true,
+          "overlap_span": [
+            52868,
+            53840
+          ],
+          "overlap_characters": 972,
+          "effective_text_overlap_span": [
+            52868,
+            53839
+          ],
+          "effective_text_overlap_characters": 971
+        },
+        {
+          "segment_id": "N07-asr-054",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "e15e9dff71ab25eb944029ca0e509a61534ca39131bd11720b2e37e8ebe2b6cf",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            53840,
+            54675
+          ],
+          "effective_text_span": [
+            53840,
+            54674
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            53840,
+            53856
+          ],
+          "overlap_characters": 16,
+          "effective_text_overlap_span": [
+            53840,
+            53855
+          ],
+          "effective_text_overlap_characters": 15
+        }
+      ],
+      "candidate_overlaps": [
+        {
+          "segment_id": "N07-asr-054-recovery01",
+          "effective_text_overlap_span": [
+            53750,
+            53855
+          ],
+          "characters": 105
+        }
+      ],
+      "accepted_overlap_ids": [
+        "N07-asr-052"
+      ],
+      "pending_overlap_ids": [
+        "N07-asr-053",
+        "N07-asr-054"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          52867,
+          53855
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          52867,
+          52868
+        ],
+        [
+          53839,
+          53840
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "N07-asr-054-recovery01",
+      "parent_segment_id": "N07-asr-054",
+      "source_id": "N07",
+      "source_sha256": "9df3f3dad285c96b9d06bbb7fba89588ca1fd79f784517c46b764e645cd96a9a",
+      "input_sha256": "e95cfcbef29f442c656f7871c092bd41a961e3505f72bebb0a7263f52c72c410",
+      "partition": "V",
+      "source_char_span": [
+        53750,
+        54900
+      ],
+      "effective_text_span": [
+        53750,
+        54899
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "N07-asr-053",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "ff07bb571da0197bff8cf9f6f4772174d6a0e7fba52ddca379838599047811d9",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            52868,
+            53840
+          ],
+          "effective_text_span": [
+            52868,
+            53839
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            53750,
+            53840
+          ],
+          "overlap_characters": 90,
+          "effective_text_overlap_span": [
+            53750,
+            53839
+          ],
+          "effective_text_overlap_characters": 89
+        },
+        {
+          "segment_id": "N07-asr-054",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "e15e9dff71ab25eb944029ca0e509a61534ca39131bd11720b2e37e8ebe2b6cf",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            53840,
+            54675
+          ],
+          "effective_text_span": [
+            53840,
+            54674
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": true,
+          "overlap_span": [
+            53840,
+            54675
+          ],
+          "overlap_characters": 835,
+          "effective_text_overlap_span": [
+            53840,
+            54674
+          ],
+          "effective_text_overlap_characters": 834
+        },
+        {
+          "segment_id": "N07-asr-055",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "93f3f80a60fbbcdc56605288f6ca2ab475a69a5333d8902b01c9fe2128d24133",
+          "status": "accepted_adjudicated",
+          "reference_status": "accepted_adjudicated",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            54675,
+            55352
+          ],
+          "effective_text_span": [
+            54675,
+            55351
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            54675,
+            54900
+          ],
+          "overlap_characters": 225,
+          "effective_text_overlap_span": [
+            54675,
+            54899
+          ],
+          "effective_text_overlap_characters": 224
+        }
+      ],
+      "candidate_overlaps": [
+        {
+          "segment_id": "N07-asr-053-recovery01",
+          "effective_text_overlap_span": [
+            53750,
+            53855
+          ],
+          "characters": 105
+        }
+      ],
+      "accepted_overlap_ids": [
+        "N07-asr-055"
+      ],
+      "pending_overlap_ids": [
+        "N07-asr-053",
+        "N07-asr-054"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          53750,
+          54675
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          53839,
+          53840
+        ],
+        [
+          54674,
+          54675
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "N07-asr-058-recovery01",
+      "parent_segment_id": "N07-asr-058",
+      "source_id": "N07",
+      "source_sha256": "9df3f3dad285c96b9d06bbb7fba89588ca1fd79f784517c46b764e645cd96a9a",
+      "input_sha256": "56442255b20eb91302394a1a4aa1ac0f8bf1e87d156ef59c80da6adb1a97befa",
+      "partition": "V",
+      "source_char_span": [
+        56469,
+        57858
+      ],
+      "effective_text_span": [
+        56469,
+        57857
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "N07-asr-057",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "00e29c95c9d326c2d4287566e42a9d1387c1d935d053a18e2d562ef19d8d4f1b",
+          "status": "accepted_adjudicated",
+          "reference_status": "accepted_adjudicated",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            56028,
+            56641
+          ],
+          "effective_text_span": [
+            56028,
+            56640
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            56469,
+            56641
+          ],
+          "overlap_characters": 172,
+          "effective_text_overlap_span": [
+            56469,
+            56640
+          ],
+          "effective_text_overlap_characters": 171
+        },
+        {
+          "segment_id": "N07-asr-058",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "791fbb994f9dc1fcbbf07e12bc942c616e7dd555d905854006e155456c8df466",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            56641,
+            57341
+          ],
+          "effective_text_span": [
+            56641,
+            57340
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": true,
+          "overlap_span": [
+            56641,
+            57341
+          ],
+          "overlap_characters": 700,
+          "effective_text_overlap_span": [
+            56641,
+            57340
+          ],
+          "effective_text_overlap_characters": 699
+        },
+        {
+          "segment_id": "N07-asr-059",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "a3da70a9211c02b45fb9057b71e608808b4c738c71d40fd0004e41ff66a5dea3",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            57341,
+            57858
+          ],
+          "effective_text_span": [
+            57341,
+            57857
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            57341,
+            57858
+          ],
+          "overlap_characters": 517,
+          "effective_text_overlap_span": [
+            57341,
+            57857
+          ],
+          "effective_text_overlap_characters": 516
+        }
+      ],
+      "candidate_overlaps": [
+        {
+          "segment_id": "N07-asr-059-recovery01",
+          "effective_text_overlap_span": [
+            57303,
+            57857
+          ],
+          "characters": 554
+        }
+      ],
+      "accepted_overlap_ids": [
+        "N07-asr-057"
+      ],
+      "pending_overlap_ids": [
+        "N07-asr-058",
+        "N07-asr-059"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          56640,
+          57857
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          56640,
+          56641
+        ],
+        [
+          57340,
+          57341
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "N07-asr-059-recovery01",
+      "parent_segment_id": "N07-asr-059",
+      "source_id": "N07",
+      "source_sha256": "9df3f3dad285c96b9d06bbb7fba89588ca1fd79f784517c46b764e645cd96a9a",
+      "input_sha256": "810eaebfea2448b143df73cd839ea3042381a01bddd7e11a4ed7db75228a728a",
+      "partition": "V",
+      "source_char_span": [
+        57303,
+        58026
+      ],
+      "effective_text_span": [
+        57303,
+        58025
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "N07-asr-058",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "791fbb994f9dc1fcbbf07e12bc942c616e7dd555d905854006e155456c8df466",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            56641,
+            57341
+          ],
+          "effective_text_span": [
+            56641,
+            57340
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            57303,
+            57341
+          ],
+          "overlap_characters": 38,
+          "effective_text_overlap_span": [
+            57303,
+            57340
+          ],
+          "effective_text_overlap_characters": 37
+        },
+        {
+          "segment_id": "N07-asr-059",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "a3da70a9211c02b45fb9057b71e608808b4c738c71d40fd0004e41ff66a5dea3",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            57341,
+            57858
+          ],
+          "effective_text_span": [
+            57341,
+            57857
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": true,
+          "overlap_span": [
+            57341,
+            57858
+          ],
+          "overlap_characters": 517,
+          "effective_text_overlap_span": [
+            57341,
+            57857
+          ],
+          "effective_text_overlap_characters": 516
+        },
+        {
+          "segment_id": "N07-asr-060",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "1fedfa397aad0cd69fe6cc1855fd13e495df0a1de5c4e83b7d104b39342fcb3a",
+          "status": "accepted_adjudicated",
+          "reference_status": "accepted_adjudicated",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            57858,
+            58503
+          ],
+          "effective_text_span": [
+            57858,
+            58502
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            57858,
+            58026
+          ],
+          "overlap_characters": 168,
+          "effective_text_overlap_span": [
+            57858,
+            58025
+          ],
+          "effective_text_overlap_characters": 167
+        }
+      ],
+      "candidate_overlaps": [
+        {
+          "segment_id": "N07-asr-058-recovery01",
+          "effective_text_overlap_span": [
+            57303,
+            57857
+          ],
+          "characters": 554
+        }
+      ],
+      "accepted_overlap_ids": [
+        "N07-asr-060"
+      ],
+      "pending_overlap_ids": [
+        "N07-asr-058",
+        "N07-asr-059"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          57303,
+          57858
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          57340,
+          57341
+        ],
+        [
+          57857,
+          57858
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "N07-asr-065-recovery01",
+      "parent_segment_id": "N07-asr-065",
+      "source_id": "N07",
+      "source_sha256": "9df3f3dad285c96b9d06bbb7fba89588ca1fd79f784517c46b764e645cd96a9a",
+      "input_sha256": "6d87584e65cbe71ae015f8416852ec0e4595ae0e5f54dfef7d2ad5a9d40a0ce3",
+      "partition": "V",
+      "source_char_span": [
+        60756,
+        62035
+      ],
+      "effective_text_span": [
+        60756,
+        62034
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "N07-asr-064",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "56878dc84a7e407045c908256367e9b9e8a39fecd20aff76d0d6160172a0a2e4",
+          "status": "accepted_adjudicated",
+          "reference_status": "accepted_adjudicated",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            60626,
+            61319
+          ],
+          "effective_text_span": [
+            60626,
+            61318
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            60756,
+            61319
+          ],
+          "overlap_characters": 563,
+          "effective_text_overlap_span": [
+            60756,
+            61318
+          ],
+          "effective_text_overlap_characters": 562
+        },
+        {
+          "segment_id": "N07-asr-065",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "144ca76301cf544a7459d562bfb282b65ba3ea87a6949a63ca6ccbb538f873ae",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            61319,
+            61902
+          ],
+          "effective_text_span": [
+            61319,
+            61901
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": true,
+          "overlap_span": [
+            61319,
+            61902
+          ],
+          "overlap_characters": 583,
+          "effective_text_overlap_span": [
+            61319,
+            61901
+          ],
+          "effective_text_overlap_characters": 582
+        },
+        {
+          "segment_id": "N07-asr-066",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "14239a4c1f30e8fa9fc9a319dc5eb8436eb331d717a0e5c79e63d7f53a142bdb",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            61902,
+            62767
+          ],
+          "effective_text_span": [
+            61902,
+            62766
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            61902,
+            62035
+          ],
+          "overlap_characters": 133,
+          "effective_text_overlap_span": [
+            61902,
+            62034
+          ],
+          "effective_text_overlap_characters": 132
+        }
+      ],
+      "candidate_overlaps": [
+        {
+          "segment_id": "N07-asr-066-recovery01",
+          "effective_text_overlap_span": [
+            61878,
+            62034
+          ],
+          "characters": 156
+        }
+      ],
+      "accepted_overlap_ids": [
+        "N07-asr-064"
+      ],
+      "pending_overlap_ids": [
+        "N07-asr-065",
+        "N07-asr-066"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          61318,
+          62034
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          61318,
+          61319
+        ],
+        [
+          61901,
+          61902
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "N07-asr-066-recovery01",
+      "parent_segment_id": "N07-asr-066",
+      "source_id": "N07",
+      "source_sha256": "9df3f3dad285c96b9d06bbb7fba89588ca1fd79f784517c46b764e645cd96a9a",
+      "input_sha256": "ead4538caecb3fd87596d2569162539790216f4cbc86eda41acf21164dfd48a5",
+      "partition": "V",
+      "source_char_span": [
+        61878,
+        62851
+      ],
+      "effective_text_span": [
+        61878,
+        62850
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "N07-asr-065",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "144ca76301cf544a7459d562bfb282b65ba3ea87a6949a63ca6ccbb538f873ae",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            61319,
+            61902
+          ],
+          "effective_text_span": [
+            61319,
+            61901
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            61878,
+            61902
+          ],
+          "overlap_characters": 24,
+          "effective_text_overlap_span": [
+            61878,
+            61901
+          ],
+          "effective_text_overlap_characters": 23
+        },
+        {
+          "segment_id": "N07-asr-066",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "14239a4c1f30e8fa9fc9a319dc5eb8436eb331d717a0e5c79e63d7f53a142bdb",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            61902,
+            62767
+          ],
+          "effective_text_span": [
+            61902,
+            62766
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": true,
+          "overlap_span": [
+            61902,
+            62767
+          ],
+          "overlap_characters": 865,
+          "effective_text_overlap_span": [
+            61902,
+            62766
+          ],
+          "effective_text_overlap_characters": 864
+        },
+        {
+          "segment_id": "N07-asr-067",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "1d8a2ad613323ed3b4ddbb1e0d39dc0a20a45d770e527fad33f4e102650855cd",
+          "status": "accepted_adjudicated",
+          "reference_status": "accepted_adjudicated",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            62767,
+            63396
+          ],
+          "effective_text_span": [
+            62767,
+            63395
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            62767,
+            62851
+          ],
+          "overlap_characters": 84,
+          "effective_text_overlap_span": [
+            62767,
+            62850
+          ],
+          "effective_text_overlap_characters": 83
+        }
+      ],
+      "candidate_overlaps": [
+        {
+          "segment_id": "N07-asr-065-recovery01",
+          "effective_text_overlap_span": [
+            61878,
+            62034
+          ],
+          "characters": 156
+        }
+      ],
+      "accepted_overlap_ids": [
+        "N07-asr-067"
+      ],
+      "pending_overlap_ids": [
+        "N07-asr-065",
+        "N07-asr-066"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          61878,
+          62767
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          61901,
+          61902
+        ],
+        [
+          62766,
+          62767
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "N07-asr-069-recovery01",
+      "parent_segment_id": "N07-asr-069",
+      "source_id": "N07",
+      "source_sha256": "9df3f3dad285c96b9d06bbb7fba89588ca1fd79f784517c46b764e645cd96a9a",
+      "input_sha256": "c5c9c709ad42775e08e67c2d2fbc08cda880ddd9cc04d5aea12413d3133184b2",
+      "partition": "V",
+      "source_char_span": [
+        63764,
+        65033
+      ],
+      "effective_text_span": [
+        63764,
+        65032
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "N07-asr-068",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "f5ba2d7e9dbc5d68f3b989daacf9d23f026ee272e3c7ecdd66a85ba2298e656c",
+          "status": "accepted_adjudicated",
+          "reference_status": "accepted_adjudicated",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            63396,
+            64114
+          ],
+          "effective_text_span": [
+            63396,
+            64113
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            63764,
+            64114
+          ],
+          "overlap_characters": 350,
+          "effective_text_overlap_span": [
+            63764,
+            64113
+          ],
+          "effective_text_overlap_characters": 349
+        },
+        {
+          "segment_id": "N07-asr-069",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "b83e6d678b2f7dddfe6730becca92718aeff4ff6009a94595f0b0911017558a2",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            64114,
+            65008
+          ],
+          "effective_text_span": [
+            64114,
+            65007
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": true,
+          "overlap_span": [
+            64114,
+            65008
+          ],
+          "overlap_characters": 894,
+          "effective_text_overlap_span": [
+            64114,
+            65007
+          ],
+          "effective_text_overlap_characters": 893
+        },
+        {
+          "segment_id": "N07-asr-070",
+          "source_id": "N07",
+          "family_id": "candidate-N07",
+          "partition": "V",
+          "input_sha256": "2c30467428be8dbcad162d8f286a7dcb3290c427023c3d7289831f0a8506279e",
+          "status": "accepted_adjudicated",
+          "reference_status": "accepted_adjudicated",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            65008,
+            66087
+          ],
+          "effective_text_span": [
+            65008,
+            66086
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            65008,
+            65033
+          ],
+          "overlap_characters": 25,
+          "effective_text_overlap_span": [
+            65008,
+            65032
+          ],
+          "effective_text_overlap_characters": 24
+        }
+      ],
+      "candidate_overlaps": [],
+      "accepted_overlap_ids": [
+        "N07-asr-068",
+        "N07-asr-070"
+      ],
+      "pending_overlap_ids": [
+        "N07-asr-069"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          64113,
+          65008
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          64113,
+          64114
+        ],
+        [
+          65007,
+          65008
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "rKbC4guGhRY-b01-025-recovery01",
+      "parent_segment_id": "rKbC4guGhRY-b01-025",
+      "source_id": "rKbC4guGhRY",
+      "source_sha256": "e5686567b48e5bf2a243a40e65a87226a12fbd09081c3f791c931dc8da19e65c",
+      "input_sha256": "919e1ff86e6ec662a2b5de6109a254ccb1728835b5d3635bf8f9ae44371e294f",
+      "partition": "V",
+      "source_char_span": [
+        20426,
+        21237
+      ],
+      "effective_text_span": [
+        20426,
+        21237
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "rKbC4guGhRY-b01-024",
+          "source_id": "rKbC4guGhRY",
+          "family_id": "video-rKbC4guGhRY",
+          "partition": "V",
+          "input_sha256": "6c92bcd0ed975882416b87c4d718e635a0caef1aedca83ee2bba43826e52ec14",
+          "status": "accepted_adjudicated",
+          "reference_status": "accepted_adjudicated",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            19051,
+            20511
+          ],
+          "effective_text_span": [
+            19051,
+            20510
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            20426,
+            20511
+          ],
+          "overlap_characters": 85,
+          "effective_text_overlap_span": [
+            20426,
+            20510
+          ],
+          "effective_text_overlap_characters": 84
+        },
+        {
+          "segment_id": "rKbC4guGhRY-b01-025",
+          "source_id": "rKbC4guGhRY",
+          "family_id": "video-rKbC4guGhRY",
+          "partition": "V",
+          "input_sha256": "769d276503d5419b7ba31e886c2b0a42be83444ed5d8182f35c6152ac679d7be",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            20511,
+            21122
+          ],
+          "effective_text_span": [
+            20511,
+            21121
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": true,
+          "overlap_span": [
+            20511,
+            21122
+          ],
+          "overlap_characters": 611,
+          "effective_text_overlap_span": [
+            20511,
+            21121
+          ],
+          "effective_text_overlap_characters": 610
+        },
+        {
+          "segment_id": "rKbC4guGhRY-b01-026",
+          "source_id": "rKbC4guGhRY",
+          "family_id": "video-rKbC4guGhRY",
+          "partition": "V",
+          "input_sha256": "3f0613a6dd6df6ea228c90c69749ba67ec94449d5b469122f11a059a487c6d73",
+          "status": "accepted_adjudicated",
+          "reference_status": "accepted_adjudicated",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            21122,
+            22089
+          ],
+          "effective_text_span": [
+            21122,
+            22088
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            21122,
+            21237
+          ],
+          "overlap_characters": 115,
+          "effective_text_overlap_span": [
+            21122,
+            21237
+          ],
+          "effective_text_overlap_characters": 115
+        }
+      ],
+      "candidate_overlaps": [],
+      "accepted_overlap_ids": [
+        "rKbC4guGhRY-b01-024",
+        "rKbC4guGhRY-b01-026"
+      ],
+      "pending_overlap_ids": [
+        "rKbC4guGhRY-b01-025"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          20510,
+          21122
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          20510,
+          20511
+        ],
+        [
+          21121,
+          21122
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "rKbC4guGhRY-b01-032-recovery01",
+      "parent_segment_id": "rKbC4guGhRY-b01-032",
+      "source_id": "rKbC4guGhRY",
+      "source_sha256": "e5686567b48e5bf2a243a40e65a87226a12fbd09081c3f791c931dc8da19e65c",
+      "input_sha256": "cb0c1f58bd2cd591784b05c66dab034cfc963a47b8ce53affcc671ce5b7d6fd1",
+      "partition": "V",
+      "source_char_span": [
+        26491,
+        27594
+      ],
+      "effective_text_span": [
+        26491,
+        27594
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "rKbC4guGhRY-b01-031",
+          "source_id": "rKbC4guGhRY",
+          "family_id": "video-rKbC4guGhRY",
+          "partition": "V",
+          "input_sha256": "095ab0ce53fabe87f7d4bb7ade10f472b2a86e08af3f771edb2a10416b445e3c",
+          "status": "accepted_adjudicated",
+          "reference_status": "accepted_adjudicated",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            25725,
+            26570
+          ],
+          "effective_text_span": [
+            25725,
+            26569
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            26491,
+            26570
+          ],
+          "overlap_characters": 79,
+          "effective_text_overlap_span": [
+            26491,
+            26569
+          ],
+          "effective_text_overlap_characters": 78
+        },
+        {
+          "segment_id": "rKbC4guGhRY-b01-032",
+          "source_id": "rKbC4guGhRY",
+          "family_id": "video-rKbC4guGhRY",
+          "partition": "V",
+          "input_sha256": "b09947127f43f8315066412364212e89322930199bd8c350c63c693112fa2fdc",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            26570,
+            27486
+          ],
+          "effective_text_span": [
+            26570,
+            27485
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": true,
+          "overlap_span": [
+            26570,
+            27486
+          ],
+          "overlap_characters": 916,
+          "effective_text_overlap_span": [
+            26570,
+            27485
+          ],
+          "effective_text_overlap_characters": 915
+        },
+        {
+          "segment_id": "rKbC4guGhRY-b01-033",
+          "source_id": "rKbC4guGhRY",
+          "family_id": "video-rKbC4guGhRY",
+          "partition": "V",
+          "input_sha256": "746c9797cf8af89dc91e663373a84bac896d05be307d5c2f2ae868362b42abc4",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            27486,
+            28219
+          ],
+          "effective_text_span": [
+            27486,
+            28218
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            27486,
+            27594
+          ],
+          "overlap_characters": 108,
+          "effective_text_overlap_span": [
+            27486,
+            27594
+          ],
+          "effective_text_overlap_characters": 108
+        }
+      ],
+      "candidate_overlaps": [
+        {
+          "segment_id": "rKbC4guGhRY-b01-033-recovery01",
+          "effective_text_overlap_span": [
+            27385,
+            27594
+          ],
+          "characters": 209
+        }
+      ],
+      "accepted_overlap_ids": [
+        "rKbC4guGhRY-b01-031"
+      ],
+      "pending_overlap_ids": [
+        "rKbC4guGhRY-b01-032",
+        "rKbC4guGhRY-b01-033"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          26569,
+          27594
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          26569,
+          26570
+        ],
+        [
+          27485,
+          27486
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    },
+    {
+      "segment_id": "rKbC4guGhRY-b01-033-recovery01",
+      "parent_segment_id": "rKbC4guGhRY-b01-033",
+      "source_id": "rKbC4guGhRY",
+      "source_sha256": "e5686567b48e5bf2a243a40e65a87226a12fbd09081c3f791c931dc8da19e65c",
+      "input_sha256": "f0bb12929d5594f9ff542dacda64d1cf484ad414dddd5239ca8d0b6ad996d9b7",
+      "partition": "V",
+      "source_char_span": [
+        27385,
+        28293
+      ],
+      "effective_text_span": [
+        27385,
+        28293
+      ],
+      "span_basis": "declared_source_char_span",
+      "parent_has_accepted_reference": false,
+      "existing_overlaps": [
+        {
+          "segment_id": "rKbC4guGhRY-b01-032",
+          "source_id": "rKbC4guGhRY",
+          "family_id": "video-rKbC4guGhRY",
+          "partition": "V",
+          "input_sha256": "b09947127f43f8315066412364212e89322930199bd8c350c63c693112fa2fdc",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            26570,
+            27486
+          ],
+          "effective_text_span": [
+            26570,
+            27485
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            27385,
+            27486
+          ],
+          "overlap_characters": 101,
+          "effective_text_overlap_span": [
+            27385,
+            27485
+          ],
+          "effective_text_overlap_characters": 100
+        },
+        {
+          "segment_id": "rKbC4guGhRY-b01-033",
+          "source_id": "rKbC4guGhRY",
+          "family_id": "video-rKbC4guGhRY",
+          "partition": "V",
+          "input_sha256": "746c9797cf8af89dc91e663373a84bac896d05be307d5c2f2ae868362b42abc4",
+          "status": "pending_adjudication",
+          "reference_status": "pending_adjudication",
+          "has_accepted_reference": false,
+          "source_char_span": [
+            27486,
+            28219
+          ],
+          "effective_text_span": [
+            27486,
+            28218
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": true,
+          "overlap_span": [
+            27486,
+            28219
+          ],
+          "overlap_characters": 733,
+          "effective_text_overlap_span": [
+            27486,
+            28218
+          ],
+          "effective_text_overlap_characters": 732
+        },
+        {
+          "segment_id": "rKbC4guGhRY-b01-034",
+          "source_id": "rKbC4guGhRY",
+          "family_id": "video-rKbC4guGhRY",
+          "partition": "V",
+          "input_sha256": "25769cf56a816c0193d53e0a43b823e80afa3c37d22f4fe6c6876206f2a27b07",
+          "status": "accepted_adjudicated",
+          "reference_status": "accepted_adjudicated",
+          "has_accepted_reference": true,
+          "source_char_span": [
+            28219,
+            28952
+          ],
+          "effective_text_span": [
+            28219,
+            28951
+          ],
+          "span_basis": "declared_source_char_span",
+          "is_parent": false,
+          "overlap_span": [
+            28219,
+            28293
+          ],
+          "overlap_characters": 74,
+          "effective_text_overlap_span": [
+            28219,
+            28293
+          ],
+          "effective_text_overlap_characters": 74
+        }
+      ],
+      "candidate_overlaps": [
+        {
+          "segment_id": "rKbC4guGhRY-b01-032-recovery01",
+          "effective_text_overlap_span": [
+            27385,
+            27594
+          ],
+          "characters": 209
+        }
+      ],
+      "accepted_overlap_ids": [
+        "rKbC4guGhRY-b01-034"
+      ],
+      "pending_overlap_ids": [
+        "rKbC4guGhRY-b01-032",
+        "rKbC4guGhRY-b01-033"
+      ],
+      "remaining_intervals_after_preserving_accepted": [
+        [
+          27385,
+          28219
+        ]
+      ],
+      "uncovered_intervals_relative_to_all_existing_rows": [
+        [
+          27485,
+          27486
+        ],
+        [
+          28218,
+          28219
+        ]
+      ],
+      "uncovered_non_whitespace_characters_relative_to_all_existing_rows": 0,
+      "geometrically_eligible_after_pending_supersession": false,
+      "integration_decision": "blocked_by_accepted_reference_overlap"
+    }
+  ]
+}

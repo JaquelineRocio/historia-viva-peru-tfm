@@ -1,0 +1,10 @@
+{
+  "parent_sha256": "e45ceb6f759538ef567cf7f3c559b42aa4400778074afe774c7f5742a7cab73f",
+  "v3_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+  "substantive_task_change": false,
+  "changes": [
+    "Explicit boundary questions consistent with R0-R7",
+    "V2 workflow prohibition on splits replaced by V3 freeze gates",
+    "Annotator input equals classifier input; target only"
+  ]
+}

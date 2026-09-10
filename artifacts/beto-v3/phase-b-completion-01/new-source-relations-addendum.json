@@ -1,0 +1,46 @@
+{
+  "at_utc": "2026-09-09T03:13:58.633787+00:00",
+  "S_content_accessed": false,
+  "N03_visual_credit_observations": {
+    "director_and_writer": "Augusto Tamayo",
+    "executive_production": "Nathalie Hendrickx",
+    "production_company": "ARGOS Producciones Audiovisuales",
+    "acknowledgements_observed": [
+      "Jaime Avalos / OEI",
+      "Margarita Guerra / Instituto Riva Agüero PUCP",
+      "Amalia Castelli",
+      "Luis Cavagnaro",
+      "José Agustín de la Puente",
+      "Hugo de Zela",
+      "Alan Torrico"
+    ],
+    "evidence": [
+      {
+        "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N03\\credits-1020.jpg",
+        "sha256": "e531ea3ede64ad7e2006fe92e1f6e4de827e7f268c790b514a960be9a81672c1"
+      },
+      {
+        "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N03\\credits-1030.jpg",
+        "sha256": "79b34d641f609f91541b68f977ed582547b4a0ef38c824b5f9f1ba91c3912da2"
+      },
+      {
+        "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N03\\credits-1040.jpg",
+        "sha256": "b59fd092fdb5220b1066c49db8225054849cfd7b21281f9c98986bde3fe46b09"
+      },
+      {
+        "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N03\\credits-1050.jpg",
+        "sha256": "b4346930399ab1e937035000e104a6b0c490a32654b11aa6376925a371c59710"
+      },
+      {
+        "path": "outputs\\beto-v3\\phase-b-completion-01\\new-sources\\N03\\credits-1065.jpg",
+        "sha256": "f6625c6ad083904d25b20fe258473297a847547143c0aad563bae7b58932df30"
+      }
+    ],
+    "interpretation": "No adaptation of S16 identified in sampled credits; distinct authorship observed. Same topic alone does not establish reproduction. N03 remains auxiliary and excluded from primary evaluation by duration."
+  },
+  "development_text_comparison": {
+    "path": "artifacts\\beto-v3\\phase-b-completion-01\\new-transcript-overlap.json",
+    "sha256": "20bd872bc99f7ae8a06a2b612ae1935bba48679001d7cf051cf5bf5bc019ff33",
+    "result": "No substantial exact eight-word overlap detected with H/current T/V or between new sources; ASR differences may conceal overlap, so this is screening, not proof."
+  }
+}

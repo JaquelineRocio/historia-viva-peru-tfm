@@ -1,0 +1,68 @@
+{
+  "version": "selected-444-v1",
+  "first_pass_units": 444,
+  "second_review_units": 315,
+  "second_review_target": 417,
+  "adjudications": 75,
+  "selected444_complete": false,
+  "accepted_new_references": 69,
+  "accepted_new_by_partition": {
+    "T": 54,
+    "V": 15
+  },
+  "accepted_references": {
+    "T": 198,
+    "V": 300,
+    "auxiliary": 14
+  },
+  "accepted_30min_references": {
+    "T": 173,
+    "V": 300
+  },
+  "pending_references": 418,
+  "pending_new_adjudicated": 6,
+  "coverage": {
+    "T": {
+      "accepted": 198,
+      "units": 456,
+      "fraction": 0.4342105263157895
+    },
+    "V": {
+      "accepted": 300,
+      "units": 459,
+      "fraction": 0.6535947712418301
+    }
+  },
+  "C_ready": false,
+  "blockers": [
+    "T/campanias_conflictos_militares: missing 5 references and 0 works from >=30-minute sources",
+    "T/contexto_colonial_antecedentes: missing 9 references and 0 works from >=30-minute sources",
+    "T/liderazgos_diplomacia_proyectos: missing 3 references and 0 works from >=30-minute sources",
+    "T/organizacion_consecuencias_republicanas: missing 10 references and 0 works from >=30-minute sources",
+    "V/contexto_colonial_antecedentes: missing 11 references and 0 works from >=30-minute sources",
+    "V/crisis_ideas_emancipadoras: missing 1 references and 0 works from >=30-minute sources",
+    "V/liderazgos_diplomacia_proyectos: missing 12 references and 0 works from >=30-minute sources",
+    "V/organizacion_consecuencias_republicanas: missing 12 references and 0 works from >=30-minute sources",
+    "T: 173/300 accepted long-source references; missing 127",
+    "T: resolvable reference coverage 198/456 below 0.90",
+    "V: resolvable reference coverage 300/459 below 0.90",
+    "Selected material: 369 final decisions outstanding",
+    "Final source independence/reproduction admission and frozen H/T/V/S manifests outstanding",
+    "Caption/audio fidelity and missing-cue intervals require final admission review; S remains closed"
+  ],
+  "S_content_opened": false,
+  "training_runs": 0,
+  "services_paid_USD": 0,
+  "annotation_unique": 938,
+  "annotation_remaining": 262,
+  "same_model_family_both_passes": true,
+  "model_weights": "unknown",
+  "reference_note": "AI-assisted references, not expert gold or training admission",
+  "source_admission_pending": true,
+  "provisional_acquired_30min_works": {
+    "T": 13,
+    "V": 6
+  },
+  "new_registered_S_works": 6,
+  "all_development_units_sha256": "95f29577768355b9ff35db6f2c245703f9616a72061f99c1ce82edd2515888ff"
+}

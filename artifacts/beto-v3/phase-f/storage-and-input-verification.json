@@ -1,0 +1,45 @@
+{
+  "checked_utc": "2026-09-09T23:28:46.051381+00:00",
+  "disks": {
+    "C:/": {
+      "total": 185099874304,
+      "used": 165391261696,
+      "free": 19708612608
+    },
+    "D:/": {
+      "total": 325057507328,
+      "used": 68523188224,
+      "free": 256534319104
+    },
+    "E:/": {
+      "total": 1000185266176,
+      "used": 298780983296,
+      "free": 701404282880
+    }
+  },
+  "junction_target": "E:\\BETO\\outputs",
+  "estimated_max_new_bytes": 128849018880,
+  "estimate": "60 full states at <=1.5 GiB plus <=60 improved checkpoints at <=0.5 GiB, cache and metadata within 120 GiB; 20 GiB extra margin",
+  "C_D_expected_writes": "No planned bulk writes; D scripts/audit/docs <100 MiB; bytecode disabled, all process caches/temp E. OS/other processes outside estimate.",
+  "process_environment": {
+    "TEMP": "D:\\MASTER EN DESARROLLO CON IA\\PROYECTO FINAL\\outputs\\beto-v3\\phase-f\\process-cache\\tmp",
+    "TMP": "D:\\MASTER EN DESARROLLO CON IA\\PROYECTO FINAL\\outputs\\beto-v3\\phase-f\\process-cache\\tmp",
+    "HF_HOME": "D:\\MASTER EN DESARROLLO CON IA\\PROYECTO FINAL\\outputs\\beto-v3\\phase-f\\process-cache\\hf",
+    "HF_HUB_CACHE": "D:\\MASTER EN DESARROLLO CON IA\\PROYECTO FINAL\\outputs\\beto-v3\\phase-f\\process-cache\\hf\\hub",
+    "HF_DATASETS_CACHE": "D:\\MASTER EN DESARROLLO CON IA\\PROYECTO FINAL\\outputs\\beto-v3\\phase-f\\process-cache\\datasets",
+    "TORCH_HOME": "D:\\MASTER EN DESARROLLO CON IA\\PROYECTO FINAL\\outputs\\beto-v3\\phase-f\\process-cache\\torch",
+    "XDG_CACHE_HOME": "D:\\MASTER EN DESARROLLO CON IA\\PROYECTO FINAL\\outputs\\beto-v3\\phase-f\\process-cache\\xdg",
+    "CUDA_CACHE_PATH": "D:\\MASTER EN DESARROLLO CON IA\\PROYECTO FINAL\\outputs\\beto-v3\\phase-f\\process-cache\\cuda",
+    "TRITON_CACHE_DIR": "D:\\MASTER EN DESARROLLO CON IA\\PROYECTO FINAL\\outputs\\beto-v3\\phase-f\\process-cache\\triton",
+    "HF_HUB_OFFLINE": "1",
+    "PYTHONDONTWRITEBYTECODE": "1"
+  },
+  "scope": "F required frozen hashes, admission, partition disjointness, base files, environment, three control checkpoints and receipts. Not full migration or backup verification.",
+  "outputs_respaldo": "Untouched; not traversed",
+  "frozen_counts": {
+    "H": 590,
+    "T300": 426,
+    "V": 444
+  },
+  "S_content_opened": false
+}

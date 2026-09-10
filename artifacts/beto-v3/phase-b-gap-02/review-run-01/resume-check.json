@@ -1,0 +1,72 @@
+{
+  "passed": true,
+  "idempotent_hashes": {
+    "artifacts\\beto-v3\\budget-ledger-current.json": "fffcd6a720e8f5b11cb5a87c510640c849d85bdeca9cb147c456ab8ec573c450",
+    "outputs\\beto-v3\\phase-b-gap-02\\all-development-units.json": "63b7043ce6a683a9b21ab5ec1f7b85d54a09c671ea8a3cf3d2326cd5edc744a6",
+    "artifacts\\beto-v3\\phase-b-gap-02\\review-integration.json": "84c29937ab74b45e1d411b1e37b0120d1ef53968ab00b49208372e8e3394e826"
+  },
+  "commands": [
+    {
+      "command": [
+        "outputs/venv-ml/Scripts/python.exe",
+        "-X",
+        "utf8",
+        "scripts/integrate_beto_v3_gap_reviews.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "outputs/venv-ml/Scripts/python.exe",
+        "-X",
+        "utf8",
+        "scripts/report_beto_v3_gap_batch.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "outputs/venv-ml/Scripts/python.exe",
+        "-X",
+        "utf8",
+        "scripts/finalize_beto_v3_resume.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "outputs/venv-ml/Scripts/python.exe",
+        "-X",
+        "utf8",
+        "scripts/prepare_beto_v3_gap_blind_queue.py"
+      ],
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "outputs/venv-ml/Scripts/python.exe",
+        "-X",
+        "utf8",
+        "scripts/check_beto_v3.py",
+        "--require-C"
+      ],
+      "exit_code": 2
+    },
+    {
+      "command": [
+        "outputs/venv-ml/Scripts/python.exe",
+        "-X",
+        "utf8",
+        "scripts/write_beto_v3_resume_report.py"
+      ],
+      "exit_code": 0
+    }
+  ],
+  "paid_services_USD": 0,
+  "S_closed": true,
+  "legacy_report_preserves_current_docs_and_parent_registry": {
+    "docs\\beto-v3\\progress.md": "052be37ac0ed1f15ecc344c1d4a17d4f14aecbd9b32d04f97627ababb12af497",
+    "docs\\beto-v3\\fase-B-lote-completo.md": "4cddab636fcfd3a0c823fb9046afa6e2e3f4fee50d8d3b2bff9461d3a73d953f",
+    "artifacts\\beto-v3\\phase-b-completion-01\\source-registry-final.json": "33b120d6565e3a6f1879047319202e84575f4ec8f14ce8b0a2329d07784d2d41"
+  }
+}

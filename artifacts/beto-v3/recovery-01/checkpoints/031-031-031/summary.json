@@ -1,0 +1,77 @@
+{
+  "version": "recovery-01-v1",
+  "first_pass_units": 444,
+  "second_review_units": 417,
+  "second_review_target": 417,
+  "adjudications": 444,
+  "selected444_complete": true,
+  "accepted_new_references": 418,
+  "accepted_new_by_partition": {
+    "T": 282,
+    "V": 136
+  },
+  "accepted_references": {
+    "T": 426,
+    "V": 421,
+    "auxiliary": 14
+  },
+  "accepted_30min_references": {
+    "T": 401,
+    "V": 421
+  },
+  "pending_references": 69,
+  "pending_new_adjudicated": 26,
+  "coverage": {
+    "T": {
+      "accepted": 426,
+      "units": 456,
+      "fraction": 0.9342105263157895
+    },
+    "V": {
+      "accepted": 421,
+      "units": 459,
+      "fraction": 0.9172113289760349
+    }
+  },
+  "C_ready": false,
+  "blockers": [
+    "V/contexto_colonial_antecedentes: missing 5 references and 0 works from >=30-minute sources",
+    "V/liderazgos_diplomacia_proyectos: missing 3 references and 0 works from >=30-minute sources",
+    "V/organizacion_consecuencias_republicanas: missing 2 references and 0 works from >=30-minute sources",
+    "Final source independence/reproduction admission and frozen H/T/V/S manifests outstanding",
+    "Caption/audio fidelity and missing-cue intervals require final admission review; S remains closed"
+  ],
+  "S_content_opened": false,
+  "training_runs": 0,
+  "services_paid_USD": 0,
+  "annotation_unique": 969,
+  "annotation_remaining": 231,
+  "same_model_family_both_passes": true,
+  "model_weights": "unknown",
+  "reference_note": "AI-assisted judgments, not expert gold; same family in isolated sessions, provider weights unknown; only disjoint effective replacements count.",
+  "source_admission_pending": true,
+  "provisional_acquired_30min_works": {
+    "T": 13,
+    "V": 6
+  },
+  "new_registered_S_works": 6,
+  "all_development_units_sha256": "be69903698551507255888a3ccd5e3f46462ff843315db9a5962390be11acd3d",
+  "source_registry_overlay": "artifacts\\beto-v3\\phase-b-gap-02\\selected-444\\source-registry-overlay.json",
+  "label_agreements": 368,
+  "label_disagreements": 49,
+  "T_unsampled_parent_checked": 27,
+  "recovery_first_pass": 31,
+  "recovery_second_review": 31,
+  "recovery_adjudications": 31,
+  "recovery_complete": true,
+  "recovery_resolved_judgments": 18,
+  "recovery_pending_judgments": 13,
+  "recovery_overlap_excluded": 18,
+  "recovery_effective_gains": 0,
+  "replaced_pending_ids": [],
+  "second_review_units_cumulative": 838,
+  "recovery_label_agreements": 24,
+  "recovery_label_disagreements": 7,
+  "all_development_units": "outputs\\beto-v3\\recovery-01\\all-development-units.json",
+  "source_registry_overlay_note": "Inherited source admission metadata; current reference counts in recovery coverage files."
+}

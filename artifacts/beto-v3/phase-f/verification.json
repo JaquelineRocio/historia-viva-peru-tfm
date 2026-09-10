@@ -1,0 +1,36 @@
+{
+  "status": "passed",
+  "checked_utc": "2026-09-10T00:12:20.540790+00:00",
+  "new_trajectories": 3,
+  "epochs_each": 20,
+  "controls_hashes_unchanged": true,
+  "freeze_unchanged": true,
+  "checkpoint_reload_identical": true,
+  "last_resume_loaded_cpu": true,
+  "complete_migration_verified": false,
+  "outputs_respaldo_touched": false,
+  "S_content_opened": false,
+  "free_space": {
+    "C:/": {
+      "total": 185099874304,
+      "used": 165287280640,
+      "free": 19812593664
+    },
+    "D:/": {
+      "total": 325057507328,
+      "used": 68525068288,
+      "free": 256532439040
+    },
+    "E:/": {
+      "total": 1000185266176,
+      "used": 385873346560,
+      "free": 614311919616
+    }
+  },
+  "no_new_experiment_started": true,
+  "F_output_bytes": 87044510656,
+  "source_snapshots_verified": true,
+  "curves_visually_checked": true,
+  "all_F_run_locks_released": true,
+  "ledger_current_matches_after_F": true
+}

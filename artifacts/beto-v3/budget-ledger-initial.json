@@ -1,0 +1,10 @@
+{
+  "scope": "V3 cumulative across resumes",
+  "training_gpu_seconds": 0,
+  "CD_gpu_seconds": 0,
+  "ASR_gpu_seconds": 0,
+  "new_trajectories": 0,
+  "new_unique_annotated_units": 0,
+  "prior_usage": "prior-executions.json",
+  "updates": "append outputs/beto-v3/budget-events.jsonl; never reset this baseline"
+}

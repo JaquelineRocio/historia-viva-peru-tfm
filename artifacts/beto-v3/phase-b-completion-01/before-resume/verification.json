@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "all_123_parents_accounted": true,
+  "full_source_text_preserved": true,
+  "evidence_and_hashes_valid": true,
+  "all_units_at_most_384_tokens": true,
+  "all_required_reviews_exported_blind": true,
+  "S_unchanged_and_closed": true,
+  "no_BETO_predictions_or_training": true,
+  "new_sources": 8,
+  "accessible_direct_videos": 3,
+  "new_captions_acquired": 0
+}

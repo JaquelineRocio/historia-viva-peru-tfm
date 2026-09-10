@@ -1,0 +1,25 @@
+{
+  "transcripts_obtained": 5,
+  "long_transcripts_30min": 3,
+  "candidate_units": {
+    "T": 84,
+    "V": 39
+  },
+  "accepted_references": 0,
+  "overlength_units": 0,
+  "role_works": {
+    "T": 4,
+    "V": 1
+  },
+  "status": "pilot_only; C gate closed",
+  "blockers": [
+    "Cádiz and Sánchez Carrión lack public captions",
+    "Cádiz audio acquisition HTTP 403; no ASR audio available",
+    "Only one validation video acquired; seven-class references not yet established",
+    "Discourse boundaries and annotation review pending"
+  ],
+  "S_text_accessed": false,
+  "new_training_runs": 0,
+  "new_training_gpu_seconds": 0,
+  "ASR_gpu_seconds": 0
+}

@@ -1,0 +1,62 @@
+{
+  "scope": "New V candidate metadata; no S audiovisual/transcript/labels accessed",
+  "sources": [
+    {
+      "source_id": "N01",
+      "video_id": "KHcAIKD38sI",
+      "role_preserved": "V",
+      "title": "Sucedió en el Perú (TV Perú) - Reformas Borbónicas  - 14/03/2016",
+      "official_channel": "TVPerú",
+      "upload_date": "20160315",
+      "duration_metadata_seconds": 3071,
+      "long_duration_metadata_pass": true,
+      "matching_registered_records": 1,
+      "conflicting_roles": [],
+      "registered_family": "video-KHcAIKD38sI",
+      "decision": "metadata_and_partition_admitted_pending_decode_and_development_text_overlap",
+      "relation_rationale": "Registered TVPeru episode on a different dated subject, no video/family collision with H/T/S metadata. Shared programme branding does not establish one original episode. Reused interview excerpts cannot be ruled out by metadata and require development transcript screening before annotation.",
+      "content_comparison_required": true
+    },
+    {
+      "source_id": "-Ma1tt97eFg",
+      "video_id": "-Ma1tt97eFg",
+      "role_preserved": "V",
+      "title": "Sucedió en el Perú (TV Perú) - José Faustino Sánchez Carrión   - 01/06/2015",
+      "official_channel": "TVPerú",
+      "upload_date": "20150706",
+      "duration_metadata_seconds": 3009,
+      "long_duration_metadata_pass": true,
+      "matching_registered_records": 2,
+      "conflicting_roles": [],
+      "registered_family": "video--Ma1tt97eFg",
+      "decision": "metadata_and_partition_admitted_pending_decode_and_development_text_overlap",
+      "relation_rationale": "Registered TVPeru episode on a different dated subject, no video/family collision with H/T/S metadata. Shared programme branding does not establish one original episode. Reused interview excerpts cannot be ruled out by metadata and require development transcript screening before annotation.",
+      "content_comparison_required": true
+    }
+  ],
+  "evidence_files": [
+    {
+      "path": "artifacts/beto-v3/source-registry.json",
+      "sha256": "0c701be26fff927888a13f9280b90903d139b12a4d96a979d30c383392a7ad6c"
+    },
+    {
+      "path": "artifacts/beto-v3/phase-b-completion-01/source-registry-final.json",
+      "sha256": "33b120d6565e3a6f1879047319202e84575f4ec8f14ce8b0a2329d07784d2d41"
+    },
+    {
+      "path": "artifacts/beto-v3/phase-b-completion-01/new-source-relations.json",
+      "sha256": "51cdb6f862fa6cd20588c901d679b340170645033498d592a619996c95d5190a"
+    },
+    {
+      "path": "artifacts/beto-v3/phase-b-gap-02/reserve-metadata.json",
+      "sha256": "cea723ba1b84f5c6cf7b96566290689cbf837af0be5e4acada563bc1948ffb90"
+    },
+    {
+      "path": "artifacts/beto-v3/phase-b-gap-02/acquisition-plan.json",
+      "sha256": "6a87502c6aa6fd35532515bb2ab6439861c22d8b0aaa86a805a4d4c1373f453c"
+    }
+  ],
+  "paid_USD": 0,
+  "ASR_gpu_seconds": 0,
+  "annotation_entries": 0
+}

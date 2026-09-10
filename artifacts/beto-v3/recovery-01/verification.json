@@ -1,0 +1,48 @@
+{
+  "integrity": "passed",
+  "reconstruction_and_384_token_check": true,
+  "synthetic_tests_passed": 13,
+  "unique_budget": 969,
+  "annotation_remaining": 231,
+  "S_allowance": 200,
+  "first_pass": 31,
+  "second_review": 31,
+  "adjudications": 31,
+  "resolved_judgments": 18,
+  "unresolved_judgments": 13,
+  "effective_reference_gains": 0,
+  "parent_930_rows_unchanged": true,
+  "idempotence_checks": [
+    {
+      "script": "integrate_beto_v3_recovery.py",
+      "exit_code": 0,
+      "protected_artifact_hashes_unchanged": true
+    },
+    {
+      "script": "integrate_beto_v3_recovery.py",
+      "exit_code": 0,
+      "protected_artifact_hashes_unchanged": true
+    },
+    {
+      "script": "integrate_beto_v3_selected444.py",
+      "exit_code": 0,
+      "protected_artifact_hashes_unchanged": true
+    },
+    {
+      "script": "integrate_beto_v3_gap_reviews.py",
+      "exit_code": 0,
+      "protected_artifact_hashes_unchanged": true
+    }
+  ],
+  "gap_integrity_exit_code": 0,
+  "require_C_exit_code": 2,
+  "C_ready": false,
+  "S_closed": true,
+  "ledger_sha256": "06b76260ed7859db83160386cb06e0effbe334a17e4a0855de8c0a8746dac6c6",
+  "current_sha256": "f8c138b3ae7c21780adcf7a2200034e8b47a0b2571f0bfb449700ed8e6053494",
+  "response_manifest_sha256": "bc6452379cf55015d3ce8e7221f467bbc6b5b8c8b39cd81081d8988873492e4b",
+  "source_overlap_audit_sha256": "37dcb8b17cf9687145be5bc67dc43a2f8588cf096ccdf7c48833460ed1cf11a1",
+  "remaining_existing_V_audit_sha256": "9a7fbd6ba37f220ce7706165cdbb420714a0d28d5756ce9b279d726cae897aef",
+  "existing_V_unused_genuine_text_characters": 0,
+  "existing_V_coverage_provenance_checked": true
+}

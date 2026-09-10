@@ -1,0 +1,39 @@
+{
+  "phase": "B_partial_access_block",
+  "A": "reviewed_base_and_diagnostics_complete; final H awaits video family exclusions",
+  "B": "real_transcript_pilot_prepared; references/splits_not_final",
+  "C_to_G": "not_started; data/reference gate not satisfied",
+  "goal_reached": false,
+  "V3_macro_f1": null,
+  "usage": {
+    "new_training_trajectories": 0,
+    "new_training_gpu_seconds": 0,
+    "CD_training_gpu_seconds": 0,
+    "ASR_gpu_seconds": 0,
+    "prior_checkpoint_inference_seconds_measured": 131.14480390000608,
+    "new_unique_annotation_proposals": 12,
+    "new_historical_review_units": 10,
+    "historical_review_including_previous": 30,
+    "previous_successful_training_seconds": 2828.3538434999487,
+    "previous_failed_training_seconds": null,
+    "previous_failed_time_status": "unknown; not reported as zero",
+    "paid_services_used": false,
+    "provider_token_usage": null
+  },
+  "blockers": [
+    "Cádiz and Sánchez Carrión lack public captions",
+    "Cádiz audio acquisition HTTP 403; no ASR audio available",
+    "Only one validation video acquired; seven-class references not yet established",
+    "Discourse boundaries and annotation review pending"
+  ],
+  "completed_artifacts": {
+    "H_initial": 591,
+    "H_reviewed": 590,
+    "transcripts": 5,
+    "candidate_units": 123,
+    "first_pass_annotation_proposals": 12,
+    "accepted_new_references": 0,
+    "prior_epoch_inferences": 24
+  },
+  "resume_check": "outputs/venv-ml/Scripts/python.exe scripts/check_beto_v3.py --require-C"
+}

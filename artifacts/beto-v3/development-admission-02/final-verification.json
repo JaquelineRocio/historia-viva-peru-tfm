@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "C_ready": true,
+  "S_closed": true,
+  "checks": [
+    "All prior admission snapshots still verify",
+    "Freeze hashes, class support, coverage and partition checks pass",
+    "Scoped exception rejects lower support, changed scope/budget/success and open S",
+    "All H/T/V text, labels and source/family identities preserved",
+    "Four complete results; 48 epochs; saved checkpoint predictions identical on reload",
+    "Every attempt settled; cumulative budget 3646.2801296 <= 14400 seconds"
+  ],
+  "F1_macro_V": {
+    "R0": 0.3761147349382643,
+    "R1": 0.5103819417066577,
+    "R2": 0.5323920896572062,
+    "R3": 0.519328750785806
+  },
+  "candidate": "R2"
+}

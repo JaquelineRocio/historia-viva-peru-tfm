@@ -1,0 +1,49 @@
+{
+  "version": "admission-01-v1",
+  "parent": "artifacts\\beto-v3\\recovery-01\\current.json",
+  "first_pass_units": 30,
+  "second_review_units": 30,
+  "adjudications": 30,
+  "new_accepted_references": 23,
+  "accepted_references": {
+    "T": 426,
+    "V": 444,
+    "auxiliary": 14
+  },
+  "accepted_30min_references": {
+    "T": 401,
+    "V": 444
+  },
+  "coverage": {
+    "T": {
+      "accepted": 426,
+      "units": 456,
+      "fraction": 0.9342105263157895
+    },
+    "V": {
+      "accepted": 444,
+      "units": 489,
+      "fraction": 0.9079754601226994
+    }
+  },
+  "pending_references": 76,
+  "annotation_unique": 999,
+  "annotation_remaining": 201,
+  "development_remaining": 1,
+  "ASR_gpu_seconds": 932.9981357000124,
+  "training_runs": 0,
+  "C_ready": false,
+  "S_evaluated": false,
+  "S_content_opened": false,
+  "incidental_reserved_search_snippet_seen": true,
+  "reserved_search_snippet_used": false,
+  "services_paid_USD": 0,
+  "blockers": [
+    "V/contexto_colonial_antecedentes: missing 2 references and 0 works",
+    "V/organizacion_consecuencias_republicanas: missing 2 references and 0 works",
+    "Source caption/audio fidelity final admission remains incomplete (G13/G16/G18 QA audio HTTP403); H/T/V and S metadata manifest not frozen"
+  ],
+  "all_development_units": "outputs\\beto-v3\\admission-01\\all-development-units.json",
+  "sampling_scope": "3 fixed 375-second windows per newly acquired work; no complete-video coverage claim",
+  "all_development_units_sha256": "d4aeb17d1227c7d3b02d64d916bc6473d85eba270af12087ba796299e2dc04bc"
+}

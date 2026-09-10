@@ -1,0 +1,22 @@
+{
+  "checked_utc": "2026-09-09T05:19:19.903731+00:00",
+  "integrity": "passed",
+  "candidate_count": 31,
+  "sources": {
+    "G01": 5,
+    "G02": 7,
+    "G14": 2,
+    "N07": 14,
+    "rKbC4guGhRY": 3
+  },
+  "max_tokens_with_specials": 354,
+  "sanitized_packets": 4,
+  "parent_dataset_sha256": "719dfc96884cb6a4fab0fb5056a254c87bef310fd2768ab88d5f7be1bc4d9363",
+  "ledger_sha256": "4f1ab985ef55c746e083d41ad5ca20b6aab28545ad7b4d4c3a024d5d18436b33",
+  "reconstruction_and_idempotence_check": "prepare_beto_v3_recovery.py --check-only exited 0",
+  "selected444_integrity": "--check-only exited 0",
+  "C_ready": false,
+  "new_annotations": 0,
+  "accepted_reference_gains": 0,
+  "S_closed": true
+}

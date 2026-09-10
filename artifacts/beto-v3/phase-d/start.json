@@ -1,0 +1,26 @@
+{
+  "started_utc": "2026-09-09T10:55:39.670186+00:00",
+  "free_bytes": 15144132608,
+  "before_ledger_sha256": "cae23af90076b42851cca2da149f0a409a35dd02c56ba7a63bf7a3f8ae610ff2",
+  "new_runs": [
+    [
+      "R0",
+      43
+    ],
+    [
+      "R2",
+      43
+    ],
+    [
+      "R0",
+      44
+    ],
+    [
+      "R2",
+      44
+    ]
+  ],
+  "retention": "New runs only: all epoch metrics, best checkpoint, latest full resume; commit resume before cleanup",
+  "backup": "Local immutable metadata snapshots in artifacts/beto-v3/phase-d/before; model artifacts in outputs/beto-v3/phase-c. No external backup verified.",
+  "S_opened": false
+}

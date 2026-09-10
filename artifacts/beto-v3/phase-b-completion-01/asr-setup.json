@@ -1,0 +1,8 @@
+{
+  "status": "loaded",
+  "model": "Systran/faster-whisper-small",
+  "device": "cuda",
+  "compute_type": "int8_float16",
+  "load_wall_seconds": 1.4731519000015396,
+  "budget_accounted": true
+}

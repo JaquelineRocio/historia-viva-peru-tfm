@@ -1,0 +1,60 @@
+{
+  "model": "GPT-6 (declared system identity); exact backend weights unknown",
+  "same_model_family_as_first_pass": true,
+  "fork_turns": "none for all second-review sessions",
+  "beto_predictions_supplied": false,
+  "earlier_labels_supplied_to_second_review": false,
+  "sessions": [
+    {
+      "agent": "/root/blind_1",
+      "inputs": [
+        "review-batches/batch-001.json",
+        "review-batches/batch-002.json"
+      ]
+    },
+    {
+      "agent": "/root/blind_2",
+      "inputs": [
+        "review-batches/batch-003.json",
+        "review-batches/batch-004.json"
+      ]
+    },
+    {
+      "agent": "/root/blind_3",
+      "inputs": [
+        "review-batches/batch-005.json"
+      ]
+    },
+    {
+      "agent": "/root/n08_blind",
+      "inputs": [
+        "asr-annotation/N08/blind/batch-001.json",
+        "asr-annotation/N08/blind/batch-002.json"
+      ]
+    },
+    {
+      "agent": "/root/n07_blind_a",
+      "inputs": [
+        "asr-annotation/N07/blind/batch-001.json",
+        "asr-annotation/N07/blind/batch-002.json"
+      ]
+    },
+    {
+      "agent": "/root/n07_blind_b",
+      "inputs": [
+        "asr-annotation/N07/blind/batch-003.json",
+        "asr-annotation/N07/blind/batch-004.json"
+      ]
+    },
+    {
+      "agent": "/root/n07_n03_blind_c",
+      "inputs": [
+        "asr-annotation/N07/blind/batch-005.json",
+        "asr-annotation/N07/blind/batch-006.json",
+        "asr-annotation/N03/blind/batch-001.json"
+      ]
+    }
+  ],
+  "adjudication": "Same reviewers then received both passes in their existing contexts; not a third independent model",
+  "provider_usage_tokens": null
+}

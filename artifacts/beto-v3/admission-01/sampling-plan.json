@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "role": "V",
+  "sources": [
+    "N01",
+    "-Ma1tt97eFg"
+  ],
+  "rule": "Three continuous 375-second windows per source: start [0,375], centered [duration/2-187.5,duration/2+187.5], end [duration-375,duration]. Segment each window with existing 75-second anchors and authentic sentence boundaries; maximum 384 tokens. Prevalidate entire inventory before any annotation. If >31 units, do not annotate until budget-compatible preregistered boundaries are fixed without labels.",
+  "fixed_before_transcription": true,
+  "annotation_ceiling": 31,
+  "S_reserve": 200,
+  "labels_or_predictions_used": false,
+  "evaluation_scope": "sampled continuous windows, not complete videos"
+}

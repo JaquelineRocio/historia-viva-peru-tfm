@@ -1,0 +1,67 @@
+{
+  "version": "selected-444-v1",
+  "first_pass_units": 444,
+  "second_review_units": 417,
+  "second_review_target": 417,
+  "adjudications": 285,
+  "selected444_complete": false,
+  "accepted_new_references": 274,
+  "accepted_new_by_partition": {
+    "T": 173,
+    "V": 101
+  },
+  "accepted_references": {
+    "T": 317,
+    "V": 386,
+    "auxiliary": 14
+  },
+  "accepted_30min_references": {
+    "T": 292,
+    "V": 386
+  },
+  "pending_references": 213,
+  "pending_new_adjudicated": 11,
+  "coverage": {
+    "T": {
+      "accepted": 317,
+      "units": 456,
+      "fraction": 0.6951754385964912
+    },
+    "V": {
+      "accepted": 386,
+      "units": 459,
+      "fraction": 0.840958605664488
+    }
+  },
+  "C_ready": false,
+  "blockers": [
+    "T/campanias_conflictos_militares: missing 5 references and 0 works from >=30-minute sources",
+    "T/contexto_colonial_antecedentes: missing 9 references and 0 works from >=30-minute sources",
+    "T/liderazgos_diplomacia_proyectos: missing 1 references and 0 works from >=30-minute sources",
+    "T/organizacion_consecuencias_republicanas: missing 5 references and 0 works from >=30-minute sources",
+    "V/contexto_colonial_antecedentes: missing 5 references and 0 works from >=30-minute sources",
+    "V/liderazgos_diplomacia_proyectos: missing 8 references and 0 works from >=30-minute sources",
+    "V/organizacion_consecuencias_republicanas: missing 8 references and 0 works from >=30-minute sources",
+    "T: 292/300 accepted long-source references; missing 8",
+    "T: resolvable reference coverage 317/456 below 0.90",
+    "V: resolvable reference coverage 386/459 below 0.90",
+    "Selected material: 159 final decisions outstanding",
+    "Final source independence/reproduction admission and frozen H/T/V/S manifests outstanding",
+    "Caption/audio fidelity and missing-cue intervals require final admission review; S remains closed"
+  ],
+  "S_content_opened": false,
+  "training_runs": 0,
+  "services_paid_USD": 0,
+  "annotation_unique": 938,
+  "annotation_remaining": 262,
+  "same_model_family_both_passes": true,
+  "model_weights": "unknown",
+  "reference_note": "AI-assisted references, not expert gold or training admission",
+  "source_admission_pending": true,
+  "provisional_acquired_30min_works": {
+    "T": 13,
+    "V": 6
+  },
+  "new_registered_S_works": 6,
+  "all_development_units_sha256": "0f81c5c6e701cbe004458c24998b9ee9eb5bf633d1b43c03737d57818cb914bd"
+}

@@ -1,0 +1,130 @@
+{
+  "items": [
+    {
+      "partition": "T",
+      "class": "campanias_conflictos_militares",
+      "accepted_from_30min_works": 15,
+      "target": 20,
+      "missing_examples": 5,
+      "accepted_30min_works": 3,
+      "missing_works": 0
+    },
+    {
+      "partition": "T",
+      "class": "contexto_colonial_antecedentes",
+      "accepted_from_30min_works": 11,
+      "target": 20,
+      "missing_examples": 9,
+      "accepted_30min_works": 2,
+      "missing_works": 0
+    },
+    {
+      "partition": "T",
+      "class": "crisis_ideas_emancipadoras",
+      "accepted_from_30min_works": 16,
+      "target": 20,
+      "missing_examples": 4,
+      "accepted_30min_works": 3,
+      "missing_works": 0
+    },
+    {
+      "partition": "T",
+      "class": "liderazgos_diplomacia_proyectos",
+      "accepted_from_30min_works": 15,
+      "target": 20,
+      "missing_examples": 5,
+      "accepted_30min_works": 5,
+      "missing_works": 0
+    },
+    {
+      "partition": "T",
+      "class": "no_relevante",
+      "accepted_from_30min_works": 74,
+      "target": 20,
+      "missing_examples": 0,
+      "accepted_30min_works": 4,
+      "missing_works": 0
+    },
+    {
+      "partition": "T",
+      "class": "organizacion_consecuencias_republicanas",
+      "accepted_from_30min_works": 6,
+      "target": 20,
+      "missing_examples": 14,
+      "accepted_30min_works": 2,
+      "missing_works": 0
+    },
+    {
+      "partition": "T",
+      "class": "participacion_social_regional",
+      "accepted_from_30min_works": 21,
+      "target": 20,
+      "missing_examples": 0,
+      "accepted_30min_works": 5,
+      "missing_works": 0
+    },
+    {
+      "partition": "V",
+      "class": "campanias_conflictos_militares",
+      "accepted_from_30min_works": 57,
+      "target": 25,
+      "missing_examples": 0,
+      "accepted_30min_works": 2,
+      "missing_works": 0
+    },
+    {
+      "partition": "V",
+      "class": "contexto_colonial_antecedentes",
+      "accepted_from_30min_works": 14,
+      "target": 25,
+      "missing_examples": 11,
+      "accepted_30min_works": 2,
+      "missing_works": 0
+    },
+    {
+      "partition": "V",
+      "class": "crisis_ideas_emancipadoras",
+      "accepted_from_30min_works": 21,
+      "target": 25,
+      "missing_examples": 4,
+      "accepted_30min_works": 4,
+      "missing_works": 0
+    },
+    {
+      "partition": "V",
+      "class": "liderazgos_diplomacia_proyectos",
+      "accepted_from_30min_works": 13,
+      "target": 25,
+      "missing_examples": 12,
+      "accepted_30min_works": 3,
+      "missing_works": 0
+    },
+    {
+      "partition": "V",
+      "class": "no_relevante",
+      "accepted_from_30min_works": 125,
+      "target": 25,
+      "missing_examples": 0,
+      "accepted_30min_works": 4,
+      "missing_works": 0
+    },
+    {
+      "partition": "V",
+      "class": "organizacion_consecuencias_republicanas",
+      "accepted_from_30min_works": 13,
+      "target": 25,
+      "missing_examples": 12,
+      "accepted_30min_works": 4,
+      "missing_works": 0
+    },
+    {
+      "partition": "V",
+      "class": "participacion_social_regional",
+      "accepted_from_30min_works": 42,
+      "target": 25,
+      "missing_examples": 0,
+      "accepted_30min_works": 4,
+      "missing_works": 0
+    }
+  ]
+}

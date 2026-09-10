@@ -1,0 +1,22 @@
+{
+  "new_training_trajectories": 0,
+  "new_training_gpu_seconds": 0,
+  "CD_training_gpu_seconds": 0,
+  "ASR_gpu_seconds": 414.22057269999823,
+  "prior_checkpoint_inference_seconds_measured": 131.14480390000608,
+  "new_unique_annotation_proposals": 243,
+  "new_historical_review_units": 10,
+  "historical_review_including_previous": 30,
+  "previous_successful_training_seconds": 2828.3538434999487,
+  "previous_failed_training_seconds": null,
+  "previous_failed_time_status": "unknown; not reported as zero",
+  "paid_services_used": false,
+  "provider_token_usage": null,
+  "annotation_budget_remaining": 957,
+  "services_paid_USD": 0,
+  "phase_B_second_review_calls": 7,
+  "annotation_count_note": "Conservative inherited 133 distinct annotated inputs plus distinct saved ASR input hashes; reviews of identical frozen inputs do not consume a new-unit quota; actual provider token usage unknown",
+  "phase_B_second_review_batches": 14,
+  "phase_B_second_review_units": 179,
+  "ASR_accounting_note": "Conservative measured wall seconds of GPU transcription calls plus model loading; includes pilot. In-flight reservations settled after calls; CPU decoding/download time recorded separately"
+}

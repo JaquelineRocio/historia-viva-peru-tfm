@@ -1,0 +1,48 @@
+{
+  "C_ready": true,
+  "blockers": [],
+  "admission_completed": true,
+  "S_closed": true,
+  "protocol_sha256": "cf813bec65c2349b433aba598ccc22284fe0629daad85af1e565666953eb3039",
+  "representation": "normalized_authentic_target_only",
+  "development_contract": {
+    "path": "artifacts/beto-v3/development-admission-02/development-contract.json",
+    "sha256": "db03ae89217e1682722b4d86c3c890a7cb7f2dabba2b17934a7dbb0b710cfeb4"
+  },
+  "datasets": {
+    "H": {
+      "path": "outputs/beto-v3/datasets/H.json",
+      "sha256": "acca6cc312a661c9c0e974634e3c972c3ca800195d9b0751d80cf9dabaf92e5e"
+    },
+    "T300": {
+      "path": "outputs/beto-v3/datasets/T300.json",
+      "sha256": "3d97b84417528e39846cf183a6370cdbd5c43f273735eab68e1266952f590a30"
+    },
+    "V": {
+      "path": "outputs/beto-v3/datasets/V.json",
+      "sha256": "826ec69d99f974da2bb7b654703cb3d0bf7defe034fe760056c22e1a951444cc"
+    },
+    "S-manifest": {
+      "path": "outputs/beto-v3/datasets/S-manifest.json",
+      "sha256": "b49f26f14528f21a4267d93db5777796c33f3dd4daaced6c8151371e2469be09"
+    }
+  },
+  "admission_evidence": [
+    {
+      "path": "artifacts/beto-v3/development-admission-02/audit.json",
+      "sha256": "3dd1710a1325faff8f436508f076c2fff57560302bf72c09bb99269858caafb8"
+    },
+    {
+      "path": "artifacts/beto-v3/admission-01/current.json",
+      "sha256": "2a7e87a072729acdf750446899563015253a4f059daa814044d189d2bd641db4"
+    },
+    {
+      "path": "artifacts/beto-v3/admission-01/source-admission-report.json",
+      "sha256": "feed8f4aabb2cef4c7dd28497ab50115e284aa9cb269c61435da69ed276d3ffd"
+    }
+  ],
+  "budget_ledger": {
+    "path": "artifacts/beto-v3/development-admission-02/budget-before-C.json",
+    "sha256": "b2ff4b67ab033c59a28bf9fb85a1b207e6cd3ef7ecd751dff01f50de265019de"
+  }
+}

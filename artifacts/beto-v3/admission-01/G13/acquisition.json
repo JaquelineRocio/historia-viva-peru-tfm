@@ -1,0 +1,9 @@
+{
+  "source_id": "G13",
+  "url": "https://www.youtube.com/watch?v=P8S4UTFpRg0",
+  "gpu_seconds": 0,
+  "paid_USD": 0,
+  "status": "blocked",
+  "error": "DownloadError('ERROR: [youtube] P8S4UTFpRg0: Unable to download API page: HTTPSConnection(host=\\'www.youtube.com\\', port=443): Failed to establish a new connection: [WinError 10051] Se ha intentado una operación de socket en una red no accesible (caused by TransportError(\"HTTPSConnection(host=\\'www.youtube.com\\', port=443): Failed to establish a new connection: [WinError 10051] Se ha intentado una operación de socket en una red no accesible\"))')",
+  "wall_seconds": 0.5459477999975206
+}

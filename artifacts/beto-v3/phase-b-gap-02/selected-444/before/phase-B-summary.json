@@ -1,0 +1,257 @@
+{
+  "version": "phase-b-gap-02-review-01",
+  "passed": true,
+  "parent_units": 235,
+  "parent_sha256": "344eb020f2fc5b0c34ad1a15f5ce7ec0c48b7d5272220f1f39d65bd5fe44e0eb",
+  "new_first_pass_units": 251,
+  "blind_second_reviews": 211,
+  "T_unsampled_parent_checked": 40,
+  "adjudications": 251,
+  "label_agreements": 185,
+  "label_disagreements": 26,
+  "accepted_new_references": 237,
+  "accepted_new_by_partition": {
+    "V": 186,
+    "T": 51
+  },
+  "accepted_references": {
+    "T": 144,
+    "V": 285,
+    "auxiliary": 14
+  },
+  "accepted_30min_references": {
+    "T": 119,
+    "V": 285
+  },
+  "pending_new_references": 14,
+  "pending_references": 43,
+  "C_ready": false,
+  "S_content_opened": false,
+  "training_runs": 0,
+  "same_model_family_both_passes": true,
+  "model_weights": "unknown",
+  "blockers": [
+    "T/campanias_conflictos_militares: missing 7 references and 1 works from >=30-minute sources",
+    "T/contexto_colonial_antecedentes: missing 19 references and 1 works from >=30-minute sources",
+    "T/crisis_ideas_emancipadoras: missing 14 references and 1 works from >=30-minute sources",
+    "T/liderazgos_diplomacia_proyectos: missing 13 references and 0 works from >=30-minute sources",
+    "T/organizacion_consecuencias_republicanas: missing 14 references and 0 works from >=30-minute sources",
+    "T/participacion_social_regional: missing 3 references and 0 works from >=30-minute sources",
+    "V/contexto_colonial_antecedentes: missing 11 references and 0 works from >=30-minute sources",
+    "V/crisis_ideas_emancipadoras: missing 4 references and 0 works from >=30-minute sources",
+    "V/liderazgos_diplomacia_proyectos: missing 12 references and 0 works from >=30-minute sources",
+    "V/organizacion_consecuencias_republicanas: missing 12 references and 0 works from >=30-minute sources",
+    "T: 119/300 references from >=30-minute works; missing 181",
+    "Final original-work admission and H/T/V/S manifests not frozen; acquired work counts remain provisional",
+    "43 units lack a unique reference; preserve inventory; resolve with additional evidence where possible",
+    "Caption/audio fidelity and missing-cue intervals remain to be reviewed before final source admission"
+  ],
+  "annotation_status_note": "AI-assisted reference judgments, not expert gold or admission to training. Three history-free sessions of the same model family; 40 T units not sampled for blind second review.",
+  "all_development_units_sha256": "63b7043ce6a683a9b21ab5ec1f7b85d54a09c671ea8a3cf3d2326cd5edc744a6",
+  "input_manifest": [
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-001.json",
+      "sha256": "aa4099828e159bb169e8427e88b1e58d1fd3c6890d5136ed904e7bade9745fe3"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-002.json",
+      "sha256": "e8cef0b5c83b01ec74dc89b8c507a258933b6d60dfafa1e07fc2de56377d0989"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-003.json",
+      "sha256": "b97b45558aa65b3b3f98339458748b57595fabf71a43c5b35efec863de962493"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-004.json",
+      "sha256": "c5ff506c51df830e347e09bf1d80d25d10d5e4c46273a76a3891afc3e7499314"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-005.json",
+      "sha256": "8ce96aa8b080b975200aa53bb725ee58dfe2aea220349a49669d43ab9d94398e"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-006.json",
+      "sha256": "4c5c4272b1fd56ef985358bfff5a0aa72f0e15419d9f290cdf0646405cf0eec5"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-007.json",
+      "sha256": "a5a7a697fd586e41f9c1f242a46d2d29164630dc590e209622cac8b9e5e54fd3"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-008.json",
+      "sha256": "d5383763dbf687f3adbc16d35ebdc4250b19f133357b2bbb139ee532793714f8"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-009.json",
+      "sha256": "d3a14ab4b2068a7ee06075e1b200580b9fca2e1d72c19635b80ef5e234f2c487"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-010.json",
+      "sha256": "01a5377d092ff7a4572159cd02b06a8a2c3f1e3214baa3e2c9baeb2e0d8c41c9"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-011.json",
+      "sha256": "f6e2d254147699185b19c50083400912de10a5b0149010c56c4e0db8aa61d331"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-012.json",
+      "sha256": "351bbddcd615fc508b67d60efba58634d3db1761d196f7bb9a82981aabe8f8fc"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-013.json",
+      "sha256": "f662673eb40008de7d995a91de27ce8bc4c6b65b9a359c40590b29811dcf7f5f"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-014.json",
+      "sha256": "6ac513c3c0122e8c70a492a755d0d312ea075f5d5b56172191118bc3578ba448"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\second-review\\batch-015.json",
+      "sha256": "e2cf2abc37954e58f34546929c6327a5ebd9f5c6fe73b31182c94cb9cbad766b"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\batch-001.json",
+      "sha256": "852ef8814e4976156bcf44e996725f0141ec885ce1ac556882d76e090c23ec0b"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\batch-002.json",
+      "sha256": "ab83ba5d18e306f543eba28398a2204728e80c52833ff172b0e5dd746f893e8a"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\batch-003.json",
+      "sha256": "e5af419fc7ad17bc4a8177c9b3b76ae252035124b16930b51870559d16b794f7"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\batch-004.json",
+      "sha256": "af4aa8add7b9589503eebfd2058b376ea452f1b4402b2f2dfe98f6dfe976928b"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\batch-005.json",
+      "sha256": "f7d3779a90b421f7fb2414190946075de277d19f6e896a1f40929a7cdc39731c"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\batch-006.json",
+      "sha256": "fb7e031f6b9f508a96fbb1a54f72835e5b54df8264dd75accf37add81b264307"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\batch-007.json",
+      "sha256": "cd8d66c937fa9925ee79f58f9e8d107a52f85dc857e7ce02d6b539fe038192d4"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\batch-008.json",
+      "sha256": "123784c2a8f80b21681e6a2e9bd2871d4bb9e8a41f8a4206b961d61c668671ae"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\batch-009.json",
+      "sha256": "f024fe7e6fe2f7b9e9f3d9eda7e6f6bb6edbc6d06be258b10d0de00b814d3faf"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\batch-010.json",
+      "sha256": "ca9d8559bdacb86210e28cfccbbb284c4f294e212a9c295c496f83364384d944"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\batch-011.json",
+      "sha256": "21fc482cb573a1266ea9159e2314fd3dbea4bfc95162f91001deb276169c37d4"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\batch-012.json",
+      "sha256": "084e0322d911fc90c8a490ed7ee45380fafc0eb03261f53c35d01d1da88f2115"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\batch-013.json",
+      "sha256": "e0fe4ea114d479dfd4f7d22f68dd092d5ca015b80fbf78f5b76255ae03c944e9"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\batch-014.json",
+      "sha256": "84830ab4e08190cfc7b50c0a3674afba1323feec95c284b18afffddebbbbc94a"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\batch-015.json",
+      "sha256": "ad1bf743188908303e0eefdb2906b78b0d31d56c2d9f858c94e1b2742c0ea1c7"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\review-run-01\\adjudications.json",
+      "sha256": "63ecba707714d2510f22b3c124c6c59733779b2f4e55b760ae8bda6378760811"
+    },
+    {
+      "path": "artifacts\\beto-v3\\phase-b-gap-02\\review-run-01\\adjudication-signoff.json",
+      "sha256": "4586c4d63ef578d8f500329baf4d96ceb92700a66d40222be21f1a2729a8b760"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-completion-01\\all-development-units.json",
+      "sha256": "344eb020f2fc5b0c34ad1a15f5ce7ec0c48b7d5272220f1f39d65bd5fe44e0eb"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\G01\\annotation\\first-pass\\batch-001.json",
+      "sha256": "695704709b46eab03d2ae56e89eb5e709ff9d508dbeabc53048afede72be49ed"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\G01\\annotation\\first-pass\\batch-002.json",
+      "sha256": "63c014bf23ccc1776fa41face730f5fbe2ba931e02c25adc094294d81a5e1105"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\G01\\annotation\\first-pass\\batch-003.json",
+      "sha256": "813c2fa9ca9d438a8e9b06af3b9c8f643e3be46ade5d15791acbbde60a25abeb"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\G01\\annotation\\first-pass\\batch-004.json",
+      "sha256": "b61dcf737d55d4964e69d588be5019c784c3a468470a5fda6e5ca41be5efa9dc"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\G01\\annotation\\first-pass\\batch-005.json",
+      "sha256": "5289994bb1e6fdf927a5c4c3862e16236eba4ba77ce23ab37480d3eee5c05799"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\G02\\annotation\\first-pass\\batch-001.json",
+      "sha256": "e326c807d32d48ce6341d8bb9e36002ca96f078355370038dc0ec343ff412ca2"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\G02\\annotation\\first-pass\\batch-002.json",
+      "sha256": "1d9eacf3939e4b5429f8483c11a83cf3c5a63894f68d94434e1fa11f5747470f"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\G02\\annotation\\first-pass\\batch-003.json",
+      "sha256": "fb4bc6dd063721a44e94ea089391830f6a5baabe50f7a09a699f5ee7587ea033"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\G02\\annotation\\first-pass\\batch-004.json",
+      "sha256": "9cb9e81d520341343668e3d748b605576a74d6856bed84be5ebc219412ab5913"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\G02\\annotation\\first-pass\\batch-005.json",
+      "sha256": "1bba7feb0ffebfad6c68d1f3eee079ecd5b9b2d3f699ec9c278f259ed6ad62ee"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\G02\\annotation\\first-pass\\batch-006.json",
+      "sha256": "55c7bfc37446ced7aed412bbe900080234f09871ccebf6ac9d5a802f6494e152"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\G02\\annotation\\first-pass\\batch-007.json",
+      "sha256": "2ec09e0d372df0bbc0110a57974f37db851a7d99dd5f946fd7b0076bd058db17"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\G02\\annotation\\first-pass\\batch-008.json",
+      "sha256": "b2be300dc3160b4b2b04a181084e98127bac8419262283470ab7d4d5423a03c4"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\G02\\annotation\\first-pass\\batch-009.json",
+      "sha256": "c06693ead9e5da73aeccc70750904b766d7becbf01a0c4fc1017085df592bc17"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\G03\\annotation\\first-pass\\batch-001.json",
+      "sha256": "815a002aefcf775acf5803f582bbe40be1fbe1ba30211a30dca1737c6b22dff0"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\G03\\annotation\\first-pass\\batch-002.json",
+      "sha256": "0b9e444db616754cf71f2f7ac6271183e927ba582582e83f7f1a7dcc7914158a"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\G03\\annotation\\first-pass\\batch-003.json",
+      "sha256": "e60c8aa1b91510af471921864cf6c86a1b4919eaf8be4e12d4b81f4d39f21d4f"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-b-gap-02\\G03\\annotation\\first-pass\\batch-004.json",
+      "sha256": "33c4761628b8d1a775ba98008ae21573231a38a6fe8100203996672044566de7"
+    }
+  ]
+}

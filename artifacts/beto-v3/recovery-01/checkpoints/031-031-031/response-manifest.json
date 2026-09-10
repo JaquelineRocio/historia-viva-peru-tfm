@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "stage": "first-pass",
+      "path": "outputs\\beto-v3\\recovery-01\\first-pass\\batch-001.json",
+      "sha256": "1f7cc634023f50257b1004c35dbc47cbb60cd1b06b814d52a88a1d9e635be787",
+      "units": 10,
+      "session": "recovery_first"
+    },
+    {
+      "stage": "first-pass",
+      "path": "outputs\\beto-v3\\recovery-01\\first-pass\\batch-002.json",
+      "sha256": "acb0caf5ddbd13ddd4a615bb0bbea64f113c26cde2fa92eb3763c68c351885a1",
+      "units": 10,
+      "session": "recovery_first"
+    },
+    {
+      "stage": "first-pass",
+      "path": "outputs\\beto-v3\\recovery-01\\first-pass\\batch-003.json",
+      "sha256": "23c184581f99dfc0b8cafc7066da1e2f6c103b00964405a0c4f96c20da8d484b",
+      "units": 10,
+      "session": "recovery_first"
+    },
+    {
+      "stage": "first-pass",
+      "path": "outputs\\beto-v3\\recovery-01\\first-pass\\batch-004.json",
+      "sha256": "cd947c5f6c19ee79cc650496ea63629bcb943cee3e860afece7f7dad48a004b7",
+      "units": 1,
+      "session": "recovery_first"
+    },
+    {
+      "stage": "second-review",
+      "path": "outputs\\beto-v3\\recovery-01\\second-review\\batch-001.json",
+      "sha256": "28c6173605ceb9f47374b85c2e078fa89c8bc51ae64fe15b636ad3b15aca3df0",
+      "units": 10,
+      "session": "recovery_second"
+    },
+    {
+      "stage": "second-review",
+      "path": "outputs\\beto-v3\\recovery-01\\second-review\\batch-002.json",
+      "sha256": "c36f37a827f9c87b6433c362ffac300b38e885b1ac23f1c50b96c8033217b69f",
+      "units": 10,
+      "session": "recovery_second"
+    },
+    {
+      "stage": "second-review",
+      "path": "outputs\\beto-v3\\recovery-01\\second-review\\batch-003.json",
+      "sha256": "6702a79c51a958287580548cfd58dd0ddf02af633e7dec80c2c24c97b4b895df",
+      "units": 10,
+      "session": "recovery_second"
+    },
+    {
+      "stage": "second-review",
+      "path": "outputs\\beto-v3\\recovery-01\\second-review\\batch-004.json",
+      "sha256": "59677b610953866dee74aebe6fd1978e042ba5fd63513aaeaf25f116cceda7e1",
+      "units": 1,
+      "session": "recovery_second"
+    },
+    {
+      "stage": "adjudication",
+      "path": "outputs\\beto-v3\\recovery-01\\adjudication\\batch-001.json",
+      "sha256": "4910e6898574dc5777ba30bcf8228194167ad2a3352ff4c61e6c4ca2be98b48b",
+      "units": 10,
+      "session": "parent"
+    },
+    {
+      "stage": "adjudication",
+      "path": "outputs\\beto-v3\\recovery-01\\adjudication\\batch-002.json",
+      "sha256": "780dc1562caf4077e3a74b7094dc5eb4a6a82e0ca33435c2a139a87274252f84",
+      "units": 10,
+      "session": "parent"
+    },
+    {
+      "stage": "adjudication",
+      "path": "outputs\\beto-v3\\recovery-01\\adjudication\\batch-003.json",
+      "sha256": "69ffbc453e7dedfd849bd48b7438649466f1a05235fc678cf93e5542f1be4c8d",
+      "units": 10,
+      "session": "parent"
+    },
+    {
+      "stage": "adjudication",
+      "path": "outputs\\beto-v3\\recovery-01\\adjudication\\batch-004.json",
+      "sha256": "693d6ab3db207e60d8f665182b4406b269a5e043eaaafd2720dfa5bd2c5d1ef6",
+      "units": 1,
+      "session": "parent"
+    }
+  ]
+}

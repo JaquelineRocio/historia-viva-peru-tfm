@@ -1,0 +1,45 @@
+{
+  "parent": "artifacts\\beto-v3\\phase-b-gap-02\\selected-444\\source-registry-overlay.json",
+  "parent_sha256": "1d1ae0467b06e73aa0abc88b1e8d8ed5eb0f690189fdd26e58104a4eae00a6b4",
+  "sources": [
+    {
+      "source_id": "N01",
+      "video_id": "KHcAIKD38sI",
+      "family_id": "video-KHcAIKD38sI",
+      "role": "V",
+      "duration_seconds": 3070.862222,
+      "url": "https://www.youtube.com/watch?v=KHcAIKD38sI",
+      "institution": "TVPerú",
+      "audio_decode_ok": true,
+      "audio_sha256": "ec5dcd2608f787cda38b33ff55c40fb8ad85cb11e1433807bc264e5fcd28fe34",
+      "transcription": "local faster-whisper-small sampled windows",
+      "status": "original_audio_and_sampled_references_admitted; global_phase_B_not_closed",
+      "accepted_references": 12,
+      "transcript_complete_video": false,
+      "training_eligible": false,
+      "quality_screen": "artifacts/beto-v3/admission-01/ASR-quality-screen.json"
+    },
+    {
+      "source_id": "-Ma1tt97eFg",
+      "video_id": "-Ma1tt97eFg",
+      "family_id": "video--Ma1tt97eFg",
+      "role": "V",
+      "duration_seconds": 3009.120363,
+      "url": "https://www.youtube.com/watch?v=-Ma1tt97eFg",
+      "institution": "TVPerú",
+      "audio_decode_ok": true,
+      "audio_sha256": "33bd4962d4b82e52f059494f7418322d1cdc77c84f8ce543decb3166dbdb69f9",
+      "transcription": "local faster-whisper-small sampled windows",
+      "status": "original_audio_and_sampled_references_admitted; global_phase_B_not_closed",
+      "accepted_references": 11,
+      "transcript_complete_video": false,
+      "training_eligible": false,
+      "quality_screen": "artifacts/beto-v3/admission-01/ASR-quality-screen.json"
+    }
+  ],
+  "existing_source_decisions": "artifacts/beto-v3/admission-01/source-admission-report.json",
+  "new_source_metadata_admission": "artifacts/beto-v3/admission-01/candidate-metadata-admission.json",
+  "dataset_sha256": "d4aeb17d1227c7d3b02d64d916bc6473d85eba270af12087ba796299e2dc04bc",
+  "S_role_changes": false,
+  "S_evaluated": false
+}

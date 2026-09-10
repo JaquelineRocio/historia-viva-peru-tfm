@@ -1,0 +1,11 @@
+{
+  "units": 235,
+  "token_lengths_recomputed": true,
+  "max_tokens": 339,
+  "blind_external_pending": 29,
+  "N03_excluded_from_primary": true,
+  "S_closed": true,
+  "C_gate_exit_code": 2,
+  "integrity": "passed",
+  "all_development_units_sha256": "344eb020f2fc5b0c34ad1a15f5ce7ec0c48b7d5272220f1f39d65bd5fe44e0eb"
+}

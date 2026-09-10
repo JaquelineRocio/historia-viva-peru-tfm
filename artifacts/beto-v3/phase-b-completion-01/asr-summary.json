@@ -1,0 +1,18 @@
+{
+  "model": "Systran/faster-whisper-small",
+  "revision": "536b0662742c02347bc0e980a01041f333bce120",
+  "model_manifest_sha256": "1639d24a87654011f4481e70f56a846d5555e13ccbf0eebfaf4230fd21df2042",
+  "completed_calls": 29,
+  "complete_sources": 3,
+  "source_audio_seconds": 8117.0755,
+  "measured_transcription_wall_seconds": 398.0163914999994,
+  "cumulative_GPU_budget_seconds_including_model_loading": 414.22057269999823,
+  "GPU_ceiling_seconds": 28800,
+  "memory": {
+    "max_process_rss_bytes": 859095040,
+    "max_device_used_mib_including_other_processes": 1132
+  },
+  "paid_USD": 0,
+  "all_audio_and_video_decode_ok": true,
+  "transcription_fidelity": "Automatic ASR, not a certified verbatim transcript; gaps and boundary defects preserved in quality receipts"
+}

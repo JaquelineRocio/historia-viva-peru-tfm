@@ -1,0 +1,41 @@
+{
+  "inherited_final": {
+    "role": "reserved_no_content_read",
+    "manifest": "artifacts/beto-v2/corpus/reserved-evaluation-sources-v2.json",
+    "source_ids": [
+      "S04",
+      "S09",
+      "S16",
+      "V03",
+      "V04"
+    ]
+  },
+  "inherited_evaluations": {
+    "role": "historical_evaluation_not_used",
+    "snapshot": "outputs/corpus-snapshot-v4/reviewed-export.json",
+    "splits": [
+      "val",
+      "test"
+    ],
+    "counts": {
+      "val": 81,
+      "test": 137
+    },
+    "other_manifests": [
+      "artifacts/datasets/external-development-v1.json",
+      "artifacts/datasets/evaluation-pilot-v2.json"
+    ],
+    "new_external_test": false
+  },
+  "new_S_status": "pending_distinct_video_works",
+  "text_accessed": false,
+  "v2_reserved_manifest_sha256": "334570a82806669212e3683290807f1bee157e2853acb6c6e192e6ddfe3efaee",
+  "prohibited_development_uses": [
+    "train",
+    "annotation_training_examples",
+    "inference",
+    "TAPT",
+    "MLM",
+    "context_retrieval"
+  ]
+}

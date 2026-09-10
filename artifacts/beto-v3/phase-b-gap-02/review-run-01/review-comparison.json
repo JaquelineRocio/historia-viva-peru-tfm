@@ -1,0 +1,1692 @@
+{
+  "items": [
+    {
+      "segment_id": "G01-u001",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Salutaciones y protocolo sin explicación histórica."
+    },
+    {
+      "segment_id": "G01-u002",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Presentación de conferencia; el título histórico no desarrolla el tema."
+    },
+    {
+      "segment_id": "G01-u003",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Bienvenida institucional sin desarrollo histórico."
+    },
+    {
+      "segment_id": "G01-u004",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Justifica el evento universitario y cede la palabra."
+    },
+    {
+      "segment_id": "G01-u005",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Acuerdos universitarios contemporáneos sin nexo explicativo con independencia."
+    },
+    {
+      "segment_id": "G01-u006",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Describe planes e infraestructura académica contemporánea."
+    },
+    {
+      "segment_id": "G01-u007",
+      "first": "organizacion_consecuencias_republicanas",
+      "second": "organizacion_consecuencias_republicanas",
+      "label_agreement": true,
+      "accepted_label": "organizacion_consecuencias_republicanas",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica la implantación del Congreso y Hacienda como funciones de la república."
+    },
+    {
+      "segment_id": "G01-u008",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Elogio universitario y presentación curricular del expositor."
+    },
+    {
+      "segment_id": "G01-u009",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Anécdota institucional contemporánea sobre el expositor."
+    },
+    {
+      "segment_id": "G01-u010",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Exhorta a estudiar historia para fortalecer pertenencia contemporánea."
+    },
+    {
+      "segment_id": "G01-u011",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Menciona publicaciones y desarrollo académico actual sin explicación de independencia."
+    },
+    {
+      "segment_id": "G01-u012",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Defensa de la estructura universitaria contemporánea y agradecimientos."
+    },
+    {
+      "segment_id": "G01-u013",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Reconoce mujeres militares actuales y despide el discurso."
+    },
+    {
+      "segment_id": "G01-u014",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Presentación curricular y saludos del conferencista."
+    },
+    {
+      "segment_id": "G01-u015",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Saludo y anécdota sobre precedencia universitaria sin nexo causal con independencia."
+    },
+    {
+      "segment_id": "G01-u016",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Anécdota sobre antigüedad universitaria y transición a la charla."
+    },
+    {
+      "segment_id": "G01-u017",
+      "first": null,
+      "second": null,
+      "label_agreement": true,
+      "accepted_label": null,
+      "rationale": "No hay proposición en la repetición aislada; requiere nueva evidencia de extracción."
+    },
+    {
+      "segment_id": "G01-u018",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Enumera rebeliones precursoras como secuencia de conflictos armados."
+    },
+    {
+      "segment_id": "G01-u019",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica convergencia militar de las campañas hacia el bastión peruano."
+    },
+    {
+      "segment_id": "G01-u020",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Describe estrategia y mandos de las campañas a puertos intermedios."
+    },
+    {
+      "segment_id": "G01-u021",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Relaciona llegada de Bolívar y planes con consolidación militar de independencia."
+    },
+    {
+      "segment_id": "G01-u022",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica reclutamiento, recursos y movimientos para preparar Junín."
+    },
+    {
+      "segment_id": "G01-u023",
+      "first": "campanias_conflictos_militares",
+      "second": null,
+      "label_agreement": false,
+      "accepted_label": null,
+      "rationale": "Despedida contemporánea y relato del Real Felipe quedan yuxtapuestos e incompletos; no hay dominancia única."
+    },
+    {
+      "segment_id": "G01-u024",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Desarrolla consecuencias estratégicas de perder la fortaleza y recursos para el ejército."
+    },
+    {
+      "segment_id": "G01-u025",
+      "first": "liderazgos_diplomacia_proyectos",
+      "second": "participacion_social_regional",
+      "label_agreement": false,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "La explicación responde por qué extranjeros se incorporaron a los ejércitos mediante procedencia y exilio familiar; no desarrolla conducción política de Canterac."
+    },
+    {
+      "segment_id": "G01-u026",
+      "first": "campanias_conflictos_militares",
+      "second": "participacion_social_regional",
+      "label_agreement": false,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "La organización del mando sirve para defender la procedencia peruana de los participantes, que es el argumento desarrollado; prima R6 sobre R3."
+    },
+    {
+      "segment_id": "G01-u027",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Expone organización de fuerzas, inteligencia y mandos ante la campaña."
+    },
+    {
+      "segment_id": "G01-u028",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica cómo la escisión de Olañeta crea una desventaja militar realista."
+    },
+    {
+      "segment_id": "G01-u029",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Compara fuerzas y reproduce exhortación a combatir."
+    },
+    {
+      "segment_id": "G01-u030",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Interpreta arenga de Bolívar como recurso de conducción y moral en combate."
+    },
+    {
+      "segment_id": "G01-u031",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Describe condiciones de marcha y movimientos que llevan a Junín."
+    },
+    {
+      "segment_id": "G01-u032",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica aprovechamiento táctico del abra y maniobra de caballería."
+    },
+    {
+      "segment_id": "G01-u033",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica órdenes de repliegue y desarrollo inmediato del combate."
+    },
+    {
+      "segment_id": "G01-u034",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Relata heridas, rescate y muerte en el combate como muestra de su violencia."
+    },
+    {
+      "segment_id": "G01-u035",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Describe transmisión de órdenes y recomendación táctica de atacar."
+    },
+    {
+      "segment_id": "G01-u036",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica victoria de Junín por ataque a retaguardia y efecto moral."
+    },
+    {
+      "segment_id": "G01-u037",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Vincula arrojo y recursos de combatientes con victoria e impacto militar."
+    },
+    {
+      "segment_id": "G01-u038",
+      "first": "no_relevante",
+      "second": null,
+      "label_agreement": false,
+      "accepted_label": null,
+      "rationale": "La conmemoración de 1974 y el significado de Ayacucho son dos núcleos sin enlace que resuelva dominancia."
+    },
+    {
+      "segment_id": "G01-u039",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Mensaje conmemorativo sobre misión actual del ejército, con historia como preámbulo."
+    },
+    {
+      "segment_id": "G01-u040",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica situación posterior a Junín y preparación realista para Ayacucho."
+    },
+    {
+      "segment_id": "G01-u041",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Compara mandos y recursos de ejércitos para explicar victoria en desventaja."
+    },
+    {
+      "segment_id": "G01-u042",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Describe posiciones y mandos en Ayacucho, con anuncio bibliográfico incidental."
+    },
+    {
+      "segment_id": "G01-u043",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Relata maniobra del virrey y su captura durante combate."
+    },
+    {
+      "segment_id": "G01-u044",
+      "first": "campanias_conflictos_militares",
+      "second": null,
+      "label_agreement": false,
+      "accepted_label": null,
+      "rationale": "Captura y desmoralización militar, y parentescos entre bandos, ocupan dos núcleos; conservar para revisión de frontera."
+    },
+    {
+      "segment_id": "G01-u045",
+      "first": "liderazgos_diplomacia_proyectos",
+      "second": null,
+      "label_agreement": false,
+      "accepted_label": null,
+      "rationale": "Opciones identitarias de los Castilla y cronología de capitulación se yuxtaponen; nombrar presidentes no resuelve R4."
+    },
+    {
+      "segment_id": "G01-u046",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Conclusión ceremonial y llamado a preguntas; valoración histórica general sin desarrollo adicional."
+    },
+    {
+      "segment_id": "G01-u047",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Moderación de preguntas y presentación del participante."
+    },
+    {
+      "segment_id": "G01-u048",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Plantea composición social del ejército realista."
+    },
+    {
+      "segment_id": "G01-u049",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica procedencia territorial de fuerzas y objeción a mando extranjero."
+    },
+    {
+      "segment_id": "G01-u050",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Discute identificación peruana y composición social de fuerzas, con aclaración de fuente."
+    },
+    {
+      "segment_id": "G01-u051",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Debate composición e identidad de participantes para interpretar carácter civil de guerra."
+    },
+    {
+      "segment_id": "G01-u052",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Compara identidades y pertenencia de combatientes para discutir guerra civil."
+    },
+    {
+      "segment_id": "G01-u053",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Discute interpretaciones de la posición y conducta militar de Bolívar en combate."
+    },
+    {
+      "segment_id": "G01-u054",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica sorpresa táctica y victoria antes de introducir otra pregunta."
+    },
+    {
+      "segment_id": "G01-u055",
+      "first": "crisis_ideas_emancipadoras",
+      "second": "crisis_ideas_emancipadoras",
+      "label_agreement": true,
+      "accepted_label": "crisis_ideas_emancipadoras",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica crisis política liberal que desvía expedición contra América."
+    },
+    {
+      "segment_id": "G01-u056",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Recomienda obra y enfoque historiográfico sin explicar impactos concretos del trienio."
+    },
+    {
+      "segment_id": "G01-u057",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Desarrolla contribuciones regionales y montoneras al sostenimiento del ejército."
+    },
+    {
+      "segment_id": "G01-u058",
+      "first": "crisis_ideas_emancipadoras",
+      "second": "no_relevante",
+      "label_agreement": false,
+      "accepted_label": "no_relevante",
+      "rationale": "Solicita bibliografía y formula una pregunta sobre masonería; no desarrolla mecanismos de influencia ideológica."
+    },
+    {
+      "segment_id": "G01-u059",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Recomendaciones bibliográficas sobre montoneras sin explicar su participación concreta."
+    },
+    {
+      "segment_id": "G01-u060",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Declara límites y remite a obra sobre masonería; nueva pregunta sin respuesta histórica."
+    },
+    {
+      "segment_id": "G01-u061",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica procedencia y denominaciones de participantes rioplatenses."
+    },
+    {
+      "segment_id": "G01-u062",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica diversidad de procedencias y el problema de atribuir nacionalidades actuales a combatientes."
+    },
+    {
+      "segment_id": "G01-u063",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Relata defección, órdenes de ataque y enfrentamiento contra Olañeta."
+    },
+    {
+      "segment_id": "G01-u064",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Relata muerte en combate e intervención brasileña como extensión del conflicto."
+    },
+    {
+      "segment_id": "G01-u065",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica ocupación militar brasileña del Alto Perú en transición de soberanía."
+    },
+    {
+      "segment_id": "G01-u066",
+      "first": "liderazgos_diplomacia_proyectos",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": false,
+      "accepted_label": null,
+      "rationale": "Correspondencia y autorización política, ocupación militar y método historiográfico se mezclan; el objetivo no permite prioridad estable."
+    },
+    {
+      "segment_id": "G01-u067",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Despedida y agradecimientos sin desarrollo histórico."
+    },
+    {
+      "segment_id": "G02-u001",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Bienvenida y organización de actividades conmemorativas."
+    },
+    {
+      "segment_id": "G02-u002",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Promueve vínculos actuales y presenta trayectoria de coordinador."
+    },
+    {
+      "segment_id": "G02-u003",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Presentación de participantes y ajustes técnicos del evento."
+    },
+    {
+      "segment_id": "G02-u004",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Propone celebración cultural contemporánea; menciona traumas sin explicar proceso histórico."
+    },
+    {
+      "segment_id": "G02-u005",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Busca convocatoria y apoyos para evento hispanista actual."
+    },
+    {
+      "segment_id": "G02-u006",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Promueve reconciliación cultural mediante evento actual, sin desarrollar antecedentes de independencia."
+    },
+    {
+      "segment_id": "G02-u007",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Exhortación hispanista actual y crítica de victimización; no explica consecuencias republicanas del periodo."
+    },
+    {
+      "segment_id": "G02-u008",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Discute economía turística contemporánea y difusión cultural; nexo con independencia solo en frase inicial."
+    },
+    {
+      "segment_id": "G02-u009",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Exhortación contemporánea a valorar identidades, sin explicar el proceso histórico."
+    },
+    {
+      "segment_id": "G02-u010",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Reflexión personal y organización actual de eventos."
+    },
+    {
+      "segment_id": "G02-u011",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Organización y financiación de una conmemoración contemporánea."
+    },
+    {
+      "segment_id": "G02-u012",
+      "first": "organizacion_consecuencias_republicanas",
+      "second": "organizacion_consecuencias_republicanas",
+      "label_agreement": true,
+      "accepted_label": "organizacion_consecuencias_republicanas",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Atribuye a Ayacucho una pérdida económica posterior; esa consecuencia organiza la explicación."
+    },
+    {
+      "segment_id": "G02-u013",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Presentaciones y programación de actividades actuales."
+    },
+    {
+      "segment_id": "G02-u014",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica un proyecto editorial conmemorativo actual."
+    },
+    {
+      "segment_id": "G02-u015",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Proyecto de divulgación y trayectoria personal del expositor."
+    },
+    {
+      "segment_id": "G02-u016",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Programa político cultural contemporáneo sin desarrollo de independencia."
+    },
+    {
+      "segment_id": "G02-u017",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Biografía y presentación de un conferenciante."
+    },
+    {
+      "segment_id": "G02-u018",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Describe una recreación contemporánea de un episodio anterior sin nexo causal con independencia."
+    },
+    {
+      "segment_id": "G02-u019",
+      "first": "participacion_social_regional",
+      "second": "no_relevante",
+      "label_agreement": false,
+      "accepted_label": "no_relevante",
+      "rationale": "Predominan anuncios y crítica de una narrativa; la explicación de composición social aún no se desarrolla en este objetivo."
+    },
+    {
+      "segment_id": "G02-u020",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Explica composición peruana e identidad de ambos bandos; la transición al motín no desplaza ese núcleo autónomo."
+    },
+    {
+      "segment_id": "G02-u021",
+      "first": "crisis_ideas_emancipadoras",
+      "second": "crisis_ideas_emancipadoras",
+      "label_agreement": true,
+      "accepted_label": "crisis_ideas_emancipadoras",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Relaciona constitucionalismo liberal y legitimidad del nombramiento virreinal."
+    },
+    {
+      "segment_id": "G02-u022",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica el control territorial y la falta de refuerzos durante la campaña."
+    },
+    {
+      "segment_id": "G02-u023",
+      "first": "crisis_ideas_emancipadoras",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": false,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Recuperación de Lima, entrega de fortaleza y repliegue de Bolívar constituyen el argumento; la crisis de nombramiento queda introducida al cierre."
+    },
+    {
+      "segment_id": "G02-u024",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: La crisis de legitimidad explica división militar y desplazamiento de tropas."
+    },
+    {
+      "segment_id": "G02-u025",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica la derrota a través de la división y desgaste bélico realista."
+    },
+    {
+      "segment_id": "G02-u026",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Predominan cierre, agradecimientos y presentación del siguiente ponente."
+    },
+    {
+      "segment_id": "G02-u027",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Relato de formación personal y crítica general de divulgación."
+    },
+    {
+      "segment_id": "G02-u028",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Reseña la participación en una celebración actual."
+    },
+    {
+      "segment_id": "G02-u029",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Sitúa Ayacucho como cierre de campaña y contrasta focos armados posteriores."
+    },
+    {
+      "segment_id": "G02-u030",
+      "first": "organizacion_consecuencias_republicanas",
+      "second": "organizacion_consecuencias_republicanas",
+      "label_agreement": true,
+      "accepted_label": "organizacion_consecuencias_republicanas",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica la sustitución institucional por la república como efecto de Ayacucho."
+    },
+    {
+      "segment_id": "G02-u031",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: La composición local de los bandos fundamenta la lectura de guerra civil."
+    },
+    {
+      "segment_id": "G02-u032",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica los motivos locales para participar voluntariamente del realismo."
+    },
+    {
+      "segment_id": "G02-u033",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica la búsqueda de batalla decisiva mediante problemas logísticos y falta de sustento."
+    },
+    {
+      "segment_id": "G02-u034",
+      "first": "organizacion_consecuencias_republicanas",
+      "second": "organizacion_consecuencias_republicanas",
+      "label_agreement": true,
+      "accepted_label": "organizacion_consecuencias_republicanas",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Evalúa inestabilidad y centralismo como resultados de la independencia."
+    },
+    {
+      "segment_id": "G02-u035",
+      "first": "organizacion_consecuencias_republicanas",
+      "second": "participacion_social_regional",
+      "label_agreement": false,
+      "accepted_label": "organizacion_consecuencias_republicanas",
+      "rationale": "El objeto es el balance de resultados del orden republicano implantado: marginación y explotación se evalúan como consecuencias frente a sus promesas; mantener R5."
+    },
+    {
+      "segment_id": "G02-u036",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Crítica de relatos históricos y sus efectos actuales sin desarrollo sustantivo de los procesos."
+    },
+    {
+      "segment_id": "G02-u037",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Exhortación divulgativa, conclusión y relevo de ponentes; consecuencias históricas solo genéricas."
+    },
+    {
+      "segment_id": "G02-u038",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Saludo y reivindicación de divulgación histórica actual."
+    },
+    {
+      "segment_id": "G02-u039",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": null,
+      "rationale": "La hipótesis de pacto, parentescos y exhortación divulgativa quedan sin subordinación clara; acuerdo nominal no elimina ambigüedad."
+    },
+    {
+      "segment_id": "G02-u040",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Discute hostilidades actuales en contenidos de redes."
+    },
+    {
+      "segment_id": "G02-u041",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Reflexión identitaria y política mexicana sin nexo desarrollado con independencia peruana."
+    },
+    {
+      "segment_id": "G02-u042",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Crítica de enfrentamientos actuales entre divulgadores."
+    },
+    {
+      "segment_id": "G02-u043",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Consideración metodológica sobre divulgación y juicios anacrónicos."
+    },
+    {
+      "segment_id": "G02-u044",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Exhortación contemporánea y cierre de exposición."
+    },
+    {
+      "segment_id": "G02-u045",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Autopresentación y experiencia migratoria contemporánea."
+    },
+    {
+      "segment_id": "G02-u046",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Autopresentación con mención incidental de Miller sin explicar su actuación."
+    },
+    {
+      "segment_id": "G02-u047",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Debate divulgativo sobre imagen de España sin explicación histórica pertinente."
+    },
+    {
+      "segment_id": "G02-u048",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Propuesta actual de actividades culturales y promoción de idiomas."
+    },
+    {
+      "segment_id": "G02-u049",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Crítica de la promoción consular contemporánea y enseñanza actual."
+    },
+    {
+      "segment_id": "G02-u050",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Propuesta de promoción cultural contemporánea en ciudades peruanas."
+    },
+    {
+      "segment_id": "G02-u051",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Reflexión sobre divisiones políticas actuales."
+    },
+    {
+      "segment_id": "G02-u052",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Exhortación al consenso político actual y despedida."
+    },
+    {
+      "segment_id": "G02-u053",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Saludos y presentación del ponente sin explicación de la batalla."
+    },
+    {
+      "segment_id": "G02-u054",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "La división interna se propone explícitamente como causa de derrota en Ayacucho; los saludos no impiden reconocer ese argumento completo."
+    },
+    {
+      "segment_id": "G02-u055",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: El desgaste de una década de guerra explica las condiciones de 1824."
+    },
+    {
+      "segment_id": "G02-u056",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Recorre rebeliones previas a 1821; distingue tendencias sin desarrollar sus ideas."
+    },
+    {
+      "segment_id": "G02-u057",
+      "first": "crisis_ideas_emancipadoras",
+      "second": "crisis_ideas_emancipadoras",
+      "label_agreement": true,
+      "accepted_label": "crisis_ideas_emancipadoras",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica cómo la dependencia de la figura real provoca crisis de autoridad."
+    },
+    {
+      "segment_id": "G02-u058",
+      "first": "crisis_ideas_emancipadoras",
+      "second": "crisis_ideas_emancipadoras",
+      "label_agreement": true,
+      "accepted_label": "crisis_ideas_emancipadoras",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Relaciona Bayona, vacío de autoridad y juntas autonomistas e independentistas."
+    },
+    {
+      "segment_id": "G02-u059",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Introduce el frente naval como factor concreto de separación."
+    },
+    {
+      "segment_id": "G02-u060",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica incapacidad de respuesta por pérdida de flota y ausencia de refuerzos."
+    },
+    {
+      "segment_id": "G02-u061",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Describe bombardeos y su efecto sobre capacidad naval."
+    },
+    {
+      "segment_id": "G02-u062",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Describe expedición de auxilio naval y sus dificultades climáticas."
+    },
+    {
+      "segment_id": "G02-u063",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica pérdida de una expedición de refuerzo y comienza a examinar sus causas técnicas."
+    },
+    {
+      "segment_id": "G02-u064",
+      "first": "liderazgos_diplomacia_proyectos",
+      "second": null,
+      "label_agreement": false,
+      "accepted_label": null,
+      "rationale": "Falta el objeto de la sugerencia rechazada por el rey; no importarlo del fragmento vecino."
+    },
+    {
+      "segment_id": "G02-u065",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica decisiones de adquisición de barcos y sustitución de proveedores para restaurar capacidad naval."
+    },
+    {
+      "segment_id": "G02-u066",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: La calidad del material naval explica el fracaso de abastecimiento militar del Pacífico."
+    },
+    {
+      "segment_id": "G02-u067",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Atribuye el fracaso del auxilio naval a defectos técnicos y negligencia."
+    },
+    {
+      "segment_id": "G02-u068",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica la pérdida de refuerzos por negligencia material como causa de independencia."
+    },
+    {
+      "segment_id": "G02-u069",
+      "first": "crisis_ideas_emancipadoras",
+      "second": "crisis_ideas_emancipadoras",
+      "label_agreement": true,
+      "accepted_label": "crisis_ideas_emancipadoras",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Atribuye el desenlace a divisiones entre realistas liberales y absolutistas."
+    },
+    {
+      "segment_id": "G02-u070",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Exhortación identitaria actual y agradecimientos."
+    },
+    {
+      "segment_id": "G02-u071",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Presentación de un colectivo de recreación histórica actual."
+    },
+    {
+      "segment_id": "G02-u072",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica equipo militar histórico de unidades participantes, mediante una demostración actual."
+    },
+    {
+      "segment_id": "G02-u073",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Describe equipo de campaña, sus funciones defensivas y organización del ejército."
+    },
+    {
+      "segment_id": "G02-u074",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica armamento y pertrechos empleados en Ayacucho."
+    },
+    {
+      "segment_id": "G02-u075",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica maniobras, descargas y doctrina de combate de la guerra de independencia."
+    },
+    {
+      "segment_id": "G02-u076",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: La cohesión operativa y las reglas de reclutamiento explican organización militar y composición de unidades."
+    },
+    {
+      "segment_id": "G02-u077",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica la degradación de capacidad de combate de un regimiento en 1824."
+    },
+    {
+      "segment_id": "G02-u078",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Predominan cierre, presentación y anuncio de otra exposición; la experiencia del combatiente solo se propone."
+    },
+    {
+      "segment_id": "G02-u079",
+      "first": "crisis_ideas_emancipadoras",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": false,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Explica Ayacucho mediante desgaste acumulado e invasión francesa; la abdicación sólo se inicia, sin desarrollo suficiente de legitimidad para R2."
+    },
+    {
+      "segment_id": "G02-u080",
+      "first": "crisis_ideas_emancipadoras",
+      "second": "crisis_ideas_emancipadoras",
+      "label_agreement": true,
+      "accepted_label": "crisis_ideas_emancipadoras",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica ruptura monárquica y aparición de autonomismo e independentismo."
+    },
+    {
+      "segment_id": "G02-u081",
+      "first": "contexto_colonial_antecedentes",
+      "second": "participacion_social_regional",
+      "label_agreement": false,
+      "accepted_label": "contexto_colonial_antecedentes",
+      "rationale": "El pasaje desarrolla condiciones económicas coloniales y presiones fiscales como explicación del descontento; la adhesión es su consecuencia, no un análisis autónomo de agencia."
+    },
+    {
+      "segment_id": "G02-u082",
+      "first": "crisis_ideas_emancipadoras",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": false,
+      "accepted_label": null,
+      "rationale": "Recursos y apoyo militar e ideas ilustradas reciben desarrollo separado; el corte impide resolver qué organiza el argumento."
+    },
+    {
+      "segment_id": "G02-u083",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Resume una explicación bélica del resultado y abre una hipótesis contrafactual todavía inconclusa."
+    },
+    {
+      "segment_id": "G02-u084",
+      "first": "crisis_ideas_emancipadoras",
+      "second": "crisis_ideas_emancipadoras",
+      "label_agreement": true,
+      "accepted_label": "crisis_ideas_emancipadoras",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: La explicación contrafactual sostiene que la crisis peninsular facilitó un proceso independentista duradero."
+    },
+    {
+      "segment_id": "G02-u085",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Propone cambios actuales de currículo e identidad cultural; no desarrolla instituciones de la primera república."
+    },
+    {
+      "segment_id": "G02-u086",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: La crítica a letras del himno conduce a reformar la educación presente sin explicar su implantación histórica."
+    },
+    {
+      "segment_id": "G02-u087",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Reivindicación hispanista actual y transición entre ponentes, sin desarrollo del hecho histórico anunciado."
+    },
+    {
+      "segment_id": "G02-u088",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Predominan presentación, terminología y fundación virreinal de 1542 sin nexo causal desarrollado con la emancipación."
+    },
+    {
+      "segment_id": "G02-u089",
+      "first": "contexto_colonial_antecedentes",
+      "second": "no_relevante",
+      "label_agreement": false,
+      "accepted_label": "no_relevante",
+      "rationale": "Educación e Inquisición desde Toledo se discuten sin nexo causal desarrollado con la independencia; no heredar alcance del título de la charla."
+    },
+    {
+      "segment_id": "G02-u090",
+      "first": "contexto_colonial_antecedentes",
+      "second": "contexto_colonial_antecedentes",
+      "label_agreement": true,
+      "accepted_label": "contexto_colonial_antecedentes",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Cuestiona el antagonismo criollo-peninsular mediante la composición administrativa y el cambio borbónico."
+    },
+    {
+      "segment_id": "G02-u091",
+      "first": "contexto_colonial_antecedentes",
+      "second": "contexto_colonial_antecedentes",
+      "label_agreement": true,
+      "accepted_label": "contexto_colonial_antecedentes",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica la presencia peninsular y el asesoramiento criollo en el gobierno colonial; añade una digresión sobre encomiendas."
+    },
+    {
+      "segment_id": "G02-u092",
+      "first": "contexto_colonial_antecedentes",
+      "second": "no_relevante",
+      "label_agreement": false,
+      "accepted_label": "no_relevante",
+      "rationale": "La defensa general de la nobleza y jurisdicciones coloniales remite al orden remoto sin relación explicada con el proceso en alcance."
+    },
+    {
+      "segment_id": "G02-u093",
+      "first": "participacion_social_regional",
+      "second": "no_relevante",
+      "label_agreement": false,
+      "accepted_label": "no_relevante",
+      "rationale": "Contrasta orden inca y movilidad virreinal general, sin relacionarlos con independencia; no basta mencionar grupos indígenas."
+    },
+    {
+      "segment_id": "G02-u094",
+      "first": "contexto_colonial_antecedentes",
+      "second": "no_relevante",
+      "label_agreement": false,
+      "accepted_label": "no_relevante",
+      "rationale": "Matrimonios de conquistadores y violencia colonial general no desarrollan relación con la emancipación; no suplir la periodización defectuosa."
+    },
+    {
+      "segment_id": "G02-u095",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Digresa sobre festejos y avances incas frente a la conquista sin explicar antecedentes causales de independencia."
+    },
+    {
+      "segment_id": "G02-u096",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica saberes y cosmogonía inca y el encuentro con España, sin conexión desarrollada con 1780–1842."
+    },
+    {
+      "segment_id": "G02-u097",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Relata una reforma religiosa inca y evangelización temprana sin nexo con el proceso independentista."
+    },
+    {
+      "segment_id": "G02-u098",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Cierra evangelización remota y anuncia un libro; no desarrolla todavía una explicación sobre Abascal."
+    },
+    {
+      "segment_id": "G02-u099",
+      "first": "contexto_colonial_antecedentes",
+      "second": "contexto_colonial_antecedentes",
+      "label_agreement": true,
+      "accepted_label": "contexto_colonial_antecedentes",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Desarrolla organización territorial y riqueza del virreinato como marco del gobierno de Abascal."
+    },
+    {
+      "segment_id": "G02-u100",
+      "first": "contexto_colonial_antecedentes",
+      "second": "contexto_colonial_antecedentes",
+      "label_agreement": true,
+      "accepted_label": "contexto_colonial_antecedentes",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica diversidad de actividades y nodos económicos del virreinato, más allá de la minería."
+    },
+    {
+      "segment_id": "G02-u101",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Conduce de la llegada de Abascal a preparativos defensivos ante una invasión inglesa."
+    },
+    {
+      "segment_id": "G02-u102",
+      "first": "liderazgos_diplomacia_proyectos",
+      "second": "liderazgos_diplomacia_proyectos",
+      "label_agreement": true,
+      "accepted_label": "liderazgos_diplomacia_proyectos",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica cómo el virrey ganó apoyo de grupos limeños mediante reuniones y reformas ante oposición liberal."
+    },
+    {
+      "segment_id": "G02-u103",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Describe preparación y envío de fuerzas desde Lima para recuperar Chile."
+    },
+    {
+      "segment_id": "G02-u104",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica despliegues realistas en Quito y Alto Perú para sofocar revueltas."
+    },
+    {
+      "segment_id": "G02-u105",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica participación indígena realista por defensa de tierras, derechos, fe y forma de vida."
+    },
+    {
+      "segment_id": "G02-u106",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica la llegada de fuerzas al Perú para asegurar independencias frente a la reconquista y añade apropiaciones militares."
+    },
+    {
+      "segment_id": "G02-u107",
+      "first": "liderazgos_diplomacia_proyectos",
+      "second": "liderazgos_diplomacia_proyectos",
+      "label_agreement": true,
+      "accepted_label": "liderazgos_diplomacia_proyectos",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Narra el desplazamiento de Pezuela y la división política realista como marco de La Serna."
+    },
+    {
+      "segment_id": "G02-u108",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "campanias_conflictos_militares",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Relaciona división realista con derrota y describe resistencias armadas posteriores."
+    },
+    {
+      "segment_id": "G02-u109",
+      "first": "liderazgos_diplomacia_proyectos",
+      "second": "liderazgos_diplomacia_proyectos",
+      "label_agreement": true,
+      "accepted_label": "liderazgos_diplomacia_proyectos",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Atribuye la fragmentación territorial a una estrategia bolivariana favorable a Gran Colombia; la sublevación sirve de entrada."
+    },
+    {
+      "segment_id": "G02-u110",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Destaca composición indígena y exigencia lingüística de las tropas realistas antes del cierre del ponente."
+    },
+    {
+      "segment_id": "G02-u111",
+      "first": "campanias_conflictos_militares",
+      "second": null,
+      "label_agreement": false,
+      "accepted_label": null,
+      "rationale": "Cierre del naufragio y nueva pregunta sobre consecuencias sociales forman dos bloques incompletos sin prioridad."
+    },
+    {
+      "segment_id": "G02-u112",
+      "first": "liderazgos_diplomacia_proyectos",
+      "second": "participacion_social_regional",
+      "label_agreement": false,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Explica las revoluciones por intereses de élites criollas y actores comerciales; la ausencia de proyecto nacional es conclusión, no un diseño político desarrollado."
+    },
+    {
+      "segment_id": "G02-u113",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica expulsión de comerciantes españoles por su financiación del realismo y la amenaza que representaban."
+    },
+    {
+      "segment_id": "G02-u114",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Describe experiencia del exilio y exclusión indígena producidas por la implantación republicana."
+    },
+    {
+      "segment_id": "G02-u115",
+      "first": "no_relevante",
+      "second": "liderazgos_diplomacia_proyectos",
+      "label_agreement": false,
+      "accepted_label": "no_relevante",
+      "rationale": "La comparación actual sobre conocimiento de masonería y el cierre dominan; atribuir un proyecto masónico sin explicar su diseño no basta para R4."
+    },
+    {
+      "segment_id": "G02-u116",
+      "first": "liderazgos_diplomacia_proyectos",
+      "second": "liderazgos_diplomacia_proyectos",
+      "label_agreement": true,
+      "accepted_label": "liderazgos_diplomacia_proyectos",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Postula un proyecto geopolítico de naciones débiles al servicio inglés y liberal."
+    },
+    {
+      "segment_id": "G02-u117",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Predominan opinión psicológica sin explicación histórica y presentación contemporánea de un participante."
+    },
+    {
+      "segment_id": "G02-u118",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Interpreta Ayacucho como comienzo de decadencia indígena y pérdida de participación del consejo inca."
+    },
+    {
+      "segment_id": "G02-u119",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Centra la intervención en violencia contra pueblos y noblezas indígenas, con Ayacucho como contexto."
+    },
+    {
+      "segment_id": "G02-u120",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Contrapone grupos criollos e insiste en la persecución de noblezas indígenas durante la independencia."
+    },
+    {
+      "segment_id": "G02-u121",
+      "first": "crisis_ideas_emancipadoras",
+      "second": "participacion_social_regional",
+      "label_agreement": false,
+      "accepted_label": null,
+      "rationale": "Disputa de linaje y atribución de influencias masónicas constituyen dos núcleos; mantener ambigüedad, sin resolverla por la identidad del hablante."
+    },
+    {
+      "segment_id": "G02-u122",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Predomina disputa contemporánea sobre fuentes, falacias y autores; los objetos masónicos se enumeran sin explicación causal."
+    },
+    {
+      "segment_id": "G02-u123",
+      "first": "crisis_ideas_emancipadoras",
+      "second": "crisis_ideas_emancipadoras",
+      "label_agreement": true,
+      "accepted_label": "crisis_ideas_emancipadoras",
+      "rationale": "El pasaje sí atribuye financiación y propaganda contra la corona hasta 1821 como mecanismo ideológico; su clasificación no valida la cronología ni las atribuciones del expositor."
+    },
+    {
+      "segment_id": "G02-u124",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Expone violencia de legionarios sobre poblaciones andinas y persistencia de la resistencia de noblezas indígenas."
+    },
+    {
+      "segment_id": "G02-u125",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Atribuye a Ayacucho separación social y racial entre poblaciones andinas, amazónicas y costeñas."
+    },
+    {
+      "segment_id": "G02-u126",
+      "first": "liderazgos_diplomacia_proyectos",
+      "second": "liderazgos_diplomacia_proyectos",
+      "label_agreement": true,
+      "accepted_label": "liderazgos_diplomacia_proyectos",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Discute un proyecto republicano inconcluso forzado por Bolívar y el modelo de sociedad pretendido."
+    },
+    {
+      "segment_id": "G02-u127",
+      "first": "campanias_conflictos_militares",
+      "second": "campanias_conflictos_militares",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "La enumeración de comandantes y barcos pretende establecer procedencia inglesa frente a argentina/chilena, no explicar operaciones ni logística; corregir incluso el acuerdo R3."
+    },
+    {
+      "segment_id": "G02-u128",
+      "first": "campanias_conflictos_militares",
+      "second": null,
+      "label_agreement": false,
+      "accepted_label": null,
+      "rationale": "Encuentro militar, capitulación y proyecto inconcluso se enumeran sin una explicación dominante; no forzar R3."
+    },
+    {
+      "segment_id": "G02-u129",
+      "first": "no_relevante",
+      "second": null,
+      "label_agreement": false,
+      "accepted_label": null,
+      "rationale": "Respuesta personal y acusación histórica con orden sin completar; el contenido faltante impide decidir, no corresponde descarte automático R7."
+    },
+    {
+      "segment_id": "G02-u130",
+      "first": "participacion_social_regional",
+      "second": "participacion_social_regional",
+      "label_agreement": true,
+      "accepted_label": "participacion_social_regional",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Denuncia apropiación criolla de tierras y exterminio de noblezas indígenas durante la formación republicana."
+    },
+    {
+      "segment_id": "G02-u131",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Agradecimientos, invitaciones y proyectos contemporáneos de divulgación; Ayacucho es tema anunciado sin explicación."
+    },
+    {
+      "segment_id": "G02-u132",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Cierre de conferencia y agradecimientos institucionales actuales."
+    },
+    {
+      "segment_id": "G03-asr-002",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Presenta titulaciones y trayectorias de autores; paratexto académico."
+    },
+    {
+      "segment_id": "G03-asr-005",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Enumera interpretaciones en conflicto para presentar el libro; no explica sustantivamente juntas ni levantamientos."
+    },
+    {
+      "segment_id": "G03-asr-007",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Define explícitamente el libro como historia de representaciones, con énfasis en siglo XX."
+    },
+    {
+      "segment_id": "G03-asr-008",
+      "first": "liderazgos_diplomacia_proyectos",
+      "second": "liderazgos_diplomacia_proyectos",
+      "label_agreement": true,
+      "accepted_label": "liderazgos_diplomacia_proyectos",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: El ejemplo desarrollado explica la defensa de la dictadura bolivariana por falta de cultura independentista; supera mera bibliografía."
+    },
+    {
+      "segment_id": "G03-asr-009",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica categorías metodológicas de representación y memoria usadas por un libro."
+    },
+    {
+      "segment_id": "G03-asr-010",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Describe estructura del libro, autores y duración de investigaciones."
+    },
+    {
+      "segment_id": "G03-asr-016",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Comenta metodología y estudios de cultos conmemorativos ligados a Guerra del Pacífico sin desarrollo en alcance."
+    },
+    {
+      "segment_id": "G03-asr-017",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Analiza cultos patrióticos e identidad tacneña posteriores y anécdotas actuales; mención de Unanue no desarrolla primera república."
+    },
+    {
+      "segment_id": "G03-asr-019",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Compara experiencias conmemorativas de ciudades en época de Leguía, que el propio pasaje distingue de la independencia."
+    },
+    {
+      "segment_id": "G03-asr-023",
+      "first": "no_relevante",
+      "second": null,
+      "label_agreement": false,
+      "accepted_label": null,
+      "rationale": "El objetivo no ubica temporalmente la implantación de monumentos; no transferir la fecha de otro objetivo invisible al clasificador."
+    },
+    {
+      "segment_id": "G03-asr-037",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Explica proyectos regionales y élites en conmemoraciones de 1921, fuera del periodo histórico establecido."
+    },
+    {
+      "segment_id": "G03-asr-043",
+      "first": "no_relevante",
+      "second": "no_relevante",
+      "label_agreement": true,
+      "accepted_label": "no_relevante",
+      "rationale": "Comprobadas evidencia y frontera del acuerdo: Agradecimientos sobre elaboración de un volumen y producción universitaria de conocimiento."
+    }
+  ]
+}

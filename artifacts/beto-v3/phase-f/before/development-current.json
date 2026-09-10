@@ -1,0 +1,21 @@
+{
+  "status": "D_complete_F_recommended_not_executed",
+  "updated_utc": "2026-09-09T11:59:41.499106+00:00",
+  "C_ready": true,
+  "S_closed": true,
+  "freeze_sha256": "6b7ae3358a31c8303387b15010a5ee57f4ed54c99c4e717b829afc84a733608f",
+  "candidate": "R2",
+  "results": "artifacts/beto-v3/phase-d/comparison.json",
+  "budget_ledger": "artifacts/beto-v3/budget-ledger-after-D.json",
+  "final_success_evaluated": false,
+  "phase_D_audit": "artifacts/beto-v3/phase-d",
+  "C_results": "outputs/beto-v3/phase-c/comparison-seed42.json",
+  "next_intervention": {
+    "phase": "F",
+    "option": "transcript_only_vs_H_plus_T",
+    "executed": false,
+    "prospective_V_exception_scope_required": true
+  },
+  "development_annotation_remaining": 1,
+  "reserved_S_annotations": 200
+}

@@ -1,0 +1,17 @@
+{
+  "pairs": [
+    {
+      "a": "G07",
+      "b": "G14",
+      "role_a": "T",
+      "role_b": "V",
+      "shared_12grams": 9,
+      "minimum_work_12grams": 7645,
+      "containment": 0.0011772400261608894
+    }
+  ],
+  "development_works": 23,
+  "S_content_accessed": false,
+  "method": "Exact normalized 12-word windows; no semantic/visual/audio fingerprint verification",
+  "conclusion": "Screen only; low exact overlap does not prove original-work independence. G04-G06 one presentation. G16/G17 require speaker/event comparison. Final source admission pending."
+}
