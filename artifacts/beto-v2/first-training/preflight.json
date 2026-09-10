@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "checks": [
+    "missing_train rejected",
+    "missing_val rejected",
+    "missing_class rejected",
+    "family_leak rejected",
+    "text_leak rejected",
+    "ineligible rejected",
+    "Seven explicit metric labels even with one supported class",
+    "Permuted checkpoint labels rejected",
+    "Seed before initialization reproducibly fixes classifier head",
+    "Tiny BERT safetensors save/reload logits within1e-8 absolute /1e-5 relative and exact mappings; attention kernels can round differently",
+    "Explicit fixed padding and truncation at384 with SEP preserved"
+  ],
+  "weighted_accumulation": [
+    {
+      "n": 6,
+      "accumulated_loss": 1.2834565950678072,
+      "full_batch_loss": 1.283456595067807,
+      "max_gradient_absolute_error": 0.0,
+      "partial_groups_tested": true
+    },
+    {
+      "n": 11,
+      "accumulated_loss": 2.515977065596263,
+      "full_batch_loss": 2.515977065596263,
+      "max_gradient_absolute_error": 2.7755575615628914e-17,
+      "partial_groups_tested": true
+    }
+  ],
+  "fixture": "tiny randomly initialized BERT; zero full BETO trainings",
+  "fixture_directory": "outputs/beto-v2-preflight-fwzy713r",
+  "resume_limit": "epoch-boundary state serialization implemented; end-to-end interrupted BETO trajectory not separately trained to preserve six-run budget"
+}

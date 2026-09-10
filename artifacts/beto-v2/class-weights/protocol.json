@@ -1,0 +1,353 @@
+{
+  "labels": [
+    "campanias_conflictos_militares",
+    "contexto_colonial_antecedentes",
+    "crisis_ideas_emancipadoras",
+    "liderazgos_diplomacia_proyectos",
+    "no_relevante",
+    "organizacion_consecuencias_republicanas",
+    "participacion_social_regional"
+  ],
+  "label2id": {
+    "campanias_conflictos_militares": 0,
+    "contexto_colonial_antecedentes": 1,
+    "crisis_ideas_emancipadoras": 2,
+    "liderazgos_diplomacia_proyectos": 3,
+    "no_relevante": 4,
+    "organizacion_consecuencias_republicanas": 5,
+    "participacion_social_regional": 6
+  },
+  "condition": "B_weights_A",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "maximum_new_runs": 9,
+  "original_protocol_hash": "481154e887c741cca66a93f806fe78c6b9ab3e2e3b637f9d557b3fe1326f4459",
+  "stability_manifest_hash": "e1d9d7047fec8d4bda212a1d3a207cf3d7dbf65b40d0659211c5a3d7094721fa",
+  "runner_sha256": "158b2e74c544b3af9de0eac8086e2c736a7833e96e43d6d7819a692de61ec17a",
+  "orchestrator_sha256": "f58253b696e0ac6b6d9fe4d92b06c510395c987ad37a21564d7033fee4dcfa2a",
+  "folds": [
+    {
+      "fold": "fold-1",
+      "counts": {
+        "A": [
+          16,
+          17,
+          46,
+          39,
+          50,
+          13,
+          73
+        ],
+        "B": [
+          26,
+          20,
+          48,
+          45,
+          52,
+          20,
+          77
+        ]
+      },
+      "weights_float64": {
+        "A": [
+          2.267857142857143,
+          2.134453781512605,
+          0.7888198757763976,
+          0.9304029304029304,
+          0.7257142857142858,
+          2.791208791208791,
+          0.49706457925636005
+        ],
+        "B": [
+          1.5824175824175823,
+          2.057142857142857,
+          0.8571428571428571,
+          0.9142857142857143,
+          0.7912087912087912,
+          2.057142857142857,
+          0.5343228200371057
+        ]
+      },
+      "weights_float32": {
+        "A": [
+          2.267857074737549,
+          2.134453773498535,
+          0.7888198494911194,
+          0.930402934551239,
+          0.7257142663002014,
+          2.7912087440490723,
+          0.49706459045410156
+        ],
+        "B": [
+          1.582417607307434,
+          2.057142972946167,
+          0.8571428656578064,
+          0.9142857193946838,
+          0.791208803653717,
+          2.057142972946167,
+          0.5343227982521057
+        ]
+      },
+      "A_over_B": [
+        1.4331597222222223,
+        1.0375816993464053,
+        0.9202898550724639,
+        1.0176282051282053,
+        0.9172222222222223,
+        1.356837606837607,
+        0.9302701674277016
+      ],
+      "equivalent_under_weighted_mean": false,
+      "train_A_hash": "1841c0150a497b75652ddfcd41f597e2e84498215baa3e95bccc7aead533f067",
+      "train_B_hash": "6768fedf861f2866a6e2e8846b3f98010eafbc144e9f5207992b20de1a2d6124",
+      "validation_hash": "a3a46968f87a4ff19beed86cfdf3a9a45f6ff814bfe8b78c281d106d4e5dcc5d",
+      "planned_updates": 72,
+      "checks": [
+        "A: accumulated gradients match full effective batches including partial group",
+        "B: accumulated gradients match full effective batches including partial group"
+      ]
+    },
+    {
+      "fold": "fold-2",
+      "counts": {
+        "A": [
+          77,
+          42,
+          25,
+          65,
+          30,
+          101,
+          45
+        ],
+        "B": [
+          77,
+          43,
+          27,
+          68,
+          35,
+          113,
+          51
+        ]
+      },
+      "weights_float64": {
+        "A": [
+          0.7142857142857143,
+          1.3095238095238095,
+          2.2,
+          0.8461538461538461,
+          1.8333333333333333,
+          0.5445544554455446,
+          1.2222222222222223
+        ],
+        "B": [
+          0.7680890538033395,
+          1.3754152823920265,
+          2.1904761904761907,
+          0.8697478991596639,
+          1.689795918367347,
+          0.5233881163084703,
+          1.1596638655462186
+        ]
+      },
+      "weights_float32": {
+        "A": [
+          0.7142857313156128,
+          1.3095238208770752,
+          2.200000047683716,
+          0.8461538553237915,
+          1.8333333730697632,
+          0.5445544719696045,
+          1.2222222089767456
+        ],
+        "B": [
+          0.7680890560150146,
+          1.375415325164795,
+          2.190476179122925,
+          0.8697478771209717,
+          1.689795970916748,
+          0.5233880877494812,
+          1.1596639156341553
+        ]
+      },
+      "A_over_B": [
+        0.9299516908212561,
+        0.9520933977455718,
+        1.0043478260869565,
+        0.9728725380899294,
+        1.0849436392914653,
+        1.0404410006218014,
+        1.0539452495974235
+      ],
+      "equivalent_under_weighted_mean": false,
+      "train_A_hash": "5c840c62495e70f4b30a416192081f7696bf9c676c575fedd060591b073e7e54",
+      "train_B_hash": "bd0bed556e922df0c998ca6746f28a5dedd18019814eaeb4890b99a1039f7fb7",
+      "validation_hash": "d90b231da66e9ecdcd716d705e06e04e4887c4a6378cd263b344d22e30bf71c0",
+      "planned_updates": 104,
+      "checks": [
+        "A: accumulated gradients match full effective batches including partial group",
+        "B: accumulated gradients match full effective batches including partial group"
+      ]
+    },
+    {
+      "fold": "fold-3",
+      "counts": {
+        "A": [
+          75,
+          55,
+          35,
+          68,
+          68,
+          92,
+          52
+        ],
+        "B": [
+          85,
+          59,
+          35,
+          71,
+          73,
+          97,
+          60
+        ]
+      },
+      "weights_float64": {
+        "A": [
+          0.8476190476190476,
+          1.155844155844156,
+          1.816326530612245,
+          0.9348739495798319,
+          0.9348739495798319,
+          0.6909937888198758,
+          1.2225274725274726
+        ],
+        "B": [
+          0.8067226890756303,
+          1.162227602905569,
+          1.9591836734693877,
+          0.96579476861167,
+          0.9393346379647749,
+          0.7069219440353461,
+          1.1428571428571428
+        ]
+      },
+      "weights_float32": {
+        "A": [
+          0.8476190567016602,
+          1.1558442115783691,
+          1.8163264989852905,
+          0.9348739385604858,
+          0.9348739385604858,
+          0.6909937858581543,
+          1.2225275039672852
+        ],
+        "B": [
+          0.8067227005958557,
+          1.1622276306152344,
+          1.959183692932129,
+          0.9657947421073914,
+          0.9393346309661865,
+          0.7069219350814819,
+          1.1428571939468384
+        ]
+      },
+      "A_over_B": [
+        1.0506944444444444,
+        0.9945075757575759,
+        0.9270833333333334,
+        0.967984068627451,
+        0.9952512254901962,
+        0.9774682971014493,
+        1.0697115384615385
+      ],
+      "equivalent_under_weighted_mean": false,
+      "train_A_hash": "e305ce750a91b774d51ac12ab4657063c901ac1cd31e98c90c9d42472c8448d7",
+      "train_B_hash": "29b1c3ea9ab8f02994d812201e2ab0515ee2e932dd13089a43e8d3484641fc06",
+      "validation_hash": "fe9c577dc90330bfe153e27e0e047b16eebf5deb3a554a0429fb7394371fe998",
+      "planned_updates": 120,
+      "checks": [
+        "A: accumulated gradients match full effective batches including partial group",
+        "B: accumulated gradients match full effective batches including partial group"
+      ]
+    }
+  ],
+  "verified_references": {
+    "42-fold-1-A": {
+      "result_sha256": "4a19ff50b4c76357f1d4a01fd75c92c97c872b12d395a8c16583729e885e3b8d",
+      "config_hash": "481154e887c741cca66a93f806fe78c6b9ab3e2e3b637f9d557b3fe1326f4459"
+    },
+    "42-fold-1-B": {
+      "result_sha256": "c8c4411b30becc22d981dd5c0a33a419e3cffeb7f741900cfee9ecd718220a0c",
+      "config_hash": "481154e887c741cca66a93f806fe78c6b9ab3e2e3b637f9d557b3fe1326f4459"
+    },
+    "43-fold-1-A": {
+      "result_sha256": "167592e1e582240c5fe7a13cbcf3f7032ebffd4bca1d835f224d20cffcaa7aa0",
+      "config_hash": "53c5a08fada5a010a5d22211914a5634893a1487ba3272a1b0f36e90532e949d"
+    },
+    "43-fold-1-B": {
+      "result_sha256": "4b464106a7b182338fd72584ca48018501e97e2ff20f0f29396060d4b3cbc52b",
+      "config_hash": "07b9c141d485d430429a8a9572e4d1243dbdfffcfd2f21182fd3900487b2047f"
+    },
+    "44-fold-1-A": {
+      "result_sha256": "08ddee05b41780a8835fda6cd51f9801ddbdf687490911aa22841f024895050b",
+      "config_hash": "90667a7521e48aaf6f70b2d0ed229beccaa166c8d44152a8c1a275a377b3c05a"
+    },
+    "44-fold-1-B": {
+      "result_sha256": "53dc2c002b8f8eac22bbbc10448ea567d295ebaeb352c22ebcaaee06128c0e09",
+      "config_hash": "cb199976a00cc09a964b639c408b47f5e572f52fa75a9e450e61c3e264f57f59"
+    },
+    "42-fold-2-A": {
+      "result_sha256": "ad464fe5678cd166ad4cb5fb0c19ca9a621f735e4018dca4b1f22be918770670",
+      "config_hash": "481154e887c741cca66a93f806fe78c6b9ab3e2e3b637f9d557b3fe1326f4459"
+    },
+    "42-fold-2-B": {
+      "result_sha256": "967839c1f98e33c7c830a3911fa748c2b30ea8cc310b49bdc0b3c43657e3d976",
+      "config_hash": "481154e887c741cca66a93f806fe78c6b9ab3e2e3b637f9d557b3fe1326f4459"
+    },
+    "43-fold-2-A": {
+      "result_sha256": "efc6af9047ddefc50d3301f93820efcc24864ce0864edaa966366c6a3842f2e8",
+      "config_hash": "d27d0bbdddd3bd6fd6dcb7dcc65aeadf683d766cf8489c71354818bc1cf36542"
+    },
+    "43-fold-2-B": {
+      "result_sha256": "25c30fa29b530183ab068325e7271a318e7f64052c76f8b68b13bc802e79990d",
+      "config_hash": "80c04693505ce0398e9807cc6d233e5964ae819e3fd877d5de23b51fa3abfc2d"
+    },
+    "44-fold-2-A": {
+      "result_sha256": "f0c62bb0657d6ed8e0dfe6990dbfd3a9fd6e18a38e0fd890fb852828be134f9f",
+      "config_hash": "19e6ced67cd6fee031a47e272a75231e9828145c362de366ff4d321a3748d34f"
+    },
+    "44-fold-2-B": {
+      "result_sha256": "96bbe720dc66ba4c4621add33eeeffb77f5e336c81215e886040deb69fb8b5a9",
+      "config_hash": "d0007b47124738f94f85153f96a8a3c199bd6b00e170e806b6b1d691b5e9b8fa"
+    },
+    "42-fold-3-A": {
+      "result_sha256": "5d2f30a87400d988cc9e667c6ebef88938a5c371898db2d356f159ddfcba4f5a",
+      "config_hash": "481154e887c741cca66a93f806fe78c6b9ab3e2e3b637f9d557b3fe1326f4459"
+    },
+    "42-fold-3-B": {
+      "result_sha256": "6cc882ac2f6cc42d8fa4ed6d60233ecab1ab0a438cdba34031f7ac3811c6675f",
+      "config_hash": "481154e887c741cca66a93f806fe78c6b9ab3e2e3b637f9d557b3fe1326f4459"
+    },
+    "43-fold-3-A": {
+      "result_sha256": "f6fb8b2889640a4f7d91040eda5c6aaac80d2f6df101ded871665536c05cdd51",
+      "config_hash": "020230e5c5ea70de19747bcba6192027e380fc63fa598899ce9b55cf6e609de1"
+    },
+    "43-fold-3-B": {
+      "result_sha256": "37a8ef6ae68cd31f86e7f69aba7b43135c559d2cabc635e21f9c9ee690387be5",
+      "config_hash": "f02f81c6c03c89dff8b20b2ed349df428a1fc06a493a06fa0549fabe20183c32"
+    },
+    "44-fold-3-A": {
+      "result_sha256": "edb182ac1edc39eb2d3a7863b6aec6bfd454989d15c73b496bca906313c6d401",
+      "config_hash": "cfc1f250758edb0cecf5a2df25b9869764efc20e689aad728e66798c62ec7529"
+    },
+    "44-fold-3-B": {
+      "result_sha256": "29c5cf186359bd24cfed3074a7f0aa9fd0587cb5ac4448cd66da7a504f237416",
+      "config_hash": "db55f6cad22ccbe0515040268b495c9cbc8b0a21f903feb9bbb266317af5f195"
+    }
+  },
+  "training_contract": "AST identical except explicit weight source; seed before model initialization; unchanged ordered B rows and seed+epoch shuffle",
+  "loss": "sum weighted CE / sum target weights over actual accumulation group",
+  "checkpoint_initialization": "BETO base at frozen revision, never trained A parameters"
+}

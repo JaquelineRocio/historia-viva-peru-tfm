@@ -1,0 +1,31 @@
+{
+  "B_advantage_stable": false,
+  "B_favored_seeds": 2,
+  "total_seeds": 3,
+  "paired_difference_mean": 0.0018888575660127398,
+  "paired_difference_sample_sd": 0.011479143573383494,
+  "mean_over_sd": 0.16454690665185193,
+  "interpretation": "Ventaja media positiva muy pequeña, con inversión de signo en 43. No se confirma una mejora estable ni generalizable.",
+  "reviewed_cases": 20,
+  "selection": "16 candidatos deterministas por frontera, más cuatro históricos para cubrir ideas explícitas, mezcla de unidades, anclaje temporal y efectos sociales. Selección cualitativa deliberada, no proporcional al corpus.",
+  "next_experiment": {
+    "status": "proposed_not_executed",
+    "name": "Ablación de pesos de clase dentro de B",
+    "hypothesis": "Los pesos recalculados con train_B contribuyen a la redistribución inestable del F1 entre clases; mantener los pesos de train_A podría cambiar ese balance de forma consistente.",
+    "comparison": "B original reutilizado frente a B con pesos calculados sólo en train_A del mismo fold. Ambos entrenan sobre las mismas filas train_B, con la misma receta, semillas y pasos planificados.",
+    "new_condition": "B_weights_A",
+    "seeds": [
+      42,
+      43,
+      44
+    ],
+    "folds": 3,
+    "maximum_new_beto_runs": 9,
+    "reused_B_runs": 9,
+    "fixed": "Base/revisión, filas, etiquetas, validaciones, longitud384, cuatro épocas, LR, microbatch/acumulación, scheduler, AMP, selección de checkpoint.",
+    "primary": "Diferencia emparejada B_weights_A−B del promedio de F1 macro de siete clases sobre tres folds, por semilla; media y DE entre semillas.",
+    "secondary": "Cambios en organización, antecedentes, participación, no relevante; subconjuntos histórico/IA; omisiones AMP.",
+    "decision": "Apoyo descriptivo si las tres semillas favorecen B_weights_A; informar también magnitud y DE, sin declarar significación ni evaluar reserva.",
+    "limit": "Aísla la regla de pesos dentro del conjunto B; no estima por sí sola el efecto puro del contenido frente al número de actualizaciones. AMP puede cambiar pasos efectivamente aplicados y se debe registrar."
+  }
+}

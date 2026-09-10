@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "checks": [
+    "Six complete BETO fits, four epochs each; seed42; no extra hyperparameter trials",
+    "All canonical rows validated once across three disjoint held family sets",
+    "Each A/B train includes seven classes; all held families excluded",
+    "Prediction IDs/truth/hashes align across A/B/TF-IDF/majority",
+    "Seven-class metrics recalculated from segment predictions, for each subset",
+    "Selected epoch obeys frozen max combined F1, earliest tie rule",
+    "Saved model/tokenizer files match recorded hashes; fresh reload predictions identical",
+    "Frozen dataset, guides, source code, package versions and public base hashes unchanged"
+  ]
+}

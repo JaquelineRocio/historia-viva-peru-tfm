@@ -1,0 +1,10 @@
+{
+  "selected": 23,
+  "accepted": 20,
+  "pending": 3,
+  "class_agreement": 23,
+  "ambiguity_agreement": 22,
+  "isolation": "Two fresh agent contexts, only guide/input; same model, shared filesystem; no expert independence",
+  "prior_accepted_reused": 29,
+  "new_sources": 0
+}

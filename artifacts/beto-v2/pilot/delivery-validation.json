@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "checks": [
+    "all_delivery_hashes",
+    "source_and_snapshot_hashes_unchanged",
+    "all_30_texts_contexts_and_labels_match_frozen_input_and_adjudication",
+    "all_60_evidence_offsets_literal",
+    "all_60_cache_keys_recomputed",
+    "no_reserved_ID_in_594_candidates_or_30_pilot",
+    "no_duplicate_alert_pair_inside_pilot",
+    "both_required_historical_datasets_in_final_overlap",
+    "30_label_agreements_27_state_agreements_29_accepted_1_pending",
+    "594_final_records_199_quality_pending_395_without_automatic_flags"
+  ],
+  "documents_sha256": {
+    "docs/beto-v2/03-dataset-piloto.md": "e85a0d43f712c997853f176e7dec0488dfe60103d739946b04e4669076e271e0",
+    "docs/beto-v2/guia-etiquetado-v2.md": "e45ceb6f759538ef567cf7f3c559b42aa4400778074afe774c7f5742a7cab73f",
+    "docs/beto-v2/progress.md": "4c7e7f0885d5dd1ec822a424be803a636a126f019c747a906834ddd52ac35f7c"
+  },
+  "validator_sha256": "62a06c0c8fc66f24811702acf1e5332f60f9d5c5df4dd9aab6307d57bce61097"
+}

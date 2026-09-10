@@ -1,0 +1,22 @@
+{
+  "PYTORCH_CUDA_ALLOC_CONF": "backend:cudaMallocAsync",
+  "purpose": "CUDA allocation management only; frozen mathematical training recipe unchanged",
+  "recovery": {
+    "seed": 42,
+    "fold": "fold-1",
+    "condition": "B_weights_A",
+    "failure": "CUDA out of memory in first epoch, optimizer foreach multiplication",
+    "completed_epochs_before_failure": 0,
+    "saved_resume_before_failure": false,
+    "action": "Restart same incomplete trajectory from same frozen base and seed with asynchronous CUDA allocator; no additional experimental condition or seed"
+  },
+  "epoch_boundary_resume": {
+    "seed": 43,
+    "fold": "fold-1",
+    "condition": "B_weights_A",
+    "failure": "Process exited with status 1 and no traceback while writing resume-epoch-2.pt.tmp; cause unconfirmed",
+    "completed_resume_epoch": 1,
+    "preserved_incomplete_artifacts": "outputs/beto-v2/class-weights/seed-43/fold-1-B_weights_A/interrupted-after-epoch-1/",
+    "action": "Resume saved epoch-1 model, optimizer, scheduler, scaler and RNG with existing mechanism; repeat uncommitted epoch 2"
+  }
+}

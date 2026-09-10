@@ -1,0 +1,45 @@
+{
+  "created_at_utc": "2026-09-08T21:54:53.629326+00:00",
+  "document_before_sha256": "c5876589e6278a57c19c72041f90cff0d3149f8562a4efc94fadd00ac48c98ed",
+  "document_after_sha256": "e056b5b6ed42401800ebc90642f41a1a18a4eec16662e194e425034faf5e28d9",
+  "identity_clarification": "Aclaración de identidad: el ID congelado `historical-basadre-hampe` conserva un nombre heredado, pero la fuente `9f60a031-0183-478c-a1f8-a3bdd37d7b0b` corresponde a **Juan Luis Orrego Penagos**, según el registro previo y el propio texto. El agrupamiento con Basadre se sostiene conservadoramente por citas y reproducción explícita de su obra en `historical-v4-0004`, `historical-v4-0040` y `historical-v4-0618`; no se atribuye ese texto a Hampe. Esta aclaración documental no cambia ninguna familia, fila, etiqueta o resultado congelado.",
+  "identity_evidence": [
+    "artifacts/beto-v2/corpus/class-work-author-format-v2.csv",
+    "outputs/beto-v2/first-training/canonical-dataset.json#historical-v4-0004"
+  ],
+  "amp_updates": [
+    {
+      "fold": "fold-1",
+      "condition": "A",
+      "skipped_updates": 0
+    },
+    {
+      "fold": "fold-1",
+      "condition": "B",
+      "skipped_updates": 0
+    },
+    {
+      "fold": "fold-2",
+      "condition": "A",
+      "skipped_updates": 2
+    },
+    {
+      "fold": "fold-2",
+      "condition": "B",
+      "skipped_updates": 0
+    },
+    {
+      "fold": "fold-3",
+      "condition": "A",
+      "skipped_updates": 0
+    },
+    {
+      "fold": "fold-3",
+      "condition": "B",
+      "skipped_updates": 0
+    }
+  ],
+  "frozen_partitions_and_results_changed": false,
+  "full_beto_runs": 6,
+  "metrics_verification": "artifacts/beto-v2/first-training/verification.json"
+}

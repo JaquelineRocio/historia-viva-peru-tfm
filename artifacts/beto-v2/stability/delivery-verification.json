@@ -1,0 +1,16 @@
+{
+  "new_runs": 12,
+  "reused_runs": 6,
+  "canonical_rows": 591,
+  "predictions": 3546,
+  "reviewed_cases": 20,
+  "canonical_texts_and_labels_unchanged": true,
+  "class_contributions_reconcile": true,
+  "files": {
+    "docs\\beto-v2\\05-estabilidad.md": "7453009d9077e0d446954108ab667a8f5bb741a9a1ca8189262089aeeb665fc6",
+    "artifacts\\beto-v2\\stability\\report.json": "1d6c311d558c8a2113cc3ab6aff950c821422747ce5a6d10f11c0446a9a36a6e",
+    "artifacts\\beto-v2\\stability\\conclusions.json": "2c48da4138538d72829121b03d2a2620abec51757bc67dc63a7a2617ccfdf1a8",
+    "outputs\\beto-v2\\stability\\reviewed-cases.json": "c1b5165fffb438f6cc9791b932d35a19c23a63de82554077152f12b799d416bc",
+    "outputs\\beto-v2\\stability\\predictions-by-seed.csv": "589f3be2e957d9e04bd54505ed0061b56ac7f6a3d925114c38843704fa2a9c46"
+  }
+}

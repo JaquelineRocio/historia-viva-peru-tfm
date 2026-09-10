@@ -1,0 +1,8 @@
+{
+  "rows": 591,
+  "target_tokens_preserved": true,
+  "batched_B_inputs_identical": true,
+  "boundary_checks": 12,
+  "inputs_sha256": "817e8f42b25c0995d636bd82c34b0c04977f9856ab3d54ba0ce46aa5303fad99",
+  "runner_sha256": "0c35188761a59d0b84b8bf745fad7e7e152c80f50985cd21b845f36ed0e99ce9"
+}

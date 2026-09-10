@@ -1,0 +1,294 @@
+{
+  "created_at_utc": "2026-09-08T23:56:55.836236+00:00",
+  "condition": "B_context",
+  "reference": "B",
+  "closed_hypothesis": "B_weights_A",
+  "rule": "Original B target tokens first; prior authentic passage last min(95,384-target_tokens-3) tokens second; exact original fallback.",
+  "base_revision": "c4d86612f51b4f46759c8390d1798c2febe71b93",
+  "pilot_seed": 42,
+  "additional_seeds": [
+    43,
+    44
+  ],
+  "maximum_new_runs": 9,
+  "expansion_gate": {
+    "minimum_mean_combined_delta": 0.01,
+    "minimum_improved_folds": 2,
+    "minimum_mean_historical_delta": 0,
+    "minimum_historical_families_with_context": 2
+  },
+  "recovery": "All 591 rows; archived prior context first, otherwise unique complete normalized target match in same local PDF. No fuzzy/label-guided alignment. Block prefix or immediately preceding block.",
+  "internet_originals_retrieved": 0,
+  "additional_OCR_pages": 0,
+  "sources": {
+    "747ca90f-92fc-4d19-aec4-6dfc34c2917e": {
+      "path": "artifacts/demo/files/86cd8383-a0d1-40f6-a759-e2c5a2bf37a9.pdf",
+      "sha256": "e1fe8984e19e8485002e8c6458394d7f34b566dfb3fd64d95fe0e1e315646770",
+      "family_id": "historical-basadre-hampe",
+      "title": "Historia de la Republica del Peru, tomo 1"
+    },
+    "9f60a031-0183-478c-a1f8-a3bdd37d7b0b": {
+      "path": ".corpus-downloads/orrego_primeros_anos_republicanos.pdf",
+      "sha256": "8d0c8819c800ed2289722a26af618c3d5917bdbec586dbb7c5c1309a2b274729",
+      "family_id": "historical-basadre-hampe",
+      "title": "Los primeros anos del Peru republicano"
+    },
+    "9154f7f7-86c9-4bad-bcba-47eaf54b93e1": {
+      "path": ".corpus-downloads/constitucion_1823.pdf",
+      "sha256": "56e6ec5d01aee7af31fe857ff63190ea1a088ccddcfe479b906dcbe7405d8c50",
+      "family_id": "work-9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+      "title": "La Constitución de 1823 y los inicios de la República"
+    },
+    "e32181bc-41d0-4400-a76d-eb11fc88bf71": {
+      "path": ".corpus-downloads/fonseca_bandoleros_patrotas.pdf",
+      "sha256": "082ca707f2e2246faf43e7bcd3c620a06e287d6f1f2212b549c94d77e0e5306f",
+      "family_id": "historical-fonseca-hunefeldt",
+      "title": "¿Bandoleros o patriotas? Las guerrillas y la dinámica popular en la independencia del Perú"
+    },
+    "9fecbe5a-9fb2-4002-a088-8a2810db938e": {
+      "path": "artifacts/demo/files/a181d154-666b-4ca9-b2e3-dcd45d16b3f6.pdf",
+      "sha256": "ae23fb808ca0669754a09e06a89a5c2485a4ed169c7496317ec9dfe7a6527d1e",
+      "family_id": "historical-ophelan-huamanga",
+      "title": "Los campesinos de Huamanga y la rebelion de 1814"
+    },
+    "0ea45102-057d-4bff-b527-f36326f66d33": {
+      "path": ".corpus-downloads/opheland_mito_independencia.pdf",
+      "sha256": "1acd9f242328d6901bd6b68f820540473793ca9c5434a600fdd407b95da7a909",
+      "family_id": "historical-ophelan-huamanga",
+      "title": "El mito de la independencia concedida"
+    },
+    "17552e18-8e04-53f8-a48f-b60ed56fbbd0": {
+      "path": "outputs/source-candidates-v1/josefa-montes.pdf",
+      "sha256": "65a271f2016780bf621b9040d7409bff3fd745a28524b76662d5266243986602",
+      "family_id": "work-17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+      "title": "Josefa Montes, la última esclava del Congo"
+    },
+    "48262fb6-dee2-531e-b001-536c5928a9ca": {
+      "path": "outputs/ideas-source-v1/huerta-2020.pdf",
+      "sha256": "2d98c10b6915b00f9208582e6321d444f3fcdff512b5d72a12016793a7fe5020",
+      "family_id": "work-48262fb6-dee2-531e-b001-536c5928a9ca",
+      "title": "«Desde el sagrado púlpito y en exhortaciones privadas»: la circulación de información durante la guerra de Independencia peruana"
+    },
+    "11b4365c-87f9-5b8d-802f-a0d2aafc478a": {
+      "path": "outputs/source-diversity-v1/contreras-2011.pdf",
+      "sha256": "a142578bfcfaaf5fe7ed7613ca3f3bf5565a79456dd5cf23abbb4ed04f2f1a5a",
+      "family_id": "work-11b4365c-87f9-5b8d-802f-a0d2aafc478a",
+      "title": "Menos plata pero más papas: consecuencias económicas de la independencia en el Perú"
+    },
+    "7ef1a1d4-97c6-55cf-990b-3a7b1fbb0f9d": {
+      "path": "outputs/source-diversity-v1/hunefeldt-1979.pdf",
+      "sha256": "aa49530a2481d4172b1131042cbcee532093dac2c261443a3204a58825ffd1bb",
+      "family_id": "historical-fonseca-hunefeldt",
+      "title": "Cimarrones, bandoleros y milicianos: 1821"
+    },
+    "776e9620-a23b-54e8-bf0e-d5a27ed2969a": {
+      "path": "outputs/corpus-batch-v2/women/arguedas-2022.pdf",
+      "sha256": "3a649e06d4892d5c1be0435f59ae8f186d3e5fe2be1252ab367a821ddd85652c",
+      "family_id": "work-776e9620-a23b-54e8-bf0e-d5a27ed2969a",
+      "title": "Mujeres peruanas en los primeros años de la República, según Flora Tristán en su libro Peregrinaciones de una paria"
+    },
+    "08fa49e1-abac-5645-a35e-2d7ec4a8f05d": {
+      "path": "outputs/training-batch-v3/hampe/article.pdf",
+      "sha256": "9c930ca049b398cf7b70bc55e1d19c52e4ed6871de4134c26cf77e2637a2a827",
+      "family_id": "work-08fa49e1-abac-5645-a35e-2d7ec4a8f05d",
+      "title": "Bernardo Monteagudo y su intervención en el proyecto monárquico para el Perú"
+    },
+    "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a": {
+      "path": "outputs/training-batch-v3/source-moran-2019.pdf",
+      "sha256": "04e79e35f4739fe5c8727b9647689cb4c3b04bf9fa4bc0e93de54f49edb225ce",
+      "family_id": "work-1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+      "title": "De manuscrito conspirador a impreso revolucionario. \"El Diario Secreto de Lima\" y el discurso político disidente en el contexto de la independencia de América”."
+    },
+    "S01": {
+      "path": "outputs/beto-v2/corpus/S01/source.pdf",
+      "sha256": "cddb3214a056f0c6d59d1cc43b8d486aa48e4aaf15f3e0103063538ae5b1be43",
+      "family_id": "family-S01",
+      "title": "El ceremonial republicano y los rituales políticos de la Confederación Perú-Boliviana, 1821-1839"
+    },
+    "S03": {
+      "path": "outputs/beto-v2/corpus/S03/source.pdf",
+      "sha256": "9ec770dea8aab54de9718d133fb66c4ce8ec7b8d34b39ffe8c30762dfa358e98",
+      "family_id": "callao-naval-1820",
+      "title": "El Departamento Marítimo del Callao y la independencia de Guayaquil"
+    },
+    "S05": {
+      "path": "outputs/beto-v2/corpus/S05/source.pdf",
+      "sha256": "37daf3789e40a28c9022d3259648393abcf3760870c313ba93dc548e6838a918",
+      "family_id": "family-S05",
+      "title": "Independencia y clases sociales"
+    },
+    "S06": {
+      "path": "outputs/beto-v2/corpus/S06/source.pdf",
+      "sha256": "d41a8030a7404762cc379eb1ae7d1928fafd5c76678f4055d4b1f97f654ee976",
+      "family_id": "callao-naval-1820",
+      "title": "Un acontecimiento olvidado de la Independencia: la masacre de extranjeros pro patriotas en el Callao (1820)"
+    },
+    "S10": {
+      "path": "outputs/beto-v2/corpus/S10/source.pdf",
+      "sha256": "850bbe8e497d195d16ddf1c541875ffe2fd31de68daa4cbc451e0fec32f795b7",
+      "family_id": "family-S10",
+      "title": "Libros escolares y educación primaria en la ciudad de Lima durante el siglo XIX"
+    },
+    "S15": {
+      "path": "outputs/beto-v2/corpus/S15/source.pdf",
+      "sha256": "2da598be94dadcc8ec6bc9c97b1a31d26e01cb450ebf155b79c24f7ac42dba74",
+      "family_id": "historical-basadre-hampe",
+      "title": "El Mercado de esclavos en la ciudad de Lima desde el Mercurio Peruano 1827-1832"
+    },
+    "S17": {
+      "path": "outputs/beto-v2/corpus/S17/source.pdf",
+      "sha256": "e62afe27bf509abe669d1e9340816b35f7a382b3d7bf182ba5b50cd26dca8c1b",
+      "family_id": "historical-fonseca-hunefeldt",
+      "title": "Los negros de Lima: 1800-1830"
+    }
+  },
+  "coverage": {
+    "role": {
+      "historical_train": {
+        "total": 542,
+        "found": 293,
+        "incorporated": 293
+      },
+      "new_AI": {
+        "total": 49,
+        "found": 48,
+        "incorporated": 47
+      }
+    },
+    "family_id": {
+      "callao-naval-1820": {
+        "total": 20,
+        "found": 20,
+        "incorporated": 20
+      },
+      "family-S01": {
+        "total": 13,
+        "found": 13,
+        "incorporated": 12
+      },
+      "family-S05": {
+        "total": 2,
+        "found": 1,
+        "incorporated": 1
+      },
+      "family-S10": {
+        "total": 6,
+        "found": 6,
+        "incorporated": 6
+      },
+      "historical-basadre-hampe": {
+        "total": 295,
+        "found": 169,
+        "incorporated": 169
+      },
+      "historical-fonseca-hunefeldt": {
+        "total": 47,
+        "found": 21,
+        "incorporated": 21
+      },
+      "historical-ophelan-huamanga": {
+        "total": 157,
+        "found": 85,
+        "incorporated": 85
+      },
+      "work-08fa49e1-abac-5645-a35e-2d7ec4a8f05d": {
+        "total": 6,
+        "found": 1,
+        "incorporated": 1
+      },
+      "work-11b4365c-87f9-5b8d-802f-a0d2aafc478a": {
+        "total": 4,
+        "found": 2,
+        "incorporated": 2
+      },
+      "work-17552e18-8e04-53f8-a48f-b60ed56fbbd0": {
+        "total": 2,
+        "found": 0,
+        "incorporated": 0
+      },
+      "work-1c8bc7af-a9f6-5392-b3ff-6d7433fb010a": {
+        "total": 18,
+        "found": 14,
+        "incorporated": 14
+      },
+      "work-48262fb6-dee2-531e-b001-536c5928a9ca": {
+        "total": 4,
+        "found": 2,
+        "incorporated": 2
+      },
+      "work-776e9620-a23b-54e8-bf0e-d5a27ed2969a": {
+        "total": 1,
+        "found": 0,
+        "incorporated": 0
+      },
+      "work-9154f7f7-86c9-4bad-bcba-47eaf54b93e1": {
+        "total": 16,
+        "found": 7,
+        "incorporated": 7
+      }
+    },
+    "fold": {
+      "fold-1": {
+        "total": 303,
+        "found": 176,
+        "incorporated": 176
+      },
+      "fold-2": {
+        "total": 177,
+        "found": 105,
+        "incorporated": 105
+      },
+      "fold-3": {
+        "total": 111,
+        "found": 60,
+        "incorporated": 59
+      }
+    },
+    "label": {
+      "campanias_conflictos_militares": {
+        "total": 94,
+        "found": 50,
+        "incorporated": 50
+      },
+      "contexto_colonial_antecedentes": {
+        "total": 61,
+        "found": 36,
+        "incorporated": 36
+      },
+      "crisis_ideas_emancipadoras": {
+        "total": 55,
+        "found": 35,
+        "incorporated": 35
+      },
+      "liderazgos_diplomacia_proyectos": {
+        "total": 92,
+        "found": 54,
+        "incorporated": 53
+      },
+      "no_relevante": {
+        "total": 80,
+        "found": 50,
+        "incorporated": 50
+      },
+      "organizacion_consecuencias_republicanas": {
+        "total": 115,
+        "found": 65,
+        "incorporated": 65
+      },
+      "participacion_social_regional": {
+        "total": 94,
+        "found": 51,
+        "incorporated": 51
+      }
+    }
+  },
+  "original_protocol_sha256": "e5afe7865c71ab41fe49f2df4d81895a77f72bd9f0fc536f54fc0d0ca0d627d4",
+  "frozen_hashes": {
+    "outputs/beto-v2/context/inputs.json": "ac1e75266787c3408deb58e05db9e5323d6f1a1e8006864d7b04ae0c079098bf",
+    "outputs/beto-v2/context/alignment-sample.json": "8abb07e17b0dc40fdf7833a33bdd34a6ad5699526b50f9225df8f74ab90c21eb",
+    "artifacts/beto-v2/context/manifest.json": "c2c1a37714045d819c698092fe5ae7f97c276fb7c23c1a81344bba6f6d2b52f7",
+    "outputs/beto-v2/context/extracted-documents.json": "04235f03f224ac3cba3a0b0451a469870677bc78806d3663209ae6fdb7073af6",
+    "scripts/prepare_beto_context_v2.py": "6b856984d33f04203df2bdb5325cd0b2bfd5cc89e34eb4394793b771acf647c6",
+    "scripts/run_beto_first_training_v2.py": "158b2e74c544b3af9de0eac8086e2c736a7833e96e43d6d7819a692de61ec17a"
+  }
+}

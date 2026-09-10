@@ -1,0 +1,607 @@
+{
+  "works": {
+    "747ca90f-92fc-4d19-aec4-6dfc34c2917e": {
+      "title": "Historia de la Republica del Peru, tomo 1",
+      "family_id": "historical-basadre-hampe",
+      "identity_evidence": {
+        "dataset": "outputs/corpus-snapshot-v4/reviewed-export.json",
+        "source": "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+        "format": "pdf",
+        "split": "train",
+        "label": "participacion_social_regional",
+        "count": "1",
+        "work": "Historia de la Republica del Peru, tomo 1",
+        "author": "Jorge Basadre Grohmann",
+        "identity_evidence": "artifacts/reviews/boundary-resolution-v3.json",
+        "identity_status": "verified_previous_review"
+      }
+    },
+    "9f60a031-0183-478c-a1f8-a3bdd37d7b0b": {
+      "title": "Los primeros anos del Peru republicano",
+      "family_id": "historical-basadre-hampe",
+      "identity_evidence": {
+        "dataset": "outputs/corpus-snapshot-v4/reviewed-export.json",
+        "source": "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+        "format": "pdf",
+        "split": "train",
+        "label": "participacion_social_regional",
+        "count": "11",
+        "work": "Los primeros anos del Peru republicano",
+        "author": "Juan Luis Orrego Penagos",
+        "identity_evidence": "artifacts/reviews/corpus-batch-v2.json",
+        "identity_status": "verified_previous_review"
+      }
+    },
+    "9154f7f7-86c9-4bad-bcba-47eaf54b93e1": {
+      "title": "La Constitución de 1823 y los inicios de la República",
+      "family_id": "work-9154f7f7-86c9-4bad-bcba-47eaf54b93e1",
+      "identity_evidence": {
+        "author": "Carmen Villanueva",
+        "title": "La Constitución de 1823 y los inicios de la República",
+        "journal": "BIRA",
+        "volume": 23,
+        "year": 1996,
+        "printed_pages": "427–435",
+        "basis": "Local PDF title and footer; no new license verification",
+        "assigned_split": "train",
+        "source_group": "9154f7f7-86c9-4bad-bcba-47eaf54b93e1"
+      }
+    },
+    "e32181bc-41d0-4400-a76d-eb11fc88bf71": {
+      "title": "¿Bandoleros o patriotas? Las guerrillas y la dinámica popular en la independencia del Perú",
+      "family_id": "historical-fonseca-hunefeldt",
+      "identity_evidence": {
+        "resource_id": "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+        "author": "Juan Fonseca Ariza",
+        "title": "¿Bandoleros o patriotas? Las guerrillas y la dinámica popular en la independencia del Perú",
+        "year": 2010,
+        "url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/95",
+        "license": "CC BY 4.0 displayed on article page, checked 2026-09-07",
+        "local_file": ".corpus-downloads/fonseca_bandoleros_patrotas.pdf",
+        "consulted_pages": [
+          {
+            "pdf_page": 4,
+            "printed_page": 108
+          },
+          {
+            "pdf_page": 5,
+            "printed_page": 109
+          },
+          {
+            "pdf_page": 11,
+            "printed_page": 115
+          }
+        ],
+        "verification": "Sample matches located on pages 4, 5 and 11; page 4 read in full. Other judgments use matching sample text; original letters not inspected."
+      }
+    },
+    "9fecbe5a-9fb2-4002-a088-8a2810db938e": {
+      "title": "Los campesinos de Huamanga y la rebelion de 1814",
+      "family_id": "historical-ophelan-huamanga",
+      "identity_evidence": {
+        "dataset": "outputs/corpus-snapshot-v4/reviewed-export.json",
+        "source": "9fecbe5a-9fb2-4002-a088-8a2810db938e",
+        "format": "pdf",
+        "split": "train",
+        "label": "participacion_social_regional",
+        "count": "22",
+        "work": "Los campesinos de Huamanga y la rebelion de 1814",
+        "author": "Nelson Ernesto Pereyra Chavez",
+        "identity_evidence": "artifacts/reviews/boundary-resolution-v3.json",
+        "identity_status": "verified_previous_review"
+      }
+    },
+    "0ea45102-057d-4bff-b527-f36326f66d33": {
+      "title": "El mito de la independencia concedida",
+      "family_id": "historical-ophelan-huamanga",
+      "identity_evidence": {
+        "dataset": "outputs/corpus-snapshot-v4/reviewed-export.json",
+        "source": "0ea45102-057d-4bff-b527-f36326f66d33",
+        "format": "pdf",
+        "split": "train",
+        "label": "participacion_social_regional",
+        "count": "18",
+        "work": "El mito de la independencia concedida",
+        "author": "Scarlett O Phelan Godoy",
+        "identity_evidence": "artifacts/reviews/corpus-batch-v2.json",
+        "identity_status": "verified_previous_review"
+      }
+    },
+    "17552e18-8e04-53f8-a48f-b60ed56fbbd0": {
+      "title": "Josefa Montes, la última esclava del Congo",
+      "family_id": "work-17552e18-8e04-53f8-a48f-b60ed56fbbd0",
+      "identity_evidence": {
+        "author": "Juan José Brito Ramos",
+        "title": "Josefa Montes, la última esclava del Congo",
+        "year": 2017,
+        "journal": "Revista del Archivo General de la Nación",
+        "volume_issue": "32(1)",
+        "pages": "15–45",
+        "doi": "10.37840/ragn.v32i1.5",
+        "url": "https://revista.agn.gob.pe/ojs/index.php/ragn/article/view/5",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence": "https://revista.agn.gob.pe/ojs/index.php/ragn/article/view/5",
+        "changes_notice": "Extractos seleccionados; se unieron saltos y palabras partidas por guion de fin de línea y se retiraron solo las marcas enumeradas por registro. Ortografía, citas y cantidades conservadas."
+      }
+    },
+    "48262fb6-dee2-531e-b001-536c5928a9ca": {
+      "title": "«Desde el sagrado púlpito y en exhortaciones privadas»: la circulación de información durante la guerra de Independencia peruana",
+      "family_id": "work-48262fb6-dee2-531e-b001-536c5928a9ca",
+      "identity_evidence": {
+        "id": "huerta-2020",
+        "author": "María Claudia Huerta Vera",
+        "title": "«Desde el sagrado púlpito y en exhortaciones privadas»: la circulación de información durante la guerra de Independencia peruana",
+        "year": 2020,
+        "publication_date": "2020-12-12",
+        "journal": "Histórica",
+        "volume_issue": "44(1)",
+        "pages": "125–158",
+        "doi": "10.18800/historica.202001.004",
+        "institution": "Pontificia Universidad Católica del Perú",
+        "article_url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/23275",
+        "pdf_url": "https://revistas.pucp.edu.pe/index.php/historica/article/download/23275/22257",
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence_url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/23275",
+        "license_observation": "La sección Licencia de la ficha editorial identifica Creative Commons Atribución 4.0.",
+        "local_pdf": {
+          "path": "outputs/ideas-source-v1/huerta-2020.pdf",
+          "file_sha256": "2d98c10b6915b00f9208582e6321d444f3fcdff512b5d72a12016793a7fe5020"
+        },
+        "bytes": 465826,
+        "pdf_pages": 34,
+        "access": "Descarga pública sin cuenta; respuesta application/pdf y cabecera PDF verificadas.",
+        "source_group": "doi:10.18800/historica.202001.004",
+        "assigned_split": "train",
+        "source_selection_reason": "PDF pequeño y capa textual legible; pasaje con argumento de legitimación de la ruptura, revisado por otro agente.",
+        "attribution_plan": "Conservar autora, título, revista, año, DOI, enlace de licencia y cambios de extracción en cualquier candidato.",
+        "changes_notice": "Unir palabras partidas por guion de fin de línea y espacios; retirar solo llamada58. Conservar grafía, mayúsculas y atribuciones."
+      }
+    },
+    "11b4365c-87f9-5b8d-802f-a0d2aafc478a": {
+      "title": "Menos plata pero más papas: consecuencias económicas de la independencia en el Perú",
+      "family_id": "work-11b4365c-87f9-5b8d-802f-a0d2aafc478a",
+      "identity_evidence": {
+        "source_id": "contreras-2011-menos-plata-mas-papas",
+        "document_group": "doi:10.18800/historica.201102.004",
+        "assigned_split": "train",
+        "author": "Carlos Contreras Carranza",
+        "affiliation": "Pontificia Universidad Católica del Perú",
+        "year": 2011,
+        "publication_date": "2011-12-21",
+        "title": "Menos plata pero más papas: consecuencias económicas de la independencia en el Perú",
+        "journal": "Histórica",
+        "volume_issue": "35(2)",
+        "printed_pages": "101–132",
+        "doi": "10.18800/historica.201102.004",
+        "article_url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/3849",
+        "pdf_url": "https://revistas.pucp.edu.pe/index.php/historica/article/download/3849/3823",
+        "local_pdf": "outputs/source-diversity-v1/contreras-2011.pdf",
+        "pdf_sha256": "a142578bfcfaaf5fe7ed7613ca3f3bf5565a79456dd5cf23abbb4ed04f2f1a5a",
+        "pdf_bytes": 534664,
+        "pdf_pages": 32,
+        "license": "CC BY 4.0",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "license_evidence_url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/3849",
+        "license_checked": "2026-09-07; editorial section Licencia explicitly names CC Atribución4.0; author, date, volume and pages verified there and first PDF page.",
+        "local_license_evidence": "contreras-editorial-evidence.json; HTML original en contreras-editorial.html",
+        "attribution": "Contreras Carranza, Carlos (2011). Menos plata pero más papas: consecuencias económicas de la independencia en el Perú. Histórica35(2),101–132. https://doi.org/10.18800/historica.201102.004. CC BY4.0. Extractos seleccionados, palabras partidas y espacios reunidos; llamadas de notas retiradas del texto y conservadas como procedencia.",
+        "scope_limit": "La obra completa se extiende más allá de1842. Solo se proponen aquí cuatro párrafos con anclajes temporales internos dentro de1780–1842. No trasladar sus conclusiones demográficas hasta1876 ni gendarmería1870 al periodo inicial.",
+        "evaluation_design_caution": "No asignar fragmentos distintos de esta obra a entrenamiento y evaluación. Revisar también versiones previas y materiales primarios citados antes de proponerla como fuente retenida.",
+        "possible_predecessor": {
+          "author": "Carlos Contreras",
+          "year": 2010,
+          "title": "El legado económico de la independencia en el Perú",
+          "series": "Documento de Trabajo301, Departamento de Economía PUCP",
+          "url": "https://repositorio.pucp.edu.pe/items/c8ac6592-b8af-4667-878a-a839523e76bd/full",
+          "observed_license": "CC BY-NC-ND2.5PE in repository record",
+          "relation_status": "potential_version_family_not_textually_compared",
+          "evidence": "Mismo autor y resumen con costos de guerra, fin de protección minera, alivio fiscal y descenso mercantil. No se afirma identidad textual sin cotejar PDF2010. Agrupar conservadoramente para selección futura de splits; la licencia de2010 no se transfiere al artículo2011 ni viceversa."
+        },
+        "edition_note": "La primera página del artículo2011 informa presentación preliminar en el congreso de historia económica de Carmona,8–10septiembre2011. No identifica explícitamente el documento2010 como versión anterior.",
+        "resource_id": "11b4365c-87f9-5b8d-802f-a0d2aafc478a",
+        "source_group": "doi:10.18800/historica.201102.004",
+        "source_key": "contreras",
+        "application_review": "artifacts/reviews/training-batch-v3.json",
+        "application_review_file_sha256": "b42860373a22f56490871b626a845b32d61f67108998fdc530e2883b57297692"
+      }
+    },
+    "7ef1a1d4-97c6-55cf-990b-3a7b1fbb0f9d": {
+      "title": "Cimarrones, bandoleros y milicianos: 1821",
+      "family_id": "historical-fonseca-hunefeldt",
+      "identity_evidence": {
+        "source_id": "doi:10.18800/historica.197902.004",
+        "author": "Christine Hünefeldt",
+        "title": "Cimarrones, bandoleros y milicianos: 1821",
+        "publication_year": 1979,
+        "published_date_as_landing_page": "1979-12-01",
+        "journal": "Histórica",
+        "volume": 3,
+        "issue": 2,
+        "printed_pages": [
+          71,
+          88
+        ],
+        "landing_url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/7858",
+        "pdf_url": "https://revistas.pucp.edu.pe/index.php/historica/article/download/7858/8131/30888",
+        "doi": "10.18800/historica.197902.004",
+        "accessed_utc": "2026-09-08T02:54:06.916268+00:00",
+        "local_pdf": "outputs/source-diversity-v1/hunefeldt-1979.pdf",
+        "file_sha256": "aa49530a2481d4172b1131042cbcee532093dac2c261443a3204a58825ffd1bb",
+        "raw_pages_file": "outputs/source-diversity-v1/hunefeldt-raw-pages.json",
+        "license": {
+          "name": "CC BY 4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/",
+          "evidence_url": "https://revistas.pucp.edu.pe/index.php/historica/article/view/7858",
+          "evidence_quote": "Esta obra está bajo una licencia internacional Creative Commons Atribución 4.0.",
+          "policy_url": "https://revistas.pucp.edu.pe/index.php/historica/oa",
+          "scope_note": "La ficha individual del artículo de1979 declara CC BY4.0. La política general menciona modalidad online desde2016 y consulta gratuita de números anteriores; se utiliza la declaración individual, no solo acceso gratuito.",
+          "attribution_required": true,
+          "changes_must_be_recorded": true,
+          "limitations": "No se presume licencia de material de terceros por la licencia del artículo. Las unidades seleccionadas son prosa de la autora y una cita breve de carta de1822, con referencias conservadas."
+        },
+        "visual_pages": [
+          {
+            "printed_page": 74,
+            "pdf_page": 4,
+            "path": "outputs/source-diversity-v1/hunefeldt-page-74.png",
+            "file_sha256": "74fee1dfc86d497cb440c9ca0d85a8de89347fc36e3f377ce087a195b215f361"
+          },
+          {
+            "printed_page": 87,
+            "pdf_page": 17,
+            "path": "outputs/source-diversity-v1/hunefeldt-page-87.png",
+            "file_sha256": "5361414c3922adf548632608deaca13c56506b13885f34f83be8897421499e8d"
+          },
+          {
+            "printed_page": 88,
+            "pdf_page": 18,
+            "path": "outputs/source-diversity-v1/hunefeldt-page-88.png",
+            "file_sha256": "2bcc376091ddf9edc09bf76a7f46e854d55974c5a44fe4c0ebbe3d87a655ab72"
+          }
+        ],
+        "method_limits": [
+          "Se cotejaron páginas impresas74,87,88 visualmente; no se afirma cotejo de documentos primarios citados.",
+          "No se abrieron datasets ni evaluación para estas selecciones.",
+          "No se afirma novedad textual respecto de todo entrenamiento ni mejora de clasificación.",
+          "Los tres contrastes propuestos no son cuota por etiqueta: reclutamiento, agencia y efectos sobre esclavitud son argumentos distintos."
+        ],
+        "dependency_audit": {
+          "fonseca_local_pdf": ".corpus-downloads/fonseca_bandoleros_patrotas.pdf",
+          "fonseca_file_sha256": "082ca707f2e2246faf43e7bcd3c620a06e287d6f1f2212b549c94d77e0e5306f",
+          "source_pages": [
+            {
+              "pdf_page": 8,
+              "printed_page": 112,
+              "note": 19
+            },
+            {
+              "pdf_page": 21,
+              "printed_page": 125,
+              "note": 64
+            }
+          ],
+          "shared_work": "Memorias del general Miller, en edición1829 para Hünefeldt y edición1975 para Fonseca. No se ha cotejado equivalencia de páginas entre ediciones.",
+          "fonseca_miller_explicit_locators": [
+            "p.108 nota5: edición1975",
+            "p.120 nota47: vol.I p.250",
+            "p.123 nota59: vol.I p.258"
+          ],
+          "candidate_reference_overlap": "HUN-01 cita vol.I p.196 en edición1829; misma obra, sin confirmar pasaje idéntico. HUN-02 sintetiza tesis del artículo citado por Fonseca. HUN-03 remite a Sales y carta SanMartín/TorreTagle; no se localizó en el recorrido la misma referencia expresa en Fonseca, lo cual no prueba independencia."
+        },
+        "mendez_screening": {
+          "title": "Tradiciones liberales en los Andes: militares y campesinos en la formación del estado peruano",
+          "author": "Cecilia G. Méndez",
+          "year": 2004,
+          "volume_issue": "EIAL15(1)",
+          "pages": [
+            35,
+            63
+          ],
+          "editorial_url": "https://eialonline.org/index.php/eial/article/view/826",
+          "author_university_page": "https://www.history.ucsb.edu/faculty/mendez/",
+          "finding": "La página de autora UCSB enlaza la versión EIAL y confirma páginas35–63. No se encontró en ese enlace una autorización alternativa de reutilización.",
+          "license": "CC BY-NC-ND4.0 según editorial",
+          "decision": "Mantener admisión pendiente para corpus compartible; no inferir prohibición absoluta de entrenamiento por ND."
+        },
+        "resource_id": "7ef1a1d4-97c6-55cf-990b-3a7b1fbb0f9d",
+        "assigned_split": "train",
+        "source_group": "doi:10.18800/historica.197902.004",
+        "source_key": "hunefeldt",
+        "application_review": "artifacts/reviews/training-batch-v3.json",
+        "application_review_file_sha256": "b42860373a22f56490871b626a845b32d61f67108998fdc530e2883b57297692"
+      }
+    },
+    "776e9620-a23b-54e8-bf0e-d5a27ed2969a": {
+      "title": "Mujeres peruanas en los primeros años de la República, según Flora Tristán en su libro Peregrinaciones de una paria",
+      "family_id": "work-776e9620-a23b-54e8-bf0e-d5a27ed2969a",
+      "identity_evidence": {
+        "source_id": "arguedas-pinasco-2022-conexion-17",
+        "author": "Maria Jose Arguedas Pinasco",
+        "year": 2022,
+        "title": "Mujeres peruanas en los primeros años de la República, según Flora Tristán en su libro Peregrinaciones de una paria",
+        "doi": "10.18800/conexion.202201.003",
+        "landing_url": "https://revistas.pucp.edu.pe/index.php/conexion/article/view/26124",
+        "pdf_url": "https://revistas.pucp.edu.pe/index.php/conexion/article/download/26124/24557/103385",
+        "pdf_sha256": "3a649e06d4892d5c1be0435f59ae8f186d3e5fe2be1252ab367a821ddd85652c",
+        "license": {
+          "article": "CC BY 4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/",
+          "evidence": [
+            "Ficha editorial, apartado Licencia",
+            "PDF página impresa 105 declara acceso abierto CC BY 4.0",
+            "https://revistas.pucp.edu.pe/index.php/conexion/oa"
+          ],
+          "attribution_required": true,
+          "third_party_quotes": "Pasajes citados de Tristán, edición 2003, traducción E. Romero. No se ha demostrado que la licencia editorial cubra los derechos propios de esa traducción. No admitir automáticamente para redistribución o entrenamiento."
+        },
+        "quoted_work": {
+          "author": "Flora Tristán",
+          "title": "Peregrinaciones de una paria",
+          "original_year": 1838,
+          "edition_year": 2003,
+          "translator": "E. Romero",
+          "publisher": "Centro de la Mujer Peruana Flora Tristán; Fondo Editorial de la UNMSM",
+          "reference_evidence": "Arguedas 2022, p.104",
+          "primary_edition_consulted": false,
+          "cited_pages": [
+            365,
+            366
+          ],
+          "document_group": "flora-tristan-peregrinations-1838-all-editions-and-secondary-excerpts"
+        },
+        "date_discrepancies": [
+          {
+            "where": "Ficha web y PDF p.87",
+            "reported": "Viaje 1832–1833",
+            "assessment": "No coincide con título de obra 1833–1834 ni encuentro en junio de 1834 registrado en p.98. No se modifica texto fuente."
+          },
+          {
+            "where": "PDF p.89",
+            "reported": "Inicio del viaje 1832 y regreso 1834",
+            "assessment": "Discrepancia conservada; no se añade año al texto candidato."
+          },
+          {
+            "where": "PDF p.98",
+            "reported": "guerra civil de 1934",
+            "assessment": "El párrafo fecha encuentro en junio de 1834. Fragmento no seleccionado; sin corrección silenciosa."
+          },
+          {
+            "where": "PDF p.99",
+            "reported": "Muerte de Francisca en 1935",
+            "assessment": "El contexto sitúa exilio en 1834 y dice un año después. Fragmento no seleccionado; no se toma 1935 como hecho."
+          },
+          {
+            "where": "Ficha web / PDF p.105 / PDF p.87",
+            "reported": "Publicado 2022-07-28 / primera publicación 27 de julio de 2022 / aceptado 29-07-2022",
+            "assessment": "Se conserva año editorial 2022, pero no una fecha diaria como única correcta. Ficha también dice derechos de autor 2024."
+          }
+        ],
+        "chronology_crosscheck": {
+          "institution": "Bibliothèque nationale de France",
+          "url": "https://catalogue.bnf.fr/ark:/12148/cb37625389d",
+          "evidence": "Título catalogado Pérégrinations d’une paria : 1833–1834, tomo 2. Verificación bibliográfica; no cotejo de pasajes en español.",
+          "candidate_date_granularity": "1833–1834 contextual; no fecha exacta del campamento"
+        },
+        "resource_id": "776e9620-a23b-54e8-bf0e-d5a27ed2969a",
+        "assigned_split": "train",
+        "source_group": "doi:10.18800/conexion.202201.003",
+        "source_key": "arguedas",
+        "application_review": "artifacts/reviews/training-batch-v3.json",
+        "application_review_file_sha256": "b42860373a22f56490871b626a845b32d61f67108998fdc530e2883b57297692"
+      }
+    },
+    "08fa49e1-abac-5645-a35e-2d7ec4a8f05d": {
+      "title": "Bernardo Monteagudo y su intervención en el proyecto monárquico para el Perú",
+      "family_id": "work-08fa49e1-abac-5645-a35e-2d7ec4a8f05d",
+      "identity_evidence": {
+        "author": "Teodoro Hampe Martínez",
+        "year": 2010,
+        "title": "Bernardo Monteagudo y su intervención en el proyecto monárquico para el Perú",
+        "journal": "Revista de Historia Americana y Argentina",
+        "volume": 45,
+        "printed_pages": "71–95",
+        "downloaded_pdf_pages": 26,
+        "extra_page_note": "La última página numerada 96 está vacía salvo cabecera; no se cambia la paginación bibliográfica 71–95.",
+        "editorial_url": "https://bdigital.uncu.edu.ar/8023",
+        "pdf_url": "https://bdigital.uncu.edu.ar/objetos_digitales/8023/08-hampe-martinez-rhaya.pdf",
+        "pdf_sha256": "9c930ca049b398cf7b70bc55e1d19c52e4ed6871de4134c26cf77e2637a2a827",
+        "editorial_sha256": "c2e66a5db4ca5ea21b16765121d2ac30d14b2ab3dbcd18f155e5b26a82f2570c",
+        "license": "CC BY-NC-SA 3.0",
+        "license_url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+        "license_evidence": "Ficha individual descargada directamente por HTTPS, HTTP 200. No trasladar a otra edición ni declarar CC BY4.",
+        "reuse": "Conservar autor, título, enlace, licencia y cambios; uso académico no comercial. Los fragmentos adaptados se distribuyen con NC/SA; no implica licencia uniforme del corpus ni dictamen sobre pesos futuros.",
+        "other_version": "Working paper CAEI70 homónimo con aviso todos los derechos reservados; no se extrajo de esa versión y se agrupa como obra relacionada.",
+        "resource_id": "08fa49e1-abac-5645-a35e-2d7ec4a8f05d",
+        "assigned_split": "train",
+        "source_group": "https://bdigital.uncu.edu.ar/8023",
+        "source_key": "hampe",
+        "application_review": "artifacts/reviews/training-batch-v3.json",
+        "application_review_file_sha256": "b42860373a22f56490871b626a845b32d61f67108998fdc530e2883b57297692"
+      }
+    },
+    "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a": {
+      "title": "De manuscrito conspirador a impreso revolucionario. \"El Diario Secreto de Lima\" y el discurso político disidente en el contexto de la independencia de América”.",
+      "family_id": "work-1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+      "identity_evidence": {
+        "source_id": "moran-2019-diario-secreto",
+        "author": "Luis Daniel Morán",
+        "affiliation": "Universidad San Ignacio de Loyola, Lima, Perú",
+        "title": "De manuscrito conspirador a impreso revolucionario. \"El Diario Secreto de Lima\" y el discurso político disidente en el contexto de la independencia de América”.",
+        "title_note": "Puntuación del título conservada de la ficha editorial.",
+        "year": 2019,
+        "journal": "Historia y Comunicación Social",
+        "volume": 24,
+        "issue": 1,
+        "printed_pages": [
+          201,
+          216
+        ],
+        "doi": "10.5209/hics.64491",
+        "article_url": "https://revistas.ucm.es/index.php/HICS/en/article/view/64491",
+        "pdf_url": "https://revistas.ucm.es/index.php/HICS/article/download/64491/4564456551220",
+        "editor_metadata": {
+          "citation_date": "2019-05-28",
+          "dc_date_issued": "2019-06-03",
+          "note": "La ficha presenta ambas fechas; se conserva 2019 como año bibliográfico."
+        },
+        "rights": {
+          "license": "CC BY 4.0",
+          "url": "https://creativecommons.org/licenses/by/4.0/",
+          "evidence": "Ficha editorial de este artículo, apartado License: atribuye propiedad a la Universidad Complutense de Madrid y distribuye todos los contenidos bajo CC BY 4.0; exige citar la procedencia en reproducciones totales o parciales.",
+          "evidence_file": "outputs/training-batch-v3/source-moran-editorial.html",
+          "evidence_sha256": "6a05c93df4682e6ed08cb8c648df614f319cd480e2e8135cdc5172a8c25d6732",
+          "attribution": "Morán, Luis Daniel (2019). De manuscrito conspirador a impreso revolucionario. Historia y Comunicación Social, 24(1), 201–216. https://doi.org/10.5209/hics.64491. CC BY 4.0. Fragmento; únicamente normalización de formato, indicada por unidad.",
+          "caveat": "Las citas documentales se atribuyen además al documento que el artículo identifica. Esta ficha no verifica contra originales de 1811 ni extiende la licencia de la revista a material de terceros."
+        },
+        "retrieval": {
+          "date": "2026-09-07",
+          "http_status": 200,
+          "pdf_bytes": 652449,
+          "pdf_sha256": "04e79e35f4739fe5c8727b9647689cb4c3b04bf9fa4bc0e93de54f49edb225ce",
+          "pdf_file": "outputs/training-batch-v3/source-moran-2019.pdf",
+          "pdf_pages": 16
+        },
+        "documentary_groups": [
+          {
+            "id": "moran-2019-diario-secreto",
+            "kind": "secondary_work",
+            "relation": "Todos los párrafos del artículo."
+          },
+          {
+            "id": "diario-secreto-lima-1811",
+            "kind": "primary_periodical",
+            "relation": "Reproducciones del Diario Secreto en La Gaceta de Buenos Aires; tratar distintas transcripciones/ediciones como el mismo documento, no como fuente nueva."
+          },
+          {
+            "id": "gaceta-gobierno-lima-1810-1811",
+            "kind": "primary_periodical",
+            "relation": "Citas en P012 y P013, y circulación/censura en otros pasajes."
+          },
+          {
+            "id": "reflexiones-filantropicas-juntas-america-1810",
+            "kind": "primary_pamphlet",
+            "relation": "Citado en P012."
+          },
+          {
+            "id": "lopez-aldana-castelli-marzo-1811-burzio1964",
+            "kind": "primary_letter_transmitted",
+            "relation": "P015, P042 y posiblemente P018: carta(s) mediante Burzio1964; fecha completa y lengua original no comprobadas aquí. No dar por resuelta independencia documental."
+          },
+          {
+            "id": "lopez-aldana-junta-buenos-aires-septiembre1811-burzio1964",
+            "kind": "primary_letter_transmitted",
+            "relation": "P015: carta mediante Burzio1964, fecha completa y transmisión pendientes."
+          },
+          {
+            "id": "proclama-mujeres-chuquisaca-castelli-1810-diariosecreto8",
+            "kind": "primary_proclamation_transmitted",
+            "relation": "P047; fragmento en Diario Secreto nº8 de1811, contexto P046. No identifica autora individual."
+          }
+        ],
+        "dependencies": {
+          "secondary_citations": [
+            "Martínez Riaza 1984 y 1985",
+            "Peralta 2002 y 2010",
+            "Glave 2008",
+            "Burzio 1964",
+            "Morán y Aguirre 2011 y 2013"
+          ],
+          "interpretation": "Autoría distinta y una licencia compatible no demuestran independencia de documentos/argumentos ya entrenados. Debe cotejarse la obra primaria y los pasajes; una referencia bibliográfica por sí sola tampoco demuestra fuga.",
+          "corpus_check": "No se han leído textos de evaluación ni comprobado solapamientos del corpus en esta subtarea."
+        },
+        "extraction": {
+          "inventory": "outputs/training-batch-v3/source-moran-inventory.json",
+          "canonical_raw": "outputs/training-batch-v3/source-moran-layout-pages.json",
+          "independent_pypdf_raw": "outputs/training-batch-v3/source-moran-raw-pages.json",
+          "offsets": "Índices de caracteres Unicode [inicio, fin), relativos a raw_text de cada página de layout-pages, producida con PyMuPDF; no offsets de bytes ni del raw pypdf.",
+          "transformation": "Sólo NFC, guiones discrecionales U+00AD y espacios; patches before/after reversibles y comprobados. No se cambia ortografía, fechas, elipsis ni puntuación de las citas.",
+          "unit": "Párrafo completo o bloque de cita completo tal como lo imprime el artículo; una cita puede contener elipsis editoriales ya impresas. No equivale a documento primario completo."
+        },
+        "review_status_at_collection": "Candidatos locales pendientes de segunda lectura y adjudicación; no incorporados al dataset. Revisiones asistidas por IA, no humanas; ninguna predicción BETO.",
+        "visual_verification_at_collection": "Se registrará en source-moran-visual-check.json; no asumir cotejo visual total a partir de la extracción.",
+        "current_review_status": "Dos lecturas y adjudicación completadas en este registro:18 propuestas,8 exclusiones y4 retenidos. No aplicado al dataset.",
+        "current_visual_verification": "14 páginas cotejadas; evidencia incorporada en checks.moran_visual. Las dos notas at_collection se conservan como historia de la extracción.",
+        "resource_id": "1c8bc7af-a9f6-5392-b3ff-6d7433fb010a",
+        "assigned_split": "train",
+        "source_group": "doi:10.5209/hics.64491",
+        "source_key": "moran",
+        "application_review": "artifacts/reviews/training-batch-v3.json",
+        "application_review_file_sha256": "b42860373a22f56490871b626a845b32d61f67108998fdc530e2883b57297692"
+      }
+    },
+    "S01": {
+      "title": "El ceremonial republicano y los rituales políticos de la Confederación Perú-Boliviana, 1821-1839",
+      "family_id": "family-S01",
+      "identity_evidence": "artifacts/beto-v2/corpus/source-groups-v2.json"
+    },
+    "S03": {
+      "title": "El Departamento Marítimo del Callao y la independencia de Guayaquil",
+      "family_id": "callao-naval-1820",
+      "identity_evidence": "artifacts/beto-v2/corpus/source-groups-v2.json"
+    },
+    "S06": {
+      "title": "Un acontecimiento olvidado de la Independencia: la masacre de extranjeros pro patriotas en el Callao (1820)",
+      "family_id": "callao-naval-1820",
+      "identity_evidence": "artifacts/beto-v2/corpus/source-groups-v2.json"
+    },
+    "S10": {
+      "title": "Libros escolares y educación primaria en la ciudad de Lima durante el siglo XIX",
+      "family_id": "family-S10",
+      "identity_evidence": "artifacts/beto-v2/corpus/source-groups-v2.json"
+    },
+    "S15": {
+      "title": "El Mercado de esclavos en la ciudad de Lima desde el Mercurio Peruano 1827-1832",
+      "family_id": "historical-basadre-hampe",
+      "identity_evidence": "artifacts/beto-v2/corpus/source-groups-v2.json"
+    },
+    "S05": {
+      "title": "Independencia y clases sociales",
+      "family_id": "family-S05",
+      "identity_evidence": "artifacts/beto-v2/corpus/source-groups-v2.json"
+    },
+    "S17": {
+      "title": "Los negros de Lima: 1800-1830",
+      "family_id": "historical-fonseca-hunefeldt",
+      "identity_evidence": "artifacts/beto-v2/corpus/source-groups-v2.json"
+    }
+  },
+  "conservative_links": [
+    {
+      "family_id": "historical-basadre-hampe",
+      "source_ids": [
+        "747ca90f-92fc-4d19-aec4-6dfc34c2917e",
+        "9f60a031-0183-478c-a1f8-a3bdd37d7b0b",
+        "S15"
+      ],
+      "rationale": "Basadre/Hampe documented relationship; S15 explicitly quotes the same multi-volume Basadre work. Conservative block."
+    },
+    {
+      "family_id": "historical-ophelan-huamanga",
+      "source_ids": [
+        "0ea45102-057d-4bff-b527-f36326f66d33",
+        "9fecbe5a-9fb2-4002-a088-8a2810db938e"
+      ],
+      "rationale": "Existing documentary review identifies use of the exact O Phelan work in Huamanga; inherit whole block."
+    },
+    {
+      "family_id": "historical-fonseca-hunefeldt",
+      "source_ids": [
+        "e32181bc-41d0-4400-a76d-eb11fc88bf71",
+        "7ef1a1d4-97c6-55cf-990b-3a7b1fbb0f9d",
+        "S17"
+      ],
+      "rationale": "Existing Fonseca/Hunefeldt dependency; S17 grouped conservatively with the related slavery evidence, not asserted to be the same essay."
+    },
+    {
+      "family_id": "callao-naval-1820",
+      "source_ids": [
+        "S03",
+        "S06"
+      ],
+      "rationale": "Conservative same-episode block for overlapping Callao naval events; distinct articles retained in provenance."
+    }
+  ],
+  "limits": "Conservative documentary blocks, not proof of independent authors or exhaustive primary-source independence."
+}

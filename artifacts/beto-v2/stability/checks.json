@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "Training/evaluation AST identical to original except seed initialization and seed+epoch shuffle",
+    "wrong_seed rejected",
+    "validation_reordered rejected",
+    "changed_label rejected",
+    "Tiny CPU BERT heads repeat within seed and differ across seeds; zero BETO fits",
+    "Loader shuffle repeats for seed+epoch and changes on adjacent epoch"
+  ],
+  "new_beto_fits": 0
+}

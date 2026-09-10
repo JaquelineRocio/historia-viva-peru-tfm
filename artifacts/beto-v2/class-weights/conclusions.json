@@ -1,0 +1,10 @@
+{
+  "status": "empeoramiento en las tres semillas",
+  "retain_for_next_experiment": "B",
+  "mean_difference": -0.012082197101517719,
+  "sample_sd": 0.015380561906762793,
+  "positive_seeds": 0,
+  "negative_seeds": 3,
+  "mean_difference_vs_A": -0.010193339535504978,
+  "next_intervention_not_executed": "Añadir exclusivamente contexto previo archivado en el espacio libre de la entrada de 384 tokens. Conservar los tokens del objetivo usados por la referencia; añadir como segundo segmento hasta 95 tokens finales del pasaje previo que quepan, contando los separadores. Si no hay contexto o no cabe al menos un token de contexto con sus separadores, conservar la entrada original. Misma regla para todas las filas, sin recortar más el objetivo para dar cabida al contexto. Congelar el manifiesto antes de entrenar, mantener etiquetas y filas de validación, no seleccionar casos por resultado. Comparar en los mismos folds y semillas con la referencia conservada; informar cobertura y cantidad efectiva de contexto por fila."
+}

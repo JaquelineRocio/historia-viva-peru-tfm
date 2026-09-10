@@ -1,0 +1,24 @@
+{
+  "created_at_utc": "2026-09-08T21:52:00.792436+00:00",
+  "files": {
+    "artifacts/beto-v2/first-training/annotation-summary.json": "26df8bb19e9f6263e542b9bfbc1d3262ae456ca92ea6023d56d438757b51d036",
+    "artifacts/beto-v2/first-training/canonical-role-index.json": "42b065daba8399223df09fb1c29f27edea4f72a67f4d1975aebc2387a7a53594",
+    "artifacts/beto-v2/first-training/families.json": "ae79e19c6c9a948e60875573e27cf8745c311f67219e953d34f4ef47e1804433",
+    "artifacts/beto-v2/first-training/guide-compatibility.json": "76ffc8a7d6adc72ecf3d164a32654f42d463f5d7f309f07fa8e397612ec31cdb",
+    "artifacts/beto-v2/first-training/journal.jsonl": "ebc710249d0ec0e1e5c4b6066079aea8ee2743cb88b1f9a19961498b553e96a7",
+    "artifacts/beto-v2/first-training/preflight.json": "e371a4c1acd9c5f41c2dc249812154cc798f91ddd8b8555e7256e28abf5f6e71",
+    "artifacts/beto-v2/first-training/prior-pilot-integrity.json": "f919af270e2852daef4dcadc3983feca5c7f4d2c238f36698759143d07173d1d",
+    "artifacts/beto-v2/first-training/protocol-initial-draft.json": "347631e9c98423b423ec88455ee15e15cd33fbe387d63f68579b7a188f426e02",
+    "artifacts/beto-v2/first-training/protocol.json": "e5afe7865c71ab41fe49f2df4d81895a77f72bd9f0fc536f54fc0d0ca0d627d4",
+    "artifacts/beto-v2/first-training/report.json": "f8c19771f7dcecd7cc6dbcb428005e2eaf326d2944f08241dc3d05b957c79e9c",
+    "artifacts/beto-v2/first-training/token-lengths.json": "1ed6e2b08251c74af784e0b70b2f59b5c2116f01e0bca4bce49667a23e411226",
+    "artifacts/beto-v2/first-training/verification.json": "aa974dc34b78a2d3941fe92b7e5c0d4b2a49ece28fea7ba5d19b3657ca61e5ea",
+    "docs/beto-v2/04-primer-entrenamiento.md": "e056b5b6ed42401800ebc90642f41a1a18a4eec16662e194e425034faf5e28d9",
+    "scripts/report_beto_first_training_v2.py": "4760dfcf6189d2d575f81cabac5ebd8606f3aeaa4330dcc5a2c2d3ffa1c6f734",
+    "outputs/beto-v2/first-training/predictions-by-segment.csv": "495b47603f02c7a2f676efcbe36eb929ebd7da3cc6a5da7bb69a7efe04657532",
+    "outputs/beto-v2/first-training/paired-errors.json": "b99a7b5cfeaea8cd383d4cc80df2c2cdffd36024df625411e6bbced4fa7816f2",
+    "artifacts/beto-v2/first-training/documentation-clarifications.json": "ed1165c699af7d84d9bed009dad79e2dc9d1c2f56bca4c427a577a7862540bda",
+    "scripts/finalize_beto_first_training_delivery_v2.py": "d9d195823dc41e0d689e51588cace01ea977ef32daea3f8c4bd588bd187351bd"
+  },
+  "finalized_at_utc": "2026-09-08T21:54:53.629326+00:00"
+}
