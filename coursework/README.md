@@ -24,6 +24,19 @@ Una configuración escrita no equivale a un pipeline ejecutado en GitHub.
 | Diversidad de fuentes y reserva de evaluación | Preparar aportes y separar obras relacionadas | Seis unidades propuestas de Contreras/Hünefeldt; un ambiguo, un original conservado y dos textos de Majluf en cuarentena. Dos obras reservadas para evaluación, sin ejemplos extraídos. Dataset intacto; los seis textos propuestos superan 192 tokens |
 | Desarrollo externo parcial | Congelar ejemplos y criterios antes de comparar modelos | 31 párrafos: 26 de Sala y 5 de Sobrevilla; cinco categorías. Procedencia, desacuerdos y exclusiones conservados; verificador local y 13 controles de alteración aprobados. Sin entrenamiento ni predicciones |
 | Longitud BETO 192 frente a 384 | Aislar max_len con train original y época 2 fija | Comparación local completada: F1 macro externo parcial 0.10000→0.13333; 3→4 aciertos/31. Solo mejora un caso militar; cuatro categorías evaluadas siguen con F1 0. Sin mejora general demostrada ni despliegue |
+| Preparación del lote diverso v3 | Preparar aportes trazables y revisar fronteras del entrenamiento | 231 textos leídos; 31 altas propuestas de cinco obras para cinco ejes; 12 fronteras pendientes de resolver. Corpus intacto, sin entrenamiento ni mejora nueva demostrada |
+| Resolución de fronteras v3 | Cotejar las 12 filas y definir cambios exactos | Contexto recuperado y cuatro dependencias identificadas. Propuesta: nueve unidades y siete cuarentenas; 30 altas previas conservadas, HUN-03B retenido. Simulación 596→589→619 train, sin aplicar ni entrenar |
+| Aplicación y comparación BETO v3 | Medir el paquete de datos con receta fija | Copia local de 619 train y 14 fuentes. Una ejecución: F1 externo parcial 0.13333→0.13333, mismos 4/31 aciertos; tres predicciones cambiaron y siguieron incorrectas. Candidato no seleccionado; producción intacta |
+| Diagnóstico de ajuste BETO en train | Comprobar si las categorías se reconocen en datos conocidos | Dos inferencias locales, sin reentrenar. Candidato: ideas 47/75, participación 68/89 y liderazgos 53/101; externamente siguen en cero. En 560 filas comunes: 426→431 aciertos, pero ideas 36→30. Ajuste parcial y diferencia entre train y desarrollo, sin causa única demostrada |
+| Contraste BETO por obras y épocas | Retener obras completas y contrastar épocas 2 y 3 | Dos trayectorias locales: ideas retenidas O'Phelan 0/28→0/28 y Morán 0/14→0/14. Ideas en fit 34/44→32/44 y 26/61→41/61. La tercera época no resuelve la transferencia; resultado dependiente de la obra, sin selección de modelo |
+| Revisión contrastiva de ideas | Comparar cuatro errores y ocho controles de TRAIN | 12 pasajes completos a 384 tokens. Cortes heredados en O'Phelan; dos controles de ideas y un control social requieren una regla historiográfica uniforme. Morán mantiene etiquetas temáticamente defendibles. Sin cambios de datos, entrenamiento o causa única demostrada |
+| Cierre de frontera historiográfica | Decidir los tres casos señalados con una regla uniforme | Propuesta cerrada: cuarentena de 697/577 y reclasificación de 49 a no_relevante. Simulación 619→617 train, 14 fuentes y evaluación intacta. No aplicada; no demuestra mejora de BETO |
+| Control comparable TF-IDF/BETO | Ejecutar dos ajustes sobre las mismas particiones v3 | Ideas: TF-IDF 1/28 y 5/14 frente a BETO 0/28 y 0/14. Diferencia útil en Morán, mínima en O'Phelan; sin ganador general, causa única ni modelo promovido. Dos ajustes y 21 resúmenes verificados |
+| Ensayo de tasa BETO | Cambiar solo lr2e-5→4e-5 en época 2 | Ideas retenidas: O'Phelan 0/28→0/28, Morán 0/14→3/14. Mejora de ajuste en ambas particiones; criterio conjunto incumplido. Dos trayectorias, 14 resúmenes verificados, sin promoción |
+| Revisión ciega y piloto de siete clases | Revisar unidades con un agente sin etiquetas previas y preparar fuentes reservadas | 12 pasajes de train revisados; 26 candidatos nuevos →22 aceptados y4 apartados. Siete clases,125–229 palabras,166–331 tokens. Revisión IA, sin gold humano ni independencia documental plena; no se ejecutaron modelos |
+| Normalización de pérdida BETO | Corregir el objetivo ponderado sobre el grupo acumulado | Pruebas de gradientes aprobadas y dos entrenamientos completados. Ideas retenidas: O'Phelan 0/28→0/28; Morán 0/14→1/14. Sin mejora suficiente; 14 resúmenes verificados. Variante experimental conservada, sin promoción |
+| Limpieza adjudicada de TRAIN v4 | Aplicar decisiones históricas y medir su efecto con receta fija | 619→613 TRAIN, seis cuarentenas y una reclasificación; 22 controles del agente aprobados. Dos entrenamientos: ideas O'Phelan 0/28→0/28, Morán 1/14→2/14. Criterio incumplido; 18 resúmenes verificados, sin promoción |
+| Capacidad básica y cobertura | Separar memorización, calidad de unidades y variedad de subtemas | BETO aprende 28/28 ejemplos repetidos, con 100 actualizaciones. Revisión de 70 ideas: 30 unidades para revisar; fuentes y subtemas están asociados. Ninguna idea se recorta a 384 tokens. Prioridad: unidades y fronteras coherentes, luego cobertura comparable entre obras; sin mejora de generalización demostrada |
 | Diagnóstico de cobertura | Orientar el siguiente cambio de datos | Concentración por fuente, rasgos de transcripción y fragmentos incompletos identificados. Muestra de 21 filas de train revisada; prioridad: cuatro filas de Villanueva. Sin modificar etiquetas |
 | Límites de Villanueva | Recuperar argumentos cortados entre páginas | Seis unidades delimitadas y cotejadas; dos quedan como contexto. Continuaciones ya presentes en filas 10/637 identificadas. Propuesta local, sin aplicar |
 | Reparación de Villanueva | Preparar un reemplazo sin duplicar continuaciones | Cuatro candidatos revisados, cuatro unidades de contexto y seis originales archivados; V02 ambiguo. Extracción local verificada, dataset sin modificar |
@@ -2105,15 +2118,1174 @@ producción**. Implementación y ejecución local comprobadas; ninguna acción n
 verificación remota de producción en este bloque. Los cambios previos del
 comparador de validación y del informe del control se conservaron.
 
-**Siguiente bloque propuesto:** preparar un lote diverso a partir de la auditoría
-del entrenamiento y del mapa de los seis ejes. Priorizar ejemplos con fronteras
-claras entre instituciones virreinales, ideas políticas y organización republicana,
-sin abandonar participación, economía y guerra; reutilizar las propuestas de
-fuentes ya verificadas. Conservar las ambigüedades y no cambiar etiquetas del
-desarrollo para mejorar la métrica. Esta evaluación ya fue utilizada: evitar
-encadenar ajustes sobre ella y mantener pendiente una prueba final independiente.
-Esperar confirmación de la autora antes de iniciar ese bloque. Se mantienen los
-entregables académicos de las dos unidades.
+La autora confirmó la preparación del lote diverso. Su resultado se registra
+a continuación. El desarrollo externo ya fue utilizado: evitar encadenar ajustes
+sobre él y mantener pendiente una prueba final independiente.
+
+## Preparación del lote diverso v3 — bloque cerrado
+
+Registro: [training-batch-v3.json](../artifacts/reviews/training-batch-v3.json).
+Se prepararon **31 altas de cinco obras, sin incorporarlas al corpus**. Se leyeron
+los textos completos de 231 filas de entrenamiento de la copia reparada v2:
+71 de antecedentes coloniales, 60 de crisis e ideas y 100 de organización
+republicana. Esto cubre esas tres categorías, no los 596 textos ni el contexto
+original completo de cada obra. Las observaciones se vinculan a índices y hashes;
+los recuentos de rasgos de extracción proceden de lectura asistida por IA y no
+equivalen a tasas de etiquetas incorrectas.
+
+La concentración comprobada es alta: Basadre aporta 52/71 textos coloniales;
+O'Phelan y una mesa de historiografía, 47/60 de ideas; Basadre y Orrego, 85/100
+republicanos. Sí hay soberanía, juntas, ciudadanía, fiscalidad y relaciones
+laborales en los textos leídos. Las carencias propuestas distinguen calidad y
+contexto de ausencia: no se declara ausente un tema por una búsqueda de palabras.
+
+La revisión señala **12 filas actualmente coloniales cuya frontera necesita
+contexto y adjudicación**, sin declararlas todas incorrectas ni republicanas.
+El contraste más concreto es HUN-03B, propuesto como organización republicana,
+frente a las filas 559 y 564 de la copia reparada, etiquetadas como antecedentes
+coloniales: los pasajes describen restricciones a personas esclavizadas y normas
+de los primeros años republicanos, incluido el reglamento de octubre de 1825.
+No se ha certificado que reproduzcan el mismo documento primario. Es una tensión
+observable entre etiquetas; no demuestra una causa única del bajo F1.
+
+Las fuentes y unidades propuestas son:
+
+| Obra verificada | Altas | Páginas impresas seleccionadas | Aporte principal | Licencia editorial |
+|---|---:|---|---|---|
+| [Carlos Contreras, 2011](https://revistas.pucp.edu.pe/index.php/historica/article/view/3849) | 4 | 103–104, 111, 125, 127 | Minería colonial, consecuencias económicas y fiscalidad republicana | CC BY 4.0 |
+| [Christine Hünefeldt, 1979](https://revistas.pucp.edu.pe/index.php/historica/article/view/7858) | 2 | 87–88 | Agencia afrodescendiente y regulación de la esclavitud | CC BY 4.0 |
+| [María José Arguedas Pinasco, 2022](https://revistas.pucp.edu.pe/index.php/conexion/article/view/26124) | 1 | 97 | Actuación política de Francisca Zubiaga, con atribuciones conservadas | CC BY 4.0 |
+| [Teodoro Hampe Martínez, 2010](https://bdigital.uncu.edu.ar/8023) | 6 | 82–83, 85–88 | Proyecto monárquico y misiones diplomáticas | CC BY-NC-SA 3.0 |
+| [Luis Daniel Morán, 2019](https://revistas.ucm.es/index.php/HICS/en/article/view/64491) | 18 | 202, 204–208, 210–215 | Prensa, legitimidad política, gobierno provisional y discursos de participación | CC BY 4.0 |
+
+Autoría, publicación, enlaces, páginas, condiciones de reutilización y cambios
+de extracción están registrados por obra y fragmento. Hampe conserva atribución,
+uso no comercial y compartir igual; no se declara una licencia uniforme para el
+corpus. Las citas de terceros conservan su procedencia y sus límites de cotejo.
+Las cartas transmitidas por Burzio y la traducción moderna de Tristán permanecen
+retenidas donde sus condiciones no se resolvieron. Tampoco se incorporan las tres
+cartas diplomáticas previas con licencia pendiente; acceso gratuito no la resuelve.
+
+Se reutilizan siete propuestas anteriores. Para las dos obras nuevas se
+inventariaron 85 unidades: 33 de las secciones 4–6 de Hampe y 52 del cuerpo del
+artículo de Morán. De las 40 unidades de 120–250 palabras, se proponen 24, se
+excluyen ocho por contenido metodológico o argumento incompleto y se retienen
+ocho por ambigüedad, autonomía insuficiente o condiciones de reutilización.
+Las otras 45 no cumplen ese intervalo y no se recortaron para completar una cuota.
+Francisca conserva la excepción nominal previa de 114 palabras de la guía.
+Las lecturas separadas de los candidatos nuevos ocultaron la primera etiqueta;
+los desacuerdos y la adjudicación posterior se conservan. Son revisiones de IA,
+no validación humana independiente.
+
+Distribución propuesta: **1 colonial, 14 ideas, 5 participación social, 0 militares,
+7 liderazgos/proyectos, 4 republicanos y 0 no relevantes**. Se amplían cinco ejes.
+Guerra sigue pendiente de otra obra utilizable: mencionar Suipacha o Guaqui en un
+argumento sobre propaganda no convierte ese párrafo en operaciones militares.
+Las 14 altas de ideas proceden de Morán; no son 14 fuentes independientes.
+Se mantienen juntas las versiones y los documentos citados relacionados al
+diseñar futuras separaciones de datos. Una coincidencia temática no prueba fuga.
+
+Como interpretación pedagógica propia del mapa curricular ya documentado, los
+pasajes permiten comparar exhortación y participación efectiva, proyecto y
+aplicación, y cambios y permanencias después de 1821. Por ejemplo, las propuestas
+fiscales de CON2011-P127 no se presentan como medidas efectivamente ejecutadas.
+Estas preguntas se relacionan con interpretar fuentes, comprender el tiempo
+histórico y elaborar explicaciones en el [programa del MINEDU, pp. 45 y 48](https://www.minedu.gob.pe/curriculo/pdf/programa-curricular-educacion-secundaria.pdf).
+Tercero de secundaria sigue siendo una hipótesis pendiente de confirmación;
+no se adaptó el producto ni se añadieron etiquetas.
+
+Si posteriormente se añadieran las 31 propuestas sin otros cambios, la copia
+reparada pasaría de **596 a 627 filas de train y de 9 a 14 obras/recursos**.
+Basadre conservaría sus 244 filas: su peso bajaría del 40,94 % al 38,92 %.
+La diversificación es limitada y no resuelve por sí sola la concentración ni
+la cobertura regional. Esta es una proyección, no un dataset creado; las futuras
+reparaciones podrían modificarla. Las 31 altas son distintas de las 31 filas del
+desarrollo externo.
+
+Comprobaciones locales: 31 textos y hashes contrastados con sus registros de
+origen; 231 observaciones enlazadas al entrenamiento; extracción de las dos obras
+nuevas reproducida y páginas seleccionadas cotejadas visualmente. El examen de
+los 47 candidatos elegibles y reutilizados realizó 77 973 comparaciones mecánicas
+contra referencia, copia reparada y desarrollo externo, más 1 081 pares internos:
+sin alertas por igualdad, inclusión textual o los umbrales de similitud registrados.
+Eso no certifica independencia documental. Los 31 seleccionados caben en 384
+tokens; 23 superan 192, medidos con el tokenizador local sin inferencia.
+El control separado del consolidado aprobó 29 comprobaciones y verificó los 12
+archivos protegidos antes de editar este plan; después, los otros 11 permanecen
+intactos. Validación, test y desarrollo externo no cambiaron. No se utilizaron
+textos o predicciones de evaluación para adjudicar las altas. Se conserva la
+incidencia de exposición accidental de líneas de revisión del desarrollo durante
+una búsqueda demasiado amplia; no se presenta el proceso como completamente ciego.
+
+**Implementado:** propuesta y registro de revisión. **Probado localmente:**
+integridad, procedencia y comprobaciones anteriores. Sin entrenamiento, nuevas
+predicciones, métricas ni mejora nueva demostrada; ninguna acción o verificación
+en producción. El último contraste de longitud continúa mostrando solo un acierto
+adicional en una evaluación pequeña ya utilizada. No se concluye que los
+hiperparámetros sean la causa del problema. La validación original sigue limitada
+a una fuente y reutilizada; el desarrollo externo tampoco es una prueba final.
+
+Los textos propuestos, decisiones y trazabilidad quedan en el JSON versionable.
+PDF completos, páginas, imágenes, auxiliares y el control de cierre permanecen
+locales en `outputs/training-batch-v3/`, excluidos de Git; repetir todo el cotejo en
+otro equipo requiere recuperarlos. Los cambios previos del comparador y del
+control de reproducción no forman parte de este bloque.
+
+La autora confirmó la resolución de las fronteras. La propuesta de cambios y sus
+consecuencias se registran a continuación; no se han aplicado al entrenamiento.
+
+## Resolución de fronteras v3 — propuesta cerrada, sin aplicar
+
+Registro: [boundary-resolution-v3.json](../artifacts/reviews/boundary-resolution-v3.json).
+Se cotejaron las 12 filas con sus páginas originales. Cuatro filas adicionales
+contienen partes de los mismos argumentos: **298, 560, 561 y 763**. El mapa
+abarca, por tanto, 16 originales; no equivale a 16 etiquetas demostradas incorrectas.
+Los índices corresponden a `outputs/corpus-snapshot-v2/reviewed-export.json`.
+Los hashes permiten identificarlos también en el entrenamiento de la referencia
+congelada, donde están los 16 textos originales.
+
+El tema queda adjudicado para la propuesta en nueve de las 12 filas: siete
+republicanas, una social/regional y una de ideas. Las otras tres —548, 556 y 558—
+requieren conservar la incertidumbre o separar unidades de distinto foco. La
+adjudicación temática no significa que el texto actual sea apto sin reparación.
+Una segunda lectura ocultó etiquetas anteriores y primera propuesta; se conservan
+sus desacuerdos. Dos límites finales se comprobaron después con la propuesta
+visible. Todas son revisiones asistidas por IA, no validación humana experta.
+
+La propuesta concreta es sustituir ocho textos y reclasificar nueve filas, dejando
+otras siete temporalmente fuera de **una futura copia local**. Ninguna se convierte
+en `no_relevante`; los originales, restos y alternativas permanecen archivados.
+
+| Posición futura | Unidad propuesta | Palabras | Etiqueta propuesta y motivo |
+|---:|---|---:|---|
+| 68 | PER-R68-RURAL | 225 | Social/regional: propiedad y actividades rurales; el padrón de 1826 es evidencia, no una regla automática para etiquetar |
+| 69 | PER-R69-DEC | 159 | Republicana: consecuencias agrarias desiguales de guerra y rebelión, con la reserva de Huertas conservada |
+| 552 | BAS-552 | 134 | Republicana: ministerios y representación exterior como estructura administrativa de 1828 |
+| 556 | BAS-556 | 138 | Republicana: estimaciones demográficas y crítica explícita al uso de cifras de 1795; conserva la tabla necesaria |
+| 558 | BAS-558-social | 208 | Social/regional: reclutamiento y posición ocupacional de grupos; recupera también material de 763 |
+| 560 | BAS-558-norma | 126 | Republicana: servicios personales, ciudadanía y tutela indígena; reúne la norma de 558 con su continuación en 560 |
+| 562 | BAS-562 | 181 | Republicana: integración de extranjeros y comercio; texto exactamente idéntico, solo cambia la etiqueta propuesta |
+| 564 | BAS-564 | 185 | Republicana: disposiciones favorables a hacendados y su justificación económica atribuida, sin presentar esta como opinión del revisor |
+| 565 | BAS-565 | 133 | Ideas: regalismo, jansenismo y circulación de impresos en 1825/1833; separa la cita inicial cortada |
+
+Las posiciones **298, 532, 548, 559, 561, 763 y 765** se proponen para cuarentena
+en esa copia. Algunos contenidos se recuperan en la tabla; otros quedan retenidos.
+El mapa conserva el coste de cobertura: enumeración territorial, inventario naval,
+partes sobre situación indígena, alimentación/vestido de personas esclavizadas y
+otros contextos no se trasladan íntegramente a las nueve unidades. Los 16 originales
+suman 3 231 palabras; las nueve unidades, 1 489. Esa diferencia no mide hechos
+históricos perdidos y no autoriza a declarar ausentes sus temas en todo el corpus.
+
+El cotejo de esclavitud resolvió la frontera temática y detectó reservas concretas:
+
+- 559 comienza con el final de una memoria de **1846** cuya atribución y fecha
+  quedaron fuera del fragmento. Además, el reglamento continúa en 561 antes de
+  llegar a 564; unir únicamente los dos extremos perdería contenido.
+- La [transcripción de Núria Sales, 1970, pp. 328–331](https://bibliotecadigital.inah.gob.mx/janium/Documentos/IPGH/REHIAM_00_0070_1970_P279.pdf)
+  identifica una disposición del Consejo de Gobierno fechada el **14/10/1825**;
+  su nota 72 cita la *Gaceta* del **16/10**. Basadre dice «publicado» el 14.
+  No se corrige silenciosamente la diferencia ni se afirma haber cotejado la Gaceta original.
+- HUN-03B queda **retenido**, aunque su tema republicano esté confirmado: no se
+  demostró una ratificación de la Junta el día 14 ni que su resumen sobre
+  manumisión corresponda a una cláusula del reglamento. El registro anterior de
+  31 propuestas se conserva intacto; ahora se proponen **30 altas**, sin ese texto.
+
+Otras reservas quedan delimitadas: el párrafo de 298 mezcla una referencia a los
+primeros diez años del XIX con bienios posteriores; el recorte limpio de 548 tiene
+119 palabras y no recibe una excepción. Los pasajes de 532 y 765 contienen la
+denominación «Constitución de 1827», mientras que el [texto oficial del Congreso](https://www3.congreso.gob.pe/Docs/sites/webs/constitucion/constituciones/Constitucion1828.pdf)
+con ese preámbulo corresponde a 1828. Se retienen las versiones completas hasta
+documentar cómo presentar esa diferencia. El cierre de 765 sí está en el impreso:
+no se inventa continuación. Su autora citada es **Pilar García Jordán**, 1993,
+pp. 53–54, reproducida en la página 234 del libro; no atribuir automáticamente
+todo el PDF a Basadre.
+
+Se identificó la edición local de Basadre: e-book de noviembre de 2014, Cantabria,
+ISBN 978-612-306-354-2, con derechos reservados en PDF 28. El [capítulo oficial de
+Pereyra, 2016](https://repositorio.pucp.edu.pe/items/f2c23330-ffb6-453e-94d4-295186c63316/full)
+coincide con el PDF local y declara **CC BY-NC-ND 2.5 PE**. El registro versionable
+conserva decisiones, límites y huellas; los pasajes reconstruidos completos siguen
+en `outputs/boundary-resolution-v3/`. No se declara autorizada la redistribución
+del corpus adaptado ni se emite una conclusión jurídica sobre pesos futuros.
+
+| Escenario simulado; ninguno aplicado | Train | Colonial | Ideas | Social | Militar | Proyectos | Republicana | No relevante |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| Copia reparada v2 actual | 596 | 71 | 60 | 83 | 87 | 94 | 100 | 101 |
+| Nueve unidades y siete cuarentenas | 589 | 56 | 61 | 84 | 87 | 94 | 106 | 101 |
+| Lo anterior más las 30 altas propuestas | 619 | 57 | 75 | 89 | 87 | 101 | 109 | 101 |
+
+Comprobado localmente: originales y ubicaciones, reconstrucción mediante offsets
+y cambios de formato explícitos, particiones de Pereyra y ocho páginas de Basadre
+cotejadas visualmente. Las nueve unidades cumplen 120–250 palabras. El control
+mecánico realizó 7 731 comparaciones contra las filas que se conservarían, el
+desarrollo externo y las 30 altas, más 36 pares entre unidades: sin alertas con
+los umbrales registrados. Las coincidencias con los originales retirados están
+documentadas como dependencias, no ocultadas como ausencia de duplicados.
+La simulación conserva exactamente las otras 798 filas y su orden relativo,
+incluidas las 81 de validación y las 137 de test. El desarrollo externo de 31
+filas permanece intacto; sus textos y etiquetas no se interpretaron para decidir.
+El control separado del consolidado aprobó 40 comprobaciones, con cero fallos.
+Verificó los 13 archivos protegidos antes de actualizar este plan y los otros 12
+intactos después; `git diff --check` pasó. Su informe queda localmente en
+`outputs/boundary-resolution-v3/closing-check.json`.
+
+**Implementado:** adjudicación y mapa exacto de cambios. **Probado localmente:**
+extracción, integridad y simulación. No se creó un dataset nuevo, no se aplicaron
+etiquetas ni se entrenó; no hay métricas nuevas ni mejora de BETO demostrada.
+Ninguna acción o verificación en producción. Este paquete cambia conjuntamente
+textos, etiquetas y cantidad: su comparación futura no aislará automáticamente
+la contribución de cada componente ni demostrará una causa única del bajo F1.
+
+**Propuesta aprobada y ejecutada en el bloque siguiente:** aplicar este mapa a
+una copia local, incorporar separadamente las 30 altas y fijar el protocolo antes
+de una sola comparación local de BETO con referencia y receta constantes. La
+pregunta será si el paquete de datos mejora el resultado; no añadir búsquedas de
+semilla, longitud o función de pérdida. El desarrollo ya utilizado dará evidencia
+exploratoria; test no elegirá el candidato y sigue pendiente una prueba final
+independiente. Se mantienen el periodo, las siete etiquetas, tercero de secundaria
+como hipótesis y los entregables académicos de ambas unidades.
+
+## Aplicación y comparación BETO v3 — bloque cerrado
+
+**No hubo mejora en el desarrollo externo:** F1 macro de cinco clases
+**0.13333→0.13333**, con los mismos **4/31 aciertos**. Se conserva la referencia;
+el candidato queda local y no se selecciona para producción.
+[Protocolo previo](../artifacts/experiments/beto-data-v3/protocol.json),
+[aplicación](../artifacts/experiments/beto-data-v3/application.json) y
+[resultados y comprobaciones](../artifacts/experiments/beto-data-v3/report.json).
+
+La copia `outputs/corpus-snapshot-v3/reviewed-export.json` contiene 619 train,
+81 validación y 137 test. Sobre v2 se aplicaron nueve sustituciones/reclasificaciones,
+siete cuarentenas y 30 altas de cinco obras; HUN-03B continúa retenido. Las 798
+filas ajenas al mapa conservaron contenido y orden relativo; las 218 de evaluación
+son idénticas también a la referencia original. Hay 14 fuentes en train, frente
+a nueve. Se conservaron originales, procedencia y un duplicado heredado; no se
+introdujeron duplicados exactos normalizados en las unidades cambiadas.
+
+La comparación incluye **todo el paquete**, también las reparaciones v2:
+560 filas coinciden exactamente en fuente/texto/etiqueta con el train original;
+36 originales ya no coinciden y 59 filas del candidato son nuevas o cambiadas.
+No permite atribuir el resultado a una corrección, fuente o hiperparámetro.
+
+Se reutilizaron pesos y predicciones de BETO de 384 tokens sobre train de 596 filas. El candidato
+partió de BETO base con revisión fijada, semilla 42, AdamW, tasa `2e-5`, longitud 384,
+microbatch 2 y acumulación 8; checkpoint de época 2 con horizonte de tres épocas.
+La fórmula de pesos inversos por clase y la normalización por microbatch se
+conservaron. Por aumentar las filas, el horizonte pasó de 114 a 117 pasos y los
+intentos de 76 a 78: hubo 77 actualizaciones y un salto AMP. Entrenamiento local
+offline de 69.39 s, sin reentrenar la referencia ni seleccionar épocas nuevas.
+
+| Categoría evaluada | Soporte | F1 antes | F1 después |
+|---|---:|---:|---:|
+| Campañas y conflictos militares | 4 | 0.66667 | 0.66667 |
+| Crisis e ideas emancipadoras | 17 | 0 | 0 |
+| Liderazgos, diplomacia y proyectos | 2 | 0 | 0 |
+| Organización y consecuencias republicanas | 2 | 0 | 0 |
+| Participación social y regional | 6 | 0 | 0 |
+
+Sala mantuvo 2/26 aciertos y Sobrevilla 2/5. Solo cambiaron SAL-P001/P022/P041,
+de antecedentes coloniales a organización republicana; los tres eran de ideas
+y continuaron incorrectos. Las predicciones fueron militares 8→8, coloniales 11→8
+y republicanas 12→15; las otras categorías no se predijeron en estos 31 ejemplos.
+Eso es un patrón comprobado, **no una explicación causal**. La pérdida de train
+bajó de 1.78024 a 1.18979; esa reducción no demuestra generalización.
+
+**Verificación local:** seis pruebas del constructor, seis del aislamiento del
+runner y doce controles independientes del resultado con scikit-learn aprobados;
+26 entradas congeladas intactas. No se hicieron nuevas predicciones de validación
+original ni test, ni acciones o verificaciones en producción. Los 31 externos ya
+se reutilizaron, proceden de dos obras relacionadas, solo cubren cinco clases y
+su revisión asistida por IA no es validación humana independiente. Estos resultados
+no son comparables directamente con el F1 original 0.43766 de otra validación.
+Corpus completo, originales, contextos y pesos permanecen en `outputs/`, fuera de
+Git; reproducir el bloque requiere esas entradas locales y sus permisos específicos.
+
+**Propuesta aprobada y ejecutada en el bloque siguiente:** usar los checkpoints
+existentes para comprobar si ideas, participación y liderazgos también fallan en
+train. Ese diagnóstico medirá ajuste al entrenamiento, no calidad final; ayudará
+a distinguir un problema de aprendizaje de uno de transferencia entre fuentes.
+Sin nuevos entrenamientos ni ajuste de etiquetas por predicción. La evaluación
+final independiente de siete clases sigue pendiente.
+
+Comandos para registrar este bloque y las dos revisiones previas aún pendientes
+(no incluyen el comparador modificado previamente por la autora, PDFs ni pesos):
+
+```powershell
+git add -- coursework/README.md scripts/build_training_batch_v3.py scripts/compare_beto_data_v3.py artifacts/reviews/training-batch-v3.json artifacts/reviews/boundary-resolution-v3.json artifacts/experiments/beto-data-v3/protocol.json artifacts/experiments/beto-data-v3/application.json artifacts/experiments/beto-data-v3/report.json
+git commit -m "Evalua lote historico v3 de BETO con protocolo fijo"
+```
+
+## Diagnóstico de ajuste BETO en train — bloque cerrado
+
+**BETO reconoce parcialmente las siete categorías en entrenamiento**, incluidas
+las tres sin aciertos externos. Se usaron los dos checkpoints guardados de época 2
+y longitud 384; no se entrenó ni cambió ningún modelo.
+[Script](../scripts/diagnose_beto_training_fit.py),
+[protocolo previo](../artifacts/experiments/beto-training-fit-v1/protocol.json) y
+[resultado auditado](../artifacts/experiments/beto-training-fit-v1/report.json).
+
+| Categoría | Referencia: aciertos en su train | Candidato: aciertos en su train | Externo, ambos modelos |
+|---|---:|---:|---:|
+| Crisis e ideas | 37/59 | 47/75 | 0/17 |
+| Participación social y regional | 67/83 | 68/89 | 0/6 |
+| Liderazgos, diplomacia y proyectos | 49/93 | 53/101 | 0/2 |
+
+En sus respectivos entrenamientos, la referencia obtuvo 450/596 aciertos y F1
+macro de siete clases 0.74478; el candidato, 475/619 y 0.76029. **Son poblaciones
+distintas:** esa diferencia no demuestra mejora. El candidato aún falla en 28
+de las 75 ideas y 48 de los 101 liderazgos de su propio entrenamiento.
+
+El contraste sobre **las mismas 560 filas** (559 identidades distintas y un
+duplicado heredado) pasó de 426 a 431 aciertos y F1 macro de 0.74967 a 0.75415.
+Corrigió 28 errores e introdujo 23. Ideas bajó de 36/56 a 30/56 aciertos;
+participación, de 65/79 a 62/79; liderazgos subió de 48/92 a 49/92.
+El informe conserva también precisión, recall, F1, confusiones y resultados por obra.
+
+Las 30 incorporaciones obtuvieron 21 aciertos; entre ellas, las ideas de Morán
+obtuvieron 13/14. Las otras 29 filas exclusivas del candidato, procedentes de
+reparaciones o reclasificaciones en fuentes anteriores, obtuvieron 23 aciertos.
+Son ejemplos que el candidato ya vio al entrenar: **no miden generalización**.
+
+El hallazgo es ajuste incompleto a train y una diferencia marcada con las dos
+obras externas evaluadas. No prueba por sí solo memorización, sobreajuste, un
+problema de extracción, etiquetas equivocadas o hiperparámetros incorrectos.
+No corresponde cambiar etiquetas por predicción ni elegir más épocas con esta
+evidencia. El F1 externo de cinco clases permanece en 0.13333 y no se compara
+directamente con los macros de siete clases de train.
+
+**Implementado y probado localmente:** 1 215 predicciones en dos cargas de modelo,
+23.17 s de ejecución; siete controles previos y doce comprobaciones independientes
+con scikit-learn aprobadas, 26 entradas congeladas intactas. Se reutilizaron las
+métricas externas guardadas; no hubo inferencia nueva externa, de validación
+original o test, ni acciones o verificaciones en producción. Las predicciones
+por fila y la auditoría completa están en `outputs/beto-training-fit-v1/`;
+el informe versionable referencia sus hashes y evita copiar textos del corpus.
+
+**Propuesta confirmada y ejecutada en el bloque siguiente:** evaluar generalización
+por obras completas dentro de TRAIN, declarando grupos, comparación y coste local
+antes de ejecutar. Se reutiliza el diagnóstico previo entre fuentes, sin barrido
+de hiperparámetros ni más ajustes sobre los 31 externos. La evaluación final
+independiente de siete clases sigue pendiente; se mantienen el periodo,
+la taxonomía y los entregables académicos.
+
+Comandos adicionales para este diagnóstico. Si el bloque anterior sigue sin
+registrar, ejecutar también su comando `git add` antes del commit:
+
+```powershell
+git add -- coursework/README.md scripts/diagnose_beto_training_fit.py artifacts/experiments/beto-training-fit-v1/protocol.json artifacts/experiments/beto-training-fit-v1/report.json
+git commit -m "Diagnostica ajuste de BETO en train sin reentrenar"
+```
+
+## Contraste BETO por obras y épocas — bloque cerrado
+
+La autora confirmó ejecutar el contraste propuesto tras la auditoría independiente
+del diagnóstico de ajuste. Pregunta: **¿las ideas se reconocen al excluir una obra
+completa y mejora ese reconocimiento al completar la tercera época?** No se
+busca un modelo ganador ni se vuelve a ajustar sobre los 31 externos.
+
+La revisión documental de TRAIN cambió la primera partición antes de entrenar:
+Huamanga/Pereyra cita y utiliza O'Phelan (1985) en pp. 173, 188 y 189 (filas
+74, 78 y 276 del snapshot v3, índices base cero); la bibliografía en fila 352
+identifica el artículo exacto.
+Se retienen las dos obras juntas, conservando O'Phelan como resultado primario.
+Morán conserva todas sus unidades y documentos primarios reproducidos juntos.
+El rastreo de coincidencias no certifica independencia documental exhaustiva;
+la revisión es asistida por IA, no adjudicación humana independiente.
+
+| Ronda | Filas para aprender | Obras retenidas | Resultado primario |
+|---|---:|---|---|
+| O'Phelan + Huamanga | 459 | O'Phelan: 103 y Huamanga: 57 | Ideas de O'Phelan: 28; Huamanga se informa aparte |
+| Morán | 601 | Morán: 18 | Ideas de Morán: 14 |
+
+Se conserva TRAIN v3 de 619 filas, textos, etiquetas, orden relativo y las siete
+clases. Dos inicializaciones desde BETO base fijado, semilla 42, AdamW lr 2e-5,
+decay 0.01, max_len 384, microbatch 2, acumulación 8, clipping 1, checkpointing y
+AMP float16. La CE ponderada conserva la media por microbatch y normalización
+por grupo real. Pesos inversos calculados exclusivamente con las filas para
+aprender de cada ronda. Horizontes de tres épocas: 87/114 pasos nominales y
+calentamiento 8/11; se registran actualizaciones efectivas y saltos AMP.
+
+Cada trayectoria guarda **épocas 2 y 3**, sin reiniciar optimizador, scheduler o
+escalador y sin inferencia entre épocas. El entrenador histórico queda intacto;
+una variante se comprueba contra él mediante módulos sintéticos en CPU. Esa
+comprobación no certifica igualdad numérica CUDA. Tras entrenar se evalúan ambos
+guardados sobre exactamente las mismas filas de fit y las obras retenidas.
+
+Decisión previa: aumentos estrictos de aciertos de ideas en fit y en la obra
+primaria, en ambas rondas, serían señal exploratoria de aprendizaje adicional
+con transferencia. Si ambas mejoran fit sin aumentar aciertos primarios,
+persiste la dificultad de transferencia. Otros patrones son inconclusos o
+dependientes de la obra. Se acompañan aciertos/recall de precisión, F1 y
+confusiones por clase y obra; macro solo sobre etiquetas con soporte declarado.
+No se mezclan macros con diferentes soportes ni se elige época por resultados.
+
+Coste previsto: 3–6 minutos de ejecución local y aproximadamente 1.8 GB para cuatro
+checkpoints, aparte de preparación y verificaciones. Un fallo se registra y
+detiene la ejecución, sin reintentar entrenamientos automáticamente. Protocolo,
+hashes, particiones y dependencias se congelan antes del primer entrenamiento
+en `artifacts/experiments/beto-source-epochs-v1/protocol.json`; pesos y
+predicciones quedan locales en `outputs/beto-source-epochs-v1/`.
+
+Los dos grupos son un diagnóstico de TRAIN elegido con evidencia previa,
+no evaluación final independiente. Excluir obras cambia cantidad, composición,
+pesos y calendario: no aísla estilo, calidad de etiquetas ni memorización.
+Completar una época solo contrasta ese intervalo de aprendizaje. Validación
+original, test y externos no reciben inferencia; no se cambian datos o etiquetas,
+producción, servicios de pago ni Git.
+
+**Resultado verificado:** completar la tercera época no produjo ningún acierto
+nuevo de ideas en las dos obras primarias retenidas. La dificultad observada no
+queda limitada a Sala/Sobrevilla: también aparece en estos grupos de TRAIN.
+No se ha demostrado una causa única ni que todas las recetas o duraciones
+posibles fallen. El estado predeclarado es `inconclusive_or_work_dependent`,
+porque ideas en fit mejora en una ronda y baja en la otra.
+
+| Medida pareada | Época 2 | Época 3 |
+|---|---:|---:|
+| Ideas en fit, ronda O'Phelan–Huamanga | 34/44 | 32/44 |
+| Ideas retenidas, O'Phelan | 0/28 | 0/28 |
+| Ideas retenidas, Huamanga (secundario) | 0/3 | 0/3 |
+| Ideas en fit, ronda Morán | 26/61 | 41/61 |
+| Ideas retenidas, Morán | 0/14 | 0/14 |
+| Todos los aciertos retenidos, O'Phelan | 34/103 | 37/103 |
+| Todos los aciertos retenidos, Huamanga | 27/57 | 27/57 |
+| Todos los aciertos retenidos, Morán | 2/18 | 2/18 |
+
+El macro de O'Phelan, con siete clases presentes, pasó de 0.21880 a 0.24036.
+El de Morán, con tres clases presentes, pasó de 0.18095 a 0.18462, aunque
+conservó los mismos dos aciertos. No se comparan esos macros entre obras.
+En fit, el macro de siete clases subió en ambas rondas (0.75094→0.77364 y
+0.72718→0.79509); eso no demuestra transferencia de ideas. En época 3, las
+ideas de O'Phelan se confundieron sobre todo con participación y organización
+republicana (11 casos cada una); las de Morán, con liderazgos (9 de 14).
+Estas confusiones describen predicciones, no adjudican etiquetas.
+
+Se ejecutaron exactamente dos trayectorias desde la base, cuatro guardados y
+2 476 predicciones exclusivamente de TRAIN, en 223.51 s de ejecución medidos.
+O'Phelan–Huamanga: 79.33 s de entrenamiento, 86 actualizaciones y un salto AMP;
+Morán: 100.91 s, 114 actualizaciones y cero saltos. Máximo CUDA: 2.22 GB
+asignados y 2.42 GB reservados; cuatro checkpoints y tokenizadores: 1.76 GB.
+Las cifras usan GB decimales. No hubo reintentos de entrenamiento.
+
+Pasaron 12 controles sintéticos sobre el código final, incluida equivalencia
+bit a bit con el entrenador histórico en épocas 2 y 3, y el recálculo separado
+con scikit-learn de 68 resúmenes de métricas. Se comprobaron 114 archivos por
+hash, las 2 476 identidades de predicción, los contadores y tasas del scheduler,
+los pesos de clase y las 218 filas originales de evaluación intactas.
+
+Evidencias: [protocolo previo](../artifacts/experiments/beto-source-epochs-v1/protocol.json),
+[resultados](../artifacts/experiments/beto-source-epochs-v1/report.json) y
+[recálculo verificable](../artifacts/experiments/beto-source-epochs-v1/verification.json).
+Implementación: `scripts/beto_epoch_trajectory.py`,
+`scripts/compare_beto_source_epochs.py`, `scripts/check_beto_source_epochs.py`
+y `scripts/verify_beto_source_epochs.py`. Los corpus, pesos y predicciones
+siguen locales; reproducir requiere las entradas protegidas disponibles.
+Los runners rechazan sobrescrituras o repetir este experimento ya existente.
+
+No se seleccionó época ni modelo; no se cambiaron datos, etiquetas, checkpoints
+anteriores o producción. Validación original, test y los 31 externos no
+recibieron nuevas predicciones. Se conservan los cambios previos de la autora
+en `scripts/compare_beto_validation.py`. Bloque terminado; se espera
+confirmación antes de iniciar otro contraste.
+
+## Revisión contrastiva de ideas — bloque cerrado
+
+La autora confirmó revisar 12 pasajes sin reentrenar ni cambiar etiquetas:
+cuatro errores retenidos (dos por obra), cuatro ideas acertadas en fit y cuatro
+ejemplos acertados de las clases confundidas. «Acertado» significa coincidencia
+con la etiqueta guardada, no certificación histórica.
+
+Selección congelada antes de leer los pasajes: en época 2, las dos confusiones
+más frecuentes por obra; un error de cada grupo por hash con semilla 42. Para
+cada error, el control léxico más próximo de ideas y el de la clase confundida,
+ambos acertados en fit de la misma ronda, sin repetir ninguna de las 12 filas.
+La similitud de conjuntos de palabras solo sirve para seleccionar controles.
+
+Pregunta limitada: coherencia de tema dominante entre obras, presencia del
+argumento en la entrada real de 384 tokens y ejemplos comparables encontrados
+en entrenamiento. Se reutilizan revisiones existentes vinculadas por hash.
+El contenido completo, recorte exacto y contexto quedan locales. Se comprobó
+que los IDs y máscaras coinciden con `_loader`, además de pertenencia y hashes.
+
+No es una muestra ciega ni representativa, no estima una tasa de errores y no
+demuestra ausencia temática en todo TRAIN. Es revisión asistida por IA, no
+validación histórica humana independiente. La conclusión distinguirá problemas
+concretos de anotación, recorte o cobertura pendiente; si no discrimina causas,
+lo declarará. Test, validación original y externos quedan fuera del análisis.
+
+**Resultado:** los 12 segmentos tienen entre 167 y 286 tokens, incluidos los
+especiales, y entran completos en 384. Aumentar la ventana no mostraría texto
+adicional en estos casos; no se extrapola esta conclusión a todo el corpus.
+
+| Error retenido, índice de snapshot v3 | Lectura contrastiva |
+|---|---|
+| O'Phelan 127 → participación | Facciones radical/moderada y regionalismo: ideas es compatible, con frontera social. La unidad comienza y termina cortada y mezcla notas; el PDF permite recuperar contexto |
+| O'Phelan 194 → organización republicana | Programa fiscal de La Paz en 1809, con efectos sociales; el parecido fiscal con Contreras 1821–1826 no basta para cambiar la etiqueta. Inicio amputado y antecedente ausente |
+| Morán 826 → liderazgos | Plan explícito de circulación clandestina del Diario Secreto de 1811. La revisión previa respalda ideas y conserva las elipsis y la lectura impresa «va que» |
+| Morán 820 → organización republicana | Crisis de 1808, juntas y propaganda Buenos Aires–Lima: argumento autónomo y etiqueta ideas respaldada por revisiones previas |
+
+Los índices son base cero. Los cortes observados en O'Phelan ya pertenecen al
+segmento del corpus: **no los causa el tokenizador**. Se consultó la capa textual
+de las páginas PDF 10–12 y 33–34, sin incorporar texto ni certificar visualmente
+anomalías del impreso. Esos cortes no explican por sí solos los dos errores de
+Morán, cuyos argumentos pertinentes están visibles.
+
+Los controles de ideas 697 y 577 son discusión/preguntas historiográficas y ya
+habían sido señalados en el diagnóstico F03. BETO coincide con sus etiquetas,
+pero eso no certifica su adecuación. El control social 49 también discute método
+historiográfico: necesita la misma regla de pertinencia. No se propone convertir
+automáticamente esos tres casos en `no_relevante`, excluir toda historiografía
+moderna o descartar textos por proceder de video.
+
+La cobertura temática general existe: el control 242 contiene juntas y autonomía
+en fit de la ronda Morán. Además, HUE02/03/04, previamente revisados por propaganda,
+lecturas políticas y prensa, conservan sus hashes y pertenecen a fit en ambas
+rondas. Se reutilizaron sus dictámenes sin ampliar la lectura de la muestra.
+Los vecinos léxicos seleccionados son débiles contrastes semánticos; no demuestran
+ausencia de subtemas en todo TRAIN. Cobertura fina y representación aprendida
+siguen sin aislarse causalmente.
+
+**Verificación:** nueve controles finales aprobados, 127 archivos únicos
+comprobados por hash, 12 identidades y roles confirmados, y coincidencia exacta
+de entradas mediante `_loader` y una comprobación separada con `tokenizers`.
+Se vinculó revisión previa por hash exacto para 10 de los 12 textos. Las 218
+filas originales de evaluación permanecen idénticas. La exportación inicial
+falló por serializar `BatchEncoding`; se convirtió a diccionario y se verificó
+que las 12 selecciones y roles no cambiaron. El cotejo usa el ID real de `[PAD]`
+del vocabulario BETO, 1, sin asumir el valor 0.
+
+Evidencia: [selección congelada](../artifacts/reviews/beto-ideas-contrast-v1-selection.json),
+[revisión de los 12 pasajes](../artifacts/reviews/beto-ideas-contrast-v1.json) y
+[comprobaciones locales](../outputs/beto-ideas-contrast-v1/verification.json).
+Preparador: `scripts/prepare_beto_ideas_contrast.py`; textos, contexto y auxiliares
+permanecen en `outputs/beto-ideas-contrast-v1/`, excluidos de Git. No se entrenó,
+no se cargó un clasificador ni se generaron predicciones nuevas. Datos, etiquetas,
+modelos anteriores y cambios previos de la autora quedaron intactos.
+
+**Decisión confirmada y preparada en el bloque siguiente:** formular una regla
+uniforme y cerrar los casos 697/577/49, sin ampliar taxonomía ni aplicar cambios.
+Los casos 127/194 quedan separados como reparaciones de unidades: no combinar
+ambas intervenciones en otro paquete sin un contraste definido.
+
+## Control comparable TF-IDF frente a BETO por obras
+
+La autora autorizó dos ajustes locales de TF-IDF con el corpus v3 intacto de
+619 filas de train. Se reutilizan exactamente las particiones congeladas del
+contraste BETO: O'Phelan y Huamanga retenidos juntos (459 fit, 160 retenidos,
+103 de O'Phelan como resultado principal), y Morán (601 fit, 18 retenidos).
+Se conserva TF-IDF de palabras y bigramas, C=4, semilla 42, una CPU y la función
+existente `fit_tfidf`. Vocabulario y clasificador se ajustan solo con cada fit.
+
+Antes de ejecutar: época 2 de BETO como referencia; época 3 secundaria, sin
+seleccionar época. Se medirán aciertos, F1 macro sobre clases presentes y sobre
+las siete clases, confusiones por categoría y errores corregidos/nuevos sobre
+las mismas filas. Los resultados de fit serán únicamente descriptivos.
+Si TF-IDF aumenta aciertos de ideas y F1 macro de clases presentes en ambas
+obras principales, se investigará la receta/representación de BETO. Si ambos
+métodos siguen sin acertar ideas en ambas obras, se priorizarán datos entre
+obras y evaluación revisada independientemente antes de ajustar hiperparámetros.
+Los demás resultados se considerarán mixtos, sin ganador. Son señales
+exploratorias, no pruebas causales ni evaluación independiente final.
+
+Las tres correcciones historiográficas permanecen como propuesta. No se
+reentrena BETO ni se predice sobre validación, test o los 31 ejemplos externos.
+El bloque termina después de dos ajustes y la verificación, sin nuevas variantes.
+Protocolo y resultados: `artifacts/experiments/tfidf-beto-work-control-v1/`;
+modelos y predicciones locales: `outputs/tfidf-beto-work-control-v1/`.
+
+**Resultado ejecutado y verificado:** exactamente dos ajustes, convergencia
+sin advertencias (25 y 35 iteraciones). El tiempo de ajuste y predicción registrado
+fue 0.80 y 1.06 segundos, sin incluir importaciones y verificaciones de archivos.
+
+| Obra principal retenida | Modelo | Aciertos totales | Aciertos de ideas | F1 macro de clases presentes |
+|---|---|---|---|---|
+| O'Phelan | BETO época 2 | 34/103 | 0/28 | 0.218804 |
+| O'Phelan | BETO época 3, secundaria | 37/103 | 0/28 | 0.240361 |
+| O'Phelan | TF-IDF C=4 | 34/103 | 1/28 | 0.220198 |
+| Morán | BETO época 2 | 2/18 | 0/14 | 0.180952 |
+| Morán | BETO época 3, secundaria | 2/18 | 0/14 | 0.184615 |
+| Morán | TF-IDF C=4 | 7/18 | 5/14 | 0.425439 |
+
+O'Phelan tiene soporte en siete clases; Morán solo en tres. Los F1 macro de
+siete clases para Morán son 0.077551, 0.079121 y 0.182331, respectivamente.
+No comparar el F1 entre obras como si tuvieran la misma distribución.
+TF-IDF corrige cinco errores de BETO en Morán sin introducir otros; en O'Phelan,
+frente a época 2, corrige 15 e introduce 15. Participación en O'Phelan cae de
+13/18 a 5/18 aciertos, mientras liderazgos permanece en 2/21. Por ello, recuperar
+un caso de ideas no representa una mejora uniforme de categorías.
+En Huamanga, resultado secundario, TF-IDF acierta 23/57 frente a 27/57 de BETO
+en ambas épocas; ideas permanece en 0/3. El agregado retenido O'Phelan–Huamanga
+es 57/160 para TF-IDF frente a 61/160 y 64/160 para BETO.
+
+La regla congelada produce `signal_to_investigate_beto_recipe_or_representation`:
+ideas y F1 aumentan frente a época 2 en ambas obras principales. **Su umbral
+era cualquier incremento positivo, no una diferencia estadística ni útil por
+definición.** En O'Phelan el F1 sube apenas 0.001394 y no supera época 3;
+la señal relevante se concentra en Morán. No se declara superioridad general
+de TF-IDF ni un defecto demostrado del entrenamiento BETO.
+
+TF-IDF acierta todos sus ejemplos de fit (459/459 y 601/601), mientras BETO
+mantiene ajuste parcial. Esto demuestra que esta representación puede separar
+las etiquetas de entrenamiento; no demuestra que sean correctas ni que TF-IDF
+generalice bien. Las diferencias incluyen representación, optimización y
+longitud visible: TF-IDF usa el texto completo; BETO conserva máximo 384 tokens.
+No se ha aislado cuál explica las diferencias observadas.
+
+**Decisión de modelamiento:** cerrar este control sin otro entrenamiento ni
+promoción. Hay señal aprendible en algunos casos que la receta actual de BETO
+no recupera; tampoco basta cambiar a TF-IDF para resolver la transferencia.
+El siguiente ensayo, si se autoriza, deberá aislar una sola intervención del
+ajuste BETO con criterio fijado antes de ejecutarlo; estas obras reutilizadas
+solo servirán como desarrollo. La selección final sigue necesitando evaluación
+independiente y revisada, con las siete clases. No se justifica otro barrido
+indefinido ni aplicar las tres correcciones como supuesta solución causal.
+
+Verificación: 21 resúmenes recalculados con scikit-learn, 1 238 filas de
+predicciones alineadas, 2 476 identidades BETO cotejadas, pares de errores
+verificados y las 218 filas de validación/test idénticas. Protocolo, entradas
+heredadas y cuatro archivos de salida protegidos por hash. El primer intento
+de guardar el protocolo detectó que faltaba crear la carpeta; se corrigió antes
+de congelarlo y antes de cualquier ajuste. No hubo entrenamiento repetido.
+Evidencia: [protocolo](../artifacts/experiments/tfidf-beto-work-control-v1/protocol.json),
+[resultados](../artifacts/experiments/tfidf-beto-work-control-v1/report.json) y
+[verificación](../artifacts/experiments/tfidf-beto-work-control-v1/verification.json).
+
+## Ensayo de una variable BETO: tasa de aprendizaje
+
+La autora autorizó el contraste mínimo posterior. Pregunta: ¿duplicar la tasa
+de aprendizaje mejora el ajuste y la transferencia de ideas en época 2?
+Se cambia únicamente `lr=2e-5` a `4e-5`, una intervención predefinida, no una
+tasa óptima conocida. La motivan el ajuste parcial BETO y los casos de Morán
+recuperados por TF-IDF; esto no demuestra que la tasa anterior fuera incorrecta.
+
+Se conservan las dos particiones del corpus v3, datos y orden, semilla 42,
+base/revisión offline, 384 tokens, ponderación y normalización de pérdida,
+AdamW, acumulación y horizonte de tres épocas del scheduler. Se usa el mismo
+entrenador ya verificado, sin modificarlo; se detiene en época 2 y se compara
+con las predicciones existentes de época 2. Se registran los saltos AMP y
+actualizaciones efectivos, que pueden diferir por la trayectoria numérica.
+
+Criterio congelado antes de entrenar: al menos dos aciertos adicionales de
+ideas en **cada** obra principal retenida, sin descenso de F1 macro de siete
+clases en ninguna de ellas y sin descenso de aciertos de ideas en ninguno de
+los dos fit. Si solo mejora ideas en ambos fit pero no en las obras, se informa
+mejor ajuste sin transferencia. Los demás casos no satisfacen el criterio o
+dependen de la obra. El umbral es exploratorio, no significación estadística
+ni calidad suficiente para uso automático.
+
+Se ejecutarán exactamente dos trayectorias nuevas, una por partición, sin
+repetir la referencia, sin tercera época ni otras tasas. No se aplican las
+tres correcciones ni se infiere sobre validación/test/desarrollo externo.
+El bloque termina con resultados, verificación y decisión, sin promover modelo.
+Evidencia: `artifacts/experiments/beto-learning-rate-v1/`; pesos y predicciones
+locales: `outputs/beto-learning-rate-v1/`.
+
+**Ejecución completada:** dos trayectorias nuevas y dos checkpoints de época 2;
+1 238 predicciones sobre filas del train original, con función fit/retenido
+conservada por partición. Tiempo total registrado 167.85 segundos; entrenamiento
+54.69 y 68.77 segundos. Pico CUDA: 2 219 309 568 bytes asignados y
+2 422 210 560 reservados. Se usaron solo los pesos y dependencias locales.
+
+| Partición y resultado | Referencia lr2e-5 | Intervención lr4e-5 |
+|---|---|---|
+| Fit sin O'Phelan–Huamanga: aciertos / ideas | 346/459; 34/44 | 373/459; 35/44 |
+| Fit sin Morán: aciertos / ideas | 448/601; 26/61 | 509/601; 51/61 |
+| O'Phelan retenido: aciertos / ideas | 34/103; 0/28 | 37/103; 0/28 |
+| O'Phelan: F1 macro de siete clases | 0.218804 | 0.217740 |
+| Morán retenido: aciertos / ideas | 2/18; 0/14 | 5/18; 3/14 |
+| Morán: F1 macro de siete clases | 0.077551 | 0.124013 |
+| Morán: F1 macro de sus tres clases presentes | 0.180952 | 0.289364 |
+
+El F1 macro de fit sube 0.750937→0.811986 y 0.727182→0.839640.
+La mayor tasa mejora el ajuste en ambas particiones y recupera tres ideas
+retenidas de Morán; no resuelve ideas en O'Phelan. En esa obra, liderazgos
+baja 2/21→0/21 y participación 13/18→11/18, por lo que más aciertos totales
+no implica mejora uniforme. Huamanga, secundaria, sube 27/57→29/57 aciertos
+y permanece en 0/3 ideas; el conjunto retenido O'Phelan–Huamanga pasa de
+61/160 a 66/160 aciertos, con 0/31 ideas en ambos modelos.
+
+**Decisión congelada: `criterion_not_met_or_work_dependent`.** Se incumplen
+en O'Phelan tanto el incremento mínimo de ideas como la ausencia de caída
+de F1. No se selecciona ni despliega el candidato. La respuesta al ajuste
+sí aporta evidencia: algunos errores de Morán responden a esta intervención;
+no se puede atribuir todo el fallo a textos imposibles de aprender. Tampoco
+se demuestra que la tasa original explique todo el problema, que las etiquetas
+sean correctas o que esta tasa sea óptima. Una sola semilla y obras reutilizadas
+no permiten una conclusión general ni una afirmación de significación.
+
+Contadores efectivos hasta época 2: O'Phelan–Huamanga 58 actualizaciones y
+0 saltos en ambos modelos; Morán 76/0 en la referencia y 75/1 en el candidato.
+El salto antiguo de O'Phelan mencionado durante el progreso pertenecía a la
+tercera época, fuera de este contraste. En Morán hubo un salto en época 2
+del candidato; no se afirma igualdad de pasos efectivos. Solo se cambió una
+variable configurada, pero la trayectoria AMP y el scheduler por actualización
+pueden responder a ese cambio. Se conservaron normalización de pérdida,
+pesos por clase, semilla, tokenizadores y el resto de la receta.
+
+Verificación final aprobada: cinco controles de la regla antes de entrenar,
+14 resúmenes recalculados con scikit-learn, 1 238 identidades alineadas,
+99 entradas protegidas y 18 archivos nuevos comprobados por hash. Se verificaron
+mapeos de etiquetas, tokenizadores, pesos de clases, contadores y tasas del
+scheduler. Las 218 filas de validación/test permanecen idénticas y no se
+realizó inferencia sobre ellas ni sobre los 31 ejemplos externos. La guía,
+el corpus real y las tres correcciones propuestas permanecen intactos.
+
+**Siguiente decisión, sin ejecución adicional:** detener el barrido de
+hiperparámetros. La evidencia identifica sensibilidad al ajuste y transferencia
+dependiente de la obra; no exige descubrir una causa única para avanzar.
+Priorizar ahora una revisión independiente de unidades completas y fronteras
+entre ideas, participación y liderazgos en obras distintas, junto con una
+evaluación nueva que cubra las siete categorías. Separar desde el inicio las
+obras destinadas a enriquecer train de las destinadas a evaluación. Las
+predicciones actuales sirven para señalar casos a revisar, nunca como gold
+automático. BETO permanece como asistencia con revisión, sin calidad autónoma
+demostrada. No se autorizó ni ejecutó en este bloque otra intervención de datos.
+
+Evidencia: [protocolo](../artifacts/experiments/beto-learning-rate-v1/protocol.json),
+[resultados](../artifacts/experiments/beto-learning-rate-v1/report.json) y
+[verificación](../artifacts/experiments/beto-learning-rate-v1/verification.json).
+
+## Contraste de capacidad básica y cobertura temática
+
+Ante la pregunta de la autora sobre fuentes, entrenamiento o categorías,
+se separan dos hipótesis: incapacidad básica para aprender las etiquetas y
+cobertura insuficiente al cambiar de obra. El agente revisa los 70 TRAIN de
+ideas por subtema y fuente, sin predicciones. Se auditan concentración por
+fuente, longitud real del tokenizador e identidades de entrada a 384 tokens.
+La asociación entre fuente y etiqueta es descriptiva; no prueba por sí sola
+que BETO use atajos.
+
+La prueba técnica usa una sola trayectoria del BETO fijado, con cuatro textos
+PDF por clase (28), entradas distintas, 120–250 palabras y sin truncamiento.
+La selección es determinista por hash, prioriza diversidad de fuentes y no
+consulta predicciones. Repite el pequeño conjunto durante 50 épocas y un
+máximo de 100 intentos de actualización, con lr 2e-5 y pérdida por grupo
+acumulado. Se guarda únicamente la época 50 y se mide sobre esos mismos 28
+textos. El criterio previo es 28/28; no hay prolongación adaptativa.
+
+Esta prueba admite memorizar etiquetas equivocadas: no certifica calidad
+histórica ni generalización. Tampoco recomienda 50 épocas para el corpus
+completo. Pasarla limitaría la hipótesis de una incapacidad básica del modelo
+y del entrenamiento bajo ese presupuesto; fallarla exigiría revisar la
+optimización antes de añadir datos indiscriminadamente. La distinción entre
+optimización y generalización también se estudia en
+[Mosbach et al., ICLR 2021](https://arxiv.org/abs/2006.04884); sus resultados
+en GLUE no demuestran la causa de este proyecto.
+
+**Resultado: BETO aprendió los 28/28 textos repetidos**, cuatro por cada una
+de las siete clases. Realizó 100 actualizaciones y cero omisiones AMP. La
+[verificación](../artifacts/experiments/beto-learning-sanity-v1/verification.json)
+recalculó matriz y F1 con scikit-learn, comprobó las 28 identidades, 185
+entradas protegidas y nueve archivos generados. El presupuesto de repetición
+es distinto del ensayo por obras: pasar este control no demuestra que dos
+épocas del corpus completo basten ni descarta problemas más sutiles.
+
+La auditoría del TRAIN v4 muestra lo siguiente:
+
+| Evidencia | Resultado | Interpretación limitada |
+|---|---|---|
+| Longitud de ideas | 0/70 superan 384 tokens | Aumentar longitud no recuperaría texto truncado de esas unidades |
+| Longitud total | 2/613 superan 384: índices v4 146 y 514 | Los recortes restantes no están en ideas |
+| Entradas idénticas del tokenizador | Una pareja con la misma etiqueta militar; ninguna contradicción | No aparece un conflicto de etiquetas causado por entradas exactamente iguales |
+| Concentración militar | 70/87 ejemplos de un único PDF | Cantidad de textos no equivale a diversidad de fuentes |
+| Concentración colonial | 40/57 del mismo PDF | Cobertura desigual entre fuentes |
+| Concentración republicana | 64/109 del mismo PDF | Concentración descriptiva, no prueba de un atajo usado por BETO |
+| Ideas por fuentes | 70 textos de seis resourceId; 56 de tres de ellos | Algunos problemas históricos dependen de una sola obra |
+
+Como control descriptivo, predecir la clase mayoritaria de la fuente usando
+las etiquetas de sus otras filas alcanza 234/613, frente a 109/613 al usar
+solo la mayoría global. Este cálculo usa información de la misma fuente;
+no se presenta como rendimiento en fuentes nuevas ni como competidor de BETO.
+
+El agente leyó las 70 unidades de ideas sin consultar predicciones. Su
+[inventario](../artifacts/reviews/beto-root-cause-v1/ideas-coverage-review.json)
+distingue 40 argumentos sustantivos, 15 fragmentarios, siete mixtos, siete
+predominantemente metahistoriográficos y uno que requiere revisar alcance
+temporal. Estas categorías descriptivas **no son nuevas etiquetas del modelo**.
+Los [30 casos para revisión](../artifacts/reviews/beto-root-cause-v1/review-queue.json)
+no son 30 errores de etiqueta demostrados. Tampoco los otros 40 constituyen
+gold humano confirmado. Se verificaron hashes, extractos literales, las 70
+identidades, seis resúmenes por fuente y siete tablas de cobertura por clase.
+
+Dos vacíos concretos se observan entre esas 70 ideas: al retirar O'Phelan y
+Huamanga faltan equivalentes desarrollados de legitimidad inca, programas
+regionales de juntas y Cádiz en litigios indígenas. Al retirar Morán quedan
+otros ejemplos de prensa, pero se pierde su circuito manuscrito clandestino
+de 1811 y ciertas polémicas antijuntistas. Por tanto, los contrastes anteriores
+cambian simultáneamente fuente y subtema; no aíslan exclusivamente estilo.
+Ausencia aquí no significa ausencia en todas las otras clases del corpus.
+
+El cotejo posterior con predicciones ya guardadas da 0/8 en los argumentos
+O'Phelan inventariados como sustantivos y 2/14 en Morán. No hubo nueva
+inferencia. Esta selección es exploratoria y no valida sus etiquetas; impide
+dar por probado que todos los errores desaparezcan al retirar fragmentos.
+
+**Prioridad técnica elegida:** estabilizar ejemplos y fronteras de ideas frente
+a participación social y liderazgos, y luego cubrir los mismos subtemas con
+obras distintas. La regla sigue siendo el argumento dominante: difusión y
+legitimidad de ideas; agencia y coaliciones sociales; actuación y proyectos
+de dirigentes. Mencionar un líder o una junta no decide automáticamente.
+Los casos sin dominancia o unidad suficiente necesitan contexto o cuarentena,
+sin inventar una octava clase.
+
+El siguiente contraste mínimo se acota a la cola de 30 unidades: cotejar
+originales, resolver dominancia y continuidad sin mirar predicciones y fijar
+las sustituciones antes de entrenar. No aplicar exclusiones masivas basadas
+solo en el inventario. Después se define un lote de cobertura con los mismos
+problemas en otras obras y se controla dependencia documental. No hay una
+cantidad mágica de textos ni evidencia suficiente para reemplazar BETO,
+fusionar clases o recomendar más épocas indiscriminadamente. La estabilidad
+entre semillas y el presupuesto del corpus completo siguen sin resolverse.
+
+No se modificaron datos o etiquetas en este bloque ni se usó evaluación
+original, externo 31, piloto 22 o producción. Evidencias:
+[cobertura cuantitativa](../artifacts/reviews/beto-root-cause-v1/quantitative-coverage.json),
+[protocolo de memorización](../artifacts/experiments/beto-learning-sanity-v1/protocol.json),
+[resultado](../artifacts/experiments/beto-learning-sanity-v1/report.json) y
+[runner](../scripts/diagnose_beto_learning_sanity.py).
+
+## Limpieza adjudicada de TRAIN y comparación controlada v4
+
+La autora solicitó continuar tras el ensayo de normalización. Se retomó la
+revisión histórica pendiente y se aplicaron decisiones en una copia separada,
+sin convertir predicciones del clasificador en etiquetas.
+
+El agente cotejó cuatro unidades PDF con los originales locales de O'Phelan
+y Orrego: siete páginas inspeccionadas visualmente y una adicional en texto.
+La fila 643 se conserva porque contiene un argumento fiscal autónomo; sus
+porcentajes OCR siguen sin corregirse y no deben citarse como datos fiables.
+Las filas 127, 194 y 242 se apartan por cortes sustantivos de argumentos y
+notas intrusivas. La anomalía verbal sobre papeles de deuda de 194 también
+existe en el impreso; no se inventó un verbo para completarla.
+
+También se apartan los videos 577, 675 y 697 por cortes y transcripción sin
+audio/minutaje verificable. La fila 49 cambia de participación social a
+`no_relevante` para esta tarea: desarrolla metodología historiográfica y no
+un argumento histórico sustantivo del periodo, según las revisiones previas.
+No se reclasifican como negativos los fragmentos inciertos.
+
+La [copia v4](../outputs/corpus-snapshot-v4/reviewed-export.json) contiene
+613 TRAIN, 81 validación y 137 test. Se conservan siete clases y 14 fuentes;
+830 filas originales permanecen idénticas, una cambia solo de etiqueta y
+seis se archivan en cuarentena. Ningún texto fue editado. El [informe de construcción](../artifacts/reviews/beto-training-cleanup-v1/build-report.json)
+y la [verificación](../artifacts/reviews/beto-training-cleanup-v1/build-verification.json)
+registran cada correspondencia. Es una limpieza de unidades seleccionadas,
+asistida por IA, no una certificación humana del corpus completo.
+
+Antes de entrenar se declara una sola comparación del paquete de datos contra
+los checkpoints guardados de `beto-loss-normalization-v1`, manteniendo pérdida
+por grupo acumulado, lr 2e-5, semilla 42, 384 tokens, época 2 y horizonte de
+scheduler de 3. Las particiones tienen 456 y 595 ejemplos de ajuste. Pesos de
+clase y orden aleatorio dependen de la nueva población: no se atribuirá el
+resultado a una exclusión individual.
+
+La comparación principal conserva las mismas obras completas y etiquetas:
+103 textos de O'Phelan y 18 de Morán. La evaluación secundaria excluye las tres
+unidades O'Phelan apartadas, de manera idéntica para ambos modelos; no decide
+el ganador. Las métricas de ajuste usan los mismos supervivientes y la etiqueta
+corregida de 49 para ambas predicciones. Se comprobó antes de entrenar que las
+métricas principales guardadas se reproducen exactamente.
+
+Criterio exploratorio: al menos dos aciertos adicionales de ideas en cada
+obra principal, sin caída de F1 macro de siete clases ni de ideas en el ajuste
+común. Máximo dos trayectorias y dos checkpoints; no se utilizan validación,
+test, externo 31 ni piloto 22 para entrenar o evaluar. Las obras de TRAIN se
+han reutilizado: sus resultados no son evaluación independiente.
+
+**Resultado: copia y comparación completadas; criterio de mejora incumplido.**
+
+| Obra principal | Ideas, referencia → v4 | Total correcto, referencia → v4 | F1 macro de siete clases, referencia → v4 |
+|---|---|---|---|
+| O'Phelan | 0/28 → 0/28 | 33/103 → 33/103 | 0.21397 → 0.20330 |
+| Morán | 1/14 → 2/14 | 3/18 → 4/18 | 0.09048 → 0.10931 |
+
+La referencia de esta tabla ya emplea la normalización corregida; no es el
+modelo histórico anterior ni el ensayo de tasa. En los mismos supervivientes
+de ajuste, O'Phelan/Huamanga pasa de 313/456 a 329/456 aciertos, pero ideas
+baja de 34/42 a 33/42. En la ronda Morán, ideas mejora de 28/56 a 47/56,
+mientras el total baja de 441/595 a 431/595. No se confunde este ajuste a
+textos conocidos con capacidad para clasificar obras excluidas.
+
+El subconjunto secundario de O'Phelan sin las tres unidades apartadas mantiene
+0/25 ideas y 33/100 aciertos en ambos modelos; F1 macro 0.21522→0.20505.
+Huamanga pasa de 31/57 a 30/57. Por tanto, ni filtrar las unidades problemáticas
+de la evaluación secundaria elimina el problema observado.
+
+Se ejecutaron dos trayectorias, dos checkpoints y 1 238 predicciones en
+150.48 segundos. Pico CUDA: 2 219 310 592 bytes asignados. La ronda
+O'Phelan/Huamanga realizó 58 actualizaciones, cero omisiones AMP, frente a
+56 y dos de referencia. Morán mantiene 76 y cero en ambas. El paquete cambia
+la composición, los pesos derivados y la trayectoria numérica; este ensayo
+no separa sus efectos causales individuales.
+
+La [verificación de métricas](../artifacts/experiments/beto-training-cleanup-v1/verification.json)
+recalculó 18 resúmenes con scikit-learn y comprobó identidades, exclusión por
+fuente, mapas de clases, tokenizadores, scheduler y decisión. El agente
+recomputó [22 controles de aplicación del dataset](../artifacts/reviews/beto-training-cleanup-v1/dataset-peer-check.json),
+todos aprobados, sin consultar predicciones. La copia y las decisiones quedan
+conservadas; no se sustituye el modelo servido. El piloto 22 continúa sin
+inferencias ni uso para ajustar modelos.
+
+Conclusión limitada: estas seis exclusiones y una reclasificación no resuelven
+el rendimiento entre obras. El resultado no invalida sus motivos históricos
+ni demuestra que el resto del corpus esté bien segmentado o etiquetado.
+Se cierra esta comparación; no se encadenan más hiperparámetros automáticamente.
+
+[Protocolo previo](../artifacts/experiments/beto-training-cleanup-v1/protocol.json),
+[informe](../artifacts/experiments/beto-training-cleanup-v1/report.json),
+[Decisiones](../artifacts/reviews/beto-training-cleanup-v1/adjudication.json),
+[cotejo del agente](../artifacts/reviews/beto-training-cleanup-v1/context-review.json),
+[constructor](../scripts/build_beto_training_cleanup.py) y
+[runner](../scripts/compare_beto_training_cleanup.py).
+
+## Corrección experimental de la pérdida ponderada de BETO
+
+La autora autorizó modificar el entrenamiento si la revisión lo justificaba.
+Se identificó una diferencia matemática concreta: promediar las pérdidas
+ponderadas de microbatches de 2 no equivale a normalizar por los pesos de todos
+los ejemplos del grupo acumulado de hasta 16. La variante conserva los mismos
+pesos inversos por clase y divide cada suma parcial por la suma de pesos del
+grupo real. Esto corrige la equivalencia del objetivo; su efecto predictivo
+todavía debe medirse. La definición de referencia es la
+[entropía cruzada ponderada de PyTorch](https://docs.pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html).
+
+Implementación separada en [beto_effective_batch_loss.py](../scripts/beto_effective_batch_loss.py),
+sin modificar entrenadores históricos. El [preflight](../outputs/beto-loss-normalization-v1-preflight.json)
+pasó 7 comprobaciones: pérdida y gradientes, clases mezcladas y microbatches
+homogéneos, grupos incompletos, invariancia al escalado de pesos, orden/RNG y
+comparación del entrenamiento CPU completo contra lotes físicos de 16 sin
+dropout. No demuestra equivalencia bit a bit con CUDA/AMP/dropout.
+
+Antes de entrenar se declara una única intervención: normalización de pérdida,
+manteniendo lr 2e-5, semilla 42, 384 tokens, 2 épocas con horizonte del scheduler de 3,
+los mismos 619 TRAIN y los dos grupos por obra. Se compara contra las predicciones
+guardadas de la referencia en época 2. Criterio exploratorio: al menos 2 aciertos
+adicionales de ideas en cada obra principal, sin caída de F1 macro de siete
+clases en ninguna ni de aciertos de ideas dentro del ajuste. Máximo dos nuevas
+trayectorias y dos checkpoints; no se hacen predicciones sobre validación,
+test, externo 31 o piloto 22. No se selecciona ni publica automáticamente un modelo.
+
+**Resultado: comparación completada; criterio de mejora incumplido.**
+
+| Obra principal excluida del ajuste | Ideas, anterior → corregida | Total correcto, anterior → corregida | F1 macro de siete clases, anterior → corregida |
+|---|---|---|---|
+| O'Phelan | 0/28 → 0/28 | 34/103 → 33/103 | 0.21880 → 0.21397 |
+| Morán | 0/14 → 1/14 | 2/18 → 3/18 | 0.07755 → 0.09048 |
+
+En los datos usados para ajustar, ideas pasa de 34/44 a 36/44 y de 26/61 a
+33/61, respectivamente. Sin embargo, los aciertos totales del primer ajuste
+bajan de 346/459 a 317/459; en el segundo permanecen en 448/601. Huamanga,
+fuente secundaria retenida junto con O'Phelan, pasa de 27/57 a 31/57; sus
+3 casos de ideas siguen sin aciertos. El pequeño cambio agregado del grupo
+O'Phelan/Huamanga no cumple el criterio de la obra principal.
+
+Se ejecutaron dos trayectorias, dos checkpoints y 1 238 predicciones locales
+en 140.21 segundos. Pico CUDA: 2 219 310 592 bytes asignados. La primera
+trayectoria realizó 56 actualizaciones frente a 58 de referencia, con dos
+omisiones de AMP; la segunda mantuvo 76 y cero omisiones. Las omisiones
+son una consecuencia numérica registrada, no otra configuración elegida;
+impiden afirmar igualdad de actualizaciones efectivas en la primera ronda.
+
+La [verificación](../artifacts/experiments/beto-loss-normalization-v1/verification.json)
+recalculó 14 resúmenes con scikit-learn, alineó las 1 238 predicciones y comprobó
+148 entradas protegidas, 18 archivos generados, etiquetas, tokenizadores,
+scheduler y decisión. Las 218 filas originales de evaluación y el piloto
+adicional permanecen intactos. No se ejecutó inferencia sobre el piloto.
+
+Conclusión limitada: corregir esta normalización no basta para resolver la
+clasificación entre obras bajo la receta probada. No demuestra que BETO sea
+incapaz ni identifica una causa única. Se conserva la variante experimental
+y su evidencia; no se sustituye el modelo servido ni se encadenan más ajustes
+automáticos. La revisión histórica sigue señalando unidades que necesitan
+contexto antes de poder usarse como etiquetas de referencia fiables.
+
+Evidencia: [protocolo previo](../artifacts/experiments/beto-loss-normalization-v1/protocol.json),
+[informe](../artifacts/experiments/beto-loss-normalization-v1/report.json),
+[runner](../scripts/compare_beto_loss_normalization.py) y
+[pruebas](../scripts/check_beto_effective_batch_loss.py).
+
+## Revisión ciega con agente y piloto adicional de siete clases
+
+La autora autorizó preparar el siguiente bloque y aclaró que no dispone de
+revisor humano: pidió crear un agente experto. Se realizó una revisión separada
+asistida por IA, con etiquetas iniciales y predicciones ocultas al agente.
+Esto atiende la modalidad autorizada, pero no se presenta como historiador
+humano, independencia estadística entre revisores ni cumplimiento del objetivo
+de revisión humana descrito en la guía. La guía y el corpus v3 no cambiaron.
+
+**Entrenamiento:** el agente revisó los 12 textos exactos del contraste previo,
+con identificadores aleatorios y sin etiquetas, rol error/control ni resultados.
+Coincidió con la etiqueta existente en 8/12; marcó cinco utilizables y siete
+con necesidad de contexto. La concordancia con etiquetas existentes no mide
+la exactitud de esas etiquetas. Confirmó el contenido de ideas en Morán
+820/826, el liberalismo de Basadre560 y organización en Contreras809.
+Para Fonseca49 propuso `no_relevante` por su foco metodológico, coincidiendo
+con la propuesta anterior. Marcó577 ambiguo y mantuvo697 como ideas pero con
+contexto pendiente. Propuso participación para194/242, ambos cortados, por
+beneficiarios sociales y autonomía regional. No se aplicaron esos cambios:
+las diferencias deben resolverse sobre unidades completas, no por votación IA.
+También señaló contexto pendiente en643 y675. Ninguno de estos textos sirve
+como nueva evaluación: todos permanecen asociados a las obras de TRAIN.
+
+**Fuentes nuevas reservadas antes de segmentar:** cuatro artículos de acceso
+abierto, con declaración editorial CC BY4.0 archivada, PDF y páginas originales:
+
+- [Choque Mariño2024: visita de Arica1793–1796](https://revistas.pucp.edu.pe/index.php/historica/article/view/31098).
+- [Escanilla Huerta2023: impacto de Cádiz1812–1823](https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26980).
+- [Guarisco2023: espacio político indígena1821–1822](https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26981).
+- [Alvarado Luna2023: deserciones y logística1820–1822](https://revistas.pucp.edu.pe/index.php/revistaira/article/view/26983).
+
+Se seleccionaron 26 candidatos sin consultar predicciones. Los párrafos se
+conservaron completos; se recuperaron las continuaciones de Castilla y de dos
+unidades de Guarisco entre páginas, separando expresamente notas al pie del
+cuerpo. Los tres controles bibliográficos son secuencias de entradas completas.
+No se escribió prosa histórica sintética ni se añadieron frases para aclarar
+referentes. Se cotejaron visualmente las 27 páginas seleccionadas mediante
+PDFium5.13.0, instalado solo en `outputs/independent-review-v1/vendor/`.
+La captura PDF remota había fallado; se usaron los PDF locales descargados.
+
+La lectura visual detectó tres rangos numéricos que la unión de guiones de línea
+había concatenado:66–67,26–27 y1817–1822. Se restauraron esos guiones y las
+separaciones espurias en Reserva, conservar, servicio, sirvió y Tomo I/II/III.
+Son siete textos,11 reglas de reemplazo y12 ocurrencias efectivas. Originales,
+versiones corregidas y hashes permanecen archivados. El agente comprobó que
+estas correcciones no alteraban sus etiquetas ni su juicio de usabilidad.
+No se normalizaron nombres, fechas históricas o erratas sustantivas por conjetura.
+
+**Revisión nueva:** primera propuesta IA registrada antes de enviar26textos al
+agente en orden mezclado, sin etiquetas iniciales ni cuotas. Segunda revisión
+del100% del lote, con acceso al contexto original cuando fue necesario.
+Acuerdo inicial22/26 (84.6%), Cohen kappa0.81944. Es acuerdo entre dos procesos
+asistidos por IA en una muestra pequeña e intencional; no fiabilidad humana ni
+prueba de exactitud, y no se interpreta por clase con estos soportes mínimos.
+El agente declaró que, al inspeccionar la estructura de dos archivos de páginas,
+vio accidentalmente sus primeras páginas/títulos/resúmenes. No vio claves ni
+predicciones, pero no se afirma ceguera perfecta respecto de metadatos de fuente.
+
+Adjudicación: E12 pasa de participación a ideas por evaluar recepción de soberanía;
+E19 yE20 pasan de liderazgos a militar por predominio de capitulación, mandos,
+reclutamiento y operaciones. Se conserva la propuesta inicial y el motivo de
+aceptar la lectura del agente. E08 queda apartado: ideas y agencia indígena
+admiten dos lecturas sustantivas. E02/E04/E07 también se apartan por contexto
+temporal o referentes ausentes en el texto exacto, aunque el cotejo de páginas
+permita aclararlos al lector. No se exige una fecha numérica a toda unidad;
+se juzga si la ambigüedad del referente afecta a la clasificación de ese texto.
+
+| Categoría | Ejemplos aceptados |
+|---|---:|
+| Campañas y conflictos militares | 6 |
+| Contexto colonial y antecedentes | 2 |
+| Crisis e ideas emancipadoras | 3 |
+| Liderazgos, diplomacia y proyectos | 2 |
+| No relevante | 4 |
+| Organización y consecuencias republicanas | 2 |
+| Participación social y regional | 3 |
+| **Total** | **22** |
+
+El objetivo orientativo de cuatro por clase no se fuerza: hay carencias y
+desbalance explícitos. Los22aceptados tienen125–229 palabras y166–331tokens
+con el tokenizador local BETO; todos caben en384sin truncamiento. No se cargó
+un clasificador ni se obtuvieron predicciones para medirlo. Las cuatro unidades
+apartadas están en un archivo separado, no como octava clase o negativos.
+
+**Límite documental encontrado:** Escanilla cita expresamente enp125 el artículo
+de Sala2011 ya utilizado en desarrollo externo y también Guarisco2011. Los tres
+artículos RIRA pertenecen al mismo dosier; se conservan como un grupo relacionado.
+Alvarado utiliza Miller en otros pasajes de la obra, familia documental presente
+en TRAIN, aunque los párrafos de cuerpo seleccionados no lo citan. No se equipara
+una cita bibliográfica con copia automática de todo el artículo, ni se afirma
+independencia por ausencia de coincidencias textuales. Por eso el archivo queda
+congelado como **piloto adicional**, no prueba final plenamente independiente.
+La comprobación de los26textos no detectó coincidencias contiguas normalizadas
+de8o20palabras con las619filas de train. No se usaron textos ni métricas de
+validación/test para elegir ejemplos. Tampoco se releyeron los31textos externos
+para seleccionarlos; su relación se identificó en la bibliografía nueva.
+
+**Resultado concreto:** [dataset del piloto](../artifacts/datasets/evaluation-pilot-v2.json),
+[informe](../artifacts/reviews/independent-review-v1/report.json),
+[adjudicaciones](../artifacts/reviews/independent-review-v1/adjudication.json),
+[cuarentenas](../artifacts/reviews/independent-review-v1/quarantine.json),
+[revisión de train](../artifacts/reviews/independent-review-v1/training-review.json),
+[dependencias](../artifacts/reviews/independent-review-v1/dependency-review.json) y
+[verificación](../artifacts/reviews/independent-review-v1/verification.json).
+Para lectura directa, [paquete con22textos, fuentes y dictámenes](../outputs/independent-review-v1/revision-piloto.md).
+La selección ciega original y las páginas completas permanecen locales.
+
+Comprobaciones:38identidades de revisión,26textos únicos, siete etiquetas con
+soporte,22aceptados y4apartados,131entradas protegidas porhash, coincidencias
+entre claves y dictámenes y conservación de619train y218validación/test.
+La [revisión final del agente](../artifacts/reviews/independent-review-v1/final-peer-check.json)
+pasó23comprobaciones sin fallos: reconstruyó correspondencias, conteos, hashes
+y acuerdo inicial. La auditoría del cruce contrain y de ausencia de ejecuciones
+la contrastó con los certificados disponibles; no la repitió de forma autónoma.
+No se entrenó, no se evaluó ningún modelo y no se modificó producción ni Git.
+Las tres correcciones previas siguen propuestas, sin aplicación al corpus.
+
+El bloque termina con el piloto y la revisión solicitada. Si se utiliza después,
+debe informarse como desarrollo adicional con referencia IA, mostrando soporte,
+matriz de confusión y resultados por obra. No sustituye una evaluación final
+independiente: siguen faltando amplitud de fuentes, más casos por categoría,
+variedad1830–1842 y revisión humana. La fuente de evaluación nunca se recicla
+como enriquecimiento de train por haber fallado el modelo. No se inicia otro
+experimento automáticamente.
+
+## Cierre de la frontera historiográfica — propuesta terminada
+
+La autora pidió resolver los casos con criterio experto. Se cerraron las tres
+decisiones sobre los textos exactos y se preparó un contrato de aplicación con
+hash de entrada, identidades y acciones permitidas. Es una decisión metodológica
+asistida por IA; no validación humana independiente ni diagnóstico causal de BETO.
+
+**Regla propuesta:** etiquetar la afirmación dominante sobre actores, ideas,
+relaciones, estructuras o procesos de 1780–1842. Un autor moderno, una comparación
+de interpretaciones o un video pueden desarrollar un argumento histórico válido.
+Si domina cómo se escribe la historia, el método del investigador o la moderación,
+sin una afirmación histórica sustantiva del periodo, proponer `no_relevante`
+para esta tarea. Si cortes o referentes sin atribución impiden decidir, apartar
+la unidad incierta en vez de convertirla en negativo. No se exige una fecha
+numérica ni un nombre propio por sí solos; se conservan siete clases.
+
+| Índice en snapshot v3, base cero | Decisión propuesta para el texto exacto | Fundamento |
+|---|---|---|
+| 697 | Cuarentena, conservando original y etiqueta ideas | Pregunta historiográfica con comienzo dependiente y cierre abierto; mezcla con explicación del liberalismo. Sin audio/minutaje local recuperado, no es un positivo ni un negativo seguro |
+| 577 | Cuarentena, conservando original y etiqueta ideas | Construcción de precursores y referentes sin atribución suficiente. La acción sobre esta ventana queda cerrada; readmitir exigiría una unidad completa con nuevo hash |
+| 49 | Cambiar solo participación a `no_relevante` | Crítica metodológica de relatos y categorías de historiadores. La p.113 de Fonseca confirma que el análisis de participación y el relato de 1820 se anuncian y comienzan después del segmento |
+
+La decisión 49 aplica una aclaración de pertinencia que la guía no explicitaba
+por completo; no se presenta como error objetivamente demostrado por una métrica.
+El pasaje conserva valor historiográfico y se archiva como contexto académico.
+La misma regla conserva ideas en Morán 826/820 y no propone cambiar liderazgos
+en 675: este último sí desarrolla relaciones políticas Riva Agüero–San Martín–
+Bolívar, aunque se refiera a historias nacionales. No se excluye toda una fuente.
+Los cortes de O'Phelan 127/194 no forman parte de estas tres acciones.
+
+**Simulación en memoria, no aplicada:** 617 train, 81 val, 137 test; 14 fuentes.
+616 filas de train permanecen idénticas; se apartan dos y se cambia una etiqueta,
+sin reemplazar texto. Ideas 75→73, participación 89→88, no_relevante 101→102;
+las demás clases no cambian. Supervivientes y evaluación conservan su orden.
+El corpus real continúa con 619 train y la guía congelada sigue intacta.
+
+Pasaron ocho comprobaciones separadas de identidad, archivo de originales,
+simulación y conservación; se verificaron 134 archivos por hash. Se leyó contexto
+de Fonseca en la capa textual del PDF (páginas PDF 8–10), sin adjudicación visual
+o de manuscritos. No se recuperó audio ni se supuso continuidad por el orden del
+snapshot. Originales, contexto y verificación permanecen locales.
+
+Evidencia: [regla, decisiones y simulación](../artifacts/reviews/beto-historiography-boundary-v1.json)
+y [comprobación local](../outputs/beto-historiography-boundary-v1/verification.json).
+La propuesta permite revisar exactamente qué se aplicaría a una copia nueva;
+no se escribió un dataset candidato ni se aplicaron etiquetas, entrenamientos,
+predicciones o cambios en producción/Git.
+
+**Juicio de modelamiento:** estos tres casos justifican saneamiento delimitado,
+pero no explican por sí solos los 0/28 y 0/14 de ideas retenidas. El fallo de
+transferencia está observado; su mecanismo único sigue sin identificarse.
+No hay base nueva para aumentar tokens, repetir épocas o cambiar etiquetas de
+Morán. Tampoco se declara incapacidad de BETO, sobreajuste o fallo del optimizador.
+Dos cuarentenas y una reclasificación no aíslan una única causa: aplicarlas por
+calidad del corpus no demostraría mejora del modelo. Este bloque termina con
+las decisiones cerradas y una propuesta verificable; otra aplicación o ensayo
+se delimitará antes de ejecutarse.
 
 ### Reproducir la muestra de la revisión inicial
 
