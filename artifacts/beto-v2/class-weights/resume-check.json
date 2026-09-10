@@ -1,0 +1,815 @@
+{
+  "saved_epoch": 2,
+  "before_interruption_sha256": "d39522f5c7b45b4ce176ab99f970a3ea34676d594e3f13b87ddcc5eb3a8f5dab",
+  "after_resume_sha256": "a8b8fd6c72defaeb6ed6f6419f163d069e9ba3b5db66a6dbd4d3940e3690b80c",
+  "identical": false,
+  "different_tensors": 201,
+  "max_abs_difference": 0.00010793749243021011,
+  "tensors_identical": false,
+  "tensor_differences": [
+    {
+      "tensor": "bert.embeddings.LayerNorm.bias",
+      "max_abs": 2.3283064365386963e-07
+    },
+    {
+      "tensor": "bert.embeddings.LayerNorm.weight",
+      "max_abs": 3.5762786865234375e-07
+    },
+    {
+      "tensor": "bert.embeddings.position_embeddings.weight",
+      "max_abs": 2.591405063867569e-06
+    },
+    {
+      "tensor": "bert.embeddings.token_type_embeddings.weight",
+      "max_abs": 2.384185791015625e-07
+    },
+    {
+      "tensor": "bert.embeddings.word_embeddings.weight",
+      "max_abs": 7.0247333496809e-05
+    },
+    {
+      "tensor": "bert.encoder.layer.0.attention.output.LayerNorm.bias",
+      "max_abs": 2.384185791015625e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.0.attention.output.LayerNorm.weight",
+      "max_abs": 7.152557373046875e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.0.attention.output.dense.bias",
+      "max_abs": 2.1606683731079102e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.0.attention.output.dense.weight",
+      "max_abs": 5.066394805908203e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.0.attention.self.key.bias",
+      "max_abs": 4.647672176361084e-05
+    },
+    {
+      "tensor": "bert.encoder.layer.0.attention.self.key.weight",
+      "max_abs": 9.313225746154785e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.0.attention.self.query.bias",
+      "max_abs": 5.364418029785156e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.0.attention.self.query.weight",
+      "max_abs": 9.499490261077881e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.0.attention.self.value.bias",
+      "max_abs": 2.682209014892578e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.0.attention.self.value.weight",
+      "max_abs": 7.096678018569946e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.0.intermediate.dense.bias",
+      "max_abs": 4.3958425521850586e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.0.intermediate.dense.weight",
+      "max_abs": 8.158385753631592e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.0.output.LayerNorm.bias",
+      "max_abs": 2.2351741790771484e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.0.output.LayerNorm.weight",
+      "max_abs": 5.364418029785156e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.0.output.dense.bias",
+      "max_abs": 2.384185791015625e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.0.output.dense.weight",
+      "max_abs": 8.456408977508545e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.1.attention.output.LayerNorm.bias",
+      "max_abs": 2.5331974029541016e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.1.attention.output.LayerNorm.weight",
+      "max_abs": 4.172325134277344e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.1.attention.output.dense.bias",
+      "max_abs": 2.4586915969848633e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.1.attention.output.dense.weight",
+      "max_abs": 5.029141902923584e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.1.attention.self.key.bias",
+      "max_abs": 0.00010206922888755798
+    },
+    {
+      "tensor": "bert.encoder.layer.1.attention.self.key.weight",
+      "max_abs": 6.51925802230835e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.1.attention.self.query.bias",
+      "max_abs": 3.427267074584961e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.1.attention.self.query.weight",
+      "max_abs": 6.258487701416016e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.1.attention.self.value.bias",
+      "max_abs": 2.7567148208618164e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.1.attention.self.value.weight",
+      "max_abs": 5.532056093215942e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.1.intermediate.dense.bias",
+      "max_abs": 4.023313522338867e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.1.intermediate.dense.weight",
+      "max_abs": 7.941853255033493e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.1.output.LayerNorm.bias",
+      "max_abs": 2.384185791015625e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.1.output.LayerNorm.weight",
+      "max_abs": 4.76837158203125e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.1.output.dense.bias",
+      "max_abs": 2.1792948246002197e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.1.output.dense.weight",
+      "max_abs": 7.711350917816162e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.10.attention.output.LayerNorm.bias",
+      "max_abs": 1.1175870895385742e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.10.attention.output.LayerNorm.weight",
+      "max_abs": 2.980232238769531e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.10.attention.output.dense.bias",
+      "max_abs": 1.1548399925231934e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.10.attention.output.dense.weight",
+      "max_abs": 3.688037395477295e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.10.attention.self.key.bias",
+      "max_abs": 7.303990423679352e-05
+    },
+    {
+      "tensor": "bert.encoder.layer.10.attention.self.key.weight",
+      "max_abs": 6.221234798431396e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.10.attention.self.query.bias",
+      "max_abs": 2.5704503059387207e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.10.attention.self.query.weight",
+      "max_abs": 5.550682544708252e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.10.attention.self.value.bias",
+      "max_abs": 1.1455267667770386e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.10.attention.self.value.weight",
+      "max_abs": 4.246830940246582e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.10.intermediate.dense.bias",
+      "max_abs": 2.1606683731079102e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.10.intermediate.dense.weight",
+      "max_abs": 7.320195436477661e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.10.output.LayerNorm.bias",
+      "max_abs": 1.4901161193847656e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.10.output.LayerNorm.weight",
+      "max_abs": 4.76837158203125e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.10.output.dense.bias",
+      "max_abs": 9.231735020875931e-08
+    },
+    {
+      "tensor": "bert.encoder.layer.10.output.dense.weight",
+      "max_abs": 4.302710294723511e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.11.attention.output.LayerNorm.bias",
+      "max_abs": 1.1920928955078125e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.11.attention.output.LayerNorm.weight",
+      "max_abs": 2.980232238769531e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.11.attention.output.dense.bias",
+      "max_abs": 1.043081283569336e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.11.attention.output.dense.weight",
+      "max_abs": 3.3155083656311035e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.11.attention.self.key.bias",
+      "max_abs": 0.00010093627497553825
+    },
+    {
+      "tensor": "bert.encoder.layer.11.attention.self.key.weight",
+      "max_abs": 6.854534149169922e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.11.attention.self.query.bias",
+      "max_abs": 2.4586915969848633e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.11.attention.self.query.weight",
+      "max_abs": 5.662441253662109e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.11.attention.self.value.bias",
+      "max_abs": 1.2386590242385864e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.11.attention.self.value.weight",
+      "max_abs": 3.6135315895080566e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.11.intermediate.dense.bias",
+      "max_abs": 2.086162567138672e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.11.intermediate.dense.weight",
+      "max_abs": 7.152557373046875e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.11.output.LayerNorm.bias",
+      "max_abs": 7.450580596923828e-08
+    },
+    {
+      "tensor": "bert.encoder.layer.11.output.LayerNorm.weight",
+      "max_abs": 2.384185791015625e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.11.output.dense.bias",
+      "max_abs": 7.450580596923828e-08
+    },
+    {
+      "tensor": "bert.encoder.layer.11.output.dense.weight",
+      "max_abs": 1.1026859283447266e-06
+    },
+    {
+      "tensor": "bert.encoder.layer.2.attention.output.LayerNorm.bias",
+      "max_abs": 2.384185791015625e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.2.attention.output.LayerNorm.weight",
+      "max_abs": 5.960464477539062e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.2.attention.output.dense.bias",
+      "max_abs": 2.2351741790771484e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.2.attention.output.dense.weight",
+      "max_abs": 5.83939254283905e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.2.attention.self.key.bias",
+      "max_abs": 6.95548951625824e-05
+    },
+    {
+      "tensor": "bert.encoder.layer.2.attention.self.key.weight",
+      "max_abs": 5.997717380523682e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.2.attention.self.query.bias",
+      "max_abs": 2.7939677238464355e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.2.attention.self.query.weight",
+      "max_abs": 7.003545761108398e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.2.attention.self.value.bias",
+      "max_abs": 2.421438694000244e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.2.attention.self.value.weight",
+      "max_abs": 5.494803190231323e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.2.intermediate.dense.bias",
+      "max_abs": 3.2782554626464844e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.2.intermediate.dense.weight",
+      "max_abs": 1.3399403542280197e-06
+    },
+    {
+      "tensor": "bert.encoder.layer.2.output.LayerNorm.bias",
+      "max_abs": 2.60770320892334e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.2.output.LayerNorm.weight",
+      "max_abs": 4.172325134277344e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.2.output.dense.bias",
+      "max_abs": 3.241002559661865e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.2.output.dense.weight",
+      "max_abs": 1.043081283569336e-06
+    },
+    {
+      "tensor": "bert.encoder.layer.3.attention.output.LayerNorm.bias",
+      "max_abs": 2.8312206268310547e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.3.attention.output.LayerNorm.weight",
+      "max_abs": 3.5762786865234375e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.3.attention.output.dense.bias",
+      "max_abs": 3.2316893339157104e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.3.attention.output.dense.weight",
+      "max_abs": 4.872272256761789e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.3.attention.self.key.bias",
+      "max_abs": 9.098229929804802e-05
+    },
+    {
+      "tensor": "bert.encoder.layer.3.attention.self.key.weight",
+      "max_abs": 1.6838312149047852e-06
+    },
+    {
+      "tensor": "bert.encoder.layer.3.attention.self.query.bias",
+      "max_abs": 2.8312206268310547e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.3.attention.self.query.weight",
+      "max_abs": 1.6838312149047852e-06
+    },
+    {
+      "tensor": "bert.encoder.layer.3.attention.self.value.bias",
+      "max_abs": 2.2444874048233032e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.3.attention.self.value.weight",
+      "max_abs": 6.817281246185303e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.3.intermediate.dense.bias",
+      "max_abs": 4.470348358154297e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.3.intermediate.dense.weight",
+      "max_abs": 7.040798664093018e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.3.output.LayerNorm.bias",
+      "max_abs": 1.9744038581848145e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.3.output.LayerNorm.weight",
+      "max_abs": 4.172325134277344e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.3.output.dense.bias",
+      "max_abs": 2.0675361156463623e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.3.output.dense.weight",
+      "max_abs": 9.126961231231689e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.4.attention.output.LayerNorm.bias",
+      "max_abs": 1.7881393432617188e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.4.attention.output.LayerNorm.weight",
+      "max_abs": 4.172325134277344e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.4.attention.output.dense.bias",
+      "max_abs": 1.601874828338623e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.4.attention.output.dense.weight",
+      "max_abs": 4.624016582965851e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.4.attention.self.key.bias",
+      "max_abs": 0.00010793749243021011
+    },
+    {
+      "tensor": "bert.encoder.layer.4.attention.self.key.weight",
+      "max_abs": 6.742775440216064e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.4.attention.self.query.bias",
+      "max_abs": 2.7939677238464355e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.4.attention.self.query.weight",
+      "max_abs": 6.873160600662231e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.4.attention.self.value.bias",
+      "max_abs": 2.169981598854065e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.4.attention.self.value.weight",
+      "max_abs": 5.178153514862061e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.4.intermediate.dense.bias",
+      "max_abs": 3.8743019104003906e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.4.intermediate.dense.weight",
+      "max_abs": 8.326023817062378e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.4.output.LayerNorm.bias",
+      "max_abs": 1.7834827303886414e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.4.output.LayerNorm.weight",
+      "max_abs": 4.76837158203125e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.4.output.dense.bias",
+      "max_abs": 1.862645149230957e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.4.output.dense.weight",
+      "max_abs": 8.270144462585449e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.5.attention.output.LayerNorm.bias",
+      "max_abs": 1.7881393432617188e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.5.attention.output.LayerNorm.weight",
+      "max_abs": 4.172325134277344e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.5.attention.output.dense.bias",
+      "max_abs": 1.601874828338623e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.5.attention.output.dense.weight",
+      "max_abs": 4.6193599700927734e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.5.attention.self.key.bias",
+      "max_abs": 9.443238377571106e-05
+    },
+    {
+      "tensor": "bert.encoder.layer.5.attention.self.key.weight",
+      "max_abs": 1.12876296043396e-06
+    },
+    {
+      "tensor": "bert.encoder.layer.5.attention.self.query.bias",
+      "max_abs": 3.427267074584961e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.5.attention.self.query.weight",
+      "max_abs": 9.57399606704712e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.5.attention.self.value.bias",
+      "max_abs": 2.0116567611694336e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.5.attention.self.value.weight",
+      "max_abs": 4.731118679046631e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.5.intermediate.dense.bias",
+      "max_abs": 3.2782554626464844e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.5.intermediate.dense.weight",
+      "max_abs": 7.82310962677002e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.5.output.LayerNorm.bias",
+      "max_abs": 1.9371509552001953e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.5.output.LayerNorm.weight",
+      "max_abs": 4.76837158203125e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.5.output.dense.bias",
+      "max_abs": 2.086162567138672e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.5.output.dense.weight",
+      "max_abs": 6.407499313354492e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.6.attention.output.LayerNorm.bias",
+      "max_abs": 1.4156103134155273e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.6.attention.output.LayerNorm.weight",
+      "max_abs": 4.76837158203125e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.6.attention.output.dense.bias",
+      "max_abs": 1.564621925354004e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.6.attention.output.dense.weight",
+      "max_abs": 4.507601261138916e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.6.attention.self.key.bias",
+      "max_abs": 9.478069841861725e-05
+    },
+    {
+      "tensor": "bert.encoder.layer.6.attention.self.key.weight",
+      "max_abs": 7.599592208862305e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.6.attention.self.query.bias",
+      "max_abs": 3.5762786865234375e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.6.attention.self.query.weight",
+      "max_abs": 7.199123501777649e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.6.attention.self.value.bias",
+      "max_abs": 1.8440186977386475e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.6.attention.self.value.weight",
+      "max_abs": 4.721805453300476e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.6.intermediate.dense.bias",
+      "max_abs": 3.0547380447387695e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.6.intermediate.dense.weight",
+      "max_abs": 8.605420589447021e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.6.output.LayerNorm.bias",
+      "max_abs": 1.6763806343078613e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.6.output.LayerNorm.weight",
+      "max_abs": 5.960464477539062e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.6.output.dense.bias",
+      "max_abs": 1.601874828338623e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.6.output.dense.weight",
+      "max_abs": 8.344650268554688e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.7.attention.output.LayerNorm.bias",
+      "max_abs": 1.4901161193847656e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.7.attention.output.LayerNorm.weight",
+      "max_abs": 3.5762786865234375e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.7.attention.output.dense.bias",
+      "max_abs": 1.4528632164001465e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.7.attention.output.dense.weight",
+      "max_abs": 5.308538675308228e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.7.attention.self.key.bias",
+      "max_abs": 7.65402801334858e-05
+    },
+    {
+      "tensor": "bert.encoder.layer.7.attention.self.key.weight",
+      "max_abs": 7.487833499908447e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.7.attention.self.query.bias",
+      "max_abs": 3.8743019104003906e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.7.attention.self.query.weight",
+      "max_abs": 8.307397365570068e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.7.attention.self.value.bias",
+      "max_abs": 1.644948497414589e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.7.attention.self.value.weight",
+      "max_abs": 4.5205524656921625e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.7.intermediate.dense.bias",
+      "max_abs": 2.5331974029541016e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.7.intermediate.dense.weight",
+      "max_abs": 8.158385753631592e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.7.output.LayerNorm.bias",
+      "max_abs": 1.1920928955078125e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.7.output.LayerNorm.weight",
+      "max_abs": 3.5762786865234375e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.7.output.dense.bias",
+      "max_abs": 1.4156103134155273e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.7.output.dense.weight",
+      "max_abs": 5.662441253662109e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.8.attention.output.LayerNorm.bias",
+      "max_abs": 1.6391277313232422e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.8.attention.output.LayerNorm.weight",
+      "max_abs": 3.5762786865234375e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.8.attention.output.dense.bias",
+      "max_abs": 1.6391277313232422e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.8.attention.output.dense.weight",
+      "max_abs": 4.4330954551696777e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.8.attention.self.key.bias",
+      "max_abs": 8.553406223654747e-05
+    },
+    {
+      "tensor": "bert.encoder.layer.8.attention.self.key.weight",
+      "max_abs": 6.407499313354492e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.8.attention.self.query.bias",
+      "max_abs": 2.7939677238464355e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.8.attention.self.query.weight",
+      "max_abs": 6.034970283508301e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.8.attention.self.value.bias",
+      "max_abs": 1.5273690223693848e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.8.attention.self.value.weight",
+      "max_abs": 4.6659260988235474e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.8.intermediate.dense.bias",
+      "max_abs": 2.849847078323364e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.8.intermediate.dense.weight",
+      "max_abs": 6.891787052154541e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.8.output.LayerNorm.bias",
+      "max_abs": 1.2665987014770508e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.8.output.LayerNorm.weight",
+      "max_abs": 4.76837158203125e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.8.output.dense.bias",
+      "max_abs": 1.564621925354004e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.8.output.dense.weight",
+      "max_abs": 6.034970283508301e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.9.attention.output.LayerNorm.bias",
+      "max_abs": 1.4156103134155273e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.9.attention.output.LayerNorm.weight",
+      "max_abs": 4.76837158203125e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.9.attention.output.dense.bias",
+      "max_abs": 1.4901161193847656e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.9.attention.output.dense.weight",
+      "max_abs": 4.3958425521850586e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.9.attention.self.key.bias",
+      "max_abs": 7.428368553519249e-05
+    },
+    {
+      "tensor": "bert.encoder.layer.9.attention.self.key.weight",
+      "max_abs": 5.969777703285217e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.9.attention.self.query.bias",
+      "max_abs": 2.7194619178771973e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.9.attention.self.query.weight",
+      "max_abs": 7.096678018569946e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.9.attention.self.value.bias",
+      "max_abs": 1.7136335372924805e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.9.attention.self.value.weight",
+      "max_abs": 4.5821070671081543e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.9.intermediate.dense.bias",
+      "max_abs": 2.384185791015625e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.9.intermediate.dense.weight",
+      "max_abs": 9.275972843170166e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.9.output.LayerNorm.bias",
+      "max_abs": 1.341104507446289e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.9.output.LayerNorm.weight",
+      "max_abs": 2.980232238769531e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.9.output.dense.bias",
+      "max_abs": 1.1920928955078125e-07
+    },
+    {
+      "tensor": "bert.encoder.layer.9.output.dense.weight",
+      "max_abs": 6.258487701416016e-07
+    },
+    {
+      "tensor": "bert.pooler.dense.bias",
+      "max_abs": 5.644551492878236e-08
+    },
+    {
+      "tensor": "bert.pooler.dense.weight",
+      "max_abs": 2.728775143623352e-07
+    },
+    {
+      "tensor": "classifier.bias",
+      "max_abs": 9.567884262651205e-09
+    },
+    {
+      "tensor": "classifier.weight",
+      "max_abs": 1.6763806343078613e-07
+    }
+  ]
+}

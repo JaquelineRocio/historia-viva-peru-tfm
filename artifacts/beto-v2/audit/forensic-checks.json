@@ -1,0 +1,60 @@
+{
+  "command": "outputs/venv-ml/Scripts/python.exe scripts/audit_beto_v2_checks.py",
+  "runner_sha256": "c055fff4e317713f3169181e6afba77505bcb680f3cf44e12a17ed9e31613939",
+  "checks": [
+    {
+      "case": "service_missing_splits",
+      "available": [
+        "train"
+      ],
+      "validation_is_train": true,
+      "test_is_validation": true,
+      "reported_split": "train"
+    },
+    {
+      "case": "service_missing_splits",
+      "available": [
+        "train",
+        "val"
+      ],
+      "validation_is_train": false,
+      "test_is_validation": true,
+      "reported_split": "val"
+    },
+    {
+      "case": "notebook_missing_test",
+      "actual_rows": [
+        "train",
+        "val"
+      ],
+      "reported_split": "val",
+      "passed_counterexample": true
+    },
+    {
+      "case": "experiment_missing_splits_rejected",
+      "error": "Clases ausentes en val: ['campanias_conflictos_militares', 'contexto_colonial_antecedentes', 'crisis_ideas_emancipadoras', 'liderazgos_diplomacia_proyectos', 'no_relevante', 'organizacion_consecuencias_republicanas', 'participacion_social_regional']"
+    },
+    {
+      "case": "weighted_microbatch_not_equal_effective_batch",
+      "micro_loss": 0.47009482979774475,
+      "full_loss": 0.2641947865486145
+    },
+    {
+      "case": "macro_label_set",
+      "seven": 0.14285714285714285,
+      "implicit": 1.0
+    }
+  ],
+  "external": {
+    "dataset_sha256": "901f50f13a60642b316896abd9d4d68b945e699f7befc696b9e7506bc8fa4ceb",
+    "checkpoint": "outputs\\experiments\\beto-u1\\beto-lr2e5",
+    "checkpoint_sha256": "4fea08ebf3da420a8ef1b04b151822b32c7f4869408335ab0c5885eb7945ef1f",
+    "n": 31,
+    "correct": 3,
+    "f1_macro_five": 0.1,
+    "f1_macro_seven": 0.07142857142857142,
+    "all_historical_predictions_reproduced": true
+  },
+  "source_metadata": {},
+  "source_metadata_evidence": "outputs\\agn-snapshot-v1\\maintenance\\snapshot.json"
+}

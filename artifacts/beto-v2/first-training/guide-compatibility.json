@@ -1,0 +1,37 @@
+{
+  "historical_guide": {
+    "path": "docs/guia-etiquetado-1780-1842.md",
+    "sha256": "d53dea3532359afc851c2bdd59ae1ddb47a0673609d82d40372a6f62edc55179"
+  },
+  "v2_guide": {
+    "path": "docs/beto-v2/guia-etiquetado-v2.md",
+    "sha256": "e45ceb6f759538ef567cf7f3c559b42aa4400778074afe774c7f5742a7cab73f"
+  },
+  "compatible_core": [
+    "Same seven semantic labels and1780–1842 scope",
+    "Dominant historical argument rather than keyword voting",
+    "Ambiguous is review state, not an eighth label",
+    "Operations versus diplomacy and projects versus implemented institutions retained"
+  ],
+  "conflicts": [
+    {
+      "rule": "historical no_relevante includes extraction noise; v2 treats undecidable extraction as pending",
+      "resolution": "Use reviewed-v4 after documented quarantine; unresolved source identity removed; no automatic conversion of poor text to negative. Remaining historical OCR quality inherited and explicitly limited."
+    },
+    {
+      "rule": "v2 explicitly distinguishes substantive historiography from exclusively academic discussion",
+      "resolution": "Reuse existing v4 adjudication that implements this boundary, including snapshot49 relabel; preserve old decisions in originals-and-decisions.json. No relabel using current predictions."
+    },
+    {
+      "rule": "historical120–250 words versus v2 complete paragraphs/sentences",
+      "resolution": "Allow v2 reviewed paragraph units per user request; preserve exact text and token lengths, note length/format distribution confound."
+    },
+    {
+      "rule": "ideal historical human review vs actual AI reviews; v2 two isolated AI passes",
+      "resolution": "Keep annotation_origin per row; no assertion of uniform human gold or independent annotator accuracy."
+    }
+  ],
+  "selected_historical_version": "outputs/corpus-snapshot-v4/reviewed-export.json original train only; existing reviewed corrections and six quarantines preserved",
+  "global_semantic_readjudication": false,
+  "limits": "Guide compatibility is operational, not proof every inherited historical label is correct. No18-snapshot union."
+}

@@ -1,0 +1,125 @@
+{
+  "source_stats": {
+    "S01": {
+      "pages_processed": 32,
+      "layout_blocks": 111,
+      "candidates": 19,
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "S03": {
+      "pages_processed": 14,
+      "layout_blocks": 132,
+      "candidates": 65,
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "S05": {
+      "pages_processed": 16,
+      "layout_blocks": 28,
+      "candidates": 2,
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "S06": {
+      "pages_processed": 13,
+      "layout_blocks": 163,
+      "candidates": 46,
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "S10": {
+      "pages_processed": 36,
+      "layout_blocks": 242,
+      "candidates": 61,
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    },
+    "S15": {
+      "pages_processed": 25,
+      "layout_blocks": 399,
+      "candidates": 69,
+      "license": "http://creativecommons.org/licenses/by-nc-sa/4.0/"
+    },
+    "S17": {
+      "pages_processed": 35,
+      "layout_blocks": 263,
+      "candidates": 29,
+      "license": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  },
+  "candidate_count": 291,
+  "statuses": {
+    "pending_extraction": 54,
+    "usable_candidate": 237
+  },
+  "reserved_ids_excluded": [
+    "S04",
+    "S09",
+    "S16",
+    "V03",
+    "V04"
+  ],
+  "reserved_content_read": false,
+  "inputs_sha256": {
+    "docs/beto-v2/guia-etiquetado-v2.md": "e45ceb6f759538ef567cf7f3c559b42aa4400778074afe774c7f5742a7cab73f",
+    "artifacts/beto-v2/corpus/reserved-evaluation-sources-v2.json": "334570a82806669212e3683290807f1bee157e2853acb6c6e192e6ddfe3efaee",
+    "outputs/beto-v2/corpus/S01/pages.json": "d2ccf8a5bda684f9f3e79acb374ad7d2e96e5ae3c49c7c6c5648056c0e5313c3",
+    "outputs/beto-v2/corpus/S01/source.pdf": "cddb3214a056f0c6d59d1cc43b8d486aa48e4aaf15f3e0103063538ae5b1be43",
+    "outputs/beto-v2/corpus/S01/acquisition.json": "5126bcad91ee34dee0bc6d665921b419d1e75a3d63bea6155d398046c069eac9",
+    "outputs/beto-v2/corpus/S03/pages.json": "cf5da7ff0cf1df1da26ca7994c4e1d6db38ff40120f2a6846c1214c4b9a5d964",
+    "outputs/beto-v2/corpus/S03/source.pdf": "9ec770dea8aab54de9718d133fb66c4ce8ec7b8d34b39ffe8c30762dfa358e98",
+    "outputs/beto-v2/corpus/S03/acquisition.json": "564f7398d103c7d7d327599e9d497106217ca4a3929f764c95b9dcbe06212aa4",
+    "outputs/beto-v2/corpus/S05/pages.json": "1978631fd862a3e4e0940bd058ba6bb6f2e1896edce1301334429dc538323401",
+    "outputs/beto-v2/corpus/S05/source.pdf": "37daf3789e40a28c9022d3259648393abcf3760870c313ba93dc548e6838a918",
+    "outputs/beto-v2/corpus/S05/acquisition.json": "82467f4b77aed77ca3f8b8f6d9169ea8f0fbb942f04349c921dc01041920272b",
+    "outputs/beto-v2/corpus/S06/pages.json": "1a9e024849ced6a3d0f270eae1f8cf545b03b79d387dd4fd5f7dae44be7b4d2e",
+    "outputs/beto-v2/corpus/S06/source.pdf": "d41a8030a7404762cc379eb1ae7d1928fafd5c76678f4055d4b1f97f654ee976",
+    "outputs/beto-v2/corpus/S06/acquisition.json": "c328f476f5240bcf81f11ceaebfcdd4471babb1d93a38528410c8f2a140b3ed0",
+    "outputs/beto-v2/corpus/S10/pages.json": "b6bce8037c3c639520e62b702ac4d29f7f4c25ed5eff72890a84c7d9507e02bb",
+    "outputs/beto-v2/corpus/S10/source.pdf": "850bbe8e497d195d16ddf1c541875ffe2fd31de68daa4cbc451e0fec32f795b7",
+    "outputs/beto-v2/corpus/S10/acquisition.json": "ea7596925da0757290ff6d3245db43c3c9944d271e9b969a79ea832cec27b0a6",
+    "outputs/beto-v2/corpus/S15/pages.json": "3f36305450b3c5635e10c07def71050a3cc386495535113988d48638c1a3677c",
+    "outputs/beto-v2/corpus/S15/source.pdf": "2da598be94dadcc8ec6bc9c97b1a31d26e01cb450ebf155b79c24f7ac42dba74",
+    "outputs/beto-v2/corpus/S15/acquisition.json": "69d56c6dcc1a94744a06107cf749c525709d7a24810c9b99f796c7d42668e96e",
+    "outputs/beto-v2/corpus/S17/pages.json": "d69cdaf004589f4e77d5f7816546f7b6d1fa6e9415b579ec177119441bae32ee",
+    "outputs/beto-v2/corpus/S17/source.pdf": "e62afe27bf509abe669d1e9340816b35f7a382b3d7bf182ba5b50cd26dca8c1b",
+    "outputs/beto-v2/corpus/S17/acquisition.json": "d65c0d2c2f1d3d62bb6b72ce7e186a428b387d5ad836667b2e0064e3c5f97e14",
+    "outputs/beto-v2/corpus/V01/cues.json": "9ef1ec575ca29ca5d687f4cc659020c46b512de500cd1c61e56966cae1266081",
+    "outputs/beto-v2/corpus/V01/acquisition.json": "081f892168ac349d0304ed35d14f87959d0377ae3e617bd3315da88ee2b2190b",
+    "outputs/beto-v2/corpus/V02/cues.json": "5b42841c920aa752a682b203520ccdf2a8b8dc4b05302aa6e62489345b1588c2",
+    "outputs/beto-v2/corpus/V02/acquisition.json": "4bea6d9eeac4fbb673bd0af90bd63af78e8cc9350ab57b0ab2a3cb9feb549004",
+    "artifacts/datasets/evaluation-pilot-v2.json": "b127e120ec764d40d49e314be3f6d5985803948080c3181f3426f65d0ed96791",
+    "artifacts/datasets/external-development-v1.json": "901f50f13a60642b316896abd9d4d68b945e699f7befc696b9e7506bc8fa4ceb",
+    "artifacts/datasets/gold-v1-balanced.json": "786f0f72f89598a96dfe3db87d5b4f47c3582617db8df70ae4ff0a9306aaa171",
+    "artifacts/datasets/gold-v1-source-aware.json": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a",
+    "outputs/agn-snapshot-v1/maintenance/snapshot.json": "7661abef5b7225b9a7674358666694f8520754292fe579d852d3d8ff2eadfb21",
+    "outputs/agn-snapshot-v1/reviewed-export.json": "2e128cd2208bd3584568edb42d4c20abbd632962762480d49ec6a4e3ad76a155",
+    "outputs/beto-ideas-contrast-v1/passages.json": "87abfc533106620ed6c092903d7e2d640517d0e47b79b2589b4a51b9a46a5d53",
+    "outputs/corpus-snapshot-v2/reviewed-export.json": "5de9ea1a4be3c9d628da51cdf1d07108f43e0ac8ee580acb483013c6dc27c35c",
+    "outputs/corpus-snapshot-v3/reviewed-export.json": "687a16c894eae549f9e29e48076a687ce6a96b5cd195f18b21629e8b7e7078e5",
+    "outputs/corpus-snapshot-v4/reviewed-export.json": "d00c83713de6d2b7263f3aa09da583801b3f358b4d46563ce9957e7578fde8a9",
+    "outputs/coverage-diagnosis-v1/sample.json": "07250b44a3b70ab16d4bf10f1332fb442c7af2ca47824f8df33bbc7398c2ad88",
+    "outputs/fonseca-snapshot-v1/invalid-base-control.json": "10c10ceda56f5940aff45fc582549591d8ffb9627223c7690776ee6d119669ad",
+    "outputs/fonseca-snapshot-v1/reviewed-export.json": "039a8b74f1cea6c744aad184fae15db17cc0ff01a24a33b3fa6166c02e21ec91",
+    "outputs/history-corrections-v1/reviewed-export.json": "9913ffc95ac82761d1295815afb836907bb239fa52e48cfa5126307d5a56a76f",
+    "outputs/huerta-batch-snapshot-v1/reviewed-export.json": "38c71b1548b89848142edc1aadab24d6651393f7361140a516e36d758e7ba244",
+    "outputs/huerta-snapshot-v1/reviewed-export.json": "eb1442c51b09dd66f691d77c6d9e412f5bebdef153e9b4efb6a30c905c03293b",
+    "outputs/maintenance-no-changes/snapshot.json": "a3e69377f910c18819006ab961da4a9473f1b2d3226ff3ad3c0906f4b0948595",
+    "outputs/villanueva-snapshot-v1/reviewed-export.json": "30c5e648476fcfcb1bd9eddd3e99a7cca3ce5f23fabf09290cd7e4ec8791074a"
+  },
+  "tokenizer_files": {
+    "config.json": "4861dfe69190f415b6bf58f4031f1494c06f3853df53140611303308c7db400a",
+    "experiment.json": "267ffccc9a695032bc005d4dc67d857d5f7452020bc1ea7eace05c012b327b53",
+    "labels.json": "3e8d21fda1c3a8c0d83249dbf89a9d5fce0e89a6635e9e52a49dac04dd59b169",
+    "metrics.json": "a364605a16003de818bc44d2ea2123285a776323d146668d8e309bfa237507f5",
+    "special_tokens_map.json": "5d5b662e421ea9fac075174bb0688ee0d9431699900b90662acd44b2a350503a",
+    "tokenizer.json": "f0ee18fc8f95db74ce5c5c3a4070e0eb32a4b31bcde4865af63b1308e924c0c4",
+    "tokenizer_config.json": "32761d10ecdb004a090472cd8526f936fb14c66b04ef3565ac5f8f5b1a53f8cc",
+    "vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+  },
+  "tokenizer_path": "apps/ml/storage/models/beto-v1-gold-source-aware",
+  "token_count_includes_special_tokens": true,
+  "truncation": false,
+  "pymupdf_version": "1.26.4",
+  "python": "3.10.10 (tags/v3.10.10:aad5f6a, Feb  7 2023, 17:20:36) [MSC v.1929 64 bit (AMD64)]",
+  "script_sha256": "be28e697aef1619fab84b6bb41f61fff95ccf85f50f52983a1d9e39a9a8b0b7c",
+  "duplication_alerts": 0,
+  "training": false,
+  "BETO_predictions": false
+}

@@ -1,0 +1,20 @@
+{
+  "original_protocol_hash": "481154e887c741cca66a93f806fe78c6b9ab3e2e3b637f9d557b3fe1326f4459",
+  "original_protocol_file_sha256": "e5afe7865c71ab41fe49f2df4d81895a77f72bd9f0fc536f54fc0d0ca0d627d4",
+  "runner_sha256": "f6ccde532a5bb74813b8e3a519173a93551c3da8b345fbc688a18f07e0f800c6",
+  "seeds": [
+    43,
+    44
+  ],
+  "maximum_new_runs": 12,
+  "shuffle": "seed+epoch",
+  "initialization": "seed before base model construction",
+  "baseline_hashes": {
+    "fold-1-A": "3abfc42fa76e4cd8eb056ffed9acc4772c681adc6d7c23f988027a4d3617fed5",
+    "fold-1-B": "63e9cad72959e1ceaacb0bb3cb8a2262ef1ee0333a41797b0bfc2051a5a3c35a",
+    "fold-2-A": "50ca80704bf7fdf40bee45a4df7b33d6e8aec7739013c9818d64a51e16f75f9a",
+    "fold-2-B": "8a077705fa4270e18594e54c95cea9375d3a6b9d2beea6e1eb3218e9a23ee535",
+    "fold-3-A": "9e24caa0704d45e834efa9d40eafe2453e52edc5bbe0361fabb6d3c9adea6cd5",
+    "fold-3-B": "588a91501f07032b4e994a135ec7c32cc73fed1df982c409052030ef36a94a2e"
+  }
+}

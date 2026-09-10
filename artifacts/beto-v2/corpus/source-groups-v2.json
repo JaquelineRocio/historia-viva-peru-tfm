@@ -1,0 +1,297 @@
+{
+  "evidence": {
+    "commit": "74f80917f6b245d718c201d58e0d3599f2e4b3e0",
+    "command": "outputs/venv-ml/Scripts/python.exe scripts/build_beto_corpus_v2.py",
+    "version": "beto-corpus-v2.2",
+    "acquisition_command": "outputs/venv-ml/Scripts/python.exe scripts/acquire_beto_corpus_v2.py",
+    "created_at": "2026-09-08T21:05:38.751631+00:00",
+    "versions": {
+      "pypdf": "5.9.0",
+      "requests": "2.34.2",
+      "youtube-transcript-api": "1.2.4"
+    },
+    "python": "3.10.10 (tags/v3.10.10:aad5f6a, Feb  7 2023, 17:20:36) [MSC v.1929 64 bit (AMD64)]",
+    "model_checkpoint": null,
+    "model_used": false,
+    "plan_sha256": "29f6eaf1c6d15cc79d2eeaebd016fde4ff004d9060deb852a1daec08b664bad2",
+    "script_sha256": "eb3f4129e3ea04f6edb510406dd166d7275d8f7ce65a433f2a1976d275e4ead6"
+  },
+  "groups": [
+    {
+      "family_id": "family-V01",
+      "source_ids": [
+        "V01"
+      ],
+      "original_work": "Las tres interpretaciones sobre la independencia del Peru",
+      "role": "annotation_pool",
+      "grouping_status": "provisional",
+      "rationale": "Public captions, no explicit redistribution license; private local use pending rights review. Historiographic framing may be no_relevante or mixed.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-V02",
+      "source_ids": [
+        "V02"
+      ],
+      "original_work": "La independencia tardia: la caida del ultimo bastion espanol",
+      "role": "annotation_pool",
+      "grouping_status": "provisional",
+      "rationale": "Public captions, no explicit redistribution license; ASR and mixed historiographic dates require review; do not silently correct 1920 to 1820.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-V03",
+      "source_ids": [
+        "V03"
+      ],
+      "original_work": "UNKNOWN",
+      "role": "reserved_candidate",
+      "grouping_status": "provisional",
+      "rationale": "No identity established; shared citations are not proof of independence or duplication.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-V04",
+      "source_ids": [
+        "V04"
+      ],
+      "original_work": "UNKNOWN",
+      "role": "reserved_candidate",
+      "grouping_status": "provisional",
+      "rationale": "No identity established; shared citations are not proof of independence or duplication.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-S01",
+      "source_ids": [
+        "S01"
+      ],
+      "original_work": "El ceremonial republicano y los rituales políticos de la Confederación Perú-Boliviana, 1821-1839",
+      "role": "annotation_pool",
+      "grouping_status": "provisional",
+      "rationale": "No identity established; shared citations are not proof of independence or duplication.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-S02",
+      "source_ids": [
+        "S02"
+      ],
+      "original_work": "Mujeres peruanas en los primeros años de la República, según Flora Tristán en su libro Peregrinaciones de una paria",
+      "role": "annotation_pool",
+      "grouping_status": "provisional",
+      "rationale": "Reused: identical SHA256 in artifacts/reviews/corpus-batch-v2.json; underlying Flora Tristan work and translation rights require separate review.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-S03",
+      "source_ids": [
+        "S03"
+      ],
+      "original_work": "El Departamento Marítimo del Callao y la independencia de Guayaquil",
+      "role": "annotation_pool",
+      "grouping_status": "provisional",
+      "rationale": "No identity established; shared citations are not proof of independence or duplication.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-S04",
+      "source_ids": [
+        "S04"
+      ],
+      "original_work": "Líneas de investigación para el estudio de las relaciones entre los virreinatos del Perú y de la Nueva España hasta la independencia",
+      "role": "reserved_candidate",
+      "grouping_status": "provisional",
+      "rationale": "Reserved whole work; Hugo Pereyra Plasencia is distinct from Nelson Ernesto Pereyra Chavez. Broad chronology requires scope review.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-S05",
+      "source_ids": [
+        "S05"
+      ],
+      "original_work": "Independencia y clases sociales",
+      "role": "annotation_pool",
+      "grouping_status": "provisional",
+      "rationale": "OCR defective; collate with page image before annotation. Reprinted in Independencia y revolucion 1780-1840 (1987): group reprints of this essay, not every essay in that collection.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-S06",
+      "source_ids": [
+        "S06"
+      ],
+      "original_work": "Un acontecimiento olvidado de la Independencia: la masacre de extranjeros pro patriotas en el Callao (1820)",
+      "role": "annotation_pool",
+      "grouping_status": "provisional",
+      "rationale": "PDF date discrepancy 2024/2023; institutional citation date 2023-11-30 retained. Shares Callao events with S03, not established text duplication.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-S07",
+      "source_ids": [
+        "S07"
+      ],
+      "original_work": "UNKNOWN",
+      "role": "annotation_pool",
+      "grouping_status": "provisional",
+      "rationale": "No identity established; shared citations are not proof of independence or duplication.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-S08",
+      "source_ids": [
+        "S08"
+      ],
+      "original_work": "Monarquismo, regionalismo y rebelión en el Perú colonial, 1808-1815",
+      "role": "annotation_pool",
+      "grouping_status": "provisional",
+      "rationale": "No identity established; shared citations are not proof of independence or duplication.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-S09",
+      "source_ids": [
+        "S09"
+      ],
+      "original_work": "Cusco en el contexto de la independencia: 1780-1814",
+      "role": "reserved_candidate",
+      "grouping_status": "provisional",
+      "rationale": "Reserved; landing CC BY 4.0/footer BY 3.0 conflicts with PDF BY-NC-SA 4.0. No redistribution. Author cites her 2016 chapter in the collection containing existing Huamanga chapter: independence pending comparison.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-S10",
+      "source_ids": [
+        "S10"
+      ],
+      "original_work": "Libros escolares y educación primaria en la ciudad de Lima durante el siglo XIX",
+      "role": "annotation_pool",
+      "grouping_status": "provisional",
+      "rationale": "Whole work spans nineteenth century; selected pages discuss 1825/1827. Adjacent context is not automatically in scope.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-S11",
+      "source_ids": [
+        "S11"
+      ],
+      "original_work": "UNKNOWN",
+      "role": "candidate",
+      "grouping_status": "provisional",
+      "rationale": "No identity established; shared citations are not proof of independence or duplication.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-S12",
+      "source_ids": [
+        "S12"
+      ],
+      "original_work": "200 años después : los escolares preguntan, los historiadores responden",
+      "role": "candidate",
+      "grouping_status": "provisional",
+      "rationale": "No identity established; shared citations are not proof of independence or duplication.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-S13",
+      "source_ids": [
+        "S13"
+      ],
+      "original_work": "UNKNOWN",
+      "role": "candidate",
+      "grouping_status": "provisional",
+      "rationale": "No identity established; shared citations are not proof of independence or duplication.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-S14",
+      "source_ids": [
+        "S14"
+      ],
+      "original_work": "UNKNOWN",
+      "role": "candidate",
+      "grouping_status": "provisional",
+      "rationale": "No identity established; shared citations are not proof of independence or duplication.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-R01",
+      "source_ids": [
+        "R01"
+      ],
+      "original_work": "El trabajo cautivo, la ley de 1849 y los inicios de la inmigración extranjera en el Perú republicano",
+      "role": "rejected",
+      "grouping_status": "provisional",
+      "rationale": "No identity established; shared citations are not proof of independence or duplication.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-R02",
+      "source_ids": [
+        "R02"
+      ],
+      "original_work": "Drinot, Paulo y Alberto Vergara (eds.). La condena de la libertad. De Túpac Amaru II al bicentenario peruano en seis ensayos y un colofón. Lima: Crítica, 2022, 520 pp., ilust.",
+      "role": "rejected",
+      "grouping_status": "provisional",
+      "rationale": "No identity established; shared citations are not proof of independence or duplication.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-R03",
+      "source_ids": [
+        "R03"
+      ],
+      "original_work": "José de San Martín y el espacio político indígena. Departamento de Lima, 1821-1822",
+      "role": "rejected",
+      "grouping_status": "provisional",
+      "rationale": "No identity established; shared citations are not proof of independence or duplication.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-S15",
+      "source_ids": [
+        "S15"
+      ],
+      "original_work": "El Mercado de esclavos en la ciudad de Lima desde el Mercurio Peruano 1827-1832",
+      "role": "annotation_pool",
+      "grouping_status": "provisional",
+      "rationale": "Cites Basadre 1983; citation does not establish duplication. Newspaper excerpts are embedded primary sources; rights and grouping need review.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-S16",
+      "source_ids": [
+        "S16"
+      ],
+      "original_work": "Una rebelión a la deriva : fisuras y represión realista en Tacna, 1811",
+      "role": "reserved_candidate",
+      "grouping_status": "provisional",
+      "rationale": "No identity established; shared citations are not proof of independence or duplication.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-S17",
+      "source_ids": [
+        "S17"
+      ],
+      "original_work": "Los negros de Lima: 1800-1830",
+      "role": "annotation_pool",
+      "grouping_status": "provisional",
+      "rationale": "Severe OCR; visual collation required. Same author as other works is not proof of same documentary family.",
+      "editions_translations_chapters_must_follow_family": true
+    },
+    {
+      "family_id": "family-S18",
+      "source_ids": [
+        "S18"
+      ],
+      "original_work": "UNKNOWN",
+      "role": "candidate",
+      "grouping_status": "provisional",
+      "rationale": "No identity established; shared citations are not proof of independence or duplication.",
+      "editions_translations_chapters_must_follow_family": true
+    }
+  ],
+  "rule": "Provisional original-work families; editions/translations/chapters follow parent work. Author or publisher alone does not define a family."
+}

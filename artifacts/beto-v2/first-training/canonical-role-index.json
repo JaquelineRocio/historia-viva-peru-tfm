@@ -1,0 +1,5950 @@
+{
+  "items": [
+    {
+      "segment_id": "S01-seg0001-s00000",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0001-s00916",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0002-s00000",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S01-seg0003-s00000",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "possible_incomplete_start"
+      ]
+    },
+    {
+      "segment_id": "S01-seg0004-s00000",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S01-seg0004-s00971",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0004-s01701",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0004-s02393",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0005-s00000",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0005-s00704",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0005-s01480",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0005-s02191",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0005-s02873",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0005-s03481",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0005-s04319",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0006-s00000",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0006-s00774",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0006-s01661",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0006-s02326",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0006-s03045",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0006-s03661",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0006-s04297",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0006-s04959",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0006-s05583",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0007-s00000",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0007-s00704",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0007-s01472",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_ambiguity",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0007-s02235",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0007-s02886",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0007-s03716",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0007-s04313",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0007-s04884",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0007-s05495",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0007-s06192",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0007-s06848",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0008-s00000",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0009-s00000",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0010-s00000",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0010-s00670",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0010-s01825",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0010-s02676",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0010-s03468",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0011-s00000",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0011-s00708",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0011-s01331",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0011-s02150",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0011-s03137",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0011-s03828",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0012-s00000",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "inactive_alternative",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0012-s00703",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "inactive_alternative",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0012-s01253",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "inactive_alternative",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0013-s00000",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0013-s00698",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0013-s01287",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0013-s02036",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0013-s02909",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0014-s00000",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "inactive_alternative",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0014-s00683",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "inactive_alternative",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0014-s01460",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "inactive_alternative",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0015-s00000",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0015-s00811",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0015-s01559",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0015-s02267",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0015-s03055",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0015-s03995",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0015-s04818",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0015-s05407",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0015-s06082",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0015-s06799",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0015-s07319",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0015-s07906",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0015-s08859",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0015-s09486",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0016-s00000",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0016-s00597",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0016-s01225",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0017-s00000",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0017-s00531",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0017-s01240",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0017-s01792",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0018-s00000",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0019-s00000",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0019-s00986",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0019-s01619",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0019-s02230",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0001-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0001-s00572",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0002-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S03-seg0003-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0004-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S03-seg0005-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0005-s00624",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0006-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0007-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0008-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0009-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0010-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0011-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0011-s00794",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0012-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0013-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0013-s00530",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0014-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0015-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0016-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0017-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0017-s00726",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0018-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0019-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0020-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0021-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0022-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0022-s00571",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0023-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0024-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0025-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0025-s00549",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0026-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0027-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0028-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0029-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0030-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0031-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0031-s00646",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0032-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0033-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0034-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0034-s00580",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0035-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0036-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0037-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0037-s00547",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0038-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0039-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0040-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0041-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0041-s00624",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0041-s01196",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0042-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0042-s00577",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0042-s01313",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0043-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0043-s00594",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0044-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0044-s00991",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0045-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0046-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0047-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0048-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0049-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0050-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0051-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0052-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0053-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0053-s00632",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0054-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0055-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0055-s00639",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0056-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0056-s00592",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0057-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0058-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0059-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0060-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0060-s00763",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0061-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0062-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0063-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0064-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S03-seg0065-s00000",
+      "source_id": "S03",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S05-seg0001-s00000",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S05-seg0001-s00604",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S05-seg0001-s01448",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S05-seg0001-s02359",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S05-seg0001-s03064",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S05-seg0001-s03789",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S05-seg0001-s04427",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S05-seg0001-s05016",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "inactive_alternative",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S05-seg0001-s05818",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "inactive_alternative",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S05-seg0001-s06542",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S05-seg0001-s07179",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S05-seg0001-s07919",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S05-seg0002-s00000",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S05-seg0002-s00579",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S05-seg0002-s01290",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S05-seg0002-s02155",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S05-seg0002-s02775",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S06-seg0001-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0002-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S06-seg0003-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0004-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S06-seg0005-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0006-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0007-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0007-s00792",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0008-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_ambiguity",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0009-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0009-s00813",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0010-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0011-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0012-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0013-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0013-s00544",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0014-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0015-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0016-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0017-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0018-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0018-s00676",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0018-s01296",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0019-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0019-s00694",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0020-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0021-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0022-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0022-s00781",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0023-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0023-s00593",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0024-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0025-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0026-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0027-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0028-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0029-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0030-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0031-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0032-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0033-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0033-s00930",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0034-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0035-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0036-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0036-s00686",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0037-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0038-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0039-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0039-s00561",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0040-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0041-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0042-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0042-s00624",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0043-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0043-s00734",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0044-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0045-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S06-seg0046-s00000",
+      "source_id": "S06",
+      "family_id": "callao-naval-1820",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0001-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0002-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S10-seg0002-s00611",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S10-seg0003-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0003-s00627",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S10-seg0004-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0004-s00552",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S10-seg0004-s01077",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0005-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_ambiguity",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0005-s00850",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0006-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S10-seg0006-s00693",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S10-seg0006-s01341",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0007-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "possible_incomplete_start",
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S10-seg0008-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "possible_incomplete_start",
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S10-seg0008-s00552",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0009-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "possible_incomplete_start",
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S10-seg0009-s00640",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0010-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0010-s00717",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0010-s01382",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S10-seg0010-s02032",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0010-s02837",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0011-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0011-s00675",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0012-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0012-s00675",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0013-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0013-s00606",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0014-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0014-s00552",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0015-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0015-s00645",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_ambiguity",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0016-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0016-s00692",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0017-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0017-s00546",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0018-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0018-s00735",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0019-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0020-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0020-s00578",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0021-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "possible_incomplete_start"
+      ]
+    },
+    {
+      "segment_id": "S10-seg0022-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0022-s00706",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0023-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0023-s00757",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0023-s01336",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0024-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0024-s00561",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0025-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0025-s00677",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0026-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0026-s00653",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0027-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0027-s00661",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0028-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0028-s00723",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0029-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0029-s00681",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0030-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0030-s00702",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0031-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0031-s00650",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0032-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0032-s00716",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0032-s01249",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0032-s01893",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0033-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0033-s00697",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0034-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0034-s00606",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0035-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0035-s00604",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0035-s01161",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0036-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0036-s00679",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0037-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0037-s00870",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0038-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0038-s00593",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0039-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0039-s00559",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0040-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0040-s00602",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0041-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0041-s00545",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0042-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0042-s00699",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0043-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0044-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0044-s00594",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0045-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0045-s00648",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0046-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0047-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0047-s00612",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0048-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0048-s00625",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0049-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0049-s00535",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0050-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0050-s00731",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0051-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0052-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0053-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "possible_incomplete_start"
+      ]
+    },
+    {
+      "segment_id": "S10-seg0054-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0054-s00663",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0055-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0055-s00621",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0056-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0057-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0057-s00704",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0058-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0059-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0060-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S10-seg0061-s00000",
+      "source_id": "S10",
+      "family_id": "family-S10",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "incomplete_end"
+      ]
+    },
+    {
+      "segment_id": "S15-seg0001-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0001-s00829",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0001-s01373",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0001-s02122",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0002-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S15-seg0003-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0003-s00880",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0004-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0004-s00735",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0004-s01477",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0005-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0006-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0006-s00533",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0007-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0007-s00679",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0008-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0009-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0009-s00557",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0010-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0011-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0011-s00564",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0012-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0013-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0013-s00554",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0014-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S15-seg0015-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0016-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0017-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0017-s00721",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0018-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0019-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0020-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0020-s00866",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0021-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S15-seg0022-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0023-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0024-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0025-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0026-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0026-s00776",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0027-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0027-s00750",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0028-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0029-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0030-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S15-seg0030-s01082",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0031-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0032-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S15-seg0033-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S15-seg0033-s00994",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0034-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S15-seg0035-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0036-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0037-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S15-seg0037-s00638",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0038-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S15-seg0038-s00655",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0039-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0040-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S15-seg0040-s00565",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0041-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0042-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S15-seg0043-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0044-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S15-seg0045-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0046-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S15-seg0047-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0048-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S15-seg0048-s00667",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S15-seg0049-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S15-seg0050-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0051-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0052-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0053-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0054-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0055-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0056-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0057-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0058-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0059-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0059-s00609",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0060-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0060-s00536",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0061-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0062-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0063-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0063-s00694",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0064-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0065-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0066-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "paratext_or_layout_mixed"
+      ]
+    },
+    {
+      "segment_id": "S15-seg0067-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0068-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S15-seg0069-s00000",
+      "source_id": "S15",
+      "family_id": "historical-basadre-hampe",
+      "role": "pending_annotation",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S17-seg0001-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0001-s00782",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0001-s01302",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0002-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0002-s00720",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0003-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0003-s00579",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0003-s01229",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0004-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0004-s00678",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0005-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0005-s00697",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0005-s01266",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0005-s01854",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0005-s02543",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0006-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0007-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0007-s00571",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0007-s01445",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0007-s02050",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0007-s02632",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0008-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0008-s00672",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0008-s01333",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0009-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0009-s00592",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0009-s01124",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0010-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0010-s00605",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0010-s01189",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0010-s01756",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0011-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "possible_incomplete_start"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0012-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0012-s00714",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0012-s02282",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0012-s02908",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0013-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0013-s00552",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0013-s01116",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0013-s02143",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0013-s03070",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0013-s03714",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0013-s04238",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0013-s05047",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0013-s05826",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0014-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0014-s00573",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0014-s01575",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0014-s02206",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0014-s02929",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0014-s03829",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0014-s05040",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0014-s05626",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0014-s06273",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0014-s07004",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0014-s07906",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0015-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0015-s00563",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0015-s01327",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0016-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0016-s00664",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0016-s01299",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0016-s02018",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0016-s02946",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0016-s03586",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0016-s04202",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0016-s04740",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0016-s05355",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0016-s06104",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0017-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0017-s01570",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0017-s02199",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0018-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0018-s00681",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0018-s01479",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0018-s02008",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0019-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0019-s00946",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0019-s01628",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0019-s02131",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0019-s02739",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0019-s03416",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0019-s03945",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0019-s04585",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0020-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0020-s00645",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0021-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0021-s00593",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0022-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0023-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0023-s00866",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0024-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0024-s00651",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0025-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0026-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0026-s00604",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0027-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0027-s00604",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0027-s01352",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0028-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S17-seg0029-s00000",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required"
+      ]
+    },
+    {
+      "segment_id": "S05-visual-p007-01",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S05-visual-p007-02",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S17-visual-p003-03",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0012-whole",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S01-seg0014-whole",
+      "source_id": "S01",
+      "family_id": "family-S01",
+      "role": "new_AI_active",
+      "active": true,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": []
+    },
+    {
+      "segment_id": "S05-p002-b000-recovered",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S05-p003-b000-recovered",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S05-p004-b000-recovered",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S05-p005-b000-recovered",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S05-p006-b000-recovered",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S05-p007-b000-recovered",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S05-p008-b000-recovered",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S05-p009-b000-recovered",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S05-p010-b000-recovered",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S05-p011-b000-recovered",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S05-p012-b000-recovered",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S05-p013-b000-recovered",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S05-p014-b000-recovered",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S05-p016-b000-recovered",
+      "source_id": "S05",
+      "family_id": "family-S05",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S17-p005-b000-recovered",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S17-p008-b000-recovered",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S17-p010-b000-recovered",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S17-p013-b000-recovered",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S17-p014-b000-recovered",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S17-p016-b000-recovered",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S17-p017-b000-recovered",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S17-p019-b000-recovered",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S17-p020-b000-recovered",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S17-p021-b000-recovered",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S17-p022-b000-recovered",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S17-p024-b000-recovered",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S17-p025-b000-recovered",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S17-p027-b000-recovered",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S17-p028-b000-recovered",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S17-p029-b000-recovered",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S17-p031-b000-recovered",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    },
+    {
+      "segment_id": "S17-p032-b000-recovered",
+      "source_id": "S17",
+      "family_id": "historical-fonseca-hunefeldt",
+      "role": "pending_extraction",
+      "active": false,
+      "original_reference": "outputs/beto-v2/pilot/annotation-candidates-final.jsonl",
+      "quality_flags": [
+        "visual_collation_required",
+        "page_edge_false_header",
+        "sentence_continuity_pending"
+      ]
+    }
+  ],
+  "counts": {
+    "pending_annotation": 348,
+    "pending_extraction": 185,
+    "new_AI_active": 49,
+    "pending_ambiguity": 4,
+    "inactive_alternative": 8
+  },
+  "historical_pending_reference": "outputs/beto-v2/first-training/canonical-dataset.json#pending",
+  "historical_evaluations": {
+    "role": "historical_evaluation_not_used",
+    "snapshot": "outputs/corpus-snapshot-v4/reviewed-export.json",
+    "splits": [
+      "val",
+      "test"
+    ],
+    "counts": {
+      "val": 81,
+      "test": 137
+    },
+    "other_manifests": [
+      "artifacts/datasets/external-development-v1.json",
+      "artifacts/datasets/evaluation-pilot-v2.json"
+    ],
+    "new_external_test": false
+  },
+  "reserved_final": {
+    "role": "reserved_no_content_read",
+    "manifest": "artifacts/beto-v2/corpus/reserved-evaluation-sources-v2.json",
+    "source_ids": [
+      "S04",
+      "S09",
+      "S16",
+      "V03",
+      "V04"
+    ]
+  },
+  "prior_version_relationships": [
+    {
+      "active_id": "historical-v4-0696",
+      "inactive_id": "historical-v4-0724",
+      "kind": "normalized_duplicate",
+      "same_label": true
+    },
+    {
+      "candidate_id": "S15-seg0054-s00000",
+      "other_kind": "candidate",
+      "other_id": "S15-seg0038-s00655",
+      "versions": [],
+      "exact": false,
+      "jaccard": 0.26,
+      "containment": 1.0,
+      "relation": "text_overlap_pending_review",
+      "candidate_active": false,
+      "other_active": false
+    },
+    {
+      "candidate_id": "S05-visual-p007-01",
+      "other_kind": "candidate",
+      "other_id": "S05-seg0001-s05016",
+      "versions": [],
+      "exact": false,
+      "jaccard": 0.45569620253164556,
+      "containment": 0.7058823529411765,
+      "relation": "corrected_OCR_and_original_same_work",
+      "candidate_active": true,
+      "other_active": false
+    },
+    {
+      "candidate_id": "S05-visual-p007-02",
+      "other_kind": "candidate",
+      "other_id": "S05-seg0001-s05818",
+      "versions": [],
+      "exact": false,
+      "jaccard": 0.2994011976047904,
+      "containment": 0.4716981132075472,
+      "relation": "corrected_OCR_and_original_same_work",
+      "candidate_active": true,
+      "other_active": false
+    },
+    {
+      "candidate_id": "S01-seg0012-whole",
+      "other_kind": "candidate",
+      "other_id": "S01-seg0012-s00000",
+      "versions": [],
+      "exact": false,
+      "jaccard": 0.44150943396226416,
+      "containment": 1.0,
+      "relation": "same_record_alternative_segmentation",
+      "candidate_active": true,
+      "other_active": false
+    },
+    {
+      "candidate_id": "S01-seg0012-whole",
+      "other_kind": "candidate",
+      "other_id": "S01-seg0012-s00703",
+      "versions": [],
+      "exact": false,
+      "jaccard": 0.3471698113207547,
+      "containment": 1.0,
+      "relation": "same_record_alternative_segmentation",
+      "candidate_active": true,
+      "other_active": false
+    },
+    {
+      "candidate_id": "S01-seg0012-whole",
+      "other_kind": "candidate",
+      "other_id": "S01-seg0012-s01253",
+      "versions": [],
+      "exact": false,
+      "jaccard": 0.1811320754716981,
+      "containment": 1.0,
+      "relation": "same_record_alternative_segmentation",
+      "candidate_active": true,
+      "other_active": false
+    },
+    {
+      "candidate_id": "S01-seg0014-whole",
+      "other_kind": "candidate",
+      "other_id": "S01-seg0014-s00000",
+      "versions": [],
+      "exact": false,
+      "jaccard": 0.31137724550898205,
+      "containment": 1.0,
+      "relation": "same_record_alternative_segmentation",
+      "candidate_active": true,
+      "other_active": false
+    },
+    {
+      "candidate_id": "S01-seg0014-whole",
+      "other_kind": "candidate",
+      "other_id": "S01-seg0014-s00683",
+      "versions": [],
+      "exact": false,
+      "jaccard": 0.38023952095808383,
+      "containment": 1.0,
+      "relation": "same_record_alternative_segmentation",
+      "candidate_active": true,
+      "other_active": false
+    },
+    {
+      "candidate_id": "S01-seg0014-whole",
+      "other_kind": "candidate",
+      "other_id": "S01-seg0014-s01460",
+      "versions": [],
+      "exact": false,
+      "jaccard": 0.2844311377245509,
+      "containment": 1.0,
+      "relation": "same_record_alternative_segmentation",
+      "candidate_active": true,
+      "other_active": false
+    },
+    {
+      "active_id": "historical-v4-0535",
+      "inactive_id": "historical-v4-0725",
+      "kind": "near_duplicate_same_family",
+      "cosine": 0.998896408251069
+    }
+  ]
+}

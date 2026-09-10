@@ -1,0 +1,81 @@
+{
+  "candidate_versions": 594,
+  "underlying_sentence_candidates": 560,
+  "alternative_whole_paragraphs": 2,
+  "pending_automatic_quality": 199,
+  "without_automatic_quality_flags": 395,
+  "source_counts": {
+    "S01": {
+      "pages_processed": 32,
+      "candidate_versions": 87,
+      "pending_automatic_quality": 3,
+      "pilot_selected": 6
+    },
+    "S03": {
+      "pages_processed": 14,
+      "candidate_versions": 85,
+      "pending_automatic_quality": 7,
+      "pilot_selected": 6
+    },
+    "S05": {
+      "pages_processed": 16,
+      "candidate_versions": 33,
+      "pending_automatic_quality": 31,
+      "pilot_selected": 2
+    },
+    "S06": {
+      "pages_processed": 13,
+      "candidate_versions": 59,
+      "pending_automatic_quality": 4,
+      "pilot_selected": 5
+    },
+    "S10": {
+      "pages_processed": 36,
+      "candidate_versions": 117,
+      "pending_automatic_quality": 13,
+      "pilot_selected": 5
+    },
+    "S15": {
+      "pages_processed": 25,
+      "candidate_versions": 93,
+      "pending_automatic_quality": 22,
+      "pilot_selected": 5
+    },
+    "S17": {
+      "pages_processed": 35,
+      "candidate_versions": 120,
+      "pending_automatic_quality": 119,
+      "pilot_selected": 1
+    }
+  },
+  "separated_block_counts": {
+    "body": 571,
+    "header_footer": 324,
+    "heading": 161,
+    "note": 212,
+    "bibliography": 70
+  },
+  "tokens": {
+    "min": 4,
+    "max": 618,
+    "over_192": 65,
+    "over_512": 10
+  },
+  "duplicate_alerts": 9,
+  "duplicate_relations": {
+    "text_overlap_pending_review": 1,
+    "corrected_OCR_and_original_same_work": 2,
+    "same_record_alternative_segmentation": 6
+  },
+  "historical_alerts": 0,
+  "checks": {
+    "all_final_texts_tokenized_without_truncation": true,
+    "source_roundtrip": true,
+    "original_input_hashes_unchanged": true,
+    "reserved_excluded": true,
+    "selected_input_unchanged": true,
+    "no_training_no_BETO_inference": true
+  },
+  "script_sha256": "19a05366c11eb61ee18a90262ce05138e5f122b90da6647ab69cde9f65ffbfb9",
+  "pending_raw_recovered_blocks": 32
+}

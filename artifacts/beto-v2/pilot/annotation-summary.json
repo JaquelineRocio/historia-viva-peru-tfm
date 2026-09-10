@@ -1,0 +1,60 @@
+{
+  "n": 30,
+  "label_agreement_count": 30,
+  "label_agreement_rate": 1.0,
+  "ambiguity_state_agreement_count": 27,
+  "ambiguity_state_agreement_rate": 0.9,
+  "label_disagreements": [],
+  "ambiguity_state_disagreements": [
+    "S01-seg0005-s04319",
+    "S15-seg0007-s00000",
+    "S01-seg0014-whole"
+  ],
+  "reviewed_ambiguous_union": [
+    "S01-seg0005-s04319",
+    "S10-seg0005-s00000",
+    "S15-seg0007-s00000",
+    "S01-seg0014-whole"
+  ],
+  "accepted_AI_assisted": 29,
+  "pending_ambiguity": 1,
+  "provisional_class_distribution": {
+    "campanias_conflictos_militares": 5,
+    "contexto_colonial_antecedentes": 2,
+    "crisis_ideas_emancipadoras": 0,
+    "liderazgos_diplomacia_proyectos": 4,
+    "no_relevante": 5,
+    "organizacion_consecuencias_republicanas": 8,
+    "participacion_social_regional": 6
+  },
+  "accepted_class_distribution": {
+    "campanias_conflictos_militares": 5,
+    "contexto_colonial_antecedentes": 2,
+    "crisis_ideas_emancipadoras": 0,
+    "liderazgos_diplomacia_proyectos": 4,
+    "no_relevante": 5,
+    "organizacion_consecuencias_republicanas": 7,
+    "participacion_social_regional": 6
+  },
+  "by_source": {
+    "S01": 6,
+    "S03": 6,
+    "S06": 5,
+    "S10": 5,
+    "S15": 5,
+    "S05": 2,
+    "S17": 1
+  },
+  "by_format": {
+    "pdf": 30
+  },
+  "model_independence": false,
+  "isolation": "two fresh sessions instructed to read only guide and frozen input; attestations returned; same model, shared filesystem, not OS-level access isolation",
+  "limitations": [
+    "purposive sample, not random performance estimate",
+    "same-model consistency, no expert gold",
+    "no transcript labels pending rights and ASR review",
+    "no BETO predictions, training or evaluation"
+  ],
+  "prior_runtime_failures": "both initial sessions returned usage-limit error without annotations; explicit user continuation followed by successful retries; no paid external service started"
+}

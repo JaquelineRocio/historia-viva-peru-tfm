@@ -1,0 +1,43 @@
+{
+  "ids": [
+    "S01-seg0005-s00704",
+    "S01-seg0005-s02873",
+    "S01-seg0005-s04319",
+    "S01-seg0019-s00000",
+    "S03-seg0006-s00000",
+    "S03-seg0009-s00000",
+    "S03-seg0015-s00000",
+    "S03-seg0037-s00000",
+    "S03-seg0042-s00577",
+    "S03-seg0044-s00991",
+    "S06-seg0005-s00000",
+    "S06-seg0016-s00000",
+    "S06-seg0020-s00000",
+    "S06-seg0032-s00000",
+    "S06-seg0036-s00000",
+    "S10-seg0003-s00000",
+    "S10-seg0005-s00000",
+    "S10-seg0010-s00000",
+    "S10-seg0014-s00000",
+    "S10-seg0034-s00606",
+    "S15-seg0007-s00000",
+    "S15-seg0008-s00000",
+    "S15-seg0025-s00000",
+    "S15-seg0057-s00000",
+    "S15-seg0061-s00000",
+    "S05-visual-p007-01",
+    "S05-visual-p007-02",
+    "S17-visual-p003-03",
+    "S01-seg0012-whole",
+    "S01-seg0014-whole"
+  ],
+  "selection": "purposive before annotation; spans across article bodies and late pages; explicit historical/methodological and institutional/social boundary cases; no predicted labels or quotas",
+  "format_limitation": "PDF only; acquired transcripts pending rights and ASR review",
+  "count": 30,
+  "guide_sha256": "e45ceb6f759538ef567cf7f3c559b42aa4400778074afe774c7f5742a7cab73f",
+  "input_sha256": "b609187e0742e0f4b90e4074c6f49bc647e661e1c5e150668c86e4c9f33d7f1c",
+  "longer_versions": {
+    "S01-seg0012-whole": "replaces sentence children in pilot",
+    "S01-seg0014-whole": "replaces sentence children in pilot"
+  }
+}

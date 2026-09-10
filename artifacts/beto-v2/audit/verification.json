@@ -1,0 +1,27 @@
+{
+  "command": "outputs/venv-ml/Scripts/python.exe scripts/build_beto_v2_audit_report.py",
+  "commit": "74f80917f6b245d718c201d58e0d3599f2e4b3e0",
+  "prediction_rows": 1628,
+  "metrics_recomputed_from_csv": true,
+  "input_hashes_preserved": {
+    "changed": [],
+    "checked": 953
+  },
+  "outputs": {
+    "artifacts\\beto-v2\\audit\\dataset-audit.json": "c5c78f2a8ce5784e41f78b7c9e6c946c898b1c2a6f0d53adc53dd363df91a6a4",
+    "artifacts\\beto-v2\\audit\\forensic-checks.json": "06415a6eb34ce450a64130c2e8380b933b49bfc390f16c5aeac824398abb9bb5",
+    "artifacts\\beto-v2\\audit\\predictions-current.csv": "49786f5d2f32c8062d50025929a61bc5a9207882d722938db80718e57af5af67",
+    "artifacts\\beto-v2\\audit\\predictions-external.csv": "f2a23953fe6511abed6d689ba77a5c363c2519a3c24273b7a2da66f7bfe4e93f",
+    "artifacts\\beto-v2\\audit\\similarity-pairs.json": "d1e7c52dbb7f5244705cd2e2a81ad96e81aec3dccaacc6d2e0ba9ec37081a7a5",
+    "artifacts\\beto-v2\\audit\\source-class-distribution.csv": "4eb0418d1ea629e05aa5a2ede753055bca12bb79b03f8e9ee64936e4a05365a3",
+    "artifacts\\beto-v2\\audit\\suspicious-labels.csv": "1f7f5d37691a328603775e4bb3bbc2cdc9e6c3511152605135503cd03d1c89e0",
+    "artifacts\\beto-v2\\audit\\token-lengths.csv": "e3e53e879e673d8a93cf4b0bc261347fbda9c7adcc6ca0effd76c7fe1f70d015",
+    "docs\\beto-v2\\01-auditoria.md": "b0333a91a346f94bab385f94889dfd6718912d33f6b0da9dfe15aba951d5e084",
+    "docs\\beto-v2\\progress.md": "ba77cf24fb272d403e0cfd0bdfaa22ca5e0f020ca96c8e54c0ec0a8ac9aea095"
+  },
+  "scripts": {
+    "scripts\\audit_beto_v2.py": "683733bd56de5bd725fa5d5e9adf2b87875225026817a3ba2e231fe33e4a7beb",
+    "scripts\\audit_beto_v2_checks.py": "c055fff4e317713f3169181e6afba77505bcb680f3cf44e12a17ed9e31613939",
+    "scripts\\build_beto_v2_audit_report.py": "af86640a65df8d80a562f88c13384e6a1372ed7c2136f00515a9515dcd2aaa6f"
+  }
+}

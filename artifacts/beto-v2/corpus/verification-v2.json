@@ -1,0 +1,55 @@
+{
+  "evidence": {
+    "commit": "74f80917f6b245d718c201d58e0d3599f2e4b3e0",
+    "command": "outputs/venv-ml/Scripts/python.exe scripts/build_beto_corpus_v2.py",
+    "version": "beto-corpus-v2.2",
+    "acquisition_command": "outputs/venv-ml/Scripts/python.exe scripts/acquire_beto_corpus_v2.py",
+    "created_at": "2026-09-08T21:05:38.751631+00:00",
+    "versions": {
+      "pypdf": "5.9.0",
+      "requests": "2.34.2",
+      "youtube-transcript-api": "1.2.4"
+    },
+    "python": "3.10.10 (tags/v3.10.10:aad5f6a, Feb  7 2023, 17:20:36) [MSC v.1929 64 bit (AMD64)]",
+    "model_checkpoint": null,
+    "model_used": false,
+    "plan_sha256": "29f6eaf1c6d15cc79d2eeaebd016fde4ff004d9060deb852a1daec08b664bad2",
+    "script_sha256": "eb3f4129e3ea04f6edb510406dd166d7275d8f7ce65a433f2a1976d275e4ead6"
+  },
+  "reference_dataset_hashes": {
+    "artifacts/datasets/gold-v1-source-aware.json": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a",
+    "outputs/corpus-snapshot-v4/reviewed-export.json": "d00c83713de6d2b7263f3aa09da583801b3f358b4d46563ce9957e7578fde8a9",
+    "artifacts/datasets/evaluation-pilot-v2.json": "b127e120ec764d40d49e314be3f6d5985803948080c3181f3426f65d0ed96791"
+  },
+  "distribution_sha256": "4eb0418d1ea629e05aa5a2ede753055bca12bb79b03f8e9ee64936e4a05365a3",
+  "counts": {
+    "registry": 25,
+    "statuses": {
+      "accepted_unlabeled": 9,
+      "blocked": 7,
+      "reused_existing": 1,
+      "accepted_reserved_provisional": 2,
+      "candidate": 3,
+      "rejected": 3
+    },
+    "unlabeled_units": 23,
+    "annotation_candidates": 18,
+    "reserved_obtained": 2
+  },
+  "lexical_overlap_flags": [],
+  "within_batch_overlap_flags": [],
+  "overlap_scope": "Selected candidate spans vs gold, v4, pilot; 5-word normalized shingles. Not full-work semantic independence proof; external-development not included.",
+  "checks": {
+    "reserved_excluded": true,
+    "labels_null": true,
+    "raw_span_roundtrip": true
+  },
+  "outputs_sha256": {
+    "artifacts\\beto-v2\\corpus\\source-registry-v2.csv": "8ab105c25981cbc820065ce9685559662416e5ba8ff97a8e2c42be8572d23e24",
+    "outputs\\beto-v2\\corpus\\corpus-unlabeled-v2.jsonl": "06ebff28a0f7c162ea5d40c24841309e3877983d12d7ff3f0e72adba86ea0678",
+    "outputs\\beto-v2\\corpus\\supervised-candidates-v2.jsonl": "cdc02e4898be4042ba24ca917354253717c95689815112c0fb86418e74b1b2db",
+    "artifacts\\beto-v2\\corpus\\source-groups-v2.json": "4804f807353df07c76c8efeb3447d58ea745044e2e6d4fb37941f2db528d6c04",
+    "artifacts\\beto-v2\\corpus\\reserved-evaluation-sources-v2.json": "334570a82806669212e3683290807f1bee157e2853acb6c6e192e6ddfe3efaee",
+    "artifacts\\beto-v2\\corpus\\class-work-author-format-v2.csv": "b4432339aac85bce202485063f70b1f9d06b75010e71932ed412ae63079ab577"
+  }
+}

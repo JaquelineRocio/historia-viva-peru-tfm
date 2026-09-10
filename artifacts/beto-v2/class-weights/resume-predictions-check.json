@@ -1,0 +1,3738 @@
+{
+  "new_training_runs": 0,
+  "purpose": "diagnostic only; epoch/checkpoint selection unchanged",
+  "epoch": 2,
+  "changed_prediction_count": 0,
+  "changes": [],
+  "results": {
+    "interrupted": {
+      "checkpoint_sha256": "d39522f5c7b45b4ce176ab99f970a3ea34676d594e3f13b87ddcc5eb3a8f5dab",
+      "metrics": {
+        "combined": {
+          "n": 303,
+          "f1_macro": 0.2993298348976826,
+          "accuracy": 0.47854785478547857,
+          "per_class": {
+            "campanias_conflictos_militares": {
+              "precision": 0.7,
+              "recall": 0.7205882352941176,
+              "f1-score": 0.7101449275362319,
+              "support": 68.0
+            },
+            "contexto_colonial_antecedentes": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 41.0
+            },
+            "crisis_ideas_emancipadoras": {
+              "precision": 0.2,
+              "recall": 0.14285714285714285,
+              "f1-score": 0.16666666666666666,
+              "support": 7.0
+            },
+            "liderazgos_diplomacia_proyectos": {
+              "precision": 0.3684210526315789,
+              "recall": 0.14893617021276595,
+              "f1-score": 0.21212121212121213,
+              "support": 47.0
+            },
+            "no_relevante": {
+              "precision": 0.55,
+              "recall": 0.39285714285714285,
+              "f1-score": 0.4583333333333333,
+              "support": 28.0
+            },
+            "organizacion_consecuencias_republicanas": {
+              "precision": 0.41397849462365593,
+              "recall": 0.8105263157894737,
+              "f1-score": 0.5480427046263345,
+              "support": 95.0
+            },
+            "participacion_social_regional": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 17.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              49,
+              0,
+              0,
+              3,
+              2,
+              13,
+              1
+            ],
+            [
+              2,
+              0,
+              0,
+              2,
+              0,
+              37,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              6,
+              0
+            ],
+            [
+              8,
+              0,
+              2,
+              7,
+              1,
+              29,
+              0
+            ],
+            [
+              2,
+              0,
+              1,
+              3,
+              11,
+              10,
+              1
+            ],
+            [
+              9,
+              0,
+              1,
+              3,
+              4,
+              77,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              2,
+              14,
+              0
+            ]
+          ]
+        },
+        "historical": {
+          "n": 288,
+          "f1_macro": 0.3062478095074072,
+          "accuracy": 0.4861111111111111,
+          "per_class": {
+            "campanias_conflictos_militares": {
+              "precision": 0.7101449275362319,
+              "recall": 0.7205882352941176,
+              "f1-score": 0.7153284671532847,
+              "support": 68.0
+            },
+            "contexto_colonial_antecedentes": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 40.0
+            },
+            "crisis_ideas_emancipadoras": {
+              "precision": 0.2,
+              "recall": 0.14285714285714285,
+              "f1-score": 0.16666666666666666,
+              "support": 7.0
+            },
+            "liderazgos_diplomacia_proyectos": {
+              "precision": 0.3684210526315789,
+              "recall": 0.14893617021276595,
+              "f1-score": 0.21212121212121213,
+              "support": 47.0
+            },
+            "no_relevante": {
+              "precision": 0.55,
+              "recall": 0.4583333333333333,
+              "f1-score": 0.5,
+              "support": 24.0
+            },
+            "organizacion_consecuencias_republicanas": {
+              "precision": 0.4186046511627907,
+              "recall": 0.8,
+              "f1-score": 0.549618320610687,
+              "support": 90.0
+            },
+            "participacion_social_regional": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 12.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              49,
+              0,
+              0,
+              3,
+              2,
+              13,
+              1
+            ],
+            [
+              2,
+              0,
+              0,
+              2,
+              0,
+              36,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              6,
+              0
+            ],
+            [
+              8,
+              0,
+              2,
+              7,
+              1,
+              29,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              3,
+              11,
+              7,
+              1
+            ],
+            [
+              9,
+              0,
+              1,
+              3,
+              4,
+              72,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              2,
+              9,
+              0
+            ]
+          ]
+        },
+        "new_AI": {
+          "n": 15,
+          "f1_macro": 0.07518796992481203,
+          "accuracy": 0.3333333333333333,
+          "per_class": {
+            "campanias_conflictos_militares": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 0.0
+            },
+            "contexto_colonial_antecedentes": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 1.0
+            },
+            "crisis_ideas_emancipadoras": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 0.0
+            },
+            "liderazgos_diplomacia_proyectos": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 0.0
+            },
+            "no_relevante": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 4.0
+            },
+            "organizacion_consecuencias_republicanas": {
+              "precision": 0.35714285714285715,
+              "recall": 1.0,
+              "f1-score": 0.5263157894736842,
+              "support": 5.0
+            },
+            "participacion_social_regional": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 5.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              5,
+              0
+            ]
+          ]
+        }
+      },
+      "predictions": [
+        {
+          "segment_id": "historical-v4-0001",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0004",
+          "truth": "participacion_social_regional",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0005",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0015",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0016",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0017",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0018",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0019",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0020",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0021",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0022",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0023",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0024",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0025",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0026",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0027",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0028",
+          "truth": "participacion_social_regional",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0029",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0030",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0031",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0032",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0033",
+          "truth": "participacion_social_regional",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0035",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0036",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0037",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0038",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0039",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0040",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0041",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0222",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0251",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0252",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0265",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0280",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0283",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0284",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0373",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0403",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0424",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0425",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0426",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0427",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0428",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0429",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0430",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0431",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0432",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0433",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0434",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0435",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0436",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0437",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0438",
+          "truth": "no_relevante",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0439",
+          "truth": "no_relevante",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0440",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0441",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0442",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0443",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0444",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0445",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0446",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0447",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0448",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0449",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0450",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0451",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0452",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0453",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0454",
+          "truth": "no_relevante",
+          "predicted": "participacion_social_regional"
+        },
+        {
+          "segment_id": "historical-v4-0455",
+          "truth": "crisis_ideas_emancipadoras",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0456",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0457",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0458",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0459",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0460",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0461",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0462",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0463",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "crisis_ideas_emancipadoras"
+        },
+        {
+          "segment_id": "historical-v4-0464",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0465",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0466",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0467",
+          "truth": "crisis_ideas_emancipadoras",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0468",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0469",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0470",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0471",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0472",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0473",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0474",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0475",
+          "truth": "no_relevante",
+          "predicted": "crisis_ideas_emancipadoras"
+        },
+        {
+          "segment_id": "historical-v4-0476",
+          "truth": "no_relevante",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0477",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0478",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0479",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0480",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0481",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "crisis_ideas_emancipadoras"
+        },
+        {
+          "segment_id": "historical-v4-0482",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "crisis_ideas_emancipadoras"
+        },
+        {
+          "segment_id": "historical-v4-0483",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0484",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0485",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0486",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0487",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0488",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0489",
+          "truth": "no_relevante",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0490",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0491",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0492",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0493",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0494",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0495",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0496",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0497",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0498",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0499",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0500",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0501",
+          "truth": "no_relevante",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0502",
+          "truth": "no_relevante",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0503",
+          "truth": "no_relevante",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0504",
+          "truth": "no_relevante",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0505",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0506",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0507",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0508",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0509",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0510",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0511",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0512",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0513",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0514",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0515",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0516",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0517",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0518",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0519",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0520",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0521",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0522",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0523",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0524",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0525",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0527",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0528",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0529",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0530",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0532",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0533",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0534",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0535",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0536",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0537",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0538",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0539",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0540",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0541",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0542",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0543",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0544",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0545",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0546",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0547",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0548",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0549",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0550",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0551",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0552",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0553",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0554",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0555",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0556",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0557",
+          "truth": "crisis_ideas_emancipadoras",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0558",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0559",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0560",
+          "truth": "crisis_ideas_emancipadoras",
+          "predicted": "crisis_ideas_emancipadoras"
+        },
+        {
+          "segment_id": "historical-v4-0562",
+          "truth": "no_relevante",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0565",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0566",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0568",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0569",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0570",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0571",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "participacion_social_regional"
+        },
+        {
+          "segment_id": "historical-v4-0572",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0579",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0611",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0615",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0618",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0621",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0622",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0624",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0625",
+          "truth": "no_relevante",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0629",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0630",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0632",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0635",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "participacion_social_regional"
+        },
+        {
+          "segment_id": "historical-v4-0636",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0639",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0644",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0696",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0697",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0698",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0699",
+          "truth": "crisis_ideas_emancipadoras",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0700",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0701",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0702",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0703",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0704",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0705",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0706",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0707",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0708",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0709",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0710",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0711",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0712",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0713",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0714",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0715",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0716",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0717",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0718",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0719",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0720",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0721",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0722",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0723",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0726",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0727",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0728",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0729",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0730",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0731",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0732",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0733",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0734",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0735",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0736",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0737",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0738",
+          "truth": "crisis_ideas_emancipadoras",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0739",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0740",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0741",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0742",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0743",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0744",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0745",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0746",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0747",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0748",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0749",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0750",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0751",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0752",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0753",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0754",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0755",
+          "truth": "no_relevante",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0756",
+          "truth": "crisis_ideas_emancipadoras",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0757",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0758",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0759",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0760",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0761",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0762",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0763",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0764",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0765",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0766",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0767",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0768",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0769",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0770",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0771",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0772",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0773",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0774",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0775",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0776",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0777",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0778",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0779",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0780",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0781",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0782",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0783",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0784",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0785",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0786",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0787",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0788",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0789",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S10-seg0003-s00000",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S10-seg0010-s00000",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S10-seg0014-s00000",
+          "truth": "no_relevante",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S10-seg0034-s00606",
+          "truth": "no_relevante",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "S15-seg0007-s00000",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S15-seg0008-s00000",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S15-seg0025-s00000",
+          "truth": "no_relevante",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S15-seg0057-s00000",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S15-seg0061-s00000",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S05-visual-p007-01",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S05-visual-p007-02",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S10-seg0010-s00717",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S10-seg0012-s00000",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S15-seg0010-s00000",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S15-seg0017-s00000",
+          "truth": "no_relevante",
+          "predicted": "organizacion_consecuencias_republicanas"
+        }
+      ]
+    },
+    "resumed": {
+      "checkpoint_sha256": "a8b8fd6c72defaeb6ed6f6419f163d069e9ba3b5db66a6dbd4d3940e3690b80c",
+      "metrics": {
+        "combined": {
+          "n": 303,
+          "f1_macro": 0.2993298348976826,
+          "accuracy": 0.47854785478547857,
+          "per_class": {
+            "campanias_conflictos_militares": {
+              "precision": 0.7,
+              "recall": 0.7205882352941176,
+              "f1-score": 0.7101449275362319,
+              "support": 68.0
+            },
+            "contexto_colonial_antecedentes": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 41.0
+            },
+            "crisis_ideas_emancipadoras": {
+              "precision": 0.2,
+              "recall": 0.14285714285714285,
+              "f1-score": 0.16666666666666666,
+              "support": 7.0
+            },
+            "liderazgos_diplomacia_proyectos": {
+              "precision": 0.3684210526315789,
+              "recall": 0.14893617021276595,
+              "f1-score": 0.21212121212121213,
+              "support": 47.0
+            },
+            "no_relevante": {
+              "precision": 0.55,
+              "recall": 0.39285714285714285,
+              "f1-score": 0.4583333333333333,
+              "support": 28.0
+            },
+            "organizacion_consecuencias_republicanas": {
+              "precision": 0.41397849462365593,
+              "recall": 0.8105263157894737,
+              "f1-score": 0.5480427046263345,
+              "support": 95.0
+            },
+            "participacion_social_regional": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 17.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              49,
+              0,
+              0,
+              3,
+              2,
+              13,
+              1
+            ],
+            [
+              2,
+              0,
+              0,
+              2,
+              0,
+              37,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              6,
+              0
+            ],
+            [
+              8,
+              0,
+              2,
+              7,
+              1,
+              29,
+              0
+            ],
+            [
+              2,
+              0,
+              1,
+              3,
+              11,
+              10,
+              1
+            ],
+            [
+              9,
+              0,
+              1,
+              3,
+              4,
+              77,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              2,
+              14,
+              0
+            ]
+          ]
+        },
+        "historical": {
+          "n": 288,
+          "f1_macro": 0.3062478095074072,
+          "accuracy": 0.4861111111111111,
+          "per_class": {
+            "campanias_conflictos_militares": {
+              "precision": 0.7101449275362319,
+              "recall": 0.7205882352941176,
+              "f1-score": 0.7153284671532847,
+              "support": 68.0
+            },
+            "contexto_colonial_antecedentes": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 40.0
+            },
+            "crisis_ideas_emancipadoras": {
+              "precision": 0.2,
+              "recall": 0.14285714285714285,
+              "f1-score": 0.16666666666666666,
+              "support": 7.0
+            },
+            "liderazgos_diplomacia_proyectos": {
+              "precision": 0.3684210526315789,
+              "recall": 0.14893617021276595,
+              "f1-score": 0.21212121212121213,
+              "support": 47.0
+            },
+            "no_relevante": {
+              "precision": 0.55,
+              "recall": 0.4583333333333333,
+              "f1-score": 0.5,
+              "support": 24.0
+            },
+            "organizacion_consecuencias_republicanas": {
+              "precision": 0.4186046511627907,
+              "recall": 0.8,
+              "f1-score": 0.549618320610687,
+              "support": 90.0
+            },
+            "participacion_social_regional": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 12.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              49,
+              0,
+              0,
+              3,
+              2,
+              13,
+              1
+            ],
+            [
+              2,
+              0,
+              0,
+              2,
+              0,
+              36,
+              0
+            ],
+            [
+              0,
+              0,
+              1,
+              0,
+              0,
+              6,
+              0
+            ],
+            [
+              8,
+              0,
+              2,
+              7,
+              1,
+              29,
+              0
+            ],
+            [
+              1,
+              0,
+              1,
+              3,
+              11,
+              7,
+              1
+            ],
+            [
+              9,
+              0,
+              1,
+              3,
+              4,
+              72,
+              1
+            ],
+            [
+              0,
+              0,
+              0,
+              1,
+              2,
+              9,
+              0
+            ]
+          ]
+        },
+        "new_AI": {
+          "n": 15,
+          "f1_macro": 0.07518796992481203,
+          "accuracy": 0.3333333333333333,
+          "per_class": {
+            "campanias_conflictos_militares": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 0.0
+            },
+            "contexto_colonial_antecedentes": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 1.0
+            },
+            "crisis_ideas_emancipadoras": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 0.0
+            },
+            "liderazgos_diplomacia_proyectos": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 0.0
+            },
+            "no_relevante": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 4.0
+            },
+            "organizacion_consecuencias_republicanas": {
+              "precision": 0.35714285714285715,
+              "recall": 1.0,
+              "f1-score": 0.5263157894736842,
+              "support": 5.0
+            },
+            "participacion_social_regional": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1-score": 0.0,
+              "support": 5.0
+            }
+          },
+          "confusion_matrix": [
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              0,
+              0,
+              0,
+              3,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            [
+              0,
+              0,
+              0,
+              0,
+              0,
+              5,
+              0
+            ]
+          ]
+        }
+      },
+      "predictions": [
+        {
+          "segment_id": "historical-v4-0001",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0004",
+          "truth": "participacion_social_regional",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0005",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0015",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0016",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0017",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0018",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0019",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0020",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0021",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0022",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0023",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0024",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0025",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0026",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0027",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0028",
+          "truth": "participacion_social_regional",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0029",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0030",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0031",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0032",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0033",
+          "truth": "participacion_social_regional",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0035",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0036",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0037",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0038",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0039",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0040",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0041",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0222",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0251",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0252",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0265",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0280",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0283",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0284",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0373",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0403",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0424",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0425",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0426",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0427",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0428",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0429",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0430",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0431",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0432",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0433",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0434",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0435",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0436",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0437",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0438",
+          "truth": "no_relevante",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0439",
+          "truth": "no_relevante",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0440",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0441",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0442",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0443",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0444",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0445",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0446",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0447",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0448",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0449",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0450",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0451",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0452",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0453",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0454",
+          "truth": "no_relevante",
+          "predicted": "participacion_social_regional"
+        },
+        {
+          "segment_id": "historical-v4-0455",
+          "truth": "crisis_ideas_emancipadoras",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0456",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0457",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0458",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0459",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0460",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0461",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0462",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0463",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "crisis_ideas_emancipadoras"
+        },
+        {
+          "segment_id": "historical-v4-0464",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0465",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0466",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0467",
+          "truth": "crisis_ideas_emancipadoras",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0468",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0469",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0470",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0471",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0472",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0473",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0474",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0475",
+          "truth": "no_relevante",
+          "predicted": "crisis_ideas_emancipadoras"
+        },
+        {
+          "segment_id": "historical-v4-0476",
+          "truth": "no_relevante",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0477",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0478",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0479",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0480",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0481",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "crisis_ideas_emancipadoras"
+        },
+        {
+          "segment_id": "historical-v4-0482",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "crisis_ideas_emancipadoras"
+        },
+        {
+          "segment_id": "historical-v4-0483",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0484",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0485",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0486",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0487",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0488",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0489",
+          "truth": "no_relevante",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0490",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0491",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0492",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0493",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0494",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0495",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0496",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0497",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0498",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0499",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0500",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0501",
+          "truth": "no_relevante",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0502",
+          "truth": "no_relevante",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0503",
+          "truth": "no_relevante",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0504",
+          "truth": "no_relevante",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0505",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0506",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0507",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0508",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0509",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0510",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0511",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0512",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0513",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0514",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0515",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0516",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0517",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0518",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0519",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0520",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0521",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0522",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0523",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0524",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0525",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0527",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0528",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0529",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0530",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0532",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0533",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0534",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0535",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0536",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0537",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0538",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0539",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0540",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0541",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0542",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0543",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0544",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0545",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0546",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0547",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0548",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0549",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0550",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0551",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0552",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0553",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0554",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0555",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0556",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0557",
+          "truth": "crisis_ideas_emancipadoras",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0558",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0559",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0560",
+          "truth": "crisis_ideas_emancipadoras",
+          "predicted": "crisis_ideas_emancipadoras"
+        },
+        {
+          "segment_id": "historical-v4-0562",
+          "truth": "no_relevante",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0565",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0566",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0568",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0569",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0570",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0571",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "participacion_social_regional"
+        },
+        {
+          "segment_id": "historical-v4-0572",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0579",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0611",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0615",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0618",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0621",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0622",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0624",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0625",
+          "truth": "no_relevante",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0629",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0630",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0632",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0635",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "participacion_social_regional"
+        },
+        {
+          "segment_id": "historical-v4-0636",
+          "truth": "no_relevante",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0639",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0644",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0696",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0697",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0698",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0699",
+          "truth": "crisis_ideas_emancipadoras",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0700",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0701",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0702",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0703",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0704",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0705",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0706",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0707",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0708",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0709",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0710",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0711",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0712",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0713",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0714",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0715",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0716",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0717",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0718",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0719",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0720",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "no_relevante"
+        },
+        {
+          "segment_id": "historical-v4-0721",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0722",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0723",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0726",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0727",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0728",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0729",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0730",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0731",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0732",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0733",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0734",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0735",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0736",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0737",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0738",
+          "truth": "crisis_ideas_emancipadoras",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0739",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0740",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0741",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0742",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0743",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0744",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0745",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0746",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0747",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0748",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0749",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0750",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0751",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0752",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0753",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0754",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0755",
+          "truth": "no_relevante",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0756",
+          "truth": "crisis_ideas_emancipadoras",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0757",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0758",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0759",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0760",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0761",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0762",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0763",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0764",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0765",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0766",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0767",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0768",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0769",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0770",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0771",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0772",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0773",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0774",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0775",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0776",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0777",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0778",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0779",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0780",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "liderazgos_diplomacia_proyectos"
+        },
+        {
+          "segment_id": "historical-v4-0781",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0782",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0783",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0784",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0785",
+          "truth": "campanias_conflictos_militares",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "historical-v4-0786",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0787",
+          "truth": "liderazgos_diplomacia_proyectos",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0788",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "historical-v4-0789",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S10-seg0003-s00000",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S10-seg0010-s00000",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S10-seg0014-s00000",
+          "truth": "no_relevante",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S10-seg0034-s00606",
+          "truth": "no_relevante",
+          "predicted": "campanias_conflictos_militares"
+        },
+        {
+          "segment_id": "S15-seg0007-s00000",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S15-seg0008-s00000",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S15-seg0025-s00000",
+          "truth": "no_relevante",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S15-seg0057-s00000",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S15-seg0061-s00000",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S05-visual-p007-01",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S05-visual-p007-02",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S10-seg0010-s00717",
+          "truth": "participacion_social_regional",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S10-seg0012-s00000",
+          "truth": "organizacion_consecuencias_republicanas",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S15-seg0010-s00000",
+          "truth": "contexto_colonial_antecedentes",
+          "predicted": "organizacion_consecuencias_republicanas"
+        },
+        {
+          "segment_id": "S15-seg0017-s00000",
+          "truth": "no_relevante",
+          "predicted": "organizacion_consecuencias_republicanas"
+        }
+      ]
+    }
+  },
+  "script_sha256": "6bfc9e3afe4308e956a1722f90d823bbcf330aa65bc55e6dbbc7db26e4bc03c5"
+}

@@ -1,0 +1,2886 @@
+{
+  "created_at": "2026-09-08T20:41:50.702281+00:00",
+  "command": "\"D:\\MASTER EN DESARROLLO CON IA\\PROYECTO FINAL\\outputs\\venv-ml\\Scripts\\python.exe\" scripts/audit_beto_v2.py",
+  "commit": "74f80917f6b245d718c201d58e0d3599f2e4b3e0",
+  "working_tree": " M coursework/README.md\n M scripts/compare_beto_validation.py\n?? artifacts/datasets/evaluation-pilot-v2.json\n?? artifacts/experiments/beto-data-v3/\n?? artifacts/experiments/beto-learning-rate-v1/\n?? artifacts/experiments/beto-learning-sanity-v1/\n?? artifacts/experiments/beto-loss-normalization-v1/\n?? artifacts/experiments/beto-reference-control-v1/\n?? artifacts/experiments/beto-source-epochs-v1/\n?? artifacts/experiments/beto-training-cleanup-v1/\n?? artifacts/experiments/beto-training-fit-v1/\n?? artifacts/experiments/tfidf-beto-work-control-v1/\n?? artifacts/reviews/beto-historiography-boundary-v1.json\n?? artifacts/reviews/beto-ideas-contrast-v1-selection.json\n?? artifacts/reviews/beto-ideas-contrast-v1.json\n?? artifacts/reviews/beto-root-cause-v1/\n?? artifacts/reviews/beto-training-cleanup-v1/\n?? artifacts/reviews/boundary-resolution-v3.json\n?? artifacts/reviews/independent-review-v1/\n?? artifacts/reviews/training-batch-v3.json\n?? scripts/audit_beto_v2.py\n?? scripts/beto_effective_batch_loss.py\n?? scripts/beto_epoch_trajectory.py\n?? scripts/build_beto_training_cleanup.py\n?? scripts/build_training_batch_v3.py\n?? scripts/check_beto_effective_batch_loss.py\n?? scripts/check_beto_source_epochs.py\n?? scripts/compare_beto_data_v3.py\n?? scripts/compare_beto_learning_rate.py\n?? scripts/compare_beto_loss_normalization.py\n?? scripts/compare_beto_source_epochs.py\n?? scripts/compare_beto_training_cleanup.py\n?? scripts/compare_tfidf_beto_work_control.py\n?? scripts/diagnose_beto_learning_sanity.py\n?? scripts/diagnose_beto_training_fit.py\n?? scripts/prepare_beto_ideas_contrast.py\n?? scripts/prepare_independent_review_v1.py\n?? scripts/verify_beto_source_epochs.py\n",
+  "python": "3.10.10",
+  "versions": {
+    "torch": "2.7.1+cu126",
+    "transformers": "4.57.6",
+    "tokenizers": "0.22.2",
+    "numpy": "2.2.6",
+    "scikit-learn": "1.7.2",
+    "scipy": "1.15.3",
+    "safetensors": "0.8.0"
+  },
+  "offline": true,
+  "training_performed": false,
+  "production_verified_live": false,
+  "checkpoints": {
+    "apps/ml/storage/models/beto-v1-gold-source-aware": {
+      "config.json": "4861dfe69190f415b6bf58f4031f1494c06f3853df53140611303308c7db400a",
+      "experiment.json": "267ffccc9a695032bc005d4dc67d857d5f7452020bc1ea7eace05c012b327b53",
+      "labels.json": "3e8d21fda1c3a8c0d83249dbf89a9d5fce0e89a6635e9e52a49dac04dd59b169",
+      "metrics.json": "a364605a16003de818bc44d2ea2123285a776323d146668d8e309bfa237507f5",
+      "model.safetensors": "9d8861f8406d41050fa57c530224a1e62983e887807fa6047eefcea52356c215",
+      "special_tokens_map.json": "5d5b662e421ea9fac075174bb0688ee0d9431699900b90662acd44b2a350503a",
+      "tokenizer.json": "f0ee18fc8f95db74ce5c5c3a4070e0eb32a4b31bcde4865af63b1308e924c0c4",
+      "tokenizer_config.json": "32761d10ecdb004a090472cd8526f936fb14c66b04ef3565ac5f8f5b1a53f8cc",
+      "training_args.bin": "fd19f3483619daa02f94512e9c97dd46d5cf5c23345ab27afbb98b5bbf0caac4",
+      "vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+    },
+    "outputs/experiments/beto-u1/beto-lr2e5": {
+      "config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+      "labels.json": "3e8d21fda1c3a8c0d83249dbf89a9d5fce0e89a6635e9e52a49dac04dd59b169",
+      "metrics.json": "5d769ba8e93a7e043561c2641cee7b4b3690e7ea325ee4d88cd5561e46186ad8",
+      "model.safetensors": "4fea08ebf3da420a8ef1b04b151822b32c7f4869408335ab0c5885eb7945ef1f",
+      "special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+      "tokenizer.json": "f0ee18fc8f95db74ce5c5c3a4070e0eb32a4b31bcde4865af63b1308e924c0c4",
+      "tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+      "validation.json": "58460604ea3cd86f07f167f4714e6396083f705652269ff99c0a8ca9aae8780c",
+      "vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+    }
+  },
+  "checkpoint_metadata": {
+    "apps/ml/storage/models/beto-v1-gold-source-aware": {
+      "labels.json": {
+        "id2label": {
+          "0": "campanias_conflictos_militares",
+          "1": "contexto_colonial_antecedentes",
+          "2": "crisis_ideas_emancipadoras",
+          "3": "liderazgos_diplomacia_proyectos",
+          "4": "no_relevante",
+          "5": "organizacion_consecuencias_republicanas",
+          "6": "participacion_social_regional"
+        },
+        "max_len": 192
+      },
+      "config.json": {
+        "architectures": [
+          "BertForSequenceClassification"
+        ],
+        "attention_probs_dropout_prob": 0.1,
+        "classifier_dropout": null,
+        "dtype": "float32",
+        "gradient_checkpointing": false,
+        "hidden_act": "gelu",
+        "hidden_dropout_prob": 0.1,
+        "hidden_size": 768,
+        "id2label": {
+          "0": "campanias_conflictos_militares",
+          "1": "contexto_colonial_antecedentes",
+          "2": "crisis_ideas_emancipadoras",
+          "3": "liderazgos_diplomacia_proyectos",
+          "4": "no_relevante",
+          "5": "organizacion_consecuencias_republicanas",
+          "6": "participacion_social_regional"
+        },
+        "initializer_range": 0.02,
+        "intermediate_size": 3072,
+        "label2id": {
+          "campanias_conflictos_militares": 0,
+          "contexto_colonial_antecedentes": 1,
+          "crisis_ideas_emancipadoras": 2,
+          "liderazgos_diplomacia_proyectos": 3,
+          "no_relevante": 4,
+          "organizacion_consecuencias_republicanas": 5,
+          "participacion_social_regional": 6
+        },
+        "layer_norm_eps": 1e-12,
+        "max_position_embeddings": 512,
+        "model_type": "bert",
+        "num_attention_heads": 12,
+        "num_hidden_layers": 12,
+        "output_past": true,
+        "pad_token_id": 1,
+        "position_embedding_type": "absolute",
+        "transformers_version": "4.57.6",
+        "type_vocab_size": 2,
+        "use_cache": true,
+        "vocab_size": 31002
+      }
+    },
+    "outputs/experiments/beto-u1/beto-lr2e5": {
+      "labels.json": {
+        "id2label": {
+          "0": "campanias_conflictos_militares",
+          "1": "contexto_colonial_antecedentes",
+          "2": "crisis_ideas_emancipadoras",
+          "3": "liderazgos_diplomacia_proyectos",
+          "4": "no_relevante",
+          "5": "organizacion_consecuencias_republicanas",
+          "6": "participacion_social_regional"
+        },
+        "max_len": 192
+      },
+      "config.json": {
+        "architectures": [
+          "BertForSequenceClassification"
+        ],
+        "attention_probs_dropout_prob": 0.1,
+        "classifier_dropout": null,
+        "dtype": "float32",
+        "gradient_checkpointing": false,
+        "hidden_act": "gelu",
+        "hidden_dropout_prob": 0.1,
+        "hidden_size": 768,
+        "id2label": {
+          "0": "campanias_conflictos_militares",
+          "1": "contexto_colonial_antecedentes",
+          "2": "crisis_ideas_emancipadoras",
+          "3": "liderazgos_diplomacia_proyectos",
+          "4": "no_relevante",
+          "5": "organizacion_consecuencias_republicanas",
+          "6": "participacion_social_regional"
+        },
+        "initializer_range": 0.02,
+        "intermediate_size": 3072,
+        "label2id": {
+          "campanias_conflictos_militares": 0,
+          "contexto_colonial_antecedentes": 1,
+          "crisis_ideas_emancipadoras": 2,
+          "liderazgos_diplomacia_proyectos": 3,
+          "no_relevante": 4,
+          "organizacion_consecuencias_republicanas": 5,
+          "participacion_social_regional": 6
+        },
+        "layer_norm_eps": 1e-12,
+        "max_position_embeddings": 512,
+        "model_type": "bert",
+        "num_attention_heads": 12,
+        "num_hidden_layers": 12,
+        "output_past": true,
+        "pad_token_id": 1,
+        "position_embedding_type": "absolute",
+        "transformers_version": "4.57.6",
+        "type_vocab_size": 2,
+        "use_cache": true,
+        "vocab_size": 31002
+      }
+    }
+  },
+  "tokenizer_settings": [
+    {
+      "class": "BertTokenizerFast",
+      "do_lower_case": false,
+      "special_tokens": {
+        "unk_token": "[UNK]",
+        "sep_token": "[SEP]",
+        "pad_token": "[PAD]",
+        "cls_token": "[CLS]",
+        "mask_token": "[MASK]"
+      },
+      "truncation_side": "right",
+      "padding_side": "right"
+    },
+    {
+      "class": "BertTokenizerFast",
+      "do_lower_case": false,
+      "special_tokens": {
+        "unk_token": "[UNK]",
+        "sep_token": "[SEP]",
+        "pad_token": "[PAD]",
+        "cls_token": "[CLS]",
+        "mask_token": "[MASK]"
+      },
+      "truncation_side": "right",
+      "padding_side": "right"
+    }
+  ],
+  "input_manifest": {
+    "artifacts/datasets/evaluation-pilot-v2.json": "b127e120ec764d40d49e314be3f6d5985803948080c3181f3426f65d0ed96791",
+    "artifacts/datasets/external-development-v1.json": "901f50f13a60642b316896abd9d4d68b945e699f7befc696b9e7506bc8fa4ceb",
+    "artifacts/datasets/gold-v1-balanced.json": "786f0f72f89598a96dfe3db87d5b4f47c3582617db8df70ae4ff0a9306aaa171",
+    "artifacts/datasets/gold-v1-source-aware.json": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a",
+    "artifacts/experiments/beto-data-v3/application.json": "90ddb9aa6919cbb2f0c15ca88467250d45a4ba031236bc31d0e8e957a1dffced",
+    "artifacts/experiments/beto-data-v3/protocol.json": "d1e180810f941f8644be27d69b873950913d2728f508894821c6ae9eb13d5151",
+    "artifacts/experiments/beto-data-v3/report.json": "e616ea31f461768e92821e782fbdfaee1c957eb948dbfc0dd81099eb65ffb422",
+    "artifacts/experiments/beto-learning-rate-v1/protocol.json": "0ac44c0c948ce400d26e450bac1bc4b99637840f9a81fe3816b2b0c8b214ec48",
+    "artifacts/experiments/beto-learning-rate-v1/report.json": "46c5413779bef6a0ee7fd6b04676427098411f1b296f0f2213b326f6781e7139",
+    "artifacts/experiments/beto-learning-rate-v1/verification.json": "d4093138e46e6faa0aa6a7cb6c73b8b0848d32332e9a48dc519d6ebf5cfd3489",
+    "artifacts/experiments/beto-learning-sanity-v1/protocol.json": "eba2dd6f570e79e6501a424ca43ef1562d5d2545f68e96f1d57f0ffe968cd38c",
+    "artifacts/experiments/beto-learning-sanity-v1/report.json": "0efafde7883d56d029e5e836d64043f62426d2cf7b78c8a1c712bd9ff6fb422a",
+    "artifacts/experiments/beto-learning-sanity-v1/verification.json": "e9bd655f3354322f65bdc6bb440f410654ecfc79342d267531a9afdd7584c38e",
+    "artifacts/experiments/beto-length-v1/protocol.json": "ae32457e95bfdda3f03ba89e2525686d8351224bf098ce7e5bff8aea2a0dc1c0",
+    "artifacts/experiments/beto-length-v1/report.json": "899c3a99feba141c4532b36f5548fe2d1d384ed133b6d4eadf10dfcf9cb16426",
+    "artifacts/experiments/beto-loss-normalization-v1/protocol.json": "f1cbe8e8d7582ab011f0df80809a382eb9bb47660680babafdbec31963b59499",
+    "artifacts/experiments/beto-loss-normalization-v1/report.json": "66c4f04b7b2382d97c2f0c2810cae8f818f0fa7b846101e19d4cf5df7c83d2cc",
+    "artifacts/experiments/beto-loss-normalization-v1/verification.json": "14bbe5a2fb68a9b6f1400720f15aa314cdbfd26272b8e8192d1175edbcd7be65",
+    "artifacts/experiments/beto-reference-control-v1/report.json": "bfa40f2972885bda657174f62f7242030ef653f277c70717d3a58620a189b315",
+    "artifacts/experiments/beto-reviewed-validation-v1/report.json": "f9a39566cf280232e97d966ed3a5ed87c1c588c686bc49d79657afaa7cce7d3a",
+    "artifacts/experiments/beto-source-epochs-v1/protocol.json": "008ae4cbeefa7ec31e79f8768ff112774d8dce1c5250b4519cdfaca419ba94c1",
+    "artifacts/experiments/beto-source-epochs-v1/report.json": "4f2c4027f2df23faa1c994fb367000c9a69bd3421ee90cf71a785e89fc529895",
+    "artifacts/experiments/beto-source-epochs-v1/verification.json": "3df040e2260d50eed99db4e52da1a914c2a884f3c2e6db8c0c6c655d2b719af3",
+    "artifacts/experiments/beto-training-cleanup-v1/protocol.json": "0018c478f6dde8e75994c29bb17a0c84fcc4d33a2e3bfb950a7a77beec529c3e",
+    "artifacts/experiments/beto-training-cleanup-v1/report.json": "9100239d65a951f171d22ea29354a8aa32633cd9a023e1fee443bf88d99e4759",
+    "artifacts/experiments/beto-training-cleanup-v1/verification.json": "8bcd7297dcdfc50bac9a92eceebaab72fb0fec1cfc60d627c764b5d7ad400dd3",
+    "artifacts/experiments/beto-training-fit-v1/protocol.json": "b8373b73232e8f35e0e4bdd875f965c640a09a7d79a201c6eec4ddc892bdd2cc",
+    "artifacts/experiments/beto-training-fit-v1/report.json": "4e228e629034a43d47b7b841fe53248be888fe432179a940eb0a336b7a67bb5c",
+    "artifacts/experiments/character-comparison-v1/report.json": "9366d588f64f31db56528dfb3eb420735340b142dcf2455d9c284e397a2da01e",
+    "artifacts/experiments/character-validation-v1/report.json": "502726e9870e5d07ccb1e86fe3c107ed0814a6a39f79212a2594d6c32a3f7650",
+    "artifacts/experiments/course-u1/beto/configuration.json": "5c14b6cd5b4668d11bbe4e17969f26c65266821ac6ff6c82bbce02132ab1a916",
+    "artifacts/experiments/course-u1/beto/dataset-audit.json": "441872b4483eb9c5ee15e4066748c9a498600cd80b3276e44e934bc9f2f5d44e",
+    "artifacts/experiments/course-u1/beto/report.json": "eac4e54a5a13850000439f1b59291fe2da5969c7a434b0600f0635ef01b10b42",
+    "artifacts/experiments/course-u1/beto/report.md": "521703fad2c20f2692f610e0dccd8dec820605465c2f92c429855bb79e0963e2",
+    "artifacts/experiments/course-u1/beto/selection.json": "ee92e6834a13271a592626b4381d274e99f6cbe00d1a298f55247a8766f001c6",
+    "artifacts/experiments/course-u1/evidence/beto-startup-local.json": "da586e4d1d3e61981bec419223efa1550232c6b3c2ad84d4528ce38efb7aca47",
+    "artifacts/experiments/course-u1/evidence/github-actions-post-push.json": "67fe5f6c39be718c65fbf9498b97b0257a24da0cd8a83280e7f096da849656a8",
+    "artifacts/experiments/course-u1/evidence/maintenance-no-changes.json": "eb20b81853537ac762639c2f3f42249aa7d9db1396a36c8eac7c3d8ce4426f02",
+    "artifacts/experiments/course-u1/evidence/modal-health-recovered.json": "017af960d59e85511dfcdbeeb1230c606646871ad9ff8c25dbed6fad1d983c0a",
+    "artifacts/experiments/course-u1/evidence/model-functional.json": "09427166780467a7e9b3d672e05b69d63b816e1a3a5e86a409bfad3c33079ed2",
+    "artifacts/experiments/course-u1/evidence/production-smoke-post-push.json": "118e6507e64120c55b9d0d73ea1bdccb27d98151c7b5b8da9c94947124361537",
+    "artifacts/experiments/course-u1/evidence/production-smoke-recovered.json": "2ac5578104b828947df5fcfaf00dec51141241243c58c3ff3f7ff9b10d38e574",
+    "artifacts/experiments/course-u1/evidence/production-smoke.json": "83e88073a97eee9e829650511ba6fc9c25cdf331ad957b2e4476a745be2eb2b8",
+    "artifacts/experiments/course-u1/evidence/source-flow-failed.json": "395265e5f26e9d78931e32a61b42dbbdd8eea78452a4d03077da24a214f02784",
+    "artifacts/experiments/course-u1/evidence/source-flow-reviewed.json": "24de87d59010970abc25fb1039939a43ed57847e86f92667258cb8da2f35bb3f",
+    "artifacts/experiments/course-u1/evidence/source-flow-storage-recovered.json": "cc9fb6868f1db5759bc9d2fa01553881b890d1133c5aff0938429c49b20389d6",
+    "artifacts/experiments/course-u1/tfidf/configuration.json": "7b6e4396c04904535516de964cfa31022f742e045960fa42589d8163d9636d87",
+    "artifacts/experiments/course-u1/tfidf/dataset-audit.json": "441872b4483eb9c5ee15e4066748c9a498600cd80b3276e44e934bc9f2f5d44e",
+    "artifacts/experiments/course-u1/tfidf/report.json": "df6bafdc495a98c67e61ef7faea42bcae54f3fce3ab6c020e4594594f3099c8c",
+    "artifacts/experiments/course-u1/tfidf/report.md": "e07b6d85841dafb344937b3a8623314d7a228de7f09ae0e12c827dd1c070b06e",
+    "artifacts/experiments/course-u1/tfidf/selection.json": "6b197e7f4be76a1835e55bec04ce2b06ab05d58c90988bd34815a215a76323e2",
+    "artifacts/experiments/gold-v1/baselines.json": "2eb5dffdcf12aa8ae1f5cc8ea7553006d702ab49a84145259fb80dfead47a268",
+    "artifacts/experiments/gold-v1-source-aware/baselines.json": "15c1b0c448716fe4a3f0744cb35bbeb65d999a41d5363ba5ca92a7463f5f88b7",
+    "artifacts/experiments/history-comparison-v1/comparison.json": "96b1deab98b1df672eba827b4aea8c263390476bd863338c26ab87d09bbe8ce6",
+    "artifacts/experiments/huerta-comparison-v1/comparison.json": "cc0a9912f32e3eb3b0556283cd703ddd95867f2cf33737c81367b22310b32a66",
+    "artifacts/experiments/source-generalization-v1/report.json": "7a801849f0d4f9fec4b2db211b3f3d3945313d0a7dc399cfadac5b9ff0bccdb6",
+    "artifacts/experiments/tfidf-beto-work-control-v1/protocol.json": "386440aa468223931a0b9b2e84d84fcd9d9a8f344de84108a229659c6c9bdfa5",
+    "artifacts/experiments/tfidf-beto-work-control-v1/report.json": "0a5258c8e305d591d647242071b3415bb88aefb9556db2c1921ec678e4c50608",
+    "artifacts/experiments/tfidf-beto-work-control-v1/verification.json": "fa992f3140856a52b4e955c39dce2fbe18a6e9485aa503e6c48f71e2717f6ea3",
+    "artifacts/experiments/villanueva-comparison-v1/comparison.json": "5bffc6137818db26d4d700e3015289e8cfef1241d04365ca59237186512d4a99",
+    "artifacts/reviews/agn-pilot-v1-peer-review.json": "2b726936ad06a102285ce50f8987a74247ec7441dd80d6beec1af44a45327d3b",
+    "artifacts/reviews/agn-pilot-v1.json": "dc5a10866d183c150409e0927dd7d79e54c60a350a93af409e5e1041350ef40d",
+    "artifacts/reviews/agn-snapshot-v1.json": "9f1c1515911bfee404c45043801f3cc5f5912675035073f38dfa5baa81abf211",
+    "artifacts/reviews/beto-historiography-boundary-v1.json": "71d9a3ba8d627abf92f183e9165d45e926cd04d88e671394198b34233fc56dbb",
+    "artifacts/reviews/beto-ideas-contrast-v1-selection.json": "67b446421d7a03c81f63dffd7a85d7da994f221d4695aea19e0f64f85e47d568",
+    "artifacts/reviews/beto-ideas-contrast-v1.json": "b96f2af2b4a85745361748b685e2edec23b2cdc2bafeac439c57ebb934c1e14c",
+    "artifacts/reviews/beto-readiness-v1.json": "ddd8edc24c45e01a4301e717263dbfd29dc3d3b068f71f683b5a494016e95995",
+    "artifacts/reviews/boundary-resolution-v3.json": "1e0f7c55df5a4863b8b263a72fae88da6de541851bd7843192a4d1d1fb679be8",
+    "artifacts/reviews/corpus-batch-v2.json": "8caeafbf3dbfc93db03c5d9076e90a650fede9d990b06bfef22e5da2d2ec1e64",
+    "artifacts/reviews/corpus-closure-v2.json": "9f8bee3c7070fd7ec190abd51b8c843d426e6f64b5204d179a60259acab23875",
+    "artifacts/reviews/corpus-snapshot-v2.json": "0139fe989cf51a8e718482a1f660687b6feb4fbbbdb9d5913e8e97f0bd415f8d",
+    "artifacts/reviews/coverage-diagnosis-v1.json": "88b31f58d0774aefb1bb6d0f5de4426171e81884e475f7e4990cf2412a893cd7",
+    "artifacts/reviews/curricular-coverage-v1.json": "dbeb744d478edcbed73610909cc27e289f31a0b8d06e38205e89e4d5c20ccde6",
+    "artifacts/reviews/external-development-v1.json": "33a10711ed13186406719b02ffe38892a7252e57a5ac060ac8f1b73475d5d004",
+    "artifacts/reviews/fonseca-repair-v1.json": "482449629a7807cab3d9edc8cfc1b349855a14a0a69f5b9ffacdfd455f3a335b",
+    "artifacts/reviews/fonseca-replacement-v1.json": "74e2e45539e3c5cddbaedef4ee0e74ca00b1f574039626a70b7553e94a2eedfa",
+    "artifacts/reviews/history-corrections-v1.json": "a394ab56abdc7340363b05984712e0be8a7b898e214c47a415d10a39068553ae",
+    "artifacts/reviews/history-review-v1-peer-review.json": "e1aaf47ed45119a50c54127476fc33aefbca2a49097a4308cabc9d9f10a68f83",
+    "artifacts/reviews/history-review-v1.json": "18125b450c1d403780fee33847ac461438307f630cb1e6370cf83de3f8b21fb4",
+    "artifacts/reviews/huerta-batch-snapshot-v1.json": "46dd97c12ef8089e359f3270f369179db73e3a373163ab60502a0e06b86731bc",
+    "artifacts/reviews/huerta-batch-v1.json": "850f4b3d6870ee7586122e92cccc84c81ab5e3016fc0f1ab3081c7e1d90829fe",
+    "artifacts/reviews/huerta-pilot-v1.json": "add75d193013f9ff94581b2f2a026857b135c3e9caf6246d5d2034308202e1c0",
+    "artifacts/reviews/huerta-snapshot-v1.json": "9f8571f0642d4b9fd993929fa192ea149da817e1941a478a3a8702c4f36b7e71",
+    "artifacts/reviews/ideas-source-v1.json": "644f52397a5c9d5e606939c8bf0c586e1ff2336fc8e631354b346e28a8fab4e7",
+    "artifacts/reviews/source-candidates-v1.json": "813e95ac023dfcff6ddc182d9151f8767d13d70af027186d1014f197dc5cd843",
+    "artifacts/reviews/source-diversity-v1.json": "93474eca48f045f2a0b1e3c6f9ac7ac6f353b30f570f48a18bed4dff8a20c7e1",
+    "artifacts/reviews/training-batch-v3.json": "b42860373a22f56490871b626a845b32d61f67108998fdc530e2883b57297692",
+    "artifacts/reviews/villanueva-boundaries-v1.json": "eecb567a777189571d9f9a02b2a5f824e439f43682f6cc75cd87ddfa0957fce2",
+    "artifacts/reviews/villanueva-repair-v1.json": "93a16704a5e777a0d557e3553cd49451b82ba884abb8b2b1374213b207e859e9",
+    "artifacts/reviews/villanueva-snapshot-v1.json": "e1695bf84f9c25a727d8047dfe5694665eddee08da55e872c778f9c73a9664f6",
+    "artifacts/reviews/beto-root-cause-v1/ideas-coverage-review.json": "050cc56cee63a4bcbbc7207408d7bfa159cddff40d1985e9790581e07534970d",
+    "artifacts/reviews/beto-root-cause-v1/quantitative-coverage.json": "07f606df908d3a9e3f7542b64da5c8bccfd5c2db8b314d6a3dca1ac37b862448",
+    "artifacts/reviews/beto-root-cause-v1/review-queue.json": "ab39bd7672bcde176b496159303326b492d022e7513e9186f3e39ea010717dc1",
+    "artifacts/reviews/beto-root-cause-v1/substantive-subset-diagnostic.json": "80ddc4601669b4bf98919e73b66b2d47846928fe4710d379b02d82c39b548311",
+    "artifacts/reviews/beto-root-cause-v1/verification.json": "d017ec588933e8ce2c71904a31f7c20765c5b48a15665773a162803fb392df1a",
+    "artifacts/reviews/beto-training-cleanup-v1/adjudication.json": "f10cdbb04cfd9b7962329fa7d109b9b8d63286c1a527a9566e1475988119b2f1",
+    "artifacts/reviews/beto-training-cleanup-v1/build-report.json": "5e90f1f6410d2409ed535308029e28c202e5288e17da37cce8988afdadfb1fc7",
+    "artifacts/reviews/beto-training-cleanup-v1/build-verification.json": "6f8c937ffb6b85dee77fac5eb431776a2cab98ac5bb19d18cb915934efe7eed8",
+    "artifacts/reviews/beto-training-cleanup-v1/context-review.json": "5bbe9e9202f4137ea31dae4251a8c7ba79c6788aba712b2f5a1e46672ebe4dda",
+    "artifacts/reviews/beto-training-cleanup-v1/dataset-peer-check.json": "334ef58a42afe06dcddb6e4c056953dde63c10198306bbb977dcbf25b9daa644",
+    "artifacts/reviews/independent-review-v1/adjudication.json": "ba7bce5fdd8e3375d6e552814f49a179313709a2aff1f3fbb58c91d5cb93913a",
+    "artifacts/reviews/independent-review-v1/blind-correction-check.json": "8dee9264046e21e677dc654d7f1b55b35194316333df1c26251a817a5031673a",
+    "artifacts/reviews/independent-review-v1/blind-evaluation-review.json": "5e4680605aa03371a35d27adeeba9c0acf046d4c5388f97483d49d045e580e64",
+    "artifacts/reviews/independent-review-v1/blind-training-review.json": "9a6e752ba74f48b10a2ac976bb42a3f794622ed20c2cf9ea99753ee9a4c32c94",
+    "artifacts/reviews/independent-review-v1/dependency-review.json": "e5cd0f3e3823a38ed1a67b1095bb716b174396a883ed713765632ac45938b015",
+    "artifacts/reviews/independent-review-v1/extraction-corrections.json": "3b8cae446949766b347d1a302cb7afc62da3909aee0abf4c0528ae968cc2b03c",
+    "artifacts/reviews/independent-review-v1/final-peer-check.json": "5e6ef740c003ce32dabbe6e00f70ae27e4a72c9d78719b0b73e6c5e4e965b8b9",
+    "artifacts/reviews/independent-review-v1/quarantine.json": "de10360ad3a725367d8ea9f150b041429925cc8d845101af57290c6ea4782d1f",
+    "artifacts/reviews/independent-review-v1/report.json": "85dcd33d972b7319a4a2761681a419e98505656c26a3986d0b773711ddfd91c7",
+    "artifacts/reviews/independent-review-v1/source-reservation.json": "37c3cdc42667555933026595698722e5890f24826bf19e059c48fc6c08967a66",
+    "artifacts/reviews/independent-review-v1/token-lengths.json": "63a1e9c792ba1d958bc2e13339a2082b2717abe0a1023e1d5b1f98b5bbb09cc5",
+    "artifacts/reviews/independent-review-v1/training-review.json": "14732b95d20b4f01c4fd1dd3cdb5d71bdbbd200b8696436c23fbd7792f09509c",
+    "artifacts/reviews/independent-review-v1/verification.json": "227d5c1d9e2c80e4354a45676e8b25bf0d9f02fc62201a3a72d3b52a8d5999c3",
+    "outputs/beto-loss-normalization-v1-preflight.json": "fe965a0eb4f2838884ee649bd6fef12f826de1f1002102890d2864d15af4d56f",
+    "outputs/beto-source-epochs-v1-preflight-initial.json": "d057202108b0eb56c5e3a6ece499f7ad24e8e5259eeb69b644bcd363aec854f3",
+    "outputs/beto-source-epochs-v1-preflight.json": "4ec75e79dd6f764cb51580ca534d8d14f854a1563cc08fb04df05a561ea21233",
+    "outputs/beto-training-fit-v1-preflight.json": "ad5ab3097ddb88bd5dee0883c00beeba1d24b28792fedc66508f78694b541afe",
+    "outputs/diagnose-modal.py": "d64fbedc5761081e5501378a62548483602963f833aeaf06b4a288e2bee3f30b",
+    "outputs/production-smoke-health-retries.json": "2d0c89c5a94ee6fb978a83f0419f52256ee7942b061cf1f7af92c7071061e20e",
+    "outputs/019f5895-d1a1-7eb3-882a-d9e7956dbed9/presentations/tfm-tech-audit/package.json": "609158e6c5fbc237939fa3ddf7faab80ab690bdc0c8d584414a885130103c4e8",
+    "outputs/agn-pilot-v1/candidates-verified.json": "a7941cdb088d790b41277b3970aae740eb03b538f553b1997b6b48bf20fc270a",
+    "outputs/agn-pilot-v1/candidates.json": "1fe456722d101dbd932f6905f413b9a2d41a82483bfcd3e2895ef59ecc2064a4",
+    "outputs/agn-pilot-v1/invalid-pdf-test.txt": "ad119bdbd9c7420677b1b044da77a5392dd519b9385c5cb43e62fe145a04cec7",
+    "outputs/agn-pilot-v1/revision-legible.md": "390648fe0c99138a1a1abc76d587570fe8a01bfe044c8ce45342345b39b4273c",
+    "outputs/agn-snapshot-v1/build-report.json": "ddfb75a2e18bf4f750effdb631ebbd416b75d3d410e089a1d0e714ef2a915792",
+    "outputs/agn-snapshot-v1/invalid-peer-control.json": "4ef1c72b8a3756f6ed78120ea2dac3d8caa54ea9c02b1694c689ed937c8bcb43",
+    "outputs/agn-snapshot-v1/reviewed-export.json": "2e128cd2208bd3584568edb42d4c20abbd632962762480d49ec6a4e3ad76a155",
+    "outputs/agn-snapshot-v1/maintenance/changes.json": "34f7487d50ef74847fbc0f206fa5e23a948f4caebd1354bd17f2550f4ccf9ecb",
+    "outputs/agn-snapshot-v1/maintenance/report.json": "331c2f73926408c144b7f9617ed90aa459f09d2f5454959f39019da21c99fcd3",
+    "outputs/agn-snapshot-v1/maintenance/report.md": "cbc35e2d113172fab03a613aea885f913c05711eab1f3327de6dee9dd8c4e188",
+    "outputs/agn-snapshot-v1/maintenance/snapshot.json": "7661abef5b7225b9a7674358666694f8520754292fe579d852d3d8ff2eadfb21",
+    "outputs/beto-data-v3/builder-check.json": "2db4a83d052605c94db2c38605660b76bc9d32c7fbaef1f40305cb13371aa157",
+    "outputs/beto-data-v3/preflight.json": "34f26288be6be8335d97ca7313c9320932f07c480ed9eee4717cdd5defe500a8",
+    "outputs/beto-data-v3/readiness.json": "da3cc05355eca2c26d34387b92eef3016493554632c54c4968ee9dcf5c94f207",
+    "outputs/beto-data-v3/recompute_result.py": "d10b9fbe9211d4bd52e9ce19c463f97ce40201f20d9e2981b4905797aeda2bd8",
+    "outputs/beto-data-v3/result-check.json": "5d4824d20ed42aff3a6a928077913a60199810f686a366844fb6a0d63fec6ede",
+    "outputs/beto-data-v3/run/candidate-external.json": "595b6a9ff1eaf605d13ce4ee87cbc3b68c9a2b1046247245b91c7d99bf4d7bac",
+    "outputs/beto-data-v3/run/report.json": "a243b4db505992fd47650fcbabac3cdd9e0165f7777b7428687606f925971e10",
+    "outputs/beto-data-v3/run/training-details.json": "06bf8eef35748db4f388c33917e2266cebebb7dac29d29fcee952ee1070a51dd",
+    "outputs/beto-data-v3/run/candidate/config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+    "outputs/beto-data-v3/run/candidate/labels.json": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19",
+    "outputs/beto-data-v3/run/candidate/special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+    "outputs/beto-data-v3/run/candidate/tokenizer.json": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f",
+    "outputs/beto-data-v3/run/candidate/tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+    "outputs/beto-data-v3/run/candidate/vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+    "outputs/beto-historiography-boundary-v1/assemble.py": "9b8cb35a747cfbf824d72b1d4217ce429f12aa4721e6554657c6592f331dbc71",
+    "outputs/beto-historiography-boundary-v1/fonseca-context.json": "96033375b031396bcac0160473ef3687926dc2cd6692fb942efc8f9cc74a7483",
+    "outputs/beto-historiography-boundary-v1/originals.json": "39987cf05e7d4c9372e7fc6b0e6b0a1afa516bc1780022f2311be41603027293",
+    "outputs/beto-historiography-boundary-v1/verification.json": "3bf87c92420efddab61cd3ac176dad63c80a40b94feba9dad2320aa15afd3822",
+    "outputs/beto-ideas-contrast-v1/assemble-review.py": "0be5e34bb37683ce93fa152ca952a01ab4252ab46b0c19f976a376cb0e40d288",
+    "outputs/beto-ideas-contrast-v1/ophelan-context.json": "1d14dd8177a434072fd149de1bffa069f135c17627f8b515713f43de6b7a8bed",
+    "outputs/beto-ideas-contrast-v1/passages.json": "87abfc533106620ed6c092903d7e2d640517d0e47b79b2589b4a51b9a46a5d53",
+    "outputs/beto-ideas-contrast-v1/preparation-check.json": "96ba079537d488e77befd8e15f71a4c6d41c67bf08544253cc4dad3ddbb1799f",
+    "outputs/beto-ideas-contrast-v1/prepare-initial.py": "14dd3f5e19803f95484636ee7fc78af822e93c72d526bda26e5af1d8aa967b6b",
+    "outputs/beto-ideas-contrast-v1/selection-initial.json": "a8237e2132dafc071c1b43015117cd76d7db5b7e01f9fd62c30b560ef365a395",
+    "outputs/beto-ideas-contrast-v1/verification.json": "e8646a3bbfda2da11b2fef85b8b14cfb9e7685c5f0e44ebf75df7502d5f4c500",
+    "outputs/beto-ideas-contrast-v1/verify-review.py": "16d48c7cd1044346646a38c0ce65175cd00619eb7a75c35e254f2bd0f0ab4bcf",
+    "outputs/beto-learning-rate-v1/moran/predictions.json": "bba74be4ee0cc5731b8bcdbca449debe240391dcf986c0fa13962e31d66a249c",
+    "outputs/beto-learning-rate-v1/moran/training-details.json": "b7bc85102a5fc53721eb39c0b7128a7df366f8c6d20f2a862300c02f749c6f80",
+    "outputs/beto-learning-rate-v1/moran/epoch-2/config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+    "outputs/beto-learning-rate-v1/moran/epoch-2/labels.json": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19",
+    "outputs/beto-learning-rate-v1/moran/epoch-2/special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+    "outputs/beto-learning-rate-v1/moran/epoch-2/tokenizer.json": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f",
+    "outputs/beto-learning-rate-v1/moran/epoch-2/tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+    "outputs/beto-learning-rate-v1/moran/epoch-2/vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+    "outputs/beto-learning-rate-v1/ophelan_huamanga/predictions.json": "ebdea68112d55edadc0a4b59726ec528dac95212f8f15f613ab36d726ac3590f",
+    "outputs/beto-learning-rate-v1/ophelan_huamanga/training-details.json": "6ebc6667334b78d8760bb1492c54ad0dc3664cddcc71dd2239be0236db18bae3",
+    "outputs/beto-learning-rate-v1/ophelan_huamanga/epoch-2/config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+    "outputs/beto-learning-rate-v1/ophelan_huamanga/epoch-2/labels.json": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19",
+    "outputs/beto-learning-rate-v1/ophelan_huamanga/epoch-2/special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+    "outputs/beto-learning-rate-v1/ophelan_huamanga/epoch-2/tokenizer.json": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f",
+    "outputs/beto-learning-rate-v1/ophelan_huamanga/epoch-2/tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+    "outputs/beto-learning-rate-v1/ophelan_huamanga/epoch-2/vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+    "outputs/beto-learning-sanity-v1/predictions.json": "a31ffaae3d0f7085f4bb894c74ad899ec4b73ab880f2b6990dd646c6cc9ac11c",
+    "outputs/beto-learning-sanity-v1/training-details.json": "0781e7eed49d6a633ccdaf0188b6aabbe02cc392e12d594e246ee19e83a39186",
+    "outputs/beto-learning-sanity-v1/epoch-50/config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+    "outputs/beto-learning-sanity-v1/epoch-50/labels.json": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19",
+    "outputs/beto-learning-sanity-v1/epoch-50/special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+    "outputs/beto-learning-sanity-v1/epoch-50/tokenizer.json": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f",
+    "outputs/beto-learning-sanity-v1/epoch-50/tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+    "outputs/beto-learning-sanity-v1/epoch-50/vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+    "outputs/beto-length-v1/archive-result.py": "7b1345d154043a02920f98c5c3ab7caaffd7715d730ee8bae202025bdc71ee01",
+    "outputs/beto-length-v1/fixture-fixed-epoch.py": "84804599878f27db811f7a84f26b8492480f49a4076b954a43784f2a72af382d",
+    "outputs/beto-length-v1/inputs-before.json": "6206393f3560ed2f2920b9e14a745f9bc61da4852fa636f10be1785f57fa5565",
+    "outputs/beto-length-v1/metric-check-final.json": "3a342365965750665e9362018be1489b82c9639b53a2a1e0e50a6b891fe8d766",
+    "outputs/beto-length-v1/metric-check.py": "47eb528685e471449441048ff28d0915bba6937a7d4c8729ab33fcddad200b0b",
+    "outputs/beto-length-v1/prepare-protocol.py": "bb787304ca15fc3d60db8a87914a8162f8a83c0582adbcf0f384dd702501b2be",
+    "outputs/beto-length-v1/readiness.json": "79b7cc3d9e2abb835e5fb4c8444b05052e032b77fb1e3ccddd001943f24d8e06",
+    "outputs/beto-length-v1/result-check.json": "08a40d16bcd03380b0553c4096c0bc65d90921062fb5b5f94be781be8fdc4990",
+    "outputs/beto-length-v1/recipe-fixture-k7slmqip/report.json": "3e26230ee8414eb4c09dfac720a936c0685dea5710fd6acb4b97a3db88a60a24",
+    "outputs/beto-length-v1/recipe-fixture-k7slmqip/fixed/fixture-tokenizer.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "outputs/beto-length-v1/recipe-fixture-k7slmqip/fixed/labels.json": "0f04806fc0cd2912699b75d1c34a0907e2a0cb2850dfa41979afb5f0438c545b",
+    "outputs/beto-length-v1/recipe-fixture-k7slmqip/original/fixture-tokenizer.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "outputs/beto-length-v1/recipe-fixture-k7slmqip/original/labels.json": "0f04806fc0cd2912699b75d1c34a0907e2a0cb2850dfa41979afb5f0438c545b",
+    "outputs/beto-length-v1/run/baseline-external.json": "30b1ee02ee094c96f16fe316b0a08c2dd9ff8202ee3442e504a4b38edc74af6e",
+    "outputs/beto-length-v1/run/report.json": "e502e0dbe37a2e5e45f39f4447f66c8e1f04159eff007bfab5ded85aa72eb862",
+    "outputs/beto-length-v1/run/candidate/config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+    "outputs/beto-length-v1/run/candidate/labels.json": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19",
+    "outputs/beto-length-v1/run/candidate/special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+    "outputs/beto-length-v1/run/candidate/tokenizer.json": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f",
+    "outputs/beto-length-v1/run/candidate/tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+    "outputs/beto-length-v1/run/candidate/vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+    "outputs/beto-loss-fixture-cbtwwyaz/candidate/epoch-2/fixture-tokenizer.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "outputs/beto-loss-fixture-cbtwwyaz/candidate/epoch-2/labels.json": "d345f4ab70234bff66d046bd3486666a429fe78fed3e8af23723d5b0b6fb693a",
+    "outputs/beto-loss-fixture-cbtwwyaz/reference/epoch-2/fixture-tokenizer.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "outputs/beto-loss-fixture-cbtwwyaz/reference/epoch-2/labels.json": "d345f4ab70234bff66d046bd3486666a429fe78fed3e8af23723d5b0b6fb693a",
+    "outputs/beto-loss-normalization-v1/moran/predictions.json": "4318697b49e3b58ec2268ec73ba9bd30a87d2f4c1f0923127e0fa2360d914a29",
+    "outputs/beto-loss-normalization-v1/moran/training-details.json": "ed4f18a12eafdf7c4e5086102676a7b938d4631e8578056ed5b3af844b640022",
+    "outputs/beto-loss-normalization-v1/moran/epoch-2/config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+    "outputs/beto-loss-normalization-v1/moran/epoch-2/labels.json": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19",
+    "outputs/beto-loss-normalization-v1/moran/epoch-2/special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+    "outputs/beto-loss-normalization-v1/moran/epoch-2/tokenizer.json": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f",
+    "outputs/beto-loss-normalization-v1/moran/epoch-2/tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+    "outputs/beto-loss-normalization-v1/moran/epoch-2/vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+    "outputs/beto-loss-normalization-v1/ophelan_huamanga/predictions.json": "f147f0c92d109ed31cdd7b39285005776a5e3f2322cf7aa5106a64b5ca81c3e5",
+    "outputs/beto-loss-normalization-v1/ophelan_huamanga/training-details.json": "d6b9a6c580d05117bb19200df3379b988b70507406c6b75369707f5dfdf72675",
+    "outputs/beto-loss-normalization-v1/ophelan_huamanga/epoch-2/config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+    "outputs/beto-loss-normalization-v1/ophelan_huamanga/epoch-2/labels.json": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19",
+    "outputs/beto-loss-normalization-v1/ophelan_huamanga/epoch-2/special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+    "outputs/beto-loss-normalization-v1/ophelan_huamanga/epoch-2/tokenizer.json": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f",
+    "outputs/beto-loss-normalization-v1/ophelan_huamanga/epoch-2/tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+    "outputs/beto-loss-normalization-v1/ophelan_huamanga/epoch-2/vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+    "outputs/beto-readiness-v1/checked-report.json": "2e5c1d1ab46779b5b8ce3acd403af454906c7892a5d9c8098ffcf134da2021f2",
+    "outputs/beto-readiness-v1/report.json": "b377d64a9c8cf03e64708be18a3b85c83a253f999ccedc9b3c2fe21fcd6fbf90",
+    "outputs/beto-readiness-v1/verification.json": "ad1bb37382bc585a09c7e37536ecb319c2e882e424df1dcc21a7fbebba6517d0",
+    "outputs/beto-readiness-v1/verify.py": "94acf29a314eeae5e371d2e02063162980ebd015b02d2ebe6984015c8dfd465a",
+    "outputs/beto-reference-checks-v1/check_runner.py": "45f40aed251295a095a07a007cde7b37a8e7d5b21b44fb0b8344240d65d5c5d3",
+    "outputs/beto-reference-checks-v1/runner-checks.json": "a70dec45ad930ee4bede9a6f26c47eff68b165d91c5eb3d519d5e38c2424ae9e",
+    "outputs/beto-reference-checks-v1/verify_result.py": "65f976fa75722a2bc1b8c6d939e59e2f2a18f32f2356d0c8a243513ea9f038b2",
+    "outputs/beto-reference-control-v1/baseline-validation.json": "54062136b35acc2c6d0d6867c8698ab59a6c30e9a2e5e00679ec086026161aec",
+    "outputs/beto-reference-control-v1/report.json": "2c2193e41ce43fc1f1974c999165c11a7a40dbbe7e95a3cd6dcf810d12989e33",
+    "outputs/beto-reference-control-v1/resource-check.json": "a9f6b5448b0a9bd626a659a85a3f7b03d3530d873dd5923f675b3cb777dae1dd",
+    "outputs/beto-reference-control-v1/validation-predictions.json": "8dfc00bf63e1718d6c97cb35f0ee92302b0833d0de6400a513843c97fbdcf7f6",
+    "outputs/beto-reference-control-v1/verification.json": "3503e58f9fc3bb99b55992aca819a05442ae4375ac09bb33cfae58b486cdab78",
+    "outputs/beto-reference-control-v1/candidate/config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+    "outputs/beto-reference-control-v1/candidate/labels.json": "3e8d21fda1c3a8c0d83249dbf89a9d5fce0e89a6635e9e52a49dac04dd59b169",
+    "outputs/beto-reference-control-v1/candidate/special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+    "outputs/beto-reference-control-v1/candidate/tokenizer.json": "f0ee18fc8f95db74ce5c5c3a4070e0eb32a4b31bcde4865af63b1308e924c0c4",
+    "outputs/beto-reference-control-v1/candidate/tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+    "outputs/beto-reference-control-v1/candidate/vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+    "outputs/beto-reviewed-validation-v1/baseline-validation.json": "54062136b35acc2c6d0d6867c8698ab59a6c30e9a2e5e00679ec086026161aec",
+    "outputs/beto-reviewed-validation-v1/report.json": "e98fea274cd3f62eabc941bc7cb808901c5ea514123d126bd5943e825404b3d2",
+    "outputs/beto-reviewed-validation-v1/resource-check.json": "03e23fdb1fb424656440adec079ee99ef54262c00c6fb19e2fa097b8f7300380",
+    "outputs/beto-reviewed-validation-v1/validation-predictions.json": "024475f265dc47868ae462fd896e53dd836c0edba78e7c2efbe6d4fa5110f178",
+    "outputs/beto-reviewed-validation-v1/verification.json": "b0fb62b2d8cb41dde16ded55941639ff2869b58ca94b1384adc1d9d99de7e837",
+    "outputs/beto-reviewed-validation-v1/candidate/config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+    "outputs/beto-reviewed-validation-v1/candidate/labels.json": "3e8d21fda1c3a8c0d83249dbf89a9d5fce0e89a6635e9e52a49dac04dd59b169",
+    "outputs/beto-reviewed-validation-v1/candidate/special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+    "outputs/beto-reviewed-validation-v1/candidate/tokenizer.json": "f0ee18fc8f95db74ce5c5c3a4070e0eb32a4b31bcde4865af63b1308e924c0c4",
+    "outputs/beto-reviewed-validation-v1/candidate/tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+    "outputs/beto-reviewed-validation-v1/candidate/vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+    "outputs/beto-root-cause-v1/ideas-coverage-review.json": "050cc56cee63a4bcbbc7207408d7bfa159cddff40d1985e9790581e07534970d",
+    "outputs/beto-source-epochs-fixture-1wy5auzn/report.json": "4ec75e79dd6f764cb51580ca534d8d14f854a1563cc08fb04df05a561ea21233",
+    "outputs/beto-source-epochs-fixture-1wy5auzn/new/epoch-2/fixture-tokenizer.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "outputs/beto-source-epochs-fixture-1wy5auzn/new/epoch-2/labels.json": "de64c5ba316b6e6a9b62025826342c39a1421151e54bc4825239bda04135b782",
+    "outputs/beto-source-epochs-fixture-1wy5auzn/new/epoch-3/fixture-tokenizer.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "outputs/beto-source-epochs-fixture-1wy5auzn/new/epoch-3/labels.json": "de64c5ba316b6e6a9b62025826342c39a1421151e54bc4825239bda04135b782",
+    "outputs/beto-source-epochs-fixture-1wy5auzn/old2/fixture-tokenizer.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "outputs/beto-source-epochs-fixture-1wy5auzn/old2/labels.json": "de64c5ba316b6e6a9b62025826342c39a1421151e54bc4825239bda04135b782",
+    "outputs/beto-source-epochs-fixture-1wy5auzn/old3/fixture-tokenizer.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "outputs/beto-source-epochs-fixture-1wy5auzn/old3/labels.json": "de64c5ba316b6e6a9b62025826342c39a1421151e54bc4825239bda04135b782",
+    "outputs/beto-source-epochs-fixture-l32uvvrr/report.json": "d057202108b0eb56c5e3a6ece499f7ad24e8e5259eeb69b644bcd363aec854f3",
+    "outputs/beto-source-epochs-fixture-l32uvvrr/new/epoch-2/fixture-tokenizer.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "outputs/beto-source-epochs-fixture-l32uvvrr/new/epoch-2/labels.json": "de64c5ba316b6e6a9b62025826342c39a1421151e54bc4825239bda04135b782",
+    "outputs/beto-source-epochs-fixture-l32uvvrr/new/epoch-3/fixture-tokenizer.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "outputs/beto-source-epochs-fixture-l32uvvrr/new/epoch-3/labels.json": "de64c5ba316b6e6a9b62025826342c39a1421151e54bc4825239bda04135b782",
+    "outputs/beto-source-epochs-fixture-l32uvvrr/old2/fixture-tokenizer.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "outputs/beto-source-epochs-fixture-l32uvvrr/old2/labels.json": "de64c5ba316b6e6a9b62025826342c39a1421151e54bc4825239bda04135b782",
+    "outputs/beto-source-epochs-fixture-l32uvvrr/old3/fixture-tokenizer.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "outputs/beto-source-epochs-fixture-l32uvvrr/old3/labels.json": "de64c5ba316b6e6a9b62025826342c39a1421151e54bc4825239bda04135b782",
+    "outputs/beto-source-epochs-v1/report.json": "4f2c4027f2df23faa1c994fb367000c9a69bd3421ee90cf71a785e89fc529895",
+    "outputs/beto-source-epochs-v1/moran/epoch-2-predictions.json": "bcf52e8008afe7e92bc0c1219847044ebec66c27b50cbc6ba3465097c0afa945",
+    "outputs/beto-source-epochs-v1/moran/epoch-3-predictions.json": "005f44215bff64779af35d20ffab2e6add52628de9a6f8c0de12b233c9325a46",
+    "outputs/beto-source-epochs-v1/moran/training-details.json": "2106af6da0f84223540210ead4c4d8b40759a3ed096fbc3a8602e9bdeb7dcb11",
+    "outputs/beto-source-epochs-v1/moran/epoch-2/config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+    "outputs/beto-source-epochs-v1/moran/epoch-2/labels.json": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19",
+    "outputs/beto-source-epochs-v1/moran/epoch-2/special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+    "outputs/beto-source-epochs-v1/moran/epoch-2/tokenizer.json": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f",
+    "outputs/beto-source-epochs-v1/moran/epoch-2/tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+    "outputs/beto-source-epochs-v1/moran/epoch-2/vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+    "outputs/beto-source-epochs-v1/moran/epoch-3/config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+    "outputs/beto-source-epochs-v1/moran/epoch-3/labels.json": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19",
+    "outputs/beto-source-epochs-v1/moran/epoch-3/special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+    "outputs/beto-source-epochs-v1/moran/epoch-3/tokenizer.json": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f",
+    "outputs/beto-source-epochs-v1/moran/epoch-3/tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+    "outputs/beto-source-epochs-v1/moran/epoch-3/vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+    "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-2-predictions.json": "d0d231d25b7a828ab56af507371e4c8b2ff7603956e7f4c0b05628cd9e64fc7d",
+    "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-3-predictions.json": "0c7c94cc7641da60d632a31c1fd03d46de8ac965274eab0e726f2d8528907793",
+    "outputs/beto-source-epochs-v1/ophelan_huamanga/training-details.json": "c3556fe5662bca40b6dc199f01517263e349344d6cf0fe03dc624fc67d8b6acf",
+    "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-2/config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+    "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-2/labels.json": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19",
+    "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-2/special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+    "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-2/tokenizer.json": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f",
+    "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-2/tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+    "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-2/vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+    "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-3/config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+    "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-3/labels.json": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19",
+    "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-3/special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+    "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-3/tokenizer.json": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f",
+    "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-3/tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+    "outputs/beto-source-epochs-v1/ophelan_huamanga/epoch-3/vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+    "outputs/beto-training-cleanup-v1/context-review.json": "5bbe9e9202f4137ea31dae4251a8c7ba79c6788aba712b2f5a1e46672ebe4dda",
+    "outputs/beto-training-cleanup-v1/dataset-peer-check.json": "334ef58a42afe06dcddb6e4c056953dde63c10198306bbb977dcbf25b9daa644",
+    "outputs/beto-training-cleanup-v1/opheland_mito_independencia-p10-text.txt": "7411cfca75795fb06e9a43293508d17f88120262c24257266f36d3e84ce5bd92",
+    "outputs/beto-training-cleanup-v1/opheland_mito_independencia-p11-text.txt": "5875f07b792c5ea7add5a50e4c9928f5d1d627ba82a5a98917f00a87acc7d378",
+    "outputs/beto-training-cleanup-v1/opheland_mito_independencia-p12-text.txt": "a93ab7b45ae10742aa8c104ecd1c75433cfdb6453106b0c1adc78156705d7f52",
+    "outputs/beto-training-cleanup-v1/opheland_mito_independencia-p33-text.txt": "6cc9eda9aeb69c57dbfa4b98a9f858d722c3c71994accdb4721e34d0a6674379",
+    "outputs/beto-training-cleanup-v1/opheland_mito_independencia-p34-text.txt": "c7e1c6a2aaf97bfdd0217767da9c2015105acad1704763fde24c4ee72785b021",
+    "outputs/beto-training-cleanup-v1/orrego_primeros_anos_republicanos-p16-text.txt": "c737dbee10591424a96675c8dffc267792d578566f0382c6348ad51eb09fac3e",
+    "outputs/beto-training-cleanup-v1/orrego_primeros_anos_republicanos-p17-text.txt": "a269935c3772b188a1ac46a805ab9e07fc00177fcb1c85d01b5594407be3e95e",
+    "outputs/beto-training-cleanup-v1/orrego_primeros_anos_republicanos-p18-text.txt": "0ececc12178df79b74e944ebeb81646effa336ff534dbff25b5a20e591128d39",
+    "outputs/beto-training-cleanup-v1/preflight.json": "9c7afb8fe94362e5040d814571f879af676d374dc3846a8f53643bd42b2822bc",
+    "outputs/beto-training-cleanup-v1/run/moran/predictions.json": "747e1826af54bc18ff50fb8528a2dec329ae0c090992dabf36ad91964a9641f8",
+    "outputs/beto-training-cleanup-v1/run/moran/training-details.json": "f4f6d66a57bc679fead079caec7e9c1ba0e8b50225a8c159b204a88ef69836f4",
+    "outputs/beto-training-cleanup-v1/run/moran/epoch-2/config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+    "outputs/beto-training-cleanup-v1/run/moran/epoch-2/labels.json": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19",
+    "outputs/beto-training-cleanup-v1/run/moran/epoch-2/special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+    "outputs/beto-training-cleanup-v1/run/moran/epoch-2/tokenizer.json": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f",
+    "outputs/beto-training-cleanup-v1/run/moran/epoch-2/tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+    "outputs/beto-training-cleanup-v1/run/moran/epoch-2/vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+    "outputs/beto-training-cleanup-v1/run/ophelan_huamanga/predictions.json": "5ba50e6d70665a2ee7c305f67a777306a6c4f684acffc09a3e1349b0d5ae1394",
+    "outputs/beto-training-cleanup-v1/run/ophelan_huamanga/training-details.json": "e83b2283e2e91ca2167d3d953e1905d2d467238565fa079df3e25ddde0fc0305",
+    "outputs/beto-training-cleanup-v1/run/ophelan_huamanga/epoch-2/config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+    "outputs/beto-training-cleanup-v1/run/ophelan_huamanga/epoch-2/labels.json": "1dd9675f115bbf5d1b2a9d1fb97f2de16ec59cc876d8af1e0ce82788b5ea6f19",
+    "outputs/beto-training-cleanup-v1/run/ophelan_huamanga/epoch-2/special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+    "outputs/beto-training-cleanup-v1/run/ophelan_huamanga/epoch-2/tokenizer.json": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f",
+    "outputs/beto-training-cleanup-v1/run/ophelan_huamanga/epoch-2/tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+    "outputs/beto-training-cleanup-v1/run/ophelan_huamanga/epoch-2/vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+    "outputs/beto-training-fit-v1/candidate-train-predictions.json": "fa8b3c75d9a40e7ddeefb74a8097f8494068b493eeab4232f7e97926d262f624",
+    "outputs/beto-training-fit-v1/recompute_result.py": "ef8a1a5b17cbedeb6789a47d1e5d64221c92e3ba840fcecfea5af03497bedacf",
+    "outputs/beto-training-fit-v1/reference-train-predictions.json": "7780712fbffecad6e41ab593b097da8509024acc5a77557ff9f2fdd59684a1b9",
+    "outputs/beto-training-fit-v1/report.json": "61a3a5c1f839e460a83106d7ef569e718f1b262f70676fbe4c7701b35a265ca0",
+    "outputs/beto-training-fit-v1/result-check.json": "6668bb94212e5969ef6401ac3f03136cb3d6f91e8c98600c0f6af84e07558bd5",
+    "outputs/beto-validation-checks-v1/check_runner.py": "37cf0843cbf56c6efad3d09861073ed67e0c35e1448112dd80912dd6b6143697",
+    "outputs/beto-validation-checks-v1/runner-checks.json": "3bf15f85023a380fd7ae73a69de7f88c7e8c5a0fac13fce85682db084737b38f",
+    "outputs/beto-validation-checks-v1/verify_result.py": "499b42b96e23733be01792200162f761ceb05a5d01715a455cbf3a96d59c1b62",
+    "outputs/boundary-resolution-v3/basadre-proposals.json": "fcb3e327a2aacf1c8880ef137867bebb40f4b0cce1784022b3b6687ede4abed6",
+    "outputs/boundary-resolution-v3/basadre-raw-pages.json": "624b28f1deb87b92f9a96e6c9c89b2074e3d66e5cbdd9c7fa07cf2cd9f3ea6ab",
+    "outputs/boundary-resolution-v3/build-resolution.py": "e4f0e6783787690e79df29c0e8b2516aaa1f11fa6151d321a4e7853454942bf9",
+    "outputs/boundary-resolution-v3/closing-check.json": "50e49aa5fa9f052d72d24793d9381b98e495c2e52de4eff57900df872c9ed744",
+    "outputs/boundary-resolution-v3/context-blind.json": "08c6f1b3f46c96d7ad142366a2e05b92621b5eb3d02a0471b07dd55993089c44",
+    "outputs/boundary-resolution-v3/first-review.json": "d50c49ec69b8f2b87479cfd1ba1823d49881f0e9f329dab78c32f90137fcefa2",
+    "outputs/boundary-resolution-v3/inputs-before.json": "3a3f3a73529980e04b01c0484bdfd20893f08c4cde34e26e76b0edcd655b15ac",
+    "outputs/boundary-resolution-v3/originals-preserved.json": "39993e2a2aafbde0a17c6a5d1591cd51d9037e1f78e70e26088aeaef4479bb95",
+    "outputs/boundary-resolution-v3/overlap-check.json": "b8eea0854943bc3d33a6d75d902fadc06e4939c36cf925c80c24778546e5429f",
+    "outputs/boundary-resolution-v3/pereyra-review.json": "73c1bd216c7e662357922a91529b598e4fd68e618d730e721af435d7c899c665",
+    "outputs/boundary-resolution-v3/prepare-proposals.py": "64df0fc009dba01c4fbe246541cba72ee1d1cb55d60b978875d5f63b7040675f",
+    "outputs/boundary-resolution-v3/prepared-resolution.json": "1e0f7c55df5a4863b8b263a72fae88da6de541851bd7843192a4d1d1fb679be8",
+    "outputs/boundary-resolution-v3/proposed-replacements.json": "8b0f6b6a9b49d16f6615e66ad92ef28a740f8e6de3a1fd498ecc6c7916d37ed9",
+    "outputs/boundary-resolution-v3/regulation-context.json": "043f7a1a34069d54502acf2a16402b3ebf55cc792faf749ee2d99c90a8fb3179",
+    "outputs/boundary-resolution-v3/second-review.json": "7dfb7ac45ad6423c8a9fced80c21f6f5fd88cb8a96934f440c1bf5ee638f7605",
+    "outputs/boundary-resolution-v3/pereyra/context-and-notes.json": "714d5121d9eb2ed451bc1db98174d99e38e3f215c33f2f32e84479c1cf4a782e",
+    "outputs/boundary-resolution-v3/pereyra/official-bitstream.json": "e65e7d036885c57136dca03aaef49c658cd82a668dfab3b1c9e4e84b9220e0c7",
+    "outputs/boundary-resolution-v3/pereyra/official-item.json": "2a5351f11c0f4eec404d122fc7becd408ca68c251cf6158294188bbbfb6f1a23",
+    "outputs/boundary-resolution-v3/pereyra/official-source-verification.json": "3c842d93518948dc38e5d764eee23f78aabb19c00fdcf877954c4c2f15dffda2",
+    "outputs/boundary-resolution-v3/pereyra/original-partitions.json": "c3e304feb65bd2ebc287923aebc4ddab5ad3e906f5f49aea95eaa4e55a449693",
+    "outputs/boundary-resolution-v3/pereyra/originals-train.json": "3c91c97d3aee13b20844708a840d87b2dad97c698429f7fb8863c94d6cee84f3",
+    "outputs/boundary-resolution-v3/pereyra/prepare_review.py": "e95b2f89e40f3935e17a117658755a577ba5133169452e0543df1fbf9cfbcb42",
+    "outputs/boundary-resolution-v3/pereyra/raw-pages.json": "3798b7d62c54274385aeaa31eafc4e00fc8cdd23dfd8a465e7076bc559c7285a",
+    "outputs/boundary-resolution-v3/pereyra/train-source-overlap.json": "77ba12a5ccceb22fe6b6c603b74ad130b4a41510eef1f2380771383f26d83666",
+    "outputs/character-comparison-v1/predictions.json": "4cbc95b5c2835b60f788fc37e9ea30c21a21bfcb1ec445f09e52401ebac77084",
+    "outputs/character-comparison-v1/report.json": "11171ceb730ef1e373d993efc384979123c22ba732d69938114c4c82773cfa95",
+    "outputs/character-comparison-v1/verification.json": "b6f762ea26df9e12134ca02adce57cd03ebdca96dc23134bc430ba153403a5df",
+    "outputs/character-comparison-v1/verify.py": "edf5c0b987854ce3373bea06f7ab2003e2eae42ea9fd0cf8ab14a355cdc1f721",
+    "outputs/character-validation-v1/report.json": "7774a6c4a84a0695509a863aec9b467f42395c73e3f42cebd74a4dc6706b2da3",
+    "outputs/character-validation-v1/tampered.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "outputs/character-validation-v1/validation-predictions.json": "8937aaeb66766781a73b50d58adf496b5c70ba944a74aee04e72bd2b95e29764",
+    "outputs/character-validation-v1/verification.json": "6d6f99e392673444294376dfe83720f3073044bf5775613bff2718259e17f6bf",
+    "outputs/character-validation-v1/verify.py": "7f6eac16ac2b70ec126f0549d06573f7553e5deeaa2096557720f2f23f0747a6",
+    "outputs/corpus-batch-v2/build_manifest.py": "4b80d0fe67e17009381690fc0dbc4579ca9b3aaa5744abfce533ac756b4a8887",
+    "outputs/corpus-batch-v2/close_check.py": "cdf0040dff229d54e3d7e9106ca1c845b3d0de7ae94f2a13599323a58498d755",
+    "outputs/corpus-batch-v2/closing-verification.json": "f09d2438a3e0ac06a992809e2d6d00430eb3c6b492a8129791a579d4289e9834",
+    "outputs/corpus-batch-v2/inputs-before.json": "2f962b323ea7a5ddb24fd102112bc9f11f5ad8192f1a1b83d9e236e406f0fc43",
+    "outputs/corpus-batch-v2/root-blind-review.json": "25af5674fd75c92306fe31ab5afbd1deb2333cb07230cc3baae07e8e81dd5dc7",
+    "outputs/corpus-batch-v2/train-token-lengths.json": "37423eea6b6b679491a3cf7a5d90923d2744a6a5c29804a792105443c3bd26cf",
+    "outputs/corpus-batch-v2/verification.json": "ff60caf4d74d585bb72f25a51236d7e5c59c621ca21d88fea31af59dc47bdbfd",
+    "outputs/corpus-batch-v2/verify_batch.py": "c4054efcd8c8838ef7bdd9837ebbad77ff82a89f5347f7d8dac6d6980edf4979",
+    "outputs/corpus-batch-v2/diplomacy/candidates-unlabelled.json": "993009506e0f898ce7c0ca038921dbfef615ed65160a661ce614c512acbc9914",
+    "outputs/corpus-batch-v2/diplomacy/first-review.json": "dc66c4889b98e636575f8f4a858bce82111d09e05440a201bd7c4e9c5936e85a",
+    "outputs/corpus-batch-v2/diplomacy/pages.json": "b9d83d10ae39aebb1d1be275a42f2d50b19af322abc62cbe9392b84a54231097",
+    "outputs/corpus-batch-v2/diplomacy/prepare_diplomacy.py": "81a7df833e8b081e37287f1c3859fe27adf1d798c4e9b866e633f83c55e99d86",
+    "outputs/corpus-batch-v2/ideas/build_candidates.py": "7914efcb70bdf106171a67f0a5e8c568ba3cce6a0f5a1ef64f5499ec4f56f245",
+    "outputs/corpus-batch-v2/ideas/candidates-unlabelled.json": "84775049efb5e99d93031ceb62aa58b354e9962480bde2e72bfda762f61689a6",
+    "outputs/corpus-batch-v2/ideas/first-review.json": "5ac3f15a3c8467538f2ad31ab53f77836fc0e26e7ed343ceaa276416f9ca56aa",
+    "outputs/corpus-batch-v2/ideas/overlap-train.json": "d625589a075686571fe6eb5794f456001bb05a4dd14df911b1d09bb83f15966d",
+    "outputs/corpus-batch-v2/ideas/raw-pages.json": "3fb74ee391128c73ad4b9dd6897bf7662f62afe8cd1baf1f1b9783fd96d83c0b",
+    "outputs/corpus-batch-v2/ideas/repo-1984-record.json": "4067029875edb52e8f22cc717753a4d13f3ba5033b989a71cc6c33cd81c6b18f",
+    "outputs/corpus-batch-v2/ideas/repo-2010-record.json": "94a9f2716b9a50da212c67d26f952bd0dacb5ac7fe5d0fe6d2a68cb7f05ff002",
+    "outputs/corpus-batch-v2/ideas/verification.json": "0d30ad12203d09c6e10fb11078279cba9f960319001b921b3c2e05f501ea67a2",
+    "outputs/corpus-batch-v2/pdf-renderer/fitz/table.py": "4b2ead855e5fbd219f8cc178947a8df94187472b240b0d629f52d9bb162284c3",
+    "outputs/corpus-batch-v2/pdf-renderer/fitz/utils.py": "8166d2683974fb4d0e86d90e45c0c6f500ffea2c74fffcd5dff9d394277dae3e",
+    "outputs/corpus-batch-v2/pdf-renderer/fitz/__init__.py": "cbba4a6a76e5433965ff904738df8ffd2a8da513b937eea7a8ff829bb09cb8b5",
+    "outputs/corpus-batch-v2/pdf-renderer/pymupdf/extra.py": "8cd0a7b9ad7286fa55595fdc710b5ea1d65400ae410d542499ff88f90c296987",
+    "outputs/corpus-batch-v2/pdf-renderer/pymupdf/mupdf.py": "a75a3111a15fdf04ddf2ae449d2ef64e9b2d7170794bbeaa00a77d60531afcda",
+    "outputs/corpus-batch-v2/pdf-renderer/pymupdf/pymupdf.py": "69cb0911ce3252c940335a64aa01c53170a59488fca880f0867de18af69d9f6f",
+    "outputs/corpus-batch-v2/pdf-renderer/pymupdf/table.py": "0757aab2340c49b6dbdb72d0a82eba318215342a23fb85d4ae6c3d3eb9cb9580",
+    "outputs/corpus-batch-v2/pdf-renderer/pymupdf/utils.py": "7bf09b85e3d72b718deb33c7807a1f12cf3b4b36c9fbb9df5acab45152dba81e",
+    "outputs/corpus-batch-v2/pdf-renderer/pymupdf/_apply_pages.py": "54021791461ca5933353084fce8b0782224edd1a5f31df605c98600472e5ef8d",
+    "outputs/corpus-batch-v2/pdf-renderer/pymupdf/_build.py": "ef27737ce1ca86ed0fe0e06009bde1a6421c6bfbf17da3d3a81fd5a03389ba71",
+    "outputs/corpus-batch-v2/pdf-renderer/pymupdf/_wxcolors.py": "9a390772c82e36869c636ba0b0e6227c6f45d4d1a265c33de112ee46b97935c4",
+    "outputs/corpus-batch-v2/pdf-renderer/pymupdf/__init__.py": "c8c2f024434bbe7358a4d9b6e32ef306ea6faa0ca5a5b681b972ddcb73197479",
+    "outputs/corpus-batch-v2/pdf-renderer/pymupdf/__main__.py": "b591ff1b05717b214b453d5cff762f34e4759f457c46f47e070a6c451f85e60c",
+    "outputs/corpus-batch-v2/pdf-renderer/pymupdf-1.26.7.dist-info/entry_points.txt": "f4d707fc25641d5b8b3711354d86dfc17c0295590c70cf3dd133132770b97c30",
+    "outputs/corpus-batch-v2/pdf-renderer/pymupdf-1.26.7.dist-info/README.md": "b247751a513743fd570925c180b6ce51e474ae23ba38e6252e5013b0a325b8d6",
+    "outputs/corpus-batch-v2/repairs/candidates-unlabelled.json": "6af559c63757753924efc4d7cc962352b3c9719fa18251febc2de0c8a3ccd0d3",
+    "outputs/corpus-batch-v2/repairs/candidates-visual.json": "755752a68f73d4820c0f248e23f302063c1157aedda5c0b8f842c6c57be9136b",
+    "outputs/corpus-batch-v2/repairs/first-review.json": "88653fe58a93d5d0f45d8b003ea122c9060f603b84602af9e4444ea06441f99c",
+    "outputs/corpus-batch-v2/repairs/original-groups.json": "cc1390473348b97b58798e6ef8f80a4ed159a61b7120f690e47106209d1d6ec3",
+    "outputs/corpus-batch-v2/repairs/prepare.py": "166d9485112288cb6966ae595f567d71be22a0c663aabb44685f4ab80102e9f9",
+    "outputs/corpus-batch-v2/repairs/review-input-visual.json": "ad7d6e206ff549948d2defa73a714c7acc74e482b911ba5844da9669957fba13",
+    "outputs/corpus-batch-v2/repairs/review-input.json": "4b441b777d89d926b58ee09f452ddc23fe69936fa0f78195b084d77fc191b946",
+    "outputs/corpus-batch-v2/repairs/second-review.json": "0e99edde5af8d9e2555162b6e0ce6d4c9b3063ca436a1c3b3f0acd5caa0ea05c",
+    "outputs/corpus-batch-v2/repairs/visual_corrections.py": "b1e8dcc4f9be3a8c598a7109e730d81b7c6099afca6a296c661e5b5b114457f4",
+    "outputs/corpus-batch-v2/women/blind-author-candidate.json": "abe2b00e85863d2f4eef4a2d2be13cca89165b232d64dc90de1521889fb6ec53",
+    "outputs/corpus-batch-v2/women/blind-candidates.json": "824b9e0471ec2a0a73c03f047214c66b4908fd9873e1602102b2426b491d038a",
+    "outputs/corpus-batch-v2/women/build_author_candidate.py": "7a461d7dba7beb589339f8552e69d0089fc5a31ffc50cfa43e0db741f4354c56",
+    "outputs/corpus-batch-v2/women/build_candidates.py": "1e72f41bf6c58ac4460c4be0d0c751dad85e2358c360e86703901da32367c683",
+    "outputs/corpus-batch-v2/women/first-review-author-candidate.json": "e2e9d58841e694e72e685d390c94e10d05bbfaaed1a672f8ada8d2877e24504f",
+    "outputs/corpus-batch-v2/women/first-review.json": "ebe4ff770a75fe245123f02a1cdffb33aa3bb5ebf748f6caff3e3b1e058a3241",
+    "outputs/corpus-batch-v2/women/pages-raw.json": "7f8436b1a3047ea0cdb3f62097912785b9f3ee54a1ce13c11a793f56fca2d558",
+    "outputs/corpus-batch-v2/women/source.json": "6418d0ddabb3bc477c87104ccaffa2e4f6fadeae4fec1f0dc7fb67e096653458",
+    "outputs/corpus-batch-v2/women/visual-check.json": "d20b075c1f3f397e5025a8b13ce96ca91d66c64076a6468e518901bc08055683",
+    "outputs/corpus-closure-v2/audit_proposal.py": "0666e44c12a311b851aa876b2363798ffb8be0b48c7229b93872fee28a5bca7e",
+    "outputs/corpus-closure-v2/consolidated-local.json": "e4615029a13445bfb168d4e79fc4b87d062071be2cd3343c452b566410f66bca",
+    "outputs/corpus-closure-v2/final-verification.json": "0453c3666e2349364972162e4308668df31dd4018bb79602ec90534629335bf6",
+    "outputs/corpus-closure-v2/final_check.py": "ad535747fcc22a653f3b8fe542221730afa419d536b1d41186b9b541d42aad18",
+    "outputs/corpus-closure-v2/inputs-before.json": "9c8472cdd85d3f0bd6a2343e5184d688328364d61747c7b1aab76e5007ed05e8",
+    "outputs/corpus-closure-v2/prepare_orrego.py": "06e86d9e462aa99aa71d54a9b72cf28cf4d79aa6596e5c83272d81b85a4aa304",
+    "outputs/corpus-closure-v2/revise_orrego.py": "b0e87c231a7ffd168bef093bcfa340fb19d4e1ea0c4063911b6fdc06abdd24b1",
+    "outputs/corpus-closure-v2/root-second-review.json": "03d0bc04efdb6ca18e7cf98ac12a820eb08d38ec5b0c3e41e5e05e8082aee78c",
+    "outputs/corpus-closure-v2/save_manifest.py": "d770acc88e8d36a861e0794a06229c3fe97d5db4d98541c70d3b7de9b5e29d91",
+    "outputs/corpus-closure-v2/fonseca/first-review-v2.json": "3641e77404e3a8c7e6abc0ef482865dfaeb6d394e4df496bae6d5984bc521591",
+    "outputs/corpus-closure-v2/fonseca/first-review.json": "fcf954e9015361a0d227fb28e9323ad811b6053e83de67633b0a36dd7d46793a",
+    "outputs/corpus-closure-v2/fonseca/prepare_proposal.py": "8508ab180c2a0d9c3c540b2eb58c9175bbf6c4a374e32706441f360bdf3aad99",
+    "outputs/corpus-closure-v2/fonseca/prepare_proposal_v2.py": "2927509da8e14c092726da0caa965484520dfa966739f066c9d935b300fba7d5",
+    "outputs/corpus-closure-v2/fonseca/proposal-v2.json": "63cc17fe955cfa5d669b6659e793e1ccc22189fb73b47d3d9739c82306cc6dc4",
+    "outputs/corpus-closure-v2/fonseca/proposal.json": "c3252d95bb42aedfc8f8e7fca9d23c672ff0ac33c48617981b513d33fa18e2ee",
+    "outputs/corpus-closure-v2/fonseca/review-input-unlabelled.json": "3859794f61c16e0753dca5b96dd906becb8e3a37f6b0e8a1c4ff154d8ca22c50",
+    "outputs/corpus-closure-v2/fonseca/review-input-v2-unlabelled.json": "10bcec557cb2590d6cdbbfa08c00cd535423f60a3905c8897004571b8a83fd0b",
+    "outputs/corpus-closure-v2/opheland/build_proposal.py": "98f5b93abc85c1032de760a0a86d6bf4716a19898b73c5c4ff5b012e4c9338db",
+    "outputs/corpus-closure-v2/opheland/context.json": "42c65287d317a62a7c57e5b9f550fa270a2a802dcf700db27dbcb8e7100d4e45",
+    "outputs/corpus-closure-v2/opheland/original-group.json": "97aec03616b64311aeb77d88e641ae2febb04f1d3771a7e3b244cb7721ada26a",
+    "outputs/corpus-closure-v2/opheland/pdf-page-29-raw.txt": "750bb2167f1fd0535b021722a735397e7ecee55d47ab885ee04e5a8fc852564e",
+    "outputs/corpus-closure-v2/opheland/pdf-page-30-raw.txt": "f9ada6db6f9bcb1d4367939bc1e9d32abb0a0190d3ece81c03e0ed971ceda5d2",
+    "outputs/corpus-closure-v2/opheland/prior-visual-candidate.json": "4f5478bfdd0e63af8b6420b8e2136a8806c41ee6d41500ab85f964e232f9231c",
+    "outputs/corpus-closure-v2/opheland/proposal.json": "4b5d73b05e4b1a3ce14d5c3f935f42a773957b95d97727beabe489a53f6919e6",
+    "outputs/corpus-closure-v2/opheland/verification.json": "df579683bf95aa51b8560bb2183b178d8d88e2f2cb7d96ae561e0cd50cc7fbc9",
+    "outputs/corpus-closure-v2/orrego/proposal-v2.json": "a71e04d6998579514bbdb56c34fcb128da68451256744dadbf3decfbd56886b4",
+    "outputs/corpus-closure-v2/orrego/proposal.json": "0e6bf15702b89eaca31de7c1c27074e0f9ddc947da57ea14a3eec69a12793574",
+    "outputs/corpus-closure-v2/orrego/second-review.json": "4dd98faa47b0a0218b00e289d610c0eed889fb53e733348d3e599fef626ec65c",
+    "outputs/corpus-closure-v2/short-units/review.json": "6fe7522f26ede3f3fb027dcbb2bf158b75b6836b5bb396e9708b057136687762",
+    "outputs/corpus-snapshot-v2/build-report.json": "a230e0ac1c171e60b6b5721826fc6499118c95536a712bd6d94568d08fa80254",
+    "outputs/corpus-snapshot-v2/replacement-archive.json": "dac743647c4ca2715b4e915475dcae999a41f00264243ad64500eeaa5a173777",
+    "outputs/corpus-snapshot-v2/reviewed-export.json": "5de9ea1a4be3c9d628da51cdf1d07108f43e0ac8ee580acb483013c6dc27c35c",
+    "outputs/corpus-snapshot-v2-preflight/altered-review-for-guard.json": "e3566b3a06430868d71e9287dfd6c6c520a3da027aabea01951d407ee131dc2f",
+    "outputs/corpus-snapshot-v2-preflight/builder-verification.json": "ef71985e1e8782dbd8c6445631673faab5804a9fc85fb998fd35e2dff65623ef",
+    "outputs/corpus-snapshot-v2-preflight/close_block.py": "a8d13916d8f16889bf3e6a9013f2001eb87aba7a0b843064002d428d5f73bc81",
+    "outputs/corpus-snapshot-v2-preflight/final-verification.json": "6c8dd9112c3fc4a0ae99e0c284d3b33d2b06c233d2b9a19bb9dc50a776db58fe",
+    "outputs/corpus-snapshot-v2-preflight/inputs-before.json": "267ab9db24ab47dfa348ab6190cef1a6a455d1c56a74f063a37f58e906652e2e",
+    "outputs/corpus-snapshot-v2-preflight/verify_builder.py": "b0a1b5efa3b4676993a0ae0ff5ad4c285d3149cea3b27a4ad7f29c06ae21309d",
+    "outputs/corpus-snapshot-v3/build-report.json": "e69c395133a732a09e5d2b66d0bea35967dc309dc092ca7d9a96d19a44b70f4a",
+    "outputs/corpus-snapshot-v3/replacement-archive.json": "926f240cb59fe19ce9501e02462e09dd293b426b61b77b7fc691e749de092ada",
+    "outputs/corpus-snapshot-v3/reviewed-export.json": "687a16c894eae549f9e29e48076a687ce6a96b5cd195f18b21629e8b7e7078e5",
+    "outputs/corpus-snapshot-v4/originals-and-decisions.json": "f0b483781e38ce54fc6e420159a17c7f34c6cb900f8e40219d0c85633e105d36",
+    "outputs/corpus-snapshot-v4/reviewed-export.json": "d00c83713de6d2b7263f3aa09da583801b3f358b4d46563ce9957e7578fde8a9",
+    "outputs/corpus-snapshot-v4/row-mapping.json": "f42069ea31c8c3f5a005f2aaac82e1cdd130f1bee9851ec64b47a41056e953b8",
+    "outputs/coverage-diagnosis-v1/report.json": "2f2d5c8951db63387114a639c16a890438ad8e11fe58690ab6ddf9fbe913d0e3",
+    "outputs/coverage-diagnosis-v1/revision-legible.md": "472eff9ed6e7ade38418ab5386175ddf52ad6d7e23799af8f88c5efab3095fcb",
+    "outputs/coverage-diagnosis-v1/sample.json": "07250b44a3b70ab16d4bf10f1332fb442c7af2ca47824f8df33bbc7398c2ad88",
+    "outputs/coverage-diagnosis-v1/verification.json": "0236a3f0a74e6cc9d08e9e83a6ef0e2a017b3a167ce0e95b4907ad3b1fa89627",
+    "outputs/curricular-coverage-v1/build_audit.py": "8ec7f1de203de5fa1c0b1bed6ecd2e725ee3f0d666f97f2802bb7faf40e3ea88",
+    "outputs/curricular-coverage-v1/verification.json": "61133d76ad9bd434a25ae64a2f41677b891f71b8ad2b4005aae3621e97f632e8",
+    "outputs/curricular-coverage-v1/verify_audit.py": "a9499581e8c599dd0a81c99dddbd1a85cb9a440951b46f5434cb8fb9be4430cb",
+    "outputs/evidence/model-functional.json": "09427166780467a7e9b3d672e05b69d63b816e1a3a5e86a409bfad3c33079ed2",
+    "outputs/evidence/production-smoke.json": "83e88073a97eee9e829650511ba6fc9c25cdf331ad957b2e4476a745be2eb2b8",
+    "outputs/experiments/beto-u1/configuration.json": "5c14b6cd5b4668d11bbe4e17969f26c65266821ac6ff6c82bbce02132ab1a916",
+    "outputs/experiments/beto-u1/dataset-audit.json": "441872b4483eb9c5ee15e4066748c9a498600cd80b3276e44e934bc9f2f5d44e",
+    "outputs/experiments/beto-u1/report.json": "eac4e54a5a13850000439f1b59291fe2da5969c7a434b0600f0635ef01b10b42",
+    "outputs/experiments/beto-u1/report.md": "521703fad2c20f2692f610e0dccd8dec820605465c2f92c429855bb79e0963e2",
+    "outputs/experiments/beto-u1/selection.json": "ee92e6834a13271a592626b4381d274e99f6cbe00d1a298f55247a8766f001c6",
+    "outputs/experiments/beto-u1/beto-lr1e5/config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+    "outputs/experiments/beto-u1/beto-lr1e5/labels.json": "3e8d21fda1c3a8c0d83249dbf89a9d5fce0e89a6635e9e52a49dac04dd59b169",
+    "outputs/experiments/beto-u1/beto-lr1e5/special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+    "outputs/experiments/beto-u1/beto-lr1e5/tokenizer.json": "f0ee18fc8f95db74ce5c5c3a4070e0eb32a4b31bcde4865af63b1308e924c0c4",
+    "outputs/experiments/beto-u1/beto-lr1e5/tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+    "outputs/experiments/beto-u1/beto-lr1e5/validation.json": "c0fdbe57052cd501dc617d4ec67858720ae72c46cf2584c6b18bd75220574fce",
+    "outputs/experiments/beto-u1/beto-lr1e5/vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+    "outputs/experiments/beto-u1/beto-lr2e5/config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+    "outputs/experiments/beto-u1/beto-lr2e5/labels.json": "3e8d21fda1c3a8c0d83249dbf89a9d5fce0e89a6635e9e52a49dac04dd59b169",
+    "outputs/experiments/beto-u1/beto-lr2e5/metrics.json": "5d769ba8e93a7e043561c2641cee7b4b3690e7ea325ee4d88cd5561e46186ad8",
+    "outputs/experiments/beto-u1/beto-lr2e5/special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+    "outputs/experiments/beto-u1/beto-lr2e5/tokenizer.json": "f0ee18fc8f95db74ce5c5c3a4070e0eb32a4b31bcde4865af63b1308e924c0c4",
+    "outputs/experiments/beto-u1/beto-lr2e5/tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+    "outputs/experiments/beto-u1/beto-lr2e5/validation.json": "58460604ea3cd86f07f167f4714e6396083f705652269ff99c0a8ca9aae8780c",
+    "outputs/experiments/beto-u1/beto-lr2e5/vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+    "outputs/experiments/beto-u1/beto-lr3e5/config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+    "outputs/experiments/beto-u1/beto-lr3e5/labels.json": "3e8d21fda1c3a8c0d83249dbf89a9d5fce0e89a6635e9e52a49dac04dd59b169",
+    "outputs/experiments/beto-u1/beto-lr3e5/special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+    "outputs/experiments/beto-u1/beto-lr3e5/tokenizer.json": "f0ee18fc8f95db74ce5c5c3a4070e0eb32a4b31bcde4865af63b1308e924c0c4",
+    "outputs/experiments/beto-u1/beto-lr3e5/tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+    "outputs/experiments/beto-u1/beto-lr3e5/validation.json": "f9c7892805d46a568e81ba3bce9e71656f136d70bcc5d543fa90db02303ed86c",
+    "outputs/experiments/beto-u1/beto-lr3e5/vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+    "outputs/experiments/tfidf-u1/configuration.json": "7b6e4396c04904535516de964cfa31022f742e045960fa42589d8163d9636d87",
+    "outputs/experiments/tfidf-u1/dataset-audit.json": "441872b4483eb9c5ee15e4066748c9a498600cd80b3276e44e934bc9f2f5d44e",
+    "outputs/experiments/tfidf-u1/report.json": "df6bafdc495a98c67e61ef7faea42bcae54f3fce3ab6c020e4594594f3099c8c",
+    "outputs/experiments/tfidf-u1/report.md": "e07b6d85841dafb344937b3a8623314d7a228de7f09ae0e12c827dd1c070b06e",
+    "outputs/experiments/tfidf-u1/selection.json": "6b197e7f4be76a1835e55bec04ce2b06ab05d58c90988bd34815a215a76323e2",
+    "outputs/experiments/tfidf-u1/tfidf-c025/validation.json": "ee5bd9570960e9c3686f57794f3ada442ff12d89636f31ce8bc0e64ad338b1d3",
+    "outputs/experiments/tfidf-u1/tfidf-c1/validation.json": "0187b7822b2c342a521ef4af0d5501a81d6d09db654e638b868d40293296ebf1",
+    "outputs/experiments/tfidf-u1/tfidf-c4/metrics.json": "33eae5b59e93416af0cb88c62754b58a310eda3a83906b3f321135d0f2010537",
+    "outputs/experiments/tfidf-u1/tfidf-c4/validation.json": "ed3793c2a86a2996cc3ba66f518026193f85bdf1960a9c152d72ba55cfe5d6df",
+    "outputs/external-development-v1/dependency-build.py": "0abeb64a774c039c09f0caa9de97a8dc6c3b9d04b692f69273f6214839b4cfb0",
+    "outputs/external-development-v1/dependency-screen.json": "cc9251128f477e150b44a1c8e3c980eb84859dea991a21b0ba296cb6f5b59240",
+    "outputs/external-development-v1/inputs-before.json": "eaa0342d1aa7996e31b0f825a904d2eda8eabe469df3e6161a8c6a7b14c5032d",
+    "outputs/external-development-v1/negative-cases.json": "ae1e07fcf121ec615f874f8f5045c029024dcbd21ca9e9340e2963b8f7d50904",
+    "outputs/external-development-v1/protocol-before-selection.json": "13723f3d147819d9cff0bfcf21a76f882893ba9bd6daa2a0a61bdba752f9438c",
+    "outputs/external-development-v1/root-adjudications.json": "dd0df858fbe4380a9af74a616b352b984a837b3e5e67dcfb80c68bf388307457",
+    "outputs/external-development-v1/root-build.py": "c99638b2b30bceb174347ea89fcfeb979b641f27839e065aa264ba4e00d995ad",
+    "outputs/external-development-v1/root-overlap.json": "ae70dfb308e2f5c66814897bce62f85c3212bb5d20f5b956aadf1e1a5a5bd20c",
+    "outputs/external-development-v1/root-overlap.py": "384e70ef979115c855b47ad0525e79e4e9b9d2bb137ea5405df7fc7c7b8b63f1",
+    "outputs/external-development-v1/root-quote-screen.json": "c4f158de08ffbebbdbe841b847656b1a62afd7df18aea2bcdda4c5ffc879ddb2",
+    "outputs/external-development-v1/sala-build.py": "83466e408e40f080909c8c4b7f974cea879d2cf45dfdb7615d9b2047c735cf30",
+    "outputs/external-development-v1/sala-candidates-blind.json": "e584ada04a40095271c8042011afbbf888c8aaf1c111158176670432f8635905",
+    "outputs/external-development-v1/sala-finalize.py": "d832706f117cdc033d98015a149debd7a36c758d5335ef2196b9e1f320ccbe2a",
+    "outputs/external-development-v1/sala-first-review.json": "d61bcb08fd5645f79d1b7399c2761891a3af65364c42e4dc55da43a656e7ba0d",
+    "outputs/external-development-v1/sala-inventory-draft.json": "b60ca34c24b3d4a0bd2fa80c3cd5d5aa9167a885c020ca9833ae287ff836eac6",
+    "outputs/external-development-v1/sala-inventory.json": "41cce7277fe5dedf591039e6ea90952c961086eab5fa31202be41f9572e39461",
+    "outputs/external-development-v1/sala-notes.json": "48e3b9b0674180e15e1065a8708980a2a6fa8add5b60e2cf25c4659a77871ae4",
+    "outputs/external-development-v1/sala-raw-pages.json": "8bd539365b26239a920c6bc74bf21ba1f328c2ab1096359e0dcae8ee59ac79e7",
+    "outputs/external-development-v1/sala-second-review.json": "07a85f89cbd186745df0be165a7de4e68c7f6da68810fdb1ec62ed4a362d3c4b",
+    "outputs/external-development-v1/sala-source-incidents.json": "3053ff34bd16380f2f81c23c7e4ea4280417eea77eff8bcb56d9d56314265a82",
+    "outputs/external-development-v1/sala-source.json": "05840e91cc15c3effb94c7b71a94ff16eea641f4c9f4478df92207bfb6343967",
+    "outputs/external-development-v1/sala-verification.json": "4c107e5717705f1c24bc4fc7c5dcef43fb12707814351d7b18e90e014cbeac0a",
+    "outputs/external-development-v1/sobrevilla-candidates-blind.json": "279b7ffca0c80428643bf46d89daec7755ea05248135ba242a6942369c10a179",
+    "outputs/external-development-v1/sobrevilla-dependency-screen.json": "a7b85d96057efe5420d104ab346dd59aaf4b735a717781a558c4998d907a4334",
+    "outputs/external-development-v1/sobrevilla-excluded-zones.json": "6ee44c0f003696ea578355af5a0a131229c496e2879b24de31431fbebfdfdd91",
+    "outputs/external-development-v1/sobrevilla-first-review.json": "02eff49433acb64d48e3bab37ef22d3ba937bd99a33c3fd04bd2ce73e9e0d0a9",
+    "outputs/external-development-v1/sobrevilla-inventory.json": "40d398575c3ae30458635dcf0a313a05e1a63c242f0d09bf80b98ee1feb3fa33",
+    "outputs/external-development-v1/sobrevilla-law-screen.json": "31324ea623fa0bccf3cb7323072512dbc767c12d4c7c1dd7e0128f35515c05f8",
+    "outputs/external-development-v1/sobrevilla-notes.json": "af46fe66f4cf4badb02addd4885c89eae5df46443c5cedf0c31a4dcd057d5d3d",
+    "outputs/external-development-v1/sobrevilla-prepare.py": "6a3b45f547fb515ed55ad1237435f11074d381eb89d858945351b194186196e2",
+    "outputs/external-development-v1/sobrevilla-raw-pages.json": "f48bc3e410217ffeaa1905d764929982d6432d5a206c012680edea1f833745b4",
+    "outputs/external-development-v1/sobrevilla-review.py": "0e64b340ccf36634d6afa97aacb96c9e70b61a10445b54f6575ce72532db5ea1",
+    "outputs/external-development-v1/sobrevilla-second-review.json": "9689174ed5ec6dd06d2516d9e13550ad7b09821dea21c28cc261848ac4ca786d",
+    "outputs/external-development-v1/sobrevilla-source.json": "77d18de53e9d2f5d41ff7971197af89b6ce8b270ff99730eba591fd741b77ecf",
+    "outputs/external-development-v1/sobrevilla-verification.json": "7ea8e4182ac26ade75d2554acac557e7a33bbdf5197ca190d350431e76ba30fe",
+    "outputs/external-development-v1/token-lengths.json": "bf92fa49bb399e68075d9c65c31f7d3dc497adefee7cabcdc1f57f47b0cf0b1f",
+    "outputs/external-development-v1/verify-negative-cases.py": "bdf3992e3a96d4a973c4bcada422c49de17d09898940dc07ebaa5f6901a6b973",
+    "outputs/fonseca-repair-v1/candidate.json": "62de915fc94c7554c1a4fd440f42bc7c7bec28b15d8232bf1689101fd854f16d",
+    "outputs/fonseca-repair-v1/revision-legible.md": "0227f42fd44e7e3f036e0332188cccc02dd3f3763f7598198351363cdd846146",
+    "outputs/fonseca-snapshot-v1/build-report.json": "56bbf88e5164cfebee3fbf117d4159514969fdd99506126ded26aa609e8cfd9c",
+    "outputs/fonseca-snapshot-v1/invalid-base-control.json": "10c10ceda56f5940aff45fc582549591d8ffb9627223c7690776ee6d119669ad",
+    "outputs/fonseca-snapshot-v1/invalid-plan-control.json": "1d8e3729d06f3837c6c27dbdb3d321056c69734fd882423111fdd8939efc4734",
+    "outputs/fonseca-snapshot-v1/replacement-archive.json": "d07a6e00fa48a724deb215bb14392442009905c82f707a5ab6ea7386e4c00b86",
+    "outputs/fonseca-snapshot-v1/resumen-legible.md": "adc3443e684a38edeb4c3e617010eafa6ac90d8c06cad35b5e2d13b7ff9ea195",
+    "outputs/fonseca-snapshot-v1/reviewed-export.json": "039a8b74f1cea6c744aad184fae15db17cc0ff01a24a33b3fa6166c02e21ec91",
+    "outputs/history-comparison-v1/reference/configuration.json": "7b6e4396c04904535516de964cfa31022f742e045960fa42589d8163d9636d87",
+    "outputs/history-comparison-v1/reference/dataset-audit.json": "441872b4483eb9c5ee15e4066748c9a498600cd80b3276e44e934bc9f2f5d44e",
+    "outputs/history-comparison-v1/reference/report.json": "a8a1820d560a0260444f53e2baf34f79b27328d9ad5724cef02a879a0d75bb88",
+    "outputs/history-comparison-v1/reference/report.md": "e07b6d85841dafb344937b3a8623314d7a228de7f09ae0e12c827dd1c070b06e",
+    "outputs/history-comparison-v1/reference/selection.json": "6b197e7f4be76a1835e55bec04ce2b06ab05d58c90988bd34815a215a76323e2",
+    "outputs/history-comparison-v1/reference/tfidf-c025/validation.json": "ee5bd9570960e9c3686f57794f3ada442ff12d89636f31ce8bc0e64ad338b1d3",
+    "outputs/history-comparison-v1/reference/tfidf-c1/validation.json": "0187b7822b2c342a521ef4af0d5501a81d6d09db654e638b868d40293296ebf1",
+    "outputs/history-comparison-v1/reference/tfidf-c4/metrics.json": "33eae5b59e93416af0cb88c62754b58a310eda3a83906b3f321135d0f2010537",
+    "outputs/history-comparison-v1/reference/tfidf-c4/validation.json": "ed3793c2a86a2996cc3ba66f518026193f85bdf1960a9c152d72ba55cfe5d6df",
+    "outputs/history-comparison-v1/reviewed/configuration.json": "7b6e4396c04904535516de964cfa31022f742e045960fa42589d8163d9636d87",
+    "outputs/history-comparison-v1/reviewed/dataset-audit.json": "f901478eb8dd967935728c1f492c9e9b18e8d75469a54b9e3a94e1ab8978bcf5",
+    "outputs/history-comparison-v1/reviewed/report.json": "55e8e8d7fd7173ed0fcdda5895bc59a2c548dfd3ab9ae39c68a423b8feed9952",
+    "outputs/history-comparison-v1/reviewed/report.md": "0b956d10e68b9c511e4fb8535b810cda861f0d42bd8eaa7a1e5d220e6b119f83",
+    "outputs/history-comparison-v1/reviewed/selection.json": "c29b73a56907bbc4bc45aa567b04ea16786401eaa4a82c2eb2e813b0b7623b69",
+    "outputs/history-comparison-v1/reviewed/tfidf-c025/validation.json": "ee5bd9570960e9c3686f57794f3ada442ff12d89636f31ce8bc0e64ad338b1d3",
+    "outputs/history-comparison-v1/reviewed/tfidf-c1/validation.json": "c13c1dca48ceac155e28542c89b5ecf55e8fcc21b5f7c65ab07b5dd30f12b8c4",
+    "outputs/history-comparison-v1/reviewed/tfidf-c4/metrics.json": "fd4e2452185a9841139c1e89f6dbd49078cdde4fcdaa20ab537e454048f709d8",
+    "outputs/history-comparison-v1/reviewed/tfidf-c4/validation.json": "ed3793c2a86a2996cc3ba66f518026193f85bdf1960a9c152d72ba55cfe5d6df",
+    "outputs/history-corrections-v1/build-report.json": "1c4c3368711ebbade6b54f9417e11803895d2c43886f59de1843ea79931c3450",
+    "outputs/history-corrections-v1/reviewed-export.json": "9913ffc95ac82761d1295815afb836907bb239fa52e48cfa5126307d5a56a76f",
+    "outputs/history-review-v1/revision-legible.md": "78981f20a57704a70ba3e5c230cd803e8236bd862ba46a0abe72a0431971f8b8",
+    "outputs/history-review-v1/sample-with-text.json": "962f8def0aa1783eb136a0da5afe9f4fe727ca3d9db9cbb3aaa901dbcc0a3a30",
+    "outputs/history-review-v1/segunda-revision-legible.md": "d10c58fb98a47aaea168976bb89eb45f8f94f69b3fad9c7bc20d86254d1bde8e",
+    "outputs/huerta-batch-snapshot-v1/build-report.json": "378dd82aa758bc5d842eb1deb5a84b62d1f6199ba758f65c499b0c6170b9340a",
+    "outputs/huerta-batch-snapshot-v1/reviewed-export.json": "38c71b1548b89848142edc1aadab24d6651393f7361140a516e36d758e7ba244",
+    "outputs/huerta-batch-snapshot-v1/verification.json": "663edca76f0bdadd7e2d22212c41087ceea7c317e4f049466d3d97d2505ad4ff",
+    "outputs/huerta-batch-v1/candidates.json": "53d0f2eec4e1d488dab42147a485ea6416f230098a4754ab685cf3b7f59275d7",
+    "outputs/huerta-batch-v1/revision-legible.md": "14ccd1ad53eecd21fc2763bd96d50bc4a1759e9340e6f7b0a450aacd267f309d",
+    "outputs/huerta-batch-v1/verification.json": "e2778114a18d48748d700858817eeac98805eeefdced6a1a777762fbd0f93468",
+    "outputs/huerta-comparison-v1/report.json": "de5b9223484e13691b52a5b55d3f22769580a965cbbb8283d30ae8c9fdec64a4",
+    "outputs/huerta-comparison-v1/validation-predictions.json": "dec8beb4b197f949b65b16cf2eaab68c02a34d31dadb77df0d72d5084ba01161",
+    "outputs/huerta-comparison-v1/verification.json": "4a3b3b7be27db2b3c3bb9e6d03f481935654a2193965356a683f7c0de348e58e",
+    "outputs/huerta-pilot-v1/candidate.json": "9d7db6575d19e622bcab325438e863cf6608551c925d5856c3565bbe36fae9a6",
+    "outputs/huerta-pilot-v1/documentary-probes.json": "a52d6b2019dd5b2b4c70e90513fccb9371a3e18ee8622fa25640b571c8cf353b",
+    "outputs/huerta-pilot-v1/revision-legible.md": "84125a10c00af89bb04cf4e5b17c0889d8a4b50140b178af503be7977fe0a0a5",
+    "outputs/huerta-snapshot-v1/build-report.json": "3f2880bc50b251f70b5b6c5629fa8f305943882e6b7fadd42488ccb76c6bf0ac",
+    "outputs/huerta-snapshot-v1/reviewed-export.json": "eb1442c51b09dd66f691d77c6d9e412f5bebdef153e9b4efb6a30c905c03293b",
+    "outputs/huerta-snapshot-v1/verification.json": "2b2d9ddeb370762c02d93925af1e720a4562865f7bc02b2ee3f2ac4a946371dc",
+    "outputs/ideas-source-v1/overlap-probe.json": "e0ec63ded762c7abba3c7d79955e24b9788fea3f170b63c321e4cdfdd2f32cb6",
+    "outputs/independent-review-v1/acquire.py": "3de6f7a3370a683e889b8d13dd87b70b16c19adae1347dc3e5b10ab3d0b6bb77",
+    "outputs/independent-review-v1/acquired.json": "eecfab1b8d3294c427034d1798103bbbe5ad6476401354db31ef902d558a01a9",
+    "outputs/independent-review-v1/blind-correction-check.json": "8dee9264046e21e677dc654d7f1b55b35194316333df1c26251a817a5031673a",
+    "outputs/independent-review-v1/blind-evaluation-corrected.json": "c45250bba3ab5f8318257bbfee0b1884e19b8fc6e0605207fbd12873d9d6a912",
+    "outputs/independent-review-v1/blind-evaluation-review.json": "5e4680605aa03371a35d27adeeba9c0acf046d4c5388f97483d49d045e580e64",
+    "outputs/independent-review-v1/blind-evaluation.json": "5fedd0ffdb631798cd89ccdd7e1ff2a383b42b628d02e660c22c7222356fe964",
+    "outputs/independent-review-v1/blind-training-review.json": "9a6e752ba74f48b10a2ac976bb42a3f794622ed20c2cf9ea99753ee9a4c32c94",
+    "outputs/independent-review-v1/blind-training.json": "d8aa67ff1b6ab7cfc364fd0cd5523901135ff1ae1125f90f11e9cfb61bfbae56",
+    "outputs/independent-review-v1/check_overlap.py": "576de2eb41ad9e84b5e1e329730fba0f1936c869549e8c5bcd194bf2a6d1b3a5",
+    "outputs/independent-review-v1/corrected-candidates.json": "47d1f4bcc2bc3ac95f79bcbee5f2b4a957f9cea1d2fd8c440ee3512635c86a04",
+    "outputs/independent-review-v1/correct_extraction.py": "0d685d3532d29fb36ef280926faff7cf13ec4833623e335e3b145c949994432c",
+    "outputs/independent-review-v1/evaluation-key.json": "ac9fb13a72da4eb71f898beb218c1c4f0f04ffcb53099938838adf890d824011",
+    "outputs/independent-review-v1/extraction-corrections.json": "3b8cae446949766b347d1a302cb7afc62da3909aee0abf4c0528ae968cc2b03c",
+    "outputs/independent-review-v1/final-peer-check.json": "5e6ef740c003ce32dabbe6e00f70ae27e4a72c9d78719b0b73e6c5e4e965b8b9",
+    "outputs/independent-review-v1/inventory.json": "02cda398a0979a8cc5358ecf6c7fd9e1bfddd3ead9eb9b6dfdc29653aa2ddc8a",
+    "outputs/independent-review-v1/inventory.py": "bbce48309aa1496af2fe1dfb644b1c3c5e9a7f6e3202795aa2b5585ae3a1a88b",
+    "outputs/independent-review-v1/overlap.json": "7f212bb19585bf426ea79ed67b6b6123dd243ee56cd05cb3db043ab22127e04f",
+    "outputs/independent-review-v1/revision-piloto.md": "54359c5ee52d18e94dc15b4df53c9499cd3ba9ff641d8efda90a6fc10cf3eabc",
+    "outputs/independent-review-v1/select.py": "277b9c8a0b12a129bc96718bc3b106c46bedfff38485bbd26ffd9278b1ee3644",
+    "outputs/independent-review-v1/selected-draft.json": "84a3f0df008906044f207cf7dfa6c28d8eb3b8e7f25e2890fc8c6f536b6eb65d",
+    "outputs/independent-review-v1/training-key.json": "13c51000a42f334aa60e3b2a99c39c7bbaee48341a1bafdf1ae50400d9aa73ae",
+    "outputs/independent-review-v1/alvarado2023/pages.json": "f4f2e47f86e345431d7a78eced4178b1ece98408d19df4d3c9604adae120692f",
+    "outputs/independent-review-v1/choque2024/pages.json": "c9a19a00b0508441fb888188ed9f8b300a3dbaf05aea54e629fc17da40942056",
+    "outputs/independent-review-v1/escanilla2023/pages.json": "d55c1f140c0772945e9a0e392d70c51abfc4ed6240bc841716ee8cd0e0934a29",
+    "outputs/independent-review-v1/guarisco2023/pages.json": "32f5b01fc039090b94dabb6bfc5c033f94987919f83afbf8d072a9172d410c4c",
+    "outputs/independent-review-v1/vendor/pypdfium2/raw.py": "78f7cd3ff66290d97cf63771f3868729481b6edc4d808b93b2841304462951bb",
+    "outputs/independent-review-v1/vendor/pypdfium2/version.json": "f78cf951e040056caf785ef3e5fe4bb4e7b9291178e270ce2d1eb1391d2d8cb5",
+    "outputs/independent-review-v1/vendor/pypdfium2/version.py": "722db25612df52d609dc30c0a4aa74dda5210befd723fdf2ac3994effaf66ce8",
+    "outputs/independent-review-v1/vendor/pypdfium2/_lazy.py": "0b946874c8df7a542568f6a873843e8a63aeca1340520738777ea87bd8475b19",
+    "outputs/independent-review-v1/vendor/pypdfium2/_library_scope.py": "d2507c29c5364f0939a8cd7571381ad0fcbdeb75b4bb12162395ed212db5dd5b",
+    "outputs/independent-review-v1/vendor/pypdfium2/__init__.py": "60dbc29c44daabffe8e463b5ee7e55e2199461a430c19fd4ec56e2487cb6fef0",
+    "outputs/independent-review-v1/vendor/pypdfium2/__main__.py": "cc9bc7ec16b8fb3724faf4b2f13f2886c193bdb107432246e0150a1278cd5f0d",
+    "outputs/independent-review-v1/vendor/pypdfium2/internal/bases.py": "74d514d8e3201ec23dc9aa5b59551fb6d3956a4a103555076173fedc14a8ad58",
+    "outputs/independent-review-v1/vendor/pypdfium2/internal/consts.py": "e74e3cc02cda597fabe66d25bda1e31c29081893b275cfa0b05ce9e9e091a312",
+    "outputs/independent-review-v1/vendor/pypdfium2/internal/utils.py": "a8dd2990a0cd7b16135027c5014691921dd1e9306328bff5068016704ab3d7db",
+    "outputs/independent-review-v1/vendor/pypdfium2/internal/__init__.py": "ca51eac7bb2637e09bbb3e9b17f5c9ce69cb0f472b6176b0fbe32433d552da17",
+    "outputs/independent-review-v1/vendor/pypdfium2/_helpers/attachment.py": "df34299886ebf1c1bc6776ded7f6d5ed9d53a9fe6457a1bd591cca22ce1874dc",
+    "outputs/independent-review-v1/vendor/pypdfium2/_helpers/bitmap.py": "05840c877985bd751f32a2c4ea2ba0fce74ee75b2a67ed1edd20e205435bc4e8",
+    "outputs/independent-review-v1/vendor/pypdfium2/_helpers/document.py": "98deb138dc37c8c29cd76ff1e754515c10e7653a8903bb4918b4efce903c9cb9",
+    "outputs/independent-review-v1/vendor/pypdfium2/_helpers/matrix.py": "4eab322995c9bb6ae9bfe8ead5bd723a5b946d23e4abd66d9a4bc1bc8ac07107",
+    "outputs/independent-review-v1/vendor/pypdfium2/_helpers/misc.py": "0de38c4d38e8ffd24349d3e7b753e269d07efe3ee1390c057f88f5099e90b81f",
+    "outputs/independent-review-v1/vendor/pypdfium2/_helpers/page.py": "09e50f025b5ad63aa34db63fdd5a20883bc8d1f3cd2b57c1a549dac6b61fcaaa",
+    "outputs/independent-review-v1/vendor/pypdfium2/_helpers/pageobjects.py": "0f19a337a2071487677f8a2cbc56276443aa0f9d77cbc0048fb3d5c934a01205",
+    "outputs/independent-review-v1/vendor/pypdfium2/_helpers/sysfontinfo.py": "c97d9502e5004ff9b3de1071823dca410eec8182a9fb7368efc3864b2f9c45b4",
+    "outputs/independent-review-v1/vendor/pypdfium2/_helpers/textpage.py": "9eba57d76c09d3c5719ea393b079cd90dc30b0bb779fb2f7ae2c36d49206d612",
+    "outputs/independent-review-v1/vendor/pypdfium2/_helpers/unsupported.py": "a46a7101a8865e094cad1923d5356d2377fbebc683ad673357418f07b74fbb8f",
+    "outputs/independent-review-v1/vendor/pypdfium2/_helpers/__init__.py": "19c9715e2e4f6ea785a239d3cc0e71b65f763a1f967e12102c52668d38d4cf1c",
+    "outputs/independent-review-v1/vendor/pypdfium2-5.13.0.dist-info/entry_points.txt": "39f3e2f656f1c386b806c26ecf2b9f92dd0e1927b6db2d496c8ddd014d779a27",
+    "outputs/independent-review-v1/vendor/pypdfium2-5.13.0.dist-info/top_level.txt": "07e2cb6d8ff0e395a284a74697fa4ceab81bfb3dbe45886aca406b5d7fc90fc5",
+    "outputs/independent-review-v1/vendor/pypdfium2-5.13.0.dist-info/licenses/data/windows_x64/BUILD_LICENSES/abseil.txt": "f54fff0b905df5b3464527c652a30e903b172d6dcab4d89b5e6f105d5e4a4603",
+    "outputs/independent-review-v1/vendor/pypdfium2-5.13.0.dist-info/licenses/data/windows_x64/BUILD_LICENSES/agg23.txt": "c110d3ea2ad77467ce0dcff7d3337e6c8be8049a5103f4b9bd5fd911a77972e5",
+    "outputs/independent-review-v1/vendor/pypdfium2-5.13.0.dist-info/licenses/data/windows_x64/BUILD_LICENSES/fast_float.txt": "bf1b57355feca8fce77ee95f48002f8d4789fb71b30ec7599c06cda4901fbb2b",
+    "outputs/independent-review-v1/vendor/pypdfium2-5.13.0.dist-info/licenses/data/windows_x64/BUILD_LICENSES/freetype.txt": "f4b133e25df1f86ad3ffea453aa0e613f0474f34778dbbb3e437e7b2724937d8",
+    "outputs/independent-review-v1/vendor/pypdfium2-5.13.0.dist-info/licenses/data/windows_x64/BUILD_LICENSES/icu.txt": "93679f4389d53b6835d89843f251844fb9bc455b35bab036d3c8e7abe497a47a",
+    "outputs/independent-review-v1/vendor/pypdfium2-5.13.0.dist-info/licenses/data/windows_x64/BUILD_LICENSES/lcms.txt": "7312b68c5b25e9bf2b828706fb4e29588f22705112f411fd42e1f7d84c3d139a",
+    "outputs/independent-review-v1/vendor/pypdfium2-5.13.0.dist-info/licenses/data/windows_x64/BUILD_LICENSES/libjpeg_turbo.md": "be2b2b5ab168bce87bc3e31f2a5c5adba4b7f6e9e51d618e958d1d46972ebd95",
+    "outputs/independent-review-v1/vendor/pypdfium2-5.13.0.dist-info/licenses/data/windows_x64/BUILD_LICENSES/libopenjpeg.txt": "c5ab0890a737c2dfa7ba675036554f6d17741d98629b0c2a145354d00617e6b2",
+    "outputs/independent-review-v1/vendor/pypdfium2-5.13.0.dist-info/licenses/data/windows_x64/BUILD_LICENSES/libpng.txt": "452390433ba0f88aa3e2b122c647741b72a0c117cd6ed7a329b49785aecb5511",
+    "outputs/independent-review-v1/vendor/pypdfium2-5.13.0.dist-info/licenses/data/windows_x64/BUILD_LICENSES/libtiff.txt": "92b72ba97e6c2749c2a94bc0ef646b47080217f1e772a482b33cf5a5f98a6506",
+    "outputs/independent-review-v1/vendor/pypdfium2-5.13.0.dist-info/licenses/data/windows_x64/BUILD_LICENSES/llvm-libc.txt": "3b6226c32e168c83b891d8d6f0d3c29c2116dc3ef93dc93c307b54f279ecf383",
+    "outputs/independent-review-v1/vendor/pypdfium2-5.13.0.dist-info/licenses/data/windows_x64/BUILD_LICENSES/pdfium-binaries.txt": "8854f4388f1ca13b3ad9baa42e95f5546b4c0b17109c159256d3eca7be39b09b",
+    "outputs/independent-review-v1/vendor/pypdfium2-5.13.0.dist-info/licenses/data/windows_x64/BUILD_LICENSES/pdfium.txt": "961eacd9633fff6d051db7208b755e9210e30efac7adec3e6a6d52798f0ccf0e",
+    "outputs/independent-review-v1/vendor/pypdfium2-5.13.0.dist-info/licenses/data/windows_x64/BUILD_LICENSES/simdutf.txt": "c172a0ba936ff31230febb5dad869e25cb7c1a07480c7a381be8cf011bb52719",
+    "outputs/independent-review-v1/vendor/pypdfium2-5.13.0.dist-info/licenses/data/windows_x64/BUILD_LICENSES/zlib.txt": "33fd641c9f3b0e0be64bc78fea9e94807674cdd70c48477599226cb8956565fe",
+    "outputs/independent-review-v1/vendor/pypdfium2-5.13.0.dist-info/licenses/LICENSES/Apache-2.0.txt": "3ddf9be5c28fe27dad143a5dc76eea25222ad1dd68934a047064e56ed2fa40c5",
+    "outputs/independent-review-v1/vendor/pypdfium2-5.13.0.dist-info/licenses/LICENSES/BSD-3-Clause.txt": "ad9a9e823df025f42389c1812eae28019f657d1ed7b3a4ebfd5010b0736a0da4",
+    "outputs/independent-review-v1/vendor/pypdfium2-5.13.0.dist-info/licenses/LICENSES/CC-BY-4.0.txt": "f1b1748301cd4274f46733c218d510929661b4990855de5fc645dacd69c4371c",
+    "outputs/independent-review-v1/vendor/pypdfium2_cfg/stl.py": "e1d5069541783ff83910fe440f19581484014d836c3bd61402f2d4c99e61fb03",
+    "outputs/independent-review-v1/vendor/pypdfium2_cfg/__init__.py": "bea7f49aa76d7fe04b562ddd918bcd7ff3a09069e9a7b75dfc40c2cbdf4d8489",
+    "outputs/independent-review-v1/vendor/pypdfium2_cfg/_shared/stl.py": "12c7498a029cafe31aa8fc0ba0d5f3b27487c8c15950e4adc0497f9852ddbd32",
+    "outputs/independent-review-v1/vendor/pypdfium2_cfg/_shared/__init__.py": "0172429091cdb5c12636b432b475b8f1b79407e35d483a5bd9d15f9bf0bdbe05",
+    "outputs/independent-review-v1/vendor/pypdfium2_cli/arrange.py": "37f60abbd1259c40d1faa2e3284ba2b828d540647499888f675d1ff44000e225",
+    "outputs/independent-review-v1/vendor/pypdfium2_cli/attachments.py": "16b1cf0fcea74e6aa283f8ae3e458c884dbbe80a61610363b49859d1bc4a9a2e",
+    "outputs/independent-review-v1/vendor/pypdfium2_cli/default_fonts.py": "97ef6b0539a4620ef2311c34e57b74d65983f152b6c9c5c6c6cf4c48928cdc73",
+    "outputs/independent-review-v1/vendor/pypdfium2_cli/extract_images.py": "65dfd950db902f47a44ba7f4682a1ffcd386e02d3d43b22050cfea5d4ccfe5df",
+    "outputs/independent-review-v1/vendor/pypdfium2_cli/extract_text.py": "184bd80f4bc679448f9db82ce58e5bc16b8f6ea00fe079a49467ff0c5f0811de",
+    "outputs/independent-review-v1/vendor/pypdfium2_cli/fonts.py": "89567f0973ff3e4cb01b07bc61641f616d7d04dd858016713b5cd3db0bdcee37",
+    "outputs/independent-review-v1/vendor/pypdfium2_cli/imgtopdf.py": "8592283cb716ed1ea94e3c8ab42e19a3202b47b0b46d8d8bda7bc73536042da1",
+    "outputs/independent-review-v1/vendor/pypdfium2_cli/pageobjects.py": "78f51cc3dbcf001023fe4ee3376c189ff9527404436e2c307286198895cf252a",
+    "outputs/independent-review-v1/vendor/pypdfium2_cli/pdfinfo.py": "d2b8bdf2124e24120f912de2ba0c316dfd969235447cfcce374a1dedd5b0b7c0",
+    "outputs/independent-review-v1/vendor/pypdfium2_cli/render.py": "908aeb2b5432c8b7255110789560fd5a1cea4c481aa73af3bcc595178b3e02f8",
+    "outputs/independent-review-v1/vendor/pypdfium2_cli/tile.py": "c802c8f617b431d9e680f902d7b3eafab06b5ba47a27ecc43763980475a59e0e",
+    "outputs/independent-review-v1/vendor/pypdfium2_cli/toc.py": "1ad735d6e5869b846afa15d7bf84842e4ff9979c3f28052676aa84db20d72c71",
+    "outputs/independent-review-v1/vendor/pypdfium2_cli/_parsers.py": "81ca6d7e9f0a6c110a3038a66ae7af47f8d7a70021e64f533537142a90811362",
+    "outputs/independent-review-v1/vendor/pypdfium2_cli/_setup.py": "3c06d76b24e12c7384f022077babf10e71086ea9b32ad8bdcea0b83e6991169a",
+    "outputs/independent-review-v1/vendor/pypdfium2_cli/_sysfonts.py": "a0ab9c3c9c7cf3d96d6d1e2fa18d735c4593352599ea70b613639fe9c30e8f91",
+    "outputs/independent-review-v1/vendor/pypdfium2_cli/__init__.py": "eb2b49690efe149596377bf9e2156556b67dc0c843b5939e5b872e2e791f6641",
+    "outputs/independent-review-v1/vendor/pypdfium2_cli/__main__.py": "918fd5a229a91aa905b1f588b042c13aff8752099c056f3939ddb5f2f5feb3a1",
+    "outputs/independent-review-v1/vendor/pypdfium2_raw/bindings.py": "2ee9e8c2b64fa4ec3526148b92a33e96326cbe0eec040e9f66e2de4e7b44ab5f",
+    "outputs/independent-review-v1/vendor/pypdfium2_raw/version.json": "2b991c18a17ecbc862e5464aaad30ebdde2d5c9fbd1a65b0e9e2e1e57cf99194",
+    "outputs/independent-review-v1/vendor/pypdfium2_raw/version.py": "650422c7beaa6b233576531011a4a478eb3b73dc319febc5acd46c24b55ac241",
+    "outputs/independent-review-v1/vendor/pypdfium2_raw/__init__.py": "c8279b9e5b5171d37a3bcdb6628b7da8fb009d2cb803ea0e877c0381f52722d8",
+    "outputs/maintenance-no-changes/changes.json": "d8c9adc5af2c57c5b0eb177c1e43bf30517e80e38746eb385c4b8a32a32cea6c",
+    "outputs/maintenance-no-changes/report.json": "eb20b81853537ac762639c2f3f42249aa7d9db1396a36c8eac7c3d8ce4426f02",
+    "outputs/maintenance-no-changes/report.md": "b19641e4bc55ed1746ab6c113c411493cd8714f6ad3e00aee7c5c1bf2361e383",
+    "outputs/maintenance-no-changes/snapshot.json": "a3e69377f910c18819006ab961da4a9473f1b2d3226ff3ad3c0906f4b0948595",
+    "outputs/post-modal-deploy/prediction.json": "eae85d8343bcf9b7a04c3e306d65303c9456b737097d1d43b8d95f634c33e8fe",
+    "outputs/post-push/github-actions.json": "67fe5f6c39be718c65fbf9498b97b0257a24da0cd8a83280e7f096da849656a8",
+    "outputs/post-push/production-smoke.json": "118e6507e64120c55b9d0d73ea1bdccb27d98151c7b5b8da9c94947124361537",
+    "outputs/recovery/modal-health.json": "8d20ed5d9a7ec1b5297412185b976cb33c91c8d224b694e0db7ba35f25a360a3",
+    "outputs/recovery/production-smoke.json": "2ac5578104b828947df5fcfaf00dec51141241243c58c3ff3f7ff9b10d38e574",
+    "outputs/review-block3/model-functional.json": "51c2526cecff53f27e245a773bb991c497a6871d9a3eef7bd16cefbf209ff593",
+    "outputs/source-check/beto-startup-local.json": "da586e4d1d3e61981bec419223efa1550232c6b3c2ad84d4528ce38efb7aca47",
+    "outputs/source-check/inventory.json": "04ced700a60851c89589865cf0e7436d302a245e98bfc0a08e3a57464a07c532",
+    "outputs/source-check/source-flow.json": "24de87d59010970abc25fb1039939a43ed57847e86f92667258cb8da2f35bb3f",
+    "outputs/source-check/storage-after-dashboard.json": "a9dc897a951db46f886f5a3711f8affc24e536c00b26473b985e5e9d6d4bd19d",
+    "outputs/source-check/storage-recheck.json": "80483c0e9d7824422ac519f18eab1c316e2c788a9a6598bc09d9d168f94021be",
+    "outputs/source-check/verify_flow.py": "38844d1fadf455aab2bb8132334e551cba29051e893c96d2515cfbe0c2b31351",
+    "outputs/source-diversity-v1/assemble-review.py": "de6f772443acc501325f7cc066994ffb0a82957e7202394aa4636dc90c48aec9",
+    "outputs/source-diversity-v1/build-majluf.py": "6e102522a73c39cc767043fa994ead5ce1148d9cabe3dd904eb5553bda73777b",
+    "outputs/source-diversity-v1/check-source-diversity.py": "08fe8f85a1ca1ef3fc1e9cbdabe15854bca07f6b99d167e76bfa69826268860f",
+    "outputs/source-diversity-v1/closing-verification.json": "473412854e9f13fdf71cfb6dc7563089371137b7e44a62fb811477a0ce5f8754",
+    "outputs/source-diversity-v1/contreras-candidates-unlabelled.json": "d9f701af2a4202f431d28ce403739450ef17356999310ee517c572709cceb876",
+    "outputs/source-diversity-v1/contreras-dependencies.json": "bc3693a8fd9b1d06eec30abb3a0cc491a6759cb87a7112176a8cf68e2e98fc2b",
+    "outputs/source-diversity-v1/contreras-editorial-evidence.json": "7052dd3f70adfcc3cf6a062bd96b47b2693f907938e910060ae91c2c9e7df742",
+    "outputs/source-diversity-v1/contreras-first-review.json": "4a5dc237ddbb4d3a978377d6bb92fd5ea8bbe43d1dd5d9a4bc90e7a91d0be3a0",
+    "outputs/source-diversity-v1/contreras-prepare.py": "c768b82b4ac809fd3e848e652c2aa0c35d3e57c748a6adf2676749d13911bc19",
+    "outputs/source-diversity-v1/contreras-raw-pages.json": "4c270142c37579e8f580c1d5e4176f45153c12b22387ed9728fe573232921792",
+    "outputs/source-diversity-v1/contreras-second-review.json": "8673e86ad5c5a1105c8d947200a75f3270f291c60942e7a380adbecaf3d863d5",
+    "outputs/source-diversity-v1/contreras-source.json": "f551eb8bfae9b6dcbd88f214d207785cda50ec3c53152bbd6f57de173e634f74",
+    "outputs/source-diversity-v1/contreras-verification.json": "ae05ef35f166b4d39f1a67ef269c43979887bf87cba211fb60530965afa03565",
+    "outputs/source-diversity-v1/evaluation-work-title-screen.json": "4fcb254ec49aca1831df5768b4504414b1226b20ab6aeecd40448114658336a6",
+    "outputs/source-diversity-v1/hunefeldt-03b-candidate.json": "7f711ff9d820aadb60a71c0a39ea396fefaf07ac8dbe19a6fe13b5f5db2271b2",
+    "outputs/source-diversity-v1/hunefeldt-03b-check.json": "95659ccbb2cd0a36ed4da83189e1245e8dace0176b9b1d37f75a27ae8f7709c8",
+    "outputs/source-diversity-v1/hunefeldt-03b-second-review.json": "ac9067a4bc352cc6ddaa0143d2cc372700cf5513a16d7357576bc3a311357972",
+    "outputs/source-diversity-v1/hunefeldt-build.py": "aa4fdfb0342bb1276791bcdc027040935dbce56f223ae114bf43fdd592dfaa66",
+    "outputs/source-diversity-v1/hunefeldt-candidates-blind.json": "89d29972bcef0b8ccecc1de58f33c8d619cff371ca5ccc2c64fb64771f5aeee0",
+    "outputs/source-diversity-v1/hunefeldt-first-review.json": "165de3669f80fa0124c4d06c00c96c70d3b4558400d00da37ffe78fc0e4ccdef",
+    "outputs/source-diversity-v1/hunefeldt-raw-pages.json": "d3da50ba4857eba2f1276409d2e8d8e289704a2f67d26393fdf3912e54276b34",
+    "outputs/source-diversity-v1/hunefeldt-second-review.json": "56f52b95923e64dc3c92702da527d44041f3b4ebcff97d0f1d841a66528a7dd8",
+    "outputs/source-diversity-v1/hunefeldt-source.json": "9f4644f4859fdf448ce86431e908797191078a140aa3d8066c5d48745bc4b789",
+    "outputs/source-diversity-v1/inputs-before.json": "907dcfd18a8f5e66c4db0442a352baab4332bd3aff2719ccf39311eb9c2106d9",
+    "outputs/source-diversity-v1/majluf-candidates-blind.json": "9c221cea07d533759e04ae4e1586aacada6a01397b72d966229c2184179fd649",
+    "outputs/source-diversity-v1/majluf-evaluation-document-screen.json": "c429b3ca151b646d69de00e93a373ba947e34a5778e62dcda0986f45fe2cdc08",
+    "outputs/source-diversity-v1/majluf-first-review.json": "ac23f6575247eef25dc34ca8516693e6c47684b347ce204d202220fb97f16f3d",
+    "outputs/source-diversity-v1/majluf-pages.json": "079838b9036f631a0bc91a612d6b89c357e8e5efa02bdaf52520daafad0a4c26",
+    "outputs/source-diversity-v1/majluf-second-review.json": "8cc3e3de01e9c8bec10542ce365fecaf0ec7dd00f25f7d68fb68e9eb8c48c5c6",
+    "outputs/source-diversity-v1/majluf-source.json": "ec8ecb1a14045568d9d5e86b117809d0d08cca10addcc210ab4966ef1498c192",
+    "outputs/source-diversity-v1/mechanical-check.json": "ba36577b01c77bbca8363521adcc1c5f91db6a1d8f0c66717ea0a75c3d3b90e6",
+    "outputs/source-generalization-v1/predictions.json": "37a21dab2a8bba4d75578a2e3291162c8bca558053348fdcac27617ebf13295b",
+    "outputs/source-generalization-v1/report.json": "4423c9a4032fff06f16e1dbb473895a1ac83d720ae1f9c57230bfd08a0fb2ccf",
+    "outputs/source-generalization-v1/verification.json": "78357aeb374853afb58523e3a71888eb370ddf376a17958f3f5f6d2f5c8df16f",
+    "outputs/source-generalization-v1/verify.py": "b12d579a428d056f6d8dd649c52d6384df0f6baae946b2116802500bf85c0db1",
+    "outputs/tfidf-beto-work-control-v1/moran-predictions.json": "a35777111e45fd828ffddeb98deec00ea5b22c32e04e1b3fb89e99f932088c73",
+    "outputs/tfidf-beto-work-control-v1/ophelan_huamanga-predictions.json": "54dc921e7cbfa840db1c0315251468d668bffd76fc05954d381a8007b2cf4afd",
+    "outputs/training-batch-v3/assemble-review.py": "179afa3afaa8f28963f8cde9cafa930797cfb3837dce5c561c011215c562b8fc",
+    "outputs/training-batch-v3/audit-ideas-colonial.json": "06b09f688632c1360041317145affd763efcc0abc4784b827c5b54590d9d0c02",
+    "outputs/training-batch-v3/audit-republican.json": "53f6faa34ddbfca5160f3518737b2f77d0bf4dd398729723abf80d5f4b7afbd5",
+    "outputs/training-batch-v3/check-pool.py": "d0e75e409f2703f44816fbc8d665deffb0695de024834cefed9b26ac6d14ef37",
+    "outputs/training-batch-v3/closing-check.json": "8513f01e2557a25543ad320317fdacb32291d90b80583047661381864bfbec27",
+    "outputs/training-batch-v3/document-title-screen.json": "2681db3b9303e3338201bfec56c31cbc81801fa2b85d8b1a5f7d75eca1ef1e5a",
+    "outputs/training-batch-v3/inputs-before.json": "2c15f683a29a31f7bc153884e577aa54ac2fd30cafa1be61dbe0979419e7db15",
+    "outputs/training-batch-v3/pool-check.json": "58771b40649f793e32ed1e03053ff6c943f4532dddc9d2e0484d027270b76041",
+    "outputs/training-batch-v3/pool.json": "8542e30a47def0323f675a31ab94ad1455d4e5f1f1f6b751091ca7e887067832",
+    "outputs/training-batch-v3/prepared-review.json": "b42860373a22f56490871b626a845b32d61f67108998fdc530e2883b57297692",
+    "outputs/training-batch-v3/root-boundary-review.json": "b2da350ad32de9f007fa590ae6e8a34d8436cc26b29b81c7e4d62226167d2d83",
+    "outputs/training-batch-v3/source-moran-adjudication.json": "ecea76b204d5564a72feebf5f111027062da0c68e0d3834d4be1cf07cac8f579",
+    "outputs/training-batch-v3/source-moran-build.py": "818c8fa2ca2815581fe48a624fa14ee25907bb52a977989f4d42ea6f19217899",
+    "outputs/training-batch-v3/source-moran-candidates-blind.json": "64aa899f613dc70a14bebcd10bcceb935eeb33e80305473ed06241709594f194",
+    "outputs/training-batch-v3/source-moran-check.py": "d3745ecbca667ae0e271436ac2cf1199d5d1ad0e89b31c9644c4d98ff3a9a60b",
+    "outputs/training-batch-v3/source-moran-finalize.py": "950e9f12dd99af97ba98c93f064d4e4c864c47617452e7e045566c49b32a596d",
+    "outputs/training-batch-v3/source-moran-first-review.json": "00ce28bef3ea4356140360b309682e1d69efb820b4f4cebaebd5e1dfbf683bbf",
+    "outputs/training-batch-v3/source-moran-inventory.json": "a5f77730231c05d6f0377d239305e522b7f136725a461149013ebe08adfb9ae7",
+    "outputs/training-batch-v3/source-moran-layout-pages.json": "c2acd909d4b9b40f6e523b31deb4907119b87d4292f5c57a2b7922e1427567f1",
+    "outputs/training-batch-v3/source-moran-mechanical-check.json": "b7a2f8845b43b725b7015078ff80662fbd690b27489f859bb83b2db8d21ed592",
+    "outputs/training-batch-v3/source-moran-raw-pages.json": "28331541895ba194d3a1ecb1b27e801e166b2759b619bb355aa3505adfa26a1e",
+    "outputs/training-batch-v3/source-moran-second-review.json": "f7987aa7c8be27c9dd9997e315f36a48b68d0ef58efb240896cd187f67b99b85",
+    "outputs/training-batch-v3/source-moran-source.json": "0402c869dd5195d51416902491fa7dd81dd7732b6707d3bdd2c67848cd65fa1f",
+    "outputs/training-batch-v3/source-moran-visual-check.json": "e7b15f8eead74002ae7d7a43319388ae669bbe1bf3865d8f08d6ec542a6f1115",
+    "outputs/training-batch-v3/source-reuse-rights.json": "3004f6eaa4b25e1302f36251738208420a1c32973377263a9b4fe22266b9096d",
+    "outputs/training-batch-v3/token-lengths.json": "9e0322324e8f954cfe793f1ebd6593161795e929e6e229311e9b266df3ebd28c",
+    "outputs/training-batch-v3/hampe/adjudication.json": "80e317122d167b71997b17ffc0e618cf9928533cfa7908f8f1ec92929052cf2e",
+    "outputs/training-batch-v3/hampe/extract.py": "c6f2f2955c5b72cba8169334464c0aed89819bcbfc9992e36d070daf9649fd05",
+    "outputs/training-batch-v3/hampe/first-review.json": "eec823de7f46c33107affb23bcc329a27b5ae3fb58d6693f07ef6ed40af7824e",
+    "outputs/training-batch-v3/hampe/inventory-unlabelled.json": "4d27b0a25a67e3a7581fc760356568ad7557592beb57eb170d0208fc208bde4e",
+    "outputs/training-batch-v3/hampe/mechanical-visual-check.json": "8e70b314231d7e171cbda552eefab27d9dfc4b1c242d2aea035f15b4ddc9f43f",
+    "outputs/training-batch-v3/hampe/raw-pages.json": "c3920d5841cfee33a27a9625af6a0d59a4581aa24944c252f50fc0fd935405a6",
+    "outputs/training-batch-v3/hampe/second-review.json": "611824ab7ef8fff0e52ac259d187c2e3e79c8d4fc0a4ed2f70f182e86e9edb5b",
+    "outputs/verification-328ab3c/production-smoke-after-render.json": "d749dd450204fa4c2769416c5acc0c15388f49c58dc7d811c46fda16d5c8671d",
+    "outputs/verification-328ab3c/production-smoke.json": "d7dcf3012741d40c83a8ea62b8b9549ad25687cf8b13c619792f07fccd0893ec",
+    "outputs/villanueva-boundaries-v1/extracted.json": "79228cd5d7b37448c6e105f5015c6a26ae37064e045c5dc8baafe753a324cf79",
+    "outputs/villanueva-boundaries-v1/prepare.py": "ba4f810993d87efbfcca4a75b25096f1781eb53e08f820390f1852015753d08f",
+    "outputs/villanueva-boundaries-v1/report.json": "4c40d363be179e57a6bcde224cb00c27329d12c74bca37cb98f92b4023f0695c",
+    "outputs/villanueva-boundaries-v1/revision-legible.md": "65ed0c340a84329a5a4063496e48031eb6b840c8277c49c8129c521b97b2f700",
+    "outputs/villanueva-comparison-v1/report.json": "4c88a784e69ffbd7841d65633c0b431ad592fbd7954efee70cbbb969928a637e",
+    "outputs/villanueva-comparison-v1/validation-predictions.json": "b831b5e31537264ca21ec742067ff98b22ef8ecd24dc8a19ef31af7d445efacb",
+    "outputs/villanueva-comparison-v1/verification.json": "cf6172d36bf4ff907f512da0aa8003ee287109b137b3de47dfcde77234f835ad",
+    "outputs/villanueva-comparison-v1/verify.py": "80f96641ed6a12d9f6b8748a59e348a78d0af75520f92fefa1a007f8dad0dc1d",
+    "outputs/villanueva-repair-v1/package_review.py": "5506a15717bbd5d05f4ec1e1aa9b6af23db0f18a0511fecb8f49be353ff7b37a",
+    "outputs/villanueva-repair-v1/proposal.json": "c6ce2304035c71af7d2f7895c4346dfacef54f1697e10d3fc5966caab0325fdc",
+    "outputs/villanueva-repair-v1/reviewed-proposal.json": "271816f64f213cd684f58e14b1cbe2a957b4e68fc23165e5e55f07ac15e0d85d",
+    "outputs/villanueva-repair-v1/revision-legible.md": "78dec0402be88d3edcda526dd64e308642764250e7450339b6ccafdffb50a1d0",
+    "outputs/villanueva-repair-v1/tampered-boundaries.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "outputs/villanueva-repair-v1/verification.json": "f3b293431d6ca1e4794e6e4b9e6a71c716cd48a67c30d182da6d962d24c1685a",
+    "outputs/villanueva-repair-v1/verify.py": "a95ba2423dc37837046cd46e83ecb132f50f19ec4d36f9d03955bc24c346efd2",
+    "outputs/villanueva-snapshot-v1/build-report.json": "5ffe96d4aba420c33c3ee133a17fc1823157ce0cae8dc167456754cd05446007",
+    "outputs/villanueva-snapshot-v1/replacement-archive.json": "76f0698ca0fab38359bedb2a45224ac3b6b59043507eff9bc7ac6885befa1ffa",
+    "outputs/villanueva-snapshot-v1/reviewed-export.json": "30c5e648476fcfcb1bd9eddd3e99a7cca3ce5f23fabf09290cd7e4ec8791074a",
+    "outputs/villanueva-snapshot-v1/tampered-review.json": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+    "outputs/villanueva-snapshot-v1/verification.json": "344dd5dba1a18cf6fc0ffff38089147450136cccb392ce18b846b7dacf0ee937",
+    "outputs/villanueva-snapshot-v1/verify.py": "063654ed384812a4c40ae9549d0def19ceb8b2413cf09b23eb7332a21ee8181f",
+    "configs/experiments/beto.json": "0752b044c39cbe403fbe2e8a8a074cf095f6475502e6b074505558fefdcc1ab9",
+    "configs/experiments/tfidf.json": "0273afefe732b4780af98f49bd87ec953a139967500004ca3897492f12edf018",
+    "scripts/apply_reviewed_labels.py": "cf450a0bafe8c40915e0b480adbe3a7e6e85a09cc49b1c729fc4905fd07cf59c",
+    "scripts/audit_beto_v2.py": "683733bd56de5bd725fa5d5e9adf2b87875225026817a3ba2e231fe33e4a7beb",
+    "scripts/beto_effective_batch_loss.py": "2d54f79ec5cc9a26920e8de65a51542c32c1a77ff2852a3083073f012e3ad568",
+    "scripts/beto_epoch_trajectory.py": "21825600b0010d6ebc9ea27579d54ff76465e51756cc43a85be45092bf102a4e",
+    "scripts/beto_fixed_epoch.py": "5e162abde50fe3c7cf4d47fcc322565a60cea7f388df24df1fa83df6ea4dd100",
+    "scripts/build_agn_snapshot.py": "b59849bd466b3ecf4167990b316f5de6785bed8871532096acd94e50738ad985",
+    "scripts/build_beto_training_cleanup.py": "eb9898d98885c506427619caecf65faef19e659c1bdb04e011a031378e39346a",
+    "scripts/build_corpus_snapshot_v2.py": "51eae3cd6e994ab7014367dc137080b5976224a511c16e78019c0a42d7135e69",
+    "scripts/build_fonseca_snapshot.py": "0ff4d4d5080fc192c31626ca92dfac017c6b29fca69e0a4b05311fce0840152c",
+    "scripts/build_huerta_batch_snapshot.py": "1161d923186ada6eceaf41766341bf1eac8837c01ebf85a2a7535988594934bc",
+    "scripts/build_huerta_snapshot.py": "42c2b5535d669a48f0c281c2ce97fb4ef7e78700e00c90eb5510e013c619a519",
+    "scripts/build_training_batch_v3.py": "768face195990b7c15578a01d8d29dde5b12226532312240764395ed6925b652",
+    "scripts/build_villanueva_snapshot.py": "743166b44340832c62c90403240925b12eed47b070091b566901bcd7274e9a18",
+    "scripts/check_beto_effective_batch_loss.py": "672f68e829bf0d4c0d7e8fe760f2458ab1ce3501a430111cd44c0086bb529b12",
+    "scripts/check_beto_readiness.py": "9ad31ab570bf88ad2e8b249557f8e184c783171ce503dc97201e8bed31fa2f28",
+    "scripts/check_beto_source_epochs.py": "6459f1ce9a822fcc3d2df44a74f09727c03baf1ef4e93321f1a9380489983701",
+    "scripts/compare_beto_data_v3.py": "82f7d944a1f031cf5b891444bc433d89e24de5783886c63f72a2130207d78a93",
+    "scripts/compare_beto_learning_rate.py": "39c1c3aa7db91192c31b3d03690022b3e97f567f0565eb0a5ae841c89f856756",
+    "scripts/compare_beto_length.py": "54798f66319133edd5b3456786cdcb3a0e5e4e92dcc5c72893fd99fcaa15dcbb",
+    "scripts/compare_beto_loss_normalization.py": "270526413da72362ef74d36b922556f942387bf29edfc777107e0a226536a3b6",
+    "scripts/compare_beto_source_epochs.py": "9d78bd6d60890ec1de3f56c4e0bdd5cb8d178f0bac7e234cd5c08b27d3be670a",
+    "scripts/compare_beto_training_cleanup.py": "024aafa30e4039f8021ea2e65185cfd6d59bcead2cacbad7f353f8b0057c879d",
+    "scripts/compare_beto_validation.py": "bc8f02cd3b096ceea2a22f192b5e30205fcd067e2e45865152f406ca10e15037",
+    "scripts/compare_tfidf_beto_work_control.py": "e0685158b0450ed07e413e8d6974fa56120c31ee15f8facd953e44d47587eefe",
+    "scripts/compare_tfidf_validation.py": "dbd865554d13e8960b9e19e5dc3949fc4e820a73a1adf6131d03e26ab05a063f",
+    "scripts/diagnose_beto_learning_sanity.py": "b03c5567003d79ed2b7ddbdecd9cd177d720877e0fda5729513ce2df2e243d02",
+    "scripts/diagnose_beto_training_fit.py": "26060d476c269113d6b362b5ab8aebcab780b55e46b33ef917c0a4c74f84f633",
+    "scripts/diagnose_training_coverage.py": "0eb9c8b2b51915a975f0ce3c59e41cf7604004ba689c853053befe2de61f4463",
+    "scripts/evaluate_tfidf_by_source.py": "b196b26a66fbfb45eae8abbf630e10a95c3c093270bebbf1cbe0fa0088d95ac7",
+    "scripts/prepare_agn_pilot.py": "2c1cd9c93bb1f658c0f1d23046fba8589e130e2778038aadc6797df4d501f00a",
+    "scripts/prepare_beto_ideas_contrast.py": "00d8e3a5350160ac51aee6e4e4b64da2c6ba87a02d1ad644456f1da6c15f9c5b",
+    "scripts/prepare_fonseca_repair.py": "9689fb478971a666d2c1e2a6d3864a07f21f26e0e03196104048d295465f6aa6",
+    "scripts/prepare_huerta_batch.py": "41cd20706c2dd6ea23051b2e7decbebee63a059821d94a8fddc898ec06fbbaf9",
+    "scripts/prepare_huerta_pilot.py": "dda5d0c44f538783c07be909d44a3c6c7c5797859027ff14e146daa3ddf914a8",
+    "scripts/prepare_independent_review_v1.py": "c28150a0d8970bc5ec75da9cb63b750c8e894ff57f692bbd6fb893a78f9591b8",
+    "scripts/prepare_villanueva_repair.py": "2b3499d95f3c01b8a090ad4e25cc283f1c3935dd5bf6c1a7a93c3cbde82b994c",
+    "scripts/sample_history_review.py": "ed6d5560009d870f9ad8fb7b3217a98e403cf65974c76057bebceffbbdb6ebf9",
+    "scripts/smoke_deployment.py": "fd5cf195382c867db4d56e65f19c30e324204cc7e2f851da1400496eab70e5a8",
+    "scripts/validate_character_candidate.py": "25cbd0993f0b2c14c081aac59ab82bda9963e0f6ebe7a124912c0021a11838bc",
+    "scripts/verify_beto_source_epochs.py": "52f47263e67554119f767b5ac7a228c96be07637ccce1748935c1b13130a3268",
+    "scripts/verify_external_development.py": "ae84592b9258cf7db6198f9a76adac86647b126906f6a01d56de80166052c4da",
+    "scripts/verify_modal_deployment.py": "a03c7a1eefb12d093fe1767aca40f1cc361d9be1bd0a16eeee9df9cf735ac328",
+    "scripts/verify_model.py": "304289d345c292f7e2da83f14e686fe9f07a40e3ddd920ba889004dc1cc2c3ce",
+    "apps/ml/app/config.py": "ac4faf97796946d5c637f40b439eef8d61eedd7ba7ef6660b549afd8015a2112",
+    "apps/ml/app/main.py": "fb5773f3f93f1a2de6b649f5da74a650e998680c4817cb9ca43b531fc8297153",
+    "apps/ml/app/segmentation.py": "bf8a64917389a24834acb5c80ed45677659d0f4f6f3b801f14f0c6d996431acc",
+    "apps/ml/app/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "apps/ml/app/documents/pdf.py": "e5cb8fd6171a84a83fd301a1af85e2f6ee2532370c23559ac3f4e13a9614c731",
+    "apps/ml/app/documents/__init__.py": "f7c21f61562b1550011f978eb1b666989316515af4d95f6f641d7006bebb88fd",
+    "apps/ml/app/ml/baselines.py": "78d5f731290bfe1c703dbc3bb8061e75a8eb221fa89bb8ec1777fc6e32dbe609",
+    "apps/ml/app/ml/beto.py": "50b120c592aa668e89f5bbbfc94f91fbd019fe12ad4c2494c87984dac40ce491",
+    "apps/ml/app/ml/beto_experiment.py": "7a55c204f569cc891c8dbdffd4668a3f20abcf13139d901e9db298e3525a121d",
+    "apps/ml/app/ml/embeddings.py": "827f69afa3b73be85d16664771ca8475c3ca6076fca875ba84bc95de96f5998a",
+    "apps/ml/app/ml/entities.py": "057385ab8e971cdaabdca90f6e031cd4cf3cc4e78f6e24ab08c8889b6b034c9f",
+    "apps/ml/app/ml/experiments.py": "301f182cae16e106c7d2af807a4d4f754706211e7c970a0bb0f6178a0dafae9a",
+    "apps/ml/app/ml/experiment_data.py": "df9807ebc99810feea70b9835837ef8a557f6180786531decbc3468b8d331840",
+    "apps/ml/app/ml/jobs.py": "dd60b180bb8611972638c10f7be010464af3f64802040522f7a00d28854cab8c",
+    "apps/ml/app/ml/maintenance.py": "b4220a951913a4fffd21308bb7cfc1e225d974ca37bc4043cce744252678e15b",
+    "apps/ml/app/ml/trainer.py": "9fd8fee7fe2709ced96732e04b042f3e655376fcd7cd1bf1b1e813b5fe6009b0",
+    "apps/ml/app/ml/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "apps/ml/app/transcription/supadata.py": "bce794706a3272e11d61f13f89f97854e6bfdf6a52d1a4fab549e26a71767c4c",
+    "apps/ml/app/transcription/whisper.py": "50398c60e9d9567e59c1231781875c5b2a466051e842997ea9396f3c6cd19bd4",
+    "apps/ml/app/transcription/youtube.py": "e3f85150c061737748edafd8f78121016a4c33441e5d01fa189f20e53e52cab8",
+    "apps/ml/app/transcription/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "apps/api/src/app.controller.spec.ts": "3738eb95e0772aa19f1ffc84435542a53256a7a3f8efb1a4419662d16f0082fc",
+    "apps/api/src/app.controller.ts": "6e4af5cc92ebcda77c39d2800c5899126c456264382f6eef69bcf3cd7748da0b",
+    "apps/api/src/app.module.ts": "3b7abff5bb7a45986fa603fc1df6b8f6d1474892e75473089530d9b42cada4b5",
+    "apps/api/src/main.ts": "3f7a4aaeda8f56211a578ae43d75a53b583c93c9b26517c3e0a9a0392e5c7f84",
+    "apps/api/src/auth/auth.controller.ts": "4e2d9db5449eb7652e05cd6eaafc8d3964cfda905ebde984c8439328594b70c4",
+    "apps/api/src/auth/auth.module.ts": "362109306a0df6273443d7291785c35c69ddffcb0bb934832f044df2f7ae4166",
+    "apps/api/src/auth/auth.service.ts": "35f7aba64a5627a5ca1dd540b5e7e34c30c929726f4a9d03dfa9d2a1de3f964d",
+    "apps/api/src/auth/current-user.decorator.ts": "017991850788f8b8a846c0ea1570275a9f11a0fbada6e37f6da4d420c76dfa1e",
+    "apps/api/src/auth/jwt-auth.guard.ts": "51fc903ffa25cb72c7ecc1aa1fed8c9d5bf7c6dd2f7f0efe9d5fa1d7490b020c",
+    "apps/api/src/auth/jwt.strategy.ts": "dc58f93ca76062805ad7478ee3d012cca63f7aba90350a2da3c357b9ec6fd1a5",
+    "apps/api/src/auth/login-throttle.service.ts": "dab9833f56280a130972a053d62a4fa18ec90c4bc48743c1d82e2d72e6cacffb",
+    "apps/api/src/auth/dto/login.dto.ts": "c48dda50abd215bdb746b7430ae96d2024e0192a79d12fb556fcd6fa96728612",
+    "apps/api/src/auth/entities/user.entity.ts": "fd2e68f6167a920fdb201030d88de6edcaeb39b08e6461f485a44f9ca0d22cd3",
+    "apps/api/src/common/numeric.transformer.ts": "56284c55cc04ee9dbbf99b9362d57ccef9da8430c789aa83da6ed3a03bcb07c3",
+    "apps/api/src/config/database-bootstrap.service.ts": "480a4c9824e80a12247da9f6bef7c5ddd2bffafc8af4e2a9497902a0cda3468d",
+    "apps/api/src/config/typeorm.config.ts": "23ed8d8d406114923945475bdc145402968a4400d9230a576553ad2e47f6bbbc",
+    "apps/api/src/datasets/cohen-kappa.spec.ts": "da824485a82faa015e1dcb02ead668e86b7f6fd5dcfbbec82d7c38828b4d382d",
+    "apps/api/src/datasets/datasets.controller.ts": "eab42862317833fba188ace794117f05fdb3d5019662683ce820c2c64c9cfc7a",
+    "apps/api/src/datasets/datasets.mapper.ts": "e1ccd9eac06bca4b14a18f016f9aa157e1aad9f6d0be537dc1ab8d869487b14c",
+    "apps/api/src/datasets/datasets.module.ts": "91e5969f06e8b7cad86a5c572c9488e2b1120648a309f375e6e318171626cf88",
+    "apps/api/src/datasets/datasets.service.ts": "66b64b283b21586b21fed33f58a01f9e95523f8cb46329b6eb3a3bb803697a99",
+    "apps/api/src/datasets/split.util.spec.ts": "3b3962ce6c4c2d0efa2c3f43586d43e990ebfaecadd3a2b935b0a6bfdb5c245f",
+    "apps/api/src/datasets/split.util.ts": "dc8ac8a999c686fd04441470763da60b8ccf27c26d81c6416680f5a7ba39814c",
+    "apps/api/src/datasets/dto/annotation-campaign.dto.ts": "75163321bc2b8ae869d37031d3887b33ba62a2bc012aab742c84507ed88687e7",
+    "apps/api/src/datasets/dto/create-dataset.dto.ts": "73cf6b08a680b73f2ab62dc68482800a1fa1755595aa72b68bda0e9cdcdd534f",
+    "apps/api/src/datasets/dto/dataset-response.dto.ts": "3dce6c17cec126cecab648d74b6aee76a27cd60f32e18cbb7006eb711c84596d",
+    "apps/api/src/datasets/dto/validation-campaign.dto.ts": "29af6d3153084ebe9ab1c6bb7f44dd1a0954b865a67fb73baed7f980ac683830",
+    "apps/api/src/datasets/entities/dataset-item.entity.ts": "26c9b0fbf35c979092e0399d3f99b43e12f336b72e20a8f0703c13ad94dd8bd2",
+    "apps/api/src/datasets/entities/dataset.entity.ts": "e5aace977ba4ccb181e34c59d23cf958dcf39e1bebba7a4fc27ec34962c887a4",
+    "apps/api/src/labels/labels.controller.ts": "16f6949243071a5e051df0bcc8ac29371cde003c6f6c280154de0121a348037d",
+    "apps/api/src/labels/labels.mapper.ts": "84002d13628b5ba9b59f10e9ea7015a23885032793e4256ebb0d3aa0c4032f73",
+    "apps/api/src/labels/labels.module.ts": "ef152a83127ed09ac0c75ae82cca4d3df780b0de55f2651a2eabc5fa30b22634",
+    "apps/api/src/labels/labels.service.ts": "a93f6d6856a8bdc9241c3b8406ef59c68470821b8b4f037c4bae0866898c9a15",
+    "apps/api/src/labels/dto/label-response.dto.ts": "c5286d175693531241b822a580b1e5326a78a4137a7edde41a47ba12745f5bdc",
+    "apps/api/src/labels/dto/label.dto.ts": "e51c1f2995ddaf09b40511a8f8309717237d0b808784aadbda3ecde8e70051b9",
+    "apps/api/src/labels/entities/labels-taxonomy.entity.ts": "f4872530ffa004c6330165eac6898f0c27c4b3d462b81eaed962b721e7c8b533",
+    "apps/api/src/labels/entities/segment-label.entity.ts": "c8f529a14ddd238e3f918b30545ab9a19b36e6bb27df85e70ffbcba6074823b6",
+    "apps/api/src/ml/http-ml.adapter.ts": "939ac790dfd4f268661c010d9529222503f994eb70334c2554c49a9a2fd9b5e8",
+    "apps/api/src/ml/ml-service.port.ts": "cd61b2bd4c6332a44ec1a01d03a23668f062952eded00be4198a9216f6f03f9f",
+    "apps/api/src/ml/ml.module.ts": "e39a7a66fdafab7e3c870a18f04921bc113ec3a3ebc529341fe7ebf32ef3a0b6",
+    "apps/api/src/resources/evidence-support.util.spec.ts": "3719d3f3d0fb8d417981945f881109df3aaa415ecf1ebeafed46c9f77c0fa5fa",
+    "apps/api/src/resources/evidence-support.util.ts": "5dbf9299758b6758a4f3ecaf4585818958241bff8d92d838be6fdadc1bf071c8",
+    "apps/api/src/resources/pdf-storage.spec.ts": "81ffe9cfd986e9440801b43366c0c9903a1b8b317d0fe52968b05e5065d84b58",
+    "apps/api/src/resources/public-explore.spec.ts": "409f46e5fb29deb4a08bc01f13f5823a966bbce1d0613224dbfba566c649cd5f",
+    "apps/api/src/resources/resources.controller.ts": "c14f197d053e9c02c5e42b90eedf805995e2a8d045bd7d4ed85f33c4db85c3ca",
+    "apps/api/src/resources/resources.module.ts": "5f291205708baaa92d0e02e38d4f2d0bebb98ca86b0a17babe709b8bdb830d14",
+    "apps/api/src/resources/resources.service.ts": "e1f53972904a237a88c6f22e7195348daa77a5b0e0c6e9b527e77e8a16fe6cb9",
+    "apps/api/src/resources/dto/resource.dto.ts": "247451123f8c8ce68b182931f273be43e2f0eb3abaa85b62e1fa0379ddf2c99f",
+    "apps/api/src/resources/entities/project.entity.ts": "49a5f9b684fea3d2138dd162b98d750b5dea60ba22659b19837b6ff7c3c714a5",
+    "apps/api/src/resources/entities/resource-segment.entity.ts": "dc19c12651d199494fd3c0d5dd8bd865410920e86398656b0a8c9a555795e298",
+    "apps/api/src/resources/entities/resource.entity.ts": "f6cef59dc0ccd5e96429281cc6b0055ddd5e7212c27720211d299ebb60c86390",
+    "apps/api/src/resources/storage/file-storage.service.ts": "941763becef46b6311936342e41a3866b9278f80c381f2267d97c79ef1ac8ace",
+    "apps/api/src/training/inference.service.ts": "dc14967626c1c6f4945f82728f5a6bb0b806836dde3cdc45e239980725675a06",
+    "apps/api/src/training/model-recommendation.spec.ts": "cf0afb08c384682b0050bd43e8189fd0370d0d1237cc937d616912412964e435",
+    "apps/api/src/training/training.controller.ts": "2ef6e69b02ee920807b4ebee61824958415094afc6526434aa76f1f7cab3e811",
+    "apps/api/src/training/training.mapper.ts": "49671789e24a9d76f44afd244db4512202c7bcd3326f387024eddb487ad60f72",
+    "apps/api/src/training/training.module.ts": "9b516908425f554012a4896f4654174d4f8fc82404c8a622048674bf8289f8fb",
+    "apps/api/src/training/training.service.ts": "7021d7cae6d1f1eef071cd5ef054ab0213f8fdaaece4019bc38e508541562e73",
+    "apps/api/src/training/dto/training-response.dto.ts": "bcb1a6543a16aa2c3e7dd179e798f4852fe17d993dccd5c810d894440060d86a",
+    "apps/api/src/training/dto/training.dto.ts": "e31fc96260c0f0175a892e1207390224c606958db4d9e37776476c1e640a2a27",
+    "apps/api/src/training/entities/model-version.entity.ts": "bb69743df693d3316d366147f70f74aa491b70919d75e8571282c784b69d12c2",
+    "apps/api/src/training/entities/training-job.entity.ts": "071edbb9e19b33249f1959ab253f7e5def7732a7c3fea8d19b3a619f199264d4",
+    "apps/api/src/training/entities/training-metric.entity.ts": "ac52c69edf5cd303cfa29e3f2d615a815c9e4cb14dba749edd4797b543de8c8a",
+    "apps/api/src/videos/transcription.service.ts": "246d3993d5d4960c6eb8f2569111cf6847e709fb771d426043434ec9a219e915",
+    "apps/api/src/videos/videos.controller.ts": "0b5b438971f93e0c9f84968c319a28ce8776f45cde18367c1f62464168c0b30c",
+    "apps/api/src/videos/videos.mapper.ts": "2b4e53e02b2058683fc4de8fbbbdb03a2a11545d64ed38143df2b1dd18f350f4",
+    "apps/api/src/videos/videos.module.ts": "12157400ab676311601852cc57d846384a985271df0872a54bfafc4d0ef94e62",
+    "apps/api/src/videos/videos.service.ts": "176178a6eaad04a34a0909abb8511006366c78b09581f34535cac4be1e3ad459",
+    "apps/api/src/videos/youtube-id.util.spec.ts": "22ac92e68faf204cbac9f06ab5ec3608a7d2f32f38f512b2947b4f243f786aec",
+    "apps/api/src/videos/youtube-id.util.ts": "cb27400065c0a864e37d19fb98d6b41c8f41c7c22a945115c9dee03ef4d7827f",
+    "apps/api/src/videos/dto/create-video.dto.ts": "e8663fcaebf909d91c80d9c54745052e3f95f5c23af4531452f7aac4dc888875",
+    "apps/api/src/videos/dto/video-response.dto.ts": "e877a58ff2181cafe838d3ea5b5745e3c1177353c23ae47fda2fba67b670f189",
+    "apps/api/src/videos/entities/segment.entity.ts": "ac07e678b35d196d5fb53b0e717625d904d676b019b3f821e8ad9f64b29152e1",
+    "apps/api/src/videos/entities/transcript.entity.ts": "f2a1d3475f376ea3ce5b40d6d3cba396d2ee1cce9161562ac4d936b4445d94a0",
+    "apps/api/src/videos/entities/video.entity.ts": "b42044f06e37b9615df8e7ea7ef337434f5d66b67ba6d84d5a9394aeeabba555",
+    "deploy/huggingface-model/README.md": "f0a7376f29640a0f128520b8eba2eb54be1ea1fe0cb8faf236ba6971c7680862",
+    "notebooks/train_beto_colab.ipynb": "29deec8b8ef07559040776085cbb936812579891c598cbc8251e4bbfcf9108e9",
+    "docs/arquitectura.md": "7b4e33662268bd85394cccc11a849e02687053bf0b231ae4aa671a6a90d254dc",
+    "docs/checklist-entrega.md": "4f66389cbb83ca4c40e943ecacab4309bfc432a23c694175e0cbdfc398fb949e",
+    "docs/despliegue-gratuito.md": "a917a62577ad8a6c2268bedbb31d3799d894a38493a1639b39050941cfaa3c31",
+    "docs/guia-etiquetado-1780-1842.md": "d53dea3532359afc851c2bdd59ae1ddb47a0673609d82d40372a6f62edc55179",
+    "docs/guion-exposicion-docentes.md": "c6963c435dee62bed8af229e2e69280aa844e992b94b9760e0939125be80076d",
+    "docs/guion-presentacion-demo.md": "d101bf268167110a88fa4c1676a954fc5c03f4d920446bdc650ae91e59428bda",
+    "docs/guion-video-tfm.md": "a18e2c535d4db8d171ffecc006a508c4c3c53caf32706ce32f5582d60c7de207",
+    "docs/hugging-face-paso-a-paso.md": "d45e584aefe3d01f412a33d99ed6c3cc6b841a9d8dd0c66d3cde211bb4209ab8",
+    "docs/modal-paso-a-paso.md": "89e814894d7db2624b4216f13bb6ca4822a1be567784a4650d25e20e875429fb",
+    "docs/protocolo-experimento-tfm.md": "06d7f089d8326d6821971a16f457a05c08e9fcae878e4264cadc81f1270d8d38",
+    "docs/seleccion-corpus-v1.md": "8089844b6549287bf8414f7641cb6312b2f1213c9f1000dcfd8355996a8b95f1",
+    "docs/instrumento/build_docx.py": "ffc40c4e4abc8f567799821257d590bfccccdf1e60b76f09445db851a145d512",
+    "docs/instrumento/build_matriz_docx.py": "2d67a12033fa6af5345bf2ef12f9586ab3ebab044f9f0428e3d08bd84f4fb5d8",
+    "docs/instrumento/README.md": "67625bad10a350ba3d49a7f36ee65aa540084571608d4d1be48b600bc614210f"
+  },
+  "datasets": [
+    {
+      "path": "artifacts/datasets/evaluation-pilot-v2.json",
+      "file_sha256": "b127e120ec764d40d49e314be3f6d5985803948080c3181f3426f65d0ed96791",
+      "canonical_sha256": "dc056f3933d76d628e90093acd351d4a54775af7f583f6b071b5732134d392d3",
+      "n": 22,
+      "labels": [
+        "campanias_conflictos_militares",
+        "contexto_colonial_antecedentes",
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos",
+        "no_relevante",
+        "organizacion_consecuencias_republicanas",
+        "participacion_social_regional"
+      ],
+      "split_counts": {
+        "UNSPECIFIED": 22
+      },
+      "source_count": 4,
+      "missing_author": 22,
+      "missing_source": 0,
+      "source_overlap": {},
+      "exact_duplicate_groups": [],
+      "normalized_duplicate_groups": [],
+      "contradictory_exact_groups": [],
+      "source_label_association": {
+        "mutual_information_nats": 0.9628009864836706,
+        "normalized_mutual_information": 0.6087286481360247,
+        "cramers_v": 0.8319432851039965,
+        "chi_square_p_descriptive_not_iid": 0.0003302216601809723
+      },
+      "tokens": {
+        "min": 166,
+        "median": 223.5,
+        "max": 331,
+        "truncation": {
+          "128": {
+            "segments": 22,
+            "fraction": 1.0,
+            "lost_tokens": 2419
+          },
+          "192": {
+            "segments": 18,
+            "fraction": 0.8181818181818182,
+            "lost_tokens": 1082
+          },
+          "256": {
+            "segments": 8,
+            "fraction": 0.36363636363636365,
+            "lost_tokens": 314
+          },
+          "384": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          },
+          "512": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "path": "artifacts/datasets/external-development-v1.json",
+      "file_sha256": "901f50f13a60642b316896abd9d4d68b945e699f7befc696b9e7506bc8fa4ceb",
+      "canonical_sha256": "257943c8507ea4f8da34a434114c8469878c57bf3e3f07f8378fe72ce30ce5ce",
+      "n": 31,
+      "labels": [
+        "campanias_conflictos_militares",
+        "contexto_colonial_antecedentes",
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos",
+        "no_relevante",
+        "organizacion_consecuencias_republicanas",
+        "participacion_social_regional"
+      ],
+      "split_counts": {
+        "val": 31
+      },
+      "source_count": 2,
+      "missing_author": 31,
+      "missing_source": 0,
+      "source_overlap": {},
+      "exact_duplicate_groups": [],
+      "normalized_duplicate_groups": [],
+      "contradictory_exact_groups": [],
+      "source_label_association": {
+        "mutual_information_nats": 0.3076458291919623,
+        "normalized_mutual_information": 0.3604550708598902,
+        "cramers_v": 0.8014410098738973,
+        "chi_square_p_descriptive_not_iid": 0.00051988493856455
+      },
+      "tokens": {
+        "min": 158,
+        "median": 258.0,
+        "max": 319,
+        "truncation": {
+          "128": {
+            "segments": 31,
+            "fraction": 1.0,
+            "lost_tokens": 3812
+          },
+          "192": {
+            "segments": 28,
+            "fraction": 0.9032258064516129,
+            "lost_tokens": 1904
+          },
+          "256": {
+            "segments": 16,
+            "fraction": 0.5161290322580645,
+            "lost_tokens": 454
+          },
+          "384": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          },
+          "512": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "path": "artifacts/datasets/gold-v1-balanced.json",
+      "file_sha256": "786f0f72f89598a96dfe3db87d5b4f47c3582617db8df70ae4ff0a9306aaa171",
+      "canonical_sha256": "d86f9539b15a1da4c3e7e221044066e46c0a79cd27ba5a9cd735187367c3c39d",
+      "n": 814,
+      "labels": [
+        "campanias_conflictos_militares",
+        "contexto_colonial_antecedentes",
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos",
+        "no_relevante",
+        "organizacion_consecuencias_republicanas",
+        "participacion_social_regional"
+      ],
+      "split_counts": {
+        "train": 610,
+        "test": 123,
+        "val": 81
+      },
+      "source_count": 10,
+      "missing_author": 814,
+      "missing_source": 0,
+      "source_overlap": {},
+      "exact_duplicate_groups": [
+        [
+          716,
+          746
+        ]
+      ],
+      "normalized_duplicate_groups": [
+        [
+          716,
+          746
+        ]
+      ],
+      "contradictory_exact_groups": [],
+      "source_label_association": {
+        "mutual_information_nats": 0.4033502561563044,
+        "normalized_mutual_information": 0.200013923449089,
+        "cramers_v": 0.3486672783085522,
+        "chi_square_p_descriptive_not_iid": 6.184236945282722e-92
+      },
+      "tokens": {
+        "min": 18,
+        "median": 248.0,
+        "max": 479,
+        "truncation": {
+          "128": {
+            "segments": 748,
+            "fraction": 0.918918918918919,
+            "lost_tokens": 89326
+          },
+          "192": {
+            "segments": 594,
+            "fraction": 0.7297297297297297,
+            "lost_tokens": 45636
+          },
+          "256": {
+            "segments": 343,
+            "fraction": 0.4213759213759214,
+            "lost_tokens": 13120
+          },
+          "384": {
+            "segments": 10,
+            "fraction": 0.012285012285012284,
+            "lost_tokens": 365
+          },
+          "512": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "path": "artifacts/datasets/gold-v1-source-aware.json",
+      "file_sha256": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a",
+      "canonical_sha256": "54bd64939cc3bdf4d105d14208a41fd2dbb9095f7ef9cb52a4c3baf083f29ece",
+      "n": 814,
+      "labels": [
+        "campanias_conflictos_militares",
+        "contexto_colonial_antecedentes",
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos",
+        "no_relevante",
+        "organizacion_consecuencias_republicanas",
+        "participacion_social_regional"
+      ],
+      "split_counts": {
+        "val": 81,
+        "train": 596,
+        "test": 137
+      },
+      "source_count": 10,
+      "missing_author": 814,
+      "missing_source": 0,
+      "source_overlap": {},
+      "exact_duplicate_groups": [
+        [
+          718,
+          746
+        ]
+      ],
+      "normalized_duplicate_groups": [
+        [
+          718,
+          746
+        ]
+      ],
+      "contradictory_exact_groups": [],
+      "source_label_association": {
+        "mutual_information_nats": 0.4033502561563044,
+        "normalized_mutual_information": 0.200013923449089,
+        "cramers_v": 0.3486672783085522,
+        "chi_square_p_descriptive_not_iid": 6.184236945282722e-92
+      },
+      "tokens": {
+        "min": 18,
+        "median": 248.0,
+        "max": 479,
+        "truncation": {
+          "128": {
+            "segments": 748,
+            "fraction": 0.918918918918919,
+            "lost_tokens": 89326
+          },
+          "192": {
+            "segments": 594,
+            "fraction": 0.7297297297297297,
+            "lost_tokens": 45636
+          },
+          "256": {
+            "segments": 343,
+            "fraction": 0.4213759213759214,
+            "lost_tokens": 13120
+          },
+          "384": {
+            "segments": 10,
+            "fraction": 0.012285012285012284,
+            "lost_tokens": 365
+          },
+          "512": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "path": "outputs/agn-snapshot-v1/reviewed-export.json",
+      "file_sha256": "2e128cd2208bd3584568edb42d4c20abbd632962762480d49ec6a4e3ad76a155",
+      "canonical_sha256": "4027185c11bced9f9003de94c0b8e8e4b3cfa1387c940677964dab913d70dcae",
+      "n": 816,
+      "labels": [
+        "campanias_conflictos_militares",
+        "contexto_colonial_antecedentes",
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos",
+        "no_relevante",
+        "organizacion_consecuencias_republicanas",
+        "participacion_social_regional"
+      ],
+      "split_counts": {
+        "val": 81,
+        "train": 598,
+        "test": 137
+      },
+      "source_count": 11,
+      "missing_author": 816,
+      "missing_source": 0,
+      "source_overlap": {},
+      "exact_duplicate_groups": [
+        [
+          718,
+          746
+        ]
+      ],
+      "normalized_duplicate_groups": [
+        [
+          718,
+          746
+        ]
+      ],
+      "contradictory_exact_groups": [],
+      "source_label_association": {
+        "mutual_information_nats": 0.4057216850012899,
+        "normalized_mutual_information": 0.20057544441327962,
+        "cramers_v": 0.34981586390616237,
+        "chi_square_p_descriptive_not_iid": 6.553936058748079e-90
+      },
+      "tokens": {
+        "min": 18,
+        "median": 248.0,
+        "max": 479,
+        "truncation": {
+          "128": {
+            "segments": 750,
+            "fraction": 0.9191176470588235,
+            "lost_tokens": 89522
+          },
+          "192": {
+            "segments": 596,
+            "fraction": 0.7303921568627451,
+            "lost_tokens": 45704
+          },
+          "256": {
+            "segments": 344,
+            "fraction": 0.4215686274509804,
+            "lost_tokens": 13122
+          },
+          "384": {
+            "segments": 10,
+            "fraction": 0.012254901960784314,
+            "lost_tokens": 365
+          },
+          "512": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "path": "outputs/agn-snapshot-v1/maintenance/snapshot.json",
+      "file_sha256": "7661abef5b7225b9a7674358666694f8520754292fe579d852d3d8ff2eadfb21",
+      "canonical_sha256": "30e96290c269e976d9b20856a6d0debeaaca5c71d78ef486a2507280090a1997",
+      "n": 815,
+      "labels": [
+        "campanias_conflictos_militares",
+        "contexto_colonial_antecedentes",
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos",
+        "no_relevante",
+        "organizacion_consecuencias_republicanas",
+        "participacion_social_regional"
+      ],
+      "split_counts": {
+        "train": 597,
+        "val": 81,
+        "test": 137
+      },
+      "source_count": 11,
+      "missing_author": 815,
+      "missing_source": 0,
+      "source_overlap": {},
+      "exact_duplicate_groups": [],
+      "normalized_duplicate_groups": [],
+      "contradictory_exact_groups": [],
+      "source_label_association": {
+        "mutual_information_nats": 0.4051592134361216,
+        "normalized_mutual_information": 0.2002528432638358,
+        "cramers_v": 0.34948525443399375,
+        "chi_square_p_descriptive_not_iid": 1.521652336141785e-89
+      },
+      "tokens": {
+        "min": 18,
+        "median": 248.0,
+        "max": 479,
+        "truncation": {
+          "128": {
+            "segments": 749,
+            "fraction": 0.9190184049079755,
+            "lost_tokens": 89485
+          },
+          "192": {
+            "segments": 596,
+            "fraction": 0.7312883435582822,
+            "lost_tokens": 45704
+          },
+          "256": {
+            "segments": 344,
+            "fraction": 0.42208588957055215,
+            "lost_tokens": 13122
+          },
+          "384": {
+            "segments": 10,
+            "fraction": 0.012269938650306749,
+            "lost_tokens": 365
+          },
+          "512": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "path": "outputs/beto-ideas-contrast-v1/passages.json",
+      "file_sha256": "87abfc533106620ed6c092903d7e2d640517d0e47b79b2589b4a51b9a46a5d53",
+      "canonical_sha256": "6e402bcb2f8b9fea7998cf4d0ce5c193e8305bf5977c9f557b9a5865bc3f58db",
+      "n": 12,
+      "labels": [
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos",
+        "organizacion_consecuencias_republicanas",
+        "participacion_social_regional"
+      ],
+      "split_counts": {
+        "UNSPECIFIED": 12
+      },
+      "source_count": 1,
+      "missing_author": 12,
+      "missing_source": 12,
+      "source_overlap": {},
+      "exact_duplicate_groups": [],
+      "normalized_duplicate_groups": [],
+      "contradictory_exact_groups": [],
+      "source_label_association": {
+        "mutual_information_nats": 0.0,
+        "normalized_mutual_information": 0.0,
+        "cramers_v": 0.0,
+        "chi_square_p_descriptive_not_iid": 1.0
+      },
+      "tokens": {
+        "min": 167,
+        "median": 246.5,
+        "max": 286,
+        "truncation": {
+          "128": {
+            "segments": 12,
+            "fraction": 1.0,
+            "lost_tokens": 1304
+          },
+          "192": {
+            "segments": 10,
+            "fraction": 0.8333333333333334,
+            "lost_tokens": 581
+          },
+          "256": {
+            "segments": 5,
+            "fraction": 0.4166666666666667,
+            "lost_tokens": 96
+          },
+          "384": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          },
+          "512": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "path": "outputs/corpus-snapshot-v2/reviewed-export.json",
+      "file_sha256": "5de9ea1a4be3c9d628da51cdf1d07108f43e0ac8ee580acb483013c6dc27c35c",
+      "canonical_sha256": "1ac13e9cd582ce1d1718e803fb3667284c76b83c4676dd340eda7633f071105e",
+      "n": 814,
+      "labels": [
+        "campanias_conflictos_militares",
+        "contexto_colonial_antecedentes",
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos",
+        "no_relevante",
+        "organizacion_consecuencias_republicanas",
+        "participacion_social_regional"
+      ],
+      "split_counts": {
+        "val": 81,
+        "train": 596,
+        "test": 137
+      },
+      "source_count": 12,
+      "missing_author": 814,
+      "missing_source": 0,
+      "source_overlap": {},
+      "exact_duplicate_groups": [
+        [
+          707,
+          735
+        ]
+      ],
+      "normalized_duplicate_groups": [
+        [
+          707,
+          735
+        ]
+      ],
+      "contradictory_exact_groups": [],
+      "source_label_association": {
+        "mutual_information_nats": 0.41229435926758434,
+        "normalized_mutual_information": 0.2031967584377073,
+        "cramers_v": 0.355238738375203,
+        "chi_square_p_descriptive_not_iid": 2.7110921983319824e-90
+      },
+      "tokens": {
+        "min": 18,
+        "median": 247.0,
+        "max": 479,
+        "truncation": {
+          "128": {
+            "segments": 749,
+            "fraction": 0.9201474201474201,
+            "lost_tokens": 89147
+          },
+          "192": {
+            "segments": 594,
+            "fraction": 0.7297297297297297,
+            "lost_tokens": 45415
+          },
+          "256": {
+            "segments": 340,
+            "fraction": 0.4176904176904177,
+            "lost_tokens": 13097
+          },
+          "384": {
+            "segments": 10,
+            "fraction": 0.012285012285012284,
+            "lost_tokens": 365
+          },
+          "512": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "path": "outputs/corpus-snapshot-v3/reviewed-export.json",
+      "file_sha256": "687a16c894eae549f9e29e48076a687ce6a96b5cd195f18b21629e8b7e7078e5",
+      "canonical_sha256": "8c8a7b6c69d942aac951c5b4478c8f139e30a06131213232e8aaa70a82d5ace6",
+      "n": 837,
+      "labels": [
+        "campanias_conflictos_militares",
+        "contexto_colonial_antecedentes",
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos",
+        "no_relevante",
+        "organizacion_consecuencias_republicanas",
+        "participacion_social_regional"
+      ],
+      "split_counts": {
+        "val": 81,
+        "train": 619,
+        "test": 137
+      },
+      "source_count": 17,
+      "missing_author": 837,
+      "missing_source": 0,
+      "source_overlap": {},
+      "exact_duplicate_groups": [
+        [
+          702,
+          730
+        ]
+      ],
+      "normalized_duplicate_groups": [
+        [
+          702,
+          730
+        ]
+      ],
+      "contradictory_exact_groups": [],
+      "source_label_association": {
+        "mutual_information_nats": 0.444024570283744,
+        "normalized_mutual_information": 0.21249708157169517,
+        "cramers_v": 0.3799283525702618,
+        "chi_square_p_descriptive_not_iid": 3.322275225807534e-97
+      },
+      "tokens": {
+        "min": 18,
+        "median": 246.0,
+        "max": 449,
+        "truncation": {
+          "128": {
+            "segments": 772,
+            "fraction": 0.9223416965352449,
+            "lost_tokens": 90297
+          },
+          "192": {
+            "segments": 607,
+            "fraction": 0.7252090800477897,
+            "lost_tokens": 45337
+          },
+          "256": {
+            "segments": 339,
+            "fraction": 0.4050179211469534,
+            "lost_tokens": 12664
+          },
+          "384": {
+            "segments": 8,
+            "fraction": 0.009557945041816009,
+            "lost_tokens": 229
+          },
+          "512": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "path": "outputs/corpus-snapshot-v4/reviewed-export.json",
+      "file_sha256": "d00c83713de6d2b7263f3aa09da583801b3f358b4d46563ce9957e7578fde8a9",
+      "canonical_sha256": "92fdb27be293e1569e0e67faca25a60e44e58da39bb6d0d90b648229f98df437",
+      "n": 831,
+      "labels": [
+        "campanias_conflictos_militares",
+        "contexto_colonial_antecedentes",
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos",
+        "no_relevante",
+        "organizacion_consecuencias_republicanas",
+        "participacion_social_regional"
+      ],
+      "split_counts": {
+        "val": 81,
+        "train": 613,
+        "test": 137
+      },
+      "source_count": 17,
+      "missing_author": 831,
+      "missing_source": 0,
+      "source_overlap": {},
+      "exact_duplicate_groups": [
+        [
+          696,
+          724
+        ]
+      ],
+      "normalized_duplicate_groups": [
+        [
+          696,
+          724
+        ]
+      ],
+      "contradictory_exact_groups": [],
+      "source_label_association": {
+        "mutual_information_nats": 0.4406170910090594,
+        "normalized_mutual_information": 0.2109124202374581,
+        "cramers_v": 0.378495392330289,
+        "chi_square_p_descriptive_not_iid": 3.3599736389712725e-95
+      },
+      "tokens": {
+        "min": 18,
+        "median": 246.0,
+        "max": 449,
+        "truncation": {
+          "128": {
+            "segments": 766,
+            "fraction": 0.9217809867629362,
+            "lost_tokens": 89680
+          },
+          "192": {
+            "segments": 603,
+            "fraction": 0.7256317689530686,
+            "lost_tokens": 45059
+          },
+          "256": {
+            "segments": 336,
+            "fraction": 0.4043321299638989,
+            "lost_tokens": 12600
+          },
+          "384": {
+            "segments": 8,
+            "fraction": 0.009626955475330927,
+            "lost_tokens": 229
+          },
+          "512": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "path": "outputs/coverage-diagnosis-v1/sample.json",
+      "file_sha256": "07250b44a3b70ab16d4bf10f1332fb442c7af2ca47824f8df33bbc7398c2ad88",
+      "canonical_sha256": "c973c965dff01d7be9a5f6b068293c9696958a34ea6cf324d497ccb0aaea8675",
+      "n": 21,
+      "labels": [
+        "crisis_ideas_emancipadoras",
+        "organizacion_consecuencias_republicanas"
+      ],
+      "split_counts": {
+        "train": 21
+      },
+      "source_count": 7,
+      "missing_author": 21,
+      "missing_source": 0,
+      "source_overlap": {},
+      "exact_duplicate_groups": [],
+      "normalized_duplicate_groups": [],
+      "contradictory_exact_groups": [],
+      "source_label_association": {
+        "mutual_information_nats": 0.19589340605267258,
+        "normalized_mutual_information": 0.1518391295879917,
+        "cramers_v": 0.5357583756107197,
+        "chi_square_p_descriptive_not_iid": 0.4200856033443254
+      },
+      "tokens": {
+        "min": 128,
+        "median": 239.0,
+        "max": 312,
+        "truncation": {
+          "128": {
+            "segments": 20,
+            "fraction": 0.9523809523809523,
+            "lost_tokens": 2037
+          },
+          "192": {
+            "segments": 14,
+            "fraction": 0.6666666666666666,
+            "lost_tokens": 835
+          },
+          "256": {
+            "segments": 5,
+            "fraction": 0.23809523809523808,
+            "lost_tokens": 133
+          },
+          "384": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          },
+          "512": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "path": "outputs/fonseca-snapshot-v1/invalid-base-control.json",
+      "file_sha256": "10c10ceda56f5940aff45fc582549591d8ffb9627223c7690776ee6d119669ad",
+      "canonical_sha256": "899b0e0ae57ce26f4f053221b43621ffabff4a049dc110ff9b3fbfacf969bd94",
+      "n": 816,
+      "labels": [
+        "campanias_conflictos_militares",
+        "contexto_colonial_antecedentes",
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos",
+        "no_relevante",
+        "organizacion_consecuencias_republicanas",
+        "participacion_social_regional"
+      ],
+      "split_counts": {
+        "val": 81,
+        "train": 598,
+        "test": 137
+      },
+      "source_count": 11,
+      "missing_author": 816,
+      "missing_source": 0,
+      "source_overlap": {},
+      "exact_duplicate_groups": [
+        [
+          718,
+          746
+        ]
+      ],
+      "normalized_duplicate_groups": [
+        [
+          718,
+          746
+        ]
+      ],
+      "contradictory_exact_groups": [],
+      "source_label_association": {
+        "mutual_information_nats": 0.4064943379518572,
+        "normalized_mutual_information": 0.20086394490024057,
+        "cramers_v": 0.3504956971529849,
+        "chi_square_p_descriptive_not_iid": 2.285948582692474e-90
+      },
+      "tokens": {
+        "min": 18,
+        "median": 248.0,
+        "max": 479,
+        "truncation": {
+          "128": {
+            "segments": 750,
+            "fraction": 0.9191176470588235,
+            "lost_tokens": 89650
+          },
+          "192": {
+            "segments": 597,
+            "fraction": 0.7316176470588235,
+            "lost_tokens": 45801
+          },
+          "256": {
+            "segments": 345,
+            "fraction": 0.4227941176470588,
+            "lost_tokens": 13155
+          },
+          "384": {
+            "segments": 10,
+            "fraction": 0.012254901960784314,
+            "lost_tokens": 365
+          },
+          "512": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "path": "outputs/fonseca-snapshot-v1/reviewed-export.json",
+      "file_sha256": "039a8b74f1cea6c744aad184fae15db17cc0ff01a24a33b3fa6166c02e21ec91",
+      "canonical_sha256": "d4e83d88a76e069e0cffafbeff995b912a4ed3b64865761ef43ec0b8ff47fb54",
+      "n": 814,
+      "labels": [
+        "campanias_conflictos_militares",
+        "contexto_colonial_antecedentes",
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos",
+        "no_relevante",
+        "organizacion_consecuencias_republicanas",
+        "participacion_social_regional"
+      ],
+      "split_counts": {
+        "val": 81,
+        "train": 596,
+        "test": 137
+      },
+      "source_count": 11,
+      "missing_author": 814,
+      "missing_source": 0,
+      "source_overlap": {},
+      "exact_duplicate_groups": [
+        [
+          715,
+          743
+        ]
+      ],
+      "normalized_duplicate_groups": [
+        [
+          715,
+          743
+        ]
+      ],
+      "contradictory_exact_groups": [],
+      "source_label_association": {
+        "mutual_information_nats": 0.4030691593931526,
+        "normalized_mutual_information": 0.1993667157326344,
+        "cramers_v": 0.3477889631395133,
+        "chi_square_p_descriptive_not_iid": 2.8729894749575476e-88
+      },
+      "tokens": {
+        "min": 18,
+        "median": 248.0,
+        "max": 479,
+        "truncation": {
+          "128": {
+            "segments": 748,
+            "fraction": 0.918918918918919,
+            "lost_tokens": 89230
+          },
+          "192": {
+            "segments": 594,
+            "fraction": 0.7297297297297297,
+            "lost_tokens": 45540
+          },
+          "256": {
+            "segments": 342,
+            "fraction": 0.4201474201474201,
+            "lost_tokens": 13086
+          },
+          "384": {
+            "segments": 10,
+            "fraction": 0.012285012285012284,
+            "lost_tokens": 365
+          },
+          "512": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "path": "outputs/history-corrections-v1/reviewed-export.json",
+      "file_sha256": "9913ffc95ac82761d1295815afb836907bb239fa52e48cfa5126307d5a56a76f",
+      "canonical_sha256": "cc67e8f6fafd3a8abd0243643f656477ad6415baa86d97a48d22c0909a68aa0c",
+      "n": 814,
+      "labels": [
+        "campanias_conflictos_militares",
+        "contexto_colonial_antecedentes",
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos",
+        "no_relevante",
+        "organizacion_consecuencias_republicanas",
+        "participacion_social_regional"
+      ],
+      "split_counts": {
+        "val": 81,
+        "train": 596,
+        "test": 137
+      },
+      "source_count": 11,
+      "missing_author": 814,
+      "missing_source": 0,
+      "source_overlap": {},
+      "exact_duplicate_groups": [
+        [
+          715,
+          743
+        ]
+      ],
+      "normalized_duplicate_groups": [
+        [
+          715,
+          743
+        ]
+      ],
+      "contradictory_exact_groups": [],
+      "source_label_association": {
+        "mutual_information_nats": 0.4015654036016666,
+        "normalized_mutual_information": 0.19863681496721913,
+        "cramers_v": 0.346592684191074,
+        "chi_square_p_descriptive_not_iid": 1.7899299367612005e-87
+      },
+      "tokens": {
+        "min": 18,
+        "median": 248.0,
+        "max": 479,
+        "truncation": {
+          "128": {
+            "segments": 748,
+            "fraction": 0.918918918918919,
+            "lost_tokens": 89230
+          },
+          "192": {
+            "segments": 594,
+            "fraction": 0.7297297297297297,
+            "lost_tokens": 45540
+          },
+          "256": {
+            "segments": 342,
+            "fraction": 0.4201474201474201,
+            "lost_tokens": 13086
+          },
+          "384": {
+            "segments": 10,
+            "fraction": 0.012285012285012284,
+            "lost_tokens": 365
+          },
+          "512": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "path": "outputs/huerta-batch-snapshot-v1/reviewed-export.json",
+      "file_sha256": "38c71b1548b89848142edc1aadab24d6651393f7361140a516e36d758e7ba244",
+      "canonical_sha256": "4d0471f49d79a7059059427b6b31779ce60d14eff6e9af1508d12d3f481c21e4",
+      "n": 818,
+      "labels": [
+        "campanias_conflictos_militares",
+        "contexto_colonial_antecedentes",
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos",
+        "no_relevante",
+        "organizacion_consecuencias_republicanas",
+        "participacion_social_regional"
+      ],
+      "split_counts": {
+        "val": 81,
+        "train": 600,
+        "test": 137
+      },
+      "source_count": 12,
+      "missing_author": 818,
+      "missing_source": 0,
+      "source_overlap": {},
+      "exact_duplicate_groups": [
+        [
+          715,
+          743
+        ]
+      ],
+      "normalized_duplicate_groups": [
+        [
+          715,
+          743
+        ]
+      ],
+      "contradictory_exact_groups": [],
+      "source_label_association": {
+        "mutual_information_nats": 0.40972277185961264,
+        "normalized_mutual_information": 0.20161252509853678,
+        "cramers_v": 0.35357741993002045,
+        "chi_square_p_descriptive_not_iid": 9.301209975966825e-90
+      },
+      "tokens": {
+        "min": 18,
+        "median": 247.5,
+        "max": 479,
+        "truncation": {
+          "128": {
+            "segments": 752,
+            "fraction": 0.9193154034229829,
+            "lost_tokens": 89588
+          },
+          "192": {
+            "segments": 597,
+            "fraction": 0.7298288508557457,
+            "lost_tokens": 45644
+          },
+          "256": {
+            "segments": 342,
+            "fraction": 0.4180929095354523,
+            "lost_tokens": 13086
+          },
+          "384": {
+            "segments": 10,
+            "fraction": 0.012224938875305624,
+            "lost_tokens": 365
+          },
+          "512": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "path": "outputs/huerta-snapshot-v1/reviewed-export.json",
+      "file_sha256": "eb1442c51b09dd66f691d77c6d9e412f5bebdef153e9b4efb6a30c905c03293b",
+      "canonical_sha256": "1d33262b369be8fb0f81028cd3024ba4fc74bc81f18da0dc6ec3d40952546dbe",
+      "n": 815,
+      "labels": [
+        "campanias_conflictos_militares",
+        "contexto_colonial_antecedentes",
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos",
+        "no_relevante",
+        "organizacion_consecuencias_republicanas",
+        "participacion_social_regional"
+      ],
+      "split_counts": {
+        "val": 81,
+        "train": 597,
+        "test": 137
+      },
+      "source_count": 12,
+      "missing_author": 815,
+      "missing_source": 0,
+      "source_overlap": {},
+      "exact_duplicate_groups": [
+        [
+          715,
+          743
+        ]
+      ],
+      "normalized_duplicate_groups": [
+        [
+          715,
+          743
+        ]
+      ],
+      "contradictory_exact_groups": [],
+      "source_label_association": {
+        "mutual_information_nats": 0.40362792410179615,
+        "normalized_mutual_information": 0.19930975841436896,
+        "cramers_v": 0.34840360805272236,
+        "chi_square_p_descriptive_not_iid": 7.155680447107293e-86
+      },
+      "tokens": {
+        "min": 18,
+        "median": 248.0,
+        "max": 479,
+        "truncation": {
+          "128": {
+            "segments": 749,
+            "fraction": 0.9190184049079755,
+            "lost_tokens": 89292
+          },
+          "192": {
+            "segments": 594,
+            "fraction": 0.7288343558282209,
+            "lost_tokens": 45540
+          },
+          "256": {
+            "segments": 342,
+            "fraction": 0.4196319018404908,
+            "lost_tokens": 13086
+          },
+          "384": {
+            "segments": 10,
+            "fraction": 0.012269938650306749,
+            "lost_tokens": 365
+          },
+          "512": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "path": "outputs/maintenance-no-changes/snapshot.json",
+      "file_sha256": "a3e69377f910c18819006ab961da4a9473f1b2d3226ff3ad3c0906f4b0948595",
+      "canonical_sha256": "2872f2537e95a17a6f2abe3b5e7dcef7e26a17383b9eefd42cd74acdb4788c7a",
+      "n": 813,
+      "labels": [
+        "campanias_conflictos_militares",
+        "contexto_colonial_antecedentes",
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos",
+        "no_relevante",
+        "organizacion_consecuencias_republicanas",
+        "participacion_social_regional"
+      ],
+      "split_counts": {
+        "train": 595,
+        "val": 81,
+        "test": 137
+      },
+      "source_count": 10,
+      "missing_author": 813,
+      "missing_source": 0,
+      "source_overlap": {},
+      "exact_duplicate_groups": [],
+      "normalized_duplicate_groups": [],
+      "contradictory_exact_groups": [],
+      "source_label_association": {
+        "mutual_information_nats": 0.40278650430052687,
+        "normalized_mutual_information": 0.19969016847067744,
+        "cramers_v": 0.3483366592706228,
+        "chi_square_p_descriptive_not_iid": 1.440774663837393e-91
+      },
+      "tokens": {
+        "min": 18,
+        "median": 248.0,
+        "max": 479,
+        "truncation": {
+          "128": {
+            "segments": 747,
+            "fraction": 0.9188191881918819,
+            "lost_tokens": 89289
+          },
+          "192": {
+            "segments": 594,
+            "fraction": 0.7306273062730627,
+            "lost_tokens": 45636
+          },
+          "256": {
+            "segments": 343,
+            "fraction": 0.4218942189421894,
+            "lost_tokens": 13120
+          },
+          "384": {
+            "segments": 10,
+            "fraction": 0.012300123001230012,
+            "lost_tokens": 365
+          },
+          "512": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          }
+        }
+      }
+    },
+    {
+      "path": "outputs/villanueva-snapshot-v1/reviewed-export.json",
+      "file_sha256": "30c5e648476fcfcb1bd9eddd3e99a7cca3ce5f23fabf09290cd7e4ec8791074a",
+      "canonical_sha256": "167a994133655d16661f9711a2adcf00053fb9dd6f477378180d71acfa2bbbdd",
+      "n": 816,
+      "labels": [
+        "campanias_conflictos_militares",
+        "contexto_colonial_antecedentes",
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos",
+        "no_relevante",
+        "organizacion_consecuencias_republicanas",
+        "participacion_social_regional"
+      ],
+      "split_counts": {
+        "val": 81,
+        "train": 598,
+        "test": 137
+      },
+      "source_count": 12,
+      "missing_author": 816,
+      "missing_source": 0,
+      "source_overlap": {},
+      "exact_duplicate_groups": [
+        [
+          709,
+          737
+        ]
+      ],
+      "normalized_duplicate_groups": [
+        [
+          709,
+          737
+        ]
+      ],
+      "contradictory_exact_groups": [],
+      "source_label_association": {
+        "mutual_information_nats": 0.4133697039153059,
+        "normalized_mutual_information": 0.20363668290000292,
+        "cramers_v": 0.35546576959624343,
+        "chi_square_p_descriptive_not_iid": 9.648166603250798e-91
+      },
+      "tokens": {
+        "min": 18,
+        "median": 247.5,
+        "max": 479,
+        "truncation": {
+          "128": {
+            "segments": 751,
+            "fraction": 0.9203431372549019,
+            "lost_tokens": 89343
+          },
+          "192": {
+            "segments": 595,
+            "fraction": 0.7291666666666666,
+            "lost_tokens": 45456
+          },
+          "256": {
+            "segments": 340,
+            "fraction": 0.4166666666666667,
+            "lost_tokens": 13043
+          },
+          "384": {
+            "segments": 10,
+            "fraction": 0.012254901960784314,
+            "lost_tokens": 365
+          },
+          "512": {
+            "segments": 0,
+            "fraction": 0.0,
+            "lost_tokens": 0
+          }
+        }
+      }
+    }
+  ],
+  "similarity": {
+    "unique_texts": 922,
+    "pairs_above_082": 10,
+    "different_label_pairs": 3
+  },
+  "reproduced_metrics": {
+    "apps/ml/storage/models/beto-v1-gold-source-aware": {
+      "train": {
+        "n": 596,
+        "correct": 505,
+        "f1_macro_seven": 0.8425407359457491,
+        "accuracy": 0.8473154362416108,
+        "confusion_matrix": [
+          [
+            86,
+            0,
+            0,
+            0,
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            68,
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            50,
+            0,
+            1,
+            2,
+            4
+          ],
+          [
+            8,
+            1,
+            3,
+            59,
+            1,
+            9,
+            12
+          ],
+          [
+            0,
+            0,
+            3,
+            0,
+            96,
+            1,
+            1
+          ],
+          [
+            3,
+            12,
+            5,
+            4,
+            1,
+            76,
+            0
+          ],
+          [
+            2,
+            5,
+            3,
+            0,
+            1,
+            2,
+            70
+          ]
+        ]
+      },
+      "val": {
+        "n": 81,
+        "correct": 40,
+        "f1_macro_seven": 0.4797937864003997,
+        "accuracy": 0.49382716049382713,
+        "confusion_matrix": [
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            13,
+            0,
+            0,
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            2,
+            3,
+            0,
+            0,
+            9,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            3,
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            11,
+            1,
+            3
+          ],
+          [
+            0,
+            6,
+            1,
+            0,
+            0,
+            8,
+            0
+          ],
+          [
+            0,
+            3,
+            0,
+            0,
+            1,
+            6,
+            1
+          ]
+        ]
+      },
+      "test": {
+        "n": 137,
+        "correct": 69,
+        "f1_macro_seven": 0.42461079661577716,
+        "accuracy": 0.5036496350364964,
+        "confusion_matrix": [
+          [
+            7,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            8,
+            2,
+            1,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            21,
+            2,
+            1,
+            0,
+            4
+          ],
+          [
+            1,
+            2,
+            2,
+            11,
+            3,
+            0,
+            4
+          ],
+          [
+            1,
+            0,
+            10,
+            2,
+            24,
+            0,
+            2
+          ],
+          [
+            3,
+            0,
+            3,
+            6,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            6,
+            2,
+            0,
+            0,
+            4
+          ]
+        ]
+      }
+    },
+    "outputs/experiments/beto-u1/beto-lr2e5": {
+      "train": {
+        "n": 596,
+        "correct": 440,
+        "f1_macro_seven": 0.7304981053009755,
+        "accuracy": 0.738255033557047,
+        "confusion_matrix": [
+          [
+            85,
+            0,
+            0,
+            0,
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            48,
+            0,
+            2,
+            0,
+            8,
+            11
+          ],
+          [
+            1,
+            1,
+            41,
+            0,
+            3,
+            4,
+            9
+          ],
+          [
+            18,
+            2,
+            6,
+            48,
+            2,
+            4,
+            13
+          ],
+          [
+            0,
+            1,
+            2,
+            3,
+            91,
+            2,
+            2
+          ],
+          [
+            11,
+            6,
+            6,
+            5,
+            0,
+            66,
+            7
+          ],
+          [
+            12,
+            3,
+            3,
+            1,
+            2,
+            1,
+            61
+          ]
+        ]
+      },
+      "val": {
+        "n": 81,
+        "correct": 37,
+        "f1_macro_seven": 0.4376600102406553,
+        "accuracy": 0.4567901234567901,
+        "confusion_matrix": [
+          [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            9,
+            0,
+            0,
+            0,
+            3,
+            4
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            1,
+            9,
+            3
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            13,
+            0,
+            2
+          ],
+          [
+            0,
+            3,
+            0,
+            0,
+            0,
+            7,
+            5
+          ],
+          [
+            0,
+            2,
+            0,
+            1,
+            2,
+            2,
+            4
+          ]
+        ]
+      },
+      "test": {
+        "n": 137,
+        "correct": 59,
+        "f1_macro_seven": 0.31065519789166013,
+        "accuracy": 0.4306569343065693,
+        "confusion_matrix": [
+          [
+            6,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            9,
+            1,
+            0,
+            0,
+            4
+          ],
+          [
+            1,
+            0,
+            19,
+            1,
+            0,
+            0,
+            7
+          ],
+          [
+            6,
+            1,
+            0,
+            4,
+            3,
+            0,
+            9
+          ],
+          [
+            1,
+            0,
+            11,
+            1,
+            24,
+            0,
+            2
+          ],
+          [
+            6,
+            0,
+            0,
+            2,
+            2,
+            0,
+            4
+          ],
+          [
+            1,
+            0,
+            4,
+            0,
+            1,
+            0,
+            6
+          ]
+        ]
+      }
+    }
+  },
+  "tokenizer_ids_equal_on_gold": true,
+  "zip_evidence": {
+    "modelo_vN.zip": {
+      "sha256": "f84e0a700bea7ac055fdfae83d9139d1227467feff9b5991ba1850a3c47cf58b",
+      "entries": {
+        "modelo_vN/vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+        "modelo_vN/tokenizer_config.json": "32761d10ecdb004a090472cd8526f936fb14c66b04ef3565ac5f8f5b1a53f8cc",
+        "modelo_vN/model.safetensors": "9d8861f8406d41050fa57c530224a1e62983e887807fa6047eefcea52356c215",
+        "modelo_vN/labels.json": "3e8d21fda1c3a8c0d83249dbf89a9d5fce0e89a6635e9e52a49dac04dd59b169",
+        "modelo_vN/special_tokens_map.json": "5d5b662e421ea9fac075174bb0688ee0d9431699900b90662acd44b2a350503a",
+        "modelo_vN/tokenizer.json": "f0ee18fc8f95db74ce5c5c3a4070e0eb32a4b31bcde4865af63b1308e924c0c4",
+        "modelo_vN/config.json": "4861dfe69190f415b6bf58f4031f1494c06f3853df53140611303308c7db400a",
+        "modelo_vN/training_args.bin": "fd19f3483619daa02f94512e9c97dd46d5cf5c23345ab27afbb98b5bbf0caac4"
+      }
+    },
+    "artifacts/training/historia-viva-beto-v1-colab.zip": {
+      "sha256": "d100e69985d2db911238d230ef375f50fb095a06bbf2dec01b7c0971ad8a4f67",
+      "entries": {
+        "train_beto_colab.ipynb": "5110c227a0bd07893685ad37abe3cbfc16b4fee69ca652eb3eb3d8513e9143f5",
+        "gold-v1-source-aware.json": "dcd8d90081973b7b9a05ee6ef41623756a06232727f3718268945d71a207310a",
+        "baselines.json": "15c1b0c448716fe4a3f0744cb35bbeb65d999a41d5363ba5ca92a7463f5f88b7"
+      }
+    }
+  },
+  "input_preservation": {
+    "changed": [],
+    "checked": 953
+  }
+}

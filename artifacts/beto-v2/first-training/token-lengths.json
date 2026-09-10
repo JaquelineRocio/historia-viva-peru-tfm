@@ -1,0 +1,2381 @@
+{
+  "summary": {
+    "n": 591,
+    "min": 18,
+    "max": 443,
+    "quantiles": {
+      "p50": 250.0,
+      "p90": 308.0,
+      "p95": 329.5,
+      "p99": 366.5000000000001
+    },
+    "above_384": 3,
+    "lost_tokens_384": 94
+  },
+  "items": [
+    {
+      "segment_id": "historical-v4-0001",
+      "tokens": 161
+    },
+    {
+      "segment_id": "historical-v4-0004",
+      "tokens": 149
+    },
+    {
+      "segment_id": "historical-v4-0005",
+      "tokens": 147
+    },
+    {
+      "segment_id": "historical-v4-0007",
+      "tokens": 227
+    },
+    {
+      "segment_id": "historical-v4-0008",
+      "tokens": 298
+    },
+    {
+      "segment_id": "historical-v4-0009",
+      "tokens": 238
+    },
+    {
+      "segment_id": "historical-v4-0010",
+      "tokens": 232
+    },
+    {
+      "segment_id": "historical-v4-0011",
+      "tokens": 229
+    },
+    {
+      "segment_id": "historical-v4-0012",
+      "tokens": 274
+    },
+    {
+      "segment_id": "historical-v4-0013",
+      "tokens": 263
+    },
+    {
+      "segment_id": "historical-v4-0014",
+      "tokens": 60
+    },
+    {
+      "segment_id": "historical-v4-0015",
+      "tokens": 229
+    },
+    {
+      "segment_id": "historical-v4-0016",
+      "tokens": 227
+    },
+    {
+      "segment_id": "historical-v4-0017",
+      "tokens": 245
+    },
+    {
+      "segment_id": "historical-v4-0018",
+      "tokens": 248
+    },
+    {
+      "segment_id": "historical-v4-0019",
+      "tokens": 135
+    },
+    {
+      "segment_id": "historical-v4-0020",
+      "tokens": 243
+    },
+    {
+      "segment_id": "historical-v4-0021",
+      "tokens": 261
+    },
+    {
+      "segment_id": "historical-v4-0022",
+      "tokens": 185
+    },
+    {
+      "segment_id": "historical-v4-0023",
+      "tokens": 278
+    },
+    {
+      "segment_id": "historical-v4-0024",
+      "tokens": 273
+    },
+    {
+      "segment_id": "historical-v4-0025",
+      "tokens": 226
+    },
+    {
+      "segment_id": "historical-v4-0026",
+      "tokens": 241
+    },
+    {
+      "segment_id": "historical-v4-0027",
+      "tokens": 253
+    },
+    {
+      "segment_id": "historical-v4-0028",
+      "tokens": 149
+    },
+    {
+      "segment_id": "historical-v4-0029",
+      "tokens": 279
+    },
+    {
+      "segment_id": "historical-v4-0030",
+      "tokens": 283
+    },
+    {
+      "segment_id": "historical-v4-0031",
+      "tokens": 264
+    },
+    {
+      "segment_id": "historical-v4-0032",
+      "tokens": 250
+    },
+    {
+      "segment_id": "historical-v4-0033",
+      "tokens": 308
+    },
+    {
+      "segment_id": "historical-v4-0034",
+      "tokens": 172
+    },
+    {
+      "segment_id": "historical-v4-0035",
+      "tokens": 242
+    },
+    {
+      "segment_id": "historical-v4-0036",
+      "tokens": 287
+    },
+    {
+      "segment_id": "historical-v4-0037",
+      "tokens": 245
+    },
+    {
+      "segment_id": "historical-v4-0038",
+      "tokens": 182
+    },
+    {
+      "segment_id": "historical-v4-0039",
+      "tokens": 282
+    },
+    {
+      "segment_id": "historical-v4-0040",
+      "tokens": 141
+    },
+    {
+      "segment_id": "historical-v4-0041",
+      "tokens": 142
+    },
+    {
+      "segment_id": "historical-v4-0042",
+      "tokens": 168
+    },
+    {
+      "segment_id": "historical-v4-0043",
+      "tokens": 259
+    },
+    {
+      "segment_id": "historical-v4-0044",
+      "tokens": 211
+    },
+    {
+      "segment_id": "historical-v4-0045",
+      "tokens": 288
+    },
+    {
+      "segment_id": "historical-v4-0046",
+      "tokens": 269
+    },
+    {
+      "segment_id": "historical-v4-0047",
+      "tokens": 250
+    },
+    {
+      "segment_id": "historical-v4-0048",
+      "tokens": 272
+    },
+    {
+      "segment_id": "historical-v4-0049",
+      "tokens": 274
+    },
+    {
+      "segment_id": "historical-v4-0050",
+      "tokens": 270
+    },
+    {
+      "segment_id": "historical-v4-0051",
+      "tokens": 216
+    },
+    {
+      "segment_id": "historical-v4-0052",
+      "tokens": 265
+    },
+    {
+      "segment_id": "historical-v4-0053",
+      "tokens": 242
+    },
+    {
+      "segment_id": "historical-v4-0054",
+      "tokens": 288
+    },
+    {
+      "segment_id": "historical-v4-0055",
+      "tokens": 277
+    },
+    {
+      "segment_id": "historical-v4-0056",
+      "tokens": 258
+    },
+    {
+      "segment_id": "historical-v4-0057",
+      "tokens": 261
+    },
+    {
+      "segment_id": "historical-v4-0058",
+      "tokens": 236
+    },
+    {
+      "segment_id": "historical-v4-0059",
+      "tokens": 300
+    },
+    {
+      "segment_id": "historical-v4-0060",
+      "tokens": 251
+    },
+    {
+      "segment_id": "historical-v4-0061",
+      "tokens": 197
+    },
+    {
+      "segment_id": "historical-v4-0062",
+      "tokens": 229
+    },
+    {
+      "segment_id": "historical-v4-0063",
+      "tokens": 22
+    },
+    {
+      "segment_id": "historical-v4-0064",
+      "tokens": 280
+    },
+    {
+      "segment_id": "historical-v4-0065",
+      "tokens": 266
+    },
+    {
+      "segment_id": "historical-v4-0066",
+      "tokens": 257
+    },
+    {
+      "segment_id": "historical-v4-0067",
+      "tokens": 284
+    },
+    {
+      "segment_id": "historical-v4-0068",
+      "tokens": 339
+    },
+    {
+      "segment_id": "historical-v4-0069",
+      "tokens": 222
+    },
+    {
+      "segment_id": "historical-v4-0070",
+      "tokens": 281
+    },
+    {
+      "segment_id": "historical-v4-0071",
+      "tokens": 291
+    },
+    {
+      "segment_id": "historical-v4-0072",
+      "tokens": 294
+    },
+    {
+      "segment_id": "historical-v4-0073",
+      "tokens": 77
+    },
+    {
+      "segment_id": "historical-v4-0074",
+      "tokens": 279
+    },
+    {
+      "segment_id": "historical-v4-0075",
+      "tokens": 312
+    },
+    {
+      "segment_id": "historical-v4-0076",
+      "tokens": 290
+    },
+    {
+      "segment_id": "historical-v4-0077",
+      "tokens": 321
+    },
+    {
+      "segment_id": "historical-v4-0078",
+      "tokens": 319
+    },
+    {
+      "segment_id": "historical-v4-0079",
+      "tokens": 268
+    },
+    {
+      "segment_id": "historical-v4-0080",
+      "tokens": 269
+    },
+    {
+      "segment_id": "historical-v4-0081",
+      "tokens": 252
+    },
+    {
+      "segment_id": "historical-v4-0082",
+      "tokens": 244
+    },
+    {
+      "segment_id": "historical-v4-0083",
+      "tokens": 279
+    },
+    {
+      "segment_id": "historical-v4-0084",
+      "tokens": 267
+    },
+    {
+      "segment_id": "historical-v4-0085",
+      "tokens": 246
+    },
+    {
+      "segment_id": "historical-v4-0086",
+      "tokens": 288
+    },
+    {
+      "segment_id": "historical-v4-0087",
+      "tokens": 291
+    },
+    {
+      "segment_id": "historical-v4-0088",
+      "tokens": 339
+    },
+    {
+      "segment_id": "historical-v4-0089",
+      "tokens": 45
+    },
+    {
+      "segment_id": "historical-v4-0090",
+      "tokens": 29
+    },
+    {
+      "segment_id": "historical-v4-0091",
+      "tokens": 35
+    },
+    {
+      "segment_id": "historical-v4-0110",
+      "tokens": 253
+    },
+    {
+      "segment_id": "historical-v4-0112",
+      "tokens": 295
+    },
+    {
+      "segment_id": "historical-v4-0113",
+      "tokens": 278
+    },
+    {
+      "segment_id": "historical-v4-0114",
+      "tokens": 313
+    },
+    {
+      "segment_id": "historical-v4-0115",
+      "tokens": 319
+    },
+    {
+      "segment_id": "historical-v4-0116",
+      "tokens": 106
+    },
+    {
+      "segment_id": "historical-v4-0117",
+      "tokens": 124
+    },
+    {
+      "segment_id": "historical-v4-0118",
+      "tokens": 142
+    },
+    {
+      "segment_id": "historical-v4-0119",
+      "tokens": 130
+    },
+    {
+      "segment_id": "historical-v4-0120",
+      "tokens": 296
+    },
+    {
+      "segment_id": "historical-v4-0121",
+      "tokens": 39
+    },
+    {
+      "segment_id": "historical-v4-0122",
+      "tokens": 75
+    },
+    {
+      "segment_id": "historical-v4-0123",
+      "tokens": 121
+    },
+    {
+      "segment_id": "historical-v4-0125",
+      "tokens": 216
+    },
+    {
+      "segment_id": "historical-v4-0126",
+      "tokens": 249
+    },
+    {
+      "segment_id": "historical-v4-0127",
+      "tokens": 149
+    },
+    {
+      "segment_id": "historical-v4-0128",
+      "tokens": 295
+    },
+    {
+      "segment_id": "historical-v4-0129",
+      "tokens": 137
+    },
+    {
+      "segment_id": "historical-v4-0130",
+      "tokens": 285
+    },
+    {
+      "segment_id": "historical-v4-0131",
+      "tokens": 260
+    },
+    {
+      "segment_id": "historical-v4-0132",
+      "tokens": 170
+    },
+    {
+      "segment_id": "historical-v4-0133",
+      "tokens": 266
+    },
+    {
+      "segment_id": "historical-v4-0134",
+      "tokens": 174
+    },
+    {
+      "segment_id": "historical-v4-0135",
+      "tokens": 84
+    },
+    {
+      "segment_id": "historical-v4-0136",
+      "tokens": 255
+    },
+    {
+      "segment_id": "historical-v4-0137",
+      "tokens": 339
+    },
+    {
+      "segment_id": "historical-v4-0139",
+      "tokens": 22
+    },
+    {
+      "segment_id": "historical-v4-0140",
+      "tokens": 245
+    },
+    {
+      "segment_id": "historical-v4-0141",
+      "tokens": 285
+    },
+    {
+      "segment_id": "historical-v4-0142",
+      "tokens": 293
+    },
+    {
+      "segment_id": "historical-v4-0143",
+      "tokens": 256
+    },
+    {
+      "segment_id": "historical-v4-0144",
+      "tokens": 286
+    },
+    {
+      "segment_id": "historical-v4-0145",
+      "tokens": 251
+    },
+    {
+      "segment_id": "historical-v4-0146",
+      "tokens": 392
+    },
+    {
+      "segment_id": "historical-v4-0147",
+      "tokens": 99
+    },
+    {
+      "segment_id": "historical-v4-0149",
+      "tokens": 268
+    },
+    {
+      "segment_id": "historical-v4-0150",
+      "tokens": 274
+    },
+    {
+      "segment_id": "historical-v4-0151",
+      "tokens": 250
+    },
+    {
+      "segment_id": "historical-v4-0154",
+      "tokens": 221
+    },
+    {
+      "segment_id": "historical-v4-0156",
+      "tokens": 268
+    },
+    {
+      "segment_id": "historical-v4-0157",
+      "tokens": 279
+    },
+    {
+      "segment_id": "historical-v4-0158",
+      "tokens": 213
+    },
+    {
+      "segment_id": "historical-v4-0159",
+      "tokens": 164
+    },
+    {
+      "segment_id": "historical-v4-0160",
+      "tokens": 275
+    },
+    {
+      "segment_id": "historical-v4-0163",
+      "tokens": 264
+    },
+    {
+      "segment_id": "historical-v4-0166",
+      "tokens": 239
+    },
+    {
+      "segment_id": "historical-v4-0167",
+      "tokens": 110
+    },
+    {
+      "segment_id": "historical-v4-0168",
+      "tokens": 102
+    },
+    {
+      "segment_id": "historical-v4-0172",
+      "tokens": 266
+    },
+    {
+      "segment_id": "historical-v4-0175",
+      "tokens": 277
+    },
+    {
+      "segment_id": "historical-v4-0176",
+      "tokens": 319
+    },
+    {
+      "segment_id": "historical-v4-0179",
+      "tokens": 272
+    },
+    {
+      "segment_id": "historical-v4-0180",
+      "tokens": 287
+    },
+    {
+      "segment_id": "historical-v4-0181",
+      "tokens": 289
+    },
+    {
+      "segment_id": "historical-v4-0182",
+      "tokens": 307
+    },
+    {
+      "segment_id": "historical-v4-0183",
+      "tokens": 259
+    },
+    {
+      "segment_id": "historical-v4-0184",
+      "tokens": 275
+    },
+    {
+      "segment_id": "historical-v4-0186",
+      "tokens": 333
+    },
+    {
+      "segment_id": "historical-v4-0187",
+      "tokens": 363
+    },
+    {
+      "segment_id": "historical-v4-0188",
+      "tokens": 268
+    },
+    {
+      "segment_id": "historical-v4-0189",
+      "tokens": 309
+    },
+    {
+      "segment_id": "historical-v4-0191",
+      "tokens": 98
+    },
+    {
+      "segment_id": "historical-v4-0192",
+      "tokens": 296
+    },
+    {
+      "segment_id": "historical-v4-0193",
+      "tokens": 257
+    },
+    {
+      "segment_id": "historical-v4-0195",
+      "tokens": 267
+    },
+    {
+      "segment_id": "historical-v4-0196",
+      "tokens": 87
+    },
+    {
+      "segment_id": "historical-v4-0222",
+      "tokens": 260
+    },
+    {
+      "segment_id": "historical-v4-0240",
+      "tokens": 336
+    },
+    {
+      "segment_id": "historical-v4-0241",
+      "tokens": 205
+    },
+    {
+      "segment_id": "historical-v4-0249",
+      "tokens": 243
+    },
+    {
+      "segment_id": "historical-v4-0251",
+      "tokens": 208
+    },
+    {
+      "segment_id": "historical-v4-0252",
+      "tokens": 115
+    },
+    {
+      "segment_id": "historical-v4-0265",
+      "tokens": 249
+    },
+    {
+      "segment_id": "historical-v4-0266",
+      "tokens": 143
+    },
+    {
+      "segment_id": "historical-v4-0268",
+      "tokens": 92
+    },
+    {
+      "segment_id": "historical-v4-0273",
+      "tokens": 109
+    },
+    {
+      "segment_id": "historical-v4-0274",
+      "tokens": 244
+    },
+    {
+      "segment_id": "historical-v4-0275",
+      "tokens": 37
+    },
+    {
+      "segment_id": "historical-v4-0277",
+      "tokens": 160
+    },
+    {
+      "segment_id": "historical-v4-0280",
+      "tokens": 254
+    },
+    {
+      "segment_id": "historical-v4-0283",
+      "tokens": 245
+    },
+    {
+      "segment_id": "historical-v4-0284",
+      "tokens": 137
+    },
+    {
+      "segment_id": "historical-v4-0287",
+      "tokens": 110
+    },
+    {
+      "segment_id": "historical-v4-0300",
+      "tokens": 302
+    },
+    {
+      "segment_id": "historical-v4-0312",
+      "tokens": 215
+    },
+    {
+      "segment_id": "historical-v4-0317",
+      "tokens": 248
+    },
+    {
+      "segment_id": "historical-v4-0318",
+      "tokens": 284
+    },
+    {
+      "segment_id": "historical-v4-0319",
+      "tokens": 86
+    },
+    {
+      "segment_id": "historical-v4-0321",
+      "tokens": 104
+    },
+    {
+      "segment_id": "historical-v4-0323",
+      "tokens": 348
+    },
+    {
+      "segment_id": "historical-v4-0324",
+      "tokens": 18
+    },
+    {
+      "segment_id": "historical-v4-0325",
+      "tokens": 280
+    },
+    {
+      "segment_id": "historical-v4-0326",
+      "tokens": 46
+    },
+    {
+      "segment_id": "historical-v4-0327",
+      "tokens": 378
+    },
+    {
+      "segment_id": "historical-v4-0330",
+      "tokens": 267
+    },
+    {
+      "segment_id": "historical-v4-0331",
+      "tokens": 235
+    },
+    {
+      "segment_id": "historical-v4-0332",
+      "tokens": 350
+    },
+    {
+      "segment_id": "historical-v4-0333",
+      "tokens": 268
+    },
+    {
+      "segment_id": "historical-v4-0334",
+      "tokens": 29
+    },
+    {
+      "segment_id": "historical-v4-0335",
+      "tokens": 292
+    },
+    {
+      "segment_id": "historical-v4-0336",
+      "tokens": 39
+    },
+    {
+      "segment_id": "historical-v4-0338",
+      "tokens": 280
+    },
+    {
+      "segment_id": "historical-v4-0339",
+      "tokens": 82
+    },
+    {
+      "segment_id": "historical-v4-0340",
+      "tokens": 267
+    },
+    {
+      "segment_id": "historical-v4-0341",
+      "tokens": 311
+    },
+    {
+      "segment_id": "historical-v4-0342",
+      "tokens": 295
+    },
+    {
+      "segment_id": "historical-v4-0343",
+      "tokens": 314
+    },
+    {
+      "segment_id": "historical-v4-0345",
+      "tokens": 260
+    },
+    {
+      "segment_id": "historical-v4-0346",
+      "tokens": 261
+    },
+    {
+      "segment_id": "historical-v4-0347",
+      "tokens": 330
+    },
+    {
+      "segment_id": "historical-v4-0348",
+      "tokens": 324
+    },
+    {
+      "segment_id": "historical-v4-0349",
+      "tokens": 300
+    },
+    {
+      "segment_id": "historical-v4-0350",
+      "tokens": 267
+    },
+    {
+      "segment_id": "historical-v4-0351",
+      "tokens": 298
+    },
+    {
+      "segment_id": "historical-v4-0352",
+      "tokens": 67
+    },
+    {
+      "segment_id": "historical-v4-0353",
+      "tokens": 309
+    },
+    {
+      "segment_id": "historical-v4-0354",
+      "tokens": 288
+    },
+    {
+      "segment_id": "historical-v4-0355",
+      "tokens": 289
+    },
+    {
+      "segment_id": "historical-v4-0373",
+      "tokens": 166
+    },
+    {
+      "segment_id": "historical-v4-0403",
+      "tokens": 187
+    },
+    {
+      "segment_id": "historical-v4-0424",
+      "tokens": 269
+    },
+    {
+      "segment_id": "historical-v4-0425",
+      "tokens": 274
+    },
+    {
+      "segment_id": "historical-v4-0426",
+      "tokens": 244
+    },
+    {
+      "segment_id": "historical-v4-0427",
+      "tokens": 137
+    },
+    {
+      "segment_id": "historical-v4-0428",
+      "tokens": 258
+    },
+    {
+      "segment_id": "historical-v4-0429",
+      "tokens": 246
+    },
+    {
+      "segment_id": "historical-v4-0430",
+      "tokens": 273
+    },
+    {
+      "segment_id": "historical-v4-0431",
+      "tokens": 238
+    },
+    {
+      "segment_id": "historical-v4-0432",
+      "tokens": 257
+    },
+    {
+      "segment_id": "historical-v4-0433",
+      "tokens": 240
+    },
+    {
+      "segment_id": "historical-v4-0434",
+      "tokens": 319
+    },
+    {
+      "segment_id": "historical-v4-0435",
+      "tokens": 325
+    },
+    {
+      "segment_id": "historical-v4-0436",
+      "tokens": 283
+    },
+    {
+      "segment_id": "historical-v4-0437",
+      "tokens": 255
+    },
+    {
+      "segment_id": "historical-v4-0438",
+      "tokens": 265
+    },
+    {
+      "segment_id": "historical-v4-0439",
+      "tokens": 91
+    },
+    {
+      "segment_id": "historical-v4-0440",
+      "tokens": 254
+    },
+    {
+      "segment_id": "historical-v4-0441",
+      "tokens": 226
+    },
+    {
+      "segment_id": "historical-v4-0442",
+      "tokens": 277
+    },
+    {
+      "segment_id": "historical-v4-0443",
+      "tokens": 223
+    },
+    {
+      "segment_id": "historical-v4-0444",
+      "tokens": 247
+    },
+    {
+      "segment_id": "historical-v4-0445",
+      "tokens": 291
+    },
+    {
+      "segment_id": "historical-v4-0446",
+      "tokens": 243
+    },
+    {
+      "segment_id": "historical-v4-0447",
+      "tokens": 351
+    },
+    {
+      "segment_id": "historical-v4-0448",
+      "tokens": 280
+    },
+    {
+      "segment_id": "historical-v4-0449",
+      "tokens": 255
+    },
+    {
+      "segment_id": "historical-v4-0450",
+      "tokens": 261
+    },
+    {
+      "segment_id": "historical-v4-0451",
+      "tokens": 246
+    },
+    {
+      "segment_id": "historical-v4-0452",
+      "tokens": 236
+    },
+    {
+      "segment_id": "historical-v4-0453",
+      "tokens": 164
+    },
+    {
+      "segment_id": "historical-v4-0454",
+      "tokens": 34
+    },
+    {
+      "segment_id": "historical-v4-0455",
+      "tokens": 249
+    },
+    {
+      "segment_id": "historical-v4-0456",
+      "tokens": 282
+    },
+    {
+      "segment_id": "historical-v4-0457",
+      "tokens": 254
+    },
+    {
+      "segment_id": "historical-v4-0458",
+      "tokens": 280
+    },
+    {
+      "segment_id": "historical-v4-0459",
+      "tokens": 249
+    },
+    {
+      "segment_id": "historical-v4-0460",
+      "tokens": 245
+    },
+    {
+      "segment_id": "historical-v4-0461",
+      "tokens": 243
+    },
+    {
+      "segment_id": "historical-v4-0462",
+      "tokens": 260
+    },
+    {
+      "segment_id": "historical-v4-0463",
+      "tokens": 245
+    },
+    {
+      "segment_id": "historical-v4-0464",
+      "tokens": 258
+    },
+    {
+      "segment_id": "historical-v4-0465",
+      "tokens": 218
+    },
+    {
+      "segment_id": "historical-v4-0466",
+      "tokens": 319
+    },
+    {
+      "segment_id": "historical-v4-0467",
+      "tokens": 256
+    },
+    {
+      "segment_id": "historical-v4-0468",
+      "tokens": 295
+    },
+    {
+      "segment_id": "historical-v4-0469",
+      "tokens": 226
+    },
+    {
+      "segment_id": "historical-v4-0470",
+      "tokens": 268
+    },
+    {
+      "segment_id": "historical-v4-0471",
+      "tokens": 289
+    },
+    {
+      "segment_id": "historical-v4-0472",
+      "tokens": 266
+    },
+    {
+      "segment_id": "historical-v4-0473",
+      "tokens": 237
+    },
+    {
+      "segment_id": "historical-v4-0474",
+      "tokens": 260
+    },
+    {
+      "segment_id": "historical-v4-0475",
+      "tokens": 281
+    },
+    {
+      "segment_id": "historical-v4-0476",
+      "tokens": 34
+    },
+    {
+      "segment_id": "historical-v4-0477",
+      "tokens": 239
+    },
+    {
+      "segment_id": "historical-v4-0478",
+      "tokens": 259
+    },
+    {
+      "segment_id": "historical-v4-0479",
+      "tokens": 208
+    },
+    {
+      "segment_id": "historical-v4-0480",
+      "tokens": 268
+    },
+    {
+      "segment_id": "historical-v4-0481",
+      "tokens": 276
+    },
+    {
+      "segment_id": "historical-v4-0482",
+      "tokens": 286
+    },
+    {
+      "segment_id": "historical-v4-0483",
+      "tokens": 264
+    },
+    {
+      "segment_id": "historical-v4-0484",
+      "tokens": 37
+    },
+    {
+      "segment_id": "historical-v4-0485",
+      "tokens": 274
+    },
+    {
+      "segment_id": "historical-v4-0486",
+      "tokens": 271
+    },
+    {
+      "segment_id": "historical-v4-0487",
+      "tokens": 335
+    },
+    {
+      "segment_id": "historical-v4-0488",
+      "tokens": 321
+    },
+    {
+      "segment_id": "historical-v4-0489",
+      "tokens": 308
+    },
+    {
+      "segment_id": "historical-v4-0490",
+      "tokens": 329
+    },
+    {
+      "segment_id": "historical-v4-0491",
+      "tokens": 257
+    },
+    {
+      "segment_id": "historical-v4-0492",
+      "tokens": 276
+    },
+    {
+      "segment_id": "historical-v4-0493",
+      "tokens": 248
+    },
+    {
+      "segment_id": "historical-v4-0494",
+      "tokens": 239
+    },
+    {
+      "segment_id": "historical-v4-0495",
+      "tokens": 282
+    },
+    {
+      "segment_id": "historical-v4-0496",
+      "tokens": 253
+    },
+    {
+      "segment_id": "historical-v4-0497",
+      "tokens": 244
+    },
+    {
+      "segment_id": "historical-v4-0498",
+      "tokens": 250
+    },
+    {
+      "segment_id": "historical-v4-0499",
+      "tokens": 247
+    },
+    {
+      "segment_id": "historical-v4-0500",
+      "tokens": 244
+    },
+    {
+      "segment_id": "historical-v4-0501",
+      "tokens": 258
+    },
+    {
+      "segment_id": "historical-v4-0502",
+      "tokens": 246
+    },
+    {
+      "segment_id": "historical-v4-0503",
+      "tokens": 43
+    },
+    {
+      "segment_id": "historical-v4-0504",
+      "tokens": 270
+    },
+    {
+      "segment_id": "historical-v4-0505",
+      "tokens": 229
+    },
+    {
+      "segment_id": "historical-v4-0506",
+      "tokens": 319
+    },
+    {
+      "segment_id": "historical-v4-0507",
+      "tokens": 243
+    },
+    {
+      "segment_id": "historical-v4-0508",
+      "tokens": 371
+    },
+    {
+      "segment_id": "historical-v4-0509",
+      "tokens": 265
+    },
+    {
+      "segment_id": "historical-v4-0510",
+      "tokens": 292
+    },
+    {
+      "segment_id": "historical-v4-0511",
+      "tokens": 332
+    },
+    {
+      "segment_id": "historical-v4-0512",
+      "tokens": 231
+    },
+    {
+      "segment_id": "historical-v4-0513",
+      "tokens": 253
+    },
+    {
+      "segment_id": "historical-v4-0514",
+      "tokens": 443
+    },
+    {
+      "segment_id": "historical-v4-0515",
+      "tokens": 247
+    },
+    {
+      "segment_id": "historical-v4-0516",
+      "tokens": 243
+    },
+    {
+      "segment_id": "historical-v4-0517",
+      "tokens": 242
+    },
+    {
+      "segment_id": "historical-v4-0518",
+      "tokens": 296
+    },
+    {
+      "segment_id": "historical-v4-0519",
+      "tokens": 314
+    },
+    {
+      "segment_id": "historical-v4-0520",
+      "tokens": 290
+    },
+    {
+      "segment_id": "historical-v4-0521",
+      "tokens": 295
+    },
+    {
+      "segment_id": "historical-v4-0522",
+      "tokens": 116
+    },
+    {
+      "segment_id": "historical-v4-0523",
+      "tokens": 251
+    },
+    {
+      "segment_id": "historical-v4-0524",
+      "tokens": 323
+    },
+    {
+      "segment_id": "historical-v4-0525",
+      "tokens": 278
+    },
+    {
+      "segment_id": "historical-v4-0526",
+      "tokens": 127
+    },
+    {
+      "segment_id": "historical-v4-0527",
+      "tokens": 308
+    },
+    {
+      "segment_id": "historical-v4-0528",
+      "tokens": 243
+    },
+    {
+      "segment_id": "historical-v4-0529",
+      "tokens": 243
+    },
+    {
+      "segment_id": "historical-v4-0530",
+      "tokens": 287
+    },
+    {
+      "segment_id": "historical-v4-0532",
+      "tokens": 274
+    },
+    {
+      "segment_id": "historical-v4-0533",
+      "tokens": 244
+    },
+    {
+      "segment_id": "historical-v4-0534",
+      "tokens": 269
+    },
+    {
+      "segment_id": "historical-v4-0535",
+      "tokens": 291
+    },
+    {
+      "segment_id": "historical-v4-0536",
+      "tokens": 260
+    },
+    {
+      "segment_id": "historical-v4-0537",
+      "tokens": 249
+    },
+    {
+      "segment_id": "historical-v4-0538",
+      "tokens": 263
+    },
+    {
+      "segment_id": "historical-v4-0539",
+      "tokens": 319
+    },
+    {
+      "segment_id": "historical-v4-0540",
+      "tokens": 253
+    },
+    {
+      "segment_id": "historical-v4-0541",
+      "tokens": 275
+    },
+    {
+      "segment_id": "historical-v4-0542",
+      "tokens": 252
+    },
+    {
+      "segment_id": "historical-v4-0543",
+      "tokens": 265
+    },
+    {
+      "segment_id": "historical-v4-0544",
+      "tokens": 308
+    },
+    {
+      "segment_id": "historical-v4-0545",
+      "tokens": 276
+    },
+    {
+      "segment_id": "historical-v4-0546",
+      "tokens": 190
+    },
+    {
+      "segment_id": "historical-v4-0547",
+      "tokens": 197
+    },
+    {
+      "segment_id": "historical-v4-0548",
+      "tokens": 331
+    },
+    {
+      "segment_id": "historical-v4-0549",
+      "tokens": 278
+    },
+    {
+      "segment_id": "historical-v4-0550",
+      "tokens": 206
+    },
+    {
+      "segment_id": "historical-v4-0551",
+      "tokens": 170
+    },
+    {
+      "segment_id": "historical-v4-0552",
+      "tokens": 258
+    },
+    {
+      "segment_id": "historical-v4-0553",
+      "tokens": 163
+    },
+    {
+      "segment_id": "historical-v4-0554",
+      "tokens": 234
+    },
+    {
+      "segment_id": "historical-v4-0555",
+      "tokens": 348
+    },
+    {
+      "segment_id": "historical-v4-0556",
+      "tokens": 231
+    },
+    {
+      "segment_id": "historical-v4-0557",
+      "tokens": 195
+    },
+    {
+      "segment_id": "historical-v4-0558",
+      "tokens": 250
+    },
+    {
+      "segment_id": "historical-v4-0559",
+      "tokens": 304
+    },
+    {
+      "segment_id": "historical-v4-0560",
+      "tokens": 350
+    },
+    {
+      "segment_id": "historical-v4-0562",
+      "tokens": 229
+    },
+    {
+      "segment_id": "historical-v4-0564",
+      "tokens": 279
+    },
+    {
+      "segment_id": "historical-v4-0565",
+      "tokens": 280
+    },
+    {
+      "segment_id": "historical-v4-0566",
+      "tokens": 262
+    },
+    {
+      "segment_id": "historical-v4-0567",
+      "tokens": 286
+    },
+    {
+      "segment_id": "historical-v4-0568",
+      "tokens": 308
+    },
+    {
+      "segment_id": "historical-v4-0569",
+      "tokens": 142
+    },
+    {
+      "segment_id": "historical-v4-0570",
+      "tokens": 250
+    },
+    {
+      "segment_id": "historical-v4-0571",
+      "tokens": 255
+    },
+    {
+      "segment_id": "historical-v4-0572",
+      "tokens": 315
+    },
+    {
+      "segment_id": "historical-v4-0574",
+      "tokens": 366
+    },
+    {
+      "segment_id": "historical-v4-0579",
+      "tokens": 282
+    },
+    {
+      "segment_id": "historical-v4-0580",
+      "tokens": 311
+    },
+    {
+      "segment_id": "historical-v4-0581",
+      "tokens": 138
+    },
+    {
+      "segment_id": "historical-v4-0582",
+      "tokens": 347
+    },
+    {
+      "segment_id": "historical-v4-0583",
+      "tokens": 339
+    },
+    {
+      "segment_id": "historical-v4-0584",
+      "tokens": 88
+    },
+    {
+      "segment_id": "historical-v4-0585",
+      "tokens": 160
+    },
+    {
+      "segment_id": "historical-v4-0586",
+      "tokens": 124
+    },
+    {
+      "segment_id": "historical-v4-0587",
+      "tokens": 225
+    },
+    {
+      "segment_id": "historical-v4-0588",
+      "tokens": 276
+    },
+    {
+      "segment_id": "historical-v4-0589",
+      "tokens": 169
+    },
+    {
+      "segment_id": "historical-v4-0590",
+      "tokens": 121
+    },
+    {
+      "segment_id": "historical-v4-0591",
+      "tokens": 189
+    },
+    {
+      "segment_id": "historical-v4-0592",
+      "tokens": 308
+    },
+    {
+      "segment_id": "historical-v4-0593",
+      "tokens": 375
+    },
+    {
+      "segment_id": "historical-v4-0594",
+      "tokens": 53
+    },
+    {
+      "segment_id": "historical-v4-0595",
+      "tokens": 49
+    },
+    {
+      "segment_id": "historical-v4-0596",
+      "tokens": 300
+    },
+    {
+      "segment_id": "historical-v4-0597",
+      "tokens": 289
+    },
+    {
+      "segment_id": "historical-v4-0598",
+      "tokens": 306
+    },
+    {
+      "segment_id": "historical-v4-0599",
+      "tokens": 134
+    },
+    {
+      "segment_id": "historical-v4-0600",
+      "tokens": 346
+    },
+    {
+      "segment_id": "historical-v4-0601",
+      "tokens": 282
+    },
+    {
+      "segment_id": "historical-v4-0602",
+      "tokens": 343
+    },
+    {
+      "segment_id": "historical-v4-0603",
+      "tokens": 313
+    },
+    {
+      "segment_id": "historical-v4-0604",
+      "tokens": 280
+    },
+    {
+      "segment_id": "historical-v4-0605",
+      "tokens": 270
+    },
+    {
+      "segment_id": "historical-v4-0606",
+      "tokens": 350
+    },
+    {
+      "segment_id": "historical-v4-0607",
+      "tokens": 283
+    },
+    {
+      "segment_id": "historical-v4-0608",
+      "tokens": 305
+    },
+    {
+      "segment_id": "historical-v4-0609",
+      "tokens": 296
+    },
+    {
+      "segment_id": "historical-v4-0610",
+      "tokens": 256
+    },
+    {
+      "segment_id": "historical-v4-0611",
+      "tokens": 167
+    },
+    {
+      "segment_id": "historical-v4-0612",
+      "tokens": 324
+    },
+    {
+      "segment_id": "historical-v4-0613",
+      "tokens": 255
+    },
+    {
+      "segment_id": "historical-v4-0614",
+      "tokens": 50
+    },
+    {
+      "segment_id": "historical-v4-0615",
+      "tokens": 246
+    },
+    {
+      "segment_id": "historical-v4-0616",
+      "tokens": 345
+    },
+    {
+      "segment_id": "historical-v4-0617",
+      "tokens": 304
+    },
+    {
+      "segment_id": "historical-v4-0618",
+      "tokens": 87
+    },
+    {
+      "segment_id": "historical-v4-0621",
+      "tokens": 270
+    },
+    {
+      "segment_id": "historical-v4-0622",
+      "tokens": 271
+    },
+    {
+      "segment_id": "historical-v4-0624",
+      "tokens": 280
+    },
+    {
+      "segment_id": "historical-v4-0625",
+      "tokens": 242
+    },
+    {
+      "segment_id": "historical-v4-0629",
+      "tokens": 271
+    },
+    {
+      "segment_id": "historical-v4-0630",
+      "tokens": 233
+    },
+    {
+      "segment_id": "historical-v4-0632",
+      "tokens": 74
+    },
+    {
+      "segment_id": "historical-v4-0634",
+      "tokens": 272
+    },
+    {
+      "segment_id": "historical-v4-0635",
+      "tokens": 256
+    },
+    {
+      "segment_id": "historical-v4-0636",
+      "tokens": 233
+    },
+    {
+      "segment_id": "historical-v4-0639",
+      "tokens": 270
+    },
+    {
+      "segment_id": "historical-v4-0643",
+      "tokens": 249
+    },
+    {
+      "segment_id": "historical-v4-0644",
+      "tokens": 245
+    },
+    {
+      "segment_id": "historical-v4-0647",
+      "tokens": 227
+    },
+    {
+      "segment_id": "historical-v4-0696",
+      "tokens": 165
+    },
+    {
+      "segment_id": "historical-v4-0697",
+      "tokens": 207
+    },
+    {
+      "segment_id": "historical-v4-0698",
+      "tokens": 281
+    },
+    {
+      "segment_id": "historical-v4-0699",
+      "tokens": 116
+    },
+    {
+      "segment_id": "historical-v4-0700",
+      "tokens": 123
+    },
+    {
+      "segment_id": "historical-v4-0701",
+      "tokens": 193
+    },
+    {
+      "segment_id": "historical-v4-0702",
+      "tokens": 247
+    },
+    {
+      "segment_id": "historical-v4-0703",
+      "tokens": 268
+    },
+    {
+      "segment_id": "historical-v4-0704",
+      "tokens": 245
+    },
+    {
+      "segment_id": "historical-v4-0705",
+      "tokens": 288
+    },
+    {
+      "segment_id": "historical-v4-0706",
+      "tokens": 188
+    },
+    {
+      "segment_id": "historical-v4-0707",
+      "tokens": 281
+    },
+    {
+      "segment_id": "historical-v4-0708",
+      "tokens": 217
+    },
+    {
+      "segment_id": "historical-v4-0709",
+      "tokens": 288
+    },
+    {
+      "segment_id": "historical-v4-0710",
+      "tokens": 111
+    },
+    {
+      "segment_id": "historical-v4-0711",
+      "tokens": 129
+    },
+    {
+      "segment_id": "historical-v4-0712",
+      "tokens": 305
+    },
+    {
+      "segment_id": "historical-v4-0713",
+      "tokens": 261
+    },
+    {
+      "segment_id": "historical-v4-0714",
+      "tokens": 242
+    },
+    {
+      "segment_id": "historical-v4-0715",
+      "tokens": 234
+    },
+    {
+      "segment_id": "historical-v4-0716",
+      "tokens": 243
+    },
+    {
+      "segment_id": "historical-v4-0717",
+      "tokens": 182
+    },
+    {
+      "segment_id": "historical-v4-0718",
+      "tokens": 267
+    },
+    {
+      "segment_id": "historical-v4-0719",
+      "tokens": 258
+    },
+    {
+      "segment_id": "historical-v4-0720",
+      "tokens": 157
+    },
+    {
+      "segment_id": "historical-v4-0721",
+      "tokens": 245
+    },
+    {
+      "segment_id": "historical-v4-0722",
+      "tokens": 223
+    },
+    {
+      "segment_id": "historical-v4-0723",
+      "tokens": 262
+    },
+    {
+      "segment_id": "historical-v4-0726",
+      "tokens": 273
+    },
+    {
+      "segment_id": "historical-v4-0727",
+      "tokens": 250
+    },
+    {
+      "segment_id": "historical-v4-0728",
+      "tokens": 293
+    },
+    {
+      "segment_id": "historical-v4-0729",
+      "tokens": 232
+    },
+    {
+      "segment_id": "historical-v4-0730",
+      "tokens": 187
+    },
+    {
+      "segment_id": "historical-v4-0731",
+      "tokens": 234
+    },
+    {
+      "segment_id": "historical-v4-0732",
+      "tokens": 259
+    },
+    {
+      "segment_id": "historical-v4-0733",
+      "tokens": 321
+    },
+    {
+      "segment_id": "historical-v4-0734",
+      "tokens": 276
+    },
+    {
+      "segment_id": "historical-v4-0735",
+      "tokens": 143
+    },
+    {
+      "segment_id": "historical-v4-0736",
+      "tokens": 288
+    },
+    {
+      "segment_id": "historical-v4-0737",
+      "tokens": 228
+    },
+    {
+      "segment_id": "historical-v4-0738",
+      "tokens": 239
+    },
+    {
+      "segment_id": "historical-v4-0739",
+      "tokens": 169
+    },
+    {
+      "segment_id": "historical-v4-0740",
+      "tokens": 249
+    },
+    {
+      "segment_id": "historical-v4-0741",
+      "tokens": 191
+    },
+    {
+      "segment_id": "historical-v4-0742",
+      "tokens": 285
+    },
+    {
+      "segment_id": "historical-v4-0743",
+      "tokens": 301
+    },
+    {
+      "segment_id": "historical-v4-0744",
+      "tokens": 241
+    },
+    {
+      "segment_id": "historical-v4-0745",
+      "tokens": 156
+    },
+    {
+      "segment_id": "historical-v4-0746",
+      "tokens": 304
+    },
+    {
+      "segment_id": "historical-v4-0747",
+      "tokens": 282
+    },
+    {
+      "segment_id": "historical-v4-0748",
+      "tokens": 222
+    },
+    {
+      "segment_id": "historical-v4-0749",
+      "tokens": 236
+    },
+    {
+      "segment_id": "historical-v4-0750",
+      "tokens": 248
+    },
+    {
+      "segment_id": "historical-v4-0751",
+      "tokens": 161
+    },
+    {
+      "segment_id": "historical-v4-0752",
+      "tokens": 257
+    },
+    {
+      "segment_id": "historical-v4-0753",
+      "tokens": 242
+    },
+    {
+      "segment_id": "historical-v4-0754",
+      "tokens": 119
+    },
+    {
+      "segment_id": "historical-v4-0755",
+      "tokens": 54
+    },
+    {
+      "segment_id": "historical-v4-0756",
+      "tokens": 329
+    },
+    {
+      "segment_id": "historical-v4-0757",
+      "tokens": 323
+    },
+    {
+      "segment_id": "historical-v4-0758",
+      "tokens": 280
+    },
+    {
+      "segment_id": "historical-v4-0759",
+      "tokens": 242
+    },
+    {
+      "segment_id": "historical-v4-0760",
+      "tokens": 293
+    },
+    {
+      "segment_id": "historical-v4-0761",
+      "tokens": 277
+    },
+    {
+      "segment_id": "historical-v4-0762",
+      "tokens": 265
+    },
+    {
+      "segment_id": "historical-v4-0763",
+      "tokens": 238
+    },
+    {
+      "segment_id": "historical-v4-0764",
+      "tokens": 258
+    },
+    {
+      "segment_id": "historical-v4-0765",
+      "tokens": 290
+    },
+    {
+      "segment_id": "historical-v4-0766",
+      "tokens": 224
+    },
+    {
+      "segment_id": "historical-v4-0767",
+      "tokens": 251
+    },
+    {
+      "segment_id": "historical-v4-0768",
+      "tokens": 325
+    },
+    {
+      "segment_id": "historical-v4-0769",
+      "tokens": 252
+    },
+    {
+      "segment_id": "historical-v4-0770",
+      "tokens": 297
+    },
+    {
+      "segment_id": "historical-v4-0771",
+      "tokens": 248
+    },
+    {
+      "segment_id": "historical-v4-0772",
+      "tokens": 301
+    },
+    {
+      "segment_id": "historical-v4-0773",
+      "tokens": 230
+    },
+    {
+      "segment_id": "historical-v4-0774",
+      "tokens": 223
+    },
+    {
+      "segment_id": "historical-v4-0775",
+      "tokens": 275
+    },
+    {
+      "segment_id": "historical-v4-0776",
+      "tokens": 85
+    },
+    {
+      "segment_id": "historical-v4-0777",
+      "tokens": 264
+    },
+    {
+      "segment_id": "historical-v4-0778",
+      "tokens": 265
+    },
+    {
+      "segment_id": "historical-v4-0779",
+      "tokens": 341
+    },
+    {
+      "segment_id": "historical-v4-0780",
+      "tokens": 329
+    },
+    {
+      "segment_id": "historical-v4-0781",
+      "tokens": 238
+    },
+    {
+      "segment_id": "historical-v4-0782",
+      "tokens": 265
+    },
+    {
+      "segment_id": "historical-v4-0783",
+      "tokens": 252
+    },
+    {
+      "segment_id": "historical-v4-0784",
+      "tokens": 225
+    },
+    {
+      "segment_id": "historical-v4-0785",
+      "tokens": 275
+    },
+    {
+      "segment_id": "historical-v4-0786",
+      "tokens": 255
+    },
+    {
+      "segment_id": "historical-v4-0787",
+      "tokens": 255
+    },
+    {
+      "segment_id": "historical-v4-0788",
+      "tokens": 193
+    },
+    {
+      "segment_id": "historical-v4-0789",
+      "tokens": 275
+    },
+    {
+      "segment_id": "historical-v4-0790",
+      "tokens": 194
+    },
+    {
+      "segment_id": "historical-v4-0791",
+      "tokens": 258
+    },
+    {
+      "segment_id": "historical-v4-0792",
+      "tokens": 289
+    },
+    {
+      "segment_id": "historical-v4-0793",
+      "tokens": 190
+    },
+    {
+      "segment_id": "historical-v4-0794",
+      "tokens": 198
+    },
+    {
+      "segment_id": "historical-v4-0795",
+      "tokens": 246
+    },
+    {
+      "segment_id": "historical-v4-0796",
+      "tokens": 236
+    },
+    {
+      "segment_id": "historical-v4-0797",
+      "tokens": 184
+    },
+    {
+      "segment_id": "historical-v4-0798",
+      "tokens": 252
+    },
+    {
+      "segment_id": "historical-v4-0799",
+      "tokens": 220
+    },
+    {
+      "segment_id": "historical-v4-0800",
+      "tokens": 186
+    },
+    {
+      "segment_id": "historical-v4-0801",
+      "tokens": 270
+    },
+    {
+      "segment_id": "historical-v4-0802",
+      "tokens": 272
+    },
+    {
+      "segment_id": "historical-v4-0803",
+      "tokens": 223
+    },
+    {
+      "segment_id": "historical-v4-0804",
+      "tokens": 262
+    },
+    {
+      "segment_id": "historical-v4-0805",
+      "tokens": 282
+    },
+    {
+      "segment_id": "historical-v4-0806",
+      "tokens": 148
+    },
+    {
+      "segment_id": "historical-v4-0807",
+      "tokens": 175
+    },
+    {
+      "segment_id": "historical-v4-0808",
+      "tokens": 186
+    },
+    {
+      "segment_id": "historical-v4-0809",
+      "tokens": 158
+    },
+    {
+      "segment_id": "historical-v4-0810",
+      "tokens": 167
+    },
+    {
+      "segment_id": "historical-v4-0811",
+      "tokens": 195
+    },
+    {
+      "segment_id": "historical-v4-0812",
+      "tokens": 229
+    },
+    {
+      "segment_id": "historical-v4-0813",
+      "tokens": 162
+    },
+    {
+      "segment_id": "historical-v4-0814",
+      "tokens": 246
+    },
+    {
+      "segment_id": "historical-v4-0815",
+      "tokens": 282
+    },
+    {
+      "segment_id": "historical-v4-0816",
+      "tokens": 227
+    },
+    {
+      "segment_id": "historical-v4-0817",
+      "tokens": 158
+    },
+    {
+      "segment_id": "historical-v4-0818",
+      "tokens": 169
+    },
+    {
+      "segment_id": "historical-v4-0819",
+      "tokens": 296
+    },
+    {
+      "segment_id": "historical-v4-0820",
+      "tokens": 247
+    },
+    {
+      "segment_id": "historical-v4-0821",
+      "tokens": 298
+    },
+    {
+      "segment_id": "historical-v4-0822",
+      "tokens": 230
+    },
+    {
+      "segment_id": "historical-v4-0823",
+      "tokens": 223
+    },
+    {
+      "segment_id": "historical-v4-0824",
+      "tokens": 255
+    },
+    {
+      "segment_id": "historical-v4-0825",
+      "tokens": 246
+    },
+    {
+      "segment_id": "historical-v4-0826",
+      "tokens": 227
+    },
+    {
+      "segment_id": "historical-v4-0827",
+      "tokens": 290
+    },
+    {
+      "segment_id": "historical-v4-0828",
+      "tokens": 300
+    },
+    {
+      "segment_id": "historical-v4-0829",
+      "tokens": 207
+    },
+    {
+      "segment_id": "historical-v4-0830",
+      "tokens": 214
+    },
+    {
+      "segment_id": "S01-seg0005-s00704",
+      "tokens": 154
+    },
+    {
+      "segment_id": "S01-seg0005-s02873",
+      "tokens": 128
+    },
+    {
+      "segment_id": "S01-seg0005-s04319",
+      "tokens": 73
+    },
+    {
+      "segment_id": "S01-seg0019-s00000",
+      "tokens": 196
+    },
+    {
+      "segment_id": "S03-seg0006-s00000",
+      "tokens": 107
+    },
+    {
+      "segment_id": "S03-seg0009-s00000",
+      "tokens": 120
+    },
+    {
+      "segment_id": "S03-seg0015-s00000",
+      "tokens": 128
+    },
+    {
+      "segment_id": "S03-seg0037-s00000",
+      "tokens": 139
+    },
+    {
+      "segment_id": "S03-seg0042-s00577",
+      "tokens": 150
+    },
+    {
+      "segment_id": "S03-seg0044-s00991",
+      "tokens": 133
+    },
+    {
+      "segment_id": "S06-seg0005-s00000",
+      "tokens": 118
+    },
+    {
+      "segment_id": "S06-seg0016-s00000",
+      "tokens": 71
+    },
+    {
+      "segment_id": "S06-seg0020-s00000",
+      "tokens": 58
+    },
+    {
+      "segment_id": "S06-seg0032-s00000",
+      "tokens": 166
+    },
+    {
+      "segment_id": "S06-seg0036-s00000",
+      "tokens": 168
+    },
+    {
+      "segment_id": "S10-seg0003-s00000",
+      "tokens": 119
+    },
+    {
+      "segment_id": "S10-seg0010-s00000",
+      "tokens": 130
+    },
+    {
+      "segment_id": "S10-seg0014-s00000",
+      "tokens": 116
+    },
+    {
+      "segment_id": "S10-seg0034-s00606",
+      "tokens": 146
+    },
+    {
+      "segment_id": "S15-seg0007-s00000",
+      "tokens": 144
+    },
+    {
+      "segment_id": "S15-seg0008-s00000",
+      "tokens": 94
+    },
+    {
+      "segment_id": "S15-seg0025-s00000",
+      "tokens": 86
+    },
+    {
+      "segment_id": "S15-seg0057-s00000",
+      "tokens": 95
+    },
+    {
+      "segment_id": "S15-seg0061-s00000",
+      "tokens": 101
+    },
+    {
+      "segment_id": "S05-visual-p007-01",
+      "tokens": 133
+    },
+    {
+      "segment_id": "S05-visual-p007-02",
+      "tokens": 174
+    },
+    {
+      "segment_id": "S17-visual-p003-03",
+      "tokens": 85
+    },
+    {
+      "segment_id": "S01-seg0012-whole",
+      "tokens": 344
+    },
+    {
+      "segment_id": "S01-seg0014-whole",
+      "tokens": 411
+    },
+    {
+      "segment_id": "S01-seg0005-s00000",
+      "tokens": 151
+    },
+    {
+      "segment_id": "S01-seg0005-s02191",
+      "tokens": 141
+    },
+    {
+      "segment_id": "S01-seg0007-s04313",
+      "tokens": 114
+    },
+    {
+      "segment_id": "S01-seg0007-s06192",
+      "tokens": 154
+    },
+    {
+      "segment_id": "S01-seg0007-s05495",
+      "tokens": 159
+    },
+    {
+      "segment_id": "S01-seg0008-s00000",
+      "tokens": 82
+    },
+    {
+      "segment_id": "S01-seg0010-s02676",
+      "tokens": 166
+    },
+    {
+      "segment_id": "S03-seg0005-s00000",
+      "tokens": 138
+    },
+    {
+      "segment_id": "S03-seg0017-s00000",
+      "tokens": 155
+    },
+    {
+      "segment_id": "S03-seg0019-s00000",
+      "tokens": 63
+    },
+    {
+      "segment_id": "S03-seg0022-s00000",
+      "tokens": 131
+    },
+    {
+      "segment_id": "S03-seg0062-s00000",
+      "tokens": 122
+    },
+    {
+      "segment_id": "S06-seg0010-s00000",
+      "tokens": 224
+    },
+    {
+      "segment_id": "S06-seg0022-s00000",
+      "tokens": 171
+    },
+    {
+      "segment_id": "S06-seg0035-s00000",
+      "tokens": 84
+    },
+    {
+      "segment_id": "S06-seg0040-s00000",
+      "tokens": 113
+    },
+    {
+      "segment_id": "S10-seg0010-s00717",
+      "tokens": 144
+    },
+    {
+      "segment_id": "S10-seg0012-s00000",
+      "tokens": 132
+    },
+    {
+      "segment_id": "S15-seg0010-s00000",
+      "tokens": 126
+    },
+    {
+      "segment_id": "S15-seg0017-s00000",
+      "tokens": 166
+    }
+  ]
+}

@@ -1,0 +1,117 @@
+{
+  "evidence": {
+    "commit": "74f80917f6b245d718c201d58e0d3599f2e4b3e0",
+    "command": "outputs/venv-ml/Scripts/python.exe scripts/build_beto_corpus_v2.py",
+    "version": "beto-corpus-v2.2",
+    "acquisition_command": "outputs/venv-ml/Scripts/python.exe scripts/acquire_beto_corpus_v2.py",
+    "created_at": "2026-09-08T21:05:38.751631+00:00",
+    "versions": {
+      "pypdf": "5.9.0",
+      "requests": "2.34.2",
+      "youtube-transcript-api": "1.2.4"
+    },
+    "python": "3.10.10 (tags/v3.10.10:aad5f6a, Feb  7 2023, 17:20:36) [MSC v.1929 64 bit (AMD64)]",
+    "model_checkpoint": null,
+    "model_used": false,
+    "plan_sha256": "29f6eaf1c6d15cc79d2eeaebd016fde4ff004d9060deb852a1daec08b664bad2",
+    "script_sha256": "eb3f4129e3ea04f6edb510406dd166d7275d8f7ce65a433f2a1976d275e4ead6"
+  },
+  "assignment": "preliminary; no final splits",
+  "sources": [
+    {
+      "family_id": "family-V03",
+      "source_id": "V03",
+      "obtained": false,
+      "status": "candidate_not_final_test",
+      "path": "outputs\\beto-v2\\corpus\\V03",
+      "sha256": "",
+      "independence_verified": false,
+      "review": "Multiple video links require manual selection; no blind collection",
+      "prohibited_uses": [
+        "training",
+        "augmentation",
+        "pseudo_labeling",
+        "DAPT",
+        "TAPT",
+        "BETO_evaluation_during_development"
+      ]
+    },
+    {
+      "family_id": "family-V04",
+      "source_id": "V04",
+      "obtained": false,
+      "status": "candidate_not_final_test",
+      "path": "outputs\\beto-v2\\corpus\\V04",
+      "sha256": "",
+      "independence_verified": false,
+      "review": "No direct institutional video URL exposed; event page is not transcript",
+      "prohibited_uses": [
+        "training",
+        "augmentation",
+        "pseudo_labeling",
+        "DAPT",
+        "TAPT",
+        "BETO_evaluation_during_development"
+      ]
+    },
+    {
+      "family_id": "family-S04",
+      "source_id": "S04",
+      "obtained": true,
+      "status": "candidate_not_final_test",
+      "path": "outputs\\beto-v2\\corpus\\S04",
+      "sha256": "b9d5efb0b0525665dd50f7e1b7b86a3a89cfa8f1bc37e6fbd5355f64cc669432",
+      "independence_verified": false,
+      "review": "Reserved whole work; Hugo Pereyra Plasencia is distinct from Nelson Ernesto Pereyra Chavez. Broad chronology requires scope review.",
+      "prohibited_uses": [
+        "training",
+        "augmentation",
+        "pseudo_labeling",
+        "DAPT",
+        "TAPT",
+        "BETO_evaluation_during_development"
+      ]
+    },
+    {
+      "family_id": "family-S09",
+      "source_id": "S09",
+      "obtained": true,
+      "status": "candidate_not_final_test",
+      "path": "outputs\\beto-v2\\corpus\\S09",
+      "sha256": "7ada561a5ab11940fa474cf0909aeb57e4e4592e8254de101eaeb6cd845bf03e",
+      "independence_verified": false,
+      "review": "Reserved; landing CC BY 4.0/footer BY 3.0 conflicts with PDF BY-NC-SA 4.0. No redistribution. Author cites her 2016 chapter in the collection containing existing Huamanga chapter: independence pending comparison.",
+      "prohibited_uses": [
+        "training",
+        "augmentation",
+        "pseudo_labeling",
+        "DAPT",
+        "TAPT",
+        "BETO_evaluation_during_development"
+      ]
+    },
+    {
+      "family_id": "family-S16",
+      "source_id": "S16",
+      "obtained": false,
+      "status": "candidate_not_final_test",
+      "path": "outputs\\beto-v2\\corpus\\S16",
+      "sha256": "",
+      "independence_verified": false,
+      "review": "HTTPSConnectionPool(host='repositorio.pucp.edu.pe', port=443): Read timed out. (read timeout=30)",
+      "prohibited_uses": [
+        "training",
+        "augmentation",
+        "pseudo_labeling",
+        "DAPT",
+        "TAPT",
+        "BETO_evaluation_during_development"
+      ]
+    }
+  ],
+  "excluded_prior_sets": [
+    "original test",
+    "external-development-v1",
+    "evaluation-pilot-v2"
+  ]
+}
