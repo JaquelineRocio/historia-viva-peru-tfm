@@ -1,0 +1,34 @@
+{
+  "status": "passed",
+  "train": 758,
+  "dev": 160,
+  "overlap": {
+    "id": [],
+    "text_sha256": [],
+    "family": [],
+    "component": [],
+    "source_id": []
+  },
+  "normalized_text_overlap": 0,
+  "original_746_texts_labels_metadata_intact": true,
+  "expanded_758_order_and_content_identical_to_frozen_export": true,
+  "tokenizer_outputs_identical_to_control_all_918_rows": true,
+  "control_and_base_hashes_verified": true,
+  "labels": [
+    "campanias_conflictos_militares",
+    "contexto_colonial_antecedentes",
+    "crisis_ideas_emancipadoras",
+    "liderazgos_diplomacia_proyectos",
+    "no_relevante",
+    "organizacion_consecuencias_republicanas",
+    "participacion_social_regional"
+  ],
+  "notebook_code_cells_compile": true,
+  "new_training_runs": 0,
+  "new_inferences": 0,
+  "new_annotations": 0,
+  "V_S_exported": false,
+  "colab_end_to_end_executed": false,
+  "portable_zip_sha256": "91eb3345c1b579df0da4a3464a938ba20d2a2d654328f7d589f6fc388bbe26f1",
+  "notebook_sha256": "3f72e052011a2d1b836ca04a752019227aa031c897a3948dfd2b04154cd75c64"
+}

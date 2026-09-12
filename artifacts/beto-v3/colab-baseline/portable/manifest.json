@@ -1,0 +1,116 @@
+{
+  "experiment": "beto-flat-baseline-colab-758-three-seeds-v1",
+  "labels": [
+    "campanias_conflictos_militares",
+    "contexto_colonial_antecedentes",
+    "crisis_ideas_emancipadoras",
+    "liderazgos_diplomacia_proyectos",
+    "no_relevante",
+    "organizacion_consecuencias_republicanas",
+    "participacion_social_regional"
+  ],
+  "base_model": "dccuchile/bert-base-spanish-wwm-cased",
+  "revision": "c4d86612f51b4f46759c8390d1798c2febe71b93",
+  "base_hashes": {
+    "config.json": "3694a761b0ba882c24baab95df01cf7e7e1424797af557272e944ec2452f9f31",
+    "pytorch_model.bin": "e131a95091c777bbd45250fb647fec415010cb8cd1ad6e1d59babeb82a0be360",
+    "special_tokens_map.json": "bd6ed009009f8264d0ef87d5b50798cb57c5219a0bbb7c8973372855241aa05f",
+    "tokenizer.json": "ea7a58026720ba45a8a401d9f86bbe8337f2725d3b02d3a1011305c46cbbd9cd",
+    "tokenizer_config.json": "2f5cde6bbb9959fccd280e9e9c08d41d05e96743fac1a3b5b67e0e5691ae7d10",
+    "vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+  },
+  "tokenizer": {
+    "class": "BertTokenizerFast",
+    "use_fast": true,
+    "do_lower_case": false,
+    "revision": "c4d86612f51b4f46759c8390d1798c2febe71b93",
+    "identical_to_control_on_all_918_texts": true
+  },
+  "files": {
+    "train.jsonl": "f065b092affb3f872b22d83d940010eef377f7401cde164aa342c1583d4e7d88",
+    "dev.jsonl": "332cdddf7990803d7878deb45686fe8ae47ab8c87375d3d7e4c2c675e5238464",
+    "baseline_runtime.py": "6fdff02c8b594518a3dc1fe181e4269f7412f9d19bf8c502af503f745299bde7"
+  },
+  "source_inputs_sha256": {
+    "artifacts/beto-v3/reference-revision-v3.2-r2/train-reference-view.json": "3877ece72000a8c6863c2e08f0453e70fa1f52019b61ad6bda2506ff79a90c87",
+    "artifacts/beto-v3/reference-revision-v3.2-r2/partition-manifest.json": "05cb96eb2dd37430686d5695eb9ed3ac31a9318c762ff09d390f595d8b405ed7",
+    "artifacts/beto-v3/contrastive-subset-experiment/train-experimental.jsonl": "18c3a603e63e5f0acefed620873471d796c863893adf32a8a3cc44fca5e3be03"
+  },
+  "control_seal_sha256": "ddef3482f25d1539c963cfa2834d9c34d6561a4745e95d5c7586911da8d32700",
+  "control": {
+    "run": "amp-v2-42",
+    "selected_epoch": 5,
+    "checkpoint_hashes": {
+      "config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+      "model.safetensors": "f6c3bcdb552dee96e1c375d72ff3abb130a280300c2d8c3528fa4b56e92e095e",
+      "tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+      "special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+      "vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+      "tokenizer.json": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f",
+      "labels.json": "c4fb6bd064e2ae9d3ab9c4c12b2e3bdd15a438cf6f636404ca0d0dc37a47c6f5"
+    }
+  },
+  "class_counts": {
+    "campanias_conflictos_militares": 92,
+    "contexto_colonial_antecedentes": 75,
+    "crisis_ideas_emancipadoras": 57,
+    "liderazgos_diplomacia_proyectos": 86,
+    "no_relevante": 218,
+    "organizacion_consecuencias_republicanas": 103,
+    "participacion_social_regional": 127
+  },
+  "class_weights": {
+    "campanias_conflictos_militares": 1.1770186335403727,
+    "contexto_colonial_antecedentes": 1.4438095238095239,
+    "crisis_ideas_emancipadoras": 1.899749373433584,
+    "liderazgos_diplomacia_proyectos": 1.2591362126245846,
+    "no_relevante": 0.4967234600262123,
+    "organizacion_consecuencias_republicanas": 1.0513176144244105,
+    "participacion_social_regional": 0.8526434195725534
+  },
+  "recipe": {
+    "seeds": [
+      42,
+      123,
+      2026
+    ],
+    "max_length": 384,
+    "microbatch": 2,
+    "accumulation": 8,
+    "optimizer": "AdamW",
+    "lr": 2e-05,
+    "weight_decay": 0.01,
+    "clip": 1.0,
+    "class_weights_formula": "N_train/(7*n_class)",
+    "loss": "sum_weighted_CE_over_sum_target_weights_of_actual_effective_batch",
+    "max_epochs": 8,
+    "patience": 2,
+    "min_delta": 0.0001,
+    "warmup_fraction": 0.1,
+    "horizon": 384,
+    "warmup_steps": 38,
+    "scheduler_successful_updates_only": true,
+    "checkpoint_selection": "strict maximum DEV macro-F1, earliest exact tie",
+    "amp": "standard torch.amp.GradScaler; no skip-count abort; no batch repetition",
+    "gradient_checkpointing": true,
+    "pooler": "BERT tanh linear pooled CLS",
+    "dropout": 0.1,
+    "softmax": "inference only; weighted cross entropy receives raw logits"
+  },
+  "scope": {
+    "train": 758,
+    "dev": 160,
+    "V": "not exported or used",
+    "S": "not exported or used",
+    "experimental_758": "explicit latest user request",
+    "expert_gold": false,
+    "DEV_previously_exposed": true
+  },
+  "execution": {
+    "prepared_only_locally": true,
+    "planned_colab_trajectories": 3,
+    "ledger_modified": false,
+    "reserved_closing_trajectories_consumed": 0,
+    "note": "New user request: Colab with 758 TRAIN and three seeds; old one-seed preregistration stays archived. Export actual run receipt for project accounting."
+  }
+}
