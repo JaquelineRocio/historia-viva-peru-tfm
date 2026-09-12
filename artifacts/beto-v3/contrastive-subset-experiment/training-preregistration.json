@@ -1,0 +1,261 @@
+{
+  "experiment_id": "contrastive-subset-12-v1-seed42",
+  "status": "preregistered_not_executed",
+  "execution_authorized": false,
+  "user_scope": "Create experimental TRAIN and preregister ONE training; no execution requested in this instruction.",
+  "hypothesis": "Twelve existing contrastive examples improve DEV discrimination compared with frozen AMP control, without changing labels, guide or architecture.",
+  "selection_protocol_sha256": "7989b10a9459d14ea0e4e665fad16ce8444431952722017b0452fd9aafe20046",
+  "selection_result_sha256": "80afe2cdaf1f768de3a866d8bf89dde96b6a0725c0baadc6fc07218e5f0a937a",
+  "train_path": "artifacts\\beto-v3\\contrastive-subset-experiment\\train-experimental.jsonl",
+  "train_sha256": "18c3a603e63e5f0acefed620873471d796c863893adf32a8a3cc44fca5e3be03",
+  "train_rows": 758,
+  "dev_partition_path": "artifacts\\beto-v3\\reference-revision-v3.2-r2\\partition-manifest.json",
+  "dev_partition_sha256": "05cb96eb2dd37430686d5695eb9ed3ac31a9318c762ff09d390f595d8b405ed7",
+  "dev_split": "dev_proposed",
+  "dev_rows": 160,
+  "dev_reference_path": "artifacts/beto-v3/reference-revision-v3.2-r2/train-reference-view.json",
+  "dev_reference_sha256": "3877ece72000a8c6863c2e08f0453e70fa1f52019b61ad6bda2506ff79a90c87",
+  "labels": [
+    "campanias_conflictos_militares",
+    "contexto_colonial_antecedentes",
+    "crisis_ideas_emancipadoras",
+    "liderazgos_diplomacia_proyectos",
+    "no_relevante",
+    "organizacion_consecuencias_republicanas",
+    "participacion_social_regional"
+  ],
+  "base_model": "dccuchile/bert-base-spanish-wwm-cased",
+  "revision": "c4d86612f51b4f46759c8390d1798c2febe71b93",
+  "base_hashes": {
+    "config.json": "3694a761b0ba882c24baab95df01cf7e7e1424797af557272e944ec2452f9f31",
+    "pytorch_model.bin": "e131a95091c777bbd45250fb647fec415010cb8cd1ad6e1d59babeb82a0be360",
+    "special_tokens_map.json": "bd6ed009009f8264d0ef87d5b50798cb57c5219a0bbb7c8973372855241aa05f",
+    "tokenizer.json": "ea7a58026720ba45a8a401d9f86bbe8337f2725d3b02d3a1011305c46cbbd9cd",
+    "tokenizer_config.json": "2f5cde6bbb9959fccd280e9e9c08d41d05e96743fac1a3b5b67e0e5691ae7d10",
+    "vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36"
+  },
+  "initialization": "Fresh pinned BETO base, not continued fine-tuning of AMP checkpoint; exactly one seed, no control retraining.",
+  "seed": 42,
+  "max_length": 384,
+  "microbatch": 2,
+  "accumulation": 8,
+  "effective_batch": 16,
+  "lr": 2e-05,
+  "weight_decay": 0.01,
+  "clip_grad_norm": 1,
+  "gradient_checkpointing": true,
+  "optimizer": "AdamW",
+  "loss_normalization": "sum_weighted_CE_over_sum_target_weights_of_actual_effective_batch",
+  "class_weights_policy": "N_train/(7*n_class), computed only from experimental TRAIN",
+  "class_counts": {
+    "campanias_conflictos_militares": 92,
+    "participacion_social_regional": 127,
+    "no_relevante": 218,
+    "organizacion_consecuencias_republicanas": 103,
+    "liderazgos_diplomacia_proyectos": 86,
+    "contexto_colonial_antecedentes": 75,
+    "crisis_ideas_emancipadoras": 57
+  },
+  "class_weights": {
+    "campanias_conflictos_militares": 1.1770186335403727,
+    "contexto_colonial_antecedentes": 1.4438095238095239,
+    "crisis_ideas_emancipadoras": 1.899749373433584,
+    "liderazgos_diplomacia_proyectos": 1.2591362126245846,
+    "no_relevante": 0.4967234600262123,
+    "organizacion_consecuencias_republicanas": 1.0513176144244105,
+    "participacion_social_regional": 0.8526434195725534
+  },
+  "max_epochs": 8,
+  "early_stopping": {
+    "patience": 2,
+    "min_delta": 0.0001,
+    "anchor": "last_patience_reset_score_separate_from_strict_best"
+  },
+  "checkpoint_selection": "strict_max_DEV_macroF1_earliest_exact_tie",
+  "optimizer_steps_per_epoch": 48,
+  "scheduler_horizon_steps": 384,
+  "warmup_steps": 38,
+  "scheduler": "Same rule as AMP: floor(0.1*8*ceil(N/16)) warmup, then linear decay; successful optimizer updates only. Size-derived 384/38 replaces 376/37, not hyperparameter tuning.",
+  "numerical_policy": {
+    "maximum_skipped_effective_batches": 5,
+    "maximum_consecutive_skips": 3,
+    "scheduler_on_successful_updates_only": true,
+    "repeat_skipped_batch": false,
+    "finite_gradient_norm_overflow_fallback": "float64"
+  },
+  "torch_num_threads": 4,
+  "dataloader_workers": 0,
+  "padding": "max_length",
+  "control": {
+    "path": "outputs/beto-v3/reference-v32/amp-v2-42/training/epoch-5",
+    "selected_epoch": 5,
+    "seal_path": "outputs\\beto-v3\\reference-v32\\amp-v2-42\\training\\selected-checkpoint.json",
+    "seal_sha256": "ddef3482f25d1539c963cfa2834d9c34d6561a4745e95d5c7586911da8d32700",
+    "hashes": {
+      "config.json": "dab779737206c1b55639a45501964e01061bf45bacb3d89b42d0cb2dd8650ddc",
+      "model.safetensors": "f6c3bcdb552dee96e1c375d72ff3abb130a280300c2d8c3528fa4b56e92e095e",
+      "tokenizer_config.json": "92ac3907ac39a7060fb421e6c2bd90b84e077e8391b5d881a14ab9e6b26c1673",
+      "special_tokens_map.json": "5aa43c2f985a25296d5a5ce621c2f77376ca8091a47993c492fd5460b895b140",
+      "vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+      "tokenizer.json": "26c05f256aac1510e3bb2816929c7b373f0f89b7fc02f6456220362fb0a3402f",
+      "labels.json": "c4fb6bd064e2ae9d3ab9c4c12b2e3bdd15a438cf6f636404ca0d0dc37a47c6f5"
+    },
+    "dev_aggregate_metrics": {
+      "f1_macro": 0.4918381091255823,
+      "accuracy": 0.51875,
+      "nll": 1.4951349200789372,
+      "nll_probability_floor": 1e-300,
+      "confusion_matrix": [
+        [
+          18,
+          1,
+          0,
+          2,
+          0,
+          1,
+          1
+        ],
+        [
+          2,
+          6,
+          0,
+          2,
+          0,
+          3,
+          1
+        ],
+        [
+          3,
+          1,
+          5,
+          3,
+          1,
+          0,
+          0
+        ],
+        [
+          2,
+          3,
+          0,
+          10,
+          0,
+          3,
+          0
+        ],
+        [
+          2,
+          11,
+          1,
+          3,
+          24,
+          1,
+          6
+        ],
+        [
+          0,
+          3,
+          5,
+          0,
+          2,
+          9,
+          0
+        ],
+        [
+          1,
+          3,
+          2,
+          5,
+          0,
+          3,
+          11
+        ]
+      ],
+      "per_class": [
+        {
+          "label_index": 0,
+          "precision": 0.6428571428571429,
+          "recall": 0.782608695652174,
+          "f1": 0.7058823529411765,
+          "support": 23
+        },
+        {
+          "label_index": 1,
+          "precision": 0.21428571428571427,
+          "recall": 0.42857142857142855,
+          "f1": 0.2857142857142857,
+          "support": 14
+        },
+        {
+          "label_index": 2,
+          "precision": 0.38461538461538464,
+          "recall": 0.38461538461538464,
+          "f1": 0.38461538461538464,
+          "support": 13
+        },
+        {
+          "label_index": 3,
+          "precision": 0.4,
+          "recall": 0.5555555555555556,
+          "f1": 0.46511627906976744,
+          "support": 18
+        },
+        {
+          "label_index": 4,
+          "precision": 0.8888888888888888,
+          "recall": 0.5,
+          "f1": 0.64,
+          "support": 48
+        },
+        {
+          "label_index": 5,
+          "precision": 0.45,
+          "recall": 0.47368421052631576,
+          "f1": 0.46153846153846156,
+          "support": 19
+        },
+        {
+          "label_index": 6,
+          "precision": 0.5789473684210527,
+          "recall": 0.44,
+          "f1": 0.5,
+          "support": 25
+        }
+      ]
+    },
+    "note": "Current AMP comparator, not historical R2 and not family-weighted candidate epoch4. Reuse stored DEV results; do not train or tune control."
+  },
+  "evaluation": {
+    "primary": "Paired difference DEV macro-F1 over seven fixed classes versus AMP epoch5. DEV selects epoch: exploratory comparison, not independent generalization.",
+    "go_for_further_evaluation": "Delta macroF1 >=0.02, no class F1 drop >0.05, and unweighted NLL increase <=0.02. All operational thresholds fixed before training. No automatic promotion.",
+    "secondary": [
+      "per-class precision/recall/F1/support",
+      "confusion matrix",
+      "unweighted NLL",
+      "by-existing-component metrics",
+      "paired cluster bootstrap by DEV component,2000 draws,seed42,95% percentile,keep7classes even if absent"
+    ],
+    "boundary_reports": "Existing DEV boundary membership only if already fixed; do not create new labels or infer truth from target predictions.",
+    "control_predictions": "Reuse existing epoch5-record DEV probabilities by ID, text hash and label order after training. No selection of added rows based on them.",
+    "checkpoint_reload": "Verify selected model reproduces saved DEV logits/probabilities before comparison.",
+    "V": "Frozen and unopened; no V selection or claims",
+    "S": "Closed",
+    "retrospective_pool": "Already exposed; not reused to tune or claim external performance"
+  },
+  "stop": "One fresh trajectory only. No retry/resume, second subset or alternative seed. On failure/no improvement close data-expansion path; next intervention hierarchical BETO, separately scoped.",
+  "budget_proposal": {
+    "training_seconds_cap": 900,
+    "comparison_seconds_cap": 60,
+    "total_cap": 960,
+    "development_seconds_available": 1004.3448576999363,
+    "remaining_after_full_caps": 44.344857699936256,
+    "additional_training_trajectory": 1,
+    "trajectory_ceiling_before": 27,
+    "trajectory_ceiling_proposed": 28,
+    "amendment_applied": false,
+    "ledger_mutated": false,
+    "reserved_closing_trajectories": 3,
+    "reserved_S_annotations": 200,
+    "new_annotation_inputs": 0
+  },
+  "implementation_contract": "Existing AMP worker hardcodes746,47/376/37. Before execution use an isolated adapter that consumes frozen758-row export and declared weights/48/384/38; do not pass these files silently into unchanged worker. No runnable training launcher is created by this preregistration."
+}

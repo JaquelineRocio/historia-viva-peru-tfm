@@ -1,0 +1,15 @@
+{
+  "syntax": "passed",
+  "loss_mask_and_empty_relevant_batch": "passed",
+  "smoke_amp_cuda_overflow_then_recovery": "passed",
+  "smoke_amp_cuda_persistent_overflow_rejected": "passed",
+  "weighted_accumulation_value_and_gradients_with_tail": "passed",
+  "soft_gate_and_mappings": "passed",
+  "early_stopping_strict_max_ties_small_improvements": "passed",
+  "frozen_train_dev_validation": "passed",
+  "baseline_hash_unchanged": true,
+  "model_training_executed": false,
+  "BETO_inference_executed": false,
+  "colab_end_to_end_executed": false,
+  "smoke_requires_user_colab_execution": true
+}

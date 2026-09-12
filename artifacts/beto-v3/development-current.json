@@ -1,24 +1,125 @@
 {
-  "status": "F_complete",
-  "updated_utc": "2026-09-10T00:12:20.478930+00:00",
+  "status": "phase_I_failed_gate",
+  "updated_utc": "2026-09-11T06:09:51.496805+00:00",
   "C_ready": true,
   "S_closed": true,
   "freeze_sha256": "6b7ae3358a31c8303387b15010a5ee57f4ed54c99c4e717b829afc84a733608f",
   "candidate": "R2",
-  "results": "artifacts/beto-v3/phase-f/comparison.json",
-  "budget_ledger": "artifacts/beto-v3/budget-ledger-after-F.json",
+  "results": "artifacts/beto-v3/phase-g/comparison.json",
+  "budget_ledger": "artifacts/beto-v3/budget-ledger-current.json",
   "final_success_evaluated": false,
   "phase_D_audit": "artifacts/beto-v3/phase-d",
   "C_results": "outputs/beto-v3/phase-c/comparison-seed42.json",
   "next_intervention": {
-    "phase": "F",
-    "option": "transcript_only_vs_H_plus_T",
+    "phase": "I",
+    "option": "family_weighting",
     "executed": true,
-    "prospective_V_exception_scope_required": false
+    "seeds_run": [
+      42
+    ],
+    "gate_passed": false
   },
-  "development_annotation_remaining": 1,
+  "development_annotation_remaining": 0,
   "reserved_S_annotations": 200,
   "phase_F_audit": "artifacts/beto-v3/phase-f",
-  "next_action": "Stop: no S opening or further experiment authorized",
-  "phase_F_selected_condition": "H+T"
+  "next_action": "Retain BETO R2. Smoothing completed and rejected. No free development trajectories; 1216.552438 seconds remain. Do not repeat failed experiments or spend closing reserves. Goal F1 > 0.70 remains unmet.",
+  "phase_F_selected_condition": "H+T",
+  "phase_G_audit": "artifacts/beto-v3/phase-g",
+  "candidate_preserved_because": "The registered gate failed on all three conditions and is not adjusted after seeing the result.",
+  "phase_G_result": {
+    "seed": 42,
+    "f1_macro": 0.526266385540339,
+    "historical_mean": 0.4810409418605543,
+    "target_group_mean": 0.42457737450747424,
+    "best_epoch": 4,
+    "control_f1_macro": 0.5323920896572062,
+    "paired_delta": -0.006125704116867192,
+    "regressions": 4,
+    "memory_probe": "artifacts/beto-v3/phase-g/memory-probe.json",
+    "peak_reserved_fraction_of_device": 0.5611036503479429
+  },
+  "phase_G_resume_command": "outputs/venv-ml/Scripts/python.exe scripts/run_beto_phase_g_context_v3.py run --seed 42",
+  "phase_G_resume_note": "The trajectory completed and resume-epoch-20.pt reloads whole, so the command now revalidates the stored result instead of training again. It is the command that would have continued an interrupted run from its last epoch.",
+  "post_G_audit": {
+    "report": "docs/beto-v3/auditoria-post-g.md",
+    "report_sha256": "b6a6d65b6caa436b4abfaecaaf9cd4565de29371a8c76d23a2f99e5d87631095",
+    "artifacts": "artifacts/beto-v3/post-g-audit",
+    "decision_gate": {
+      "cause_is_correctable_or_missing_examples": false,
+      "ceiling_clears_the_target": false,
+      "rules_discriminate_in_practice": false,
+      "rules_discriminate_note": "Not yet measurable. The guide in force carries an explicit rule for all 4 model-confusion pairs, so this condition is settled by the per-boundary agreement obtained after a review under the amended guide, not by the presence of the rule.",
+      "train_the_batch": false
+    },
+    "trained": false,
+    "annotated": false,
+    "labels_changed": false,
+    "acquired": false,
+    "amendment_prepared_not_applied": "docs/beto-v3/development-amendment-1280.md",
+    "cohen_kappa_V": 0.8696613195864413,
+    "classes_below_guide_kappa_goal": [
+      "liderazgos_diplomacia_proyectos"
+    ],
+    "pairs_without_any_operational_rule": [
+      [
+        "participacion_social_regional",
+        "no_relevante"
+      ],
+      [
+        "participacion_social_regional",
+        "crisis_ideas_emancipadoras"
+      ],
+      [
+        "crisis_ideas_emancipadoras",
+        "liderazgos_diplomacia_proyectos"
+      ]
+    ],
+    "guide_in_force": "docs\\beto-v3\\guia-etiquetado-v3.md",
+    "guide_in_force_sha256": "77add7bb9981f2bdc49c2737ccd2aa458f96c1ae59b0f29245aae4f90396adc9",
+    "correction": "A first version of this audit parsed docs/guia-etiquetado-1780-1842.md, which governs no V3 annotation, and wrongly reported that two of the four model-confusion pairs had no operational rule. Re-run against the guide in force, all four carry an explicit rule; the pairs without one are three where the two passes disagree. The kappa target of 0,70 comes from the v1 guide and is adopted as a project reference.",
+    "gate_condition_restated": "boundary_rules_settled -> rules_discriminate_in_practice, measured by per-boundary agreement after a review under the amended guide.",
+    "estimated_macro_ceiling": 0.7563992101319984,
+    "estimated_target_group_ceiling": 0.68751658649249
+  },
+  "previous_next_intervention": {
+    "phase": "H",
+    "option": "T80_v31_AI_consensus",
+    "executed": true,
+    "seeds_run": [
+      42
+    ],
+    "gate_passed": false
+  },
+  "phase_H_gate": "artifacts\\beto-v3\\phase-h-data80\\gate-seed-42.json",
+  "phase_I_attempt": "artifacts\\beto-v3\\phase-i-family\\attempt-settled.json",
+  "representation_transfer_post_pilot": {
+    "status": "complete",
+    "decision": "retain_R2_close_diagnostic_no_new_experiment",
+    "report": "artifacts/beto-v3/representation-transfer-post-pilot/informe.md",
+    "new_training": 0,
+    "new_annotations": 0,
+    "new_inferences": 0,
+    "S_opened": false
+  },
+  "e5_frozen_candidate": {
+    "status": "complete_rejected",
+    "report": "artifacts/beto-v3/e5-frozen-candidate/informe.md",
+    "f1_macro_V": 0.4727409970410793,
+    "goal_f1_above_0_70_achieved": false,
+    "development_trajectories_left": 0
+  },
+  "model_direction": "BETO only: user requests continue with BETO",
+  "beto_seed_majority": {
+    "f1_macro_V": 0.5398630358875173,
+    "decision": "do_not_promote",
+    "report": "artifacts/beto-v3/f1-target-feasibility/beto-seed-majority.md"
+  },
+  "beto_smoothing": {
+    "status": "complete_rejected",
+    "f1_macro_V": 0.5129598344665665,
+    "report": "artifacts/beto-v3/beto-smoothing/informe.md",
+    "goal_achieved": false
+  },
+  "user_reported_available_credits": 5000,
+  "credit_balance_verified": false
 }
