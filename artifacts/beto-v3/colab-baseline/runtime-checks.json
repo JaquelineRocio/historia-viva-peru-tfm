@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "portable_data": [
+    758,
+    160
+  ],
+  "overlap": {
+    "id": [],
+    "text_sha256": [],
+    "family": [],
+    "component": [],
+    "source_id": []
+  },
+  "notebook_cells_compile": true,
+  "weighted_accumulation_and_partial_tail": "passed",
+  "early_stopping_and_ties": "passed",
+  "standard_amp_overflow_then_recovery": "passed",
+  "synthetic_amp_device": "cuda",
+  "real_BETO_training_or_inference": false,
+  "Colab_end_to_end_tested": false
+}
