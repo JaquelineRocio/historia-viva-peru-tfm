@@ -2,7 +2,8 @@
 
 Servicio FastAPI de cómputo para segmentación, extracción PDF, transcripción,
 embeddings, NER e inferencia BETO. En producción se ejecuta en **Modal**; Hugging
-Face Hub almacena `Jaqueline98/historia-viva-beto-v1`.
+Face Hub almacena los pesos. `configs/production-model.json` fija la revisión y
+los hashes de la versión que debe servir Modal.
 
 ## Flujo de YouTube
 
@@ -28,5 +29,12 @@ python -m venv .venv
 python -m modal deploy modal_app.py
 ```
 
-Estado verificado: **24 pruebas superadas**. BETO v1 alcanza F1 macro 0.425 y
-permanece como modelo experimental.
+Publicación y despliegue automático: [guía de modelos](../../docs/aprendizaje/despliegue-modelo-automatico.md).
+El comando local `scripts/publish_model.py publish` prepara, verifica y publica
+los pesos; el push de la selección a `main` activa CI y el despliegue en Modal.
+La configuración inicial conserva v1 hasta publicar y seleccionar R2.
+
+Estado verificado el 12 de septiembre de 2026: **76 pruebas ML superadas**, más
+paridad de inferencia del paquete real R2 en cinco textos sintéticos. R2 tiene
+F1 macro registrado de 0,532392 en V; sigue siendo experimental. Esta verificación
+local no acredita una publicación ni un despliegue remoto.

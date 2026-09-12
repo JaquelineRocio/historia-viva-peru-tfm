@@ -4,6 +4,7 @@ Responsabilidades: transcripción, segmentación, entrenamiento BETO, inferencia
 métricas. NestJS es el orquestador y dueño de la BD; este servicio es cómputo puro
 invocado por HTTP (MlServicePort → HttpMlAdapter).
 """
+import json
 import logging
 import uuid
 from typing import Dict, List, Optional
@@ -28,7 +29,7 @@ _model_bootstrap = {"status": "disabled", "error": None, "repo": settings.defaul
 
 
 def _load_default_model() -> None:
-    if not settings.default_model_repo:
+    if not settings.default_model_repo and not settings.default_model_release:
         return
     _model_bootstrap.update(status="loading", error=None)
     try:
@@ -37,8 +38,19 @@ def _load_default_model() -> None:
 
         target = resolve_storage_path(settings.default_model_path)
         target.mkdir(parents=True, exist_ok=True)
-        snapshot_download(repo_id=settings.default_model_repo, local_dir=str(target))
-        beto.load_model(str(target))
+        if settings.default_model_release:
+            from app.ml.model_release import download_release, validate_release, verify_files
+            release = validate_release(json.loads(settings.default_model_release))
+            # El build ya incluye los archivos. Arranque sin red si están íntegros.
+            try:
+                verify_files(target, release)
+            except (OSError, ValueError):
+                download_release(release, target)
+            beto.load_model(str(target), release=release)
+            _model_bootstrap["repo"] = release["repo_id"]
+        else:
+            snapshot_download(repo_id=settings.default_model_repo, local_dir=str(target))
+            beto.load_model(str(target))
         _model_bootstrap["status"] = "ready"
     except Exception as exc:
         _model_bootstrap["status"] = "error"
@@ -49,7 +61,7 @@ def _load_default_model() -> None:
 
 @app.on_event("startup")
 def bootstrap_default_model() -> None:
-    if settings.default_model_repo:
+    if settings.default_model_repo or settings.default_model_release:
         # ASGI espera este paso antes de aceptar peticiones. Evita que la carga
         # inicial de BETO compita con los imports de embeddings/NER.
         _load_default_model()
@@ -119,7 +131,7 @@ def health() -> dict:
         "version": app.version,
         "deployment_sha": settings.deployment_sha,
         "components": {
-            "beto": {"ready": beto.is_loaded(), **_model_bootstrap},
+            "beto": {"ready": beto.is_loaded(), **_model_bootstrap, "model": beto.model_identity()},
             "embeddings": {"ready": embeddings.is_loaded(), "model": settings.embedding_model},
             "ner": {"ready": entities.is_loaded(), "model": settings.ner_model},
         },
@@ -266,7 +278,8 @@ def infer(req: InferRequest) -> dict:
 
     if not beto.is_loaded():
         raise HTTPException(status_code=409, detail="No hay modelo activo cargado")
-    return {"predictions": beto.infer(req.texts), "deployment_sha": settings.deployment_sha}
+    return {"predictions": beto.infer(req.texts), "deployment_sha": settings.deployment_sha,
+            "model": beto.model_identity()}
 
 
 @app.post("/embeddings", dependencies=PROTECTED)

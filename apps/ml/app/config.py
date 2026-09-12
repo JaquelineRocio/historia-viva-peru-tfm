@@ -39,6 +39,8 @@ class Settings(BaseSettings):
     embedding_model: str = "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
     ner_model: str = "mrm8488/bert-spanish-cased-finetuned-ner"
     default_model_repo: Optional[str] = None
+    # JSON con revisión inmutable y hashes; Modal lo toma del archivo versionado.
+    default_model_release: Optional[str] = None
     default_model_path: str = "storage/models/beto-v1-gold-source-aware"
 
     def storage_root(self) -> Path:

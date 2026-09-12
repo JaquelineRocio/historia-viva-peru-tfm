@@ -60,14 +60,18 @@ protege el crédito gratuito.
 
 ## 4. Desplegar
 
+El proyecto ya dispone de despliegue automático tras CI correcto en `main`.
+Para cambiar de modelo, seguir la [guía de publicación automática](aprendizaje/despliegue-modelo-automatico.md).
+Los comandos de esta sección quedan como alternativa de despliegue manual.
+
 Desde la raíz del proyecto:
 
 ```powershell
 python -m modal deploy apps/ml/modal_app.py
 ```
 
-El primer build instala las dependencias e incorpora
-`Jaqueline98/historia-viva-beto-v1` a la imagen. Puede tardar varios minutos.
+El primer build instala las dependencias e incorpora la revisión exacta indicada
+en `configs/production-model.json`, comprobando sus hashes. Puede tardar varios minutos.
 El comando termina mostrando una URL HTTPS estable `modal.run`.
 
 ## 5. Verificar
