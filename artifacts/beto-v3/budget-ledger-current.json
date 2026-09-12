@@ -1,21 +1,21 @@
 {
-  "new_training_trajectories": 11,
-  "new_training_gpu_seconds": 9595.94472309999,
+  "new_training_trajectories": 24,
+  "new_training_gpu_seconds": 17755.566257199996,
   "CD_training_gpu_seconds": 7205.3944095999905,
   "ASR_gpu_seconds": 932.9981357000124,
-  "prior_checkpoint_inference_seconds_measured": 131.14480390000608,
-  "new_unique_annotation_proposals": 999,
+  "prior_checkpoint_inference_seconds_measured": 201.76206620005178,
+  "new_unique_annotation_proposals": 1226,
   "new_historical_review_units": 10,
   "historical_review_including_previous": 30,
   "previous_successful_training_seconds": 2828.3538434999487,
   "previous_failed_training_seconds": null,
   "previous_failed_time_status": "unknown; not reported as zero",
-  "paid_services_used": false,
+  "paid_services_used": true,
   "provider_token_usage": null,
-  "annotation_budget_remaining": 201,
+  "annotation_budget_remaining": 252,
   "services_paid_USD": 0,
   "phase_B_second_review_calls": 15,
-  "annotation_count_note": "Preserved 938 historical inputs plus distinct recovery-01 hashes with actual saved proposals in either isolated pass; repeat passes add no unique input.",
+  "annotation_count_note": "Preserved 938 historical inputs plus distinct recovery-01 hashes with actual saved proposals in either isolated pass; repeat passes add no unique input. Phase H adds 80 previously unannotated input hashes; repeated AI passes/adjudications add no unique input.",
   "phase_B_second_review_batches": 65,
   "phase_B_second_review_units": 868,
   "ASR_accounting_note": "Conservative measured wall seconds of GPU transcription calls plus model loading; includes pilot. In-flight reservations settled after calls; CPU decoding/download time recorded separately",
@@ -37,7 +37,7 @@
   "admission01_unique_annotation_inputs": 30,
   "admission01_first_pass_units": 30,
   "admission01_second_review_units": 30,
-  "accounting_method": "Immutable after-D snapshot plus F receipts once each; wall includes loading/saving/reload; unsettled attempt reserves full allowance. CD unchanged.",
+  "accounting_method": "Immutable pre-I snapshot plus the sole settled I attempt exactly once, including failure; prior phases preserved. I wall includes training, evaluation and saving. Review effort and CPU diagnostics reported separately.",
   "prior_ledger": {
     "path": "artifacts\\beto-v3\\phase-f\\before\\budget-ledger-after-D.json",
     "sha256": "911e4ef44d9ff0d6bf7b02911844b45ddde4a444c9f43461ddaf8280b8017959"
@@ -92,5 +92,556 @@
       "path": "outputs\\beto-v3\\phase-f\\attempts\\d98e61f9-4c3e-49f4-a64e-529a32de3acc.json",
       "sha256": "b6be677522ba4c121ca17df1a353edb5ae3c484e4cc807acf29f4bb535ff4488"
     }
-  ]
+  ],
+  "phase_G_wall_seconds": 1842.8714362000173,
+  "phase_G_trajectories": 1,
+  "phase_G_attempts": [
+    {
+      "path": "outputs\\beto-v3\\phase-g\\attempts\\827f6363-0ee0-4da4-a386-71bdbe4b08a9.json",
+      "sha256": "db7dc4bf8f89422727ef7d5242db7aec69d8516ede4e4181cb68a6f8d14aacfd"
+    },
+    {
+      "path": "outputs\\beto-v3\\phase-g\\attempts\\c8344509-e470-4b03-8680-d503f2d51790.json",
+      "sha256": "1ac7c676f4af46a0a512610dd1935ff2edcbba6e84fd61e535af6aeb11ea06fa"
+    }
+  ],
+  "phase_G_memory_probe_seconds": 27.572122000012314,
+  "phase_G_trajectory_seconds": 1815.299314200005,
+  "phase_G_measured_seconds_per_trajectory": 1815.299314200005,
+  "phase_G_registered_estimate_seconds_per_trajectory": [
+    2080,
+    2210
+  ],
+  "phase_G_note": "The memory probe is compute and is booked here; it is not a trajectory. The single trajectory came in under the registered estimate, so the probe extrapolation of about 2.602 s was pessimistic: it averaged cold microbatches.",
+  "development_seconds_remaining": 1004.3448576999363,
+  "global_seconds_remaining": 13008.400134599946,
+  "development_trajectories_used": 13,
+  "development_trajectories_left": 0,
+  "protocol_trajectories_left": 3,
+  "reserved_closing_trajectories": 3,
+  "annotation_ceiling": 1478,
+  "reserved_S_annotations": 200,
+  "phase_H_unique_annotation_inputs": 80,
+  "phase_H_first_pass_units": 80,
+  "phase_H_second_review_units": 80,
+  "phase_H_adjudication_units": 14,
+  "phase_H_pending": 1,
+  "phase_H_authorization": {
+    "path": "artifacts\\beto-v3\\phase-h-data80\\preregistration.json",
+    "sha256": "88496101865d64997d3cf4a1d501ba8c66519cb4255e790630c00bfc3578cb7e"
+  },
+  "phase_H_annotation_provenance": {
+    "path": "artifacts\\beto-v3\\phase-h-data80\\adjudicated80-v1.json",
+    "sha256": "ec6c4001ec90c238add6152aecf390e6a94366c32401ededdb9c046615d97dd1"
+  },
+  "phase_H_inference_seconds": 29.160908099991502,
+  "phase_H_training_wall_seconds": 1746.6973871000082,
+  "phase_H_unsettled_reserved_seconds": 0,
+  "phase_H_trajectories": 1,
+  "phase_H_status": "failed",
+  "phase_H_gate": {
+    "path": "artifacts\\beto-v3\\phase-h-data80\\gate-seed-42.json",
+    "sha256": "aa3540a85e9cf5a6e554d3aa9f61e89ea3ad74bfd8a98b77383c35a863a33a90"
+  },
+  "phase_H_complete_trajectory_seeds": [
+    42
+  ],
+  "phase_I_training_wall_seconds": 1885.386307599998,
+  "phase_I_trajectories": 1,
+  "phase_I_unsettled_reserved_seconds": 0,
+  "phase_I_training_status": "complete",
+  "phase_I_first_review_units": 56,
+  "phase_I_second_review_units": 56,
+  "phase_I_review_sessions": 2,
+  "phase_I_additional_unique_annotations": 0,
+  "phase_I_attempt": {
+    "path": "artifacts\\beto-v3\\phase-i-family\\attempt-settled.json",
+    "sha256": "f507d4f2de41bfffc8e3989a0e6ff77012f71c26bab546de416cc8b6ca1220a9"
+  },
+  "phase_I_authorization": {
+    "path": "artifacts\\beto-v3\\phase-i-family\\approval.json",
+    "sha256": "62f98e09fb7f9d09294c3a09e3d97eaf4bd4882102a2cde9d0801443672b9989"
+  },
+  "phase_I_review": {
+    "path": "artifacts\\beto-v3\\phase-i-family\\ai-review-summary.json",
+    "sha256": "74782838c9cb969ae6663d8d87727c6bc57238d14c30f6a073dfd153d2cf03af"
+  },
+  "phase_I_status": "failed_gate",
+  "phase_I_gate": {
+    "path": "artifacts\\beto-v3\\phase-i-family\\gate-seed-42.json",
+    "sha256": "bb32249744226a8661e39a77f41857166aeedf80affd3d70db8073c25b8cac60"
+  },
+  "phase_I_complete_trajectory_seeds": [
+    42
+  ],
+  "scope_r7_pilot": {
+    "status": "do_not_promote_B",
+    "completed_judgments": 144,
+    "planned_judgments": 144,
+    "reviewed_unique_originals": 28,
+    "new_unique_annotation_inputs": 1,
+    "paid_credit_use_authorized": true,
+    "account_credit_drop_observed": 325.73626,
+    "credit_attribution": "Account-wide decline; includes coordinator and concurrent activity; not exact pilot-only charge",
+    "provider_usage": {
+      "input_tokens": 1608031,
+      "cached_input_tokens": 344832,
+      "output_tokens": 53428,
+      "reasoning_output_tokens": 17487
+    },
+    "provider_usage_records": 144,
+    "billed_USD": null,
+    "credits_purchased": 0,
+    "training_trajectories": 0,
+    "report": "artifacts/beto-v3/scope-r7-pilot-run/informe-ejecucion.md"
+  },
+  "services_paid_USD_scope_note": "Historical USD total preserved; this pilot used previously available Codex credits, monetary conversion unknown; see scope_r7_pilot.",
+  "e5_frozen_candidate": {
+    "status": "complete",
+    "reserved_seconds": 0,
+    "wall_seconds": 15.963115799997468,
+    "run_id": "e5-frozen/42",
+    "error": null,
+    "trajectory_charged": 1,
+    "accounting": "Conservative all compute wall time, including CPU and synthetic inference"
+  },
+  "beto_smoothing_amendment": {
+    "original_trajectory_ceiling": 18,
+    "amended_trajectory_ceiling": 19,
+    "additional_seconds": 0,
+    "approval": "artifacts/beto-v3/beto-smoothing/approval.json"
+  },
+  "beto_smoothing": {
+    "status": "complete",
+    "wall_seconds": 463.3684073999757,
+    "error": null,
+    "reserved_ledger_sha256": "af0ffb1dab4f49035feebafc4a90a3f10c7aca3ccb78b64d16fad6b22589290d",
+    "trajectory_charged": 1,
+    "utc": "2026-09-11T22:29:55.590070+00:00",
+    "reserved_seconds": 0
+  },
+  "tapt_new_works_amendment": {
+    "trajectory_ceiling_before": 19,
+    "trajectory_ceiling_after": 22,
+    "additional_trajectories": 3,
+    "additional_seconds": 2083.447562199988,
+    "approval": "artifacts/beto-v3/tapt-ready/approval.json"
+  },
+  "tapt_new_works": {
+    "control": {
+      "stage": "control",
+      "seconds": 288.7562816000136,
+      "error": "CalledProcessError(1, ['D:\\\\MASTER EN DESARROLLO CON IA\\\\PROYECTO FINAL\\\\outputs\\\\venv-ml\\\\Scripts\\\\python.exe', 'D:\\\\MASTER EN DESARROLLO CON IA\\\\PROYECTO FINAL\\\\scripts\\\\run_beto_tapt.py', 'worker', 'control'])",
+      "status": "failed",
+      "trajectory_charged": 1
+    }
+  },
+  "tapt_new_works_accounting": {
+    "seconds": 288.7562816000136,
+    "trajectories": 1,
+    "method": "Prior ledger plus settled stage wall time once; includes loading/evaluation/saving, conservative GPU accounting",
+    "verification": "artifacts/beto-v3/tapt-ready/execution-verification.json"
+  },
+  "dapt_recovery_amendment": {
+    "trajectory_ceiling_before": 22,
+    "trajectory_ceiling_after": 23,
+    "additional_trajectories": 1,
+    "additional_seconds": 0,
+    "approval": "artifacts/beto-v3/tapt-recovery/approval.json"
+  },
+  "dapt_recovery": {
+    "control": {
+      "stage": "control",
+      "seconds": 488.163493,
+      "error": null,
+      "status": "complete",
+      "trajectory_charged": 1
+    },
+    "mlm": {
+      "stage": "mlm",
+      "seconds": 32.57999649998965,
+      "error": null,
+      "status": "complete",
+      "trajectory_charged": 1
+    },
+    "treatment": {
+      "stage": "treatment",
+      "seconds": 485.21110889999545,
+      "error": null,
+      "status": "complete",
+      "trajectory_charged": 1
+    }
+  },
+  "dapt_recovery_accounting": {
+    "seconds": 1005.9545983999851,
+    "trajectories": 3,
+    "method": "Prior ledger plus settled wall time once, including loading/evaluation/saving"
+  },
+  "checkpoint_diagnostic": {
+    "status": "complete",
+    "wall_seconds": 33.66217780002626,
+    "error": null,
+    "training_trajectories": 0,
+    "new_annotations": 0,
+    "reserved_seconds": 0,
+    "report": "artifacts/beto-v3/checkpoint-diagnostic/informe.md"
+  },
+  "overfit_diagnostic": {
+    "status": "complete",
+    "wall_seconds": 36.95508450001944,
+    "error": null,
+    "training_trajectories": 0,
+    "new_annotations": 0,
+    "reserved_seconds": 0
+  },
+  "supervised_review_amendment": {
+    "additional_unique_annotations": 48,
+    "maximum_judgments": 104,
+    "approval": "artifacts/beto-v3/supervised-review-ready/approval.json",
+    "consumed_new_annotations": 0
+  },
+  "supervised_review": {
+    "input_hashes": [
+      "37e858e5ca8f7d545f099739e8a3edc1cb5a7bb40d4b1c0f0067dd01ef39d9c1",
+      "9a3e817e8b5b19865711cc13b0da5c6984a7fa01befc22513da575e6b01c877d",
+      "1ffe27828286ce28f543aca952545b49127091aad90b8039e595f9275f56ad53",
+      "3da6bd28640ed24f2ff62b38c41a84c4ac6097230a4fa62613ccdfe689de465a",
+      "e29432cc4c649db37508d473bac42c4b4fc0474fa9d961c161073c1f3fd186df",
+      "72d2704fea8eb2c711f70d09e8af651eb929985136377247559d6bdfa90ad020",
+      "bb0cfe5cc4c214e27b4ca2972514123c0afd106205839aa00075ed77b56b5973",
+      "623caf016af4e05164d51ab15d0576224f39f181c43bcc4f14998facd87f5168",
+      "6f2ef8cf79cc5d31d16d015460b1c26af7ec752c14e1c6f1e5a7c3fe4ef9daba",
+      "f105adc4b000923fb11b1d073159dfdb2094f06ee16d705eac4eac2b0b8e7c4c",
+      "32c017ac9bc43a0483dece51de488c2330eac684d058209c6ef8f2bdc35bd6b2",
+      "a58403b4fed598e6a47eaf091e7287172d5a9fb1823e66ed8948e4d245531595",
+      "f16a652fcb53066241fe6d4052cf5ce899228be3480ee68abb06e4445ac84e8f",
+      "6cecae28f0affd751fb57617cea0af81b30a3a7fbbdefc608b73924417d53d84",
+      "188e3ee1d62e59efb86593b3258ecc7fb4f2cf5b4dc752c4ca869e58fa84207a",
+      "83662c34c1f832745dc5fb4b3b36f72726a80157e0d409535986dd89fd5799fc",
+      "a55a995490242b9742fc9e0ef193796fe63fffa1210b982ee12a5b574a866651",
+      "52dbe1d7d3448a1d80e9e2efe074588d041e0080d23db4d8e8fd295ffc1a92b6",
+      "46ac8201b54942820bd83a47fd63fa4acba0ebdeb783fe19838d48d38f816961",
+      "24d7afff31785fb1f16023cfcde00100690baa0001d92ade6c82847afd5a10d9",
+      "9333afe348fafaffdf502d974a5e31ca03574cb1d1f9f86aad2bbe5c1f23f61d",
+      "a9b024050687b03be8df1d42be0812c2b962d6a6ea44e8d175804e052c39c12b",
+      "aaefe9fce910c8e9a0b2de36aafa26c4fbda360b16043d286aa9c12f6eba9f3e",
+      "097460f699638b88839778cfe5f0982121e34d73d2d675fe77d54fb0bb11d365",
+      "bc9fa154b18c32a1973b40b6db60c3116c820202c4ef13249b08fca26e661957",
+      "85cab750dbd81613dd351e068ada863521757563c9fd7a29c2c5a9fdbb140c12",
+      "27bf7a53e6ce088e438fada22ab4453007ce3c20d9125266dfb67b8593460a42",
+      "adaff56d6b66cc3d9c1749fa9c6ef50bee926480d069212f466d1d2fe117530d",
+      "d24d31074d9168ed2a265ce5804642fb33e00fce067237fb0e43e5d30ab9c7c3",
+      "4fa595e6f0f5eea6af498797f0d0b6675fb878df62ed2fe6de586a268029b16e",
+      "f3746a4fbbb71c0d83a5a0714c8a16fa12f3e95c3f047c0290c0f830d5c5b85b",
+      "a8508bf874ac4132158d1db880c69ec71c57f106e6a0b9d3f92a9d75e627a40a",
+      "a5f833cd24e9a082a86f4a8117b2908bd5d27f83f408d9776f01db1381e15bd3",
+      "287171c48b9c9fe703087f51f97cd0148ff133835a48c593213610cfa960026e",
+      "f8bcdadd641c97f6b3a858fd265d0724304d0ec8de16e43d80c11cddafdf675a",
+      "28c7e3b097de9af64c3ead85b13b1feb51a26f7ddc1bf848b97886a5380cfc8b",
+      "183bc84e69d95b444c78e86c06c14eaa6d2a093d01e3d2d3ddebbc2db85680f1",
+      "7c6b0032dc16f0e2f22f50fb222e17df31ac4925c92bf3925c8288fdeb2d6ac9",
+      "8da9de479966b17fe195ce6d854ff1ba2b85f25538c7b944a1f0a944465cbe63",
+      "2128f2131441b54c97ee0eceb15b3e837398b23364169cd6afa8c9acec9850ce",
+      "f0e22b5ad1d57d0db62d113bf52e71c5f1e43dfcbb1e56651a94a7bd9e641dc6",
+      "994b6bfb45b57d897972ff4ea53fd9e378cb7a98f72b59065955ca9e7c71f124",
+      "577f28cf606c9324230e686bdaebbafeab46fbc0bae26798283560cadcaa5644",
+      "bcfa21dbb55eb6c20706264783b74419cee273266a6407f28e9c309aaf82e668",
+      "a69b067d0f52b02029b2b0a431c497f24a038f5955a562fe2898e82b751bf448",
+      "2d8fe083097cea2d1071f76aaecd0ac29ebdb9ea5fa8bb0607bac225a7e2ff63",
+      "e92340adf88ec244b69b9718721733f56cca4bf7bd968d14509ae685f72c3c51",
+      "1d21b0b2d671780b7375f9e8f8b5cd5b89113511e4b31ca0c756e3db3d0ac49c"
+    ],
+    "judgments": 104,
+    "last_balance": {
+      "at_utc": "2026-09-12T01:45:14.474120+00:00",
+      "credits": 4161.290644,
+      "quota": {
+        "usedPercent": 100,
+        "windowDurationMins": 10080,
+        "resetsAt": 1789507059
+      }
+    }
+  },
+  "directed_family_expansion": {
+    "authorization": "artifacts/beto-v3/directed-family-expansion/user-authorization.txt",
+    "annotation_ceiling_before": 1328,
+    "additional_unique_annotations": 26,
+    "maximum_judgments": 60,
+    "input_hashes": [
+      "3cc8c0835dc2253c0c121f2fdf5817b44aca81ce3674c00521e50cf96a983ea2",
+      "76f0e13b66177430f6264f9a963231bda3d8378292c2ef740ed1697912fff0d8",
+      "abb5c8822149db87d66390e1bdcb62e64137fc5d6f304055d61753ba5125561d",
+      "6780d7202e50b447969e5262c18b73e73859813bfb6aba97b067cf8e7827aaf2"
+    ],
+    "judgments": 16,
+    "conditional_training_trajectories": 1,
+    "training_budget_amended": false,
+    "last_balance": {
+      "at_utc": "2026-09-12T03:15:37.281553+00:00",
+      "credits": 3816.376104,
+      "quota": {
+        "usedPercent": 100,
+        "windowDurationMins": 10080,
+        "resetsAt": 1789507059
+      }
+    }
+  },
+  "guide_v32_pilot": {
+    "approval": "artifacts/beto-v3/guide-v3.2-pilot/approval.json",
+    "allocated_unique_inputs": 20,
+    "reallocated_from": "unused22_directed_family_expansion",
+    "maximum_judgments": 64,
+    "input_hashes": [],
+    "judgments": 0,
+    "status": "approved_preflight",
+    "training_authorized": false
+  },
+  "reference_v32_supervised_run": {
+    "run_id": "reference-v32-42",
+    "approval_sha256": "fef0637e6f76b64fbb50a9b0d023336ad7a82d4dbfec1485529e6bac978e0a2e",
+    "ceiling_before": 23,
+    "ceiling_after": 24,
+    "trajectory_charged": 1,
+    "ledger_before_sha256": "6b87fa932061b96b20b87efe82ce09b0b9ec20bb14fbc1b1a428c8fe129a4973",
+    "status": "incomplete",
+    "training": {
+      "status": "failed",
+      "settled": true,
+      "reserved_seconds": 0,
+      "actual_seconds": 1.0460000000020955,
+      "receipt_sha256": "e80e36b4b90fb83db427b415531d58df9e1cfd96b33fc050cd99a5fc30af5de8"
+    },
+    "evaluation": {
+      "status": "skipped",
+      "settled": true,
+      "reserved_seconds": 0,
+      "actual_seconds": 0.0,
+      "receipt_sha256": "b3c02bc59aa5a05c3b472ffea8944bdbbd339341a74445cfa7063452fd0d2eeb"
+    }
+  },
+  "reference_v32_windows_recovery": {
+    "run_id": "reference-v32-windows-recovery-42",
+    "approval_sha256": "4ff532d666192cf4e7596c44ea3fc2a7344e73ab1caed2011b1e2285fce8ba88",
+    "ledger_before_sha256": "8cb4929278832b5275fd71ee611619cf7a09f99b1dc7892b45198716a46199f2",
+    "status": "incomplete",
+    "trajectory_charged": 0,
+    "reuses_charge_from": "reference_v32_supervised_run",
+    "ceiling_before": 24,
+    "ceiling_after": 24,
+    "failed_attempt_seconds_preserved": 1.0460000000020955,
+    "training": {
+      "status": "failed",
+      "settled": true,
+      "reserved_seconds": 0,
+      "actual_seconds": 57.171999999991385,
+      "receipt_sha256": "6ab0d8b8b122ec80a5c3057136ad9589235e7007652f00f1ccec5d044fcb0f43"
+    },
+    "evaluation": {
+      "status": "skipped",
+      "settled": true,
+      "reserved_seconds": 0,
+      "actual_seconds": 0.0,
+      "receipt_sha256": "b3c02bc59aa5a05c3b472ffea8944bdbbd339341a74445cfa7063452fd0d2eeb"
+    }
+  },
+  "reference_v32_paths_v2_run": {
+    "run_id": "reference-v32-paths-v2-42",
+    "approval_sha256": "335509013f9b6cac0a18caf8d16f09ee8aa34114b6aa052559fd654bc992ad0f",
+    "ceiling_before": 24,
+    "ceiling_after": 25,
+    "trajectory_charged": 1,
+    "ledger_before_sha256": "48cd511cdfa7430d3f3dc243718753d060842ca6dc87dd31a4d9d4ff73fab159",
+    "status": "incomplete",
+    "training": {
+      "status": "failed",
+      "settled": true,
+      "reserved_seconds": 0,
+      "actual_seconds": 199.25,
+      "receipt_sha256": "a1bc9b98c687803128571f279363d40f1641afd51679aab7f26852370c396dc5"
+    },
+    "evaluation": {
+      "status": "skipped",
+      "settled": true,
+      "reserved_seconds": 0,
+      "actual_seconds": 0.0,
+      "receipt_sha256": "b3c02bc59aa5a05c3b472ffea8944bdbbd339341a74445cfa7063452fd0d2eeb"
+    }
+  },
+  "reference_v32_amp_v2_run": {
+    "run_id": "reference-v32-amp-v2-42",
+    "approval_sha256": "ea30f47c0436d5d4d2f72b5c69a59c9413d6a5879d43fa5f0af05fafe835dda7",
+    "ceiling_before": 25,
+    "ceiling_after": 26,
+    "trajectory_charged": 1,
+    "ledger_before_sha256": "f1bdcdb3cca67cd1a22b74a1ba5ddd1b11c229d3d9c4d2d379ee25dbf29c9fdf",
+    "status": "complete",
+    "training": {
+      "status": "complete",
+      "settled": true,
+      "reserved_seconds": 0,
+      "actual_seconds": 351.56200000000536,
+      "receipt_sha256": "3cbeee38649bfd613b1c3e6a2db88317a0202adff900d6d6f7611df5cdd84127"
+    },
+    "evaluation": {
+      "status": "complete",
+      "settled": true,
+      "reserved_seconds": 0,
+      "actual_seconds": 15.625,
+      "receipt_sha256": "19b3deb9c6196d1adb537e3c5925b76b649aed906f4095c55dc63e08326813a4"
+    }
+  },
+  "reference_v32_family_v1_run": {
+    "run_id": "reference-v32-family-v1-42",
+    "approval_sha256": "563ea5594ae5e53fe4d8dab203854acae4ed1b613a018d443d850daff46e5bf3",
+    "ceiling_before": 26,
+    "ceiling_after": 27,
+    "trajectory_charged": 1,
+    "ledger_before_sha256": "244218de2da131aa4f8f2ec0434c4232c4ee475bb2584046f38e806dad1fae4c",
+    "status": "complete",
+    "training": {
+      "status": "complete",
+      "settled": true,
+      "reserved_seconds": 0,
+      "actual_seconds": 301.5940000000119,
+      "receipt_sha256": "0d239264b03d790e1dd2aef4efc5e22d956d2129e036f678be072b3cd0833f36"
+    },
+    "evaluation": {
+      "status": "complete",
+      "settled": true,
+      "reserved_seconds": 0,
+      "actual_seconds": 4.078000000008615,
+      "receipt_sha256": "3a25bf54058dd95077326b7a3254398e20f07cf2f97833f239b6b0bdddc01691"
+    }
+  },
+  "contrastive_train_preparation_20260912": {
+    "status": "complete_no_admission_no_training",
+    "authorization": "User request for contrastive expansion and two blind AI agents, 2026-09-12; current hypothesis wording preserved in report",
+    "unique_inputs": 20,
+    "input_hashes": [
+      "095993fe6a43306806156ae5433c158ea7f18b38d2100e377ba5635e7c34bb7d",
+      "a29037150d22e3690a0da0481f5ef912c1d01053233d9909f7bdae87d46b34f1",
+      "a4019f1b3ed72d601e59fe0cb1923198a3b25ac1f83de05fb8fa72efac979097",
+      "3e0b5c60bb44ebfad3f74d98519db7cc6f7f95c61de479821499516201383c48",
+      "de2b691064ded65b09695362acea71cbc5d04746e5d57666485a261207a59246",
+      "20e4c7a18d29c5aa10d2417542c8c0129ddbe5631a5eec6e80efcfc8af29ab15",
+      "6a30879f6bf8888b5b19204f0916edb9a2d3dd28803bc69ea3648124c6f610f7",
+      "e156dc9bfafb12c553a6986d9651d59c68f4bbb172297d0c16890f0cc6210ecd",
+      "c64340d3835c477d74871412d56867ebbde03a60b339092748283936ba3941aa",
+      "c1a8c0beafb40b19a95ccb6129cca6bed17637db1138c529c81e5119dd507c60",
+      "4651a882fe40c151d88ec096488d4fd56625ad1b8f7fdfe6aefd32aab19348a0",
+      "1f0cdf543c8468c28b3aef41d582899ee25e8aad5da618afaaed4009c4cb6e15",
+      "9efb71751cb805fb2c812d44307091b3396062f43e6fb7ff115c130d1be3a3af",
+      "6f417b798c3045889c94f0b502e79d3c99887b778bd92e49ce628004bda4e189",
+      "a189b12b998dd128f0601af1e43ee1ca769794e126c0414aa823c97e0a3019eb",
+      "d47e657193648e93a893adc3609dbf8bacdc59e96bac566c5c4c53ab4b9f541c",
+      "3deb4e7e53fe4b3c7ce85db5ed43299a2eba52b1bf00d1600396ccb220b069a9",
+      "5b92b17ac649cf8c881e3be9684e16119c22765c703d2f08ea96bc93fa324741",
+      "8e1c9fd92f08cfbc43b7be449766d4c3a5e4f7db41efbf915e5089b7d335141c",
+      "46ba1c3aa68494797df480bbc09fb0825238caac4c35fb034cde3de9c95dab8e"
+    ],
+    "judgments": 40,
+    "review_sessions": 2,
+    "allocation_note": "Uses 20 of 22 non-S unconsumed inputs; supersedes unexecuted guide_v32_pilot allocation for this task without executing old pilot or raising ceiling",
+    "training_trajectories": 0,
+    "training_gpu_seconds": 0,
+    "external_paid_API_calls": 0,
+    "exclusive_provider_cost": null,
+    "cost_note": "Agent session credit cost not separately observable; not claimed free",
+    "report": "artifacts/beto-v3/contrastive-expansion/informe.md"
+  },
+  "contrastive_three_rounds": {
+    "approval": "artifacts\\beto-v3\\contrastive-three-rounds\\approval.json",
+    "additional_unique_inputs": 124,
+    "maximum_unique_inputs": 126,
+    "input_hashes": [
+      "b79d8b6bb9781fa8a7804c9e6805a1beb5f1424dbfc533842ef7c033b029e969",
+      "1ffe27828286ce28f543aca952545b49127091aad90b8039e595f9275f56ad53",
+      "bb2754c342c677f723b1a26e36cd60d161bc843e1aef917747bf92890d70a078",
+      "874de4a83fcf4431a2d2a9dab9d32a4f47e3b4245792945df86add29836e675a",
+      "6d2d99fdef1d8138188ea2568e4df920e36e2ed1b2dbec5f1d10e5c1b3c8c226",
+      "7d9ac1a3a2466ae137d0e8c37b1c6a71decd66470e0e5560ff98d58a1786c440",
+      "acc9bee67eaa99cd147aa9a13aed6c02b8bdd7f0a742503674125dfb0cff5aa9",
+      "b94caaa401aed701705bbcd460b807be5de5cbd3fb08b1f7b5b2bef92799203b",
+      "532518da4a41f7c28b29cd3aeb6b93a2d24e9939261f4c86eeb4bdef6a2c89b3",
+      "d691e526004626888cc6372801377dae564e6961d10059e99afd48a99cb5a438",
+      "46a6f4833e70b89c3e2acdc88f040ee7365090aad5945020c8c1334b7e67df26",
+      "7b655bcbbc7f1a0a9e5b26294e18bd4930f899b264d507a52145624f72fc861a",
+      "a8508bf874ac4132158d1db880c69ec71c57f106e6a0b9d3f92a9d75e627a40a",
+      "d5bb9b01ca05fae3e12b81e7f1f86b6330ac085620137d5bcb745653271dfe85",
+      "6a2a2e4bdfd0dc4111c829e70133da6424c11bbeb6140484f74a6d94ef4382f4",
+      "a18d0532615cd1740bc08b1e0b5ec9d2ef9dc5138fb5770086738b57d5e0a251",
+      "1ecb19a00e9fa91a2e4a6e250f17c260009f892a38f64aeea2de27dfd75ab48a",
+      "b2359e2485e3bff809750fccc0dc4f0d9b4880ee5d8b4762ef4f9760b749c733",
+      "d1150f6424964cdd6442a182675b5deb91455fa408287429c2787caf02b1e2b3",
+      "0ca0aa29f44d05f91e01585bb49916d6f495fa8c7cae1e5af70aad17d9017826",
+      "408dfba2b05592006e3ee9198eccc8e144ccf113293b1f85a712860206a36a6b",
+      "bafda35de271e03bff6882e2d5acef127d3ffec0f63395d9228a86de4cecbc6f",
+      "f6396293d37f83fda1184401cc67b9215845c1a2d31b24a2e540a9d189f2ae0c",
+      "1b754d820bb985e960d625bd6616d27e0ae4215ece2cbdb18015b74f6c3f7c25",
+      "277637af3b72491460e25ca789857fe715b61d837a583c9a14b209abcf7141b7",
+      "f2b2900315714dd5b138e85510a9b2bcdee24a856511bb9f806b5da28f7d1c65",
+      "9c356c041822ac20f3dcd2b3955949429c69975dd409241fae858f8372c71114",
+      "0f8789ac46a57bbd57509bf4985643b0630fe35474fd96879f11e444b9a5490e",
+      "9b7c7fd854e4fc0f3fffae6f97c7c629ed2fefc5d3b8667d11e169eda570be69",
+      "ce17c837ca6b45bdca0263cdd4a3b726956e9845cdaaaa7cf7e641a52507c075",
+      "7862d4ad8a5d900c6e637cafd74cea8701c515baa21ac6c0ccd00db7a4f500c0",
+      "71f5f72d695f23ba8c5ccf5b4e5de4907efcec59fabc5070c4c1ca4eb0cbc00a",
+      "01c8c028a944458b462a31f7c422b7e70a3bc9c0d7ef098794a5f8ab87e6b534",
+      "f117093aa902028d7955bda417767e6b78729fceb28ee94649a19bd2e60d2116",
+      "08221d677b05f2a76f5f38f9d240a25cb7ee5ad0678f4f1dc117fa9fe498b3fd",
+      "160bfd0eeaf8c8036271930db179ecaf493ec66235b093f429c025fcf3ef2fc9",
+      "1b6674b3e9e8197a359ac48b33b29c91b528f802a87ca7f446e16e007ffde448",
+      "22a0016544b4f5c85b2ab3767c1937e1c621fb4f342c940b8d39db9fab9cac8e",
+      "66b63da71534f473734fe437010835e6a68018c843d10a5b406ef89a4f4982bc",
+      "280d9ad964c46181ab705b403e4267f6be8fea4a756c3599cd45ea6764cd17b3",
+      "04df7d9d3e67492d2750b9e8354618b7eccac5371eac08ce22e42954c11f4088",
+      "3662a891e338edb214572812999eb7442db3c93282b72866a3592807e3e874ac",
+      "08b6df91b77171eb0bcbbf9d8d3003390acdadaf03f48d1de2327a46a75d79c2",
+      "1d9e6df022377fa49d4bbe131c15c6fe09a4bf0416d054bb5d13ee2ea17eaeb5",
+      "4a333c59c3c28fe29582c9e47ba220f1587108a0efea4296795ca9c6810583ce",
+      "60747e6533b5ca7bad72bcea68ba26c445813b28909f8b300d9b08ce8fd30780",
+      "9d145d112817e4a2bf4ff22801ced5e68ff4f9f6ac36e3fa2e96c9bc8b7bbbae",
+      "be0abe22abdb9f5996b2eeb878cfb2554c0ab27300a911fac6d4d87f530be56d",
+      "055007305f3ba37c08d6521121f4ba76b5dab421870b4316b9739333a3b84b17",
+      "c104fec3a65df0d60de6c1392b6439a80b2ea30162fbc04cd521ea1ee84140b0",
+      "190d09279919c19bad86f82fed0a226f14234f30c9b75b84797e7cc4c7b63e79",
+      "406967b0cae7926169a060f14f1e89860a9820d8b3f585f46f2ef9425b602a7b",
+      "d2247d2ba52febcc886ea6153e8bd093baaee57485425197dd67fd105a82ec07",
+      "edcce5cfcdf6615c05ec90353e94840763cab6bd5186e6fb6a12f63227d4ed8d",
+      "9d98eba14ce8be86fd46b93272a387ee84bc02ef38dd5e879d4e6c57b96abc37",
+      "6ddd0a1276382caf1104216b56b85a88249462adf00e3adfba3106dd856c2b39",
+      "459b11f96c1aa4911be9619d3a7202ebb4bda35e1939c813d7d7a334a522094b",
+      "7772e6f4ce255a8a9fff6203ffd16b95358a1bc5b070b181897b1267c98566b2",
+      "ce8cb0ad6435aed83580be44f90cc773d756700f0df43c554f9af7a6cd4ac9d2",
+      "658404955f2311f686f60cd2ffa22998548723e8b6755efa2b989ca42b4a9f24",
+      "881619a019183a063bc50576621df3074469f4e870e7043285bf641fa0a250a0",
+      "548a3636944a905cd3ebecde24e1ee1067274d8c005e5fffb80646ce86a6f887",
+      "c6a6e2b053c7eff3ecacd00633eadf233e0e2391a408d88df64481d1de1a2257",
+      "415db145c2261551ff122a2abf938c77717326913f088d73ab38594d8c27c7f6",
+      "18ebca9c397ffbe86a1afb1b5ae269f4e28afb9f910e107a673eff0bf4b082ad",
+      "617d38ef6553e8a354a9af125d86a5eaee88ec2e7f132e64ce3286bbb3423505",
+      "dadd8e4de31da94bcc7c0a0c6bc81ba6f6f7e1365c326a97d3e1682bf73f2c64",
+      "653ad5e0c446fcdaa61a98949a30aa7c102da6caa1fa9b18d6d5e8ee77d63e76",
+      "1854290fa75c38c3d206adb1879d19d6a3ffe4d6bb3ac13d1606b5b986a7d3ff",
+      "bffaf079a0c3245db56eec87a1f4b46f7eb9b5b969cfd70d123f5755f445479f",
+      "af0899eb2333b45ad7b6d68c9bd47ebb29c87360e9d5a2d3f6ae7cfed4c8fd52",
+      "4a8abaafcd714460a1f8c5ca8069d674caad44f1f264633af36233643a2d1aa2",
+      "a9271065b1918b10fe3bfdb7486f926df7eba853a8f23b583fd516fa643ef0ae",
+      "a7423440f8e98c9bb3f05b87c277576bf895fff3baeba2a33e4856d5c8dd2ff5"
+    ],
+    "judgments": 146,
+    "rounds_completed": 3,
+    "status": "closed_after_three_rounds",
+    "training_authorized": false,
+    "stop_reason": "three_round_limit_reached_with_insufficient_boundary",
+    "final_verdict": {
+      "A": "SI",
+      "B": "NO",
+      "C": "NO",
+      "D": "NO"
+    },
+    "incorporated_into_train": 0,
+    "individually_proposable": 23,
+    "remaining_development": 52
+  }
 }
