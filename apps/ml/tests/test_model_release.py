@@ -161,6 +161,8 @@ def test_pinned_startup_uses_verified_local_files_and_bound_identity(prepared, m
 def test_modal_recipe_pins_download_and_rejects_bad_build_files(prepared, monkeypatch):
     import runpy
     import shlex
+    import shutil
+    import subprocess
     from app.ml import model_release
     _, package, release, _ = prepared
     release = {**release, "revision": "a" * 40}
@@ -191,6 +193,17 @@ def test_modal_recipe_pins_download_and_rejects_bad_build_files(prepared, monkey
     monkeypatch.setitem(sys.modules, "modal", fake)
     namespace = runpy.run_path(str(ROOT / "apps/ml/modal_app.py"))
     assert json.loads(captured["env"]["ML_DEFAULT_MODEL_RELEASE"]) == release
+    # Modal convierte cada línea física en una instrucción RUN independiente.
+    # Una cadena multilínea pasa shlex.split pero se rompe en el builder real.
+    assert len(captured["command"].splitlines()) == 1
+    shell = shutil.which("sh")
+    if shell is None and Path("C:/Program Files/Git/usr/bin/sh.exe").is_file():
+        shell = "C:/Program Files/Git/usr/bin/sh.exe"
+    if shell:
+        # Comprobar cada RUN como lo recibe el shell, sin ejecutar descargas.
+        for line in captured["command"].splitlines():
+            syntax = subprocess.run([shell, "-n", "-c", line], capture_output=True, text=True)
+            assert syntax.returncode == 0, syntax.stderr
     parts = shlex.split(captured["command"])
     assert parts[:2] == ["python", "-c"]
     assert parts[2] == namespace["BUILD_CODE"]

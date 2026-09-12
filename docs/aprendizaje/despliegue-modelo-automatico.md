@@ -5,10 +5,28 @@ correcto en `main`. El modelo servido se selecciona mediante
 `configs/production-model.json`: repositorio de Hugging Face, SHA completo de su
 revisión, hashes de siete archivos, etiquetas ordenadas y longitud máxima.
 
-La selección inicial conserva BETO v1 fijado a
-`f7742a705373640fe7dd424aa3a5d33682c970be`. R2 está preparado localmente; se selecciona
-cuando el comando `publish` termina de publicar y verificar su revisión remota.
-No basta con subir el código del pipeline para activar R2.
+La selección inicial conservaba BETO v1 fijado a
+`f7742a705373640fe7dd424aa3a5d33682c970be`. La autora ya publicó R2 y el manifiesto
+selecciona `Jaqueline98/historia-viva-beto-r2-42`, revisión
+`31a3887ee6906c6778a4853bc76df7b7e2198282`. El despliegue depende de que CI y
+Deploy Modal terminen correctamente; la publicación de los pesos ya está hecha.
+
+## Corrección del build de Modal
+
+El [run 34725505914](https://github.com/JaquelineRocio/historia-viva-peru-tfm/actions/runs/34725505914)
+falló antes de desplegar: `/bin/sh: Syntax error: Unterminated quoted string`.
+El comando generado contenía un salto de línea literal que cortaba el RUN entre
+comillas. Se corrigió para generar una sola línea física, conservando la
+comprobación de hashes. La subida del informe se omite cuando el fallo ocurre
+antes de generarlo.
+
+Comprobaciones locales: 44 pruebas de publicación/despliegue aprobadas y regresión
+con shell real (antes falla, después pasa). Evidencia:
+`outputs/modal-build-fix-tests.xml` y `outputs/modal-build-shell-regression.json`.
+Para aplicar la corrección, revisar y hacer commit/push de los cambios a `main`.
+Reejecutar el job antiguo usa el código anterior; no incorpora esta corrección.
+No hace falta volver a publicar R2 ni entrenarlo. No se ejecutó un nuevo build
+remoto durante esta reparación.
 
 ## Uso desde PowerShell, en la raíz del proyecto
 
