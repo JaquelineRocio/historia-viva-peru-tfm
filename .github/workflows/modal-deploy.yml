@@ -84,6 +84,7 @@ jobs:
           python scripts/verify_modal_deployment.py
           --url https://jaquelineramosvargas--historia-viva-peru-ml-ml-api.modal.run
           --expected-sha "$DEPLOYMENT_SHA"
+          --model-manifest configs/production-model.json
           --output outputs/modal-deployment.json
       - uses: actions/upload-artifact@v6
         if: always() && steps.current.outputs.deploy == 'true'

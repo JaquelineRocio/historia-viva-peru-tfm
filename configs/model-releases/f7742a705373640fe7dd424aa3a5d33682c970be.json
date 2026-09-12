@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "repo_id": "Jaqueline98/historia-viva-beto-v1",
+  "revision": "f7742a705373640fe7dd424aa3a5d33682c970be",
+  "files": {
+    "config.json": "4861dfe69190f415b6bf58f4031f1494c06f3853df53140611303308c7db400a",
+    "labels.json": "3e8d21fda1c3a8c0d83249dbf89a9d5fce0e89a6635e9e52a49dac04dd59b169",
+    "special_tokens_map.json": "5d5b662e421ea9fac075174bb0688ee0d9431699900b90662acd44b2a350503a",
+    "tokenizer.json": "f0ee18fc8f95db74ce5c5c3a4070e0eb32a4b31bcde4865af63b1308e924c0c4",
+    "tokenizer_config.json": "32761d10ecdb004a090472cd8526f936fb14c66b04ef3565ac5f8f5b1a53f8cc",
+    "vocab.txt": "b8f1c939e21273bd19cd885d0b6d7eb11244240ef81f62e30dcf84b4c970ce36",
+    "model.safetensors": "9d8861f8406d41050fa57c530224a1e62983e887807fa6047eefcea52356c215"
+  },
+  "labels": [
+    "campanias_conflictos_militares",
+    "contexto_colonial_antecedentes",
+    "crisis_ideas_emancipadoras",
+    "liderazgos_diplomacia_proyectos",
+    "no_relevante",
+    "organizacion_consecuencias_republicanas",
+    "participacion_social_regional"
+  ],
+  "max_len": 192
+}

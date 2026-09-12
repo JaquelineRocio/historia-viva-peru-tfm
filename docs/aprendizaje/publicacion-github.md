@@ -18,6 +18,12 @@ el archivo esté disponible en GitHub. Los verificadores históricos pueden requ
 esa evidencia, los corpus o los checkpoints locales. Este repositorio no es una
 distribución autónoma de todos los datos experimentales.
 
+El código y los manifiestos del [pipeline de modelos](despliegue-modelo-automatico.md)
+también se versionan. Los paquetes de pesos y recibos generados en
+`outputs/model-releases/` permanecen locales; el comando de publicación sube solo
+los archivos de inferencia y la ficha a Hugging Face. La revisión publicada se
+selecciona en `configs/production-model.json` para el despliegue posterior a CI.
+
 ## Notebooks
 
 - Baseline: el notebook autónomo, el ZIP y TRAIN/DEV quedan locales porque incluyen

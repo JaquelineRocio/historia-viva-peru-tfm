@@ -6,17 +6,34 @@ Uso desde la raíz del repositorio:
 El secreto `historia-viva-ml` debe contener ML_INTERNAL_TOKEN. El modelo BETO
 público se incorpora a la imagen durante el build para reducir el arranque en frío.
 """
+import json
 import os
+import shlex
+import sys
 from pathlib import Path
 
 import modal
 
 
 APP_NAME = "historia-viva-peru-ml"
-MODEL_REPO = "Jaqueline98/historia-viva-beto-v1"
 REMOTE_ROOT = "/opt/historia-viva-ml"
-REMOTE_MODEL = "/opt/models/beto-v1"
 ML_DIR = Path(__file__).resolve().parent
+sys.path.insert(0, str(ML_DIR))
+from app.ml.model_release import read_release
+
+RELEASE = read_release(ML_DIR.parents[1] / "configs/production-model.json")
+MODEL_REPO = RELEASE["repo_id"]
+REMOTE_MODEL = f"/opt/models/{RELEASE['revision']}"
+# shlex.quote evita interpretar los datos del manifiesto como código de shell.
+BUILD_CODE = (
+    "import hashlib,json; from pathlib import Path; "
+    "from huggingface_hub import snapshot_download; "
+    f"r=json.loads({json.dumps(RELEASE)!r}); p=Path({REMOTE_MODEL!r}); "
+    "snapshot_download(repo_id=r['repo_id'],revision=r['revision'],local_dir=str(p),"
+    "allow_patterns=list(r['files']),token=False); "
+    "bad=[n for n,h in r['files'].items() if hashlib.sha256((p/n).read_bytes()).hexdigest()!=h]; "
+    "\nif bad: raise ValueError('Model hash mismatch: '+str(bad))"
+)
 
 
 image = (
@@ -27,16 +44,14 @@ image = (
         index_url="https://download.pytorch.org/whl/cpu",
     )
     .pip_install_from_requirements(str(ML_DIR / "requirements.txt"))
-    .run_commands(
-        "python -c \"from huggingface_hub import snapshot_download; "
-        f"snapshot_download(repo_id='{MODEL_REPO}', local_dir='{REMOTE_MODEL}')\""
-    )
+    .run_commands("python -c " + shlex.quote(BUILD_CODE))
     .env(
         {
             "PYTHONPATH": REMOTE_ROOT,
             "ML_STORAGE_DIR": "/opt/models",
             "ML_DEFAULT_MODEL_REPO": MODEL_REPO,
             "ML_DEFAULT_MODEL_PATH": REMOTE_MODEL,
+            "ML_DEFAULT_MODEL_RELEASE": json.dumps(RELEASE),
             "ML_DEPLOYMENT_SHA": os.environ.get("DEPLOYMENT_SHA", "unknown"),
         }
     )

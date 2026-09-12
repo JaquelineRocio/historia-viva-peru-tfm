@@ -7,6 +7,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3] / 'scripts'))
 from verify_modal_deployment import verify
+from app.ml.model_release import identity, read_release
 
 SHA = 'a' * 40
 
@@ -75,3 +76,25 @@ def test_service_reports_deployment_sha(monkeypatch):
     client = TestClient(app)
     assert client.get('/health').json()['deployment_sha'] == SHA
     assert client.post('/infer', json={'texts': ['ejemplo']}).json()['deployment_sha'] == SHA
+
+
+@pytest.mark.parametrize('mismatch', [None, 'health', 'infer', 'label'])
+def test_checks_actual_model_identity_on_both_endpoints(mismatch):
+    release = read_release(Path(__file__).resolve().parents[3] / 'configs/production-model.json')
+    expected = identity(release)
+    def respond(request):
+        served = dict(expected)
+        if request.url.path == '/' + str(mismatch):
+            served['revision'] = 'c' * 40
+        if request.url.path == '/health':
+            return httpx.Response(200, json={'status': 'ok', 'deployment_sha': SHA,
+                'components': {'beto': {'ready': True, 'status': 'ready', 'model': served}}})
+        return httpx.Response(200, json={'deployment_sha': SHA, 'model': served,
+            'predictions': [{'label': 'unknown' if mismatch == 'label' else release['labels'][0], 'confidence': .5}]})
+    with httpx.Client(base_url='https://example.test', transport=httpx.MockTransport(respond)) as client:
+        report = verify(client, SHA, expected_model=release, attempts=1)
+    assert report['passed'] is (mismatch is None)
+    if mismatch:
+        assert report['attempts'][0]['reason'] == {
+            'health': 'health_model_mismatch', 'infer': 'inference_model_mismatch',
+            'label': 'unknown_prediction_label'}[mismatch]
