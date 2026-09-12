@@ -24,7 +24,8 @@ from app.ml.model_release import read_release
 RELEASE = read_release(ML_DIR.parents[1] / "configs/production-model.json")
 MODEL_REPO = RELEASE["repo_id"]
 REMOTE_MODEL = f"/opt/models/{RELEASE['revision']}"
-# shlex.quote evita interpretar los datos del manifiesto como código de shell.
+# shlex.quote protege los datos; Modal divide comandos por saltos de línea,
+# incluso dentro de comillas. Mantener también el código Python en una sola línea.
 BUILD_CODE = (
     "import hashlib,json; from pathlib import Path; "
     "from huggingface_hub import snapshot_download; "
@@ -32,7 +33,7 @@ BUILD_CODE = (
     "snapshot_download(repo_id=r['repo_id'],revision=r['revision'],local_dir=str(p),"
     "allow_patterns=list(r['files']),token=False); "
     "bad=[n for n,h in r['files'].items() if hashlib.sha256((p/n).read_bytes()).hexdigest()!=h]; "
-    "\nif bad: raise ValueError('Model hash mismatch: '+str(bad))"
+    "exec(\"if bad: raise ValueError('Model hash mismatch: '+str(bad))\")"
 )
 
 

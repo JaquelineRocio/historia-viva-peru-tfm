@@ -87,7 +87,7 @@ jobs:
           --model-manifest configs/production-model.json
           --output outputs/modal-deployment.json
       - uses: actions/upload-artifact@v6
-        if: always() && steps.current.outputs.deploy == 'true'
+        if: always() && steps.current.outputs.deploy == 'true' && hashFiles('outputs/modal-deployment.json') != ''
         with:
           name: modal-deployment-${{ github.run_id }}-${{ github.run_attempt }}
           path: outputs/modal-deployment.json
