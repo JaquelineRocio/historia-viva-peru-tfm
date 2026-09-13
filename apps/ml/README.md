@@ -45,6 +45,17 @@ que yt-dlp leyó una cookie jar no vacía, no que YouTube aceptara la sesión.
 El mensaje simplificado de la interfaz se conserva. Para incorporar estos logs
 hay que publicar y desplegar el código actualizado; reiniciar la versión anterior
 no añade esta funcionalidad.
+Si aparece `cookies_configured=True cookies_loaded=False`, la variable existe
+pero yt-dlp no leyó ninguna cookie. El servicio ahora detiene ese intento antes
+de descargar y solicita corregir el archivo: incluir las filas de cookies, no
+solo comentarios, y conservar tabulaciones y saltos de línea reales. No implica
+por sí solo que YouTube rechazara la sesión.
+
+La imagen instala Deno 2.9.6 y `yt-dlp[default]` (incluye EJS compatible) para
+resolver los desafíos JavaScript de YouTube, conforme a la
+[guía EJS](https://github.com/yt-dlp/yt-dlp/wiki/EJS). El build ejecuta
+`deno --version` para comprobar que el motor está disponible. Este cambio de
+dependencias requiere construir y desplegar la nueva imagen.
 El proveedor Supadata existente usa solo subtítulos nativos y requiere su propia
 clave; no garantiza una transcripción para videos sin subtítulos.
 

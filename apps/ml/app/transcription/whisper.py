@@ -131,6 +131,12 @@ def _download_audio(video_id: str, dest_dir: str) -> str:
                 # Forzar lectura de la cookie jar antes de marcarla como cargada.
                 if "cookiefile" in ydl_opts:
                     download_logger.cookies_loaded = bool(list(ydl.cookiejar))
+                    if not download_logger.cookies_loaded:
+                        raise TranscriptError(
+                            "ML_YOUTUBE_COOKIES está configurada, pero no contiene cookies legibles. "
+                            "Exporta las cookies de youtube.com en formato Netscape y copia todo "
+                            "el archivo, con sus filas y saltos de línea reales, al secreto de Modal."
+                        )
                 ydl.download([url])
     except TranscriptError as exc:
         download_logger.error(f"{type(exc).__name__}: {exc}")

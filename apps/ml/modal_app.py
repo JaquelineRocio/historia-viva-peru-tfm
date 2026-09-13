@@ -49,6 +49,7 @@ if modal.is_local():
             index_url="https://download.pytorch.org/whl/cpu",
         )
         .pip_install_from_requirements(str(ML_DIR / "requirements.txt"))
+        .run_commands("deno --version")
         .run_commands("python -c " + shlex.quote(BUILD_CODE))
         .env(
             {

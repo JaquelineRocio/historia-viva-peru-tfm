@@ -87,3 +87,30 @@ def test_ytdlp_warnings_redact_httponly_cookie_values(monkeypatch, caplog):
     assert "Cookies expired: [REDACTED]" in caplog.text
     assert "sensitive-test-cookie" not in caplog.text
     assert "# Netscape HTTP Cookie File" not in caplog.text
+
+
+@pytest.mark.parametrize("contents", [
+    "# Netscape HTTP Cookie File\n",
+    "# Netscape HTTP Cookie File\\n.youtube.com\\tTRUE\\t/\\tTRUE\\t0\\tSID\\tfake-cookie-value",
+])
+def test_real_ytdlp_rejects_empty_cookie_jar_before_network(monkeypatch, tmp_path, contents):
+    import yt_dlp
+
+    monkeypatch.setattr(whisper.settings, "youtube_cookies", SecretStr(contents))
+    monkeypatch.setattr(yt_dlp.YoutubeDL, "download", lambda *args: pytest.fail("Unexpected download"))
+    with pytest.raises(TranscriptError, match="no contiene cookies legibles"):
+        whisper._download_audio("deQdS69P4-0", str(tmp_path))
+
+
+def test_real_ytdlp_reads_exported_cookie_rows(monkeypatch, tmp_path):
+    import yt_dlp
+
+    contents = "# Netscape HTTP Cookie File\r\n#HttpOnly_.youtube.com\tTRUE\t/\tTRUE\t0\tSID\tfake-cookie-value\r\n"
+    monkeypatch.setattr(whisper.settings, "youtube_cookies", SecretStr(contents))
+
+    def download(ydl, urls):
+        assert [cookie.value for cookie in ydl.cookiejar] == ["fake-cookie-value"]
+        (tmp_path / "deQdS69P4-0.mp3").write_bytes(b"test")
+
+    monkeypatch.setattr(yt_dlp.YoutubeDL, "download", download)
+    assert Path(whisper._download_audio("deQdS69P4-0", str(tmp_path))).is_file()
