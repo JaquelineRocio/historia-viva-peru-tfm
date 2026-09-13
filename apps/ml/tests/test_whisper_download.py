@@ -1,4 +1,5 @@
 import sys
+import base64
 from pathlib import Path
 from types import SimpleNamespace
 
@@ -7,6 +8,11 @@ from pydantic import SecretStr
 
 from app.transcription import whisper
 from app.transcription.youtube import TranscriptError
+
+
+@pytest.fixture(autouse=True)
+def clear_base64_setting(monkeypatch):
+    monkeypatch.setattr(whisper.settings, "youtube_cookies_base64", None)
 
 
 @pytest.mark.parametrize("authenticated", [False, True])
@@ -91,6 +97,7 @@ def test_ytdlp_warnings_redact_httponly_cookie_values(monkeypatch, caplog):
 
 @pytest.mark.parametrize("contents", [
     "# Netscape HTTP Cookie File\n",
+    "# Netscape HTTP Cookie File.youtube.com\tTRUE\t/\tTRUE\t0\tSID\tfake-cookie-value",
     "# Netscape HTTP Cookie File\\n.youtube.com\\tTRUE\\t/\\tTRUE\\t0\\tSID\\tfake-cookie-value",
 ])
 def test_real_ytdlp_rejects_empty_cookie_jar_before_network(monkeypatch, tmp_path, contents):
@@ -102,15 +109,34 @@ def test_real_ytdlp_rejects_empty_cookie_jar_before_network(monkeypatch, tmp_pat
         whisper._download_audio("deQdS69P4-0", str(tmp_path))
 
 
-def test_real_ytdlp_reads_exported_cookie_rows(monkeypatch, tmp_path):
+@pytest.mark.parametrize("encoded", [False, True])
+def test_real_ytdlp_reads_exported_cookie_rows(monkeypatch, tmp_path, encoded, caplog):
     import yt_dlp
 
     contents = "# Netscape HTTP Cookie File\r\n#HttpOnly_.youtube.com\tTRUE\t/\tTRUE\t0\tSID\tfake-cookie-value\r\n"
     monkeypatch.setattr(whisper.settings, "youtube_cookies", SecretStr(contents))
+    if encoded:
+        encoded_value = base64.b64encode(contents.encode()).decode()
+        monkeypatch.setattr(whisper.settings, "youtube_cookies_base64", SecretStr(encoded_value))
+        monkeypatch.setattr(whisper.settings, "youtube_cookies", SecretStr("old-invalid-setting"))
 
     def download(ydl, urls):
         assert [cookie.value for cookie in ydl.cookiejar] == ["fake-cookie-value"]
+        ydl.params["logger"].warning("Cookie value: fake-cookie-value")
+        if encoded:
+            ydl.params["logger"].error(encoded_value)
         (tmp_path / "deQdS69P4-0.mp3").write_bytes(b"test")
 
     monkeypatch.setattr(yt_dlp.YoutubeDL, "download", download)
     assert Path(whisper._download_audio("deQdS69P4-0", str(tmp_path))).is_file()
+    assert "fake-cookie-value" not in caplog.text
+    if encoded:
+        assert encoded_value not in caplog.text
+
+
+@pytest.mark.parametrize("value", ["invalid-base64!", "/w=="])
+def test_invalid_base64_fails_without_exposing_value(monkeypatch, tmp_path, caplog, value):
+    monkeypatch.setattr(whisper.settings, "youtube_cookies_base64", SecretStr(value))
+    with pytest.raises(TranscriptError, match="Base64 válido"):
+        whisper._download_audio("deQdS69P4-0", str(tmp_path))
+    assert value not in caplog.text

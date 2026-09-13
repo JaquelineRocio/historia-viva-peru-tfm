@@ -16,6 +16,24 @@ Supadata requiere `ML_SUPADATA_API_KEY`. Los endpoints privados exigen
 
 ### YouTube solicita verificar que no eres un bot
 
+Si al pegar el archivo en un campo de una sola línea se pierden los saltos,
+usar `ML_YOUTUBE_COOKIES_BASE64`. Codifica el archivo completo, conservando sus
+bytes. Esta variable tiene prioridad sobre `ML_YOUTUBE_COOKIES`; se puede eliminar
+la antigua después de guardar la nueva. Base64 no cifra las cookies: protegerlo
+igual que el archivo original. Si se compartieron cookies, invalidar esa sesión
+y exportar un archivo nuevo antes de continuar.
+
+En PowerShell, sustituir la ruta por la del archivo nuevo y ejecutar:
+
+```powershell
+[Convert]::ToBase64String([IO.File]::ReadAllBytes('C:\ruta\cookies.txt')) | Set-Clipboard
+```
+
+El comando copia el valor sin imprimirlo. Pegar con Ctrl+V en el valor de
+`ML_YOUTUBE_COOKIES_BASE64` dentro del secreto `historia-viva-ml`, guardar y
+publicar/desplegar el código que incorpora este soporte. El archivo debe ser
+UTF-8 Netscape. La carga correcta no demuestra aceptación de la sesión por YouTube.
+
 Si falla `transcribeAudio` con `Sign in to confirm`, YouTube está rechazando la
 descarga desde el servicio ML. Render solo transmite el error; la descarga ocurre
 en Modal. El cambio SQL de seguimiento de estados no resuelve este bloqueo.

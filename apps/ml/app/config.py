@@ -30,6 +30,8 @@ class Settings(BaseSettings):
     whisper_language: str = "es"
     # Contenido Netscape del archivo de cookies, solo en secretos del servicio ML.
     youtube_cookies: Optional[SecretStr] = None
+    # Alternativa de una sola línea; tiene prioridad sobre youtube_cookies.
+    youtube_cookies_base64: Optional[SecretStr] = None
 
     # Proveedor opcional para sortear bloqueos de IP de YouTube en centros de
     # datos. La clave se guarda exclusivamente como secreto del despliegue.

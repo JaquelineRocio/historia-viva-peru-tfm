@@ -13,6 +13,8 @@ claras, sin romper el arranque del servicio (import perezoso).
 from __future__ import annotations
 
 import os
+import base64
+import binascii
 import logging
 import re
 import tempfile
@@ -31,6 +33,19 @@ _whisper_model = None
 _logger = logging.getLogger(__name__)
 
 
+def _cookie_content():
+    if settings.youtube_cookies_base64:
+        try:
+            return base64.b64decode(
+                settings.youtube_cookies_base64.get_secret_value().strip(), validate=True,
+            ).decode("utf-8-sig")
+        except (ValueError, binascii.Error, UnicodeError):
+            raise TranscriptError("ML_YOUTUBE_COOKIES_BASE64 no contiene un archivo UTF-8 en Base64 válido.") from None
+    if settings.youtube_cookies:
+        return settings.youtube_cookies.get_secret_value()
+    return None
+
+
 class _DownloadLogger:
     """Diagnóstico de yt-dlp sin valores de cookies ni volcado de depuración."""
 
@@ -40,24 +55,30 @@ class _DownloadLogger:
 
     def _safe_message(self, message):
         message = str(message)
-        if settings.youtube_cookies:
-            raw = settings.youtube_cookies.get_secret_value()
+        secrets = [value.get_secret_value() for value in (
+            settings.youtube_cookies, settings.youtube_cookies_base64,
+        ) if value]
+        try:
+            raw = _cookie_content()
+        except TranscriptError:
+            raw = None
+        if raw:
             # También proteger configuraciones mal formadas y filas #HttpOnly_.
-            secrets = [raw, raw.replace("\r\n", "\n")]
+            secrets.extend([raw, raw.replace("\r\n", "\n")])
             for line in raw.splitlines():
                 fields = line.split("\t", 6)
                 if len(fields) == 7 and fields[6]:
                     secrets.append(fields[6])
-            for secret in sorted(set(secrets), key=len, reverse=True):
-                if secret:
-                    message = message.replace(secret, "[REDACTED]")
+        for secret in sorted(set(secrets), key=len, reverse=True):
+            if secret:
+                message = message.replace(secret, "[REDACTED]")
         message = re.sub(r"\x1b\[[0-9;]*m", "", message)
         return message
 
     def _log(self, level, message):
         _logger.log(
             level, "yt-dlp video_id=%s cookies_configured=%s cookies_loaded=%s: %s",
-            self.video_id, bool(settings.youtube_cookies), self.cookies_loaded,
+            self.video_id, bool(settings.youtube_cookies or settings.youtube_cookies_base64), self.cookies_loaded,
             self._safe_message(message),
         )
 
@@ -119,8 +140,9 @@ def _download_audio(video_id: str, dest_dir: str) -> str:
         # Una copia por descarga: yt-dlp puede modificarla al cerrar la sesión.
         # El contexto la elimina incluso si la descarga falla.
         with tempfile.TemporaryDirectory(prefix="youtube-auth-") as auth_dir:
-            if settings.youtube_cookies:
-                cookies = settings.youtube_cookies.get_secret_value().replace("\r\n", "\n")
+            cookies = _cookie_content()
+            if cookies is not None:
+                cookies = cookies.replace("\r\n", "\n")
                 if not cookies.startswith(("# Netscape HTTP Cookie File", "# HTTP Cookie File")):
                     raise TranscriptError("La configuración de autenticación de YouTube no tiene formato Netscape.")
                 cookie_path = Path(auth_dir) / "cookies.txt"
@@ -133,7 +155,7 @@ def _download_audio(video_id: str, dest_dir: str) -> str:
                     download_logger.cookies_loaded = bool(list(ydl.cookiejar))
                     if not download_logger.cookies_loaded:
                         raise TranscriptError(
-                            "ML_YOUTUBE_COOKIES está configurada, pero no contiene cookies legibles. "
+                            "La autenticación de YouTube está configurada, pero no contiene cookies legibles. "
                             "Exporta las cookies de youtube.com en formato Netscape y copia todo "
                             "el archivo, con sus filas y saltos de línea reales, al secreto de Modal."
                         )
