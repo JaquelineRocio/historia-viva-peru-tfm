@@ -3,6 +3,7 @@ from pathlib import Path
 from typing import List, Optional
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
+from pydantic import SecretStr
 
 # Directorio base del servicio (apps/ml), independiente del cwd desde el que se arranque.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,6 +28,8 @@ class Settings(BaseSettings):
     whisper_device: str = "cpu"
     whisper_compute_type: str = "int8"     # int8 = ligero para CPU
     whisper_language: str = "es"
+    # Contenido Netscape del archivo de cookies, solo en secretos del servicio ML.
+    youtube_cookies: Optional[SecretStr] = None
 
     # Proveedor opcional para sortear bloqueos de IP de YouTube en centros de
     # datos. La clave se guarda exclusivamente como secreto del despliegue.
