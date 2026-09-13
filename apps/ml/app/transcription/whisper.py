@@ -13,6 +13,8 @@ claras, sin romper el arranque del servicio (import perezoso).
 from __future__ import annotations
 
 import os
+import logging
+import re
 import tempfile
 from pathlib import Path
 
@@ -26,19 +28,47 @@ from app.transcription.youtube import (
 
 # Caché del modelo Whisper (se carga una sola vez, es caro).
 _whisper_model = None
+_logger = logging.getLogger(__name__)
 
 
 class _DownloadLogger:
-    """No publicar mensajes de yt-dlp que puedan incluir datos de autenticación."""
+    """Diagnóstico de yt-dlp sin valores de cookies ni volcado de depuración."""
+
+    def __init__(self, video_id: str):
+        self.video_id = video_id
+        self.cookies_loaded = False
+
+    def _safe_message(self, message):
+        message = str(message)
+        if settings.youtube_cookies:
+            raw = settings.youtube_cookies.get_secret_value()
+            # También proteger configuraciones mal formadas y filas #HttpOnly_.
+            secrets = [raw, raw.replace("\r\n", "\n")]
+            for line in raw.splitlines():
+                fields = line.split("\t", 6)
+                if len(fields) == 7 and fields[6]:
+                    secrets.append(fields[6])
+            for secret in sorted(set(secrets), key=len, reverse=True):
+                if secret:
+                    message = message.replace(secret, "[REDACTED]")
+        message = re.sub(r"\x1b\[[0-9;]*m", "", message)
+        return message
+
+    def _log(self, level, message):
+        _logger.log(
+            level, "yt-dlp video_id=%s cookies_configured=%s cookies_loaded=%s: %s",
+            self.video_id, bool(settings.youtube_cookies), self.cookies_loaded,
+            self._safe_message(message),
+        )
 
     def debug(self, message):
         pass
 
     def warning(self, message):
-        pass
+        self._log(logging.WARNING, message)
 
     def error(self, message):
-        pass
+        self._log(logging.ERROR, message)
 
 
 def _load_model():
@@ -73,12 +103,13 @@ def _download_audio(video_id: str, dest_dir: str) -> str:
         ) from exc
 
     out_tmpl = os.path.join(dest_dir, f"{video_id}.%(ext)s")
+    download_logger = _DownloadLogger(video_id)
     ydl_opts = {
         "format": "bestaudio/best",
         "outtmpl": out_tmpl,
         "quiet": True,
-        "no_warnings": True,
-        "logger": _DownloadLogger(),
+        "no_warnings": False,
+        "logger": download_logger,
         "postprocessors": [
             {"key": "FFmpegExtractAudio", "preferredcodec": "mp3", "preferredquality": "128"}
         ],
@@ -97,10 +128,15 @@ def _download_audio(video_id: str, dest_dir: str) -> str:
                 cookie_path.chmod(0o600)
                 ydl_opts["cookiefile"] = str(cookie_path)
             with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+                # Forzar lectura de la cookie jar antes de marcarla como cargada.
+                if "cookiefile" in ydl_opts:
+                    download_logger.cookies_loaded = bool(list(ydl.cookiejar))
                 ydl.download([url])
-    except TranscriptError:
+    except TranscriptError as exc:
+        download_logger.error(f"{type(exc).__name__}: {exc}")
         raise
     except Exception as exc:  # yt-dlp lanza tipos variados / bloqueos de red
+        download_logger.error(f"{type(exc).__name__}: {exc}")
         if "sign in to confirm" in str(exc).lower():
             raise TranscriptError(
                 "YouTube bloqueó la descarga del audio y solicita verificar la sesión. "
