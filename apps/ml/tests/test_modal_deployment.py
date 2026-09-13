@@ -63,6 +63,21 @@ def test_auth_failure_stops_without_logging_response_or_credentials():
     assert 'private-' not in json.dumps(report)
 
 
+@pytest.mark.parametrize('phase', ['health', 'infer'])
+def test_timeout_reports_endpoint_without_credentials(phase):
+    def respond(request):
+        if request.url.path == '/' + phase:
+            raise httpx.ReadTimeout('private-connection-data', request=request)
+        return httpx.Response(200, json={'status': 'ok', 'deployment_sha': SHA,
+            'components': {'beto': {'ready': True, 'status': 'ready'}}})
+    with httpx.Client(base_url='https://example.test', transport=httpx.MockTransport(respond)) as client:
+        report = verify(client, SHA, attempts=1)
+    assert not report['passed']
+    assert report['attempts'][0]['phase'] == phase
+    assert report['attempts'][0]['elapsed_seconds'] >= 0
+    assert 'private-' not in json.dumps(report)
+
+
 def test_service_reports_deployment_sha(monkeypatch):
     sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
     from fastapi.testclient import TestClient

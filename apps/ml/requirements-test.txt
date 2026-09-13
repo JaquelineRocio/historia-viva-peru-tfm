@@ -6,6 +6,7 @@ pydantic>=2.10,<3
 pydantic-settings>=2.7,<3
 pypdf>=5,<6
 pytest>=8,<9
+modal==1.5.5
 python-multipart>=0.0.20,<1
 scikit-learn>=1.6,<2
 youtube-transcript-api>=1,<2
