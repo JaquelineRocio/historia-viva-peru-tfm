@@ -30,6 +30,23 @@ remoto durante esta reparación.
 
 ## Uso desde PowerShell, en la raíz del proyecto
 
+Corrección posterior de arranque: el run `34725763422` construyó y desplegó el
+commit `d1aaa50`, pero la verificación terminó con seis `ReadTimeout`. Los logs
+de Modal identificaron `IndexError: 1` al importar `/root/modal_app.py`: el módulo
+buscaba el manifiesto mediante una ruta del checkout local, inexistente allí.
+Ahora la receta de imagen, requirements y lectura del manifiesto se ejecutan
+solo en el cliente mediante `modal.is_local()`. El worker registra FastAPI y
+utiliza la imagen y las variables de versión recibidas del despliegue.
+
+`scripts/check_modal_import.py` usa el SDK real Modal 1.5.5 para comprobar tanto
+la importación local como una importación remota simulada desde una carpeta sin
+checkout, rechazando lecturas de archivos locales. Se ejecuta en CI y antes del
+deploy. Evidencia local: 51 pruebas de publicación/arranque/verificación y
+`outputs/modal-worker-import-regression.json` (anterior falla, corregido pasa).
+El verificador conserva los tiempos de espera y ahora identifica endpoint y
+duración del intento. No se ejecutó un nuevo despliegue remoto en esta reparación;
+aplicar mediante commit/push de la autora. R2 no necesita otra publicación.
+
 En este equipo el entorno ML operativo es `outputs/venv-ml`. El Python del sistema
 no tiene las dependencias de inferencia y el antiguo `apps/ml/.venv` no arranca.
 

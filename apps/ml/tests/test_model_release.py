@@ -187,7 +187,7 @@ def test_modal_recipe_pins_download_and_rejects_bad_build_files(prepared, monkey
         def add_local_dir(self, *args):
             return self
     decorator = lambda **kw: lambda fn: fn
-    fake = SimpleNamespace(Image=FakeImage,
+    fake = SimpleNamespace(Image=FakeImage, is_local=lambda: True,
         App=lambda name: SimpleNamespace(function=decorator),
         Secret=SimpleNamespace(from_name=lambda name: name), concurrent=decorator, asgi_app=decorator)
     monkeypatch.setitem(sys.modules, "modal", fake)

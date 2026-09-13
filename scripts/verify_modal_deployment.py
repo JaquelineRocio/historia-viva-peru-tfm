@@ -24,6 +24,8 @@ class VerificationError(Exception):
 def verify(client, expected_sha: str, *, expected_model=None, attempts=6, retry_delay=10) -> dict:
     report = {'expected_sha': expected_sha, 'passed': False, 'attempts': []}
     for index in range(attempts):
+        phase = 'health'
+        started = time.monotonic()
         try:
             response = client.get('/health')
             response.raise_for_status()
@@ -35,6 +37,7 @@ def verify(client, expected_sha: str, *, expected_model=None, attempts=6, retry_
                 raise VerificationError('beto_not_ready')
             if expected_model is not None and beto.get('model') != identity(expected_model):
                 raise VerificationError('health_model_mismatch')
+            phase = 'infer'
             response = client.post('/infer', json={'texts': [
                 'La Constitución establece la organización de los poderes y las instituciones de la república.'
             ]})
@@ -61,7 +64,8 @@ def verify(client, expected_sha: str, *, expected_model=None, attempts=6, retry_
             report['attempts'].append({'number': index + 1, 'passed': True})
             return report
         except Exception as error:
-            item = {'number': index + 1, 'passed': False, 'error_type': type(error).__name__}
+            item = {'number': index + 1, 'passed': False, 'error_type': type(error).__name__,
+                    'phase': phase, 'elapsed_seconds': round(time.monotonic() - started, 3)}
             if isinstance(error, VerificationError):
                 item['reason'] = str(error)
             if isinstance(error, httpx.HTTPStatusError):

@@ -68,6 +68,9 @@ jobs:
       - name: Install deployment tools
         if: steps.current.outputs.deploy == 'true'
         run: python -m pip install modal==1.5.5 httpx==0.28.1
+      - name: Check Modal imports before deploying
+        if: steps.current.outputs.deploy == 'true'
+        run: python scripts/check_modal_import.py
       - name: Deploy tested commit
         if: steps.current.outputs.deploy == 'true'
         env:
