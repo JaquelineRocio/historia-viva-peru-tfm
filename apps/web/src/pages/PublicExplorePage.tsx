@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useRef, useState, type FormEvent } from 'react'
+import { useCallback, useEffect, useRef, useState, type FormEvent } from 'react'
 import YouTube, { type YouTubePlayer } from 'react-youtube'
 import { Link } from 'react-router-dom'
 import { publicExploreResource, publicExploreResources, publicProcessingStatus, publicProcessYoutube } from '../api/resources'
@@ -154,12 +154,11 @@ function PublicProcessSection({ config, onReady }: { config?: PublicExploreRespo
   const [status, setStatus] = useState<PublicProcessingResponse>()
   const [stage, setStage] = useState<PublicProcessingStage>()
   const [error, setError] = useState('')
-  const sessionId = useMemo(() => crypto.randomUUID(), [])
 
   useEffect(() => {
     if (!status?.requestId || stage === 'ready' || stage === 'failed') return
     const timer = window.setInterval(() => {
-      publicProcessingStatus(status.requestId, sessionId)
+      publicProcessingStatus(status.requestId)
         .then((next) => {
           setStatus(next)
           setStage(next.stage)
@@ -169,7 +168,7 @@ function PublicProcessSection({ config, onReady }: { config?: PublicExploreRespo
         .catch((pollError) => setError(apiError(pollError)))
     }, 2500)
     return () => window.clearInterval(timer)
-  }, [onReady, sessionId, stage, status?.requestId])
+  }, [onReady, stage, status?.requestId])
 
   async function submit(event: FormEvent) {
     event.preventDefault()
@@ -177,7 +176,7 @@ function PublicProcessSection({ config, onReady }: { config?: PublicExploreRespo
     setStatus(undefined)
     setStage('validating_video')
     try {
-      const response = await publicProcessYoutube({ url: url.trim(), rightsConfirmed: true }, sessionId)
+      const response = await publicProcessYoutube({ url: url.trim(), rightsConfirmed: true })
       setStatus(response)
       setStage(response.stage)
       if (response.stage === 'ready') onReady(response.resource)
@@ -215,7 +214,7 @@ function PublicProcessSection({ config, onReady }: { config?: PublicExploreRespo
 
             {stage && <ProcessingProgress stage={stage} error={error} />}
             {stage === 'ready' && status ? <div className="mt-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-5"><p className="font-bold text-emerald-900">Resultado listo para explorar</p><p className="mt-1 text-sm leading-6 text-emerald-800">{status.resource.title} · {status.resource.segments?.length || 0} segmentos obtenidos. El resultado ya aparece en la sección inferior.</p></div> : null}
-            <p className="mt-4 text-xs leading-5 text-slate-500">La fuente se valida antes de iniciar. Máximo {Math.floor((config?.maxDurationSec || 3600) / 60)} min, duplicados bloqueados y hasta {config?.maxPerSession || 2} intentos por dispositivo cada {config?.windowHours || 24} h. El video agregado permanece privado.</p>
+            <p className="mt-4 text-xs leading-5 text-slate-500">La fuente se valida antes de iniciar. Máximo {Math.floor((config?.maxDurationSec || 3600) / 60)} min, duplicados bloqueados y hasta {config?.maxPerSession || 2} intentos por cuenta cada {config?.windowHours || 24} h. El video agregado permanece privado.</p>
           </div>
         </div>
     </section>

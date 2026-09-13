@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Headers, HttpCode, Param, ParseUUIDPipe, Patch, Post, Put, Query, Req, Res, StreamableFile, UploadedFile, UseGuards, UseInterceptors } from '@nestjs/common';
+import { Body, Controller, Get, HttpCode, Param, ParseUUIDPipe, Patch, Post, Put, Query, Req, Res, StreamableFile, UploadedFile, UseGuards, UseInterceptors } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
 import type { Request, Response } from 'express';
 import { CurrentUser } from '../auth/current-user.decorator';
@@ -233,21 +233,23 @@ export class PublicResourcesController {
   }
 
   @Post('explore/process')
+  @UseGuards(JwtAuthGuard)
   @HttpCode(202)
   processYoutube(
     @Body() dto: PublicYoutubeResourceDto,
-    @Headers('x-demo-session') sessionId: string,
+    @CurrentUser() user: AuthUser,
     @Req() request: Request,
   ) {
-    return this.service.createPublicYoutube(dto, sessionId || '', request.ip || request.socket.remoteAddress || 'unknown');
+    return this.service.createPublicYoutube(dto, user.id, request.ip || request.socket.remoteAddress || 'unknown');
   }
 
   @Get('explore/process/:id')
+  @UseGuards(JwtAuthGuard)
   processStatus(
     @Param('id', ParseUUIDPipe) id: string,
-    @Headers('x-demo-session') sessionId: string,
+    @CurrentUser() user: AuthUser,
   ) {
-    return this.service.publicProcessingStatus(id, sessionId || '');
+    return this.service.publicProcessingStatus(id, user.id);
   }
 
   @Get('projects/:id/resources')

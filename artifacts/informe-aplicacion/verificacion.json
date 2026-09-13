@@ -1,0 +1,136 @@
+{
+  "created_at_utc": "2026-09-13T04:51:20.229945+00:00",
+  "scope": "Verificación documental y aritmética; no ejecución de pruebas funcionales nuevas",
+  "passed": true,
+  "checks": [
+    {
+      "name": "Snapshot académico: 596/81/137, total 814",
+      "passed": true
+    },
+    {
+      "name": "Distribuciones por clase suman los splits registrados",
+      "passed": true
+    },
+    {
+      "name": "Auditoría guardada: sin solapamiento de fuente/texto exacto",
+      "passed": true
+    },
+    {
+      "name": "beto: ganador por validación y F1 test coinciden",
+      "passed": true
+    },
+    {
+      "name": "tfidf: ganador por validación y F1 test coinciden",
+      "passed": true
+    },
+    {
+      "name": "R2: precisión/recall/F1/soporte de campanias_conflictos_militares",
+      "passed": true
+    },
+    {
+      "name": "R2: precisión/recall/F1/soporte de contexto_colonial_antecedentes",
+      "passed": true
+    },
+    {
+      "name": "R2: precisión/recall/F1/soporte de crisis_ideas_emancipadoras",
+      "passed": true
+    },
+    {
+      "name": "R2: precisión/recall/F1/soporte de liderazgos_diplomacia_proyectos",
+      "passed": true
+    },
+    {
+      "name": "R2: precisión/recall/F1/soporte de no_relevante",
+      "passed": true
+    },
+    {
+      "name": "R2: precisión/recall/F1/soporte de organizacion_consecuencias_republicanas",
+      "passed": true
+    },
+    {
+      "name": "R2: precisión/recall/F1/soporte de participacion_social_regional",
+      "passed": true
+    },
+    {
+      "name": "R2: 275/444 y macro-F1 reconstruidos desde matriz guardada",
+      "passed": true
+    },
+    {
+      "name": "R2: media y desviación muestral de tres semillas",
+      "passed": true
+    },
+    {
+      "name": "R2: 20 épocas, seleccionada 8, recarga idéntica registrada",
+      "passed": true
+    },
+    {
+      "name": "R2: métricas de la trayectoria coinciden con comparación",
+      "passed": true
+    },
+    {
+      "name": "Manifiesto R2 con revisión fijada, siete hashes y contrato del paquete",
+      "passed": true
+    },
+    {
+      "name": "Paridad histórica registrada en cinco entradas sintéticas",
+      "passed": true
+    },
+    {
+      "name": "Tres pruebas históricas ML aprobadas en entorno local",
+      "passed": true
+    },
+    {
+      "name": "Seis checks históricos de producción aprobados",
+      "passed": true
+    },
+    {
+      "name": "PDF conserva fallo inicial y recuperación; no se oculta incidencia",
+      "passed": true
+    },
+    {
+      "name": "Informe UTF-8 sin carácter de sustitución ni mojibake detectado",
+      "passed": true
+    },
+    {
+      "name": "Todos los enlaces locales de evidencia existen",
+      "passed": true
+    },
+    {
+      "name": "Cinco pruebas funcionales documentadas",
+      "passed": true
+    },
+    {
+      "name": "Todos los registros leídos conservan sus bytes",
+      "passed": true
+    }
+  ],
+  "input_sha256": {
+    "artifacts/experiments/course-u1/beto/dataset-audit.json": "441872b4483eb9c5ee15e4066748c9a498600cd80b3276e44e934bc9f2f5d44e",
+    "artifacts/experiments/course-u1/beto/selection.json": "ee92e6834a13271a592626b4381d274e99f6cbe00d1a298f55247a8766f001c6",
+    "artifacts/experiments/course-u1/beto/report.json": "eac4e54a5a13850000439f1b59291fe2da5969c7a434b0600f0635ef01b10b42",
+    "artifacts/experiments/course-u1/tfidf/selection.json": "6b197e7f4be76a1835e55bec04ce2b06ab05d58c90988bd34815a215a76323e2",
+    "artifacts/experiments/course-u1/tfidf/report.json": "df6bafdc495a98c67e61ef7faea42bcae54f3fce3ab6c020e4594594f3099c8c",
+    "artifacts/beto-v3/phase-d/comparison.json": "0b228093712b8ec1e6e5cdc8585fab3392a615a53c21eb2255c7fef3ebf7cfad",
+    "outputs/beto-v3/phase-c/seed-42/R2/result.json": "a60fde0eb4a67231e420dcb0b361fa6c31b4b3cf76fc437bdd37ca52f4f2e223",
+    "configs/production-model.json": "179b83ff628d3ef43649b04930bbe823155975369f9b52aab0a76ccdefef58b7",
+    "outputs/model-releases/beto-iba2_1r6-verification.json": "7286ac70506ef4b0661171619acd6f21a8a9c896363b1e96e4b86ef4dfb9dc77",
+    "artifacts/experiments/course-u1/evidence/model-functional.json": "09427166780467a7e9b3d672e05b69d63b816e1a3a5e86a409bfad3c33079ed2",
+    "artifacts/experiments/course-u1/evidence/production-smoke-post-push.json": "118e6507e64120c55b9d0d73ea1bdccb27d98151c7b5b8da9c94947124361537",
+    "artifacts/experiments/course-u1/evidence/source-flow-reviewed.json": "24de87d59010970abc25fb1039939a43ed57847e86f92667258cb8da2f35bb3f"
+  },
+  "report_sha256": "2b7d0eda07204b1df5254032a325e46bf07fd1b25be1513c7fa60cdfb55011cf",
+  "report_words": 4742,
+  "local_links_checked": 40,
+  "new_training": 0,
+  "new_inferences": 0,
+  "new_annotations": 0,
+  "remote_checks_executed": false,
+  "V_dataset_opened": false,
+  "S_opened": false,
+  "budget_ledger_modified": false,
+  "notes": [
+    "Las matrices y métricas se leen de resultados guardados.",
+    "No se hashean ni abren los archivos de datos V o S.",
+    "Los hashes identifican registros leídos, no verifican pesos remotos."
+  ]
+}

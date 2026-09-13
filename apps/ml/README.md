@@ -101,3 +101,10 @@ Estado verificado el 12 de septiembre de 2026: **76 pruebas ML superadas**, más
 paridad de inferencia del paquete real R2 en cinco textos sintéticos. R2 tiene
 F1 macro registrado de 0,532392 en V; sigue siendo experimental. Esta verificación
 local no acredita una publicación ni un despliegue remoto.
+
+
+La inspecci?n inicial `/youtube/inspect` utiliza la misma autenticaci?n temporal
+`ML_YOUTUBE_COOKIES_BASE64` / `ML_YOUTUBE_COOKIES` que la descarga de audio.
+Tras actualizar este c?digo se debe desplegar tambi?n ML, no solo la API.
+Las cookies deben seguir siendo v?lidas; compartir su configuraci?n no garantiza
+que YouTube permita el acceso desde el servicio.

@@ -140,3 +140,46 @@ def test_invalid_base64_fails_without_exposing_value(monkeypatch, tmp_path, capl
     with pytest.raises(TranscriptError, match="Base64 válido"):
         whisper._download_audio("deQdS69P4-0", str(tmp_path))
     assert value not in caplog.text
+
+
+@pytest.mark.parametrize("failure", [False, True])
+def test_inspect_uses_base64_auth_and_cleans_up(monkeypatch, failure):
+    from app.main import inspect_youtube
+    from fastapi import HTTPException
+
+    cookies = "# Netscape HTTP Cookie File\n.youtube.com\tTRUE\t/\tTRUE\t0\tSID\tsynthetic-value\n"
+    monkeypatch.setattr(whisper.settings, "youtube_cookies", None)
+    monkeypatch.setattr(whisper.settings, "youtube_cookies_base64", SecretStr(base64.b64encode(cookies.encode()).decode()))
+    paths = []
+
+    class Inspector:
+        cookiejar = [object()]
+
+        def __init__(self, options):
+            assert options["skip_download"] is True
+            path = Path(options["cookiefile"])
+            paths.append(path)
+            assert path.read_text() == cookies
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *args):
+            return False
+
+        def extract_info(self, url, download):
+            assert download is False
+            if failure:
+                raise RuntimeError("Sign in to confirm synthetic-value")
+            return {"id": "q_Frfn-MFUI", "title": "Test", "duration": 60, "channel": "Test channel"}
+
+    monkeypatch.setitem(sys.modules, "yt_dlp", SimpleNamespace(YoutubeDL=Inspector))
+    request = SimpleNamespace(youtube_url="https://www.youtube.com/watch?v=q_Frfn-MFUI")
+    if failure:
+        with pytest.raises(HTTPException) as caught:
+            inspect_youtube(request)
+        assert caught.value.status_code == 422
+        assert "synthetic-value" not in caught.value.detail
+    else:
+        assert inspect_youtube(request)["duration_sec"] == 60
+    assert paths and all(not path.exists() for path in paths)

@@ -164,7 +164,8 @@ def transcribe(req: TranscribeRequest) -> dict:
 def inspect_youtube(req: YoutubeInspectRequest) -> dict:
     """Lee título, canal y duración sin descargar audio ni video."""
     try:
-        import yt_dlp
+        from app.transcription.whisper import authenticated_youtube
+        from app.transcription.youtube import extract_video_id
 
         options = {
             "quiet": True,
@@ -173,7 +174,7 @@ def inspect_youtube(req: YoutubeInspectRequest) -> dict:
             "noplaylist": True,
             "socket_timeout": 20,
         }
-        with yt_dlp.YoutubeDL(options) as ydl:
+        with authenticated_youtube(options, extract_video_id(req.youtube_url)) as ydl:
             info = ydl.extract_info(req.youtube_url, download=False)
     except Exception as exc:
         raise HTTPException(status_code=422, detail="No se pudo validar el video de YouTube") from exc

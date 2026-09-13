@@ -1,4 +1,4 @@
-import { BadRequestException, ConflictException, ForbiddenException } from '@nestjs/common';
+import { BadRequestException, ConflictException, ForbiddenException, ServiceUnavailableException } from '@nestjs/common';
 import { ResourcesService } from './resources.service';
 
 const SESSION = '7f2554b0-e70a-4cad-b6b0-3f5c2e889807';
@@ -35,6 +35,20 @@ function serviceWith(options: {
 }
 
 describe('Public explore processing safeguards', () => {
+  it.each([{ recentCount: 1, pendingCount: 0 }, { recentCount: 0, pendingCount: 2 }])('rejects overload before ML: %j', async (counts) => {
+    const query = jest.fn().mockResolvedValueOnce([]).mockResolvedValueOnce([{ sessionCount: 0, clientCount: 0, ...counts }]);
+    const { service, ml } = serviceWith({ transaction: (callback) => callback({ query }) });
+    await expect(service.createPublicYoutube({ url: 'https://youtu.be/gZpo1PjY0ao', rightsConfirmed: true }, SESSION, '127.0.0.1')).rejects.toBeInstanceOf(ServiceUnavailableException);
+    expect(ml.inspectYoutube).not.toHaveBeenCalled();
+    expect(query.mock.calls[0][1]).toEqual(['public-processing-admission']);
+    expect(query).toHaveBeenCalledTimes(2);
+  });
+
+  it('returns a controlled error when metadata inspection fails', async () => {
+    const { service, ml } = serviceWith();
+    ml.inspectYoutube.mockRejectedValue(new Error('upstream failure'));
+    await expect(service.createPublicYoutube({ url: 'https://youtu.be/gZpo1PjY0ao', rightsConfirmed: true }, SESSION, '127.0.0.1')).rejects.toBeInstanceOf(ServiceUnavailableException);
+  });
   it('rejects non-YouTube URLs before contacting the ML service', async () => {
     const { service, ml } = serviceWith();
     await expect(service.createPublicYoutube(

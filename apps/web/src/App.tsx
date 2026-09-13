@@ -26,8 +26,8 @@ export default function App() {
       <AuthProvider>
         <Routes>
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/explorar" element={<PublicExplorePage />} />
           <Route element={<ProtectedRoute />}>
+            <Route path="/explorar" element={<PublicExplorePage />} />
             <Route element={<ProjectProvider><Layout /></ProjectProvider>}>
               <Route path="/" element={<HomePage />} />
               <Route path="/proyectos" element={<ProjectsPage />} />
