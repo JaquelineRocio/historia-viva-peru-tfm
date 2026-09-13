@@ -178,6 +178,10 @@ export interface ResourceSegment {
 }
 
 export interface PublicVideoSegment {
+  suggestedLabelKey?: string | null
+  suggestedLabelName?: string | null
+  suggestedConfidence?: number | null
+  reviewedLabelKey?: string | null
   id: string
   idx: number
   startSec: number

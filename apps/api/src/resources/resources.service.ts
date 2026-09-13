@@ -1090,11 +1090,17 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
   private publicVideoSegments(resourceId: string) {
     return this.dataSource.query(
       `SELECT s.id, s.idx, s.start_sec::float AS "startSec", s.end_sec::float AS "endSec", s.text,
+              s.suggested_label_key AS "suggestedLabelKey",
+              predicted.name AS "suggestedLabelName",
+              s.suggested_confidence::float AS "suggestedConfidence",
+              s.reviewed_label_key AS "reviewedLabelKey",
               COALESCE(s.reviewed_label_key, s.suggested_label_key) AS "labelKey",
               COALESCE(lt.name, 'Subtema pendiente de revisión') AS "labelName"
        FROM tfm_schema.resource_segments s
        LEFT JOIN tfm_schema.labels_taxonomy lt
          ON lt.key = COALESCE(s.reviewed_label_key, s.suggested_label_key) AND lt.is_deleted = false
+       LEFT JOIN tfm_schema.labels_taxonomy predicted
+         ON predicted.key = s.suggested_label_key AND predicted.is_deleted = false
        WHERE s.resource_id = $1 AND s.is_deleted = false AND s.locator_type = 'timestamp'
          AND s.review_status <> 'excluded'
        ORDER BY s.idx`,
