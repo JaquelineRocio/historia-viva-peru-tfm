@@ -38,7 +38,7 @@ export class ResourcesController {
     @Body() dto: CreateYoutubeResourceDto,
     @CurrentUser() user: AuthUser,
   ) {
-    return this.service.createYoutube(id, dto, user.id);
+    return this.service.createYoutube(id, dto, user);
   }
 
   @Post('projects/:id/resources/pdf')
@@ -49,7 +49,7 @@ export class ResourcesController {
     @UploadedFile() file: { buffer: Buffer; size: number; mimetype: string; originalname: string },
     @CurrentUser() user: AuthUser,
   ) {
-    return this.service.createPdf(id, dto, file, user.id);
+    return this.service.createPdf(id, dto, file, user);
   }
 
   @Get('resources/:id')

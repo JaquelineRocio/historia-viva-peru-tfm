@@ -156,9 +156,10 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
     return rows[0];
   }
 
-  async createYoutube(projectId: string, dto: CreateYoutubeResourceDto, userId: string) {
-    await this.project(projectId, { id: userId, role: 'collaborator' });
-    await this.assertDemoQuota(userId);
+  async createYoutube(projectId: string, dto: CreateYoutubeResourceDto, user: { id: string; role: string }) {
+    const userId = user.id;
+    await this.project(projectId, user);
+    await this.assertDemoQuota(user);
     const existing = await this.resources.findOne({ where: { projectId, sourceUrl: dto.url, isDeleted: false } });
     if (existing) throw new ConflictException('Ese video ya existe en el proyecto');
     return this.resources.save(this.resources.create({
@@ -174,9 +175,10 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
     }));
   }
 
-  async createPdf(projectId: string, dto: PdfMetadataDto, file: { buffer: Buffer; size: number; mimetype: string; originalname: string }, userId: string) {
-    await this.project(projectId, { id: userId, role: 'collaborator' });
-    await this.assertDemoQuota(userId);
+  async createPdf(projectId: string, dto: PdfMetadataDto, file: { buffer: Buffer; size: number; mimetype: string; originalname: string }, user: { id: string; role: string }) {
+    const userId = user.id;
+    await this.project(projectId, user);
+    await this.assertDemoQuota(user);
     if (!file) throw new BadRequestException('Selecciona un archivo PDF');
     const maxPdfMb = this.config.get<string>('DEMO_MODE') === 'true'
       ? Number(this.config.get<string>('DEMO_MAX_PDF_MB', '10'))
@@ -1393,10 +1395,11 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
     );
   }
 
-  private async assertDemoQuota(userId: string): Promise<void> {
-    if (this.config.get<string>('DEMO_MODE') !== 'true') return;
+  private async assertDemoQuota(user: { id: string; role: string }): Promise<void> {
+    // El rol procede del usuario autenticado y se consulta en BD en JwtStrategy.
+    if (user.role === 'admin' || this.config.get<string>('DEMO_MODE') !== 'true') return;
     const maximum = Number(this.config.get<string>('DEMO_MAX_SOURCES_PER_USER', '3'));
-    const current = await this.resources.count({ where: { createdUserId: userId, isDeleted: false } });
+    const current = await this.resources.count({ where: { createdUserId: user.id, isDeleted: false } });
     if (current >= maximum) {
       throw new ForbiddenException(
         `La demostración gratuita permite un máximo de ${maximum} fuentes nuevas por cuenta`,
