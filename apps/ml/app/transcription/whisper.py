@@ -19,6 +19,7 @@ import logging
 import re
 import tempfile
 from pathlib import Path
+from contextlib import contextmanager
 
 from app.config import settings
 from app.transcription.youtube import (
@@ -92,6 +93,36 @@ class _DownloadLogger:
         self._log(logging.ERROR, message)
 
 
+@contextmanager
+def authenticated_youtube(options, video_id):
+    """Temporary authenticated yt-dlp session shared by inspection and audio."""
+    import yt_dlp
+
+    download_logger = options.get("logger") or _DownloadLogger(video_id)
+    ydl_opts = {**options, "logger": download_logger}
+    with tempfile.TemporaryDirectory(prefix="youtube-auth-") as auth_dir:
+        cookies = _cookie_content()
+        if cookies is not None:
+            cookies = cookies.replace("\r\n", "\n")
+            if not cookies.startswith(("# Netscape HTTP Cookie File", "# HTTP Cookie File")):
+                raise TranscriptError("La configuración de autenticación de YouTube no tiene formato Netscape.")
+            cookie_path = Path(auth_dir) / "cookies.txt"
+            cookie_path.write_text(cookies, encoding="utf-8")
+            cookie_path.chmod(0o600)
+            ydl_opts["cookiefile"] = str(cookie_path)
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            # Forzar lectura de la cookie jar antes de marcarla como cargada.
+            if "cookiefile" in ydl_opts:
+                download_logger.cookies_loaded = bool(list(ydl.cookiejar))
+                if not download_logger.cookies_loaded:
+                    raise TranscriptError(
+                        "La autenticación de YouTube está configurada, pero no contiene cookies legibles. "
+                        "Exporta las cookies de youtube.com en formato Netscape y copia todo "
+                        "el archivo, con sus filas y saltos de línea reales, al secreto de Modal."
+                    )
+            yield ydl
+
+
 def _load_model():
     """Carga perezosa del modelo faster-whisper (cacheado en memoria)."""
     global _whisper_model
@@ -139,27 +170,8 @@ def _download_audio(video_id: str, dest_dir: str) -> str:
     try:
         # Una copia por descarga: yt-dlp puede modificarla al cerrar la sesión.
         # El contexto la elimina incluso si la descarga falla.
-        with tempfile.TemporaryDirectory(prefix="youtube-auth-") as auth_dir:
-            cookies = _cookie_content()
-            if cookies is not None:
-                cookies = cookies.replace("\r\n", "\n")
-                if not cookies.startswith(("# Netscape HTTP Cookie File", "# HTTP Cookie File")):
-                    raise TranscriptError("La configuración de autenticación de YouTube no tiene formato Netscape.")
-                cookie_path = Path(auth_dir) / "cookies.txt"
-                cookie_path.write_text(cookies, encoding="utf-8")
-                cookie_path.chmod(0o600)
-                ydl_opts["cookiefile"] = str(cookie_path)
-            with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-                # Forzar lectura de la cookie jar antes de marcarla como cargada.
-                if "cookiefile" in ydl_opts:
-                    download_logger.cookies_loaded = bool(list(ydl.cookiejar))
-                    if not download_logger.cookies_loaded:
-                        raise TranscriptError(
-                            "La autenticación de YouTube está configurada, pero no contiene cookies legibles. "
-                            "Exporta las cookies de youtube.com en formato Netscape y copia todo "
-                            "el archivo, con sus filas y saltos de línea reales, al secreto de Modal."
-                        )
-                ydl.download([url])
+        with authenticated_youtube(ydl_opts, video_id) as ydl:
+            ydl.download([url])
     except TranscriptError as exc:
         download_logger.error(f"{type(exc).__name__}: {exc}")
         raise

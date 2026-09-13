@@ -278,17 +278,12 @@ export async function publicExploreResource(id: string) {
 
 export async function publicProcessYoutube(
   payload: { url: string; title?: string; author?: string; rightsConfirmed: true },
-  sessionId: string,
 ) {
-  return (await publicApi.post<PublicProcessingResponse>('/public/explore/process', payload, {
-    headers: { 'X-Demo-Session': sessionId },
-  })).data
+  return (await api.post<PublicProcessingResponse>('/public/explore/process', payload)).data
 }
 
-export async function publicProcessingStatus(requestId: string, sessionId: string) {
-  return (await publicApi.get<PublicProcessingResponse>(`/public/explore/process/${requestId}`, {
-    headers: { 'X-Demo-Session': sessionId },
-  })).data
+export async function publicProcessingStatus(requestId: string) {
+  return (await api.get<PublicProcessingResponse>(`/public/explore/process/${requestId}`)).data
 }
 
 export function usePublicationReviews() {

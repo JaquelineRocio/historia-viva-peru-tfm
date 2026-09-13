@@ -997,7 +997,9 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
     const clientHash = this.hashPublicKey(`client:${clientAddress || 'unknown'}`);
     await this.registerPublicAttempt(sessionHash, clientHash, youtubeId);
 
-    const metadata = await this.ml.inspectYoutube(canonicalUrl);
+    const metadata = await this.ml.inspectYoutube(canonicalUrl).catch(() => {
+      throw new ServiceUnavailableException('No se pudo validar el video: el servicio de procesamiento está ocupado o no está disponible. Puedes seguir explorando los ejemplos y volver a intentarlo más tarde.');
+    });
     const maxDurationSec = Number(this.config.get<string>('PUBLIC_PROCESS_MAX_DURATION_SEC', '7200'));
     if (metadata.video_id !== youtubeId) throw new BadRequestException('El video validado no coincide con la URL');
     if (metadata.is_live) throw new BadRequestException('No se admiten transmisiones en vivo');
@@ -1133,15 +1135,28 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
     const windowHours = Math.max(1, Number(this.config.get<string>('PUBLIC_PROCESS_RATE_WINDOW_HOURS', '24')));
     const maxPerSession = Math.max(1, Number(this.config.get<string>('PUBLIC_PROCESS_MAX_PER_SESSION', '1')));
     const maxPerIp = Math.max(maxPerSession, Number(this.config.get<string>('PUBLIC_PROCESS_MAX_PER_IP', '5')));
+    const positiveLimit = (key: string, fallback: number) => {
+      const value = Number(this.config.get<string>(key, String(fallback)));
+      return Number.isSafeInteger(value) && value > 0 ? value : fallback;
+    };
+    const maxPerMinute = positiveLimit('PUBLIC_PROCESS_MAX_PER_MINUTE', 1);
+    const maxPending = positiveLimit('PUBLIC_PROCESS_MAX_PENDING', 2);
     await this.dataSource.transaction(async (manager) => {
-      await manager.query(`SELECT pg_advisory_xact_lock(hashtext($1))`, [`attempt:${sessionHash}:${clientHash}`]);
+      // Serialize admission across sessions and API replicas, not only per device.
+      await manager.query(`SELECT pg_advisory_xact_lock(hashtext($1))`, ['public-processing-admission']);
       const quota = await manager.query(
         `SELECT count(*) FILTER (WHERE session_hash = $1)::int AS "sessionCount",
-                count(*) FILTER (WHERE client_hash = $2)::int AS "clientCount"
+                count(*) FILTER (WHERE client_hash = $2)::int AS "clientCount",
+                count(*) FILTER (WHERE created_at > now() - interval '1 minute')::int AS "recentCount",
+                (SELECT count(*)::int FROM tfm_schema.resource_processing_runs
+                 WHERE status IN ('queued', 'processing')) AS "pendingCount"
          FROM tfm_schema.public_processing_attempts
          WHERE created_at > now() - ($3::int * interval '1 hour')`,
         [sessionHash, clientHash, windowHours],
       );
+      if (quota[0].recentCount >= maxPerMinute || quota[0].pendingCount >= maxPending) {
+        throw new ServiceUnavailableException('El procesamiento está ocupado. Espera un minuto antes de intentarlo de nuevo; puedes explorar los ejemplos disponibles mientras tanto.');
+      }
       if (quota[0].sessionCount >= maxPerSession || quota[0].clientCount >= maxPerIp) {
         throw new ForbiddenException(`Se alcanzó el límite de procesamiento de la demostración para ${windowHours} horas`);
       }

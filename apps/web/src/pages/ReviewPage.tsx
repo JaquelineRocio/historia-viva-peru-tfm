@@ -10,9 +10,14 @@ import { useAnnotationCampaignProgress, useAnnotationCampaigns, useCreateAnnotat
 
 export function ReviewPage() {
   const { project } = useActiveProject()
+  return <ProjectReview key={project?.id ?? 'no-project'} />
+}
+
+function ProjectReview() {
+  const { project } = useActiveProject()
   const resources = useResources(project?.id)
   const ready = useMemo(
-    () => resources.data?.filter((item) => item.processingStatus === 'ready' && item.corpusStatus === 'included') ?? [],
+    () => resources.data?.filter((item) => item.processingStatus === 'ready') ?? [],
     [resources.data],
   )
   const [resourceId, setResourceId] = useState<string>()
@@ -27,17 +32,20 @@ export function ReviewPage() {
   const [campaignId, setCampaignId] = useState<string>()
   const progress = useAnnotationCampaignProgress(campaignId)
 
-  useEffect(() => {
-    if (!campaignId && campaigns.data?.length) setCampaignId(campaigns.data[0].id)
-  }, [campaignId, campaigns.data])
+  const availableSources = useMemo(
+    () => campaignId
+      ? ready.filter((item) => progress.data?.sources.some((source) => source.resourceId === item.id))
+      : ready,
+    [campaignId, ready, progress.data],
+  )
 
   useEffect(() => {
     if (!resourceId) {
-      const nextSource = progress.data?.sources.find((item) => item.pending > 0)?.resourceId
+      const nextSource = campaignId && progress.data?.sources.find((item) => item.pending > 0 && availableSources.some((source) => source.id === item.resourceId))?.resourceId
       if (nextSource) setResourceId(nextSource)
-      else if (ready.length) setResourceId(ready[0].id)
+      else if (availableSources.length) setResourceId(availableSources[0].id)
     }
-  }, [progress.data, ready, resourceId])
+  }, [campaignId, progress.data, availableSources, resourceId])
 
   const segments = usePagedResourceSegments(project?.id, resourceId, {
     page, limit: 25, status: filter === 'pending' ? 'pending' : undefined, sort: 'low_confidence', campaignId,
@@ -63,12 +71,12 @@ export function ReviewPage() {
     <div>
       <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600">Calidad del dato</p>
       <h1 className="text-2xl font-bold">Revisión de subtemas</h1>
-      <p className="mt-1 text-sm text-slate-500">BETO sugiere; tú decides qué etiquetas se convierten en evidencia de entrenamiento.</p>
+      <p className="mt-1 text-sm text-slate-500">Revisa los subtemas sugeridos por BETO en cualquier fuente procesada, incluidas las candidatas. Revisar una fuente no la incluye automáticamente en el corpus.</p>
 
       <div className="mt-4 flex flex-wrap items-end gap-3 rounded-2xl border border-indigo-200 bg-indigo-50 p-4">
-        <label className="min-w-64 flex-1 text-sm font-semibold text-indigo-950">Campaña primaria
-          <select value={campaignId ?? ''} onChange={(event) => { setCampaignId(event.target.value || undefined); setResourceId(undefined); setPage(1) }} className="mt-1 w-full rounded-xl border border-indigo-200 bg-white px-3 py-2.5 text-sm font-normal">
-            <option value="">Sin campaña</option>
+        <label className="min-w-64 flex-1 text-sm font-semibold text-indigo-950">Filtrar por campaña
+          <select value={campaignId ?? ''} onChange={(event) => { setCampaignId(event.target.value || undefined); setResourceId(undefined); setPage(1); setSelectedIds([]) }} className="mt-1 w-full rounded-xl border border-indigo-200 bg-white px-3 py-2.5 text-sm font-normal">
+            <option value="">Todas las fuentes procesadas (sin campaña)</option>
             {campaigns.data?.map((item) => <option key={item.id} value={item.id}>{item.name} · {item.completedCount}/{item.sampleCount}</option>)}
           </select>
         </label>
@@ -137,9 +145,9 @@ export function ReviewPage() {
         <label className="min-w-64 flex-1 text-sm font-medium">Fuente
           <select value={resourceId ?? ''} onChange={(e) => { setResourceId(e.target.value); setPage(1); setSelectedIds([]) }} className="mt-1 w-full rounded-xl border border-slate-300 px-3 py-2.5">
             <option value="">Selecciona una fuente procesada</option>
-            {ready.map((item) => {
-              const itemProgress = sourceProgress.get(item.id)
-              return <option key={item.id} value={item.id}>{item.title}{itemProgress ? ' · ' + itemProgress.reviewed + '/' + itemProgress.total : ''}</option>
+            {availableSources.map((item) => {
+              const itemProgress = campaignId ? sourceProgress.get(item.id) : undefined
+              return <option key={item.id} value={item.id}>{item.title}{item.corpusStatus === 'candidate' ? ' · Candidata' : ''}{itemProgress ? ' · ' + itemProgress.reviewed + '/' + itemProgress.total : ''}</option>
             })}
           </select>
         </label>
@@ -170,7 +178,9 @@ export function ReviewPage() {
 
       <div className="mt-4 space-y-3">
         {visible.map((segment) => <ReviewCard key={segment.id} segment={segment} taxonomy={taxonomy.data ?? []} labelMap={labelMap} selected={selectedIds.includes(segment.id)} onToggle={() => setSelectedIds((current) => current.includes(segment.id) ? current.filter((id) => id !== segment.id) : [...current, segment.id])} />)}
-        {resourceId && !visible.length && <div className="rounded-2xl border border-dashed border-emerald-300 bg-emerald-50 p-8 text-center text-sm text-emerald-700">No quedan fragmentos pendientes en esta vista.</div>}
+        {resourceId && segments.isLoading && <p className="p-8 text-center text-sm text-slate-500">Cargando fragmentos…</p>}
+        {resourceId && segments.isError && <p role="alert" className="p-8 text-center text-sm text-red-700">No se pudieron cargar los fragmentos: {apiError(segments.error)}</p>}
+        {resourceId && segments.isSuccess && !visible.length && <div className="rounded-2xl border border-dashed border-emerald-300 bg-emerald-50 p-8 text-center text-sm text-emerald-700">{filter === 'pending' ? 'No quedan fragmentos pendientes en esta vista. Selecciona Todos para ver los ya revisados.' : 'No hay fragmentos para esta fuente con el filtro de campaña actual.'}</div>}
         {!resourceId && <div className="rounded-2xl border border-dashed border-slate-300 p-8 text-center text-sm text-slate-400">Procesa una fuente y selecciónala para empezar.</div>}
       </div>
       {resourceId && (segments.data?.totalPages ?? 1) > 1 && (

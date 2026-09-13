@@ -52,3 +52,30 @@ npm run test:e2e
 La suite unitaria verificada el 12 de septiembre de 2026 contiene 53 pruebas;
 la compilación de la API también pasó. El smoke test de producción se
 encuentra en [`../../scripts/smoke-deployment.ps1`](../../scripts/smoke-deployment.ps1).
+
+
+### Protecci?n del procesamiento p?blico
+
+`PUBLIC_PROCESS_MAX_PER_MINUTE` (defecto 1) limita globalmente los intentos
+admitidos antes de consultar metadatos ML. `PUBLIC_PROCESS_MAX_PENDING` (defecto 2)
+rechaza altas p?blicas cuando los trabajos queued/processing alcanzan ese tama?o.
+La admisi?n se serializa en PostgreSQL entre sesiones e instancias. La saturaci?n
+y los fallos de inspecci?n devuelven 503 con mensaje p?blico; explorar ejemplos
+existentes no consume estas cuotas. Los l?mites por sesi?n/IP siguen vigentes.
+Estos controles no sustituyen una prueba de carga ni son un l?mite global de
+concurrencia para trabajos docentes. No se ha ejecutado carga contra producci?n.
+
+
+### Inicio de sesi?n en la demo
+
+La interfaz `/explorar` requiere inicio de sesi?n y vuelve a esa ruta tras entrar.
+`POST /api/public/explore/process` y `GET /api/public/explore/process/:id` requieren
+`Authorization: Bearer <JWT>` v?lido y una cuenta activa. Aunque conservan el
+prefijo public por compatibilidad de URL, estas dos operaciones son privadas.
+El servidor deriva la identidad para cuota y consulta del usuario autenticado;
+`X-Demo-Session` ya no se utiliza. Los resultados de nuevas solicitudes solo se
+consultan con la cuenta que las cre?. Las solicitudes an?nimas anteriores no se
+reasignan a cuentas; sus tokens de sesi?n antiguos dejan de funcionar.
+El cat?logo de ejemplos aprobados conserva acceso p?blico por API.
+Desplegar API y frontend juntos; el frontend anterior no env?a JWT en estas rutas.
+Las cuotas globales y por IP se conservan; la cuota por sesi?n ahora es por cuenta.

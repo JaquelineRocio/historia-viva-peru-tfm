@@ -1,11 +1,12 @@
 import { useState, type FormEvent } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from '../auth/AuthContext'
 import { apiError } from '../lib/apiClient'
 
 export function LoginPage() {
   const { login } = useAuth()
   const navigate = useNavigate()
+  const location = useLocation()
   const [username, setUsername] = useState('docente')
   const [password, setPassword] = useState('')
   const [error, setError] = useState<string | null>(null)
@@ -17,7 +18,8 @@ export function LoginPage() {
     setBusy(true)
     try {
       await login(username, password)
-      navigate('/')
+      const target = location.state?.returnTo
+      navigate(typeof target === 'string' && target.startsWith('/') && !target.startsWith('//') && target !== '/login' ? target : '/', { replace: true })
     } catch (err) {
       setError(apiError(err))
     } finally {
