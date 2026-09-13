@@ -1,5 +1,7 @@
 # Historia Viva Perú
 
+[Informe de avance: aplicación, arquitectura, entrenamiento y pruebas](INFORME-FINAL.md).
+
 Historia Viva Perú es una aplicación web que ayuda a docentes y estudiantes a
 explorar fuentes sobre la Independencia y la formación republicana del Perú
 (1780–1842). Convierte videos de YouTube y documentos PDF en fragmentos de texto
@@ -9,44 +11,6 @@ clasificarlos en siete categorías históricas.
 Cada fragmento conserva su minuto o página de origen para consultar el contexto
 original. La aplicación permite revisar las etiquetas sugeridas: son predicciones
 del modelo, no una verificación de la verdad histórica.
-
-## Arquitectura
-
-La aplicación separa **interfaz, lógica de negocio y machine learning** en servicios
-que se comunican mediante HTTP. Esta separación permite actualizar el modelo o la
-interfaz sin tener que modificar todos los componentes.
-
-| Componente | Función en la aplicación | Despliegue |
-|---|---|---|
-| **Frontend: React y TypeScript** | Muestra el inicio de sesión, las fuentes, el progreso y los segmentos clasificados. | Vercel |
-| **API: NestJS** | Valida el token JWT, aplica permisos y cuotas, coordina los trabajos y guarda los resultados. | Render |
-| **Servicio ML: FastAPI y BETO** | Obtiene el texto, lo divide en fragmentos y predice una de las siete categorías históricas. | Modal |
-| **Base de datos: PostgreSQL** | Conserva usuarios, fuentes, segmentos, predicciones y revisiones; pgvector permite búsqueda semántica. | Neon |
-| **Almacenamiento de archivos** | Conserva los PDF originales para poder consultarlos. | Supabase Storage |
-| **Repositorio del modelo** | Almacena el paquete de BETO identificado por una revisión y hashes. | Hugging Face Hub |
-
-```mermaid
-flowchart LR
-  U[Docente] --> W[React / Vercel]
-  W --> A[NestJS / Render]
-  A --> D[(PostgreSQL + pgvector / Neon)]
-  A --> O[(PDF / Supabase Storage vía S3)]
-  A --> M[FastAPI ML / Modal]
-  M --> S[Subtítulos / Supadata]
-  H[(Modelo versionado / Hugging Face Hub)] --> M
-```
-
-**Ejemplo de funcionamiento:** al procesar un video, la interfaz envía la URL a la
-API. Esta comprueba el acceso y los límites, solicita la validación del video y
-encola su procesamiento. El servicio ML obtiene la transcripción y clasifica los
-fragmentos con BETO. La API guarda los resultados y la interfaz consulta el estado
-para mostrar cada categoría junto con su texto y minuto original.
-
-**Mantenimiento:** los trabajos se conservan en PostgreSQL en la configuración de
-producción; en local también se admite Redis/BullMQ. GitHub Actions automatiza
-pruebas y compilaciones, y el flujo de despliegue ML comprueba la identidad del
-modelo. El entrenamiento es un proceso separado: revisar una etiqueta no cambia
-automáticamente los pesos del modelo activo.
 
 ## Problema y propuesta de valor
 
@@ -97,17 +61,17 @@ Años, personajes y lugares son entidades independientes, no clases temáticas.
 
 ## Datos y resultados reales
 
-| Evidencia | Resultado |
-|---|---:|
-| Fuentes procesadas en el corte inicial | 11 |
-| Fuentes representadas en el snapshot | 10 |
-| Segmentos totales | 1,577 |
-| Segmentos revisados/dataset | 814 |
-| Ejemplos mínimos por clase | 100 |
-| Fuentes compartidas entre train y test | 0 |
-| F1 macro TF-IDF + regresión logística | 0.353 |
-| F1 macro BETO v1 | 0.425 |
-| Cohen's Kappa | 0.651 |
+| Evidencia                               | Resultado |
+| --------------------------------------- | --------: |
+| Fuentes procesadas en el corte inicial  |        11 |
+| Fuentes representadas en el snapshot    |        10 |
+| Segmentos totales                       |     1,577 |
+| Segmentos revisados/dataset             |       814 |
+| Ejemplos mínimos por clase             |       100 |
+| Fuentes compartidas entre train y test  |         0 |
+| F1 macro TF-IDF + regresión logística |     0.353 |
+| F1 macro BETO v1                        |     0.425 |
+| Cohen's Kappa                           |     0.651 |
 
 BETO supera el baseline TF-IDF, pero no alcanza el umbral fijado de F1 macro 0.70.
 Por ello se publica como **experimental**, no como modelo robusto o recomendado.
@@ -117,6 +81,44 @@ historiador independiente. Esta es una limitación metodológica explícita del 
 Estas cifras corresponden al **snapshot académico congelado** y reproducible.
 La demostración pública admite nuevas fuentes del docente, por lo que sus totales
 operativos pueden ser mayores sin modificar el dataset ni las métricas anteriores.
+
+## Arquitectura
+
+La aplicación separa **interfaz, lógica de negocio y machine learning** en servicios
+que se comunican mediante HTTP. Esta separación permite actualizar el modelo o la
+interfaz sin tener que modificar todos los componentes.
+
+| Componente                             | Función en la aplicación                                                                               | Despliegue       |
+| -------------------------------------- | -------------------------------------------------------------------------------------------------------- | ---------------- |
+| **Frontend: React y TypeScript** | Muestra el inicio de sesión, las fuentes, el progreso y los segmentos clasificados.                     | Vercel           |
+| **API: NestJS**                  | Valida el token JWT, aplica permisos y cuotas, coordina los trabajos y guarda los resultados.            | Render           |
+| **Servicio ML: FastAPI y BETO**  | Obtiene el texto, lo divide en fragmentos y predice una de las siete categorías históricas.            | Modal            |
+| **Base de datos: PostgreSQL**    | Conserva usuarios, fuentes, segmentos, predicciones y revisiones; pgvector permite búsqueda semántica. | Neon             |
+| **Almacenamiento de archivos**   | Conserva los PDF originales para poder consultarlos.                                                     | Supabase Storage |
+| **Repositorio del modelo**       | Almacena el paquete de BETO identificado por una revisión y hashes.                                     | Hugging Face Hub |
+
+```mermaid
+flowchart LR
+  U[Docente] --> W[React / Vercel]
+  W --> A[NestJS / Render]
+  A --> D[(PostgreSQL + pgvector / Neon)]
+  A --> O[(PDF / Supabase Storage vía S3)]
+  A --> M[FastAPI ML / Modal]
+  M --> S[Subtítulos / Supadata]
+  H[(Modelo versionado / Hugging Face Hub)] --> M
+```
+
+**Ejemplo de funcionamiento:** al procesar un video, la interfaz envía la URL a la
+API. Esta comprueba el acceso y los límites, solicita la validación del video y
+encola su procesamiento. El servicio ML obtiene la transcripción y clasifica los
+fragmentos con BETO. La API guarda los resultados y la interfaz consulta el estado
+para mostrar cada categoría junto con su texto y minuto original.
+
+**Mantenimiento:** los trabajos se conservan en PostgreSQL en la configuración de
+producción; en local también se admite Redis/BullMQ. GitHub Actions automatiza
+pruebas y compilaciones, y el flujo de despliegue ML comprueba la identidad del
+modelo. El entrenamiento es un proceso separado: revisar una etiqueta no cambia
+automáticamente los pesos del modelo activo.
 
 ## Ejecución local
 
@@ -212,19 +214,17 @@ pero no afecta las fuentes ni los segmentos ya almacenados.
 
 ## Entregables del TFM
 
-| Entregable | URL / estado |
-|---|---|
-| GitHub público | [historia-viva-peru-tfm](https://github.com/JaquelineRocio/historia-viva-peru-tfm) |
-| Aplicación Vercel | [Historia Viva Perú](https://historia-viva-peru-tfm-web.vercel.app) |
-| API Render | [API Historia Viva](https://historia-viva-api.onrender.com) |
-| Modelo BETO | [Hugging Face Hub](https://huggingface.co/Jaqueline98/historia-viva-beto-v1) |
-| Servicio ML protegido | [Modal](https://jaquelineramosvargas--historia-viva-peru-ml-ml-api.modal.run) |
-| Slides | [Historia-Viva-Peru-TFM.pptx](https://docs.google.com/presentation/d/12Vqa7D4X5r6ySQtJSgH86WI1NQLv2aRp/edit?usp=drive_link&ouid=113080488689238541707&rtpof=true&sd=true) |
-| Vídeo 7–9 min | [Video](https://drive.google.com/file/d/15PYwJiWxrvLcDAZn0IypJuzY8-Yck_cU/view?usp=drive_link) |
-| Acceso demo | `docente` / `tfm2026` |
-
+| Entregable            | URL / estado                                                                                                                                                             |
+| --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| GitHub público       | [historia-viva-peru-tfm](https://github.com/JaquelineRocio/historia-viva-peru-tfm)                                                                                        |
+| Aplicación Vercel    | [Historia Viva Perú](https://historia-viva-peru-tfm-web.vercel.app)                                                                                                      |
+| API Render            | [API Historia Viva](https://historia-viva-api.onrender.com)                                                                                                               |
+| Modelo BETO           | [Hugging Face Hub](https://huggingface.co/Jaqueline98/historia-viva-beto-v1)                                                                                              |
+| Servicio ML protegido | [Modal](https://jaquelineramosvargas--historia-viva-peru-ml-ml-api.modal.run)                                                                                             |
+| Slides                | [Historia-Viva-Peru-TFM.pptx](https://docs.google.com/presentation/d/12Vqa7D4X5r6ySQtJSgH86WI1NQLv2aRp/edit?usp=drive_link&ouid=113080488689238541707&rtpof=true&sd=true) |
+| Vídeo 7–9 min       | [Video](https://drive.google.com/file/d/15PYwJiWxrvLcDAZn0IypJuzY8-Yck_cU/view?usp=drive_link)                                                                            |
+                                                                                                                                               |
 
 ## Autoría
 
-Jaqueline Ramos — Proyecto Final del Máster en Desarrollo con Inteligencia
-Artificial, 2026.
+Jaqueline Ramos — 2026.
