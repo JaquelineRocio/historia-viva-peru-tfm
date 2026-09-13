@@ -51,7 +51,7 @@ describe('PDF storage failures', () => {
     storage.put.mockRejectedValue(Object.assign(new Error('The connection to the database timed out'), { name: 'DatabaseTimeout' }));
     const buffer = Buffer.from('%PDF-1.4 sample');
     await expect(service.createPdf('project', { title: 'Test', rightsConfirmed: true },
-      { buffer, size: buffer.length, mimetype: 'application/pdf', originalname: 'test.pdf' }, 'user'))
+      { buffer, size: buffer.length, mimetype: 'application/pdf', originalname: 'test.pdf' }, { id: 'user', role: 'colaborador' }))
       .rejects.toMatchObject({ status: 503 });
     expect(resources.save).not.toHaveBeenCalled();
   });
