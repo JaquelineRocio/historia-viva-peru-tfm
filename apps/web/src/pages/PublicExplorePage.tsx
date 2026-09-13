@@ -271,6 +271,18 @@ function ExplorerEmpty() {
   </div>
 }
 
+function PredictionDetails({ segment }: { segment: PublicVideoSegment }) {
+  const confidence = segment.suggestedConfidence
+  const hasConfidence = typeof confidence === 'number' && Number.isFinite(confidence) && confidence >= 0 && confidence <= 1
+  return <div className="mt-3 space-y-1 text-xs leading-5 text-slate-600">
+    {segment.reviewedLabelKey && <p className="font-semibold text-violet-700">Etiqueta revisada</p>}
+    {segment.suggestedLabelKey ? <>
+      <p><strong>Predicción BETO:</strong> {segment.suggestedLabelName || segment.suggestedLabelKey}</p>
+      <p><strong>Confianza de BETO:</strong> {hasConfidence ? `${(confidence * 100).toLocaleString('es-PE', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} %` : 'No registrada'}</p>
+    </> : <p>Sin predicción BETO registrada</p>}
+  </div>
+}
+
 function VideoExplorer({ video, selectedSegmentId, onSelect, isNewResult }: { video: PublicVideoResource; selectedSegmentId: string; onSelect: (id: string) => void; isNewResult: boolean }) {
   const player = useRef<YouTubePlayer | null>(null)
   const [embedError, setEmbedError] = useState(false)
@@ -316,6 +328,8 @@ function VideoExplorer({ video, selectedSegmentId, onSelect, isNewResult }: { vi
               <span className="text-xs font-semibold text-indigo-700">Segmento {selectedIndex + 1} de {segments.length}</span>
             </div>
             <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-indigo-700">Subtema seleccionado</p>
+            <PredictionDetails segment={selected} />
+            <p className="mt-2 text-xs text-slate-500">La confianza corresponde a la predicción original del modelo; no mide su exactitud histórica.</p>
           </div>
           <div className="p-5">
             <h4 className="text-xs font-semibold uppercase tracking-wide text-slate-500">Transcripción vinculada a este minuto</h4>
@@ -333,7 +347,7 @@ function VideoExplorer({ video, selectedSegmentId, onSelect, isNewResult }: { vi
         <div className="max-h-[70vh] space-y-3 overflow-y-auto p-4 sm:p-5 lg:max-h-[760px]">
           {segments.map((segment) => {
             const active = segment.id === selected?.id
-            return <button key={segment.id} type="button" aria-pressed={active} aria-current={active ? 'true' : undefined} onClick={() => select(segment)} className={`relative w-full overflow-hidden rounded-xl border p-4 text-left transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-indigo-100 ${active ? 'border-indigo-500 bg-indigo-50 shadow-md shadow-indigo-100' : 'border-slate-200 bg-white hover:border-indigo-300 hover:bg-slate-50'}`}>{active && <span className="absolute inset-y-0 left-0 w-1 bg-indigo-600" aria-hidden="true" />}<div className="flex flex-wrap items-center justify-between gap-2"><span className={`rounded-lg px-2.5 py-1 text-xs font-bold ${active ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-600'}`}>{formatTime(segment.startSec)}–{formatTime(segment.endSec)}</span>{active && <span className="inline-flex items-center gap-1 text-xs font-semibold text-indigo-700"><span aria-hidden="true">●</span> Seleccionado</span>}</div><p className={`mt-3 text-sm font-bold ${active ? 'text-indigo-950' : 'text-slate-900'}`}>{segment.labelName}</p><p className="mt-1 line-clamp-3 text-sm leading-5 text-slate-500">{segment.text}</p></button>
+            return <button key={segment.id} type="button" aria-pressed={active} aria-current={active ? 'true' : undefined} onClick={() => select(segment)} className={`relative w-full overflow-hidden rounded-xl border p-4 text-left transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-indigo-100 ${active ? 'border-indigo-500 bg-indigo-50 shadow-md shadow-indigo-100' : 'border-slate-200 bg-white hover:border-indigo-300 hover:bg-slate-50'}`}>{active && <span className="absolute inset-y-0 left-0 w-1 bg-indigo-600" aria-hidden="true" />}<div className="flex flex-wrap items-center justify-between gap-2"><span className={`rounded-lg px-2.5 py-1 text-xs font-bold ${active ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-600'}`}>{formatTime(segment.startSec)}–{formatTime(segment.endSec)}</span>{active && <span className="inline-flex items-center gap-1 text-xs font-semibold text-indigo-700"><span aria-hidden="true">●</span> Seleccionado</span>}</div><p className={`mt-3 text-sm font-bold ${active ? 'text-indigo-950' : 'text-slate-900'}`}>{segment.labelName}</p><PredictionDetails segment={segment} /><p className="mt-1 line-clamp-3 text-sm leading-5 text-slate-500">{segment.text}</p></button>
           })}
           {!segments.length && <div className="rounded-xl border border-dashed border-slate-300 p-6 text-center"><p className="text-sm font-semibold text-slate-700">Sin segmentos para mostrar</p><p className="mt-1 text-xs leading-5 text-slate-500">La fuente no devolvió fragmentos temáticos disponibles.</p></div>}
         </div>

@@ -1,18 +1,52 @@
 # Historia Viva Perú
 
-Asistente docente para convertir videos de YouTube y documentos PDF en evidencia
-histórica navegable sobre la Independencia y la formación republicana del Perú
-(1780–1842).
+Historia Viva Perú es una aplicación web que ayuda a docentes y estudiantes a
+explorar fuentes sobre la Independencia y la formación republicana del Perú
+(1780–1842). Convierte videos de YouTube y documentos PDF en fragmentos de texto
+y utiliza **BETO, un modelo de aprendizaje automático para español**, para
+clasificarlos en siete categorías históricas.
 
-El núcleo del producto es:
+Cada fragmento conserva su minuto o página de origen para consultar el contexto
+original. La aplicación permite revisar las etiquetas sugeridas: son predicciones
+del modelo, no una verificación de la verdad histórica.
 
-```text
-Fuente → extracción/transcripción → segmentos → entidades → tema BETO → corrección docente
+## Arquitectura
+
+La aplicación separa **interfaz, lógica de negocio y machine learning** en servicios
+que se comunican mediante HTTP. Esta separación permite actualizar el modelo o la
+interfaz sin tener que modificar todos los componentes.
+
+| Componente | Función en la aplicación | Despliegue |
+|---|---|---|
+| **Frontend: React y TypeScript** | Muestra el inicio de sesión, las fuentes, el progreso y los segmentos clasificados. | Vercel |
+| **API: NestJS** | Valida el token JWT, aplica permisos y cuotas, coordina los trabajos y guarda los resultados. | Render |
+| **Servicio ML: FastAPI y BETO** | Obtiene el texto, lo divide en fragmentos y predice una de las siete categorías históricas. | Modal |
+| **Base de datos: PostgreSQL** | Conserva usuarios, fuentes, segmentos, predicciones y revisiones; pgvector permite búsqueda semántica. | Neon |
+| **Almacenamiento de archivos** | Conserva los PDF originales para poder consultarlos. | Supabase Storage |
+| **Repositorio del modelo** | Almacena el paquete de BETO identificado por una revisión y hashes. | Hugging Face Hub |
+
+```mermaid
+flowchart LR
+  U[Docente] --> W[React / Vercel]
+  W --> A[NestJS / Render]
+  A --> D[(PostgreSQL + pgvector / Neon)]
+  A --> O[(PDF / Supabase Storage vía S3)]
+  A --> M[FastAPI ML / Modal]
+  M --> S[Subtítulos / Supadata]
+  H[(Modelo versionado / Hugging Face Hub)] --> M
 ```
 
-BETO funciona detrás de la interfaz. El docente no configura épocas, batch size ni
-datasets: añade una fuente, espera su procesamiento y revisa fragmentos con página
-o minuto, subtema, confianza, años, personajes y lugares.
+**Ejemplo de funcionamiento:** al procesar un video, la interfaz envía la URL a la
+API. Esta comprueba el acceso y los límites, solicita la validación del video y
+encola su procesamiento. El servicio ML obtiene la transcripción y clasifica los
+fragmentos con BETO. La API guarda los resultados y la interfaz consulta el estado
+para mostrar cada categoría junto con su texto y minuto original.
+
+**Mantenimiento:** los trabajos se conservan en PostgreSQL en la configuración de
+producción; en local también se admite Redis/BullMQ. GitHub Actions automatiza
+pruebas y compilaciones, y el flujo de despliegue ML comprueba la identidad del
+modelo. El entrenamiento es un proceso separado: revisar una etiqueta no cambia
+automáticamente los pesos del modelo activo.
 
 ## Problema y propuesta de valor
 
@@ -83,26 +117,6 @@ historiador independiente. Esta es una limitación metodológica explícita del 
 Estas cifras corresponden al **snapshot académico congelado** y reproducible.
 La demostración pública admite nuevas fuentes del docente, por lo que sus totales
 operativos pueden ser mayores sin modificar el dataset ni las métricas anteriores.
-
-## Arquitectura
-
-```mermaid
-flowchart LR
-  U[Docente] --> W[React / Vercel]
-  W --> A[NestJS / Render]
-  A --> D[(PostgreSQL + pgvector / Neon)]
-  A --> O[(PDF / Supabase Storage vía S3)]
-  A --> M[FastAPI ML / Modal]
-  M --> S[Subtítulos / Supadata]
-  M --> H[(Pesos BETO v1 / Hugging Face Hub)]
-```
-
-- Frontend: React 19, TypeScript, Vite, TanStack Query.
-- API: NestJS, TypeORM, JWT y trabajos recuperables en PostgreSQL.
-- Datos: PostgreSQL + `pgvector`.
-- ML: FastAPI, Transformers, BETO, embeddings, NER, Supadata y Whisper.
-- Local: Docker Compose, almacenamiento de archivos y Redis/BullMQ.
-- Demo gratuita: Vercel, Render, Neon, Supabase Storage, Hugging Face Hub y Modal.
 
 ## Ejecución local
 
