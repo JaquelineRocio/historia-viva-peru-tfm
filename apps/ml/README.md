@@ -38,6 +38,13 @@ Cada descarga usa una copia temporal privada, eliminada al terminar o fallar.
 Sin la variable se mantiene la descarga anónima. La autenticación no garantiza
 acceso: YouTube puede rechazar la IP, caducar la sesión o exigir otros mecanismos.
 No se han probado cookies reales ni la descarga remota con esta configuración.
+Los logs del servicio ML registran advertencias y errores originales de yt-dlp,
+ocultando el contenido configurado y los valores de las cookies. Cada entrada
+incluye `video_id`, `cookies_configured` y `cookies_loaded`. Este último indica
+que yt-dlp leyó una cookie jar no vacía, no que YouTube aceptara la sesión.
+El mensaje simplificado de la interfaz se conserva. Para incorporar estos logs
+hay que publicar y desplegar el código actualizado; reiniciar la versión anterior
+no añade esta funcionalidad.
 El proveedor Supadata existente usa solo subtítulos nativos y requiere su propia
 clave; no garantiza una transcripción para videos sin subtítulos.
 
