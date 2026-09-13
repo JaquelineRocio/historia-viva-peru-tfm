@@ -1160,10 +1160,11 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
 
   private async setPublicStage(resourceId: string, stage: string, publicError?: string) {
     try {
+      // Keep assignment and comparison on one parameter type (stage is VARCHAR).
       await this.dataSource.query(
         `UPDATE tfm_schema.public_processing_requests
-         SET stage = $2, public_error = $3, updated_at = now(),
-             finished_at = CASE WHEN $2 IN ('ready', 'failed') THEN now() ELSE finished_at END
+         SET stage = $2::varchar, public_error = $3, updated_at = now(),
+             finished_at = CASE WHEN $2::varchar IN ('ready', 'failed') THEN now() ELSE finished_at END
          WHERE resource_id = $1`,
         [resourceId, stage, publicError || null],
       );
