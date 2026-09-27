@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState, type FormEvent } from 'react'
-import YouTube, { type YouTubePlayer } from 'react-youtube'
+import { VideoPlayer, type VideoPlayerHandle } from '../components/VideoPlayer'
 import { Link } from 'react-router-dom'
 import { publicExploreResource, publicExploreResources, publicProcessingStatus, publicProcessYoutube } from '../api/resources'
 import { apiError } from '../lib/apiClient'
@@ -21,21 +21,6 @@ const PROCESS = [
   'El modelo BETO identifica el subtema histórico de cada fragmento.',
   'Los resultados se organizan por minuto.',
 ]
-
-function youtubeId(url?: string) {
-  if (!url) return ''
-  try {
-    const parsed = new URL(url)
-    return parsed.hostname === 'youtu.be' ? parsed.pathname.split('/')[1] : parsed.searchParams.get('v') || ''
-  } catch {
-    return ''
-  }
-}
-
-function youtubeAt(url: string, seconds: number) {
-  const id = youtubeId(url)
-  return id ? `https://www.youtube.com/watch?v=${id}&t=${Math.floor(seconds)}s` : url
-}
 
 export function PublicExplorePage() {
   const [catalog, setCatalog] = useState<PublicExploreResponse>()
@@ -284,18 +269,15 @@ function PredictionDetails({ segment }: { segment: PublicVideoSegment }) {
 }
 
 function VideoExplorer({ video, selectedSegmentId, onSelect, isNewResult }: { video: PublicVideoResource; selectedSegmentId: string; onSelect: (id: string) => void; isNewResult: boolean }) {
-  const player = useRef<YouTubePlayer | null>(null)
-  const [embedError, setEmbedError] = useState(false)
+  const player = useRef<VideoPlayerHandle | null>(null)
   const segments = video.segments || []
   const selected = segments.find((segment) => segment.id === selectedSegmentId) || segments[0]
   const selectedIndex = selected ? segments.findIndex((segment) => segment.id === selected.id) : -1
 
-  useEffect(() => setEmbedError(false), [video.id])
 
   function select(segment: PublicVideoSegment) {
     onSelect(segment.id)
-    player.current?.seekTo(segment.startSec, true)
-    player.current?.playVideo?.()
+    player.current?.seekTo(segment.startSec)
   }
 
   function selectByIndex(index: number) {
@@ -318,9 +300,7 @@ function VideoExplorer({ video, selectedSegmentId, onSelect, isNewResult }: { vi
 
     <div className="mt-5 grid gap-5 lg:grid-cols-[minmax(0,1.15fr)_minmax(360px,0.85fr)] lg:items-start">
       <div className="min-w-0 space-y-4 lg:sticky lg:top-20">
-        <div className="overflow-hidden rounded-2xl border border-slate-800 bg-slate-950 shadow-lg shadow-slate-900/10">
-          {!embedError && youtubeId(video.sourceUrl) ? <div className="aspect-video"><YouTube videoId={youtubeId(video.sourceUrl)} className="h-full w-full" iframeClassName="h-full w-full" opts={{ width: '100%', height: '100%', playerVars: { rel: 0, modestbranding: 1 } }} onReady={(event) => { player.current = event.target }} onError={() => setEmbedError(true)} /></div> : <div className="grid aspect-video place-items-center p-8 text-center text-white"><div><p className="font-bold">YouTube no permite reproducir este video aquí.</p><a href={youtubeAt(video.sourceUrl, selected?.startSec || 0)} target="_blank" rel="noreferrer" className="mt-4 inline-flex rounded-xl bg-white px-4 py-3 text-sm font-bold text-slate-900">Abrir en YouTube desde {formatTime(selected?.startSec || 0)} ↗</a></div></div>}
-        </div>
+        <VideoPlayer key={video.sourceUrl} ref={player} sourceUrl={video.sourceUrl} startSec={selected?.startSec} />
         {selected ? <article className="overflow-hidden rounded-2xl border border-indigo-300 bg-white shadow-sm" aria-live="polite">
           <div className="border-b border-indigo-100 bg-indigo-50 px-5 py-4">
             <div className="flex flex-wrap items-center justify-between gap-3">
