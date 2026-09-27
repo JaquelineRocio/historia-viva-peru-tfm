@@ -1,4 +1,5 @@
-import { useEffect, useMemo, useState, type FormEvent } from 'react'
+import { VideoPlayer, type VideoPlayerHandle } from '../components/VideoPlayer'
+import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react'
 import {
   useClassifyResource,
   useCreatePdfResource,
@@ -66,7 +67,7 @@ export function SourcesPage() {
           ))}
           {!resources.data?.length && <p className="rounded-xl border border-dashed border-slate-300 p-5 text-center text-sm text-slate-400">Todavía no hay fuentes.</p>}
         </section>
-        <SourceDetail resource={selected} labelMap={labelMap} onProcess={() => selected && processResource.mutate(selected.id)} />
+        <SourceDetail key={selected?.id} resource={selected} labelMap={labelMap} onProcess={() => selected && processResource.mutate(selected.id)} />
       </div>
     </div>
   )
@@ -160,6 +161,10 @@ function SourceCreator({ projectId, onCreated }: { projectId?: string; onCreated
 }
 
 function SourceDetail({ resource, labelMap, onProcess }: { resource?: HistoryResource; labelMap: ReturnType<typeof buildLabelMap>; onProcess: () => void }) {
+  const player = useRef<VideoPlayerHandle | null>(null)
+  const playerContainer = useRef<HTMLDivElement | null>(null)
+  const [selectedTime, setSelectedTime] = useState(0)
+  const [activeSegment, setActiveSegment] = useState('')
   const [segmentPage, setSegmentPage] = useState(1)
   const segments = usePagedResourceSegments(
     resource?.projectId,
@@ -251,6 +256,10 @@ function SourceDetail({ resource, labelMap, onProcess }: { resource?: HistoryRes
       </div>}
       {resource.processingStatus === 'processing' && <p className="mt-5 rounded-xl bg-amber-50 p-4 text-sm text-amber-700">Estamos extrayendo, limpiando y segmentando la fuente…</p>}
       {resource.processingError && <p className="mt-5 rounded-xl bg-red-50 p-4 text-sm text-red-700">{resource.processingError}</p>}
+      {resource.type === 'youtube' && resource.sourceUrl && <div ref={playerContainer} className="mt-5 scroll-mt-24">
+        <VideoPlayer key={resource.sourceUrl} ref={player} sourceUrl={resource.sourceUrl} startSec={selectedTime} />
+        <p className="mt-2 text-xs text-slate-500">Selecciona el minuto de un segmento para verlo aquí en su contexto original.</p>
+      </div>}
       {resource.processingStatus === 'ready' && (
         <div className="mt-5">
           <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
@@ -280,10 +289,15 @@ function SourceDetail({ resource, labelMap, onProcess }: { resource?: HistoryRes
                 ? `${resource.sourceUrl}${resource.sourceUrl.includes('?') ? '&' : '?'}t=${Math.floor(start)}s`
                 : undefined
               return (
-                <li key={segment.id} className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+                <li key={segment.id} className={`rounded-xl border p-4 shadow-sm ${activeSegment === segment.id ? 'border-indigo-400 bg-indigo-50' : 'border-slate-200 bg-white'}`}>
                   <div className="flex flex-wrap items-center gap-2">
                     {youtubeAt ? (
-                      <a href={youtubeAt} target="_blank" rel="noreferrer" className="rounded-lg bg-indigo-50 px-2 py-1 text-xs font-bold text-indigo-700 hover:bg-indigo-100">▶ {formatTime(start)}–{formatTime(end)}</a>
+                      <><button type="button" aria-pressed={activeSegment === segment.id} onClick={() => {
+                        setSelectedTime(start)
+                        setActiveSegment(segment.id)
+                        player.current?.seekTo(start)
+                        playerContainer.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                      }} className="rounded-lg bg-indigo-50 px-2 py-1 text-xs font-bold text-indigo-700 hover:bg-indigo-100">▶ {formatTime(start)}–{formatTime(end)}</button><a href={youtubeAt} target="_blank" rel="noreferrer" className="text-xs text-indigo-700 underline">Abrir en YouTube ↗</a></>
                     ) : (
                       <span className="rounded-lg bg-indigo-50 px-2 py-1 text-xs font-bold text-indigo-700">Página {segment.pageStart}{segment.pageEnd && segment.pageEnd !== segment.pageStart ? `–${segment.pageEnd}` : ''}</span>
                     )}
