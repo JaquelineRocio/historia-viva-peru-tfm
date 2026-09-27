@@ -952,9 +952,6 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
       processing: {
         enabled: this.config.get<string>('PUBLIC_PROCESSING_ENABLED', 'false') === 'true',
         maxDurationSec: Number(this.config.get<string>('PUBLIC_PROCESS_MAX_DURATION_SEC', '7200')),
-        maxPerSession: Number(this.config.get<string>('PUBLIC_PROCESS_MAX_PER_SESSION', '1')),
-        maxPerIp: Number(this.config.get<string>('PUBLIC_PROCESS_MAX_PER_IP', '5')),
-        windowHours: Number(this.config.get<string>('PUBLIC_PROCESS_RATE_WINDOW_HOURS', '24')),
       },
     };
   }
@@ -1138,9 +1135,6 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
   }
 
   private async registerPublicAttempt(sessionHash: string, clientHash: string, youtubeId: string) {
-    const windowHours = Math.max(1, Number(this.config.get<string>('PUBLIC_PROCESS_RATE_WINDOW_HOURS', '24')));
-    const maxPerSession = Math.max(1, Number(this.config.get<string>('PUBLIC_PROCESS_MAX_PER_SESSION', '1')));
-    const maxPerIp = Math.max(maxPerSession, Number(this.config.get<string>('PUBLIC_PROCESS_MAX_PER_IP', '5')));
     const positiveLimit = (key: string, fallback: number) => {
       const value = Number(this.config.get<string>(key, String(fallback)));
       return Number.isSafeInteger(value) && value > 0 ? value : fallback;
@@ -1151,20 +1145,14 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
       // Serialize admission across sessions and API replicas, not only per device.
       await manager.query(`SELECT pg_advisory_xact_lock(hashtext($1))`, ['public-processing-admission']);
       const quota = await manager.query(
-        `SELECT count(*) FILTER (WHERE session_hash = $1)::int AS "sessionCount",
-                count(*) FILTER (WHERE client_hash = $2)::int AS "clientCount",
-                count(*) FILTER (WHERE created_at > now() - interval '1 minute')::int AS "recentCount",
+        `SELECT count(*)::int AS "recentCount",
                 (SELECT count(*)::int FROM tfm_schema.resource_processing_runs
                  WHERE status IN ('queued', 'processing')) AS "pendingCount"
          FROM tfm_schema.public_processing_attempts
-         WHERE created_at > now() - ($3::int * interval '1 hour')`,
-        [sessionHash, clientHash, windowHours],
+         WHERE created_at > now() - interval '1 minute'`,
       );
       if (quota[0].recentCount >= maxPerMinute || quota[0].pendingCount >= maxPending) {
         throw new ServiceUnavailableException('El procesamiento está ocupado. Espera un minuto antes de intentarlo de nuevo; puedes explorar los ejemplos disponibles mientras tanto.');
-      }
-      if (quota[0].sessionCount >= maxPerSession || quota[0].clientCount >= maxPerIp) {
-        throw new ForbiddenException(`Se alcanzó el límite de procesamiento de la demostración para ${windowHours} horas`);
       }
       await manager.query(
         `INSERT INTO tfm_schema.public_processing_attempts(session_hash, client_hash, youtube_id)

@@ -49,12 +49,6 @@ services:
         value: "true"
       - key: PUBLIC_PROCESS_MAX_DURATION_SEC
         value: "3600"
-      - key: PUBLIC_PROCESS_RATE_WINDOW_HOURS
-        value: "24"
-      - key: PUBLIC_PROCESS_MAX_PER_SESSION
-        value: "2"
-      - key: PUBLIC_PROCESS_MAX_PER_IP
-        value: "40"
       - key: PROCESSING_QUEUE_DRIVER
         value: database
       - key: FILE_STORAGE_DRIVER
