@@ -1,4 +1,4 @@
-import { BadRequestException, ConflictException, ForbiddenException, ServiceUnavailableException } from '@nestjs/common';
+import { BadRequestException, ConflictException, ServiceUnavailableException } from '@nestjs/common';
 import { ResourcesService } from './resources.service';
 
 const SESSION = '7f2554b0-e70a-4cad-b6b0-3f5c2e889807';
@@ -79,13 +79,19 @@ describe('Public explore processing safeguards', () => {
     }
   });
 
-  it('enforces both session and client quotas', async () => {
+  it('allows another video after old account and IP quotas were reached, even with legacy configuration', async () => {
     const query = jest.fn()
       .mockResolvedValueOnce([])
-      .mockResolvedValueOnce([{ sessionCount: 1, clientCount: 1 }]);
-    const { service } = serviceWith({ transaction: (callback) => callback({ query }) });
+      .mockResolvedValueOnce([{ sessionCount: 100, clientCount: 100, recentCount: 0, pendingCount: 0 }])
+      .mockResolvedValueOnce([]);
+    const { service, ml } = serviceWith({
+      transaction: (callback) => callback({ query }),
+      metadata: { video_id: 'gZpo1PjY0ao', title: 'Nuevo', author: 'Canal', duration_sec: 7201, is_live: false },
+    });
     await expect(service.createPublicYoutube(
       { url: 'https://www.youtube.com/watch?v=gZpo1PjY0ao', rightsConfirmed: true }, SESSION, '127.0.0.1',
-    )).rejects.toBeInstanceOf(ForbiddenException);
+    )).rejects.toThrow('supera el límite');
+    expect(ml.inspectYoutube).toHaveBeenCalledTimes(1);
+    expect(query).toHaveBeenCalledTimes(3);
   });
 });

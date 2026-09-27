@@ -216,9 +216,6 @@ export interface PublicExploreResponse {
   processing: {
     enabled: boolean
     maxDurationSec: number
-    maxPerSession: number
-    maxPerIp: number
-    windowHours: number
   }
 }
 
