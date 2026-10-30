@@ -10,7 +10,8 @@ export class CreateProjectDto {
 
 export class CreateYoutubeResourceDto {
   @IsUrl({ require_tld: false }) url!: string;
-  @IsString() @IsNotEmpty() @MaxLength(300) title!: string;
+  /** Si se omite, se toma el título del propio video de YouTube. */
+  @IsOptional() @IsString() @IsNotEmpty() @MaxLength(300) title?: string;
   @IsOptional() @IsString() @MaxLength(200) author?: string;
   @IsBoolean() rightsConfirmed!: boolean;
 }

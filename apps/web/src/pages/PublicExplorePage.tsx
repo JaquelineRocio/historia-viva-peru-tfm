@@ -1,10 +1,11 @@
-import { useCallback, useEffect, useRef, useState, type FormEvent } from 'react'
-import { VideoPlayer, type VideoPlayerHandle } from '../components/VideoPlayer'
+import { useCallback, useEffect, useState, type FormEvent } from 'react'
+import { IndexedVideo } from '../components/IndexedVideo'
+import { useSubtopics } from '../api/labels'
 import { Link } from 'react-router-dom'
 import { publicExploreResource, publicExploreResources, publicProcessingStatus, publicProcessYoutube } from '../api/resources'
 import { apiError } from '../lib/apiClient'
 import { formatTime } from '../lib/format'
-import type { PublicExploreResponse, PublicProcessingResponse, PublicProcessingStage, PublicVideoResource, PublicVideoSegment } from '../types'
+import type { PublicExploreResponse, PublicProcessingResponse, PublicProcessingStage, PublicVideoResource } from '../types'
 
 const STAGES: Array<{ key: PublicProcessingStage; label: string }> = [
   { key: 'validating_video', label: 'Validando el video' },
@@ -18,7 +19,7 @@ const PROCESS = [
   'Se obtiene el contenido del video.',
   'Se genera la transcripción.',
   'La transcripción se divide en fragmentos.',
-  'El modelo BETO identifica el subtema histórico de cada fragmento.',
+  'El modelo BETO descarta lo no relevante y sugiere los subtemas de cada fragmento.',
   'Los resultados se organizan por minuto.',
 ]
 
@@ -27,7 +28,6 @@ export function PublicExplorePage() {
   const [selectedId, setSelectedId] = useState('')
   const [video, setVideo] = useState<PublicVideoResource>()
   const [processedVideo, setProcessedVideo] = useState<PublicVideoResource>()
-  const [selectedSegmentId, setSelectedSegmentId] = useState('')
   const [loadingExample, setLoadingExample] = useState(true)
   const [catalogError, setCatalogError] = useState('')
 
@@ -50,10 +50,7 @@ export function PublicExplorePage() {
     setCatalogError('')
     setVideo(undefined)
     publicExploreResource(selectedId)
-      .then((item) => {
-        setVideo(item)
-        setSelectedSegmentId(item.segments?.[0]?.id || '')
-      })
+      .then((item) => setVideo(item))
       .catch((error) => setCatalogError(apiError(error)))
       .finally(() => setLoadingExample(false))
   }, [selectedId])
@@ -62,7 +59,6 @@ export function PublicExplorePage() {
 
   const showProcessedVideo = useCallback((resource: PublicVideoResource) => {
     setProcessedVideo(resource)
-    setSelectedSegmentId(resource.segments?.[0]?.id || '')
     window.requestAnimationFrame(() => document.getElementById('explore-title')?.scrollIntoView({ behavior: 'smooth', block: 'start' }))
   }, [])
 
@@ -108,8 +104,8 @@ export function PublicExplorePage() {
           <div className="flex flex-col gap-4 border-b border-slate-200 pb-5 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600">Resultado del procesamiento</p>
-              <h2 id="explore-title" className="mt-1 text-xl font-bold">Video, transcripción y subtemas</h2>
-              <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-500">Selecciona un segmento: el video avanzará al minuto exacto y mostrará debajo el fragmento de transcripción relacionado.</p>
+              <h2 id="explore-title" className="mt-1 text-xl font-bold">Video indexado por subtemas</h2>
+              <p className="mt-1 max-w-3xl text-sm leading-6 text-slate-500">Pulsa el minuto de un fragmento para ver ese momento del video, o filtra por subtema.</p>
             </div>
             {(processedVideo || (catalog?.items.length || 0) > 1) && (
               <label className="min-w-0 text-sm font-semibold text-slate-700">Fuente que estás explorando
@@ -124,7 +120,7 @@ export function PublicExplorePage() {
           {loadingExample && !processedVideo && <ExplorerLoading />}
           {catalogError && !processedVideo && <ExplorerError message={catalogError} />}
           {!loadingExample && !catalogError && !displayedVideo && <ExplorerEmpty />}
-          {displayedVideo && (!loadingExample || processedVideo) && <VideoExplorer video={displayedVideo} selectedSegmentId={selectedSegmentId} onSelect={setSelectedSegmentId} isNewResult={!!processedVideo} />}
+          {displayedVideo && (!loadingExample || processedVideo) && <VideoExplorer video={displayedVideo} isNewResult={!!processedVideo} />}
         </section>
       </main>
 
@@ -256,82 +252,22 @@ function ExplorerEmpty() {
   </div>
 }
 
-function PredictionDetails({ segment }: { segment: PublicVideoSegment }) {
-  const confidence = segment.suggestedConfidence
-  const hasConfidence = typeof confidence === 'number' && Number.isFinite(confidence) && confidence >= 0 && confidence <= 1
-  return <div className="mt-3 space-y-1 text-xs leading-5 text-slate-600">
-    {segment.reviewedLabelKey && <p className="font-semibold text-violet-700">Etiqueta revisada</p>}
-    {segment.suggestedLabelKey ? <>
-      <p><strong>Predicción BETO:</strong> {segment.suggestedLabelName || segment.suggestedLabelKey}</p>
-      <p><strong>Confianza de BETO:</strong> {hasConfidence ? `${(confidence * 100).toLocaleString('es-PE', { minimumFractionDigits: 1, maximumFractionDigits: 1 })} %` : 'No registrada'}</p>
-    </> : <p>Sin predicción BETO registrada</p>}
-  </div>
-}
-
-function VideoExplorer({ video, selectedSegmentId, onSelect, isNewResult }: { video: PublicVideoResource; selectedSegmentId: string; onSelect: (id: string) => void; isNewResult: boolean }) {
-  const player = useRef<VideoPlayerHandle | null>(null)
+function VideoExplorer({ video, isNewResult }: { video: PublicVideoResource; isNewResult: boolean }) {
+  const subtopics = useSubtopics()
   const segments = video.segments || []
-  const selected = segments.find((segment) => segment.id === selectedSegmentId) || segments[0]
-  const selectedIndex = selected ? segments.findIndex((segment) => segment.id === selected.id) : -1
-
-
-  function select(segment: PublicVideoSegment) {
-    onSelect(segment.id)
-    player.current?.seekTo(segment.startSec)
-  }
-
-  function selectByIndex(index: number) {
-    const segment = segments[index]
-    if (segment) select(segment)
-  }
-
-  return <div className="mt-6">
+  return <div className="mt-6 space-y-5">
     <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6">
       <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
         <div className="min-w-0">
-          <div className="flex flex-wrap items-center gap-2"><span className="rounded-full bg-indigo-50 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-indigo-700">{isNewResult ? 'Resultado de tu prueba' : 'Fuente audiovisual'}</span><span className="rounded-full bg-emerald-50 px-2.5 py-1 text-[11px] font-semibold text-emerald-700">Procesamiento completado</span></div>
+          <span className="rounded-full bg-indigo-50 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-wide text-indigo-700">{isNewResult ? 'Resultado de tu prueba' : 'Video de ejemplo'}</span>
           <h3 className="mt-3 text-xl font-bold tracking-tight text-slate-900">{video.title}</h3>
-          <div className="mt-3 flex flex-wrap gap-x-5 gap-y-1 text-sm text-slate-500"><p><strong className="font-semibold text-slate-700">Canal:</strong> {video.author || 'No indicado'}</p><p><strong className="font-semibold text-slate-700">Fuente:</strong> {video.provenance}</p>{video.durationSec != null && <p><strong className="font-semibold text-slate-700">Duración:</strong> {formatTime(video.durationSec)}</p>}<p><strong className="font-semibold text-slate-700">Segmentos:</strong> {segments.length}</p></div>
-          <p className="mt-2 truncate text-xs text-slate-400" title={video.sourceUrl}>{video.sourceUrl}</p>
+          <div className="mt-2 flex flex-wrap gap-x-5 gap-y-1 text-sm text-slate-500"><p><strong className="font-semibold text-slate-700">Canal:</strong> {video.author || 'No indicado'}</p>{video.durationSec != null && <p><strong className="font-semibold text-slate-700">Duración:</strong> {formatTime(video.durationSec)}</p>}</div>
         </div>
-        <a href={video.sourceUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-10 w-full items-center justify-center rounded-xl border border-indigo-300 px-4 py-2 text-sm font-semibold text-indigo-700 transition hover:bg-indigo-50 sm:w-auto">Abrir contenido original ↗</a>
+        <a href={video.sourceUrl} target="_blank" rel="noreferrer" className="inline-flex min-h-10 w-full items-center justify-center rounded-xl border border-indigo-300 px-4 py-2 text-sm font-semibold text-indigo-700 transition hover:bg-indigo-50 sm:w-auto">Abrir en YouTube ↗</a>
       </div>
     </div>
-
-    <div className="mt-5 grid gap-5 lg:grid-cols-[minmax(0,1.15fr)_minmax(360px,0.85fr)] lg:items-start">
-      <div className="min-w-0 space-y-4 lg:sticky lg:top-20">
-        <VideoPlayer key={video.sourceUrl} ref={player} sourceUrl={video.sourceUrl} startSec={selected?.startSec} />
-        {selected ? <article className="overflow-hidden rounded-2xl border border-indigo-300 bg-white shadow-sm" aria-live="polite">
-          <div className="border-b border-indigo-100 bg-indigo-50 px-5 py-4">
-            <div className="flex flex-wrap items-center justify-between gap-3">
-              <div className="flex flex-wrap items-center gap-2"><span className="rounded-lg bg-indigo-600 px-2.5 py-1 text-xs font-bold text-white">{formatTime(selected.startSec)}–{formatTime(selected.endSec)}</span><span className="rounded-full border border-violet-200 bg-violet-100 px-2.5 py-1 text-xs font-semibold text-violet-800">{selected.labelName}</span></div>
-              <span className="text-xs font-semibold text-indigo-700">Segmento {selectedIndex + 1} de {segments.length}</span>
-            </div>
-            <p className="mt-3 text-xs font-semibold uppercase tracking-wide text-indigo-700">Subtema seleccionado</p>
-            <PredictionDetails segment={selected} />
-            <p className="mt-2 text-xs text-slate-500">La confianza corresponde a la predicción original del modelo; no mide su exactitud histórica.</p>
-          </div>
-          <div className="p-5">
-            <h4 className="text-xs font-semibold uppercase tracking-wide text-slate-500">Transcripción vinculada a este minuto</h4>
-            <p className="mt-3 text-[15px] leading-7 text-slate-700">{selected.text}</p>
-            <div className="mt-5 flex items-center justify-between gap-3 border-t border-slate-100 pt-4">
-              <button type="button" disabled={selectedIndex <= 0} onClick={() => selectByIndex(selectedIndex - 1)} className="min-h-10 rounded-xl border border-slate-300 px-3 py-2 text-sm font-semibold text-slate-600 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40">← Anterior</button>
-              <button type="button" disabled={selectedIndex < 0 || selectedIndex >= segments.length - 1} onClick={() => selectByIndex(selectedIndex + 1)} className="min-h-10 rounded-xl border border-indigo-300 px-3 py-2 text-sm font-semibold text-indigo-700 transition hover:bg-indigo-50 disabled:cursor-not-allowed disabled:opacity-40">Siguiente →</button>
-            </div>
-          </div>
-        </article> : <div className="rounded-2xl border border-dashed border-slate-300 bg-white p-6 text-center text-sm text-slate-500">Este video todavía no tiene segmentos disponibles.</div>}
-      </div>
-
-      <section className="min-w-0 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm" aria-label="Segmentos temáticos">
-        <div className="border-b border-slate-200 bg-slate-50 px-4 py-4 sm:px-5"><div className="flex items-center justify-between gap-3"><div><p className="text-xs font-semibold uppercase tracking-wide text-indigo-600">Mapa del contenido</p><h3 className="mt-1 font-bold text-slate-900">Segmentos temáticos</h3></div><span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-slate-600 ring-1 ring-slate-200">{segments.length}</span></div><p className="mt-2 text-xs leading-5 text-slate-500">Cada tarjeta enlaza un subtema con su minuto y transcripción.</p></div>
-        <div className="max-h-[70vh] space-y-3 overflow-y-auto p-4 sm:p-5 lg:max-h-[760px]">
-          {segments.map((segment) => {
-            const active = segment.id === selected?.id
-            return <button key={segment.id} type="button" aria-pressed={active} aria-current={active ? 'true' : undefined} onClick={() => select(segment)} className={`relative w-full overflow-hidden rounded-xl border p-4 text-left transition focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-indigo-100 ${active ? 'border-indigo-500 bg-indigo-50 shadow-md shadow-indigo-100' : 'border-slate-200 bg-white hover:border-indigo-300 hover:bg-slate-50'}`}>{active && <span className="absolute inset-y-0 left-0 w-1 bg-indigo-600" aria-hidden="true" />}<div className="flex flex-wrap items-center justify-between gap-2"><span className={`rounded-lg px-2.5 py-1 text-xs font-bold ${active ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-600'}`}>{formatTime(segment.startSec)}–{formatTime(segment.endSec)}</span>{active && <span className="inline-flex items-center gap-1 text-xs font-semibold text-indigo-700"><span aria-hidden="true">●</span> Seleccionado</span>}</div><p className={`mt-3 text-sm font-bold ${active ? 'text-indigo-950' : 'text-slate-900'}`}>{segment.labelName}</p><PredictionDetails segment={segment} /><p className="mt-1 line-clamp-3 text-sm leading-5 text-slate-500">{segment.text}</p></button>
-          })}
-          {!segments.length && <div className="rounded-xl border border-dashed border-slate-300 p-6 text-center"><p className="text-sm font-semibold text-slate-700">Sin segmentos para mostrar</p><p className="mt-1 text-xs leading-5 text-slate-500">La fuente no devolvió fragmentos temáticos disponibles.</p></div>}
-        </div>
-      </section>
-    </div>
+    {segments.length
+      ? <IndexedVideo key={video.id} sourceUrl={video.sourceUrl} segments={segments} subtopics={subtopics} />
+      : <div className="rounded-2xl border border-dashed border-slate-300 bg-white p-6 text-center text-sm text-slate-500">Este video todavía no tiene fragmentos disponibles.</div>}
   </div>
 }

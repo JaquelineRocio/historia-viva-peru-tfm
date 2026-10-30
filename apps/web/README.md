@@ -1,8 +1,17 @@
 # Web React — Historia Viva Perú
 
-Interfaz docente construida con React 19, TypeScript y Vite. Incluye proyectos,
-fuentes PDF/YouTube, segmentos enriquecidos, revisión, búsqueda verificable,
-colecciones, exploración pública y laboratorio de modelos.
+Interfaz docente construida con React 19, TypeScript y Vite. El docente usa dos
+pantallas, que siguen el flujo de indexación temática asistida de la tesis:
+
+- **Mis videos** (`/`, `/videos/:id`): pega un enlace de YouTube; cada fragmento
+  muestra su minuto, la transcripción y sus dos subtemas más probables. Los no
+  relevantes se ocultan, los de confianza ≥ 0,6 se etiquetan solos y el resto se
+  confirma o corrige con un clic (reglas en `src/lib/indexing.ts`).
+- **Por subtema** (`/subtemas`): reúne los fragmentos de un subtema de todos los videos.
+
+Las herramientas técnicas (fuentes PDF, revisión por lotes, búsqueda, colecciones,
+datasets, entrenamiento y versiones) se abren desde **Laboratorio**, visible solo
+para curadores y administradores.
 
 ## Ejecución
 

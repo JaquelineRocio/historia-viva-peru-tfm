@@ -5,7 +5,7 @@ import { createHash, randomUUID } from 'node:crypto';
 import { extname } from 'node:path';
 import { Queue, Worker } from 'bullmq';
 import { DataSource, Repository } from 'typeorm';
-import { ML_SERVICE_PORT, MlServicePort, MlTranscriptUnavailable } from '../ml/ml-service.port';
+import { ML_SERVICE_PORT, MlPrediction, MlServicePort, MlTranscriptUnavailable } from '../ml/ml-service.port';
 import { canonicalYoutubeUrl, extractYoutubeId } from '../videos/youtube-id.util';
 import { CreateProjectDto, CreateYoutubeResourceDto, PdfMetadataDto, PublicYoutubeResourceDto, ReviewSegmentDto, UpdateResourceMetadataDto } from './dto/resource.dto';
 import { ProjectEntity } from './entities/project.entity';
@@ -26,6 +26,11 @@ export interface HistoricalSearchFilters {
   yearStart?: number;
   yearEnd?: number;
   label?: string;
+}
+
+/** Segunda y tercera sugerencia de BETO; null si el servicio ML aún no las devuelve. */
+function alternatives(prediction?: MlPrediction) {
+  return prediction?.top?.slice(1) ?? null;
 }
 
 @Injectable()
@@ -162,11 +167,12 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
     await this.assertDemoQuota(user);
     const existing = await this.resources.findOne({ where: { projectId, sourceUrl: dto.url, isDeleted: false } });
     if (existing) throw new ConflictException('Ese video ya existe en el proyecto');
+    const metadata = dto.title ? undefined : await this.ml.inspectYoutube(dto.url).catch(() => undefined);
     return this.resources.save(this.resources.create({
       projectId,
       type: 'youtube',
-      title: dto.title,
-      author: dto.author,
+      title: dto.title || metadata?.title || 'Video de YouTube',
+      author: dto.author || metadata?.author || undefined,
       sourceUrl: dto.url,
       rightsConfirmed: dto.rightsConfirmed,
       processingStatus: 'pending',
@@ -458,6 +464,7 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
       await Promise.all(segments.map((segment, i) => this.segments.update(segment.id, {
         suggestedLabelKey: predictions[i]?.label,
         suggestedConfidence: predictions[i]?.confidence,
+        suggestedAlternatives: alternatives(predictions[i]),
       })));
     } catch {
       // La fuente sigue siendo útil aunque aún no exista un modelo BETO activo.
@@ -496,6 +503,7 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
         await manager.update(ResourceSegmentEntity, segments[index].id, {
           suggestedLabelKey: prediction.label,
           suggestedConfidence: prediction.confidence,
+          suggestedAlternatives: alternatives(prediction),
         });
       }
     });
@@ -1090,6 +1098,7 @@ export class ResourcesService implements OnModuleInit, OnModuleDestroy {
               s.suggested_label_key AS "suggestedLabelKey",
               predicted.name AS "suggestedLabelName",
               s.suggested_confidence::float AS "suggestedConfidence",
+              s.suggested_alternatives AS "suggestedAlternatives",
               s.reviewed_label_key AS "reviewedLabelKey",
               COALESCE(s.reviewed_label_key, s.suggested_label_key) AS "labelKey",
               COALESCE(lt.name, 'Subtema pendiente de revisión') AS "labelName"

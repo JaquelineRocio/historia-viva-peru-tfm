@@ -61,7 +61,11 @@ def model_identity() -> dict:
 
 
 def infer(texts: List[str]) -> List[dict]:
-    """Clasifica textos con el modelo activo. Devuelve [{label, confidence}]."""
+    """Clasifica textos con el modelo activo.
+
+    Devuelve [{label, confidence, top}]: `top` son las tres categorías más
+    probables, que la app muestra como sugerencias para confirmar o corregir.
+    """
     if _active is None:
         raise RuntimeError("No hay modelo activo cargado")
     import torch
@@ -76,7 +80,8 @@ def infer(texts: List[str]) -> List[dict]:
         with torch.no_grad():
             logits = _active.model(**enc).logits
             probs = torch.softmax(logits, dim=-1)
-            conf, idx = torch.max(probs, dim=-1)
-        for c, ix in zip(conf.tolist(), idx.tolist()):
-            preds.append({"label": _active.id2label[int(ix)], "confidence": round(float(c), 4)})
+            conf, idx = torch.topk(probs, k=min(3, probs.shape[-1]), dim=-1)
+        for cs, ixs in zip(conf.tolist(), idx.tolist()):
+            top = [{"label": _active.id2label[int(ix)], "confidence": round(float(c), 4)} for c, ix in zip(cs, ixs)]
+            preds.append({**top[0], "top": top})
     return preds

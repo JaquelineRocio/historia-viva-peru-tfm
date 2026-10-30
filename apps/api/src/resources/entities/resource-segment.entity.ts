@@ -16,6 +16,7 @@ export class ResourceSegmentEntity {
   @Column({ type: 'text' }) text!: string;
   @Column({ name: 'suggested_label_key', type: 'varchar', length: 60, nullable: true }) suggestedLabelKey?: string | null;
   @Column({ name: 'suggested_confidence', type: 'numeric', precision: 6, scale: 5, nullable: true, transformer: numericTransformer }) suggestedConfidence?: number | null;
+  @Column({ name: 'suggested_alternatives', type: 'jsonb', nullable: true }) suggestedAlternatives?: Array<{ label: string; confidence: number }> | null;
   @Column({ name: 'review_status', type: 'varchar', length: 20, default: 'pending' }) reviewStatus!: ReviewStatus;
   @Column({ name: 'reviewed_label_key', type: 'varchar', length: 60, nullable: true }) reviewedLabelKey?: string | null;
   @Column({ name: 'reviewed_user_id', type: 'uuid', nullable: true }) reviewedUserId?: string | null;

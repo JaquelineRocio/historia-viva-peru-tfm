@@ -421,3 +421,7 @@ ALTER TABLE tfm_schema.training_metrics
   ADD COLUMN IF NOT EXISTS baseline_f1_macro NUMERIC(6,5),
   ADD COLUMN IF NOT EXISTS baseline_dataset_sha256 VARCHAR(64),
   ADD COLUMN IF NOT EXISTS exceeds_baseline BOOLEAN;
+
+-- Sugerencias secundarias de BETO (segunda y tercera categoría) para confirmar o corregir.
+ALTER TABLE tfm_schema.resource_segments
+  ADD COLUMN IF NOT EXISTS suggested_alternatives JSONB;

@@ -139,6 +139,12 @@ export interface HistoryProject {
   createdAt: string
 }
 
+/** Una categoría sugerida por BETO con su probabilidad. */
+export interface Suggestion {
+  label: string
+  confidence: number
+}
+
 export type ResourceType = 'youtube' | 'pdf'
 export type ProcessingStatus = 'pending' | 'processing' | 'ready' | 'needs_attention' | 'failed'
 export type ReviewStatus = 'pending' | 'reviewed' | 'ambiguous' | 'excluded'
@@ -172,6 +178,7 @@ export interface ResourceSegment {
   text: string
   suggestedLabelKey?: string | null
   suggestedConfidence?: number | null
+  suggestedAlternatives?: Suggestion[] | null
   reviewStatus: ReviewStatus
   reviewedLabelKey?: string | null
   entities?: HistoricalEntity[]
@@ -181,6 +188,7 @@ export interface PublicVideoSegment {
   suggestedLabelKey?: string | null
   suggestedLabelName?: string | null
   suggestedConfidence?: number | null
+  suggestedAlternatives?: Suggestion[] | null
   reviewedLabelKey?: string | null
   id: string
   idx: number

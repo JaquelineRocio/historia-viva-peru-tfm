@@ -1,6 +1,12 @@
 import { Link } from 'react-router-dom'
 
 const tools = [
+  { to: '/fuentes', title: 'Fuentes y PDF', text: 'Gestiona videos y documentos, el corpus y su publicación.' },
+  { to: '/revision', title: 'Revisión', text: 'Revisa por lotes los subtemas de los fragmentos.' },
+  { to: '/buscar', title: 'Búsqueda de evidencia', text: 'Busca por texto, personajes, lugares y años.' },
+  { to: '/colecciones', title: 'Colecciones', text: 'Agrupa fragmentos citables con notas.' },
+  { to: '/proyectos', title: 'Proyectos', text: 'Crea y cambia de proyecto de investigación.' },
+  { to: '/administracion', title: 'Publicaciones', text: 'Aprueba o rechaza solicitudes de publicación.' },
   { to: '/datasets', title: 'Datasets', text: 'Crea snapshots inmutables de etiquetas revisadas.' },
   { to: '/entrenar', title: 'Entrenamiento', text: 'Fine-tunea BETO o prepara un entrenamiento en Colab.' },
   { to: '/versiones', title: 'Versiones', text: 'Compara métricas y activa el mejor modelo.' },
@@ -12,8 +18,8 @@ export function LabPage() {
   return (
     <div>
       <p className="text-xs font-semibold uppercase tracking-wide text-indigo-600">Área avanzada</p>
-      <h1 className="text-2xl font-bold">Laboratorio de modelos</h1>
-      <p className="mt-1 max-w-2xl text-sm text-slate-500">Herramientas técnicas para preparar datos, entrenar BETO y evaluar versiones. No son necesarias para buscar evidencia.</p>
+      <h1 className="text-2xl font-bold">Laboratorio</h1>
+      <p className="mt-1 max-w-2xl text-sm text-slate-500">Herramientas técnicas para gestionar fuentes, preparar datos, entrenar BETO y evaluar versiones. El docente no las necesita: le bastan «Mis videos» y «Por subtema».</p>
       <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {tools.map((tool) => (
           <Link key={tool.to} to={tool.to} className="rounded-2xl border border-slate-200 bg-white p-5 transition hover:-translate-y-0.5 hover:border-indigo-300 hover:shadow-md">

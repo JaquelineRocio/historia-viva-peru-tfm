@@ -9,7 +9,9 @@ import { LabelingPage } from './pages/LabelingPage'
 import { LoginPage } from './pages/LoginPage'
 import { TrainingPage } from './pages/TrainingPage'
 import { VersionsPage } from './pages/VersionsPage'
-import { HomePage } from './pages/HomePage'
+import { VideosPage } from './pages/VideosPage'
+import { VideoPage } from './pages/VideoPage'
+import { TopicsPage } from './pages/TopicsPage'
 import { ProjectsPage } from './pages/ProjectsPage'
 import { SourcesPage } from './pages/SourcesPage'
 import { ReviewPage } from './pages/ReviewPage'
@@ -29,7 +31,10 @@ export default function App() {
           <Route element={<ProtectedRoute />}>
             <Route path="/explorar" element={<PublicExplorePage />} />
             <Route element={<ProjectProvider><Layout /></ProjectProvider>}>
-              <Route path="/" element={<HomePage />} />
+              <Route path="/" element={<VideosPage />} />
+              <Route path="/videos/:id" element={<VideoPage />} />
+              <Route path="/subtemas" element={<TopicsPage />} />
+              {/* Herramientas técnicas: se abren desde el Laboratorio. */}
               <Route path="/proyectos" element={<ProjectsPage />} />
               <Route path="/fuentes" element={<SourcesPage />} />
               <Route path="/revision" element={<ReviewPage />} />
