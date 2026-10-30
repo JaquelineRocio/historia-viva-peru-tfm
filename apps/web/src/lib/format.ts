@@ -7,3 +7,18 @@ export function formatTime(totalSec: number): string {
   const ss = String(s).padStart(2, '0')
   return h > 0 ? `${h}:${mm}:${ss}` : `${m}:${ss}`
 }
+
+/** Identificador de 11 caracteres de una URL de YouTube, o '' si no lo es. */
+export function youtubeId(url: string) {
+  try {
+    const parsed = new URL(url)
+    const host = parsed.hostname.toLowerCase()
+    const id = host === 'youtu.be' ? parsed.pathname.split('/')[1]
+      : ['youtube.com', 'www.youtube.com', 'm.youtube.com'].includes(host)
+        ? parsed.searchParams.get('v') || (/^\/(embed|shorts|live)\//.test(parsed.pathname) ? parsed.pathname.split('/')[2] : '')
+        : ''
+    return id && /^[a-zA-Z0-9_-]{11}$/.test(id) ? id : ''
+  } catch {
+    return ''
+  }
+}

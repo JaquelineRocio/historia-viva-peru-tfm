@@ -1,4 +1,4 @@
-import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query'
+import { useMutation, useQueries, useQuery, useQueryClient } from '@tanstack/react-query'
 import { api, publicApi } from '../lib/apiClient'
 import type { EvidenceCollection, HistoricalEntity, HistoricalSearchFilters, HistoryProject, HistoryResource, PagedResourceSegments, ProjectDashboard, PublicExploreResponse, PublicProcessingResponse, PublicVideoResource, ResourceSegment, SearchEvidence, SearchFacets } from '../types'
 
@@ -35,7 +35,7 @@ export function useResources(projectId?: string) {
 export function useCreateYoutubeResource(projectId?: string) {
   const qc = useQueryClient()
   return useMutation({
-    mutationFn: async (payload: { url: string; title: string; author?: string; rightsConfirmed: boolean }) =>
+    mutationFn: async (payload: { url: string; title?: string; author?: string; rightsConfirmed: boolean }) =>
       (await api.post<HistoryResource>(`/projects/${projectId}/resources/youtube`, payload)).data,
     onSuccess: () => qc.invalidateQueries({ queryKey: ['resources', projectId] }),
   })
@@ -99,6 +99,16 @@ export function useResourceSegments(resourceId?: string) {
     queryKey: ['resource-segments', resourceId],
     enabled: !!resourceId,
     queryFn: async () => (await api.get<ResourceSegment[]>(`/resources/${resourceId}/segments`)).data,
+  })
+}
+
+/** Fragmentos de varias fuentes a la vez, para reunirlos por subtema. */
+export function useSegmentsOfResources(resourceIds: string[]) {
+  return useQueries({
+    queries: resourceIds.map((id) => ({
+      queryKey: ['resource-segments', id],
+      queryFn: async () => (await api.get<ResourceSegment[]>(`/resources/${id}/segments`)).data,
+    })),
   })
 }
 

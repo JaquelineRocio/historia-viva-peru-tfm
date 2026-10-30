@@ -1,23 +1,9 @@
 import { forwardRef, useImperativeHandle, useRef, useState } from 'react'
 import YouTube, { type YouTubePlayer } from 'react-youtube'
-import { formatTime } from '../lib/format'
+import { formatTime, youtubeId } from '../lib/format'
 
 export interface VideoPlayerHandle {
   seekTo: (seconds: number) => void
-}
-
-function youtubeId(url: string) {
-  try {
-    const parsed = new URL(url)
-    const host = parsed.hostname.toLowerCase()
-    const id = host === 'youtu.be' ? parsed.pathname.split('/')[1]
-      : ['youtube.com', 'www.youtube.com', 'm.youtube.com'].includes(host)
-        ? parsed.searchParams.get('v') || (/^\/(embed|shorts|live)\//.test(parsed.pathname) ? parsed.pathname.split('/')[2] : '')
-        : ''
-    return id && /^[a-zA-Z0-9_-]{11}$/.test(id) ? id : ''
-  } catch {
-    return ''
-  }
 }
 
 // Mount with key={sourceUrl} so a different source gets a fresh player.

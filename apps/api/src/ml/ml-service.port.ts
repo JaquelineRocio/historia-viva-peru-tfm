@@ -152,6 +152,8 @@ export interface MlJobStatus {
 export interface MlPrediction {
   label: string;
   confidence: number;
+  /** Las categorías más probables en orden; la primera coincide con `label`. */
+  top?: Array<{ label: string; confidence: number }>;
 }
 
 export interface MlHealth {
